@@ -1,0 +1,16 @@
+---
+name: digital-evidence-quality-and-signal-detection
+description: "Start the job Digital Evidence Quality Assessment and Signal Detection Effectiveness Monitoring in Clinical Validation and Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
+---
+
+# Digital Evidence Quality Assessment and Signal Detection Effectiveness Monitoring
+
+Ask which one task to run, then load that task skill. Do not run every task.
+
+The task skill carries the worker, the prompt, the template, and the tool. Follow that prompt and render that template.
+
+- Digital Signal Detection Monitoring. Skill `digital-signal-detection-monitoring`. Worker: AI/ML Governance Director (`ai-ml-governance-director`). 29 workers are bound to this skill. This run uses this one. Prompt: PS-DH.01.02.4.2.1 Digital Signal Detection Monitoring. Template: ST05-PHARMA-DH-OVERLAY Digital Health overlay. Tool: not bound.
+- Digital evidence pass rule. Skill `digital-evidence-pass-rule`. Worker: AI/ML Governance Director (`ai-ml-governance-director`). 29 workers are bound to this skill. This run uses this one. Prompt: not bound. Template: not bound. Tool: not bound.
+- Digital evidence miss owner. Skill `digital-evidence-miss-owner`. Worker: AI/ML Governance Director (`ai-ml-governance-director`). 29 workers are bound to this skill. This run uses this one. Prompt: not bound. Template: not bound. Tool: not bound.
+
+Call a connector tool only when the chosen task names one. Stay inside this pack's tools.
