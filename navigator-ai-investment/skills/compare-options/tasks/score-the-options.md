@@ -27,7 +27,7 @@ Why it matters: options are where advocacy is loudest. Private scores with equal
 1. **Name the scorers** in one question, with the sheet. The owner scores too.
 2. **Send the sheet** ([assets/option-score-sheet.md](../assets/option-score-sheet.md)): baselines included, scored like the rest.
 3. **Check the set**: every scorer, six criteria, every option and baseline, whole numbers 1 to 10. Nothing filled in.
-4. **Compute.** With the connector: `methods_nav_compute`, template `nav.options`, both baselines flagged `is_baseline`. Locally: `scripts/options_check.py`, which gives the same composites and also re-reads the leader among options only. Use the script's presentation either way.
+4. **Compute.** With the connector: `methods_nav_compute`, template `nav.options`, both baselines flagged `is_baseline`. Locally: `scripts/options_check.py`, which gives the same composites and also re-reads the leader among options only. Use the script's presentation either way. If a brief is open, store the scores and have a named person release them (references/tools.md, "Storing scores on a brief").
 5. **Weights stay equal** unless the room asks to change one; then record the criterion, new weight and reason, and show the unadjusted result beside it. Never suggest a weight change to move the result.
 6. **Show the group's result first**, the owner's after.
 

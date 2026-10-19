@@ -14,7 +14,7 @@ description: >
 license: Proprietary. VITAL Ontology Navigator pack license.
 compatibility: >
   Searching the outcome and measure libraries and reading library links uses the VITAL
-  Ontology Navigator connector (vital-ontology-navigator). The method runs without it;
+  Ontology Navigator connector (listed as Ontology_Navigator or vital-ontology-navigator). The method runs without it;
   scripts/outcome_statement_check.py checks statements and measures locally.
 metadata:
   framework_code: "[CHECK] provisional 2.1, pending capability register lane"
@@ -22,7 +22,7 @@ metadata:
   framework_path: "AI Investment Navigation > 2 Outcomes: Outcome Discovery & Prioritization > 2.1 Outcome Discovery"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.1-draft"
+  version: "0.1.3-draft"
 ---
 
 # Outcome Discovery

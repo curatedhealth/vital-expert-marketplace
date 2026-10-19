@@ -23,7 +23,7 @@ Why it matters: Gate 3 is critical. A record signed by one person, or by a role,
 
 1. **Ask who signs with the owner** (question 7): a named person whose role qualifies them (for example the head of the function that carries the risk). A role alone is a gap.
 2. **Check** both signers with the script: two different named people, one the owner, neither an assistant.
-3. **Prepare** with `decide_prepare_signoff` once per signer, if a brief is open; status "prepared for signature" or "blocked" with the reasons.
+3. **Prepare** with `decide_prepare_signoff` once, with both names in `signers`, if a brief is open. Report the status and reasons from `scripts/record_check.py`; the connector's reasons are a cross-check.
 4. **Say where signing happens**: in the Navigator app, by each signer; this conversation never records a signature.
 5. **Clearing a copy**: if the record will leave the organization, a named person clears it; with VITAL Verify, `build_record` with that person in `cleared_by`.
 

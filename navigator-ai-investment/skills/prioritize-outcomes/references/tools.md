@@ -1,6 +1,6 @@
 # Connector tools used by the Outcomes skills
 
-Connector: VITAL Ontology Navigator (`vital-ontology-navigator`). Your assistant may prefix the names. Counted calls draw on the key's monthly allowance; check `my_usage` (free) first. Behavior below was established by read-only lanes on the connector's code on 19 October 2026 (M), not by live calls. [CHECK on the first live test run]
+Connector: VITAL Ontology Navigator (listed as `Ontology_Navigator` or `vital-ontology-navigator`, depending on the install; tool names are the same). Your assistant may prefix the names. Counted calls draw on the key's monthly allowance; check `my_usage` (free) first. Behavior below was established by read-only lanes on the connector's code on 19 October 2026 (M), not by live calls. [CHECK on the first live test run]
 
 ## catalogue_search (counted)
 
@@ -29,16 +29,21 @@ Connector: VITAL Ontology Navigator (`vital-ontology-navigator`). Your assistant
 - Returns per outcome: group importance and satisfaction (mean, median, spread, disagreement at a spread of 3 or more), opportunity, band, median of scorers' own opportunity; the owner's view computed separately; sensitivity (drop one scorer; "stable" or "close call" for the leader only (the local script also compares the top set, its order and the full order)); "indicative" under three scorers.
 - Refuses: a value that is not a whole number 1 to 10; a missing cell (nothing is imputed); an owner with no scores.
 - Use item ids that are short and neutral (o1, o2). Map them back to statements yourself; never show the ids.
+- Pitfall (live, 19 October 2026): the hosted engine call returned an error three times. When it fails, compute with the skill's local script and say once, in a clause, that the connector could not compute; the result is the same formula.
 
 ## methods_odi_score (counted): one score set only
 
 - Takes one importance and satisfaction per outcome (decimals allowed). Use only when a single person scores, labeled indicative. Its band words differ from the engine's; use the engine's words (method.md O11).
 
-## decide_attach_scores (counted)
+## Storing scores on a brief (decide_attach_scores, then decide_release_scores)
 
-- Attaches scores to an open brief (`brief_id` from `decide_start`). Several scorers go as a `cells` list; values 1 to 10. Feeds the outcome section of the record.
-- Pitfall: the outcomes stage has no dedicated shaping in the brief yet; check the built record shows the ranked outcomes. [CHECK on live run]
+Checked live on 19 October 2026 (M). Only when a brief is open and named people gave the scores.
 
+- `decide_attach_scores`: `{"brief_id", "stage", "scores": {"cells": [ ... ]}}`. Each cell needs `item_id`, `criterion`, `value` (whole number 1 to 10), `rater_id` (the person's name), `rater_role` (`decision_owner`, `participant` or `facilitator`), `source` (`owner` or `participant`), `scale` (`"1-10"`) and `submitted_at` (time stamp). The connector names a missing field one at a time; fill them all at once.
+- Never attach a cell a named person did not give. Since build 5b1220dc1 the connector also refuses an AI name and the old rows shape (M, recheck 19 October 2026). `simulated` is stored only on a brief marked as a test.
+- Each person's cells are added as they come in. The same person scoring the same stage twice is refused unless the call carries `replace` (top-level, with `by`, a person's name, and `reason`); the earlier cells are kept in the brief's history.
+- Then `decide_release_scores` with `released_by` (a named person), once every scorer has submitted. Without a name nothing is released, and the record shows the stage as unreleased.
+- Never show the field names to the person.
 ## Not available
 
 - No Gate 2 function: the attestation is taken in conversation (method.md O15).

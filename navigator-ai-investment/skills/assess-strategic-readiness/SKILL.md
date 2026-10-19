@@ -13,7 +13,7 @@ description: >
 license: Proprietary. VITAL Ontology Navigator pack license.
 compatibility: >
   Searching capabilities and outcome links uses the VITAL Ontology Navigator connector
-  (vital-ontology-navigator). The outcome-weighted gap is computed locally by
+  (listed as Ontology_Navigator or vital-ontology-navigator). The outcome-weighted gap is computed locally by
   scripts/readiness_check.py, because the connector's gap tool drops the outcome weights.
 metadata:
   framework_code: "[CHECK] provisional 3.1, pending capability register lane"
@@ -21,7 +21,7 @@ metadata:
   framework_path: "AI Investment Navigation > 3 Intelligence Core: Investment Choice > 3.1 Strategic Readiness"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.1-draft"
+  version: "0.1.3-draft"
 ---
 
 # Strategic Readiness

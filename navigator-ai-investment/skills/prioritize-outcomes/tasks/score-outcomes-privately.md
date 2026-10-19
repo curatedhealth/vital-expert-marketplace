@@ -42,7 +42,7 @@ Check the set first: every scorer scored both criteria for every outcome, whole 
 
 Then compute, with neutral item ids (o1, o2, ...):
 
-- With the connector: `methods_nav_compute` with `template_id` `nav.outcomes`, the scores and `owner_scorer_id`. If a brief is open, `decide_attach_scores` with the same cells.
+- With the connector: `methods_nav_compute` with `template_id` `nav.outcomes`, the scores and `owner_scorer_id`. If a brief is open, `decide_attach_scores` with the same cells, then, once every scorer has submitted, `decide_release_scores` with the name of the person who releases them (see references/tools.md).
 - Without it: `scripts/outcome_priority_check.py`, which applies the same formula and bands and adds the top-set sensitivity check and the field-test reading.
 
 ### Step 5. Reveal the group's result first

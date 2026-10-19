@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 6 Decision Governance & Record > 6.1 Decision Facilitation; 6.2 Decision Record"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.1-draft"
+  version: "0.1.3-draft"
 ---
 
 # Close the Decision

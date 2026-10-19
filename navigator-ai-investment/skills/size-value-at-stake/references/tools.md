@@ -1,6 +1,6 @@
 # Connector tools used by this competency
 
-Connector: VITAL Ontology Navigator (`vital-ontology-navigator`). Your assistant may prefix the names. Counted calls draw on the key's monthly allowance; check `my_usage` (free) first. Behavior below was established by read-only lanes on the connector's code on 19 October 2026 (M), not by live calls. [CHECK on the first live test run]
+Connector: VITAL Ontology Navigator (listed as `Ontology_Navigator` or `vital-ontology-navigator`, depending on the install; tool names are the same). Your assistant may prefix the names. Counted calls draw on the key's monthly allowance; check `my_usage` (free) first. Behavior below was established by read-only lanes on the connector's code on 19 October 2026 (M), not by live calls. [CHECK on the first live test run]
 
 ## catalogue_search (counted)
 
@@ -16,10 +16,10 @@ Connector: VITAL Ontology Navigator (`vital-ontology-navigator`). Your assistant
 
 ## value_range (counted)
 
-- Arguments: `brief_id`, and the range inside `payload`: `{"low": ..., "mid": ..., "high": ..., "unit": "...", "basis": "...", "drivers": [...], "measures": [...]}`.
+- Arguments (checked live on 19 October 2026, M): `brief_id`, `low`, `mid`, `high`, `unit`, `basis` at the top level; optional `measures` (each with `name`, `baseline`, `owner`).
 - Refuses: a missing low, mid or high; low equal to high ("A point estimate is refused"); missing unit or basis; any measure without a baseline and an owner.
 - Stores the range as the brief's value at stake (Decision Record section 2).
-- Pitfalls: the hosted connector path keeps only `brief_id` and `payload`; fields sent at the top level (as the tool's published schema shows) are dropped before the rule runs. Always nest them in `payload`. Reported to the improvement register. Without an open brief there is nowhere to store the range; it lives in the report.
+- Pitfalls: without an open brief there is nowhere to store the range; it lives in the report. The earlier workaround of nesting the range inside `payload` is no longer needed.
 
 ## bridge_for_driver and bridge_explain (counted)
 

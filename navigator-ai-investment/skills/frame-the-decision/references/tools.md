@@ -1,6 +1,6 @@
 # Connector tools used by this competency
 
-Connector: VITAL Ontology Navigator (`vital-ontology-navigator`). Names below are the connector's; your assistant may prefix them. Counted calls draw on the monthly allowance of the key; free calls do not. Check `my_usage` (free) before a run: when the allowance is used up, only free calls and a few recommendation tools still answer.
+Connector: VITAL Ontology Navigator (listed as `Ontology_Navigator` or `vital-ontology-navigator`, depending on the install; tool names are the same). Names below are the connector's; your assistant may prefix them. Counted calls draw on the monthly allowance of the key; free calls do not. Check `my_usage` (free) before a run: when the allowance is used up, only free calls and a few recommendation tools still answer.
 
 Behavior below was established by read-only lanes on the connector's code on 19 October 2026 (M), not by live calls. [CHECK on the first live test run]
 
@@ -16,6 +16,7 @@ Behavior below was established by read-only lanes on the connector's code on 19 
 - Returns: `result` (group composite and per-criterion view), `owner_view`, `sensitivity`, `trace` (with an input fingerprint). All numbers come back as strings.
 - Rules the engine enforces: whole numbers 1 to 10; every scorer who appears must have every cell; reversibility counts inverted (11 minus the score).
 - Pitfalls: the tool description says it returns `result_hash`; the code returns `trace.inputs_hash` instead (lane finding, reported to the improvement register). Do not cite a result hash. The value-driver scoring template is not reachable through this tool; do not call it with `nav.value_drivers`.
+- Pitfall (live, 19 October 2026): the hosted engine call returned an error three times. When it fails, compute with the skill's local script and say once, in a clause, that the connector could not compute; the result is the same formula.
 
 ## catalogue_search (counted)
 
@@ -32,3 +33,13 @@ Behavior below was established by read-only lanes on the connector's code on 19 
 ## my_usage (free)
 
 - Returns calls used, the monthly cap and the plan. Use it before a scoring run so a run does not stop half way.
+## Storing scores on a brief (decide_attach_scores, then decide_release_scores)
+
+Checked live on 19 October 2026 (M). Only when a brief is open and named people gave the scores.
+
+- `decide_attach_scores`: `{"brief_id", "stage", "scores": {"cells": [ ... ]}}`. Each cell needs `item_id`, `criterion`, `value` (whole number 1 to 10), `rater_id` (the person's name), `rater_role` (`decision_owner`, `participant` or `facilitator`), `source` (`owner` or `participant`), `scale` (`"1-10"`) and `submitted_at` (time stamp). The connector names a missing field one at a time; fill them all at once.
+- Never attach a cell a named person did not give. Since build 5b1220dc1 the connector also refuses an AI name and the old rows shape (M, recheck 19 October 2026). `simulated` is stored only on a brief marked as a test.
+- Each person's cells are added as they come in. The same person scoring the same stage twice is refused unless the call carries `replace` (top-level, with `by`, a person's name, and `reason`); the earlier cells are kept in the brief's history.
+- Then `decide_release_scores` with `released_by` (a named person), once every scorer has submitted. Without a name nothing is released, and the record shows the stage as unreleased.
+- Never show the field names to the person.
+

@@ -18,7 +18,7 @@ metadata:
   framework_path: "AI Investment Navigation > 5 Organizational Learning > 5.2 Portfolio Review"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.2-draft"
+  version: "0.1.4-draft"
 ---
 
 # Portfolio Review

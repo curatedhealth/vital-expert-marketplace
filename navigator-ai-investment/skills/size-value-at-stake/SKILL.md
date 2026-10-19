@@ -12,7 +12,7 @@ description: >
 license: Proprietary. VITAL Ontology Navigator pack license.
 compatibility: >
   Searching the value driver library, storing the value range and linking outcomes use
-  the VITAL Ontology Navigator connector (vital-ontology-navigator). The method runs
+  the VITAL Ontology Navigator connector (listed as Ontology_Navigator or vital-ontology-navigator). The method runs
   without it; scripts/value_check.py computes driver scores and checks the range locally.
 metadata:
   framework_code: "[CHECK] provisional 1.2, pending capability register lane"
@@ -20,7 +20,7 @@ metadata:
   framework_path: "AI Investment Navigation > 1 Direction: Decision & Value Framing > 1.2 Value-at-Stake Sizing"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.2-draft"
+  version: "0.1.4-draft"
 ---
 
 # Value-at-Stake Sizing

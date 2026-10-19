@@ -45,7 +45,7 @@ Never fill a missing score. A scorer who does not score is listed as missing.
 
 ### Step 3. Compute
 
-**With the connector:** call `methods_nav_compute` with `template_id` `nav.sizing`, `items` `[{"item_id": "decision"}]`, `scores` as one cell per scorer per criterion (`scorer_id`, `item_id` "decision", `criterion_key`, `value`), and `owner_scorer_id` set to the owner. The engine counts reversibility inverted (a 10, easy to reverse, lowers the size) and returns the group result, the owner's view, sensitivity and a trace (references/tools.md).
+**With the connector:** call `methods_nav_compute` with `template_id` `nav.sizing`, `items` `[{"item_id": "decision"}]`, `scores` as one cell per scorer per criterion (`scorer_id`, `item_id` "decision", `criterion_key`, `value`), and `owner_scorer_id` set to the owner. The engine counts reversibility inverted (a 10, easy to reverse, lowers the size) and returns the group result, the owner's view, sensitivity and a trace (references/tools.md). If a brief is open, store the scores and have a named person release them (references/tools.md, "Storing scores on a brief").
 
 **Without the connector:** run `scripts/sizing_check.py` on the same scores. It applies the same rule and also reports the spread per criterion and the field-test flags.
 

@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 4 Execution: Delivery Planning > 4.3 Trial Design"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.1-draft"
+  version: "0.1.3-draft"
 ---
 
 # Trial Design

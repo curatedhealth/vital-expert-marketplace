@@ -33,4 +33,4 @@ Choose one heading, then one job. The job holds its tasks as sections. A missing
 
 ## Navigator
 
-- **Navigator AI investment** (`navigator-ai-investment`). Thirteen skills for a facilitated AI investment decision. Uses the Ontology Navigator connector already on the account. No key is in this pack. Do not add a second connector.
+- **Navigator AI investment** (`navigator-ai-investment`, 0.1.2). Thirteen skills for a facilitated AI investment decision. Uses the Ontology Navigator connector already on the account. No key is in this pack. Do not add a second connector.

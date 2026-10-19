@@ -14,7 +14,7 @@ description: >
 license: Proprietary. VITAL Ontology Navigator pack license.
 compatibility: >
   Computing scores, storing them on a brief and reading library links use the VITAL
-  Ontology Navigator connector (vital-ontology-navigator). The method runs without it;
+  Ontology Navigator connector (listed as Ontology_Navigator or vital-ontology-navigator). The method runs without it;
   scripts/outcome_priority_check.py computes the same formula locally and reads the
   field-test rule, which the connector does not check.
 metadata:
@@ -23,7 +23,7 @@ metadata:
   framework_path: "AI Investment Navigation > 2 Outcomes: Outcome Discovery & Prioritization > 2.2 Outcome Prioritization"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.2-draft"
+  version: "0.1.4-draft"
 ---
 
 # Outcome Prioritization

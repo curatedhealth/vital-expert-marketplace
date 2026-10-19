@@ -11,7 +11,7 @@ description: >
 license: Proprietary. VITAL Ontology Navigator pack license.
 compatibility: >
   Opening the brief and computing the decision size use the VITAL Ontology Navigator
-  connector (vital-ontology-navigator). The framing method runs without it; steps that
+  connector (listed as Ontology_Navigator or vital-ontology-navigator). The framing method runs without it; steps that
   need the connector say so, and scripts/sizing_check.py computes the size locally.
 metadata:
   framework_code: "[CHECK] provisional 1.1, pending capability register lane"
@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 1 Direction: Decision & Value Framing > 1.1 Decision Framing"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.3.2-draft"
+  version: "0.3.4-draft"
 ---
 
 # Decision Framing

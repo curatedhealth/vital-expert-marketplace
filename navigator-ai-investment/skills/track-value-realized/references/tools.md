@@ -1,6 +1,6 @@
 # Connector tools used by the Organizational Learning skills
 
-Inputs read from the connector code at commit e23025f6e on the owner checkout (M). All need an open brief (`brief_id`). [CHECK on the live run: the new tools were not yet visible on Cowork's connector list on 19 October 2026]
+Inputs read from the connector code at commit e23025f6e on the owner checkout (M). All need an open brief (`brief_id`). Checked live on 19 October 2026 (M, `eval-runs/LIVE_CONNECTOR_CHECK_2026-10-19.md`).
 
 ## value_range (already in use from Value-at-Stake Sizing)
 

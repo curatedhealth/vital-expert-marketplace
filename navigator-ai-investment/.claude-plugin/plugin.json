@@ -1,6 +1,6 @@
 {
   "name": "navigator-ai-investment",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record.",
   "author": { "name": "Hicham Naim, VITAL.expert" },
   "license": "Proprietary",

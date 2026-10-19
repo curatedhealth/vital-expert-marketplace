@@ -1,10 +1,10 @@
 # Connector tools used by Close the Decision
 
-Inputs read from the connector code at commit e23025f6e on the owner checkout (M). All need an open brief (`brief_id`). [CHECK on the live run]
+Inputs read from the connector code at commit e23025f6e on the owner checkout (M). All need an open brief (`brief_id`). Checked live on 19 October 2026 (M, `eval-runs/LIVE_CONNECTOR_CHECK_2026-10-19.md`).
 
 ## decide_attach_scores
 
-- `{"brief_id", "stage", "scores": {...}}`. Several scorers as a `cells` list; values 1 to 10; an AI author is refused. Stored **unreleased**: a later stage read returns "[GAP] unreleased".
+- Earlier skills attach the scores; see their tools reference ("Storing scores on a brief"). Each cell needs `rater_id`, `rater_role`, `source`, `scale` and `submitted_at`. The connector refuses an AI name (build 5b1220dc1); never attach a cell a named person did not give.
 
 ## decide_release_scores
 
@@ -16,8 +16,9 @@ Inputs read from the connector code at commit e23025f6e on the owner checkout (M
 
 ## decide_build_record
 
-- `{"brief_id"}`. Returns the eight sections a person reads, plus compile keys in the draft (including a read-back). Status "Prepared for signature" or "blocked". It compiles only with a result of exactly Proceed, Investigate first or Handle it internally, owned by a named scorer.
-- Pitfall: the draft's numbered compile keys differ from the canon sections (options appear as key 4); read the eight sections, never the compile keys, and never show either key names.
+- `{"brief_id"}`. Since build 5b1220dc1 (checked live): the draft carries the trial, delivery order, delegation (with any exception), value realized, review, scaling plan, steward, readiness and who released each stage's scores. It still holds nine numbered keys, not the eight canon sections (register C3).
+- So assemble the eight sections from the earlier reports yourself (task B), check them with `scripts/record_check.py`, and use the connector draft as a cross-check. Never show its key names.
+- It reports "passed: false" until a result of exactly Proceed, Investigate first or Handle it internally is owned by a named scorer.
 
 ## decide_verify_record
 
@@ -25,7 +26,9 @@ Inputs read from the connector code at commit e23025f6e on the owner checkout (M
 
 ## decide_prepare_signoff
 
-- `{"brief_id", "prepared_for": "name"}`. Builds the record, stores who it is prepared for and its status; `signed: false`, always. Call once per signer.
+- `{"brief_id", "prepared_for": "audience label", "signers": ["owner's name", "second signer's name"]}` (build 5b1220dc1). Returns `signed: false`, always, and the reasons whenever the status is blocked.
+- Refuses a missing or AI name and two identical names; a title without a name is a gap. Without `signers` it returns blocked with "two named signers needed".
+- Keep `scripts/record_check.py` as the check you report from; the connector's reasons are a cross-check.
 
 ## Not available
 
