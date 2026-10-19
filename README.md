@@ -22,3 +22,12 @@ Finding an expert is free. Downloading one expert spends one call on the same ke
 
 The key is not in this repository. A person without a key can install the plugin and cannot retrieve library data.
 The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together. If the connector is not connected, the pack does not answer.
+
+## Regulatory Strategy and Submissions
+
+Same marketplace. Same `vlib_` key. Same connector. Install **Regulatory Strategy and Submissions** beside Evidence and Reimbursement.
+
+It opens on four headings: AI/ML Regulatory, Global Harmonization, Regulatory Strategy, and Submission Excellence. Choose one heading, then one job. The job loads one task.
+
+The library tools in this pack classify a product, read pathway precedents, find United States predicates, watch a register, and search safety events. Authorization comparison is not in this pack.
+The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together.
