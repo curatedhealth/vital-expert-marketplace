@@ -1,0 +1,4 @@
+market,period,payer,route,claims_submitted,claims_paid,claims_denied,paid_amount,agreed_unit_price,units_ytd,outcome_share,outcome_attainment,payer_portion
+DE,2026-Q3,GKV-SV,DiGA,1200,1104,60,233496,220,3350,0.2,0.75,
+US,2026-Q3,Medicare MAC,G0553,840,712,98,36400,54.11,,,,
+US,2026-Q3,ACCESS participant,BH track,310,310,0,4650,15,,0.5,,0.8

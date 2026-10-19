@@ -1,0 +1,75 @@
+{
+ "call": "market-access-dh.find_scheme_precedents",
+ "args": {
+  "scheme": "DE_DIGA",
+  "indication": "F51",
+  "limit": 10
+ },
+ "called_on": "19 October 2026",
+ "note": "Trimmed: evidence_passage shortened; all rows returned are kept.",
+ "results": [
+  {
+   "product": "somnovia",
+   "manufacturer": "GAIA AG, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "02097",
+   "decision_reference": "DiGA-ID 02097; PZN 19642882",
+   "listed_on": "2024-10-28",
+   "ends_on": null,
+   "price": 236,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02097",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ],
+   "evidence_passage": "somnovia DiGA-App bei Schlafstörungen · dauerhaft aufgenommen"
+  },
+  {
+   "product": "HelloBetter Schlafen",
+   "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "01772",
+   "decision_reference": "DiGA-ID 01772; PZN 18453937",
+   "listed_on": "2022-12-18",
+   "ends_on": null,
+   "price": 241.25,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01772",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ],
+   "evidence_passage": "HelloBetter Schlafen DiGA-App bei Schlafstörungen · dauerhaft aufgenommen"
+  },
+  {
+   "product": "somnio",
+   "manufacturer": "mementor DE GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "00508",
+   "decision_reference": "DiGA-ID 00508; PZN 16898724",
+   "listed_on": "2020-10-22",
+   "ends_on": null,
+   "price": 224.99,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/00508",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ],
+   "evidence_passage": "somnio DiGA-App bei Schlafstörungen · dauerhaft aufgenommen"
+  }
+ ]
+}

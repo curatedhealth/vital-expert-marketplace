@@ -1,0 +1,65 @@
+{
+ "call": "market-access-dh.list_schemes",
+ "args": {},
+ "called_on": "19 October 2026",
+ "note": "Trimmed to the schemes these skills use.",
+ "results": [
+  {
+   "code": "DE_DIGA",
+   "listing_count": 82,
+   "last_load": "2026-10-15",
+   "posture": "partial",
+   "posture_reason": "Directory listings are stored. ends_on is empty on 82 of 82. BFARM_DIGA_API_TOKEN is absent, so this is not the history feed."
+  },
+  {
+   "code": "FR_PECAN",
+   "listing_count": 2,
+   "last_load": "2026-10-16",
+   "posture": "gold",
+   "clock_rule": "one year, non-renewable; LPPR dossier within 6 months or LATM within 9 months of start"
+  },
+  {
+   "code": "FR_LPPR",
+   "listing_count": 0,
+   "last_load": null,
+   "posture": "gap"
+  },
+  {
+   "code": "FR_LATM",
+   "listing_count": 2,
+   "last_load": "2026-10-16",
+   "posture": "gold"
+  },
+  {
+   "code": "UK_NICE_EVA",
+   "listing_count": 15,
+   "last_load": "2026-10-15",
+   "posture": "partial",
+   "posture_reason": "NICE_API_KEY is empty. Not a refreshed licensed pull."
+  },
+  {
+   "code": "UK_NICE_HTG",
+   "listing_count": 2,
+   "last_load": "2026-10-15",
+   "posture": "partial"
+  },
+  {
+   "code": "UK_NICE_NHAP",
+   "listing_count": 0,
+   "last_load": null,
+   "posture": "gap"
+  },
+  {
+   "code": "US_CMS_DMHT",
+   "listing_count": 3,
+   "last_load": "2026-10-15",
+   "posture": "partial"
+  },
+  {
+   "code": "US_CMS_RPM",
+   "listing_count": 4,
+   "last_load": "2026-10-15",
+   "posture": "partial"
+  }
+ ]
+}

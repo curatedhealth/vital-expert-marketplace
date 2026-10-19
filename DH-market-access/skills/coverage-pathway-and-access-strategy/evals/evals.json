@@ -1,0 +1,30 @@
+{
+  "skill_name": "coverage-pathway-and-access-strategy",
+  "task": "A1 reimbursement status check",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Is somnio reimbursed anywhere outside Germany? Our board wants to know if we can cite it as a European precedent for our insomnia app.",
+      "expected_output": "Answer first: permanent DiGA listing in Germany with date and source; no other scheme row. Gaps split into covered-but-absent vs not covered. Explicitly does not claim it is unreimbursed elsewhere. Flags that a listing is not clinical evidence and that board-facing wording needs an owner.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "where do remote patient monitoring apps actually get paid right now? US and UK mainly, quick overview pls",
+      "expected_output": "Category path. US CMS RPM explained as code-based coverage (the code is paid, not a product). UK NICE results framed as guidance or early value assessment, not funding. Notes the library's coverage for each. No invented product list beyond the rows returned.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our DTx just got into PECAN in France. What does that status mean for us and what's the clock?",
+      "expected_output": "Reads the PECAN rule from the scheme reference: one year, non-renewable, LPPR dossier within 6 months or LATM within 9 months. Advisory implication, no promise. Asks for or searches the product to confirm the row; if absent, says it is not in the library's copy rather than doubting the user.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Is Ozempic covered by German statutory insurance?",
+      "expected_output": "Declines as out of scope: drugs are not covered by this skill or the library. Does not call the reimbursement tools for a drug.",
+      "files": []
+    }
+  ]
+}

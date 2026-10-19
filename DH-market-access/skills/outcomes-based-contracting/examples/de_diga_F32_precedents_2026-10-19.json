@@ -1,0 +1,13 @@
+{
+  "_call": "market-access-dh.find_scheme_precedents {scheme: \"DE_DIGA\", indication: \"F32\", limit: 10}, 19 October 2026. Trimmed: indications and passages removed. 7 rows returned.",
+  "coverage": "DE_DIGA: 82 listings; last load 2026-10-15; sources diga_verzeichnis",
+  "results": [
+    {"product": "elona explore – für die mentale Gesundheit", "status": "provisional", "status_raw": "vorläufig aufgenommen", "scheme_identifier": "02373", "listed_on": "2025-02-18", "price": 535.49, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/02373"},
+    {"product": "My7steps App", "status": "permanent", "scheme_identifier": "01786", "listed_on": "2023-02-17", "price": 207, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/01786"},
+    {"product": "edupression.com®", "manufacturer": "SOFY GmbH, Österreich", "manufacturer_country": "DE", "status": "permanent", "scheme_identifier": "01815", "listed_on": "2022-12-26", "price": 224.8, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/01815"},
+    {"product": "elona therapy Depression", "status": "permanent", "scheme_identifier": "01254", "listed_on": "2022-12-26", "price": 229.5, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/01254"},
+    {"product": "Novego: Depressionen bewältigen", "status": "permanent", "scheme_identifier": "01110", "listed_on": "2021-10-10", "price": 199, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/01110"},
+    {"product": "deprexis", "status": "permanent", "scheme_identifier": "00450", "listed_on": "2021-02-20", "price": 228, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/00450"},
+    {"product": "Selfapys Online-Kurs bei Depression", "status": "permanent", "scheme_identifier": "00876", "listed_on": "2020-12-16", "price": 217.18, "currency": "EUR", "retrieved_at": "2026-10-15T18:07:17Z", "source_url": "https://diga.bfarm.de/de/verzeichnis/00876"}
+  ]
+}

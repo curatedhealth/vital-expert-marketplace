@@ -1,0 +1,145 @@
+{
+ "call": "market-access-dh.find_scheme_precedents",
+ "args": {
+  "scheme": "DE_DIGA",
+  "indication": "F32",
+  "limit": 25
+ },
+ "called_on": "19 October 2026",
+ "note": "Trimmed: indications shortened to the first entry; all 7 rows returned are kept. MindDoc auf Rezept (deleted, depression) is not returned because its stored indications are empty (register item C9).",
+ "results": [
+  {
+   "product": "elona explore – für die mentale Gesundheit",
+   "manufacturer": "Elona Health GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "provisional",
+   "status_raw": "vorläufig aufgenommen",
+   "scheme_identifier": "02373",
+   "decision_reference": "DiGA-ID 02373; PZN 19822147",
+   "listed_on": "2025-02-18",
+   "ends_on": null,
+   "price": 535.49,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02373",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "vorläufig aufgenommen"
+  },
+  {
+   "product": "My7steps App",
+   "manufacturer": "My7steps GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "01786",
+   "decision_reference": "DiGA-ID 01786; PZN 20285051",
+   "listed_on": "2023-02-17",
+   "ends_on": null,
+   "price": 207,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01786",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  },
+  {
+   "product": "edupression.com®",
+   "manufacturer": "SOFY GmbH, Österreich",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "01815",
+   "decision_reference": "DiGA-ID 01815; PZN 18458283",
+   "listed_on": "2022-12-26",
+   "ends_on": null,
+   "price": 224.8,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01815",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  },
+  {
+   "product": "elona therapy Depression",
+   "manufacturer": "Elona Health GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "01254",
+   "decision_reference": "DiGA-ID 01254; PZN 18458314",
+   "listed_on": "2022-12-26",
+   "ends_on": null,
+   "price": 229.5,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01254",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  },
+  {
+   "product": "Novego: Depressionen bewältigen",
+   "manufacturer": "IVPNetworks GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "01110",
+   "decision_reference": "DiGA-ID 01110; PZN 17865862",
+   "listed_on": "2021-10-10",
+   "ends_on": null,
+   "price": 199,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01110",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  },
+  {
+   "product": "deprexis",
+   "manufacturer": "GAIA AG, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "00450",
+   "decision_reference": "DiGA-ID 00450; PZN 17265872",
+   "listed_on": "2021-02-20",
+   "ends_on": null,
+   "price": 228,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/00450",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  },
+  {
+   "product": "Selfapys Online-Kurs bei Depression",
+   "manufacturer": "Selfapy GmbH, Deutschland",
+   "scheme": "DE_DIGA",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "scheme_identifier": "00876",
+   "decision_reference": "DiGA-ID 00876; PZN 16954730",
+   "listed_on": "2020-12-16",
+   "ends_on": null,
+   "price": 217.18,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/00876",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "indications": [
+    "Depression"
+   ],
+   "evidence_passage": "dauerhaft aufgenommen"
+  }
+ ]
+}
