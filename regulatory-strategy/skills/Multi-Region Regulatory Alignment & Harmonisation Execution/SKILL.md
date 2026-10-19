@@ -15,4 +15,5 @@ The task skill carries the worker, the prompt, the template, and the tool. Follo
 - Harmonised Evidence Planning. Skill `harmonised-evidence-planning`. Worker: SaMD Regulatory Affairs Director (`samd-regulatory-affairs-director`). 29 workers are bound to this skill. This run uses this one. Prompt: PS-DH.03.03.2.1.2 Harmonised Evidence Planning. Template: ST05-PHARMA-DH-OVERLAY Digital Health overlay. Tool: not bound.
 - Regional Submission Adaptation. Skill `regional-submission-adaptation`. Worker: SaMD Regulatory Affairs Director (`samd-regulatory-affairs-director`). 15 workers are bound to this skill. This run uses this one. Prompt: PS-DH.03.03.2.1.3 Regional Submission Adaptation. Template: ST05-PHARMA-DH-OVERLAY Digital Health overlay. Tool: not bound.
 
+- List jurisdictions. Skill `list-jurisdictions`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.list_jurisdictions`.
 Call a connector tool only when the chosen task names one. Stay inside this pack's tools.

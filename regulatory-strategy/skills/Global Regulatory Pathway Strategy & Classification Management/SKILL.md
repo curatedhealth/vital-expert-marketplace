@@ -18,4 +18,8 @@ The task skill carries the worker, the prompt, the template, and the tool. Follo
 - Read pathway precedents. Skill `read-pathway-precedents`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.get_pathway_precedents`.
 - Find predicates. Skill `find-predicates`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.find_predicates`.
 
+- Search devices. Skill `search-devices`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.search_devices`.
+- Open an authorization. Skill `open-an-authorization`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.get_authorization`.
+- Compare authorizations. Skill `compare-authorizations`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.compare_authorizations`.
+- Read market status. Skill `read-market-status`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.get_market_status`.
 Call a connector tool only when the chosen task names one. Stay inside this pack's tools.

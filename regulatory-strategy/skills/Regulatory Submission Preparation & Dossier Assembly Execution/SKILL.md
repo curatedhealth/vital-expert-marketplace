@@ -15,4 +15,6 @@ The task skill carries the worker, the prompt, the template, and the tool. Follo
 - Submission Dossier Compilation. Skill `submission-dossier-compilation`. Worker: SaMD Regulatory Affairs Director (`samd-regulatory-affairs-director`). 20 workers are bound to this skill. This run uses this one. Prompt: PS-DH.03.03.4.1.2 Submission Dossier Compilation. Template: ST05-PHARMA-DH-OVERLAY Digital Health overlay. Tool: not bound.
 - Agency Interaction Management. Skill `agency-interaction-management`. Worker: SaMD Regulatory Affairs Director (`samd-regulatory-affairs-director`). 20 workers are bound to this skill. This run uses this one. Prompt: PS-DH.03.03.4.1.3 Agency Interaction Management. Template: ST05-PHARMA-DH-OVERLAY Digital Health overlay. Tool: not bound.
 
+- Retrieve guidance. Skill `retrieve-guidance`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.retrieve_guidance`.
+- Generate a pathway report. Skill `generate-a-pathway-report`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.generate_report`.
 Call a connector tool only when the chosen task names one. Stay inside this pack's tools.

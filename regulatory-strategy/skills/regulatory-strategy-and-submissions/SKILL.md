@@ -13,13 +13,13 @@ One core. One connector: the Digital Health Library. Show this list when the buy
 Skill `ai-ml-regulatory`. AI and machine-learning pathways, change-control plans, and approval readiness.
 
 ## Global Harmonization
-Skill `global-harmonization`. Cross-jurisdiction mapping, harmonised evidence, and regional adaptation.
+Skill `global-harmonization`. Cross-jurisdiction mapping, harmonised evidence, regional adaptation, and which registers are loaded.
 
 ## Regulatory Strategy
-Skill `regulatory-strategy`. Classification, pathway selection, intended use, predicates, and register watch.
+Skill `regulatory-strategy`. Classification, device search, one authorization, a comparison, market status, pathway selection, predicates, a register watch, and register changes.
 
 ## Submission Excellence
-Skill `submission-excellence`. Clinical evaluation, dossier assembly, agency interaction, and approval monitoring.
+Skill `submission-excellence`. Clinical evaluation, dossier assembly, stored guidance, a pathway report, agency interaction, and approval monitoring.
 
 ## Experts
 - Download a digital health expert. Skill `download-a-digital-health-expert`.

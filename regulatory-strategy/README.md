@@ -23,7 +23,7 @@ Ask for the pack. It opens on four headings:
 
 Choose one heading, then one job. The job loads one task. A task calls the library only when that task names a tool. A missing fact stays a gap.
 
-The library tools in this pack classify a product, read pathway precedents, find United States predicates, watch a register, and search safety events. Authorization comparison is not in this pack.
+The library tools in this pack search devices, open one authorization, compare authorizations, read market status, classify a product, read pathway precedents, find United States predicates, watch a register, read what that watch recorded, search safety events, list the loaded registers, retrieve stored guidance, and generate a pathway report. `get_deltas` is the same call as reading register changes.
 
 Finding an expert is free. Downloading one expert is one counted call on the same key.
 

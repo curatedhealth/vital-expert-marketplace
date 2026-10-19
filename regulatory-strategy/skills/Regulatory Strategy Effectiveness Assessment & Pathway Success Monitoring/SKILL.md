@@ -17,4 +17,5 @@ The task skill carries the worker, the prompt, the template, and the tool. Follo
 - Watch a register. Skill `watch-a-register`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.watch_register`.
 - Search safety events. Skill `search-safety-events`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.search_safety_events`.
 
+- Read register changes. Skill `read-register-changes`. Worker: not bound. Prompt: not bound. Template: not bound. Tool: `regulatory-dh.get_register_deltas`.
 Call a connector tool only when the chosen task names one. Stay inside this pack's tools.
