@@ -1,6 +1,6 @@
 ---
 name: "DH-03.01.4.2 Coverage Strategy Effectiveness Assessment & Access Rate Monitoring"
-description: "Only while the Digital Health Library connector is connected. Run one task in DH-03.01.4.2 Coverage Strategy Effectiveness Assessment & Access Rate Monitoring. Use when the user asks for Access Rate Monitoring, coverage strategy pass rule, coverage strategy miss owner, Find scheme precedents, Watch a scheme. Ask which one task, then follow that section."
+description: "Only while the Digital Health Library connector is connected. Run one task in DH-03.01.4.2 Coverage Strategy Effectiveness Assessment & Access Rate Monitoring. Use when the user asks for Access Rate Monitoring, coverage strategy pass rule, coverage strategy miss owner, Find scheme precedents, Watch a scheme, List schemes, Compare schemes. Ask which one task, then follow that section."
 ---
 
 If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
@@ -106,3 +106,37 @@ Follow the prompt when one is bound, and put the answer in the template when one
 ### Boundary
 
 Call this only when the buyer asks for later changes. One watch per tenant.
+
+## DH-03.01.4.2.6 List schemes
+
+Worker: not bound.
+Skill: CF-12.03.01.4.2.6 List schemes.
+Prompt: not bound.
+Template: not bound.
+Tool: `market-access-dh.list_schemes`. This call is not counted. Do not close it with Verify.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+List schemes the connector serves. This call is free. An empty scheme stays empty.
+
+Catalogue job: `scheme-precedents`.
+
+## DH-03.01.4.2.7 Compare schemes
+
+Worker: not bound.
+Skill: CF-12.03.01.4.2.7 Compare schemes.
+Prompt: not bound.
+Template: not bound.
+Tool: `market-access-dh.compare_schemes`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Compare one product across registered schemes. A scheme the connector did not check is not assessable.
+
+Catalogue job: `scheme-precedents`.

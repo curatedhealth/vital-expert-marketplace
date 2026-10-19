@@ -1,6 +1,6 @@
 ---
 name: "DH-01.02.4.1 Digital Endpoint Capture & RWE Platform Management"
-description: "Only while the Digital Health Library connector is connected. Run one task in DH-01.02.4.1 Digital Endpoint Capture & RWE Platform Management. Use when the user asks for Digital Endpoint Instrumentation, RWE Data Pipeline Management, Signal Detection Analysis, Search literature, Open a literature record, Link a trial, Grade evidence, Check a retraction, Build an evidence table. Ask which one task, then follow that section."
+description: "Only while the Digital Health Library connector is connected. Run one task in DH-01.02.4.1 Digital Endpoint Capture & RWE Platform Management. Use when the user asks for Digital Endpoint Instrumentation, RWE Data Pipeline Management, Signal Detection Analysis, Search literature, Open a literature record, Link a trial, Grade evidence, Check a retraction, Build an evidence table, Deduplicate records, Classify a study, Find related records, Build a citation, Generate a literature report, List literature sources. Ask which one task, then follow that section."
 ---
 
 If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
@@ -222,3 +222,105 @@ Follow the prompt when one is bound, and put the answer in the template when one
 ### Boundary
 
 Build the table from the graded records already opened.
+
+## DH-01.02.4.1.10 Deduplicate records
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.10 Deduplicate records.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.deduplicate`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Pass records this job already retrieved. Do not start a new search. A record the tool does not collapse stays as its own row.
+
+Catalogue job: `evidence-table`.
+
+## DH-01.02.4.1.11 Classify a study
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.11 Classify a study.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.classify_study`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Classify a study the opened record already names. Do not invent a design the record does not support.
+
+Catalogue job: `evidence-table`.
+
+## DH-01.02.4.1.12 Find related records
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.12 Find related records.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.find_related`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Ask for the record already opened. A related hit the source does not return is a gap.
+
+Catalogue job: `evidence-table`.
+
+## DH-01.02.4.1.13 Build a citation
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.13 Build a citation.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.build_citation`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Build the citation for one record already in hand. Do not invent an identifier.
+
+Catalogue job: `evidence-table`.
+
+## DH-01.02.4.1.14 Generate a literature report
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.14 Generate a literature report.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.generate_report`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Render records this job already holds. Templates are only memo, identity, evidence, grade, and citation. An unknown template is a gap.
+
+Catalogue job: `evidence-table`.
+
+## DH-01.02.4.1.15 List literature sources
+
+Worker: not bound.
+Skill: CF-12.01.02.4.1.15 List literature sources.
+Prompt: not bound.
+Template: not bound.
+Tool: `literature.list_sources`. This call is not counted. Do not close it with Verify.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+List the indexes this server queries. An index that is off stays off. Do not treat the list as a search.
+
+Catalogue job: `evidence-table`.

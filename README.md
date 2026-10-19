@@ -29,3 +29,4 @@ Each pack is one core. Market Access does not include Clinical Validation, Healt
 - **DH User Experience Excellence** (`DH-user-experience`)
 
 Choose one heading, then one job. The job holds its tasks as sections. A missing fact stays a gap.
+- **DH Diligence** (`dh-diligence`). Company dossier, evidence maturity, portfolio comparison, and market screen.

@@ -1,6 +1,6 @@
 ---
 name: "DH-02.01.1.2 Commercial Execution Effectiveness Assessment & Launch Performance Monitoring"
-description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.1.2 Commercial Execution Effectiveness Assessment & Launch Performance Monitoring. Use when the user asks for Launch measure definition, Launch week score, Launch miss owner. Ask which one task, then follow that section."
+description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.1.2 Commercial Execution Effectiveness Assessment & Launch Performance Monitoring. Use when the user asks for Launch measure definition, Launch week score, Launch miss owner, Watch a product, Read commercial changes. Ask which one task, then follow that section."
 ---
 
 If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
@@ -98,3 +98,37 @@ Do not close a miss because the week ended.
 An owner and a next step per miss.
 
 A missing fact stays [GAP].
+
+## DH-02.01.1.2.4 Watch a product
+
+Worker: not bound.
+Skill: CF-12.02.01.1.2.4 Watch a product.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.watch_product`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Register the watch and return the snapshot hashes. One watch per tenant. Deltas are a later call.
+
+Catalogue job: `product-watch`.
+
+## DH-02.01.1.2.5 Read commercial changes
+
+Worker: not bound.
+Skill: CF-12.02.01.1.2.5 Read commercial changes.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.get_deltas`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Read what changed since the watch. Copy only what, event_date, observed_at, and source_url. Do not invent a change.
+
+Catalogue job: `product-watch`.

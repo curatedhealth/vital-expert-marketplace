@@ -66,6 +66,11 @@
       "description": "DH Digital Therapeutic Design for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
+      "name": "dh-diligence",
+      "source": "./DH-diligence",
+      "description": "DH Diligence for digital health companies. The person starts one job. Tools run on the Digital Health Library. This pack is the diligence suite. It is not a CF-12 core."
+    },
+    {
       "name": "dh-health-economics",
       "source": "./DH-health-economics",
       "description": "DH Health Economics & Value Demonstration for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
@@ -96,6 +101,11 @@
       "description": "DH Quality Management & Compliance for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
+      "name": "dh-regulatory-strategy",
+      "source": "./regulatory-strategy",
+      "description": "DH Regulatory Strategy and Submissions for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
       "name": "dh-software-engineering",
       "source": "./DH-software-engineering",
       "description": "DH Software Engineering Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
@@ -104,11 +114,6 @@
       "name": "dh-user-experience",
       "source": "./DH-user-experience",
       "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
-    },
-    {
-      "name": "dh-regulatory-strategy",
-      "source": "./regulatory-strategy",
-      "description": "DH Regulatory Strategy and Submissions for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     }
   ]
 }

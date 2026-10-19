@@ -1,6 +1,6 @@
 ---
 name: "DH-02.01.2.1 Market Segmentation & Go-to-Market Strategy Development"
-description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.2.1 Market Segmentation & Go-to-Market Strategy Development. Use when the user asks for Segment definition, Go-to-market motion, Positioning line. Ask which one task, then follow that section."
+description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.2.1 Market Segmentation & Go-to-Market Strategy Development. Use when the user asks for Segment definition, Go-to-market motion, Positioning line, Screen commercial peers, Commercial landscape report, List commercial sources. Ask which one task, then follow that section."
 ---
 
 If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
@@ -98,3 +98,54 @@ Do not write a line for an out-of-scope segment.
 One positioning line per in-scope segment.
 
 A missing fact stays [GAP].
+
+## DH-02.01.2.1.4 Screen commercial peers
+
+Worker: not bound.
+Skill: CF-12.02.01.2.1.4 Screen commercial peers.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.screen_commercial_peers`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Ask for a segment. Limit is 1 to 25. Coverage names which of the three feeds answered. A peer a feed did not return is a gap.
+
+Catalogue job: `competitor-landscape`.
+
+## DH-02.01.2.1.5 Commercial landscape report
+
+Worker: not bound.
+Skill: CF-12.02.01.2.1.5 Commercial landscape report.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.generate_report`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Render the public report from sections already held. Templates are memo, identity, regulatory, reimbursement, or commercial. Do not treat it as a regulatory opinion.
+
+Catalogue job: `competitor-landscape`.
+
+## DH-02.01.2.1.6 List commercial sources
+
+Worker: not bound.
+Skill: CF-12.02.01.2.1.6 List commercial sources.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.list_commercial_dh_sources`. This call is not counted. Do not close it with Verify.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Free list of the diligence, regulatory, and market-access feeds this suite reads. Do not recount those feeds as new calls.
+
+Catalogue job: `competitor-landscape`.

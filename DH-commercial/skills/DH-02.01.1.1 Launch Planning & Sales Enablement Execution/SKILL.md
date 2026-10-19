@@ -1,6 +1,6 @@
 ---
 name: "DH-02.01.1.1 Launch Planning & Sales Enablement Execution"
-description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.1.1 Launch Planning & Sales Enablement Execution. Use when the user asks for Launch claim list, Sales leave-behind, Enablement roster. Ask which one task, then follow that section."
+description: "Only while the Digital Health Library connector is connected. Run one task in DH-02.01.1.1 Launch Planning & Sales Enablement Execution. Use when the user asks for Launch claim list, Sales leave-behind, Enablement roster, Read the launch sequence, Read launch readiness, Commercial brief. Ask which one task, then follow that section."
 ---
 
 If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
@@ -98,3 +98,54 @@ Do not treat a file in a shared folder as enablement.
 A roster: role, briefing date, briefer.
 
 A missing fact stays [GAP].
+
+## DH-02.01.1.1.4 Read the launch sequence
+
+Worker: not bound.
+Skill: CF-12.02.01.1.1.4 Read the launch sequence.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.get_launch_sequence`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Dates come from stored authorization and listing dates. A date the source does not state stays blank.
+
+Catalogue job: `competitor-landscape`.
+
+## DH-02.01.1.1.5 Read launch readiness
+
+Worker: not bound.
+Skill: CF-12.02.01.1.1.5 Read launch readiness.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.get_launch_readiness`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Seven criteria, each met, attested, or [GAP]. This is a count, not a score. Do not invent a met criterion.
+
+Catalogue job: `competitor-landscape`.
+
+## DH-02.01.1.1.6 Commercial brief
+
+Worker: not bound.
+Skill: CF-12.02.01.1.1.6 Commercial brief.
+Prompt: not bound.
+Template: not bound.
+Tool: `commercial-dh.generate_commercial_brief`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+### Boundary
+
+Same arguments as the commercial report, template memo. The first line states it is not a regulatory opinion.
+
+Catalogue job: `competitor-landscape`.
