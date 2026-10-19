@@ -1,0 +1,75 @@
+{
+  "tool": "analytics.mcda",
+  "called": "2026-10-19",
+  "arguments": {
+    "alternatives": [
+      {
+        "id": "Sequence A: EU MDR first, then CH, GB, AU",
+        "scores": {
+          "reliance_reach": 3,
+          "evidence_reuse": 3,
+          "readiness": 2,
+          "route_certainty": 4
+        }
+      },
+      {
+        "id": "Sequence B: US 510(k) first, then AU, CA, BR",
+        "scores": {
+          "reliance_reach": 4,
+          "evidence_reuse": 2,
+          "readiness": 3,
+          "route_certainty": 3
+        }
+      },
+      {
+        "id": "Sequence C: MDSAP audit first, then CA, US, AU",
+        "scores": {
+          "reliance_reach": 3,
+          "evidence_reuse": 2,
+          "readiness": 1,
+          "route_certainty": 3
+        }
+      }
+    ],
+    "criteria_weights": {
+      "reliance_reach": 0.35,
+      "evidence_reuse": 0.25,
+      "readiness": 0.2,
+      "route_certainty": 0.2
+    }
+  },
+  "scores_note": "Test scores written for the measurement call, not a person's scores.",
+  "results": [
+    {
+      "id": "Sequence B: US 510(k) first, then AU, CA, BR",
+      "value_estimate": 77.5,
+      "contributions": {
+        "evidence_reuse": 12.5,
+        "readiness": 15,
+        "reliance_reach": 35,
+        "route_certainty": 15
+      }
+    },
+    {
+      "id": "Sequence A: EU MDR first, then CH, GB, AU",
+      "value_estimate": 75,
+      "contributions": {
+        "evidence_reuse": 18.75,
+        "readiness": 10,
+        "reliance_reach": 26.25,
+        "route_certainty": 20
+      }
+    },
+    {
+      "id": "Sequence C: MDSAP audit first, then CA, US, AU",
+      "value_estimate": 58.75,
+      "contributions": {
+        "evidence_reuse": 12.5,
+        "readiness": 5,
+        "reliance_reach": 26.25,
+        "route_certainty": 15
+      }
+    }
+  ],
+  "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)"
+}

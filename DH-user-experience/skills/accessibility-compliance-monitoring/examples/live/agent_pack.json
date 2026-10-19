@@ -1,0 +1,82 @@
+{
+  "call": "agent-pack.download_agent {expert: \"health-equity-access-lead\"}",
+  "called_on": "19 October 2026",
+  "response_characters": 69958,
+  "slug": "health-equity-access-lead",
+  "display_name": "Health Equity & Digital Access Lead",
+  "department": "Digital Health Programs",
+  "pack_version": "2026-10-16",
+  "skill_count": 53,
+  "accessibility_skills_bound": [
+    {
+      "code": "CF-12.02.04.1.1.3",
+      "name": "Assistive check"
+    },
+    {
+      "code": "CF-12.02.04.1.1.2",
+      "name": "Barrier fix"
+    },
+    {
+      "code": "CF-12.02.04.1.1.1",
+      "name": "Access requirement"
+    },
+    {
+      "code": "CF-12.02.04.1.2.2",
+      "name": "Open barrier age"
+    },
+    {
+      "code": "CF-12.02.04.1.2.1",
+      "name": "Conformance sample"
+    },
+    {
+      "code": "CF-12.02.04.1.2.3",
+      "name": "Access release decision"
+    }
+  ],
+  "stop_rule_excerpt": "HITL: Conditional [dash in source] Conditional HITL, human-on-the-loop. Barrier maps, WCAG gap lists and access-investment options may proceed as drafts. Any wording that will be published as an accessibility or equity claim, anything shown to a regulator or HTA as evidence of reach, and anything that could be read as an eligibility determination stop for the accountable owner..\n- Treat work as unrestricted. Classification: Confide",
+  "never_excerpt": "Publishing an accessibility or equity claim. Treating app availability as evidence of access.",
+  "prompt_defects_seen": [
+    "'Bound competencies (6)' lists only market access and strategy competencies, none for accessibility, while 6 accessibility skills (CF-12.02.04.1.x) are in the file",
+    "'Service category: Market Access & Pricing'",
+    "'trust the foreign key, not legacy text'",
+    "'[GAP] (persona_archetype)', '[GAP] (autonomy_level)'",
+    "Work-product sections titled 'None (WP-EN.04.DH.2)'",
+    "Tools include ChEMBL, PubChem, UniProt, Open Targets, MyVariant, DailyMed; no accessibility source",
+    "'Tools you can operate (24)' while 31 tools are listed",
+    "Escalation peer 'Chief Alignment Officer'",
+    "British spelling ('programme', 'organisational')"
+  ],
+  "tools_listed": [
+    "ICTRP",
+    "bioRxiv/medRxiv",
+    "PubMed",
+    "Digital Health Census",
+    "Semantic Scholar",
+    "UniProt",
+    "WHO GHO",
+    "Digital Health Reimbursement Status History",
+    "CDC",
+    "Digital Health Scheme Watch",
+    "EMA",
+    "OpenAlex",
+    "Literature and Evidence Intelligence",
+    "Consensus",
+    "Unpaywall",
+    "Unified Digital Health Taxonomy",
+    "PubChem",
+    "Digital Health Scheme Precedents",
+    "Medical Terminologies",
+    "DailyMed",
+    "HTA Intelligence",
+    "Digital Health Signal",
+    "Open Targets",
+    "ChEMBL",
+    "NPI Registry",
+    "ClinicalTrials.gov",
+    "OpenFDA Intelligence",
+    "MyVariant",
+    "Crossref",
+    "Digital Health Market Access Matrix",
+    "Europe PMC"
+  ]
+}

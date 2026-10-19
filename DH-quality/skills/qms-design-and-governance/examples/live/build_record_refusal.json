@@ -1,0 +1,20 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked.",
+ "call": {
+  "tool": "verify.build_record",
+  "arguments": {
+   "clearances": [
+    {
+     "cleared_by": {
+      "name": "Claude"
+     },
+     "scope": "test"
+    }
+   ],
+   "text": "Test of clearance refusal during skill build."
+  }
+ },
+ "response": {
+  "error": "build_record refuses a record without a human cleared_by.name"
+ }
+}

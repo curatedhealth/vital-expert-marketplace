@@ -1,0 +1,34 @@
+user_id,role,site,session_date,completed_task_once,trains_others
+NNU01,nurse,North,2026-05-11,yes,no
+NNU02,nurse,North,2026-05-12,yes,no
+NNU03,nurse,North,2026-05-15,yes,no
+NNU04,nurse,North,2026-05-11,yes,no
+NNU05,nurse,North,2026-05-16,yes,no
+NNU06,nurse,North,2026-05-12,yes,no
+NNU07,nurse,North,2026-05-12,yes,no
+NNU08,nurse,North,2026-05-12,yes,no
+NNU09,nurse,North,2026-05-16,yes,no
+NNU10,nurse,North,,,no
+NNU11,nurse,North,2026-05-15,yes,no
+NNU12,nurse,North,2026-05-17,yes,no
+NNU13,nurse,North,2026-05-17,yes,no
+NNU14,nurse,North,2026-05-11,yes,no
+NCA01,care coordinator,North,,,no
+NCA02,care coordinator,North,2026-05-17,no,no
+NCA03,care coordinator,North,2026-05-12,yes,no
+NCA04,care coordinator,North,,,no
+SNU01,nurse,South,2026-07-14,yes,yes
+SNU02,nurse,South,2026-07-14,yes,yes
+SNU03,nurse,South,2026-07-16,,no
+SNU04,nurse,South,2026-07-18,yes,no
+SNU05,nurse,South,2026-07-19,yes,no
+SNU06,nurse,South,2026-07-19,,no
+SNU07,nurse,South,2026-07-15,yes,no
+SNU08,nurse,South,2026-07-18,no,no
+SNU09,nurse,South,2026-07-17,yes,no
+SNU10,nurse,South,2026-07-19,yes,no
+SNU11,nurse,South,2026-07-14,yes,no
+SNU12,nurse,South,,,no
+SCA01,care coordinator,South,,,no
+SCA02,care coordinator,South,,,no
+SCA03,care coordinator,South,,,no

@@ -1,0 +1,18 @@
+{
+ "call": "agent-pack.list_experts(function='digital-regulatory-evidence', limit=50) on the Digital Health Library connector, 19 October 2026",
+ "returned": 11, "matched": 11, "truncated": false, "needs_filter": false,
+ "experts_trimmed_to_slug_name": [
+  ["real-world-evidence-director-digital", "Real-World Evidence Director (Digital)"],
+  ["cybersecurity-architect-digital-health", "Cybersecurity Architect, Digital Health"],
+  ["quality-assurance-manager-software", "QA Manager, Software (V&V)"],
+  ["quality-systems-director-software", "Quality & Software Lifecycle Director"],
+  ["samd-regulatory-affairs-director", "SaMD Regulatory Affairs Director"],
+  ["digital-health-consultant", "Digital Health Consultant"],
+  ["regulatory-submission-manager-samd", "Regulatory Submission Manager (SaMD)"],
+  ["digital-health-evidence-regulatory-director", "Digital Health Evidence & Regulatory Director"],
+  ["head-digital-therapeutics", "Head of Digital Therapeutics"],
+  ["software-test-engineer-samd", "Software Test Engineer (SaMD)"],
+  ["regulatory-intelligence-analyst-digital", "Regulatory Intelligence Analyst (Digital)"]
+ ],
+ "empty_call": {"experts": [], "needs_filter": true, "message": "Pass function or query. A full-workforce key does not receive the catalogue in one call."}
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "pricing-and-value-message-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Score our Q3 deals against the corridor. Corridor is 300 to 450 USD per member per year. Deals are in the attached file. Realized price means contract value divided by members.",
+      "files": [
+        "evals/files/deals_q3_illustrative.csv"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Is this Instagram ad OK for Germany? It goes to consumers. Intended purpose from our IFU: digital CBT for adults with non-organic insomnia. Regulatory owner is Jana Weber. Ad text attached.",
+      "files": [
+        "evals/files/sleepwell_ad_illustrative.txt"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review our pricing and messaging for Q3. Rules: at least 3 in 4 deals inside the corridor (owner: Head of Sales, Marco Lind); no Stop-level claim live anywhere (owner: Jana Weber). Q3: 1 of 4 deals inside the corridor; 2 below, both in the health-system segment; the German ad from last week's audit had three Stop flags and is still running.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our regulatory person is on leave. Just confirm our payer deck is compliant so we can send it to Aetna today. It says our app is FDA-cleared for insomnia and cuts health plan costs by 30 percent, and it will also be posted on our public website.",
+      "files": []
+    }
+  ]
+}

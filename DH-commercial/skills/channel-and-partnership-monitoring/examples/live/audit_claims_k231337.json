@@ -1,0 +1,51 @@
+{
+ "_note": "Trimmed copy of a live response, 19 October 2026. The three claims were typed for the measurement to span a near paraphrase to a clear overreach.",
+ "call": {
+  "tool": "commercial-dh.audit_claims",
+  "arguments": {
+   "reference": "K231337",
+   "claims": [
+    "EndeavorRx improves attention in children with ADHD aged 8 to 17",
+    "EndeavorRx replaces ADHD medication",
+    "Clinically proven to cure ADHD"
+   ]
+  }
+ },
+ "response": {
+  "intended_purpose_from_record": "[GAP]",
+  "authorization_on_file": true,
+  "claims": [
+   {
+    "claim": "EndeavorRx improves attention in children with ADHD aged 8 to 17",
+    "label": "exceeds_record"
+   },
+   {
+    "claim": "EndeavorRx replaces ADHD medication",
+    "label": "exceeds_record"
+   },
+   {
+    "claim": "Clinically proven to cure ADHD",
+    "label": "exceeds_record"
+   }
+  ],
+  "findings": [],
+  "regulatory_blocks": {
+   "get_authorization": {
+    "product": "EndeavorRx",
+    "pathway": "FDA_510K",
+    "decision_date": "2023-12-13",
+    "product_code": "QFT",
+    "regulation_number": "882.5803"
+   },
+   "search_devices": {
+    "results": [],
+    "gaps": [
+     "no stored device matches 'K231337' in US, EU, UK, CH, TW; absence from the store is not evidence of absence from the market"
+    ]
+   }
+  },
+  "gaps": [
+   "intended purpose [GAP]; classify_product from record did not state one"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "call": {
+  "tool": "agent-pack.list_experts",
+  "args": {
+   "function": "digital-commercial"
+  }
+ },
+ "retrieved": "2026-10-19",
+ "experts": [
+  {
+   "slug": "digital-marketing-manager",
+   "display_name": "Digital Marketing Manager",
+   "description": "Executes compliant, non-promotional product-marketing jobs for a named digital-health offering: claim-to-evidence maps, channel asset drafts, and reviewer packets."
+  },
+  {
+   "slug": "digital-marketing-manager-dh",
+   "display_name": "Digital Marketing Manager (Digital Health)",
+   "description": "Department head who maps every proposed claim to a graded source, drafts non-promotional channel and launch narrative, and flags off-label and listing-as-proof mistakes. Does not publish, buy media, or assert clinical effect."
+  },
+  {
+   "slug": "sales-leader-digital-health",
+   "display_name": "Sales Leader, Digital Health",
+   "description": "Heads the enterprise sales programme for digital health sold to pharmaceutical, payer and health-system buyers: value-based narrative, RFP and RFI strategy, competitive positioning, and C-suite engagement design. Does not set price, close contracts, submit reimbursement dossiers,"
+  },
+  {
+   "slug": "digital-health-access-reimbursement-lead",
+   "display_name": "Digital Health Access & Reimbursement Lead"
+  },
+  {
+   "slug": "digital-partnerships-director",
+   "display_name": "Digital Partnerships Director"
+  },
+  {
+   "slug": "partnerships-manager-digital-health"
+  },
+  {
+   "slug": "digital-adoption-manager"
+  },
+  {
+   "slug": "digital-adoption-lead"
+  },
+  {
+   "slug": "digital-supply-chain-director"
+  }
+ ],
+ "returned": 9
+}

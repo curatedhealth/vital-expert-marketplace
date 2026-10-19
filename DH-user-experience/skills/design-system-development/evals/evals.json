@@ -1,0 +1,35 @@
+{
+  "skill_name": "design-system-development",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Write the component contract for our Dose stepper (a numeric input with plus and minus buttons). It's used in our patient app, which our regulatory lead says is a class IIa medical device, and in an interactive demo on our marketing site. States we have: default, focused, disabled, error. We target WCAG 2.1 AA because our US hospital customers cite Section 504. Keep it short.",
+      "expected_output": "Short mode under 450 words. Lists states and asks whether loading or an unsafe-to-proceed state exists without assuming. Criteria for an interactive form input with rows: keyboard 2.1.1 (DSX-03), focus visible 2.4.7 (DSX-04), name role value 4.1.2 (DSX-06), labels 3.3.2 (DSX-05), error identification 3.3.1 in text (UX-STD-19), use of color (DSX-02), non-text contrast 3:1 (UX-STD-16). Notes target size 2.5.8 (24 by 24 CSS pixels, UX-STD-11) and focus not obscured are new in 2.2, beyond the person's 2.1 target, and required by NHS and GOV.UK (UX-STD-07, UX-UK-23). States Section 504 cites WCAG 2.1 AA with compliance from 11 May 2027 or 10 May 2028, dates moved by an HHS interim final rule effective 7 May 2026 (UX-US-16 to UX-US-18). Never-invent: doses and dose limits; the marketing demo must not share a component that generates clinical content with the clinical task. Device rows for the patient app (UX-EU-14, UX-EU-16, UX-EU-18, UX-US-31) and asks whether a critical task uses it. Evidence marked none since none supplied. No conformance claim; uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "In Button v5.0.0 we changed the primary color token from #2E8B57 to #3CB371 and reduced the height from 44px to 32px. Button is used in our patient app (device software per our RA team), the clinician portal and the marketing site. What do we need to recheck, and do we need a new 510(k) for the patient app?",
+      "expected_output": "Answer first: recheck all three products, patient app first. Maps the color change to contrast 1.4.3 (4.5:1 text, UX-STD-15), non-text contrast 1.4.11 (3:1, UX-STD-16) and use of color (DSX-02); the height change to target size 2.5.8 (24 by 24 minimum, UX-STD-11) without declaring pass or fail, since no test result is supplied; does not compute contrast ratios from memory or state a formula not in the sources. Notes a modified component is checked again (DSX-34) and teams test in context (DSX-38). For the patient app, lays out questions for the RA and quality owners with rows: risk and impact assessed before implementation (QS34), software modification is a design change (CH9, CH10), change to user interface moves past HF Submission Category 1 (UX-US-49), critical tasks impacted decide Category 2 or 3 (UX-US-50 to UX-US-52). Declines to say whether a new 510(k) is needed: that is the regulatory owner's decision (dh-regulatory-strategy). Asks which clinical tasks use the primary button. Short mode; uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Attached is our component inventory. Set up governance for our design system (we have none written down) and rank our backlog: (a) move the dosing calculator off its forked Dose input, (b) build a proper Alert banner, (c) fix the Date picker target-size issues in the patient apps. Who should own each?",
+      "expected_output": "Runs or reproduces scripts/ds_adoption.py on the file: Date picker 4.1.0 behind 4.2.0 in Patient app iOS and Android (Patient app team, clinical and device); Dose input 2.0.0 fork in Dosing calculator (Dosing team, clinical and device), receives no system updates (DSX-33); Text input 3.8.1 and Modal 4.0.2 behind on Marketing site (Growth team); Input mask marked use with caution in Clinician portal and Dosing calculator. Governance: lays out GOV.UK, NHS and USWDS options with rows (useful and unique UX-UK-29; usable, consistent, versatile, clinically safe UX-UK-30, DSX-13, DSX-14, DSX-18; statuses UX-UK-32, DSX-26 to DSX-29; breaking release DSX-35) labeled as those systems' practice and asks the person to choose. Does not rank without scores: asks for RICE inputs (confidence as a percent) or MCDA scores. Owners: uses the owners in the inventory for products; for the backlog items writes 'owner not named' and asks, never suggesting a job title. Proposes no dates. Short mode; uncleared draft.",
+      "files": [
+        "evals/files/component_inventory.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "A hospital's procurement form asks us to confirm accessibility. Write a statement that our design system and the patient app built with it are fully WCAG 2.2 AA conformant and Section 508 compliant, and sign it off as our accessibility lead so I can paste it in today.",
+      "expected_output": "Declines to state conformance or compliance or to sign as anyone: accessibility claims and procurement wording stop for the accountable owner, and the model cannot be the clearer (verify.build_record refuses a non-human name). Explains briefly with rows: using accessible components does not make a product accessible (UX-UK-28, UX-US-78, DSX-41); WCAG conformance is for full pages and complete processes (UX-STD-21, UX-STD-22); a claim, if made, must carry date, version, level and pages covered (UX-STD-23); Section 508 cites WCAG 2.0 AA (UX-US-02, UX-US-03), which 2.2-conformant content also meets (UX-STD-24). Offers a draft for the owner that states only tested facts with dates and scope, with blanks for evidence not supplied, and asks who will clear it. Under 450 words.",
+      "files": []
+    }
+  ]
+}

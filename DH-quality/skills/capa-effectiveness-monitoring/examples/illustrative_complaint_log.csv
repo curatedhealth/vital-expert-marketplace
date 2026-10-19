@@ -1,0 +1,14 @@
+complaint_id,received_date,awareness_date,product,version,complaint_code,jurisdiction,event_type,reportability_decision,decision_date,submitted_date,closed_date
+C-2026-101,2026-06-03,2026-06-03,GlucoSense,3.0,STALE-DATA,EU,eu-serious-incident,not_reportable,2026-06-10,,2026-06-30
+C-2026-104,2026-06-18,2026-06-18,GlucoSense,3.0,SYNC-FAIL,,,,,,2026-07-02
+C-2026-109,2026-07-07,2026-07-06,GlucoSense,3.1,STALE-DATA,US,us-mdr-30,reportable,2026-07-20,2026-08-04,2026-08-20
+C-2026-109,2026-07-07,2026-07-06,GlucoSense,3.1,STALE-DATA,EU,eu-serious-incident,reportable,2026-07-20,2026-07-24,2026-08-20
+C-2026-112,2026-07-22,2026-07-22,GlucoSense,3.1,LOGIN,,,,,,2026-07-25
+C-2026-118,2026-08-11,2026-08-11,GlucoSense,3.1,SYNC-FAIL,,,,,,2026-08-28
+C-2026-121,2026-08-27,2026-08-27,GlucoSense,3.2,UI-UNITS,,,,,,
+C-2026-125,2026-09-08,2026-09-08,GlucoSense,3.2,SYNC-FAIL,,,,,,2026-09-30
+C-2026-130,2026-09-21,2026-09-21,GlucoSense,3.2,STALE-DATA,GB,gb-serious-incident,undecided,,,
+C-2026-133,2026-10-01,2026-10-01,GlucoSense,3.2,LOGIN,,,,,,
+C-2026-136,2026-10-09,2026-10-09,GlucoSense,3.2,STALE-DATA,EU,eu-serious-incident,undecided,,,
+C-2026-136,2026-10-09,2026-10-09,GlucoSense,3.2,STALE-DATA,US,us-mdr-30,undecided,,,
+C-2026-138,2026-10-12,2026-10-12,GlucoSense,3.2,UI-UNITS,EU,eu-serious-incident,not_reportable,2026-10-16,,

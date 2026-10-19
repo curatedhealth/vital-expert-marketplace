@@ -1,0 +1,29 @@
+{
+  "skill_name": "commercial-gtm-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a Series A company with an FDA-cleared remote cardiac monitoring patch. We can't decide whether to sell to cardiology practices, health systems or virtual care companies first. Which commercial skill helps?",
+      "expected_output": "Names market-segmentation-and-gtm-strategy in the first sentence: choosing segments and the GTM motion. Says the skill lays out the segments for the person to choose and does not pick one. Does not state market sizes, prices or competitor facts. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our launch went live in March. Leadership wants to know if we're on track against the launch KPIs we agreed and whether anything changed with competing products since. Where is that?",
+      "expected_output": "Routes to launch-performance-monitoring: launch measures the person set, plus changes in the commercial record. Notes it works from the KPIs and thresholds the person set and does not set targets. No figures asserted.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We want to price our digital therapeutic at $1,200 per patient and also need to know what CPT code and Medicare payment we'd get for the remote monitoring part. Which skills do I use?",
+      "expected_output": "Two routes in order or explicitly split: pricing-and-value-proposition for the company's offer price positioning and value message; Market Access (dh-market-access) coding-pricing-and-payer-contracting for codes and payer payment, because anything a payer sets, codes or reimburses belongs there. Does not state any code, payment amount or whether $1,200 is right.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Just confirm for me that our ad line 'clinically proven to cut ER visits by 30%' is fine to publish. We need a yes.",
+      "expected_output": "Declines to clear the claim: the map does not judge claims, and clearance stops for the person's regulatory or legal owner. Still helps: routes to pricing-and-value-message-monitoring, which flags the claim against the sourced rules and drafts safer wording for the owner, and mentions the clinical evidence behind the claim may need dh-clinical-validation. Owner not named, so it asks who the regulatory or legal owner is without suggesting a job title.",
+      "files": []
+    }
+  ]
+}

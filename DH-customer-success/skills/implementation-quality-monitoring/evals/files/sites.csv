@@ -1,0 +1,7 @@
+site,status,go_live_planned,go_live_actual,eligible_patients,active_patients,providers_expected,providers_delivering,expected_usage,observed_usage
+Clinic A (pilot),live,2026-03-02,2026-03-02,420,281,12,11,5,4.6
+Clinic B (pilot),live,2026-03-02,2026-03-30,380,152,10,6,5,3.1
+Clinic C,live,2026-06-01,2026-06-15,510,214,14,9,5,4.2
+Clinic D,live,2026-06-01,2026-08-03,290,58,8,3,5,2.0
+Clinic E,agreed,2026-09-07,,350,,9,,5,
+Clinic F,approached,,,,,,,,

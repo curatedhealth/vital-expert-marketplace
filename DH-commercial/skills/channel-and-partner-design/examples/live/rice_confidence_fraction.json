@@ -1,0 +1,65 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked. Scores, weights and RICE inputs are illustrative inputs typed for the measurement, not a person's numbers. This call sent confidence as a fraction to test the scale.",
+ "call": {
+  "tool": "analytics.rice",
+  "arguments": {
+   "initiatives": [
+    {
+     "id": "Co-sell pilot with group practice network",
+     "reach": 400,
+     "impact": 2,
+     "confidence": 0.5,
+     "effort": 3
+    },
+    {
+     "id": "EHR marketplace listing",
+     "reach": 1500,
+     "impact": 0.5,
+     "confidence": 0.8,
+     "effort": 4
+    },
+    {
+     "id": "Reseller onboarding kit",
+     "reach": 250,
+     "impact": 1,
+     "confidence": 0.8,
+     "effort": 1
+    }
+   ]
+  }
+ },
+ "response": {
+  "method": "RICE Prioritization (Reach x Impact x Confidence / Effort)",
+  "citation": "McClure, S. (2016). Product prioritization frameworks: RICE. Intercom.",
+  "results": [
+   {
+    "id": "Reseller onboarding kit",
+    "name": null,
+    "score": 2,
+    "reach": 250,
+    "impact": 1,
+    "confidence": 0.008,
+    "effort": 1
+   },
+   {
+    "id": "EHR marketplace listing",
+    "name": null,
+    "score": 1.5,
+    "reach": 1500,
+    "impact": 0.5,
+    "confidence": 0.008,
+    "effort": 4
+   },
+   {
+    "id": "Co-sell pilot with group practice network",
+    "name": null,
+    "score": 1.3333,
+    "reach": 400,
+    "impact": 2,
+    "confidence": 0.005,
+    "effort": 3
+   }
+  ],
+  "count": 3
+ }
+}

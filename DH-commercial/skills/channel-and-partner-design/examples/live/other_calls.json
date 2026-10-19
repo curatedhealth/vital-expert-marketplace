@@ -1,0 +1,102 @@
+{
+ "_note": "Short records of other live calls, 19 October 2026.",
+ "calls": [
+  {
+   "tool": "diligence-dh.search_companies",
+   "arguments": {
+    "segment": "rpm",
+    "limit": 10
+   },
+   "response_summary": {
+    "result_count": 0,
+    "sources_used": [
+     "openfda",
+     "clinicaltrials"
+    ]
+   }
+  },
+  {
+   "tool": "diligence-dh.retrieve_guidance",
+   "arguments": {
+    "query": "anti-kickback safe harbor",
+    "limit": 5
+   },
+   "response_summary": {
+    "results": [],
+    "gaps": [
+     "[GAP]",
+     "no passage retrieved in this namespace"
+    ],
+    "upstream_tool": "regulatory-dh.retrieve_guidance"
+   }
+  },
+  {
+   "tool": "verify.qualify_source",
+   "arguments": {
+    "url": "https://oig.hhs.gov/documents/advisory-opinions/11724/AO-26-15.pdf",
+    "question": "Does paying a referral-software vendor a per-referral fee fall under the Anti-Kickback Statute?"
+   },
+   "response_summary": {
+    "tier": "inadmissible",
+    "admissibility": [
+     "no provenance"
+    ],
+    "publisher": null,
+    "date": null,
+    "source_score": {
+     "total": 33,
+     "axes": {
+      "authority": 25,
+      "recency": 0,
+      "relevance": 5,
+      "provenance": 0
+     }
+    }
+   }
+  },
+  {
+   "tool": "commercial-dh.list_commercial_dh_sources",
+   "arguments": {},
+   "response_summary": {
+    "sec_edgar": 175,
+    "nih_reporter": 18,
+    "eu_ted": 41,
+    "openfda": 1224,
+    "not_loaded": [
+     "companies_house",
+     "zefix",
+     "diga (Diligence)",
+     "nice (Diligence)",
+     "funding"
+    ]
+   }
+  },
+  {
+   "tool": "agent-pack.list_experts",
+   "arguments": {
+    "query": "partnership",
+    "limit": 10
+   },
+   "response_summary": {
+    "experts": [
+     "partnerships-manager-digital-health",
+     "digital-health-access-reimbursement-lead",
+     "digital-partnerships-director"
+    ]
+   }
+  },
+  {
+   "tool": "agent-pack.download_agent",
+   "arguments": {
+    "expert": "digital-partnerships-director"
+   },
+   "response_summary": {
+    "characters": 108025,
+    "skill_count": 87,
+    "tools_listed": 45,
+    "prompt_says": "Tools you can operate (29)",
+    "escalation_peer": "Health Tech Investor"
+   }
+  }
+ ]
+}

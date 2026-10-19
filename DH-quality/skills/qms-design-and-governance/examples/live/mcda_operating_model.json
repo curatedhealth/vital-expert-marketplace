@@ -1,0 +1,85 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked. Scores and weights are illustrative inputs typed for the measurement, not a person's scores.",
+ "call": {
+  "tool": "analytics.mcda",
+  "arguments": {
+   "alternatives": [
+    {
+     "id": "Single global QMS with MDSAP",
+     "scores": {
+      "market_coverage": 4,
+      "audit_burden": 4,
+      "cost_to_build": 2,
+      "time_to_first_market": 2
+     }
+    },
+    {
+     "id": "Single global QMS without MDSAP",
+     "scores": {
+      "market_coverage": 3,
+      "audit_burden": 2,
+      "cost_to_build": 3,
+      "time_to_first_market": 4
+     }
+    },
+    {
+     "id": "Regional QMS (EU and US separate)",
+     "scores": {
+      "market_coverage": 3,
+      "audit_burden": 1,
+      "cost_to_build": 1,
+      "time_to_first_market": 3
+     }
+    }
+   ],
+   "criteria_weights": {
+    "market_coverage": 0.35,
+    "audit_burden": 0.25,
+    "cost_to_build": 0.2,
+    "time_to_first_market": 0.2
+   }
+  }
+ },
+ "response": {
+  "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)",
+  "results": [
+   {
+    "id": "Single global QMS with MDSAP",
+    "value_estimate": 80,
+    "contributions": {
+     "audit_burden": 25,
+     "cost_to_build": 10,
+     "market_coverage": 35,
+     "time_to_first_market": 10
+    }
+   },
+   {
+    "id": "Single global QMS without MDSAP",
+    "value_estimate": 73.75,
+    "contributions": {
+     "audit_burden": 12.5,
+     "cost_to_build": 15,
+     "market_coverage": 26.25,
+     "time_to_first_market": 20
+    }
+   },
+   {
+    "id": "Regional QMS (EU and US separate)",
+    "value_estimate": 52.5,
+    "contributions": {
+     "audit_burden": 6.25,
+     "cost_to_build": 5,
+     "market_coverage": 26.25,
+     "time_to_first_market": 15
+    }
+   }
+  ],
+  "weights_used": {
+   "audit_burden": 0.25,
+   "cost_to_build": 0.2,
+   "market_coverage": 0.35,
+   "time_to_first_market": 0.2
+  },
+  "negative_criteria": []
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "call": "literature.search_literature",
+ "called_on": "19 October 2026",
+ "note": "Trimmed to identity fields.",
+ "runs": [
+  {
+   "arguments": {
+    "query": "patient organisation industry funding disclosure transparency",
+    "limit": 5
+   },
+   "records": [
+    [
+     "10.1177/00207314221083871",
+     "Disclosure of Pharmaceutical Industry Funding of Patient Organisations in Nordic Countries",
+     "2022",
+     "design other 0.3"
+    ],
+    [
+     "10.1136/bmj.l6925",
+     "Industry funding of patient and health consumer organisations: systematic review with meta-analysis",
+     "2020",
+     "meta_analysis 0.98"
+    ],
+    [
+     "10.1186/1471-2458-6-201",
+     "Advertising and disclosure of funding on patient organisation websites: a cross-sectional survey",
+     "2006",
+     "cross_sectional 0.78"
+    ],
+    [
+     "10.5694/mja2.70294",
+     "Pharmaceutical Industry Payments to Patient Groups in Australia: A Longitudinal Analysis of a Decade of Disclosures",
+     "2026",
+     "cohort 0.45 (labeled Observational Study)"
+    ],
+    [
+     "10.7759/cureus.69405",
+     "The Medicine Revolution Through Artificial Intelligence: Ethical Challenges of Machine Learning Algorithms in Decision-Making",
+     "2024",
+     "narrative_review (off topic)"
+    ]
+   ],
+   "total_merged": 16
+  },
+  {
+   "arguments": {
+    "query": "patient support program digital health engagement attrition evaluation",
+    "limit": 5,
+    "filters": {
+     "date_from": "2020-01-01"
+    }
+   },
+   "records": [
+    [
+     "10.68159/a002740697",
+     "Artificial Intelligence for Digital Patient Communication: A Systematic Review ...",
+     "2026",
+     "systematic_review 0.78, crossref only"
+    ],
+    [
+     "10.2196/89124",
+     "Attrition in Digital Self-Management Interventions for Patients With MASLD: Mixed Methods Systematic Review",
+     "2026",
+     "systematic_review 0.96"
+    ],
+    [
+     "10.3390/healthcare14010060",
+     "12-Month Weight Loss and Adherence Predictors in a Real-World UK Tirzepatide-Supported Digital Obesity Service",
+     "2025",
+     "cohort 0.78"
+    ],
+    [
+     "10.1038/s41746-025-01778-w",
+     "Engagement and attrition in digital mental health: current challenges and potential solutions",
+     "2025",
+     "other 0.3"
+    ],
+    [
+     "10.1177/20552076261425483",
+     "Refining the evaluation of knee osteoarthritis videos ...",
+     "2026",
+     "other 0.3 (off topic)"
+    ]
+   ],
+   "total_merged": 20
+  }
+ ],
+ "trial_ids": "empty on every record"
+}

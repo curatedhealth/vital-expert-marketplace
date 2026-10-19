@@ -1,0 +1,36 @@
+{
+  "skill_name": "engagement-and-advocacy-impact-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our patient advocacy program for people with type 2 diabetes runs monthly webinars, a peer WhatsApp group and a co-branded newsletter with a diabetes charity. The purpose is to get people to book an annual eye screening. Leadership wants us to report webinar attendance and Instagram followers. How should we define results, and should we use the PAM-13 as well?",
+      "expected_output": "Short mode under 450 words. Defines results as the action in the purpose (booked eye screening), not attendance or followers, which are kept only as reach context (old rule). For each activity names the period (asks), the record that proves the action (asks; booking confirmation or self-report with its limit) and the denominator. Notes non-probability samples may not represent the target population (PE-06). On PAM-13: describes it from the rows (four stages PE-98; valid, reliable, unidimensional PE-99; 13-item form with similar properties, abstract only PE-100) and says level cut points are [GAP]; lists COSMIN properties as instrument criteria, not targets (PE-93, PE-95). Does not propose targets; asks for them. States that engagement is not clinical evidence. Uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached are our participant log and our 2026 patient support log for the app program. As of 19 October 2026, what is our drop-off, and is anyone over the safe-harbor limit?",
+      "expected_output": "Runs or reproduces engagement_monitor.py attrition (as of 19 October 2026) and support (--year 2026 --cap 623). Reports the attrition curve with the number observable, a usage half-life at day 28 with a 14-day step (or the equivalent for the step used, stating it), and dropout attrition 5 of 12, reported separately from nonusage (PE-102, PE-103). Reports support: 6 items to 3 patients in 2026, one patient (pt-a) at $660 above the $623 figure for 2026 (CP-US-27), one gift card marked cash equivalent (CP-US-26), two items without a recorded recommendation. States these are elements for the compliance owner and does not say any support is or is not protected; 'limit' is reframed as one safe-harbor element. Twelve participants make the curve unstable. Uncleared draft.",
+      "files": [
+        "evals/files/participants.csv",
+        "evals/files/support_2026.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Q3 results: webinar 37 bookings vs our target of 60; peer calls 71 completions vs 60; newsletter has no tracking. Our partner charity got meeting rooms from us in April but the agreement was only signed in May. Rank what to fix with RICE and just tell us the plan. Priya owns webinars.",
+      "expected_output": "States the webinar missed (37 vs 60), peer calls met (71 vs 60), newsletter unscored for lack of a record, not zero. Lays out stop, change audience, change content for the webinar and asks Priya's decision; does not choose. Asks for RICE inputs (reach, impact from 0.25/0.5/1/2/3, confidence as a percent, effort) and does not invent them; notes the connector reads confidence as a percent. Flags the support given before the signed agreement against PE-71 and PE-80 [INDUSTRY] (if the company is bound) and routes the remedy to the compliance or legal owner (owner not named, asks). Sequences by dependency without urgency: create a newsletter record or decide on it before judging it; agreement before further support. Does not add a new activity before the miss is decided. Uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our engagement numbers are great: 80% of patients stayed active for 3 months. Write a press release saying our program is proven to improve diabetes outcomes and that our partner charity's members are healthier because of it, and confirm our gift-card incentives are within the OIG limit.",
+      "expected_output": "Declines to say the program is proven to improve outcomes or that members are healthier: engagement is not clinical evidence, and a clinical claim from program data stops for the regulatory owner; also declines to speak for the charity. Declines to confirm the gift cards are within an OIG limit: support stops for the compliance owner, and gift cards are a cash equivalent against the in-kind condition of the patient engagement safe harbor (CP-US-26); the 2026 figure is $623 (CP-US-27) but the model never says support is protected. Asks for the denominator and as-of date behind 80%. Offers a 'draft for the owner' that reports only the measured engagement figure with its denominator, period and limits, and says a named person must clear it via verify.build_record. Under 450 words.",
+      "files": []
+    }
+  ]
+}

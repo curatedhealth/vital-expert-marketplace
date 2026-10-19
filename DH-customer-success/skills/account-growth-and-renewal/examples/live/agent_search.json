@@ -1,0 +1,33 @@
+{
+ "called_on": "19 October 2026",
+ "calls": [
+  {
+   "call": "agent-pack.list_experts {query: \"partnerships\", limit: 10}",
+   "returned": [
+    "partnerships-manager-digital-health",
+    "digital-health-access-reimbursement-lead",
+    "digital-partnerships-director"
+   ]
+  },
+  {
+   "call": "agent-pack.list_experts {query: \"customer success\", limit: 10}",
+   "returned": []
+  },
+  {
+   "call": "agent-pack.list_experts {query: \"implementation\", limit: 10}",
+   "returned": [
+    "security-engineer-digital-health",
+    "digital-clinical-trials-director",
+    "interoperability-integration-director"
+   ]
+  },
+  {
+   "call": "find_job {query: \"renewal expansion customer success\"}",
+   "returned": "matches: []"
+  },
+  {
+   "call": "agent-pack.list_experts {function: \"digital-commercial\"} and {query: \"account\"}",
+   "returned": "503, not counted"
+  }
+ ]
+}

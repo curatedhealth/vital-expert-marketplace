@@ -1,0 +1,152 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "calls": [
+  {
+   "tool": "regulatory-dh.search_devices",
+   "args": {
+    "query": "Briefcase",
+    "jurisdiction": "EU",
+    "limit": 5
+   }
+  },
+  {
+   "tool": "regulatory-dh.search_devices",
+   "args": {
+    "query": "stroke",
+    "jurisdiction": "EU",
+    "limit": 3
+   }
+  },
+  {
+   "tool": "regulatory-dh.search_devices",
+   "args": {
+    "query": "Viz",
+    "jurisdiction": "EU",
+    "limit": 5
+   },
+   "result": "no stored device matches 'Viz' in EU"
+  }
+ ],
+ "results": [
+  {
+   "product": "Briefcase-Triage",
+   "manufacturer": "Aidoc Medical Ltd.",
+   "jurisdiction": "EU",
+   "pathway": "CE_MARK",
+   "risk_class": "Class IIa",
+   "status": "On the EU market",
+   "decision_date": null,
+   "submission_date": null,
+   "product_code": "Z11069092",
+   "regulation_number": null,
+   "predicate_references": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:41Z",
+   "source": "eudamed_software",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "7290018052BC.TRGSU"
+    ],
+    "EMDN": [
+     "Z11069092"
+    ]
+   }
+  },
+  {
+   "product": "Briefcase-Quantification",
+   "manufacturer": "Aidoc Medical Ltd.",
+   "jurisdiction": "EU",
+   "pathway": "CE_MARK",
+   "risk_class": "Class IIa",
+   "status": "On the EU market",
+   "decision_date": null,
+   "submission_date": null,
+   "product_code": "Z11069092",
+   "regulation_number": null,
+   "predicate_references": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:41Z",
+   "source": "eudamed_software",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "7290018052BC.QTFSH"
+    ],
+    "EMDN": [
+     "Z11069092"
+    ]
+   }
+  },
+  {
+   "product": "Stroke Triage App",
+   "manufacturer": "ORTEC B.V.",
+   "jurisdiction": "EU",
+   "pathway": "CE_MARK",
+   "risk_class": "Class I",
+   "status": "No longer placed on the EU market",
+   "decision_date": null,
+   "submission_date": null,
+   "product_code": "V92",
+   "regulation_number": null,
+   "predicate_references": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:23Z",
+   "source": "eudamed_software",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "0152886StrokeTriageAppZE"
+    ],
+    "EMDN": [
+     "V92"
+    ]
+   }
+  },
+  {
+   "product": "Stroke VCAR",
+   "manufacturer": "GE Medical Systems SCS",
+   "jurisdiction": "EU",
+   "pathway": "CE_MARK",
+   "risk_class": "Class IIa",
+   "status": "On the EU market",
+   "decision_date": null,
+   "submission_date": null,
+   "product_code": "Z11030692",
+   "regulation_number": null,
+   "predicate_references": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:45Z",
+   "source": "eudamed_software",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "8406821BUG00081H6"
+    ],
+    "EMDN": [
+     "Z11030692"
+    ]
+   }
+  },
+  {
+   "product": "ABC Stroke Risk Score Calculator",
+   "manufacturer": "Evidencio",
+   "jurisdiction": "EU",
+   "pathway": "CE_MARK",
+   "risk_class": "Class IIa",
+   "status": "On the EU market",
+   "decision_date": null,
+   "submission_date": null,
+   "product_code": "V92",
+   "regulation_number": null,
+   "predicate_references": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:49Z",
+   "source": "eudamed_software",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "872029952642187RN"
+    ],
+    "EMDN": [
+     "V92"
+    ]
+   }
+  }
+ ]
+}

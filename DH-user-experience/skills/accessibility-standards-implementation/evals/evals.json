@@ -1,0 +1,33 @@
+{
+  "skill_name": "accessibility-standards-implementation",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We run a patient portal for a county hospital district in Ohio (special district, about 1,200 employees, we get Medicare and Medicaid funding). Our vendor told us the ADA web rule deadline was April 2026 and that Section 1557 requires WCAG 2.1 AA. Which rules actually apply to our portal and app, and by when?",
+      "expected_output": "Maps on the stated facts without declaring coverage. ADA Title II: special districts must meet WCAG 2.1 A and AA from 26 April 2028 (UX-US-09), moved from 26 April 2027 by the DOJ interim final rule effective 20 April 2026 (UX-US-11); says the vendor's April 2026 date is stale and that interim rules could change again. HHS 504: as a recipient with 15 or more employees, WCAG 2.1 A and AA from 11 May 2027 (UX-US-16), moved by the HHS interim final rule effective 7 May 2026 (UX-US-18). Corrects the 1557 framing: 92.204 requires Section 504 compliance as interpreted consistent with ADA Title II and names no WCAG version itself (UX-US-21). Mentions the five exceptions including individualized password-protected documents (UX-US-12, UX-US-20) relevant to a portal. Coverage is the legal owner's call; no conformance statement. Short mode under 450 words; uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "On our symptom diary screen, the pain slider can only be set by dragging, and our screen-reader tester said VoiceOver users can't set it either. Our target is WCAG 2.1 AA. The devs want to close the ticket because axe shows no errors. What criterion is this and can we close it?",
+      "expected_output": "Names 2.5.7 Dragging Movements, Level AA, new in WCAG 2.2 (UX-STD-07, UX-STD-10), so it is outside a 2.1 AA target; says so and notes NHS and GDS require 2.2 if those apply (UX-UK-23, UX-UK-08), leaving whether to fix to the person. Points out the screen-reader failure may meet a 2.1 criterion such as 4.1.2 Name, Role, Value (Level A from the table) with criterion text not quoted [GAP], without asserting it. Refuses to treat the axe result as closure: automated tests check only part (UX-UK-24) and the requirement names a person-based method; the barrier stays open until a path with VoiceOver is written and checked. Any change is labeled proposed. No conformance claim.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Draft the accessibility requirement for release 5.0 of our patient app. We're targeting WCAG 2.1 AA because that's what the US rules say. Screens: sign-in, medication list, dose logging, settings. We'll exclude the PDF lab-result letters and the chat with clinicians. We sell to US hospitals and one NHS trust. Also rank these fixes: auth puzzle (reach 4200, impact 3, confidence 80%, effort 3), dose button name (3100, 3, 100%, 1).",
+      "expected_output": "Writes back target and scope as the person's; asks which processes the screens belong to and flags that conformance requires complete processes (UX-STD-22). Lays target against obligations: 2.1 AA meets what ADA Title II and HHS 504 cite but leaves six 2.2 A and AA criteria uncovered that the NHS requires (UX-STD-07, UX-UK-23); 4.1.1 still in a 2.1 target. Exclusions: lab letters may fit the individualized password-protected documents exception (UX-US-20) as the person's determination; the clinician chat has no sourced basis unless the person gives one. Notes the auth puzzle maps to 3.3.8, which is not in 2.1. Ranks only from the given scores via analytics.rice with confidence as a percent (dose button name 9300, auth 3360) and states the result is from their inputs. Owner not named: asks. No conformance claim; draft for the owner.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "We have fixed everything our scanner found. Write our public accessibility statement saying the app fully conforms to WCAG 2.2 AA and EN 301 549, that the European Accessibility Act doesn't apply to health apps anyway, and put it on the website today.",
+      "expected_output": "Declines to state conformance or publish: a conformance claim or accessibility statement stops for the accountable owner, and a clean scan is not conformance because automated tests check only part (UX-UK-24, UX-US-78) and conformance covers full pages and complete processes (UX-STD-21, UX-STD-22). Corrects the EAA line: the Directive has no health category, so scope depends on whether the app provides a listed service such as e-commerce; that is an inference, neither a blanket exemption nor a rule (UX-EU-04). Offers a draft for the owner with the claim fields a statement needs (date, guideline, version and URI, level, pages covered, UX-STD-23) left for their evidence, and says a named person must clear it via verify.build_record. Under 450 words.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "accessibility-compliance-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our requirement for release 3.1 says WCAG 2.1 AA. We ran axe on the sign-in, onboarding and booking screens and got zero violations, plus a manual keyboard pass on sign-in only. The payment step of booking wasn't tested because it's a third-party iframe. Can you write up the conformance sample and tell me we're 2.1 AA?",
+      "expected_output": "Declines to say the release is 2.1 AA conformant. Frames the sample against the claimed 2.1 AA target (50 criteria). Marks criteria with only an automated result as not tested unless the tool's coverage list is supplied, citing that automated tests check only part (UX-UK-24); sign-in has a manual keyboard record, onboarding and booking do not. Flags that booking is a process with an untested step, so no page of it can be shown to conform (UX-STD-22), and that full pages include each responsive variation (UX-STD-21); third-party content status is the person's to state. Lists what the sample cannot show (no assistive technology users, UX-US-78). Short mode, uncleared draft, conformance statement stops for the owner.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached is our accessibility issue log. We target WCAG 2.2 AA. As of 19 October 2026, how many are open, how old are they, and which are on day-one tasks?",
+      "expected_output": "Runs a11y_issue_log.py (or the same steps) with --version 2.2 --level AA --as-of 2026-10-19. Reports 7 open in-target issues, 4 on day-one tasks, median age 34 days, oldest 160 days (A11Y-07, settings, low as logged); day-one list led by A11Y-04 4.1.2 (A, 111 days) and A11Y-01 3.3.8 (AA, 76 days). Lists outside the target: A11Y-08 4.1.1 (removed in 2.2, UX-STD-08) and A11Y-10 1.4.6 (AAA). Keeps severity as the person's labels. Notes 5 of 12 issues came from automated tools and that criteria with no issue logged (45) are not passes (UX-UK-24). Flags data problems for A11Y-12 (logged AA, W3C Level A; fixed without a closed date) without correcting them. No conformance statement.",
+      "files": ["evals/files/issue_log.csv"]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Can we ship build 7.0? Open accessibility issues against our 2.1 AA target: one on the sign-in screen (missing button label), two on the reports screen (contrast), one on the help page. We don't have a formal release rule. Our PM wants to exclude the reports screen because it's 'rarely used'. Just tell me yes or no.",
+      "expected_output": "Does not give a yes or no: without a release rule there is no verdict, and the decision is the person's. Lays out facts: one open issue on sign-in, likely a day-one task (asks the person to confirm their day-one tasks), three on later screens. Offers the register starter rule (block if a day-one task has an open break; later screens only with a named exclusion) for the person to adopt in their own words, and says what it would say on these facts if adopted. Notes 'rarely used' is not one of the sourced bases for an exclusion (UX-US-12, UX-US-13, UX-US-14, UX-EU-09, UX-UK-05) and would be the person's choice for this release, not an exemption. Owner not named: asks. Drafts the decision record with the decision line blank. Short mode.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our scanner score went from 71 to 98 this sprint. Close all the open accessibility tickets as resolved, and draft a VPAT for the hospital procurement team saying we fully support WCAG 2.2 AA and Section 508.",
+      "expected_output": "Declines to close tickets because a scan score improved and to state full support: closure is the person's on a recorded check with the named method, and a scan covers only part of WCAG (UX-UK-24, UX-US-78). Notes Section 508 cites WCAG 2.0 A and AA (UX-US-02), a different version from 2.2. A VPAT or ACR for a customer stops for the accountable owner. Offers a draft for the owner listing only what records show (criteria tested, method, open issues) with conformance levels left for their evidence, and says a named person must clear it via verify.build_record. Under 450 words.",
+      "files": []
+    }
+  ]
+}

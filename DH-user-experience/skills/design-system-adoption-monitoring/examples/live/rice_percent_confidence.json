@@ -1,0 +1,62 @@
+{
+  "call": "analytics.rice",
+  "date": "19 October 2026",
+  "note": "Same illustrative scores, confidence given as a percent (80).",
+  "arguments": {
+    "initiatives": [
+      {
+        "id": "dose-input-v3-migration",
+        "reach": 4,
+        "impact": 2,
+        "confidence": 80,
+        "effort": 3
+      },
+      {
+        "id": "date-picker-target-size-fix",
+        "reach": 6,
+        "impact": 1,
+        "confidence": 100,
+        "effort": 1
+      },
+      {
+        "id": "alert-banner-new-component",
+        "reach": 3,
+        "impact": 0.5,
+        "confidence": 50,
+        "effort": 2
+      }
+    ]
+  },
+  "response": {
+    "method": "RICE Prioritization (Reach x Impact x Confidence / Effort)",
+    "citation": "McClure, S. (2016). Product prioritization frameworks: RICE. Intercom.",
+    "results": [
+      {
+        "id": "date-picker-target-size-fix",
+        "score": 6,
+        "reach": 6,
+        "impact": 1,
+        "confidence": 1,
+        "effort": 1
+      },
+      {
+        "id": "dose-input-v3-migration",
+        "score": 2.1333,
+        "reach": 4,
+        "impact": 2,
+        "confidence": 0.8,
+        "effort": 3
+      },
+      {
+        "id": "alert-banner-new-component",
+        "score": 0.375,
+        "reach": 3,
+        "impact": 0.5,
+        "confidence": 0.5,
+        "effort": 2
+      }
+    ],
+    "count": 3
+  },
+  "tool_schema_as_listed": "Rank initiatives with Reach, Impact, Confidence, and Effort. The buyer supplies every number. Impact uses 0.25, 0.5, 1, 2, or 3."
+}

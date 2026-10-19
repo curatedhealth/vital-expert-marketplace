@@ -1,0 +1,22 @@
+participant_id,user_group,task_id,outcome,stop_id,quote,critical,employee,think_aloud
+P01,patient,T1-log-weight,completed,,,no,no,yes
+P01,patient,T2-confirm-dose,stopped,S1-dose-button,"I thought the green button meant I already took it",yes,no,yes
+P01,patient,T3-diary,completed,,,no,no,yes
+P02,patient,T1-log-weight,stopped,S2-unit-toggle,"Is this kilos or pounds?",no,no,yes
+P02,patient,T2-confirm-dose,stopped,S1-dose-button,"Did that save? Nothing happened",yes,no,yes
+P02,patient,T3-diary,completed,,,no,no,yes
+P03,patient,T1-log-weight,completed,,,no,no,yes
+P03,patient,T2-confirm-dose,completed,,,yes,no,yes
+P03,patient,T3-diary,assisted,S3-diary-scale,"What does 3 mean here?",no,no,yes
+P04,patient,T1-log-weight,stopped,S2-unit-toggle,"It says 180 but my scale says 82",no,no,yes
+P04,patient,T2-confirm-dose,stopped,S1-dose-button,"I pressed it twice to be sure",yes,no,yes
+P04,patient,T3-diary,completed,,,no,no,yes
+P05,patient,T1-log-weight,completed,,,no,no,yes
+P05,patient,T2-confirm-dose,completed,,,yes,no,yes
+P05,patient,T3-diary,stopped,S3-diary-scale,"I don't know which end is good",no,no,yes
+C01,clinician,T4-review-alerts,completed,,,no,no,yes
+C01,clinician,T5-change-threshold,stopped,S4-threshold-save,"Where did my change go?",yes,no,yes
+C02,clinician,T4-review-alerts,completed,,,no,yes,yes
+C02,clinician,T5-change-threshold,completed,,,yes,yes,yes
+C03,clinician,T4-review-alerts,assisted,S5-alert-filter,"I can't find yesterday's alerts",no,no,yes
+C03,clinician,T5-change-threshold,stopped,S4-threshold-save,"It looks saved but the old number is back",yes,no,yes

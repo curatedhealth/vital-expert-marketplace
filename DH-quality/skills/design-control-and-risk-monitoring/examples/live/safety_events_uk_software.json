@@ -1,0 +1,63 @@
+{
+ "call": "regulatory-dh.search_safety_events",
+ "args": {
+  "jurisdiction": "UK",
+  "product": "software",
+  "limit": 10
+ },
+ "called_on": "19 October 2026",
+ "note": "8 rows returned; the 4 most recent kept here; the 4 not kept are dated 2017-07-11 (Prismaflex 6.10) and 2014-12-17 (three re-dated older alerts). manufacturer is null on most rows; where filled it can name a firm other than the one the alert text names (Dialog+ alert names B. Braun Avitum AG, stored manufacturer 'AI Medical AG'; Medtronic programmer alert stored as 'RESTARTIX CENTER SRL').",
+ "results": [
+  {
+   "source_type": "mhra_alert",
+   "jurisdiction": "UK",
+   "title": "BD BodyComm version 3.3 software used for BodyGuard infusion pumps, BodyGuard-T and T34 syringe drivers: Important steps to manage transition to Windows 11 (DSI/2025/006)",
+   "event_date": "2025-10-06",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "summary": "The BodyComm software currently uses Windows 10. Microsoft is transitioning to Windows 11 from 14 October 2025 which requires an updated cable to connect the pumps to the BodyComm software. These cables may not be available until after the Windows transition date.",
+   "source_url": "https://www.gov.uk/drug-device-alerts/bd-bodycomm-version-3-dot-3-software-used-for-bodyguard-infusion-pumps-bodyguard-t-and-t34-syringe-drivers-important-steps-to-manage-transition-to-windows-11-dsi-slash-2025-slash-006",
+   "retrieved_at": "2026-10-14T06:48:07.136789+00:00"
+  },
+  {
+   "source_type": "mhra_alert",
+   "jurisdiction": "UK",
+   "title": "Prismaflex haemofiltration systems installed with software versions 8.10, 7.20 and lower - risk of unexpected machine shutdown during treatment (MDA/2019/037)",
+   "event_date": "2019-10-10",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "summary": "Manufactured by Baxter - Communication error alarms may result in unintentional delay and interruption of treatment due to system shutdown.",
+   "source_url": "https://www.gov.uk/drug-device-alerts/prismaflex-haemofiltration-systems-installed-with-software-versions-8-10-7-20-and-lower-risk-of-unexpected-machine-shutdown-during-treatment-mda-2019-037",
+   "retrieved_at": "2026-10-14T06:48:07.136789+00:00"
+  },
+  {
+   "source_type": "mhra_alert",
+   "jurisdiction": "UK",
+   "title": "Dialog+ haemodialysis machines with software versions 9.xx (excluding versions 9.18, 9.1A, 9.1B) - software and hardware upgrade required (MDA/2019/024)",
+   "event_date": "2019-06-26",
+   "severity": "device-safety-information",
+   "manufacturer": "AI Medical AG",
+   "summary": "Manufactured by B. Braun Avitum AG - Malfunction of the temperature sensor can result in temperature of the dialysis fluid to be more than 1 degree C outside the programmed values, which can lead to inadequate treatment.",
+   "source_url": "https://www.gov.uk/drug-device-alerts/dialog-haemodialysis-machines-with-software-versions-9-xx-excluding-versions-9-18-9-1a-9-1b-software-and-hardware-upgrade-required-mda-2019-024",
+   "retrieved_at": "2026-10-14T06:48:07.136789+00:00"
+  },
+  {
+   "source_type": "mhra_alert",
+   "jurisdiction": "UK",
+   "title": "Datex-Ohmeda Aisys CS2 and Aisys anaesthesia devices with software version 11 and version 11 SP01 (Service Pack) - Risk of ventilation loss, inadequate anaesthesia and hypoxia or severe hypotension (MDA/2019/001)",
+   "event_date": "2019-01-17",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "summary": "Manufactured by GE Healthcare - Device may stop ventilation when in PSV Pro Mode and users may be unable to change gas and agent settings when using End-Tidal Control.",
+   "source_url": "https://www.gov.uk/drug-device-alerts/datex-ohmeda-aisys-cs2-and-aisys-anaesthesia-devices-with-software-version-11-and-version-11-sp01-service-pack-risk-of-ventilation-loss-inadequate-anaesthesia-and-hypoxia-or-severe-hypotension-mda-2019-001",
+   "retrieved_at": "2026-10-14T06:48:07.136789+00:00"
+  }
+ ],
+ "coverage": [
+  "US: FDA enforcement recalls whose product text mentions software, algorithm, application, firmware or app; MAUDE counts by year",
+  "UK: MHRA medical safety alerts matched by whole-phrase manufacturer name or software terms",
+  "CH: Swissmedic field safety corrective actions not loaded [GAP]"
+ ],
+ "gaps": [],
+ "maude_counts": []
+}

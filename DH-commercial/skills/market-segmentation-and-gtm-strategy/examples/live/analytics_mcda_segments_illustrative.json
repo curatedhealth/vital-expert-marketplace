@@ -1,0 +1,79 @@
+{
+ "call": {
+  "tool": "analytics.mcda",
+  "args": {
+   "alternatives": [
+    {
+     "id": "DE statutory insured, insomnia (DiGA prescription)",
+     "scores": {
+      "payer_route": 4,
+      "reachability": 3,
+      "evidence_fit": 3,
+      "competition": 1
+     }
+    },
+    {
+     "id": "US Medicare behavioral health practices (DMHT codes)",
+     "scores": {
+      "payer_route": 2,
+      "reachability": 2,
+      "evidence_fit": 3,
+      "competition": 3
+     }
+    },
+    {
+     "id": "US self-insured employers",
+     "scores": {
+      "payer_route": 1,
+      "reachability": 2,
+      "evidence_fit": 2,
+      "competition": 2
+     }
+    }
+   ],
+   "criteria_weights": {
+    "payer_route": 0.35,
+    "reachability": 0.25,
+    "evidence_fit": 0.25,
+    "competition": 0.15
+   }
+  }
+ },
+ "label": "Scores and weights are illustrative test inputs written for this build, not a person's judgment.",
+ "retrieved": "2026-10-19",
+ "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)",
+ "citation": "Goetghebeur et al. (2008) BMC Health Services Research 8:270 (EVIDEM); Marsh, IJzerman et al. (2016) Value in Health 19(2) 125-137 (ISPOR MCDA Emerging Good Practices)",
+ "results": [
+  {
+   "id": "DE statutory insured, insomnia (DiGA prescription)",
+   "value_estimate": 76.25,
+   "contributions": {
+    "competition": 3.75,
+    "evidence_fit": 18.75,
+    "payer_route": 35,
+    "reachability": 18.75
+   }
+  },
+  {
+   "id": "US Medicare behavioral health practices (DMHT codes)",
+   "value_estimate": 60,
+   "contributions": {
+    "competition": 11.25,
+    "evidence_fit": 18.75,
+    "payer_route": 17.5,
+    "reachability": 12.5
+   }
+  },
+  {
+   "id": "US self-insured employers",
+   "value_estimate": 41.25,
+   "contributions": {
+    "competition": 7.5,
+    "evidence_fit": 12.5,
+    "payer_route": 8.75,
+    "reachability": 12.5
+   }
+  }
+ ],
+ "negative_criteria": []
+}

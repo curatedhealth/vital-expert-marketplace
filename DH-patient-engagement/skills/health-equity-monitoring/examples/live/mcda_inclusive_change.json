@@ -1,0 +1,79 @@
+{
+ "call": "analytics.mcda",
+ "called_on": "19 October 2026",
+ "scores_note": "Illustrative scores typed by the builder for measurement, presented in the worked example as an example person's scores.",
+ "input": {
+  "alternatives": [
+   {
+    "id": "Spanish onboarding with human-reviewed translation",
+    "scores": {
+     "group reach expected": 3,
+     "barrier addressed at the step": 4,
+     "effort avoided": 2,
+     "evidence available": 3
+    }
+   },
+   {
+    "id": "Phone-assisted enrollment line",
+    "scores": {
+     "group reach expected": 4,
+     "barrier addressed at the step": 3,
+     "effort avoided": 1,
+     "evidence available": 2
+    }
+   },
+   {
+    "id": "Low-bandwidth mode",
+    "scores": {
+     "group reach expected": 2,
+     "barrier addressed at the step": 3,
+     "effort avoided": 3,
+     "evidence available": 1
+    }
+   }
+  ],
+  "criteria_weights": {
+   "group reach expected": 0.35,
+   "barrier addressed at the step": 0.3,
+   "effort avoided": 0.2,
+   "evidence available": 0.15
+  }
+ },
+ "output": {
+  "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)",
+  "results": [
+   {
+    "id": "Spanish onboarding with human-reviewed translation",
+    "value_estimate": 77.5,
+    "contributions": {
+     "barrier addressed at the step": 30,
+     "effort avoided": 10,
+     "evidence available": 11.25,
+     "group reach expected": 26.25
+    }
+   },
+   {
+    "id": "Phone-assisted enrollment line",
+    "value_estimate": 70,
+    "contributions": {
+     "barrier addressed at the step": 22.5,
+     "effort avoided": 5,
+     "evidence available": 7.5,
+     "group reach expected": 35
+    }
+   },
+   {
+    "id": "Low-bandwidth mode",
+    "value_estimate": 58.75,
+    "contributions": {
+     "barrier addressed at the step": 22.5,
+     "effort avoided": 15,
+     "evidence available": 3.75,
+     "group reach expected": 17.5
+    }
+   }
+  ],
+  "negative_criteria": [],
+  "name": "null on every result"
+ }
+}

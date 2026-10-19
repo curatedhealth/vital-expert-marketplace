@@ -1,0 +1,5 @@
+hazard_id,hazard,harm,severity,probability,controls
+HZ-01,Decimal separator misread under a regional number format,Insulin over-delivery leading to hypoglycemia,critical,remote,RC-01; RC-02
+HZ-02,Digit duplicated during entry with an accessibility feature,Insulin over-delivery leading to hypoglycemia,critical,remote,RC-02; RC-04
+HZ-03,Stale glucose value shown after return from background,Dosing decision on outdated value; missed hypo or hyperglycemia,serious,occasional,RC-03
+HZ-04,App terminates unexpectedly and stops alerts,Missed hypo or hyperglycemia alert,serious,remote,[GAP] no control recorded

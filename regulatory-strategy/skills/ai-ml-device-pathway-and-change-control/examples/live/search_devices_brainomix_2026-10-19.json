@@ -1,0 +1,133 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.search_devices",
+ "args": {
+  "query": "Brainomix",
+  "jurisdiction": "all",
+  "limit": 5
+ },
+ "results": [
+  {
+   "product": "Brainomix 360 Hyperdensity",
+   "manufacturer": "Brainomix Limited",
+   "jurisdiction": "US",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "status": "Substantially Equivalent",
+   "decision_date": "2026-06-12",
+   "submission_date": "2026-02-09",
+   "product_code": "QIH",
+   "regulation_number": "892.2050",
+   "predicate_references": [
+    "K232363"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K260406",
+   "retrieved_at": "2026-10-13T00:05:10Z",
+   "source": "openfda",
+   "identifiers": {
+    "FDA_SUBMISSION": [
+     "K260406"
+    ]
+   }
+  },
+  {
+   "product": "Brainomix 360 Triage Stroke",
+   "manufacturer": "Brainomix Limited",
+   "jurisdiction": "US",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "status": "Substantially Equivalent",
+   "decision_date": "2025-08-26",
+   "submission_date": "2025-06-27",
+   "product_code": "QAS",
+   "regulation_number": "892.2080",
+   "predicate_references": [
+    "K232496"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K251983",
+   "retrieved_at": "2026-10-13T00:05:00Z",
+   "source": "openfda",
+   "identifiers": {
+    "FDA_SUBMISSION": [
+     "K251983"
+    ]
+   }
+  },
+  {
+   "product": "Brainomix 360 e-ASPECTS",
+   "manufacturer": "Brainomix Limited",
+   "jurisdiction": "US",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "status": "Substantially Equivalent",
+   "decision_date": "2025-02-14",
+   "submission_date": "2024-10-18",
+   "product_code": "POK",
+   "regulation_number": "892.2060",
+   "predicate_references": [
+    "K221564",
+    "K192692",
+    "K223555",
+    "K231656",
+    "K231195",
+    "K231837",
+    "K232496",
+    "K232156"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K243294",
+   "retrieved_at": "2026-10-13T00:04:49Z",
+   "source": "openfda",
+   "identifiers": {
+    "FDA_SUBMISSION": [
+     "K243294"
+    ]
+   }
+  },
+  {
+   "product": "Brainomix 360 Triage Stroke",
+   "manufacturer": "Brainomix Limited",
+   "jurisdiction": "US",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "status": "Substantially Equivalent",
+   "decision_date": "2023-11-21",
+   "submission_date": "2023-08-17",
+   "product_code": "QAS",
+   "regulation_number": "892.2080",
+   "predicate_references": [
+    "K222884"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K232496",
+   "retrieved_at": "2026-10-13T00:04:39Z",
+   "source": "openfda",
+   "identifiers": {
+    "FDA_SUBMISSION": [
+     "K232496"
+    ]
+   }
+  },
+  {
+   "product": "Brainomix 360 Triage LVO",
+   "manufacturer": "Brainomix Limited",
+   "jurisdiction": "US",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "status": "Substantially Equivalent",
+   "decision_date": "2023-09-28",
+   "submission_date": "2023-06-22",
+   "product_code": "QAS",
+   "regulation_number": "892.2080",
+   "predicate_references": [
+    "K223042"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231837",
+   "retrieved_at": "2026-10-13T00:04:31Z",
+   "source": "openfda",
+   "identifiers": {
+    "FDA_SUBMISSION": [
+     "K231837"
+    ]
+   }
+  }
+ ]
+}

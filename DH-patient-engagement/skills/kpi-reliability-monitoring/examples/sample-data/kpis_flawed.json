@@ -1,0 +1,80 @@
+{
+  "note": "Illustrative KPI cards with typical defects, written for tests. Not a recommendation.",
+  "kpis": [
+    {
+      "id": "R1",
+      "name": "App reach",
+      "decision": "Marketing spend per region",
+      "numerator": {
+        "event": "enrolled"
+      },
+      "denominator": {
+        "population": "people who downloaded the app"
+      },
+      "period": {
+        "start": "2026-07-01",
+        "end": "2026-09-30"
+      },
+      "grain": "region, quarter",
+      "source": "app store export"
+    },
+    {
+      "id": "R2",
+      "name": "30-day retention",
+      "decision": "Whether onboarding changes",
+      "numerator": {
+        "event": "session"
+      },
+      "denominator": {
+        "population": "enrolled",
+        "start_event": "enrolled"
+      },
+      "grain": "program",
+      "source": "events.csv"
+    },
+    {
+      "id": "R3",
+      "name": "Patient activation change",
+      "decision": "Whether coaching continues",
+      "instrument": "PAM-13",
+      "numerator": {
+        "formula": "mean PAM score at week 12 minus baseline"
+      },
+      "denominator": {
+        "population": "enrolled with baseline PAM",
+        "start_event": "enrolled"
+      },
+      "period": {
+        "start": "2026-07-01",
+        "end": "2026-10-19"
+      },
+      "grain": "program",
+      "source": "survey export",
+      "threshold": {
+        "value": "+4 points"
+      }
+    },
+    {
+      "id": "R4",
+      "name": "Effective engagement",
+      "decision": "Module redesign",
+      "numerator": {
+        "event": "module_complete",
+        "min_count": 4,
+        "within_days_of_start": 56
+      },
+      "denominator": {
+        "population": "enrolled",
+        "start_event": "enrolled"
+      },
+      "period": {
+        "start": "2026-07-01",
+        "end": "2026-10-19"
+      },
+      "grain": "program",
+      "source": "events.csv",
+      "missing_data_rule": "blank dates excluded",
+      "definition_source": "PE-104, dose set by the person"
+    }
+  ]
+}

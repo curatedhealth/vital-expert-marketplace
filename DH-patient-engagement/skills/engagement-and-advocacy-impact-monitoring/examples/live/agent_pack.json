@@ -1,0 +1,58 @@
+{
+ "calls": [
+  "agent-pack.list_experts {query: marketing, limit: 10}",
+  "agent-pack.list_experts {query: patient, limit: 10}",
+  "agent-pack.list_experts {query: advocacy, limit: 10}",
+  "agent-pack.download_agent {expert: digital-marketing-manager}"
+ ],
+ "called_on": "19 October 2026",
+ "list_marketing": [
+  "partnerships-manager-digital-health",
+  "digital-marketing-manager",
+  "digital-marketing-manager-dh"
+ ],
+ "list_patient_first10": [
+  "real-world-evidence-director-digital",
+  "behavioral-science-lead",
+  "patient-experience-designer",
+  "remote-monitoring-program-director",
+  "digital-therapeutics-ceo",
+  "health-equity-access-lead",
+  "chief-medical-information-officer",
+  "behavior-change-designer",
+  "healthcare-api-platform-lead",
+  "ux-research-lead"
+ ],
+ "list_patient_matched": 16,
+ "list_advocacy": [],
+ "download": {
+  "version": "2026-10-16",
+  "characters": 71217,
+  "skill_count": 53,
+  "bound_program_tasks": [
+   "CF-12.02.03.2.1.1 Programme purpose",
+   "CF-12.02.03.2.1.2 Programme activity",
+   "CF-12.02.03.2.1.3 Partner boundary",
+   "CF-12.02.03.2.2.1 Engagement result definition",
+   "CF-12.02.03.2.2.2 Activity score",
+   "CF-12.02.03.2.2.3 Programme change"
+  ],
+  "never_list_quoted": "Promotional claims, disease-outcome claims, or off-label language. Comparative superiority versus other products or agents. MLR or medical sign-off. Patient-level targeting or profiling of a natural person. Protected health information. Paying media or committing budget. Treating a draft as cleared copy.",
+  "hitl_quoted": "Anything that would go external, any implied efficacy, and any audience-targeting that would profile a person stop for the accountable owner and MLR.",
+  "mandate_boundary_quoted": "Does not structure partner deals and does not write clinical-content product units",
+  "escalation_peer": "AI/ML Governance Director",
+  "plumbing_seen": [
+   "trust the foreign key",
+   "[GAP] (persona_archetype)",
+   "Work-product sections (3): None (WP-EN.04.DH.2)"
+  ],
+  "unrelated_tools_listed": [
+   "UniProt",
+   "ChEMBL",
+   "PubChem",
+   "Open Targets",
+   "MyVariant",
+   "DailyMed"
+  ]
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "skill_name": "patient-engagement-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're building a digital companion for people starting GLP-1 treatment and want a patient advisory panel to shape the onboarding flow before we build it. Which patient engagement skill do we use?"
+    },
+    {
+      "id": 2,
+      "prompt": "Our engagement dashboard reports 30-day retention for the asthma program three different ways depending on who runs it. I need to know which number is right and fix it."
+    },
+    {
+      "id": 3,
+      "prompt": "Older and rural patients are dropping out of our cardiac rehab app, and a screen-reader user told us the exercise videos have no captions. Which skills cover this?"
+    },
+    {
+      "id": 4,
+      "prompt": "Just tell me which three underserved groups we should prioritize for our diabetes app and what our target enrollment share for each should be."
+    },
+    {
+      "id": 5,
+      "prompt": "We run a patient support program for our migraine app. We want each patient to get a personalized journey with nudges tuned to their behavior, coordinated across email, SMS and the nurse line. Which skill?"
+    }
+  ]
+}

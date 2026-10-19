@@ -1,0 +1,45 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked.",
+ "calls": [
+  {
+   "tool": "agent-pack.list_experts",
+   "arguments": {
+    "query": "quality",
+    "limit": 10
+   },
+   "returned_slugs": [
+    "real-world-evidence-director-digital",
+    "data-engineering-manager-health",
+    "quality-assurance-manager-software",
+    "quality-systems-director-software",
+    "samd-regulatory-affairs-director",
+    "service-design-director",
+    "ai-ml-governance-director",
+    "interoperability-integration-director",
+    "digital-biomarker-scientist",
+    "software-test-engineer-samd"
+   ]
+  },
+  {
+   "tool": "agent-pack.download_agent",
+   "arguments": {
+    "expert": "quality-systems-director-software"
+   },
+   "size_chars": 76920,
+   "excerpt_you_never": "Issuing or implying ISO 13485, IEC 62304 or MDSAP certification. Notifying a competent authority or notified body. Substituting for the Quality Assurance Manager's test programme. Asserting the QMS is certified, effective or inspection-ready.",
+   "excerpt_hitl": "QMS process maps, SOP outlines, IEC 62304 lifecycle-gate designs and design-history-file structures may proceed as drafts. Release clearance, test evidence of record, certification claims, competent-authority notification, and any statement that the QMS is effective or inspection-ready stop for the accountable owner.",
+   "defects": {
+    "escalation_peer": "Graph escalation peer: Digital Supply Chain Director.",
+    "work_product_sections": "None (WP04-DH-01.5.5.1); None (WP04-DH-01.5.5.2); None (WP04-DH-01.5.5.3)",
+    "unrelated_tools": [
+     "UniProt",
+     "PubChem",
+     "ChEMBL",
+     "Open Targets",
+     "MyVariant",
+     "DailyMed"
+    ]
+   }
+  }
+ ]
+}

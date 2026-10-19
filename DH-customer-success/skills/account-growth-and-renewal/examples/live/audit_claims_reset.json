@@ -1,0 +1,44 @@
+{
+ "call": "commercial-dh.audit_claims",
+ "arguments": {
+  "reference": "DEN160018",
+  "claims": [
+   "reSET is a prescription digital therapeutic for substance use disorder delivered as an adjunct to outpatient treatment",
+   "reSET cures opioid addiction",
+   "Our health system customers cut readmissions by 30 percent in year one",
+   "reSET replaces counselor visits"
+  ]
+ },
+ "called_on": "19 October 2026",
+ "response_trimmed": {
+  "intended_purpose_from_record": "[GAP]",
+  "authorization_on_file": true,
+  "labels": "all four claims: exceeds_record",
+  "findings": [],
+  "get_authorization": {
+   "product": "reSet",
+   "manufacturer": "Pear Therapeutics, Inc.",
+   "pathway": "FDA_DE_NOVO",
+   "risk_class": "2",
+   "status": "DENG",
+   "decision_date": "2017-09-14",
+   "product_code": "PWE",
+   "regulation_number": "882.5801",
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN160018",
+   "retrieved_at": "2026-10-13T00:04:13.107965+00:00"
+  },
+  "classify_product": {
+   "code": "PWE",
+   "label": "Computerized Behavioral Therapy Device For Substance Use Disorders",
+   "label_basis": "from record"
+  },
+  "evidence_maturity_risk_flags": [
+   "fda_recall: Class II on 2021-06-07: reSET-O Mobile App ...",
+   "fda_recall: Class II on 2021-06-07: reSET Mobile App ..."
+  ],
+  "gaps": [
+   "intended purpose [GAP]; classify_product from record did not state one"
+  ]
+ },
+ "observed": "With no intended purpose on the record, every claim is labeled exceeds_record, including a plain restatement of the product type; the 'cures' claim gets no F1 finding. The labels cannot separate safe from unsafe wording. The authorization block (route, class, product code, regulation, source URL) is usable."
+}

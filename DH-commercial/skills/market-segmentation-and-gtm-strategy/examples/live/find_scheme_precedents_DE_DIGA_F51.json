@@ -1,0 +1,72 @@
+{
+ "call": {
+  "tool": "market-access-dh.find_scheme_precedents",
+  "args": {
+   "scheme": "DE_DIGA",
+   "indication": "F51",
+   "limit": 10
+  }
+ },
+ "retrieved": "2026-10-19",
+ "note": "first two attempts returned 503 (not counted)",
+ "results": [
+  {
+   "product": "somnovia",
+   "manufacturer": "GAIA AG, Deutschland",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "decision_reference": "DiGA-ID 02097; PZN 19642882",
+   "listed_on": "2024-10-28",
+   "price": 236,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02097",
+   "retrieved_at": "2026-10-15T18:07:17Z",
+   "source": "diga_verzeichnis",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ]
+  },
+  {
+   "product": "HelloBetter Schlafen",
+   "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH, Deutschland",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "decision_reference": "DiGA-ID 01772; PZN 18453937",
+   "listed_on": "2022-12-18",
+   "price": 241.25,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/01772",
+   "retrieved_at": "2026-10-15T18:07:17Z",
+   "source": "diga_verzeichnis",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ]
+  },
+  {
+   "product": "somnio",
+   "manufacturer": "mementor DE GmbH, Deutschland",
+   "status": "permanent",
+   "status_raw": "dauerhaft aufgenommen",
+   "decision_reference": "DiGA-ID 00508; PZN 16898724",
+   "listed_on": "2020-10-22",
+   "price": 224.99,
+   "currency": "EUR",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/00508",
+   "retrieved_at": "2026-10-15T18:07:17Z",
+   "source": "diga_verzeichnis",
+   "indications": [
+    "Schlafstörungen",
+    "F51.0 (ICD-10-GM): Nichtorganische Insomnie",
+    "G47.0 (ICD-10-GM): Ein- und Durchschlafstörungen"
+   ]
+  }
+ ],
+ "coverage": [
+  "DE_DIGA: 82 listings; last load 2026-10-15; sources diga_verzeichnis"
+ ],
+ "source_license_note": "Public information via diga-verzeichnis.de (states daily BfArM sync); diga.bfarm.de SPA/FHIR not used (no section 21 token)"
+}

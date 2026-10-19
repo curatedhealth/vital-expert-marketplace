@@ -1,0 +1,110 @@
+{
+  "_note": "Trimmed live output saved 19 October 2026 from the VITAL Digital Health Library connector. Fields kept as returned; long passages shortened where marked [trimmed].",
+  "search": {
+    "call": "literature.search_literature(query='digital cognitive behavioral therapy for insomnia randomized controlled trial app', limit=5)",
+    "total_merged": 18,
+    "sources_answered": [
+      "pubmed",
+      "europepmc",
+      "openalex",
+      "crossref",
+      "biorxiv"
+    ],
+    "records": [
+      {
+        "doi": "10.1371/journal.pmed.1004510",
+        "design": "rct",
+        "design_confidence": 0.98,
+        "year": 2025,
+        "excerpt": ""
+      },
+      {
+        "doi": "10.3349/ymj.2024.0398",
+        "title": "Impact of Adherence to Digital Cognitive Behavioral Therapy for Insomnia Effectiveness",
+        "design": "rct",
+        "design_confidence": 0.95,
+        "year": 2025,
+        "excerpt": ""
+      },
+      {
+        "doi": "10.64898/2026.09.24.26363933",
+        "title": "Novel Cognitive Behavioral Therapy App for Depression in Mild Traumatic Brain Injury: A Randomized Controlled Trial",
+        "design": "preprint",
+        "venue": "medRxiv",
+        "year": 2026
+      },
+      {
+        "doi": "10.1093/ijnp/pyae059.428",
+        "title": "EFFICACY OF DIGITAL COGNITIVE BEHAVIORAL THERAPY APP ON INSOMNIA PATIENTS: POOLED ANALYSIS OF TWO RANDOMIZED, DOUBLE- BLIND, SHAM-CONTROLLED TRIALS",
+        "year": 2025,
+        "venue": "The International Journal of Neuropsychopharmacology",
+        "publication_type_raw": [
+          "openalex:conference-abstract"
+        ],
+        "design": "meta_analysis",
+        "design_confidence": 0.78,
+        "excerpt": ""
+      },
+      {
+        "doi": "10.5665/sleep.4752",
+        "title": "Treating Acute Insomnia: A Randomized Controlled Trial of a Single-Shot of Cognitive Behavioral Therapy for Insomnia",
+        "design": "rct",
+        "design_confidence": 0.78,
+        "year": 2015,
+        "excerpt": ""
+      }
+    ]
+  },
+  "get_record": {
+    "call": "literature.get_record(pmid='39836656')",
+    "record": {
+      "doi": "10.1371/journal.pmed.1004510",
+      "pmid": "39836656",
+      "pmcid": "PMC11750088",
+      "title": "Effectiveness of app-based cognitive behavioral therapy for insomnia on preventing major depressive disorder in youth with insomnia and subclinical depression: A randomized clinical trial",
+      "year": 2025,
+      "venue": "PLOS Medicine",
+      "publication_type_raw": [
+        "crossref:journal-article",
+        "Journal Article",
+        "Randomized Controlled Trial",
+        "research-article",
+        "openalex:article"
+      ],
+      "design": "rct",
+      "design_confidence": 0.98,
+      "retraction_status": "none",
+      "trial_ids": [],
+      "excerpt": "Background Increasing evidence suggests that insomnia plays an important role in the development of depression, supporting insomnia intervention as a promising approach to prevent depression in youth. This randomized controlled trial evaluated the effectiveness of app-based cognitive behavioral therapy for insomnia (CBT-I) in preventing future onset of major depressive disorder (MDD) in youth. Methods and findings This was a randomized, assessor-blind, parallel group-controlled trial in Chinese youth (aged 15-25 years) with insomnia disorder and subclinical depressive symptoms.",
+      "warnings": [
+        "source skipped: semantic_scholar (timeout 10s)"
+      ]
+    }
+  },
+  "classify_study": {
+    "call": "literature.classify_study(record=<conference abstract above>)",
+    "design": "meta_analysis",
+    "confidence": 0.78,
+    "decided_by": [
+      "title:meta-analysis"
+    ],
+    "rule": "text:meta-analysis"
+  },
+  "grade_evidence": {
+    "call": "literature.grade_evidence(records=[<RCT>,<conference abstract>], question_type='treatment')",
+    "grades": [
+      {
+        "design": "rct",
+        "level": "2",
+        "rule": "rct for a treatment question -> level 2",
+        "level_description": "Randomized trial, or observational study with dramatic effect"
+      },
+      {
+        "design": "meta_analysis",
+        "level": "1",
+        "rule": "meta_analysis of randomized trials -> level 1",
+        "level_description": "Systematic review of randomized trials, or n-of-1 trials"
+      }
+    ]
+  }
+}

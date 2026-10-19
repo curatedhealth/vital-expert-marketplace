@@ -1,0 +1,86 @@
+{
+ "call": {
+  "tool": "commercial-dh.screen_commercial_peers",
+  "args": {
+   "segment": "dtx",
+   "name": "Somryst",
+   "limit": 3
+  }
+ },
+ "retrieved": "2026-10-19",
+ "coverage": [
+  "digital_health_census.screen_market: answered",
+  "regulatory_dh.search_devices: answered",
+  "market_access_dh.search_listings: [GAP]"
+ ],
+ "peers": [
+  {
+   "name": "Somryst",
+   "search_devices_results": [
+    {
+     "product": "Somryst",
+     "manufacturer": "Pear Therapeutics, Inc.",
+     "jurisdiction": "US",
+     "pathway": "FDA_510K",
+     "status": "Substantially Equivalent",
+     "decision_date": "2020-03-23",
+     "product_code": "QVO",
+     "regulation_number": "882.5801",
+     "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K191716"
+    }
+   ],
+   "search_listings_results": [],
+   "search_listings_gaps": [
+    "no stored listing matches 'Somryst' in DE_DIGA, FR_PECAN, FR_LPPR, FR_LATM, BE_MHEALTH, UK_NICE_EVA, UK_NICE_HTG, UK_NICE_NHAP, US_CMS_RPM, US_CMS_DMHT, AU_MSAC, CH_BAG, ES_REDETS, FI_DIGIHTA, IE_HSE_CGM, SE_TLV; absence from the store is not evidence of absence from the scheme"
+   ]
+  },
+  {
+   "name": "Akili Interactive Labs, Inc.",
+   "search_devices_results": [],
+   "search_devices_gaps": [
+    "no stored device matches 'Akili Interactive Labs, Inc.' in US, EU, UK, CH, TW; absence from the store is not evidence of absence from the market"
+   ],
+   "search_listings_results": []
+  },
+  {
+   "name": "Appliedvr, Inc.",
+   "search_devices_results": [],
+   "search_devices_gaps": [
+    "no stored device matches 'Appliedvr, Inc.' in US, EU, UK, CH, TW; absence from the store is not evidence of absence from the market"
+   ],
+   "search_listings_results": []
+  }
+ ],
+ "screen_market": {
+  "result_count": 3,
+  "total_matches": 18,
+  "results": [
+   {
+    "company": "Akili Interactive Labs, Inc.",
+    "products": [
+     "EndeavorOTC",
+     "EndeavorRx"
+    ],
+    "authorizations": 3
+   },
+   {
+    "company": "Appliedvr, Inc.",
+    "products": [
+     "EaseVRx",
+     "RelieVRx",
+     "RelieVRx (Pico G3)"
+    ],
+    "authorizations": 3
+   },
+   {
+    "company": "Click Therapeutics, Inc.",
+    "products": [
+     "CT-132",
+     "Motivista (CT-155)"
+    ],
+    "authorizations": 2
+   }
+  ]
+ },
+ "observation": "name replaces the lowest-ranked slot: 3 peers requested, the named product plus the top 2 screened companies came back; the third screened company (Click Therapeutics) has no peer lookup"
+}

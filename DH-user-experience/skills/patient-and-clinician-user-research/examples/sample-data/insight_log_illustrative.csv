@@ -1,0 +1,7 @@
+insight_id,study_id,stop_id,participants_hit,raised_on,decision,decided_on,decision_ref,owner,release
+I-01,ST-2026-03,S1-dose-button,3,2026-06-12,action,2026-06-30,DEC-114 relabel and add confirmation state,Mobile product team,4.2
+I-02,ST-2026-03,S2-unit-toggle,2,2026-06-12,action,2026-07-15,DEC-121 show unit beside field,Mobile product team,4.3
+I-03,ST-2026-03,S3-diary-scale,2,2026-06-12,open,,,,
+I-04,ST-2026-03,S4-threshold-save,2,2026-06-12,refusal,2026-07-02,,Clinical portal team,
+I-05,ST-2026-03,S5-alert-filter,1,2026-06-12,open,,,Clinical portal team,
+I-06,ST-2026-05,S6-login-timeout,4,2026-08-20,open,,,,

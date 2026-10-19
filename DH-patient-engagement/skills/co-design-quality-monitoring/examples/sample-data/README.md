@@ -1,0 +1,1 @@
+Illustrative files written for the worked examples on 19 October 2026. They describe no real product, session or person. Participant codes (P01, C01, S01) are invented and stand in for the pseudonymous codes a team would use; no file holds a name or any identifying detail.

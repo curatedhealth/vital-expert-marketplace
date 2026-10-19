@@ -1,0 +1,21 @@
+{
+  "skill_name": "user-experience-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're adding a medication reconciliation view inside Epic for hospital pharmacists. They complain about too many clicks and missed allergy warnings in the current version. Which UX skill?"
+    },
+    {
+      "id": 2,
+      "prompt": "Our public sector customer in the UK asked for evidence that our patient booking app meets accessibility requirements before they renew. We had an audit done last year. Where do I go?"
+    },
+    {
+      "id": 3,
+      "prompt": "We finished formative usability testing on our home-use ECG app. We need to know whether we must run a human factors validation study for FDA, and how to summarize our use-error findings. Which skills?"
+    },
+    {
+      "id": 4,
+      "prompt": "Skip the routing. Our SUS score is 71 and task success was 88%. Tell me we passed usability so I can sign off the release."
+    }
+  ]
+}

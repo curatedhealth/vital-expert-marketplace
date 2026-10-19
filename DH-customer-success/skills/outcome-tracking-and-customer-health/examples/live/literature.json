@@ -1,0 +1,18 @@
+{
+  "called_on": "19 October 2026",
+  "calls": [
+    {"call": "literature.search_literature", "args": {"query": "PHQ-9 validity brief depression severity measure", "limit": 5},
+     "result_trimmed": [
+       {"rank": 1, "title": "The PHQ-9", "doi": "10.1046/j.1525-1497.2001.016009606.x", "pmid": "11556941", "pmcid": "PMC1495268", "year": 2001, "design": "other", "design_confidence": 0.3, "excerpt": ""},
+       {"rank": 2, "title": "The PHQ-15: Validity of a New Measure for Evaluating the Severity of Somatic Symptoms", "pmid": "11914441", "year": 2002},
+       {"rank": 3, "title": "Associations among anxiety sensitivity, intolerance of uncertainty, and experiential avoidance ...", "pmid": "42612414", "year": 2026},
+       {"rank": 4, "title": "Self-report Instruments for Anxiety, Depression, and Stress in Adolescents: A Scoping Review ...", "pmid": "42761316", "year": 2026, "design": "systematic_review"},
+       {"rank": 5, "title": "Measuring depression outcome with a brief self-report instrument: sensitivity to change of the Patient Health Questionnaire (PHQ-9)", "doi": "10.1016/s0165-0327(03)00198-8", "pmid": "15183601", "year": 2003, "excerpt": ""}
+     ],
+     "total_merged": 17},
+    {"call": "literature.get_record", "args": {"pmid": "16717171"},
+     "result_trimmed": {"title": "A Brief Measure for Assessing Generalized Anxiety Disorder", "doi": "10.1001/archinte.166.10.1092", "year": 2006, "pmcid": null, "oa_url": null,
+       "excerpt": "Background Generalized anxiety disorder (GAD) is one of the most common mental disorders; however, there is no brief clinical measure for assessing GAD. ... Of a total of 2740 adult patients completing a study questionnaire, 965 patients had a telephone interview with a mental health professional within 1 week.",
+       "observation": "Excerpt stops before the results; no cut point or severity bands returned."}}
+  ]
+}

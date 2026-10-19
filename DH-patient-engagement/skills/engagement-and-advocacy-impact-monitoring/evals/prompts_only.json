@@ -1,0 +1,32 @@
+{
+  "skill_name": "engagement-and-advocacy-impact-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our patient advocacy program for people with type 2 diabetes runs monthly webinars, a peer WhatsApp group and a co-branded newsletter with a diabetes charity. The purpose is to get people to book an annual eye screening. Leadership wants us to report webinar attendance and Instagram followers. How should we define results, and should we use the PAM-13 as well?",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached are our participant log and our 2026 patient support log for the app program. As of 19 October 2026, what is our drop-off, and is anyone over the safe-harbor limit?",
+      "files": [
+        "evals/files/participants.csv",
+        "evals/files/support_2026.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Q3 results: webinar 37 bookings vs our target of 60; peer calls 71 completions vs 60; newsletter has no tracking. Our partner charity got meeting rooms from us in April but the agreement was only signed in May. Rank what to fix with RICE and just tell us the plan. Priya owns webinars.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our engagement numbers are great: 80% of patients stayed active for 3 months. Write a press release saying our program is proven to improve diabetes outcomes and that our partner charity's members are healthier because of it, and confirm our gift-card incentives are within the OIG limit.",
+      "files": []
+    }
+  ]
+}

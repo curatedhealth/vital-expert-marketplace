@@ -1,0 +1,348 @@
+{
+  "note": "Trimmed live outputs from the VITAL Digital Health Library, regulatory-dh suite, called 19 October 2026 during the build. Field values copied from the responses; boilerplate removed. Evidence class M (measured in a live call).",
+  "calls": [
+    {
+      "call": "regulatory-dh.list_jurisdictions",
+      "arguments": {},
+      "results": [
+        {
+          "jurisdiction": "US",
+          "authorizations": 1226,
+          "safety_events": 892,
+          "last_load": "2026-10-19",
+          "sources": [
+            "openfda",
+            "openfda_enforcement",
+            "openfda_pma"
+          ]
+        },
+        {
+          "jurisdiction": "EU",
+          "authorizations": 3142,
+          "safety_events": 0,
+          "last_load": "2026-10-19",
+          "sources": [
+            "eudamed",
+            "eudamed_software"
+          ],
+          "scope": "Decision date is empty on 3142 of 3142."
+        },
+        {
+          "jurisdiction": "UK",
+          "authorizations": 0,
+          "safety_events": 10,
+          "last_load": "2026-10-14",
+          "sources": [
+            "mhra_alerts"
+          ],
+          "scope": "MHRA medical safety alerts only; device registration (MHRA PARD) is not loaded [GAP]"
+        },
+        {
+          "jurisdiction": "CH",
+          "authorizations": 0,
+          "safety_events": 0,
+          "last_load": null,
+          "scope": "Swissmedic FSCA not loaded in this release [GAP]; swissdamed is web-only [GAP]"
+        },
+        {
+          "jurisdiction": "TW",
+          "authorizations": 32,
+          "last_load": "2026-10-18"
+        },
+        {
+          "jurisdiction": "CA",
+          "authorizations": 227,
+          "last_load": "2026-10-18",
+          "scope": "MDALL name search; is_software is null, so a software-only search excludes these rows."
+        }
+      ],
+      "closed": [
+        "JP",
+        "CN",
+        "AU",
+        "KR",
+        "HK",
+        "IL",
+        "IN",
+        "MX",
+        "SA",
+        "AE",
+        "ZA",
+        "TR",
+        "SG",
+        "BR",
+        "DE_DIGA_HISTORY"
+      ]
+    },
+    {
+      "call": "regulatory-dh.get_register_deltas",
+      "arguments": {
+        "product_code": "QVO",
+        "since": "2026-01-01",
+        "jurisdiction": "US"
+      },
+      "results": [],
+      "coverage": [
+        "the change log starts when a watch is registered"
+      ],
+      "gaps": [
+        "no watch is registered for this scope; the change log has not started"
+      ]
+    },
+    {
+      "call": "regulatory-dh.get_deltas",
+      "arguments": {
+        "emdn_code": "V92",
+        "since": "2026-10-01",
+        "jurisdiction": "EU"
+      },
+      "tool_field_in_response": "get_register_deltas",
+      "results": [],
+      "gaps": [
+        "no watch is registered for this scope; the change log has not started"
+      ]
+    },
+    {
+      "call": "regulatory-dh.get_market_status",
+      "arguments": {
+        "reference": "K233577"
+      },
+      "results": [
+        {
+          "product": "Sleepio\u00ae",
+          "manufacturer": "Big Health, Inc.",
+          "authorized": {
+            "US": true,
+            "EU": false,
+            "UK": "[GAP]",
+            "CH": "[GAP]"
+          },
+          "reimbursement": {
+            "status": "[GAP]"
+          }
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.get_market_status",
+      "arguments": {
+        "name": "somnio"
+      },
+      "results": [
+        {
+          "product": "somnio",
+          "manufacturer": "mementor DE GmbH",
+          "authorized": {
+            "US": false,
+            "EU": true,
+            "UK": "[GAP]",
+            "CH": "[GAP]"
+          },
+          "reimbursement": {
+            "DE_DIGA": {
+              "status": "permanent",
+              "listed_on": "2020-10-22"
+            }
+          }
+        },
+        {
+          "product": "somnio",
+          "manufacturer": "mementor DE GmbH, Deutschland",
+          "authorized": {
+            "US": false,
+            "EU": false,
+            "UK": "[GAP]",
+            "CH": "[GAP]"
+          },
+          "reimbursement": {
+            "DE_DIGA": {
+              "status": "permanent",
+              "listed_on": "2020-10-22"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.get_authorization",
+      "arguments": {
+        "reference": "PP12257SOMNIO57"
+      },
+      "results": [
+        {
+          "product": "somnio",
+          "manufacturer": "mementor DE GmbH",
+          "jurisdiction": "EU",
+          "regime": "EU_MDR",
+          "pathway": "CE_MARK",
+          "risk_class": "Class IIa",
+          "status": "On the EU market",
+          "decision_date": null,
+          "submission_date": null,
+          "product_code": "V92",
+          "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+          "retrieved_at": "2026-10-14T06:48:03Z"
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_devices",
+      "arguments": {
+        "query": "Big Health",
+        "jurisdiction": "all"
+      },
+      "results": [
+        {
+          "product": "Daylight",
+          "reference": "K233872",
+          "pathway": "FDA_510K",
+          "product_code": "SCP",
+          "submission_date": "2023-12-07",
+          "decision_date": "2024-08-30",
+          "status": "Substantially Equivalent"
+        },
+        {
+          "product": "Sleepio\u00ae",
+          "reference": "K233577",
+          "pathway": "FDA_510K",
+          "product_code": "QVO",
+          "submission_date": "2023-11-07",
+          "decision_date": "2024-08-05",
+          "status": "Substantially Equivalent"
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {
+        "product_code": "QVO",
+        "jurisdiction": "all"
+      },
+      "results": [
+        {
+          "source_type": "fda_recall",
+          "jurisdiction": "US",
+          "title": "reSET-O Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.",
+          "event_date": "2021-06-07",
+          "severity": "Class II",
+          "manufacturer": "Pear Therapeutics, Inc.",
+          "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.",
+          "source_url": "https://api.fda.gov/device/enforcement.json",
+          "retrieved_at": "2026-10-16T10:42:19Z"
+        },
+        {
+          "source_type": "fda_recall",
+          "jurisdiction": "US",
+          "title": "reSET Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.",
+          "event_date": "2021-06-07",
+          "severity": "Class II",
+          "manufacturer": "Pear Therapeutics, Inc.",
+          "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.",
+          "source_url": "https://api.fda.gov/device/enforcement.json",
+          "retrieved_at": "2026-10-16T10:42:19Z"
+        }
+      ],
+      "maude_counts": [
+        {
+          "product_code": "QVO",
+          "total_reports": 1,
+          "by_year": [
+            {
+              "year": 2023,
+              "count": 1
+            }
+          ],
+          "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events",
+          "source_url": "https://api.fda.gov/device/event.json",
+          "retrieved_at": "2026-10-13T00:07:48Z"
+        }
+      ],
+      "coverage": [
+        "US: FDA enforcement recalls whose product text mentions software, algorithm, application, firmware or app; MAUDE counts by year",
+        "UK: MHRA medical safety alerts matched by whole-phrase manufacturer name or software terms",
+        "CH: Swissmedic field safety corrective actions not loaded [GAP]"
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {
+        "manufacturer": "Big Health",
+        "jurisdiction": "all"
+      },
+      "results": [],
+      "maude_counts": [
+        {
+          "product_code": "QVO",
+          "total_reports": 1,
+          "by_year": [
+            {
+              "year": 2023,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "product_code": "SCP",
+          "total_reports": 0,
+          "by_year": []
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {
+        "product": "Somryst",
+        "jurisdiction": "all"
+      },
+      "results": [],
+      "maude_counts": [
+        {
+          "product_code": "QVO",
+          "total_reports": 1,
+          "by_year": [
+            {
+              "year": 2023,
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {
+        "jurisdiction": "UK",
+        "since": "2025-01-01",
+        "limit": 5
+      },
+      "results": [],
+      "gaps": [
+        "give manufacturer, product or product_code"
+      ]
+    },
+    {
+      "call": "regulatory-dh.compare_authorizations",
+      "arguments": {
+        "references": [
+          "K191716",
+          "K233577",
+          "DEN160018"
+        ],
+        "jurisdiction": "US"
+      },
+      "safety_event_count": {
+        "K191716": "not assessable",
+        "K233577": "not assessable",
+        "DEN160018": 2
+      }
+    },
+    {
+      "call": "regulatory-dh.generate_report",
+      "arguments": {
+        "product_code": "QVO",
+        "template": "precedents"
+      },
+      "observed": "Picked one device (Sleepio\u00ae, K233577) for the product code without saying why; safety_events []; guidance and ontology retrieval both [GAP]; gap line 'reimbursement [GAP] \u2014 market-access-dh' contains an em dash."
+    }
+  ]
+}

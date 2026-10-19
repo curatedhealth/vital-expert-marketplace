@@ -1,0 +1,57 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked.",
+ "calls": [
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "arguments": {
+    "query": "QMSR management review internal audit records inspection",
+    "limit": 5
+   },
+   "results": [],
+   "gaps": [
+    "[GAP]",
+    "no passage retrieved in this namespace"
+   ]
+  },
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "arguments": {
+    "query": "MDR Article 10(9) quality management system person responsible for regulatory compliance",
+    "limit": 5
+   },
+   "results": []
+  },
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "arguments": {
+    "query": "quality management system",
+    "namespace": "ontology-navigation",
+    "limit": 5
+   },
+   "results": []
+  },
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "arguments": {
+    "query": "ISO 13485",
+    "limit": 5
+   },
+   "results_count": 5,
+   "source_url_values": [
+    "[GAP]",
+    "[GAP]",
+    "[GAP]",
+    "[GAP]",
+    "[GAP]"
+   ],
+   "retrieved_at_values": [
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "stale_excerpt": "This final rule will take effect on February 2, 2026."
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "call": "regulatory-dh.search_safety_events",
+ "called_on": "19 October 2026",
+ "arguments": {
+  "product": "display",
+  "jurisdiction": "US",
+  "since": "2024-01-01",
+  "limit": 10
+ },
+ "results": [
+  {
+   "source_type": "fda_recall",
+   "title": "Brand Name: Genius\" Review Station  Product Name: Genius\" Review Station Display (Barco Monitor)  Model/Catalog Number: CMP-01669  Software Version: N/A - not software version specific  Component: Yes",
+   "event_date": "2026-03-23",
+   "severity": "Class II",
+   "manufacturer": "Hologic, Inc.",
+   "summary": "It was identified that certain devices were being operated outside the validated and FDA-cleared display configuration due to user modification of the manufacturer-installed settings. Modifications included disabling Barco Application Appearance Manager (AAM), altering calibration and compliance parameters, and adjusting additional display-related settings. This field correction is being conducted to restore affected system to the validated configuration and reinforce proper use in accordance with the Operator's Manual.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:06:47.447722+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "title": "da Vinci 5 Surgeon Console Viewer Display, ASSY, DV5 CONSOLE, IS5000, Part Number: 380730-45",
+   "event_date": "2025-12-30",
+   "severity": "Class II",
+   "manufacturer": "Intuitive Surgical, Inc.",
+   "summary": "Robotic-assisted surgical system has Viewer Display manufactured with outdated firmware, may result in loss of one display-loss of 3D surgical field (depth perception) but 2D maintained, or loss of both displays-complete visualization loss, without fault, instruments remain active, could lead to instrument contact with tissue, resulting in injury/bleeding; may require alternate surgical modality.",
+   "source_url": "https://api.fda.gov/device/enforcement.json"
+  },
+  {
+   "source_type": "fda_recall",
+   "title": "BSM-3000 Series Bedside Monitor REF BSM-3572A    The Life Scope BSM-3000 Series Bedside Monitoring System is intended to monitor, display and record physiological data to provide cardiac and vital sig",
+   "event_date": "2024-04-29",
+   "severity": "Class II",
+   "manufacturer": "Nihon Kohden America, Inc.",
+   "summary": "Due to software issue the device may give false \"SpO2 Probe Failure\" alarm",
+   "source_url": "https://api.fda.gov/device/enforcement.json"
+  }
+ ],
+ "maude_counts": [],
+ "gaps": [],
+ "observation": "Matches the word in the title. Only the Hologic row describes user action; the other two are device faults."
+}

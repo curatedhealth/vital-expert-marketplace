@@ -1,0 +1,12 @@
+component,version,current_version,products,accessibility_status,owner,clinical,device_ui,modification,lifecycle
+Button,4.2.0,4.2.0,Patient app iOS;Patient app Android;Clinician portal,tested WCAG 2.2 AA September 2026,Platform team,yes,yes,none,stable
+Button,4.2.0,4.2.0,Marketing site,tested WCAG 2.2 AA September 2026,Growth team,no,no,none,stable
+Text input,4.2.0,4.2.0,Patient app iOS;Patient app Android;Clinician portal,tested WCAG 2.2 AA September 2026,Platform team,yes,yes,none,stable
+Text input,3.8.1,4.2.0,Marketing site,tested WCAG 2.1 AA March 2025,Growth team,no,no,override,stable
+Date picker,4.1.0,4.2.0,Patient app iOS;Patient app Android,2 issues open (target size 2.5.8),Patient app team,yes,yes,none,stable
+Date picker,4.2.0,4.2.0,Clinician portal,tested WCAG 2.2 AA September 2026,Clinician portal team,yes,no,none,stable
+Dose input,2.0.0,3.0.0,Dosing calculator,tested WCAG 2.1 AA March 2025,Dosing team,yes,yes,fork,stable
+Dose input,3.0.0,3.0.0,Patient app iOS;Patient app Android,not tested since 3.0.0,Patient app team,yes,yes,none,trial
+Alert banner,1.0.0,1.0.0,Clinician portal,not tested,Clinician portal team,yes,no,none,trial
+Input mask,2.3.0,2.3.0,Clinician portal;Dosing calculator,1 issue open (error identification 3.3.1),Clinician portal team,yes,yes,override,use with caution
+Modal,4.0.2,4.2.0,Marketing site,tested WCAG 2.1 AA March 2025,Growth team,no,no,none,stable

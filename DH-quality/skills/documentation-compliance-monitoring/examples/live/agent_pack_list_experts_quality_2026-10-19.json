@@ -1,0 +1,20 @@
+{
+ "call": "agent-pack.list_experts {query: 'quality', limit: 10}",
+ "called_on": "2026-10-19",
+ "relevant": [
+  {
+   "slug": "quality-assurance-manager-software",
+   "display_name": "QA Manager, Software (V&V)",
+   "remit": "Manages software verification and validation for a named SaMD version: V&V plan, requirement-to-test traceability, and open residual-risk items under IEC 62304. Does not own the quality system, and does not write or run test cases."
+  },
+  {
+   "slug": "quality-systems-director-software",
+   "display_name": "Quality & Software Lifecycle Director",
+   "remit": "Designs the software quality-management system for SaMD and connected digital health: ISO 13485 process architecture, IEC 62304 lifecycle procedures, ISO 14971 risk-management integration, and design-control mapping. [...]"
+  },
+  {
+   "slug": "samd-regulatory-affairs-director",
+   "display_name": "SaMD Regulatory Affairs Director"
+  }
+ ]
+}

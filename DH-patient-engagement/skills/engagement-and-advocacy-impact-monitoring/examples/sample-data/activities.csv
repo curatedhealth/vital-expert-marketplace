@@ -1,0 +1,5 @@
+activity,period_start,period_end,result_definition,record_source,reached,result_count,claims_used,allowed_claims,target
+Webinar series,2026-07-01,2026-09-30,attendees who booked a sleep-diary review within 14 days,booking system export,412,37,helps you build a sleep routine,helps you build a sleep routine;developed with sleep clinicians,60
+Peer-mentor calls,2026-07-01,2026-09-30,mentees who completed week 4 of the program,app completion log,118,71,developed with sleep clinicians,helps you build a sleep routine;developed with sleep clinicians,60
+Newsletter,2026-07-01,2026-09-30,readers who opened the program sign-up page,,2950,,clinically proven to improve sleep,helps you build a sleep routine,
+Partner forum posts,2026-07-01,2026-09-30,members who asked their doctor about the program,,,,,,

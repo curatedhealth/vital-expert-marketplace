@@ -1,0 +1,13 @@
+Renewal metrics, 'horizon', on the definitions you stated (evidence class O, owner-stated).
+Definitions owner as you named them: Dana Ortiz (as the example person named her)
+Window: renewal date after 19 October 2026 and on or before 16 February 2027 (120 days, your horizon).
+Accounts in the window: 3 of 14
+Readiness rule you adopted: not ready if any of go_live eq no; open_impl_items gt 0
+| Account | Contract | Renewal date | Days to renewal | Readiness (your rule) | Rule hit |
+|---|---|---|---|---|---|
+| ACC-10 | CT-1010 | 30 November 2026 | 42 | ready |  |
+| ACC-11 | CT-1011 | 15 December 2026 | 57 | not ready | go_live eq no; open_impl_items gt 0 |
+| ACC-12 | CT-1012 | 31 January 2027 | 104 | not ready | open_impl_items gt 0 |
+Renewal date already passed and status still open (check the record): ACC-08 (CT-1008, 31 August 2026)
+
+Figures computed on your data and your definitions. They are not benchmarks and set no target. AI-assisted draft.

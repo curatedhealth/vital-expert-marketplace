@@ -1,0 +1,70 @@
+{
+ "call": "regulatory-dh.search_safety_events {jurisdiction: 'US', product_code: 'QRX', limit: 10}",
+ "called_on": "2026-10-19",
+ "trimmed": "titles shortened; summaries kept",
+ "note": "Rows carry no product_code field, so whether each recall is filed under QRX cannot be read from the row. Row 1 (sensor theft) is not a software defect; it matched because its title contains 'Software Version: N/A'. source_url is the openFDA API endpoint, not the recall record.",
+ "results": [
+  {
+   "title": "Dexcom G7 US Retail Sensor/Transmitter 1-pack, Software Version: N/A",
+   "event_date": "2026-05-27",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "Certain lots of Dexcom G7 sensors originally designated as scrap and intended for destruction were stolen during the destruction process. [...]"
+  },
+  {
+   "title": "Dexcom G7 CGM iOS App, SW12300, Versions 2.9.0 through 2.11.2",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in which a low-priority file I/O check blocks the higher-priority thread responsible for processing estimated glucose values (EGVs) and trend arrows. [...] This delay in EGV and alert processing creates a risk that users may miss detection of a hypoglycemic or hyperglycemic event, or make treatment decisions based on outdated glucose information."
+  },
+  {
+   "title": "Dexcom ONE+ iOS CGM App, SW14244, versions 1.5.0 and 1.6.0",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "Same defect as the G7 iOS app row."
+  },
+  {
+   "title": "Dexcom G7 CGM watchOS App, SW13355, Versions 2.9.0 through 2.11.2",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "Same defect as the G7 iOS app row."
+  },
+  {
+   "title": "Omnipod 5 iOS application, manual entry field with iPhone magnifier",
+   "event_date": "2025-09-11",
+   "severity": "Class II",
+   "manufacturer": "Insulet Corporation",
+   "summary": "[...] This causes the single digit number to duplicate. This could result in errors in manual entry of digits - examples: bolus entry, I:C ratio, bolus calculator, prior to starting the bolus insulin delivery. Therefore, this may result in over delivery of insulin which may cause hypoglycemia."
+  },
+  {
+   "title": "Dexcom G6 and G6 Pro Android US CGM App, SW11678, version 1.15.0",
+   "event_date": "2025-08-28",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in version v1.15.0 of the G6 Android app can cause the app to terminate unexpectedly, which may result in the user not receiving estimated glucose values, alarms, alerts or notifications. [...]"
+  },
+  {
+   "title": "Dexcom G7 and ONE+ apps, versions 2.8.0 or earlier and 1.4.0 or earlier (four rows)",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App [...] which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment."
+  }
+ ],
+ "maude_counts": [
+  {
+   "product_code": "QRX",
+   "total_reports": 1,
+   "by_year": [
+    {
+     "year": 2022,
+     "count": 1
+    }
+   ],
+   "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "call": "regulatory-dh.search_safety_events",
+ "called_on": "19 October 2026",
+ "arguments": {
+  "product": "software",
+  "jurisdiction": "UK",
+  "limit": 10
+ },
+ "trimmed": "8 MHRA alerts returned; first 3 kept, rest listed by reference",
+ "results": [
+  {
+   "source_type": "mhra_alert",
+   "title": "BD BodyComm™ version 3.3 software used for BodyGuard infusion pumps, BodyGuard-T and T34 syringe drivers: Important steps to manage transition to Windows 11 (DSI/2025/006)",
+   "event_date": "2025-10-06",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "source_url": "https://www.gov.uk/drug-device-alerts/bd-bodycomm-version-3-dot-3-software-used-for-bodyguard-infusion-pumps-bodyguard-t-and-t34-syringe-drivers-important-steps-to-manage-transition-to-windows-11-dsi-slash-2025-slash-006"
+  },
+  {
+   "source_type": "mhra_alert",
+   "title": "Haemofiltration machine: all Prismaflex systems installed with software version 6.10 – risk of under-infusion of anticoagulant",
+   "event_date": "2017-07-11",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "summary": "Manufactured by Baxter – the software fails to save the syringe type and size in service and custom modes, and so reverts to default settings."
+  },
+  {
+   "source_type": "mhra_alert",
+   "title": "Dialog+ haemodialysis machines with software versions 9.xx (excluding versions 9.18, 9.1A, 9.1B) – software and hardware upgrade required (MDA/2019/024)",
+   "event_date": "2019-06-26",
+   "manufacturer": "AI Medical AG",
+   "summary": "Manufactured by B. Braun Avitum AG – Malfunction of the temperature sensor ..."
+  }
+ ],
+ "other_references": [
+  "MDA/2019/037",
+  "MDA/2019/001",
+  "MDA/2009/076",
+  "MDA/2005/045",
+  "MDA/2008/065"
+ ],
+ "observation": "UK alerts carry a record URL (gov.uk), unlike US recalls. Severity is the alert type only. Manufacturer null on most; MDA/2019/024 names a firm the summary does not (register N1)."
+}

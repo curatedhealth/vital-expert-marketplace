@@ -1,0 +1,22 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.classify_product",
+ "args": {
+  "name": "StrokeSense CT triage",
+  "intended_purpose": "AI software that analyzes non-contrast head CT images and notifies a stroke team of suspected large vessel occlusion for prioritized review"
+ },
+ "results": [],
+ "gaps": [
+  "no stored record matches; FDA product code, EMDN and GMDN are not inferred from the text"
+ ],
+ "taxonomy_matches": [
+  {
+   "segment": "Digital Health",
+   "similarity": 0.23
+  },
+  {
+   "segment": "SaMD: Diagnostic",
+   "similarity": 0.208
+  }
+ ]
+}

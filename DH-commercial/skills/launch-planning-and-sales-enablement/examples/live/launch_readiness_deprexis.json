@@ -1,0 +1,174 @@
+{
+ "call": {
+  "tool": "commercial-dh.get_launch_readiness",
+  "args": {
+   "reference": "deprexis",
+   "intended_use": "Internet-based program for adults with unipolar depression or depressive mood, used alongside or without other treatment",
+   "user": "Adult patient with depression",
+   "buyer": "Prescribing physician or psychotherapist",
+   "payer": "German statutory health insurance",
+   "claims": [
+    "deprexis reduces depressive symptoms",
+    "deprexis is reimbursed by all statutory health insurers in Germany",
+    "deprexis replaces psychotherapy"
+   ]
+  },
+  "called": "19 October 2026",
+  "response_chars": 102610
+ },
+ "criteria": [
+  {
+   "id": "roles",
+   "status": "attested",
+   "detail": "user, buyer, and payer"
+  },
+  {
+   "id": "note",
+   "status": "[GAP]",
+   "detail": "note [GAP]"
+  },
+  {
+   "id": "authorization",
+   "status": "[GAP]",
+   "detail": "authorization [GAP]"
+  },
+  {
+   "id": "claims",
+   "status": "met",
+   "detail": "4 claims labeled"
+  },
+  {
+   "id": "route",
+   "status": "[GAP]",
+   "detail": "route [GAP]"
+  },
+  {
+   "id": "peers",
+   "status": "met",
+   "detail": "peer_count 0 via digital_health_census.screen_market"
+  },
+  {
+   "id": "price",
+   "status": "met",
+   "detail": "market_access_dh public price"
+  }
+ ],
+ "met_count": 4,
+ "claims_audit": {
+  "authorization_on_file": false,
+  "intended_purpose_from_record": "[GAP]",
+  "claims": [
+   {
+    "claim": "Internet-based program for adults with unipolar depression or depressive mood, used alongside or without other treatment",
+    "label": "no_authorization_on_file",
+    "upstream_tool": "regulatory_dh.get_authorization"
+   },
+   {
+    "claim": "deprexis reduces depressive symptoms",
+    "label": "no_authorization_on_file",
+    "upstream_tool": "regulatory_dh.get_authorization"
+   },
+   {
+    "claim": "deprexis is reimbursed by all statutory health insurers in Germany",
+    "label": "no_authorization_on_file",
+    "upstream_tool": "regulatory_dh.get_authorization"
+   },
+   {
+    "claim": "deprexis replaces psychotherapy",
+    "label": "no_authorization_on_file",
+    "upstream_tool": "regulatory_dh.get_authorization"
+   }
+  ],
+  "gaps": [
+   "authorization [GAP] via regulatory_dh.get_authorization"
+  ],
+  "regulatory.search_devices.results[0]": {
+   "product": "deprexis",
+   "manufacturer": "GAIA AG",
+   "jurisdiction": "EU",
+   "regime": "EU_MDR",
+   "pathway": "CE_MARK",
+   "risk_class": "Class I",
+   "status": "On the EU market",
+   "decision_date": null,
+   "source_url": "https://ec.europa.eu/tools/eudamed/#/screen/search-device",
+   "retrieved_at": "2026-10-14T06:47:31.489154+00:00",
+   "identifiers": {
+    "BASIC_UDI_DI": [
+     "42606706365P"
+    ],
+    "EMDN": [
+     "V92"
+    ]
+   }
+  },
+  "evidence_maturity": {
+   "score": 78,
+   "score_scale": "70 of 90 assessable points, shown as a percentage",
+   "resolution": {
+    "status": "resolved",
+    "basis": "exact_brand_name",
+    "organizations": [
+     "GAIA AG",
+     "GAIA AG, Deutschland"
+    ]
+   }
+  }
+ },
+ "money_flow": {
+  "user": "Adult patient with depression",
+  "buyer": "Prescribing physician or psychotherapist",
+  "payer": "German statutory health insurance",
+  "note": "[GAP]",
+  "conflated": false
+ },
+ "money_flow.DE_DIGA": {
+  "listed": true,
+  "status": "permanent",
+  "status_raw": "dauerhaft aufgenommen",
+  "listed_on": "2021-02-20",
+  "ends_on": null,
+  "scheme_identifier": "00450",
+  "decision_reference": "DiGA-ID 00450; PZN 17265872",
+  "source_url": "https://diga.bfarm.de/de/verzeichnis/00450",
+  "retrieved_at": "2026-10-15T18:07:17.296660+00:00"
+ },
+ "peers": {
+  "peer_count": 0,
+  "gap_reason": "unknown segment 'deprexis'; use one of ['cdss', 'digital-health', 'dtx', 'rpm', 'samd-diagnostic']",
+  "coverage": [
+   "digital_health_census.screen_market: [GAP]",
+   "regulatory_dh.search_devices: [GAP]",
+   "market_access_dh.search_listings: [GAP]"
+  ]
+ },
+ "pricing_corridor": {
+  "rows": 12,
+  "first_three": [
+   {
+    "amount": 228,
+    "currency": "EUR",
+    "scheme": "DE_DIGA",
+    "source_url": "https://diga.bfarm.de/de/verzeichnis/00450",
+    "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+    "upstream_tool": "market_access_dh.search_listings"
+   },
+   {
+    "amount": 228,
+    "currency": "EUR",
+    "scheme": "DE_DIGA",
+    "source_url": null,
+    "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+    "upstream_tool": "market_access_dh.compare_schemes"
+   },
+   {
+    "amount": 598.95,
+    "currency": "EUR",
+    "scheme": "DE_DIGA",
+    "source_url": "https://diga.bfarm.de/de/verzeichnis/02883",
+    "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+    "upstream_tool": "market_access_dh.find_scheme_precedents"
+   }
+  ]
+ }
+}

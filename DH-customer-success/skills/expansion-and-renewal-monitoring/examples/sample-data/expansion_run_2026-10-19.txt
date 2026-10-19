@@ -1,0 +1,16 @@
+Renewal metrics, 'expansion', on the definitions you stated (evidence class O, owner-stated).
+Definitions owner as you named them: Dana Ortiz (as the example person named her)
+Offers dated from 1 November 2025 to 30 September 2026 (your offer period).
+Offers made (offer_made in ['yes']): 6
+| Figure | Formula used (your definitions) | Value |
+|---|---|---|
+| Offers signed | count of offer_outcome in ['signed'] | 3 |
+| Offers refused | count of offer_outcome in ['refused'] | 1 |
+| Offers open | count of offer_outcome in ['open'] | 1 |
+| Offer acceptance | signed / (signed + refused + open) = 3 / 5 | 60.0 percent |
+Outcome not in your lists (not counted as signed; a meeting or verbal yes is not a signature unless your definition says so): ACC-09 (meeting held)
+Refused offers with the reason recorded in 'refusal_reason':
+  ACC-02 | CT-1002 | result not yet seen by the account
+Signed: ACC-01 (CT-1001), ACC-07 (CT-1007), ACC-14 (CT-1014)
+
+Figures computed on your data and your definitions. They are not benchmarks and set no target. AI-assisted draft.

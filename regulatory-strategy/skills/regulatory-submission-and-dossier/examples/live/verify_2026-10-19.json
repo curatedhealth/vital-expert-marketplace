@@ -1,0 +1,31 @@
+{
+  "_note": "Trimmed live output saved 19 October 2026 from the VITAL Digital Health Library connector. Fields kept as returned; long passages shortened where marked [trimmed].",
+  "qualify_source": {
+    "call": "verify.qualify_source(doi='10.1371/journal.pmed.1004510')",
+    "tier": "gold",
+    "status": "current",
+    "source_score": {
+      "total": 67,
+      "axes": {
+        "authority": 15,
+        "recency": 15,
+        "relevance": null,
+        "provenance": 10,
+        "currency": null
+      }
+    }
+  },
+  "check_claim": {
+    "call": "verify.check_claim(claim={'text':'App-based cognitive behavioral therapy for insomnia reduced the onset of major depressive disorder in youth with insomnia and subclinical depression.'}, passage={'text':<abstract background and methods sentence, which states the trial's aim and design only>, 'locator':'abstract, background and methods (Europe PMC excerpt)'}, source={...gold})",
+    "status": "supported",
+    "rationale": "Strong overlap (86%) with context",
+    "citation": {
+      "title": null,
+      "authors": [],
+      "year": null,
+      "harvard": "Unknown (n.d.)."
+    },
+    "method_version": "2026-10-18.1",
+    "observation": "The passage states what the trial set out to test, not what it found. 'supported' here rests on word overlap (register item N3). A skill must not accept it."
+  }
+}

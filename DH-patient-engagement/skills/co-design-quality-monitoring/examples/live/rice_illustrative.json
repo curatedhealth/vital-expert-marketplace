@@ -1,0 +1,9 @@
+{"called_on":"2026-10-19","note":"Illustrative scores typed for measurement; they are the example person's scores in the worked example.",
+"calls":[
+ {"call":"analytics.rice {initiatives: [{id: \"I4 out-of-range color wording\", reach: 1200, impact: 2, confidence: 0.8, effort: 2}, {id: \"I5 printable weekly summary\", reach: 300, impact: 1, confidence: 0.5, effort: 3}, {id: \"I2 carer shared view\", reach: 500, impact: 2, confidence: 0.5, effort: 8}]}",
+  "results":[{"id":"I4 out-of-range color wording","score":9.6,"confidence":0.008},{"id":"I2 carer shared view","score":0.625,"confidence":0.005},{"id":"I5 printable weekly summary","score":0.5,"confidence":0.005}]},
+ {"call":"analytics.rice (same, confidence passed as 80, 50, 50)",
+  "results":[{"id":"I4 out-of-range color wording","score":960,"reach":1200,"impact":2,"confidence":0.8,"effort":2},{"id":"I2 carer shared view","score":62.5,"reach":500,"impact":2,"confidence":0.5,"effort":8},{"id":"I5 printable weekly summary","score":50,"reach":300,"impact":1,"confidence":0.5,"effort":3}]}
+],
+"method":"RICE Prioritization (Reach x Impact x Confidence / Effort)","response_note":"Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices.",
+"observations":["Confidence is read as a percentage and divided by 100; a fraction (0.8) becomes 0.008 with no warning. The schema does not say which scale.","name is null on every result.","The note about price figures is unrelated to RICE."]}

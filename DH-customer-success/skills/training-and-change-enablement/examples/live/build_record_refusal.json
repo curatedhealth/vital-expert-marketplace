@@ -1,0 +1,2 @@
+{"date": "2026-10-19", "call": {"tool": "verify.build_record", "args": {"clearances": [{"cleared_by": {"name": "Claude"}, "scope": "adoption review draft"}], "text": "Adoption review draft for site North and site South (illustrative)."}},
+ "response": {"error": "build_record refuses a record without a human cleared_by.name"}}

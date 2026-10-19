@@ -1,0 +1,27 @@
+id,type,text,links,result,note
+UN-01,user_need,User can enter a carbohydrate amount and receive a bolus suggestion,,,
+UN-02,user_need,User is told when glucose data are stale or missing,,,
+UN-03,user_need,User in any supported region can enter numbers in their own format,,,
+HZ-01,hazard,Decimal separator misread under a regional number format (seeded from the 23 May 2025 Omnipod 5 iOS recall),,,
+HZ-02,hazard,Digit duplicated when an accessibility magnifier is used during entry (seeded from the 11 September 2025 Omnipod 5 recall),,,
+HZ-03,hazard,Glucose value shown is stale after the app returns from background (seeded from the 14 April 2026 Dexcom G7 app recall),,,
+HZ-04,hazard,App terminates unexpectedly and stops alerts (seeded from the 28 August 2025 Dexcom G6 Android recall),,,
+RC-01,risk_control,Parse numbers with the device locale and show the parsed value for confirmation before calculation,HZ-01,,
+RC-02,risk_control,Reject entries above the user's configured maximum and require confirmation,HZ-01;HZ-02,,
+RC-03,risk_control,Show data age and block bolus suggestion when glucose value is older than the configured limit,HZ-03,,
+RC-04,risk_control,Information for safety: instructions tell users to check the displayed value,HZ-02,,
+DI-01,design_input,Bolus calculation uses the entered carbohydrate amount and stored ratio,UN-01,,
+DI-02,design_input,Number entry accepts comma and period decimal separators per locale,UN-03;RC-01,,
+DI-03,design_input,Maximum bolus limit enforced with confirmation dialog,RC-02,,
+DI-04,design_input,Data age displayed and suggestion blocked when data are stale,UN-02;RC-03,,
+DI-05,design_input,Right-to-left language layout supported,UN-03,,
+DO-01,design_output,Locale parsing module spec v2.1,DI-02,,
+VER-01,verification,Unit and integration tests of bolus calculation,DI-01,pass,
+VER-02,verification,Locale test matrix across the supported regional formats,DO-01,pass,
+VER-03,verification,Maximum bolus boundary tests,DI-03;RC-02,fail,boundary cases open
+VER-04,verification,Stale-data test with background and foreground transitions,RC-03,,not yet run
+VER-05,verification,Locale test of RC-01 confirmation screen,RC-01,pass,
+VAL-01,validation,Summative usability study,UN-01,pass,
+VAL-02,validation,Summative usability scenario for stale data,UN-02,,planned
+DI-06,design_input,Export of dose history to clinician portal,,,added late; no source recorded
+VER-06,verification,Regression test of dose history export,DI-09,pass,

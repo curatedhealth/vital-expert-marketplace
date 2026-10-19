@@ -1,0 +1,34 @@
+user_id,role,site,eligible,trained_date
+NNU01,nurse,North,yes,2026-05-11
+NNU02,nurse,North,yes,2026-05-12
+NNU03,nurse,North,yes,2026-05-15
+NNU04,nurse,North,yes,2026-05-11
+NNU05,nurse,North,yes,2026-05-16
+NNU06,nurse,North,yes,2026-05-12
+NNU07,nurse,North,yes,2026-05-12
+NNU08,nurse,North,yes,2026-05-12
+NNU09,nurse,North,yes,2026-05-16
+NNU10,nurse,North,yes,
+NNU11,nurse,North,yes,2026-05-15
+NNU12,nurse,North,yes,2026-05-17
+NNU13,nurse,North,yes,2026-05-17
+NNU14,nurse,North,yes,2026-05-11
+NCA01,care coordinator,North,yes,
+NCA02,care coordinator,North,yes,2026-05-17
+NCA03,care coordinator,North,yes,2026-05-12
+NCA04,care coordinator,North,yes,
+SNU01,nurse,South,yes,2026-07-14
+SNU02,nurse,South,yes,2026-07-14
+SNU03,nurse,South,yes,2026-07-16
+SNU04,nurse,South,yes,2026-07-18
+SNU05,nurse,South,yes,2026-07-19
+SNU06,nurse,South,yes,2026-07-19
+SNU07,nurse,South,yes,2026-07-15
+SNU08,nurse,South,yes,2026-07-18
+SNU09,nurse,South,yes,2026-07-17
+SNU10,nurse,South,yes,2026-07-19
+SNU11,nurse,South,yes,2026-07-14
+SNU12,nurse,South,yes,
+SCA01,care coordinator,South,yes,
+SCA02,care coordinator,South,yes,
+SCA03,care coordinator,South,yes,

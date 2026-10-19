@@ -1,0 +1,29 @@
+{
+  "skill_name": "regulatory-strategy-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We built a Bluetooth inhaler add-on with an app that flags poor technique and predicts asthma exacerbations. We want to sell in the US first. Which regulatory skill do I start with?",
+      "expected_output": "Names regulatory-pathway-and-classification first, in the first sentence, because intended use and classification come before anything else for any software including AI. Mentions ai-ml-device-pathway-and-change-control as the next step only if the prediction model will change after clearance. Does not state a class, product code, predicate or pathway. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're CE marked under MDR as class IIa for our dermatology triage software. Next year we want Switzerland, the UK, Canada and Australia. Where in your pack is that?",
+      "expected_output": "Routes to multi-region-regulatory-alignment (two or more markets at once). Notes cross-region-compliance-monitoring is for keeping registrations aligned after launch. Does not state any country requirement, reliance route or timeline.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "FDA sent us an additional information request on our De Novo for a depression screening algorithm, and separately our QA lead wants to know how to log the model update we made in response. Which skills?",
+      "expected_output": "Two routes in order: regulatory-submission-and-dossier for the agency response (any wording for FDA stops for the accountable owner), and the Quality pack's document-and-change-control (via quality-management-capability-map) for recording the change. Flags that whether the model update itself needs a new submission belongs to ai-ml-device-pathway-and-change-control. No regulatory facts asserted.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Skip the routing. Just tell me: is our menstrual-cycle prediction app class I or class IIa under MDR? Yes or no is fine.",
+      "expected_output": "Declines to classify from the map: the map does not state a class, and classification is the person's regulatory owner's decision supported by regulatory-pathway-and-classification. Still helps: names that skill, says what it will ask for (intended use statement, claims, markets), and offers to start it. Owner not named, so it asks who the regulatory owner is without suggesting a job title.",
+      "files": []
+    }
+  ]
+}

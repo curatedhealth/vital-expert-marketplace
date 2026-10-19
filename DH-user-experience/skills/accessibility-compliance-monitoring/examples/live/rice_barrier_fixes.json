@@ -1,0 +1,28 @@
+{
+  "called_on": "19 October 2026",
+  "note": "Scores typed for the measurement (illustrative); reach is users of the screen per month as an example person might state it.",
+  "call_1": {
+    "request": {"initiatives": [
+      {"id": "fix-sign-in-auth-3.3.8", "reach": 4200, "impact": 3, "confidence": 0.8, "effort": 3},
+      {"id": "fix-dose-button-name-4.1.2", "reach": 3100, "impact": 3, "confidence": 1, "effort": 1},
+      {"id": "fix-target-size-2.5.8", "reach": 3100, "impact": 1, "confidence": 0.8, "effort": 2},
+      {"id": "fix-settings-contrast-1.4.11", "reach": 900, "impact": 0.5, "confidence": 0.5, "effort": 0.5}]},
+    "response": {"method": "RICE Prioritization (Reach x Impact x Confidence / Effort)",
+      "citation": "McClure, S. (2016). Product prioritization frameworks: RICE. Intercom.",
+      "results": [
+        {"id": "fix-dose-button-name-4.1.2", "score": 93, "confidence": 0.01},
+        {"id": "fix-sign-in-auth-3.3.8", "score": 33.6, "confidence": 0.008},
+        {"id": "fix-target-size-2.5.8", "score": 12.4, "confidence": 0.008},
+        {"id": "fix-settings-contrast-1.4.11", "score": 4.5, "confidence": 0.005}],
+      "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."}
+  },
+  "call_2": {
+    "request": {"initiatives": [
+      {"id": "fix-sign-in-auth-3.3.8", "reach": 4200, "impact": 3, "confidence": 80, "effort": 3},
+      {"id": "fix-dose-button-name-4.1.2", "reach": 3100, "impact": 3, "confidence": 100, "effort": 1}]},
+    "response": {"results": [
+        {"id": "fix-dose-button-name-4.1.2", "score": 9300, "confidence": 1},
+        {"id": "fix-sign-in-auth-3.3.8", "score": 3360, "confidence": 0.8}]}
+  },
+  "finding": "confidence is read as a percent (0 to 100) and divided by 100. A fraction (0.8) is silently divided again, giving scores 100 times too small. The order is unchanged because every row is scaled alike, but the scores are wrong. The schema does not state the unit. Pass confidence as a percent."
+}

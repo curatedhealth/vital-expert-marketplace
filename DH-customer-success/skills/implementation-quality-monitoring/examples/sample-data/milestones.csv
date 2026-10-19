@@ -1,0 +1,28 @@
+site,milestone,core,baseline_due,due,done
+Clinic A (pilot),Data processing agreement signed,yes,2026-01-15,2026-01-15,2026-01-12
+Clinic A (pilot),User roles configured,yes,2026-02-02,2026-02-02,2026-01-30
+Clinic A (pilot),Day-one workflow configured,yes,2026-02-09,2026-02-09,2026-02-09
+Clinic A (pilot),Staff trained,yes,2026-02-23,2026-02-23,2026-02-20
+Clinic A (pilot),Go-live bar met,yes,2026-03-02,2026-03-02,2026-03-02
+Clinic B (pilot),Data processing agreement signed,yes,2026-01-15,2026-01-15,2026-01-14
+Clinic B (pilot),User roles configured,yes,2026-02-02,2026-02-16,2026-02-13
+Clinic B (pilot),Day-one workflow configured,yes,2026-02-09,2026-03-02,2026-03-02
+Clinic B (pilot),Staff trained,yes,2026-02-23,2026-03-23,2026-03-20
+Clinic B (pilot),Go-live bar met,yes,2026-03-02,2026-03-30,2026-03-30
+Clinic B (pilot),Results interface to EHR,no,2026-04-06,2026-06-01,
+Clinic C,Data processing agreement signed,yes,2026-04-15,2026-04-15,2026-04-10
+Clinic C,User roles configured,yes,2026-05-04,2026-05-04,2026-05-08
+Clinic C,Day-one workflow configured,yes,2026-05-11,2026-05-11,2026-05-20
+Clinic C,Staff trained,yes,2026-05-25,2026-05-25,2026-06-08
+Clinic C,Go-live bar met,yes,2026-06-01,2026-06-01,2026-06-15
+Clinic D,Data processing agreement signed,yes,2026-04-15,2026-05-20,2026-05-19
+Clinic D,User roles configured,yes,2026-05-04,2026-06-15,2026-06-22
+Clinic D,Day-one workflow configured,yes,2026-05-11,2026-07-06,2026-07-06
+Clinic D,Staff trained,yes,2026-05-25,2026-07-27,2026-07-29
+Clinic D,Go-live bar met,yes,2026-06-01,2026-08-03,2026-08-03
+Clinic D,Refresher training,no,2026-09-28,2026-09-28,
+Clinic E,Data processing agreement signed,yes,2026-07-15,2026-07-15,2026-07-14
+Clinic E,User roles configured,yes,2026-08-03,2026-08-03,2026-08-03
+Clinic E,Day-one workflow configured,yes,2026-08-10,2026-10-26,
+Clinic E,Staff trained,yes,2026-08-24,2026-11-09,
+Clinic E,Go-live bar met,yes,2026-09-07,2026-11-16,

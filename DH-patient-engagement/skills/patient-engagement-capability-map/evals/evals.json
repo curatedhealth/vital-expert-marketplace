@@ -1,0 +1,35 @@
+{
+  "skill_name": "patient-engagement-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're building a digital companion for people starting GLP-1 treatment and want a patient advisory panel to shape the onboarding flow before we build it. Which patient engagement skill do we use?",
+      "expected_output": "Names patient-research-and-co-design in the first sentence: patients as partners shaping the product. Mentions co-design-quality-monitoring only as the later check that changes trace to what participants said. Notes that any payment to panel members stops for the person's compliance owner. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our engagement dashboard reports 30-day retention for the asthma program three different ways depending on who runs it. I need to know which number is right and fix it.",
+      "expected_output": "Routes to kpi-reliability-monitoring: recomputation from source data and formula drift. Mentions engagement-kpi-dashboards if the KPI definition itself must be rewritten, and that the KPI definition is the person's. Asserts no value.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Older and rural patients are dropping out of our cardiac rehab app, and a screen-reader user told us the exercise videos have no captions. Which skills cover this?",
+      "expected_output": "Splits the request: health-equity-and-inclusive-design for who is left out (older and rural patients) and the inclusive change; the User Experience pack (dh-user-experience) accessibility-standards-implementation for captions and screen-reader conformance, and accessibility-compliance-monitoring for checking it. Gives an order. States no WCAG criterion or legal requirement.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Just tell me which three underserved groups we should prioritize for our diabetes app and what our target enrollment share for each should be.",
+      "expected_output": "Declines to choose groups or targets: equity priorities and targets are the person's decisions. Still helps: routes to health-equity-and-inclusive-design, which lays out who the product reaches and leaves out from the person's data and published sources, and says what it will ask for (enrollment data by group, markets). Owner not named, so asks who sets equity priorities without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "We run a patient support program for our migraine app. We want each patient to get a personalized journey with nudges tuned to their behavior, coordinated across email, SMS and the nurse line. Which skill?",
+      "expected_output": "Routes the support program itself to engagement-programs-and-advocacy-partnerships (JTBD-PSD-001). Says patient-level personalization and behavior-change nudges are out of scope here and route to dh-digital-therapeutic-design (JTBD-PSD-002), and that omnichannel orchestration across email, SMS and the nurse line (JTBD-PSD-003) is out of scope with no skill in this pack. Any free item or incentive to patients stops for the person's compliance owner. Does not design the journey. Under 150 words.",
+      "files": []
+    }
+  ]
+}

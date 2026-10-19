@@ -1,0 +1,35 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked.",
+ "call": {
+  "tool": "regulatory-dh.search_safety_events",
+  "arguments": {
+   "product": "software",
+   "jurisdiction": "UK",
+   "limit": 5
+  }
+ },
+ "results_excerpt": [
+  {
+   "title": "BD BodyComm™ version 3.3 software used for BodyGuard infusion pumps, BodyGuard-T and T34 syringe drivers: Important steps to manage transition to Windows 11 (DSI/2025/006)",
+   "event_date": "2025-10-06",
+   "severity": "device-safety-information",
+   "manufacturer": null,
+   "source_url": "https://www.gov.uk/drug-device-alerts/bd-bodycomm-version-3-dot-3-software-used-for-bodyguard-infusion-pumps-bodyguard-t-and-t34-syringe-drivers-important-steps-to-manage-transition-to-windows-11-dsi-slash-2025-slash-006"
+  },
+  {
+   "title": "Dialog+ haemodialysis machines with software versions 9.xx (excluding versions 9.18, 9.1A, 9.1B) – software and hardware upgrade required (MDA/2019/024)",
+   "event_date": "2019-06-26",
+   "manufacturer": "AI Medical AG",
+   "summary": "Manufactured by B. Braun Avitum AG – Malfunction of the temperature sensor can result in temperature of the dialysis fluid to be more than ±1°C outside the programmed values, which can lead to inadequate treatment."
+  }
+ ],
+ "no_arguments_call": {
+  "arguments": {
+   "jurisdiction": "UK",
+   "limit": 5
+  },
+  "gaps": [
+   "give manufacturer, product or product_code"
+  ]
+ }
+}

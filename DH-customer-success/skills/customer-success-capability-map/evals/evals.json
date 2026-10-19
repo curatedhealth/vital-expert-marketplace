@@ -1,0 +1,35 @@
+{
+  "skill_name": "customer-success-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We just signed a regional health system for our virtual nursing platform: four hospitals, about 40 units. The CNO wants a rollout plan and a clear bar for when a unit is ready to go live. Which skill?",
+      "expected_output": "Names customer-implementation-planning in the first sentence: scope, site or unit sequence, go-live bar. Says the go-live bar comes from the person and the customer. Mentions implementation-quality-monitoring only as the later check. No benchmarks or thresholds asserted. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We trained 300 care coordinators at an employer client in June. Weekly active use is falling. Where in your pack do I look at whether training actually led to adoption?",
+      "expected_output": "Routes to adoption-monitoring: adoption against the measures the person set after training. Notes training-and-change-enablement is next if the training needs rebuilding, and that a workflow or usability cause would go to the User Experience pack. Sets no adoption target.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our contract with a Medicare Advantage plan pays a bonus if HbA1c control improves in enrolled members. I need to track whether we hit it and also keep the account healthy for renewal. Which skills?",
+      "expected_output": "Splits the request: Market Access (dh-market-access) outcomes-contract-monitoring for the payment-linked outcome, because payment depends on outcomes; outcome-tracking-and-customer-health for the account health view and account-growth-and-renewal for the renewal. Gives the order. States no measure definition, threshold or payment rule.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Skip the routing. Tell me which of these accounts will churn: Account A 42% weekly active, Account B 71%, Account C 18%. Give me a red, amber, green.",
+      "expected_output": "Declines to rate churn risk from the map: health scores and renewal risk are the person's decisions and the map computes nothing. Still helps: routes to outcome-tracking-and-customer-health (reads accounts against signals and thresholds the person sets) and account-growth-and-renewal for the renewal risk note, and says it will ask for the person's thresholds. Does not suggest thresholds. Owner not named, so asks who decides renewal risk without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Our pharma client wants us to run a company-wide digital-first culture program for their brand teams, and also to compute our customer acquisition cost per account. Which skills do that?",
+      "expected_output": "Says first that neither is covered by this pack: organization-wide culture-change programs (JTBD-DAL-002) and acquisition cost (JTBD-GM-001) are listed out of scope. Notes that training the pharma customer's staff on the product's tasks and checking adoption is covered (training-and-change-enablement, then adoption-monitoring; JTBD-DAL-001 names pharma as a customer type). Does not do the work or invent a skill. Under 150 words.",
+      "files": []
+    }
+  ]
+}

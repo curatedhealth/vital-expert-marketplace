@@ -1,0 +1,22 @@
+{
+  "retrieved": "19 October 2026",
+  "calls": [
+    {
+      "call": "regulatory-dh.find_predicates(product_code=\"QRX\")",
+      "trimmed_result": {
+        "chain_edges": [["K260062","K252818"],["K252818","K222888"],["K231824","K222239"],["K222888","K203772"],["K222239","K203772"],["K203772","K201476"]],
+        "terminal_node_without_record": "K201476",
+        "coverage": "US: 1226 authorizations loaded; dated software decisions; last load 2026-10-19; sources openfda, openfda_pma"
+      }
+    },
+    {
+      "call": "regulatory-dh.get_authorization(reference=\"DEN170043\")",
+      "trimmed_result": {"results": [], "gaps": ["no stored authorization for reference 'DEN170043'"]}
+    }
+  ],
+  "outside_library": {
+    "file": "scratchpad/research_reg2/raw/ailist.csv (FDA AI-enabled medical devices list), line 1506",
+    "header": "Date of Final Decision,Submission Number,Device,Company,Panel (Lead),Primary Product Code",
+    "row": "06/12/2018,DEN170043,DreaMed Advisor Pro,\"DreaMed Diabetes, Ltd.\",Clinical Chemistry,QCC"
+  }
+}

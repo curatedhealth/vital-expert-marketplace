@@ -1,0 +1,4 @@
+session_id,date,planned_types,attended
+S1,2026-08-04,patient;carer,patient:4;carer:1
+S2,2026-08-18,patient;carer,patient:3;staff:2
+S3,2026-09-01,patient,patient:4

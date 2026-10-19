@@ -1,0 +1,17 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.get_market_status",
+ "args": {
+  "name": "BriefCase-Triage"
+ },
+ "results_summary": "10 rows returned: 1 row 'Briefcase-Triage' / 'Aidoc Medical Ltd.' with US false, EU true; 9 identical rows 'BriefCase-Triage' / 'Aidoc Medical , Ltd.' with US true, EU false. UK and CH [GAP] on every row.",
+ "generate_report_regulatory_K261317_market_status": {
+  "product": "Briefcase-Triage",
+  "authorized": {
+   "US": false,
+   "EU": true,
+   "UK": "[GAP]",
+   "CH": "[GAP]"
+  }
+ }
+}
