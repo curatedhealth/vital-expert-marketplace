@@ -1,5 +1,5 @@
 ---
-name: study-protocol-drafting
+name: "Study Protocol Drafting"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Study Protocol Drafting."
 ---
 

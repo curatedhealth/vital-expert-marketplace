@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-2-1
+name: "Coding Strategy Development & Payer/Provider Contracting"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.2.1 Coding Strategy Development & Payer/Provider Contracting. Use when the user asks for Coding Pathway Strategy, Pricing Strategy, Contract Negotiation. Ask which one task, then follow that section."
 ---
 

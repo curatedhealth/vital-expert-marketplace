@@ -1,5 +1,5 @@
 ---
-name: reception-score
+name: "Reception score"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring is chosen, to do Reception score."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: market-access-effectiveness-and-outcomes
+name: "Market Access Effectiveness Assessment & Reimbursement Outcome Monitoring"
 description: "Only while the Digital Health Library connector is connected. Start the job Market Access Effectiveness Assessment & Reimbursement Outcome Monitoring in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

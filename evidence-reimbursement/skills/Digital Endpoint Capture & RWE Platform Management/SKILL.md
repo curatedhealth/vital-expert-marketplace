@@ -1,5 +1,5 @@
 ---
-name: digital-endpoint-capture-and-rwe-platform-management
+name: "Digital Endpoint Capture & RWE Platform Management"
 description: "Only while the Digital Health Library connector is connected. Start the job Digital Endpoint Capture & RWE Platform Management in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

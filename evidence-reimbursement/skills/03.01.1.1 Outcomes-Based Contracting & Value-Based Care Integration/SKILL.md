@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-1-1
+name: "Outcomes-Based Contracting & Value-Based Care Integration"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.1.1 Outcomes-Based Contracting & Value-Based Care Integration. Use when the user asks for Outcomes Metric Definition, Risk-Sharing Model Design, Outcomes Contract Structuring. Ask which one task, then follow that section."
 ---
 

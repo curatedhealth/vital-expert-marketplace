@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-1-2
+name: "VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.1.2 VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring. Use when the user asks for Outcomes Achievement Monitoring, value-based contract pass rule, value-based contract miss owner. Ask which one task, then follow that section."
 ---
 

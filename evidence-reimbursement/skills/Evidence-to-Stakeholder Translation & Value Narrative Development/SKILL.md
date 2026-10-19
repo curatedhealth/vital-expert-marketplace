@@ -1,5 +1,5 @@
 ---
-name: evidence-translation-and-value-narrative
+name: "Evidence-to-Stakeholder Translation & Value Narrative Development"
 description: "Only while the Digital Health Library connector is connected. Start the job Evidence-to-Stakeholder Translation & Value Narrative Development in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

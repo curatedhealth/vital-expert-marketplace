@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-3-2
+name: "Regulatory Strategy Effectiveness Assessment & Pathway Success Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.3.2 Regulatory Strategy Effectiveness Assessment & Pathway Success Monitoring. Use when the user asks for Regulatory Pathway Success Monitoring, regulatory pathway pass rule, regulatory pathway miss owner, Watch a register, Search safety events, Read register changes. Ask which one task, then follow that section."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: economic-question
+name: "Economic question"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Economic question."
 ---
 

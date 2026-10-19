@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-1-1
+name: "AI/ML Device Regulatory Pathway Navigation & Submission Execution"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.1.1 AI/ML Device Regulatory Pathway Navigation & Submission Execution. Use when the user asks for AI/ML Pathway Selection, Predetermined Change Control Plan Authoring, AI/ML Submission Assembly. Ask which one task, then follow that section."
 ---
 

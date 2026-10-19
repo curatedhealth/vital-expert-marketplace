@@ -1,5 +1,5 @@
 ---
-name: link-a-trial
+name: "Link a trial"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Link a trial."
 ---
 

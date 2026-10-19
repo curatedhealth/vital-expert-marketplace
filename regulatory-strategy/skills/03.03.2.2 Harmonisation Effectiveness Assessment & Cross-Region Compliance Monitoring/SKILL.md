@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-2-2
+name: "Harmonisation Effectiveness Assessment & Cross-Region Compliance Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.2.2 Harmonisation Effectiveness Assessment & Cross-Region Compliance Monitoring. Use when the user asks for Cross-Region Compliance Monitoring, cross-region compliance pass rule, cross-region compliance miss owner. Ask which one task, then follow that section."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: digital-signal-detection-monitoring
+name: "Digital Signal Detection Monitoring"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Evidence Quality Assessment & Signal Detection Effectiveness Monitoring is chosen, to do Digital Signal Detection Monitoring."
 ---
 

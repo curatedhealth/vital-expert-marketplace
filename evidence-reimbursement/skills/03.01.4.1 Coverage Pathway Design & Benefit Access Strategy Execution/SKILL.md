@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-4-1
+name: "Coverage Pathway Design & Benefit Access Strategy Execution"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.4.1 Coverage Pathway Design & Benefit Access Strategy Execution. Use when the user asks for Coverage Pathway Mapping, Access Strategy Design, Benefit Design, Read the market matrix, Read status history. Ask which one task, then follow that section."
 ---
 

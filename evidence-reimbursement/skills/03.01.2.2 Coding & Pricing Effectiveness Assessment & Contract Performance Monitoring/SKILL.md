@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-2-2
+name: "Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.2.2 Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring. Use when the user asks for Contract Performance Monitoring, coding and pricing pass rule, coding and pricing miss owner. Ask which one task, then follow that section."
 ---
 

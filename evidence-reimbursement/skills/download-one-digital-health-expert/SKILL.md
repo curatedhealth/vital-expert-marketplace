@@ -1,5 +1,5 @@
 ---
-name: download-one-digital-health-expert
+name: "Download one digital health expert"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Download a digital health expert is chosen and one expert slug is known, to download that expert. Call agent-pack.download_agent once."
 ---
 

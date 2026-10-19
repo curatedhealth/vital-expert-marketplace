@@ -1,5 +1,5 @@
 ---
-name: grade-evidence
+name: "Grade evidence"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Grade evidence."
 ---
 

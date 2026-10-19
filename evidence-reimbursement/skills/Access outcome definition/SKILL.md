@@ -1,5 +1,5 @@
 ---
-name: access-outcome-definition
+name: "Access outcome definition"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Market Access Effectiveness Assessment & Reimbursement Outcome Monitoring is chosen, to do Access outcome definition."
 ---
 

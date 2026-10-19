@@ -1,5 +1,5 @@
 ---
-name: evidence-communication
+name: "Evidence Communication"
 description: "Only while the Digital Health Library connector is connected. Choose a job inside Evidence Communication in Clinical Validation & Evidence. Use when the user names this heading and has not named a job."
 ---
 

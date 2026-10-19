@@ -1,5 +1,5 @@
 ---
-name: trial-operations-pass-rule
+name: "trial operations pass rule"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Trial Operations Effectiveness Assessment & Execution Quality Monitoring is chosen, to do trial operations pass rule."
 ---
 

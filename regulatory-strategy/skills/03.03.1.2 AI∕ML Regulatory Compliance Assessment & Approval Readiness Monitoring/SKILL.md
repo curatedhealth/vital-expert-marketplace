@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-1-2
+name: "AI/ML Regulatory Compliance Assessment & Approval Readiness Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.1.2 AI/ML Regulatory Compliance Assessment & Approval Readiness Monitoring. Use when the user asks for AI/ML Approval Readiness Monitoring, AI/ML regulatory readiness pass rule, AI/ML regulatory readiness miss owner. Ask which one task, then follow that section."
 ---
 

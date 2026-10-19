@@ -1,5 +1,5 @@
 ---
-name: evidence-communication-and-message-impact
+name: "Evidence Communication Effectiveness Assessment & Message Impact Monitoring"
 description: "Only while the Digital Health Library connector is connected. Start the job Evidence Communication Effectiveness Assessment & Message Impact Monitoring in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

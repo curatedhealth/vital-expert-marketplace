@@ -1,5 +1,5 @@
 ---
-name: remote-data-capture-operations
+name: "Remote Data Capture Operations"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Remote Data Capture Operations."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: payer-value-narrative
+name: "Payer Value Narrative"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence Translation & Stakeholder Communication Delivery is chosen, to do Payer Value Narrative."
 ---
 

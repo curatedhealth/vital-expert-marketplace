@@ -1,5 +1,5 @@
 ---
-name: access-pathway
+name: "Access pathway"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Reimbursement Decision Support & Market Access Execution is chosen, to do Access pathway."
 ---
 

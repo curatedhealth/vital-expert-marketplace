@@ -1,5 +1,5 @@
 ---
-name: find-digital-health-experts
+name: "Find digital health experts"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Download a digital health expert is chosen, to find experts. Call agent-pack.list_experts with a department or a query. This call is free."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: outcomes-evidence-quality-assessment-and-study-rigour-monitoring
+name: "Outcomes Evidence Quality Assessment & Study Rigour Monitoring"
 description: "Only while the Digital Health Library connector is connected. Start the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

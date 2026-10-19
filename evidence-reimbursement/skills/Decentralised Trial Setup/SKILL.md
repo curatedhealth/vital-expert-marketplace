@@ -1,5 +1,5 @@
 ---
-name: decentralised-trial-setup
+name: "Decentralised Trial Setup"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Decentralised Trial Setup."
 ---
 

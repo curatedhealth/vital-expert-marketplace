@@ -1,5 +1,5 @@
 ---
-name: clinical-operations
+name: "Clinical Operations"
 description: "Only while the Digital Health Library connector is connected. Choose a job inside Clinical Operations in Clinical Validation & Evidence. Use when the user names this heading and has not named a job."
 ---
 

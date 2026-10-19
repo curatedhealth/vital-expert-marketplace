@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-4-2
+name: "Submission Quality Assessment & Approval Outcome Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.4.2 Submission Quality Assessment & Approval Outcome Monitoring. Use when the user asks for Submission Approval Outcome Monitoring, submission quality pass rule, submission quality miss owner. Ask which one task, then follow that section."
 ---
 

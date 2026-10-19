@@ -1,5 +1,5 @@
 ---
-name: clinical-validation-and-evidence
+name: "Clinical Validation & Evidence"
 description: "Only while the Digital Health Library connector is connected. List the jobs in Clinical Validation & Evidence. Use when the user asks what this pack can do, or mentions a study protocol, evidence communication, a trial operation, or an evidence table, and has not named one job."
 ---
 

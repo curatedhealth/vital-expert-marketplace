@@ -1,5 +1,5 @@
 ---
-name: evidence-and-reimbursement
+name: "Evidence and Reimbursement"
 description: "Only while the Digital Health Library connector is connected. List the Evidence and Reimbursement pack. Use when the user asks what this pack can do, or mentions evidence, reimbursement, a payer, a model, or a digital health expert, and has not chosen a core or the expert download."
 ---
 
@@ -16,7 +16,7 @@ Skill `clinical-validation-and-evidence`. Studies, evidence communication, trial
 Skill `health-economics-and-value-demonstration`. Access support, economic models, the budget impact model, the launch price anchor, outcomes research, and value communication.
 
 ## Market Access & Reimbursement
-Skill `dh-03-01`. Value-based contracts, coding and pricing, payer and HTA engagement, and coverage.
+Skill `Market Access & Reimbursement`. Value-based contracts, coding and pricing, payer and HTA engagement, and coverage.
 
 ## Experts
 - Download a digital health expert. Skill `download-a-digital-health-expert`.

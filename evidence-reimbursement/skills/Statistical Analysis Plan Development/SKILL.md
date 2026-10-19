@@ -1,5 +1,5 @@
 ---
-name: statistical-analysis-plan-development
+name: "Statistical Analysis Plan Development"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Statistical Analysis Plan Development."
 ---
 

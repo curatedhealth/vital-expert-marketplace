@@ -1,5 +1,5 @@
 ---
-name: value-audience
+name: "Value audience"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence-to-Stakeholder Translation & Value Narrative Development is chosen, to do Value audience."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: evidence-communication-pass-rule
+name: "evidence communication pass rule"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence Communication Effectiveness Assessment & Message Impact Monitoring is chosen, to do evidence communication pass rule."
 ---
 

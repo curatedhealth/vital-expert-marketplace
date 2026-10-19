@@ -1,5 +1,5 @@
 ---
-name: outcomes-question
+name: "Outcomes question"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Real-World Outcomes Evidence Generation & Study Execution is chosen, to do Outcomes question."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: model-score
+name: "Model score"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Economic Model Validity Assessment & Cost-Effectiveness Monitoring is chosen, to do Model score."
 ---
 

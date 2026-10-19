@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-3-1
+name: "Global Regulatory Pathway Strategy & Classification Management"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.3.1 Global Regulatory Pathway Strategy & Classification Management. Use when the user asks for SaMD Risk Classification, Regulatory Pathway Selection, Intended-Use Definition, Classify a product, Read pathway precedents, Find predicates, Search devices, Open an authorization, Compare authorizations, Read market status. Ask which one task, then follow that section."
 ---
 

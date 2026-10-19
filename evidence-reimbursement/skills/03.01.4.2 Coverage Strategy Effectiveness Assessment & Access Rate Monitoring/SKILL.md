@@ -1,5 +1,5 @@
 ---
-name: dh-03-01-4-2
+name: "Coverage Strategy Effectiveness Assessment & Access Rate Monitoring"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.01.4.2 Coverage Strategy Effectiveness Assessment & Access Rate Monitoring. Use when the user asks for Access Rate Monitoring, coverage strategy pass rule, coverage strategy miss owner, Find scheme precedents, Watch a scheme. Ask which one task, then follow that section."
 ---
 

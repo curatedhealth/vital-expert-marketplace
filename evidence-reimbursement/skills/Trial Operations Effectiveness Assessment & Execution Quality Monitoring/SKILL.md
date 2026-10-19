@@ -1,5 +1,5 @@
 ---
-name: trial-operations-and-execution-quality
+name: "Trial Operations Effectiveness Assessment & Execution Quality Monitoring"
 description: "Only while the Digital Health Library connector is connected. Start the job Trial Operations Effectiveness Assessment & Execution Quality Monitoring in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

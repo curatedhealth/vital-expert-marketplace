@@ -1,5 +1,5 @@
 ---
-name: dh-03-03
+name: "Regulatory Strategy & Submissions"
 description: "Only while the Digital Health Library connector is connected. List DH-03.03 Regulatory Strategy & Submissions. Use when the user asks about a classification, a pathway, a predicate, an authorization, a submission, a recall, or a digital health expert, and has not chosen a heading or the expert download."
 ---
 
@@ -10,16 +10,16 @@ If the Digital Health Library connector is not connected, stop. Do not use this 
 One core on the Digital Health Library. Show this list when the buyer has not chosen a heading.
 
 ## 03.03.1 AI/ML Regulatory
-Skill `dh-03-03-1`. AI and machine-learning pathways, change-control plans, and approval readiness.
+Skill `AI/ML Regulatory`. AI and machine-learning pathways, change-control plans, and approval readiness.
 
 ## 03.03.2 Global Harmonization
-Skill `dh-03-03-2`. Cross-jurisdiction mapping, harmonised evidence, and which registers are loaded.
+Skill `Global Harmonization`. Cross-jurisdiction mapping, harmonised evidence, and which registers are loaded.
 
 ## 03.03.3 Regulatory Strategy
-Skill `dh-03-03-3`. Classification, device search, authorizations, predicates, and register watch.
+Skill `Regulatory Strategy`. Classification, device search, authorizations, predicates, and register watch.
 
 ## 03.03.4 Submission Excellence
-Skill `dh-03-03-4`. Dossier assembly, stored guidance, a pathway report, and approval monitoring.
+Skill `Submission Excellence`. Dossier assembly, stored guidance, a pathway report, and approval monitoring.
 
 ## Experts
 - Download a digital health expert. Skill `download-a-digital-health-expert`.

@@ -1,5 +1,5 @@
 ---
-name: outcome-result
+name: "Outcome result"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Real-World Outcomes Evidence Generation & Study Execution is chosen, to do Outcome result."
 ---
 

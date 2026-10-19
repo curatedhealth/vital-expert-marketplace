@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-4-1
+name: "Regulatory Submission Preparation & Dossier Assembly Execution"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.4.1 Regulatory Submission Preparation & Dossier Assembly Execution. Use when the user asks for Clinical Evaluation Report Assembly, Submission Dossier Compilation, Agency Interaction Management, Retrieve guidance, Generate a pathway report. Ask which one task, then follow that section."
 ---
 

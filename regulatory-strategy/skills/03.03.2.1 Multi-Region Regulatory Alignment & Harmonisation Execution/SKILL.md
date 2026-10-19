@@ -1,5 +1,5 @@
 ---
-name: dh-03-03-2-1
+name: "Multi-Region Regulatory Alignment & Harmonisation Execution"
 description: "Only while the Digital Health Library connector is connected. Run one task in 03.03.2.1 Multi-Region Regulatory Alignment & Harmonisation Execution. Use when the user asks for Cross-Jurisdiction Requirement Mapping, Harmonised Evidence Planning, Regional Submission Adaptation, List jurisdictions. Ask which one task, then follow that section."
 ---
 

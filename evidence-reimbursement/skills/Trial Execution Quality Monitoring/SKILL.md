@@ -1,5 +1,5 @@
 ---
-name: trial-execution-quality-monitoring
+name: "Trial Execution Quality Monitoring"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Trial Operations Effectiveness Assessment & Execution Quality Monitoring is chosen, to do Trial Execution Quality Monitoring."
 ---
 

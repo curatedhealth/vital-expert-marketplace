@@ -1,5 +1,5 @@
 ---
-name: endpoint-and-coa-selection
+name: "Endpoint & COA Selection"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Endpoint & COA Selection."
 ---
 

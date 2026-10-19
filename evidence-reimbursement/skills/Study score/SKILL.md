@@ -1,5 +1,5 @@
 ---
-name: study-score
+name: "Study score"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Study score."
 ---
 

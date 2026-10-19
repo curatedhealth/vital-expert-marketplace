@@ -1,5 +1,5 @@
 ---
-name: download-a-digital-health-expert
+name: "Download a digital health expert"
 description: "Only while the Digital Health Library connector is connected. Start the job Download a digital health expert. Use when the user wants an expert file, a system prompt, or a digital health agent pack for their own assistant."
 ---
 

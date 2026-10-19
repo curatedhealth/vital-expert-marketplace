@@ -1,5 +1,5 @@
 ---
-name: access-dossier-item
+name: "Access dossier item"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Reimbursement Decision Support & Market Access Execution is chosen, to do Access dossier item."
 ---
 

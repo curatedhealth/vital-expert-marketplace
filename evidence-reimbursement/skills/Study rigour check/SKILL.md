@@ -1,5 +1,5 @@
 ---
-name: study-rigour-check
+name: "Study rigour check"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Study rigour check."
 ---
 

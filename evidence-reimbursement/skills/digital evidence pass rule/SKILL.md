@@ -1,5 +1,5 @@
 ---
-name: digital-evidence-pass-rule
+name: "digital evidence pass rule"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Evidence Quality Assessment & Signal Detection Effectiveness Monitoring is chosen, to do digital evidence pass rule."
 ---
 

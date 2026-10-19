@@ -1,5 +1,5 @@
 ---
-name: regulatory-evidence-dossier-authoring
+name: "Regulatory Evidence Dossier Authoring"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence Translation & Stakeholder Communication Delivery is chosen, to do Regulatory Evidence Dossier Authoring."
 ---
 

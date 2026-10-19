@@ -1,5 +1,5 @@
 ---
-name: digital-endpoint-instrumentation
+name: "Digital Endpoint Instrumentation"
 description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Digital Endpoint Instrumentation."
 ---
 

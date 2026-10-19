@@ -1,5 +1,5 @@
 ---
-name: clinical-study-protocol-design-and-endpoint-selection
+name: "Clinical Study Protocol Design & Endpoint Selection"
 description: "Only while the Digital Health Library connector is connected. Start the job Clinical Study Protocol Design & Endpoint Selection in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
 

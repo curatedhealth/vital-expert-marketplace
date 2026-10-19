@@ -1,5 +1,5 @@
 ---
-name: outcomes-research
+name: "Outcomes Research"
 description: "Only while the Digital Health Library connector is connected. Choose a job inside Outcomes Research in Health Economics & Value Demonstration. Use when the user names this heading and has not named a job."
 ---
 

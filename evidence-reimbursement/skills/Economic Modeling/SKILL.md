@@ -1,5 +1,5 @@
 ---
-name: economic-modeling
+name: "Economic Modeling"
 description: "Only while the Digital Health Library connector is connected. Choose a job inside Economic Modeling in Health Economics & Value Demonstration. Use when the user names this heading and has not named a job."
 ---
 
