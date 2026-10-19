@@ -2,7 +2,10 @@
   "mcpServers": {
     "vital-digital-health-library": {
       "type": "http",
-      "url": "https://mcp.vital.expert/api/mcp/library"
+      "url": "https://mcp.vital.expert/api/mcp/library",
+      "headers": {
+        "Authorization": "Bearer ${user_config.library_key}"
+      }
     }
   }
 }
