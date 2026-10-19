@@ -16,9 +16,9 @@ Skill `clinical-validation-and-evidence`. Studies, evidence communication, trial
 Skill `health-economics-and-value-demonstration`. Access support, economic models, the budget impact model, the launch price anchor, outcomes research, and value communication.
 
 ## Market Access & Reimbursement
-Skill `market-access-and-reimbursement`. Value-based contracts, coding and pricing, payer and HTA engagement, and coverage.
+Skill `dh-03-01`. Value-based contracts, coding and pricing, payer and HTA engagement, and coverage.
 
 ## Experts
 - Download a digital health expert. Skill `download-a-digital-health-expert`.
 
-Choosing a core loads that core's jobs. Choosing the expert job finds one expert and downloads that file. A task calls a library tool only when the task names one.
+Choosing Clinical Validation or Health Economics loads that core's jobs, then one task skill. Choosing Market Access loads a heading, then one job. That job runs one task section. Choosing the expert job finds one expert and downloads that file. A task calls a library tool only when that task names one.

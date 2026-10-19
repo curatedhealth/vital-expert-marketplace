@@ -20,7 +20,7 @@ Ask for the pack. It opens on three cores:
 - Health Economics & Value Demonstration
 - Market Access & Reimbursement
 
-Choose one core, then one job. The job loads one task. A task calls the library only when that task names a tool. A missing fact stays a gap.
+Choose one core, then one job. Clinical Validation and Health Economics load one task skill. Market Access jobs are named `03.01`, and each job file holds its tasks as sections. A task calls the library only when that task names a tool. A missing fact stays a gap.
 
 Finding an expert is free. Downloading one expert is one counted call on the same key.
 

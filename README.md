@@ -27,7 +27,7 @@ The skills run only while the Digital Health Library connector is connected. Tur
 
 Same marketplace. Same `vlib_` key. Same connector. Install **Regulatory Strategy and Submissions** beside Evidence and Reimbursement.
 
-It opens on four headings: AI/ML Regulatory, Global Harmonization, Regulatory Strategy, and Submission Excellence. Choose one heading, then one job. The job loads one task.
+It opens on four headings numbered 03.03.1 through 03.03.4. Choose one heading, then one job. Each job file holds its tasks as sections.
 
 The library tools in this pack search devices, open one authorization, compare authorizations, read market status, classify a product, read pathway precedents, find United States predicates, watch a register, read what that watch recorded, search safety events, list the loaded registers, retrieve stored guidance, and generate a pathway report. get_deltas is the same call as reading register changes.
 The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together.

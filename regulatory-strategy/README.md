@@ -21,7 +21,7 @@ Ask for the pack. It opens on four headings:
 - Regulatory Strategy
 - Submission Excellence
 
-Choose one heading, then one job. The job loads one task. A task calls the library only when that task names a tool. A missing fact stays a gap.
+Choose one heading, then one job. The jobs are named `03.03`. Each job file holds its tasks as sections. A task calls the library only when that section names a tool. A missing fact stays a gap.
 
 The library tools in this pack search devices, open one authorization, compare authorizations, read market status, classify a product, read pathway precedents, find United States predicates, watch a register, read what that watch recorded, search safety events, list the loaded registers, retrieve stored guidance, and generate a pathway report. `get_deltas` is the same call as reading register changes.
 
