@@ -1,19 +1,114 @@
 {
   "name": "vital-expert-plugins",
-  "description": "VITAL plugins for Cowork",
+  "description": "VITAL Digital Health plugins for Cowork. One pack per core.",
   "owner": {
     "name": "VITAL"
   },
   "plugins": [
     {
-      "name": "DH-evidence-reimbursement",
-      "source": "./evidence-reimbursement",
-      "description": "DH Evidence and Reimbursement for digital health. Jobs, tasks, and one expert download on the Digital Health Library."
+      "name": "DH-advanced-analytics",
+      "source": "./DH-advanced-analytics",
+      "description": "DH Advanced Analytics & Data Science for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-analytics-product",
+      "source": "./DH-analytics-product",
+      "description": "DH Analytics Product Management & Enablement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-clinical-product-development",
+      "source": "./DH-clinical-product-development",
+      "description": "DH Clinical Product Development for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-clinical-validation",
+      "source": "./DH-clinical-validation",
+      "description": "DH Clinical Validation & Evidence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-commercial",
+      "source": "./DH-commercial",
+      "description": "DH Commercial & GTM Strategy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-cross-functional-leadership",
+      "source": "./DH-cross-functional-leadership",
+      "description": "DH Cross-Functional Leadership for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-customer-success",
+      "source": "./DH-customer-success",
+      "description": "DH Customer Success & Implementation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-cybersecurity",
+      "source": "./DH-cybersecurity",
+      "description": "DH Cybersecurity & Privacy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-data-science",
+      "source": "./DH-data-science",
+      "description": "DH Data Science & AI/ML for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-decision-support",
+      "source": "./DH-decision-support",
+      "description": "DH Decision Support & Business Intelligence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-digital-health-strategy",
+      "source": "./DH-digital-health-strategy",
+      "description": "DH Digital Health Strategy & Vision for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-digital-therapeutic-design",
+      "source": "./DH-digital-therapeutic-design",
+      "description": "DH Digital Therapeutic Design for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-health-economics",
+      "source": "./DH-health-economics",
+      "description": "DH Health Economics & Value Demonstration for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-innovation",
+      "source": "./DH-innovation",
+      "description": "DH Innovation & Emerging Technologies for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-interoperability",
+      "source": "./DH-interoperability",
+      "description": "DH Clinical Integration & Interoperability for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-market-access",
+      "source": "./DH-market-access",
+      "description": "DH Market Access and Reimbursement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library. This pack is only DH-03.01."
+    },
+    {
+      "name": "DH-patient-engagement",
+      "source": "./DH-patient-engagement",
+      "description": "DH Patient Engagement & Advocacy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-quality",
+      "source": "./DH-quality",
+      "description": "DH Quality Management & Compliance for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "DH-regulatory-strategy",
       "source": "./regulatory-strategy",
-      "description": "DH Regulatory Strategy and Submissions for digital health. Jobs, tasks, and one expert download on the Digital Health Library."
+      "description": "DH Regulatory Strategy and Submissions for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-software-engineering",
+      "source": "./DH-software-engineering",
+      "description": "DH Software Engineering Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "DH-user-experience",
+      "source": "./DH-user-experience",
+      "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     }
   ]
 }

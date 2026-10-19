@@ -1,6 +1,6 @@
 # DH Regulatory Strategy and Submissions
 
-Install this plugin from the VITAL marketplace, then paste the Digital Health Library key Cowork asks for. The key is not in this repository. It is the same key as DH Evidence and Reimbursement.
+Install **DH Regulatory Strategy and Submissions** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
 
 ## Install
 

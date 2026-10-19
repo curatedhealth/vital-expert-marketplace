@@ -1,0 +1,18 @@
+{
+  "name": "DH-innovation",
+  "version": "0.1.0",
+  "description": "DH Innovation & Emerging Technologies for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
+  "author": {
+    "name": "VITAL"
+  },
+  "license": "UNLICENSED",
+  "userConfig": {
+    "library_key": {
+      "type": "string",
+      "title": "Digital Health Library key",
+      "description": "The vlib_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}
