@@ -1,7 +1,9 @@
 ---
 name: contract-negotiation
-description: "Use only after the job Coding Strategy Development & Payer/Provider Contracting is chosen, to do Contract Negotiation."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Coding Strategy Development & Payer/Provider Contracting is chosen, to do Contract Negotiation."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Contract Negotiation
 

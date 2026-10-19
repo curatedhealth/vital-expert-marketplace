@@ -1,7 +1,9 @@
 ---
 name: model-result
-description: "Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Model result."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Model result."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Model result
 

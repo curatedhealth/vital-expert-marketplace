@@ -1,7 +1,9 @@
 ---
 name: evidence-and-reimbursement
-description: "List the Evidence and Reimbursement pack. Use when the user asks what this pack can do, or mentions evidence, reimbursement, a payer, a model, or a digital health expert, and has not chosen a core or the expert download."
+description: "Only while the Digital Health Library connector is connected. List the Evidence and Reimbursement pack. Use when the user asks what this pack can do, or mentions evidence, reimbursement, a payer, a model, or a digital health expert, and has not chosen a core or the expert download."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Evidence and Reimbursement
 

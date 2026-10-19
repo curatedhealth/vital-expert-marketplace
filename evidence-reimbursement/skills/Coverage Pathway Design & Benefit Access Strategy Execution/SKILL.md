@@ -1,7 +1,9 @@
 ---
 name: coverage-pathway-design-and-benefit-access-strategy-execution
-description: "Start the job Coverage Pathway Design & Benefit Access Strategy Execution in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Coverage Pathway Design & Benefit Access Strategy Execution in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Coverage Pathway Design & Benefit Access Strategy Execution
 

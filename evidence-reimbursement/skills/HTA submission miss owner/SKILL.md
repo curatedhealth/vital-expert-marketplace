@@ -1,7 +1,9 @@
 ---
 name: hta-submission-miss-owner
-description: "Use only after the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring is chosen, to do HTA submission miss owner."
+description: "Only while the Digital Health Library connector is connected. Use only after the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring is chosen, to do HTA submission miss owner."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # HTA submission miss owner
 

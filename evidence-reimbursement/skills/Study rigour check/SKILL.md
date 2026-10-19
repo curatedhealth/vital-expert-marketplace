@@ -1,7 +1,9 @@
 ---
 name: study-rigour-check
-description: "Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Study rigour check."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Study rigour check."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Study rigour check
 

@@ -1,7 +1,9 @@
 ---
 name: digital-evidence-generation
-description: "Choose a job inside Digital Evidence Generation in Clinical Validation & Evidence. Use when the user names this heading and has not named a job."
+description: "Only while the Digital Health Library connector is connected. Choose a job inside Digital Evidence Generation in Clinical Validation & Evidence. Use when the user names this heading and has not named a job."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Digital Evidence Generation
 

@@ -1,7 +1,9 @@
 ---
 name: protocol-robustness-miss-owner
-description: "Use only after the job Study Design Quality Assessment & Protocol Robustness Monitoring is chosen, to do protocol robustness miss owner."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Study Design Quality Assessment & Protocol Robustness Monitoring is chosen, to do protocol robustness miss owner."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # protocol robustness miss owner
 

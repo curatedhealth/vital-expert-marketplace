@@ -1,7 +1,9 @@
 ---
 name: market-access-and-reimbursement
-description: "List the jobs in Market Access & Reimbursement. Use when the user asks what this pack can do, or mentions reimbursement, coverage, coding, pricing, HTA, a payer dossier, or a value-based contract, and has not named one job."
+description: "Only while the Digital Health Library connector is connected. List the jobs in Market Access & Reimbursement. Use when the user asks what this pack can do, or mentions reimbursement, coverage, coding, pricing, HTA, a payer dossier, or a value-based contract, and has not named one job."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Market Access & Reimbursement
 

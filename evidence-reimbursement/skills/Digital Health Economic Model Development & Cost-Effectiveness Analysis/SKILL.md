@@ -1,7 +1,9 @@
 ---
 name: economic-model-and-cost-effectiveness
-description: "Start the job Digital Health Economic Model Development & Cost-Effectiveness Analysis in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Digital Health Economic Model Development & Cost-Effectiveness Analysis in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Digital Health Economic Model Development & Cost-Effectiveness Analysis
 

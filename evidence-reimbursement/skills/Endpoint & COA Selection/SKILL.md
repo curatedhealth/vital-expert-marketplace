@@ -1,7 +1,9 @@
 ---
 name: endpoint-and-coa-selection
-description: "Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Endpoint & COA Selection."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Endpoint & COA Selection."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Endpoint & COA Selection
 

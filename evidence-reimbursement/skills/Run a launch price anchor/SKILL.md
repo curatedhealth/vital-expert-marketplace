@@ -1,7 +1,9 @@
 ---
 name: run-a-launch-price-anchor
-description: "Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Run a launch price anchor."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Run a launch price anchor."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Run a launch price anchor
 

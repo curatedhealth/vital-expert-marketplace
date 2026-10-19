@@ -1,7 +1,9 @@
 ---
 name: statistical-analysis-plan-development
-description: "Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Statistical Analysis Plan Development."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Statistical Analysis Plan Development."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Statistical Analysis Plan Development
 

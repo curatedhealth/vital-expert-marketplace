@@ -1,7 +1,9 @@
 ---
 name: check-a-retraction
-description: "Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Check a retraction."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Check a retraction."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Check a retraction
 

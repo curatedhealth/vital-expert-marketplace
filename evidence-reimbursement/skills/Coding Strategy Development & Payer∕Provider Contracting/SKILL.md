@@ -1,7 +1,9 @@
 ---
 name: coding-strategy-development-and-payer-provider-contracting
-description: "Start the job Coding Strategy Development & Payer/Provider Contracting in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Coding Strategy Development & Payer/Provider Contracting in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Coding Strategy Development & Payer/Provider Contracting
 

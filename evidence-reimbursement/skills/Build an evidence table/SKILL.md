@@ -1,7 +1,9 @@
 ---
 name: build-an-evidence-table
-description: "Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Build an evidence table."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Build an evidence table."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Build an evidence table
 

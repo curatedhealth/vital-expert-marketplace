@@ -1,7 +1,9 @@
 ---
 name: reception-measure
-description: "Use only after the job Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring is chosen, to do Reception measure."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring is chosen, to do Reception measure."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Reception measure
 

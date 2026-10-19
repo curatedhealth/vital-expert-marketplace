@@ -1,7 +1,9 @@
 ---
 name: value-communication-and-stakeholder-reception
-description: "Start the job Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring in Health Economics & Value Demonstration. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Value Communication Effectiveness Assessment & Stakeholder Reception Monitoring
 

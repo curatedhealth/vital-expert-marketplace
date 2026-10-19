@@ -1,7 +1,9 @@
 ---
 name: digital-endpoint-instrumentation
-description: "Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Digital Endpoint Instrumentation."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Digital Endpoint Instrumentation."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Digital Endpoint Instrumentation
 

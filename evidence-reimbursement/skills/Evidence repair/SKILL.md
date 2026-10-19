@@ -1,7 +1,9 @@
 ---
 name: evidence-repair
-description: "Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Evidence repair."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes Evidence Quality Assessment & Study Rigour Monitoring is chosen, to do Evidence repair."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Evidence repair
 

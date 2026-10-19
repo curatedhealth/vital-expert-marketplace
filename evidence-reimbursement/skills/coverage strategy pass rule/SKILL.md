@@ -1,7 +1,9 @@
 ---
 name: coverage-strategy-pass-rule
-description: "Use only after the job Coverage Strategy Effectiveness Assessment & Access Rate Monitoring is chosen, to do coverage strategy pass rule."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Coverage Strategy Effectiveness Assessment & Access Rate Monitoring is chosen, to do coverage strategy pass rule."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # coverage strategy pass rule
 

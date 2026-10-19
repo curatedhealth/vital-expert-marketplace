@@ -1,7 +1,9 @@
 ---
 name: coverage-strategy-and-access-monitoring
-description: "Start the job Coverage Strategy Effectiveness Assessment & Access Rate Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Coverage Strategy Effectiveness Assessment & Access Rate Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Coverage Strategy Effectiveness Assessment & Access Rate Monitoring
 

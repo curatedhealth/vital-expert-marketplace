@@ -1,7 +1,9 @@
 ---
 name: payer-engagement-effectiveness-monitoring
-description: "Use only after the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring is chosen, to do Payer Engagement Effectiveness Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring is chosen, to do Payer Engagement Effectiveness Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Payer Engagement Effectiveness Monitoring
 

@@ -1,7 +1,9 @@
 ---
 name: trial-execution-quality-monitoring
-description: "Use only after the job Trial Operations Effectiveness Assessment & Execution Quality Monitoring is chosen, to do Trial Execution Quality Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Trial Operations Effectiveness Assessment & Execution Quality Monitoring is chosen, to do Trial Execution Quality Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Trial Execution Quality Monitoring
 

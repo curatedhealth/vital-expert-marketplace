@@ -1,7 +1,9 @@
 ---
 name: find-digital-health-experts
-description: "Use only after the job Download a digital health expert is chosen, to find experts. Call agent-pack.list_experts with a department or a query. This call is free."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Download a digital health expert is chosen, to find experts. Call agent-pack.list_experts with a department or a query. This call is free."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Find digital health experts
 

@@ -1,7 +1,9 @@
 ---
 name: value-audience
-description: "Use only after the job Evidence-to-Stakeholder Translation & Value Narrative Development is chosen, to do Value audience."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence-to-Stakeholder Translation & Value Narrative Development is chosen, to do Value audience."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Value audience
 

@@ -21,3 +21,4 @@ Finding an expert is free. Downloading one expert spends one call on the same ke
 ## What is not in this repository
 
 The key is not in this repository. A person without a key can install the plugin and cannot retrieve library data.
+The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together. If the connector is not connected, the pack does not answer.

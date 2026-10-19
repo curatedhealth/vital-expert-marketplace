@@ -1,7 +1,9 @@
 ---
 name: download-one-digital-health-expert
-description: "Use only after the job Download a digital health expert is chosen and one expert slug is known, to download that expert. Call agent-pack.download_agent once."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Download a digital health expert is chosen and one expert slug is known, to download that expert. Call agent-pack.download_agent once."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Download one digital health expert
 

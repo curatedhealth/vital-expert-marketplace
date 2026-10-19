@@ -1,7 +1,9 @@
 ---
 name: coding-and-pricing-pass-rule
-description: "Use only after the job Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring is chosen, to do coding and pricing pass rule."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring is chosen, to do coding and pricing pass rule."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # coding and pricing pass rule
 

@@ -1,7 +1,9 @@
 ---
 name: narrative-use
-description: "Use only after the job Evidence-to-Stakeholder Translation & Value Narrative Development is chosen, to do Narrative use."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence-to-Stakeholder Translation & Value Narrative Development is chosen, to do Narrative use."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Narrative use
 

@@ -1,7 +1,9 @@
 ---
 name: model-inputs
-description: "Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Model inputs."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Health Economic Model Development & Cost-Effectiveness Analysis is chosen, to do Model inputs."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Model inputs
 

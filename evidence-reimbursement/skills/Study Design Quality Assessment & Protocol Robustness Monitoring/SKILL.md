@@ -1,7 +1,9 @@
 ---
 name: study-design-quality-and-protocol-monitoring
-description: "Start the job Study Design Quality Assessment & Protocol Robustness Monitoring in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Study Design Quality Assessment & Protocol Robustness Monitoring in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Study Design Quality Assessment & Protocol Robustness Monitoring
 

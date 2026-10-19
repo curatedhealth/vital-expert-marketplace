@@ -1,7 +1,9 @@
 ---
 name: outcomes-achievement-monitoring
-description: "Use only after the job VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring is chosen, to do Outcomes Achievement Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring is chosen, to do Outcomes Achievement Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Outcomes Achievement Monitoring
 

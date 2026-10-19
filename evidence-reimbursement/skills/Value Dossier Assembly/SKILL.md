@@ -1,7 +1,9 @@
 ---
 name: value-dossier-assembly
-description: "Use only after the job Payer Engagement & HTA Submission Execution is chosen, to do Value Dossier Assembly."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Payer Engagement & HTA Submission Execution is chosen, to do Value Dossier Assembly."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Value Dossier Assembly
 

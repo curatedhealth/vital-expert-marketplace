@@ -1,7 +1,9 @@
 ---
 name: download-a-digital-health-expert
-description: "Start the job Download a digital health expert. Use when the user wants an expert file, a system prompt, or a digital health agent pack for their own assistant."
+description: "Only while the Digital Health Library connector is connected. Start the job Download a digital health expert. Use when the user wants an expert file, a system prompt, or a digital health agent pack for their own assistant."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Download a digital health expert
 

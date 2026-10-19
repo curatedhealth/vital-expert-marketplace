@@ -1,7 +1,9 @@
 ---
 name: message-impact-monitoring
-description: "Use only after the job Evidence Communication Effectiveness Assessment & Message Impact Monitoring is chosen, to do Message Impact Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence Communication Effectiveness Assessment & Message Impact Monitoring is chosen, to do Message Impact Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Message Impact Monitoring
 

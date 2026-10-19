@@ -1,7 +1,9 @@
 ---
 name: outcomes-metric-definition
-description: "Use only after the job Outcomes-Based Contracting & Value-Based Care Integration is chosen, to do Outcomes Metric Definition."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes-Based Contracting & Value-Based Care Integration is chosen, to do Outcomes Metric Definition."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Outcomes Metric Definition
 

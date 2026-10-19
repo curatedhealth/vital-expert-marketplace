@@ -1,7 +1,9 @@
 ---
 name: decentralised-trial-execution-and-clinical-operations-management
-description: "Start the job Decentralised Trial Execution & Clinical Operations Management in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Decentralised Trial Execution & Clinical Operations Management in Clinical Validation & Evidence. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Decentralised Trial Execution & Clinical Operations Management
 

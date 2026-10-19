@@ -1,7 +1,9 @@
 ---
 name: value-based-contract-miss-owner
-description: "Use only after the job VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring is chosen, to do value-based contract miss owner."
+description: "Only while the Digital Health Library connector is connected. Use only after the job VBC Contract Effectiveness Assessment & Outcomes Achievement Monitoring is chosen, to do value-based contract miss owner."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # value-based contract miss owner
 

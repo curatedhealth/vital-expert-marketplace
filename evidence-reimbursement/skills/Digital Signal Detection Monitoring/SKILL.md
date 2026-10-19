@@ -1,7 +1,9 @@
 ---
 name: digital-signal-detection-monitoring
-description: "Use only after the job Digital Evidence Quality Assessment & Signal Detection Effectiveness Monitoring is chosen, to do Digital Signal Detection Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Evidence Quality Assessment & Signal Detection Effectiveness Monitoring is chosen, to do Digital Signal Detection Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Digital Signal Detection Monitoring
 

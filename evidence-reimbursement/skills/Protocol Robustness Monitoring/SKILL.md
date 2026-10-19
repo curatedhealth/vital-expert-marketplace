@@ -1,7 +1,9 @@
 ---
 name: protocol-robustness-monitoring
-description: "Use only after the job Study Design Quality Assessment & Protocol Robustness Monitoring is chosen, to do Protocol Robustness Monitoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Study Design Quality Assessment & Protocol Robustness Monitoring is chosen, to do Protocol Robustness Monitoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Protocol Robustness Monitoring
 

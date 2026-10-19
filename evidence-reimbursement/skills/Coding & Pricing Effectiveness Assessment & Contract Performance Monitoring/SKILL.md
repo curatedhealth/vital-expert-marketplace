@@ -1,7 +1,9 @@
 ---
 name: coding-and-pricing-effectiveness
-description: "Start the job Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Coding & Pricing Effectiveness Assessment & Contract Performance Monitoring
 

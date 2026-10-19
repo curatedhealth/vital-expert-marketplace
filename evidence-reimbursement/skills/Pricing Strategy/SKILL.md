@@ -1,7 +1,9 @@
 ---
 name: pricing-strategy
-description: "Use only after the job Coding Strategy Development & Payer/Provider Contracting is chosen, to do Pricing Strategy."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Coding Strategy Development & Payer/Provider Contracting is chosen, to do Pricing Strategy."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Pricing Strategy
 

@@ -1,7 +1,9 @@
 ---
 name: coverage-pathway-mapping
-description: "Use only after the job Coverage Pathway Design & Benefit Access Strategy Execution is chosen, to do Coverage Pathway Mapping."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Coverage Pathway Design & Benefit Access Strategy Execution is chosen, to do Coverage Pathway Mapping."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Coverage Pathway Mapping
 

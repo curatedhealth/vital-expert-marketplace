@@ -1,7 +1,9 @@
 ---
 name: trial-data-integrity-management
-description: "Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Trial Data Integrity Management."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Trial Data Integrity Management."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Trial Data Integrity Management
 

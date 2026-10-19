@@ -1,7 +1,9 @@
 ---
 name: hta-submission-preparation
-description: "Use only after the job Payer Engagement & HTA Submission Execution is chosen, to do HTA Submission Preparation."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Payer Engagement & HTA Submission Execution is chosen, to do HTA Submission Preparation."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # HTA Submission Preparation
 

@@ -1,7 +1,9 @@
 ---
 name: remote-data-capture-operations
-description: "Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Remote Data Capture Operations."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Decentralised Trial Execution & Clinical Operations Management is chosen, to do Remote Data Capture Operations."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Remote Data Capture Operations
 

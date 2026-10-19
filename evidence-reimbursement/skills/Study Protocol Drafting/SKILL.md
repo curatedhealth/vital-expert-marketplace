@@ -1,7 +1,9 @@
 ---
 name: study-protocol-drafting
-description: "Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Study Protocol Drafting."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Clinical Study Protocol Design & Endpoint Selection is chosen, to do Study Protocol Drafting."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Study Protocol Drafting
 

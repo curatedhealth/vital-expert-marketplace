@@ -1,7 +1,9 @@
 ---
 name: submission-readiness
-description: "Use only after the job Reimbursement Decision Support & Market Access Execution is chosen, to do Submission readiness."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Reimbursement Decision Support & Market Access Execution is chosen, to do Submission readiness."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Submission readiness
 

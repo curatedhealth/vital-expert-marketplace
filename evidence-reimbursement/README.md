@@ -27,3 +27,4 @@ Finding an expert is free. Downloading one expert is one counted call on the sam
 ## The key
 
 The key is the purchase. It carries a monthly call cap. Menu calls such as listing jobs are not counted. A successful tool call spends one unit. Verify can spend several units on one task. When the cap is reached, or the purchase ends, the tools stop. The installed plugin remains.
+The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together.

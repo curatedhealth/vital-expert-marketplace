@@ -1,7 +1,9 @@
 ---
 name: risk-sharing-model-design
-description: "Use only after the job Outcomes-Based Contracting & Value-Based Care Integration is chosen, to do Risk-Sharing Model Design."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Outcomes-Based Contracting & Value-Based Care Integration is chosen, to do Risk-Sharing Model Design."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Risk-Sharing Model Design
 

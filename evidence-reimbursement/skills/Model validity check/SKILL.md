@@ -1,7 +1,9 @@
 ---
 name: model-validity-check
-description: "Use only after the job Economic Model Validity Assessment & Cost-Effectiveness Monitoring is chosen, to do Model validity check."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Economic Model Validity Assessment & Cost-Effectiveness Monitoring is chosen, to do Model validity check."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Model validity check
 

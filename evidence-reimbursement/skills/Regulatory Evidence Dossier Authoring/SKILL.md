@@ -1,7 +1,9 @@
 ---
 name: regulatory-evidence-dossier-authoring
-description: "Use only after the job Evidence Translation & Stakeholder Communication Delivery is chosen, to do Regulatory Evidence Dossier Authoring."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Evidence Translation & Stakeholder Communication Delivery is chosen, to do Regulatory Evidence Dossier Authoring."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Regulatory Evidence Dossier Authoring
 

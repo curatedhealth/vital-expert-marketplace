@@ -1,6 +1,6 @@
 {
   "name": "evidence-reimbursement",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Evidence and Reimbursement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "VITAL"

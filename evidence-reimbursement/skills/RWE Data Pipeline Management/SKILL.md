@@ -1,7 +1,9 @@
 ---
 name: rwe-data-pipeline-management
-description: "Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do RWE Data Pipeline Management."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do RWE Data Pipeline Management."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # RWE Data Pipeline Management
 

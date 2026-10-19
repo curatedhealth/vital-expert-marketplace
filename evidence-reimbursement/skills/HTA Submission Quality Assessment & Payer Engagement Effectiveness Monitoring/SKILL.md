@@ -1,7 +1,9 @@
 ---
 name: hta-quality-and-payer-engagement
-description: "Start the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
+description: "Only while the Digital Health Library connector is connected. Start the job HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring in Market Access & Reimbursement. Use when the user asks for this job. It lists the tasks and loads one task skill."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # HTA Submission Quality Assessment & Payer Engagement Effectiveness Monitoring
 

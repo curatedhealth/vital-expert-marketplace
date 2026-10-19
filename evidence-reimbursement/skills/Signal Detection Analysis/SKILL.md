@@ -1,7 +1,9 @@
 ---
 name: signal-detection-analysis
-description: "Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Signal Detection Analysis."
+description: "Only while the Digital Health Library connector is connected. Use only after the job Digital Endpoint Capture & RWE Platform Management is chosen, to do Signal Detection Analysis."
 ---
+
+If the Digital Health Library connector is not connected, stop. Do not use this skill and do not answer from this pack.
 
 # Signal Detection Analysis
 
