@@ -2,11 +2,11 @@
 
 This is the marketplace a buyer adds in Cowork. The plugin is free to install. The Digital Health Library key is the purchase.
 
-## Install Evidence and Reimbursement
+## Install DH Evidence and Reimbursement
 
 1. In Cowork, open **Customize**, then **Plugins**, then **Add marketplace**.
 2. Enter `curatedhealth/vital-expert-plugins`. Do not paste a file link.
-3. Install **Evidence and Reimbursement**.
+3. Install **DH Evidence and Reimbursement**.
 4. Paste the `vlib_` key when Cowork asks for the Digital Health Library key.
 5. Leave the plugin switched on.
 
@@ -23,9 +23,9 @@ Finding an expert is free. Downloading one expert spends one call on the same ke
 The key is not in this repository. A person without a key can install the plugin and cannot retrieve library data.
 The skills run only while the Digital Health Library connector is connected. Turning the plugin off removes the skills and the connector together. If the connector is not connected, the pack does not answer.
 
-## Regulatory Strategy and Submissions
+## DH Regulatory Strategy and Submissions
 
-Same marketplace. Same `vlib_` key. Same connector. Install **Regulatory Strategy and Submissions** beside Evidence and Reimbursement.
+Same marketplace. Same `vlib_` key. Same connector. Install **DH Regulatory Strategy and Submissions** beside DH Evidence and Reimbursement.
 
 It opens on four headings numbered 03.03.1 through 03.03.4. Choose one heading, then one job. Each job file holds its tasks as sections.
 

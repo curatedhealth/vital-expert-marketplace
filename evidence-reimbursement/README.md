@@ -1,4 +1,4 @@
-# Evidence and Reimbursement
+# DH Evidence and Reimbursement
 
 Install this plugin from the VITAL marketplace, then paste the Digital Health Library key Cowork asks for. The key is not in this repository.
 
@@ -6,7 +6,7 @@ Install this plugin from the VITAL marketplace, then paste the Digital Health Li
 
 1. In Cowork, open Customize, then Plugins, then Add marketplace.
 2. Enter `curatedhealth/vital-expert-plugins`.
-3. Install **Evidence and Reimbursement**.
+3. Install **DH Evidence and Reimbursement**.
 4. When Cowork asks for the Digital Health Library key, paste the `vlib_` key from your purchase.
 5. Leave the plugin switched on.
 

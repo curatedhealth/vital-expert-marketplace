@@ -1,12 +1,12 @@
-# Regulatory Strategy & Submissions
+# DH Regulatory Strategy and Submissions
 
-Install this plugin from the VITAL marketplace, then paste the Digital Health Library key Cowork asks for. The key is not in this repository. It is the same key as Evidence and Reimbursement.
+Install this plugin from the VITAL marketplace, then paste the Digital Health Library key Cowork asks for. The key is not in this repository. It is the same key as DH Evidence and Reimbursement.
 
 ## Install
 
 1. In Cowork, open Customize, then Plugins, then Add marketplace.
 2. Enter `curatedhealth/vital-expert-plugins`.
-3. Install **Regulatory Strategy and Submissions**.
+3. Install **DH Regulatory Strategy and Submissions**.
 4. When Cowork asks for the Digital Health Library key, paste the `vlib_` key from your purchase.
 5. Leave the plugin switched on.
 
