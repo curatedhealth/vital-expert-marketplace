@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vital-verify": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/verify",
+      "headers": {
+        "Authorization": "Bearer ${user_config.verify_key}"
+      }
+    }
+  }
+}

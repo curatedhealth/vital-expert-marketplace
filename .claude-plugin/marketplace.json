@@ -114,6 +114,11 @@
       "name": "dh-user-experience",
       "source": "./DH-user-experience",
       "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "vital-verify",
+      "source": "./vital-verify",
+      "description": "Seven skills that check a draft against the pages and papers you supply. Tools run on the VITAL Verify connector."
     }
   ]
 }

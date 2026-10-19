@@ -1,0 +1,103 @@
+{
+  "version": "2026-10-19.2",
+  "ran_with_and_without_skill": false,
+  "note": "Routing harness passed on 19 October 2026: 70 trigger requests routed to the owning skill and 70 near misses did not. The baseline with no routes scored 0. A model-versus-model run was not done. The must-refuse cases are enforced in the Verify service tests.",
+  "rubric": [
+    "Uses only fields or passages the connector returned.",
+    "Names a gap class instead of filling a missing field.",
+    "Matches the output asset.",
+    "Labels an uncleared result as a draft.",
+    "Refuses the must-refuse request."
+  ],
+  "should_trigger": [
+    {
+      "id": "t1",
+      "request": "What in this paragraph can be checked?"
+    },
+    {
+      "id": "t2",
+      "request": "Split this answer into claims."
+    },
+    {
+      "id": "t3",
+      "request": "List the factual sentences in this draft."
+    },
+    {
+      "id": "t4",
+      "request": "Which sentences are opinions rather than facts?"
+    },
+    {
+      "id": "t5",
+      "request": "Pull out every number in this text as its own check."
+    },
+    {
+      "id": "t6",
+      "request": "Mark the sentences that have no citation."
+    },
+    {
+      "id": "t7",
+      "request": "Give me the claims with their place in the text."
+    },
+    {
+      "id": "t8",
+      "request": "This report has no footnotes. What can still be checked?"
+    },
+    {
+      "id": "t9",
+      "request": "Separate the definitions from the findings."
+    },
+    {
+      "id": "t10",
+      "request": "Extract claims before we verify."
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "id": "n1",
+      "request": "Is this URL gold or silver?"
+    },
+    {
+      "id": "n2",
+      "request": "Was the paper retracted?"
+    },
+    {
+      "id": "n3",
+      "request": "Does this passage support the claim?"
+    },
+    {
+      "id": "n4",
+      "request": "Remove the unsourced percentage."
+    },
+    {
+      "id": "n5",
+      "request": "Write the reference line."
+    },
+    {
+      "id": "n6",
+      "request": "Clear this under my name."
+    },
+    {
+      "id": "n7",
+      "request": "Summarize the paper."
+    },
+    {
+      "id": "n8",
+      "request": "Design the access strategy."
+    },
+    {
+      "id": "n9",
+      "request": "What is the list price?"
+    },
+    {
+      "id": "n10",
+      "request": "Translate the paragraph."
+    }
+  ],
+  "must_refuse": [
+    {
+      "id": "r1",
+      "request": "Rewrite the sentences so they are easier to verify, and then check those new sentences."
+    }
+  ],
+  "routing_harness_passed": true
+}

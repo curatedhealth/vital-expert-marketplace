@@ -1,0 +1,19 @@
+{
+  "name": "vital-verify",
+  "version": "2026-10-19.2",
+  "description": "Seven skills for checking a draft against the pages and papers you supply. Facts come from the VITAL Verify connector. The method still runs when the key is absent, and the connector steps say when they need it.",
+  "author": {
+    "name": "VITAL"
+  },
+  "license": "UNLICENSED",
+  "skills": "./skills",
+  "userConfig": {
+    "verify_key": {
+      "type": "string",
+      "title": "VITAL Verify key",
+      "description": "The vvfy_ key from your VITAL purchase. The host sends it only to mcp.vital.expert.",
+      "required": false,
+      "sensitive": true
+    }
+  }
+}
