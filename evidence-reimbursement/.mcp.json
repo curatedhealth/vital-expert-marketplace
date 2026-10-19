@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vital-digital-health-library": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/library"
+    }
+  }
+}

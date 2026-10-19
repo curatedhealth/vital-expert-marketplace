@@ -1,0 +1,14 @@
+{
+  "name": "vital-expert-plugins",
+  "description": "VITAL plugins for Cowork",
+  "owner": {
+    "name": "VITAL"
+  },
+  "plugins": [
+    {
+      "name": "evidence-reimbursement",
+      "source": "./evidence-reimbursement",
+      "description": "Evidence and Reimbursement for digital health. Jobs, tasks, and one expert download on the Digital Health Library."
+    }
+  ]
+}

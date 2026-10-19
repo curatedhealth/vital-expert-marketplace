@@ -1,0 +1,22 @@
+---
+name: cf-12-03-01-4-2-5
+description: "Use only after the job Coverage Strategy Effectiveness Assessment and Access Rate Monitoring (CF-12.03.01.4.2) is chosen, to do Watch a scheme."
+---
+
+# Watch a scheme
+
+Code: CF-12.03.01.4.2.5.
+
+## Execution formula
+Worker: not bound.
+Skill: CF-12.03.01.4.2.5 Watch a scheme.
+Prompt: not bound.
+Template: not bound.
+Tool: `market-access-dh.watch_scheme`. Then close with Verify: verify.extract_claims, verify.check_claim, verify.verify_text, verify.qualify_source, verify.check_currency, verify.build_citation, verify.build_record.
+Input: use the inputs named in the prompt. A missing input stays blank.
+
+Follow the prompt when one is bound, and put the answer in the template when one is bound. Call the tool only when this formula names one.
+
+## Boundary
+
+Call this only when the buyer asks for later changes. One watch per tenant.

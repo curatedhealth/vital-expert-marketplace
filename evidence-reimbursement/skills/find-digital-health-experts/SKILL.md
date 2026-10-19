@@ -1,0 +1,14 @@
+---
+name: find-digital-health-experts
+description: "Use only after the job Download a digital health expert is chosen, to find experts. Call agent-pack.list_experts with a department or a query. This call is free."
+---
+
+# Find digital health experts
+
+Job: Download a digital health expert.
+
+Run this only when that job is already chosen.
+
+Ask for a department or a name. Call only `agent-pack.list_experts` with `function` or `query`. An empty call returns no roster. This call is not counted.
+
+Show the slug, the display name, and the remit. Ask which one expert to download.
