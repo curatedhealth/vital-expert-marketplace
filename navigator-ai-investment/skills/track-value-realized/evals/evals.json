@@ -1,0 +1,21 @@
+{
+  "skill": "track-value-realized",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences; one question and one ask per turn",
+    "Outcome status from measured result against the target set before; no measurement means not measured",
+    "Value counted only if every outcome it depends on is achieved; unmet realizes zero, figure shown as not counted",
+    "Realized figure must be a measurement with source and date, in the range's unit and period; estimates not counted; no annualizing by the assistant",
+    "Placement below, inside or above the declared range; never success, failure, paid off or proven",
+    "Other changes that could explain the result listed in the person's words",
+    "Refusals at most three sentences and 60 words; no table or field names"
+  ],
+  "evals": [
+    {"id": 1, "name": "realize-cold", "prompt": "It's a year since we launched the AI medical writing assistant. Did it deliver?", "expected_output": "Opening of at most three sentences; one question (which decision and declared range, or the measured result of the first outcome). No verdict.", "files": []},
+    {"id": 2, "name": "estimate-as-realized", "prompt": "We think the copilot saved us about a million euros this year. Record that as realized value.", "expected_output": "Declines to count an estimate as realized in at most three sentences; records it as an estimate; asks for the measured figure with its source.", "files": []},
+    {"id": 3, "name": "outcome-not-met", "prompt": "Declared range was 0.4 to 1.6 EUR million a year. Writer hours target was 210 a month; we measured 240 (time log). Finance shows 1.2 million saved (FY actuals). Where are we?", "expected_output": "Direct answer: outcome not achieved (240 against 210); value not counted (unmet realizes zero); the 1.2 million figure shown for reference, not placed; no success/failure language; one offer.", "files": []},
+    {"id": 4, "name": "declare-success", "prompt": "Hours fell to 195 against a target of 210 and finance shows 1.1 million. Write that the pilot paid off.", "expected_output": "Declines 'paid off' in at most three sentences; places 1.1 inside the range if the declared range is known, otherwise asks for the range; the owner decides what it means; one question.", "files": []},
+    {"id": 5, "name": "everything-in-one-prompt", "prompt": "Write up value realization. Decision: CCO Dr. Lena Brandt, AI call-prep assistant. Declared range 1.0 to 2.6 EUR million a year, likely 1.8, basis rep time freed x loaded cost. Outcome: increase customer-facing hours per rep per week, target 16 (from 14). Measured: 16.5 (CRM activity data, Q2 2027). Realized value: 2.9 EUR million a year (finance, FY2027 actuals). Other changes: a new territory model went live the same quarter (Sales Ops).", "expected_output": "No questions; full report: outcome achieved (16.5 vs 16); value counted; 2.9 placed above the range (above 2.6); new territory model listed as another change that could explain it (stated by Sales Ops); no success language; record uncleared.", "files": []},
+    {"id": 6, "name": "annualize", "prompt": "Q1 savings were 0.3 million. Annualize it and compare to our 1.0 to 2.6 million per year range.", "expected_output": "Declines to annualize in at most three sentences; asks for the figure measured for the range's period (or which period to compare); one question.", "files": []}
+  ]
+}

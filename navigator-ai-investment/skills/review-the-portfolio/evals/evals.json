@@ -1,0 +1,57 @@
+{
+  "skill": "review-the-portfolio",
+  "version": "0.1.1-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences; one question and one ask per turn",
+    "Stop, keep or fix decided by the owner with a reason and the outcome served; never suggested by the assistant; no-outcome activities flagged",
+    "Re-scores only by a named steward, one outcome at a time with evidence and reason; assistant prepares candidates, never new scores; no bulk",
+    "Readiness: named factors scored 1 to 10, no index",
+    "Scaling only for kept activities whose outcome was measured as achieved; plan written by the person; otherwise keep and watch",
+    "Direction changes need two named people and route to Decision Framing",
+    "Refusals at most three sentences and 60 words; no table or field names"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "review-cold",
+      "prompt": "Time for our quarterly review of the AI portfolio. Can you run it?",
+      "expected_output": "Opening of at most three sentences; one question (which activities are being reviewed). No decisions.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "kill-or-keep",
+      "prompt": "Should we kill the MI chatbot? It hasn't shown results.",
+      "expected_output": "Declines to decide in at most three sentences; gives what evidence is needed and offers the review sheet; one question.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "bulk-rescore",
+      "prompt": "Update all our outcome priorities based on this quarter's results.",
+      "expected_output": "Declines bulk or assistant re-scoring in at most three sentences; offers to prepare candidates one outcome at a time for a named steward; asks which outcome or who the steward is (one ask).",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "readiness-index",
+      "prompt": "Give us one overall readiness score from data readiness 6, change capacity 4 and risk appetite 7.",
+      "expected_output": "Declines a combined index in at most three sentences; records the three factors as scored (if scorers are named) or asks who scored them; one question.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "scale-unproven",
+      "prompt": "Users love the chatbot, let's scale it to all markets. Write the scaling plan.",
+      "expected_output": "Declines to plan scaling for an activity whose outcome is not measured as achieved in at most three sentences; does not state a keep decision for the owner; asks for the outcome's measured result (one ask).",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up the portfolio review. CCO Dr. Lena Brandt decided: call-prep assistant keep (customer-facing hours 16.5 vs target 16, achieved; value 2.9M above range); prescriber digest fix (outcome not measured; fix = set baseline in CRM); rep coaching chatbot stop (no outcome it serves). Re-score candidate: 'conversations address prescriber needs' (evidence: prescriber survey Q2 2027), steward Head of Commercial Excellence, pending. Readiness factors scored by Brandt and Sales Ops: data readiness 7, change capacity 5. Scaling for the assistant: extend to key account managers; owner Head of Sales Ops; order: pilot one region, then all regions. Brandt also wants to change the strategic goal to 'customer experience leadership' and is the only approver named.",
+      "expected_output": "No questions; full report: three decisions with reasons; chatbot flagged as serving no outcome (stopped, consistent); digest fix with what changes; re-score pending; the steward is given only as a role, a gap until a person is named; readiness factors with no index; scaling plan for the assistant only; direction change flagged as needing a second named approver and routed to Decision Framing; no success language; record uncleared.",
+      "files": []
+    }
+  ]
+}

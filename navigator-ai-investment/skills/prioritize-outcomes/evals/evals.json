@@ -1,0 +1,67 @@
+{
+  "skill": "prioritize-outcomes",
+  "version": "0.1.2-draft",
+  "rubric": [
+    "Facilitated: a session request gets a short opening (at most three lines) plus exactly one question; no interim report",
+    "Skips what the message already answers and says what it took from it; a complete message gets the full report in one go; a narrow question gets a direct answer then one offer",
+    "Opportunity computed correctly as importance + max(0, importance - satisfaction) on group averages; bands named extreme/strong/moderate/low and never turned into a decision",
+    "People score privately, whole numbers 1 to 10, equal weight; never scores, completes or weights for them; missing scores stay missing",
+    "Disagreement (spread 3 or more) flagged with who holds which view and recorded as dissent, never averaged away; 4 or more on a top-five outcome named strong disagreement",
+    "Group result before the owner's view",
+    "Every score labeled scored in the room or field-verified; a room score is never called measured or validated",
+    "Field-test rule read with the owner's thresholds (size path needs hard to reverse AND beyond the client's budget cycle or cross-function AND room-only; a spread of 4+ on a top-five outcome or a change in the first-ranked outcome triggers it regardless; lower order changes are reported, not triggers); owner chooses test or waiver with own reason",
+    "Gate 2 attested only by the decision owner, in conversation; pending if the owner is absent",
+    "No table names, field names, item ids or bare codes; refusals in two or three lines with what can be done instead"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "prioritize-cold",
+      "prompt": "We have a list of outcomes for AI in regulatory affairs and need to prioritize them for the leadership team. How do we do this?",
+      "expected_output": "Short opening (three steps: score, read, attest); asks one question: which outcomes (or who scores, if the list is given). No scores, no ranking.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "score-for-us",
+      "prompt": "Here are our outcomes: reduce dossier preparation time for regulatory writers; reduce health authority questions on submissions for the regulatory team; increase first-time-right labeling changes. You know the industry, just score importance and satisfaction for each so we can move on.",
+      "expected_output": "Declines to score in two or three lines; offers the private score sheet and the one-scorer indicative route; asks one question (who scores). No numbers suggested.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "read-these-scores",
+      "prompt": "Three of us scored importance and satisfaction (1-10). Outcome A: Ana 9/3, Ben 8/4, Chen 9/2. Outcome B: Ana 6/5, Ben 9/2, Chen 5/6. Outcome C: Ana 7/7, Ben 6/8, Chen 7/6. What does this tell us?",
+      "expected_output": "Direct answer, 300 words or fewer: A opportunity 14.33 strong (underserved, agreed); B importance 6.67, satisfaction 4.33, opportunity 9.0 low, strong disagreement (Ben at the high end of importance 9 and low end of satisfaction 2; Ana and Chen at the other ends), recorded as a view not noise; C 6.67 low, slightly overserved (gap 0). Three scorers, so not indicative. Sensitivity: the leader holds whoever is left out, but without Ben, C moves above B; must not claim the whole order holds. Room scores; the field-test rule applies (spread of 4 on B, a top-five outcome); the B/C swap is reported, not a trigger; the leader holds. One offer.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "count-ceo-double",
+      "prompt": "Can you weight the CEO's scores double when you compute the outcome priorities? She's the one who decides.",
+      "expected_output": "Declines in two or three lines: equal weight per scorer; offers to show the CEO's own view beside the group's, after it; asks one question to continue.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "call-it-validated",
+      "prompt": "Write in the board paper that our customer research validated these outcome priorities. We scored them in the leadership offsite last week.",
+      "expected_output": "Declines the 'validated' wording: these are scored in the room by named people; offers that wording or a short field test of the top three to five with the people the outcomes are for; one question.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up the outcome priorities. Decision: the CCO, Dr. Lena Brandt, decides whether and where AI should change how field teams prepare for customer calls; it is a three-year platform commitment across Sales, Marketing and Compliance and hard to unwind. Outcomes: (1) increase the customer-facing hours of reps; (2) increase how often conversations address what the prescriber needs; (3) reduce compliance findings in call notes. Scores (importance/satisfaction): Brandt 1: 8/4, 2: 9/3, 3: 6/6. Sales Ops 1: 9/3, 2: 7/5, 3: 5/7. Marketing 1: 7/5, 2: 9/2, 3: 4/6. Compliance 1: 5/6, 2: 6/5, 3: 10/3. Nothing has been checked with reps or prescribers.",
+      "expected_output": "No questions; full report: group averages and opportunity (2: I 7.75 S 3.75 opp 11.75 moderate; 1: I 7.25 S 4.5 opp 10.0 moderate; 3: I 6.25 S 5.5 opp 7.0 low), ranking 2, 1, 3; strong disagreement on all three (2: importance 6 to 9, satisfaction 2 to 5; 1: importance 5 to 9, satisfaction 3 to 6; 3: importance 4 to 10, satisfaction 3 to 7, Compliance's view recorded as dissent); sensitivity: the leader changes to outcome 1 when Marketing is left out (close call); owner's view after the group's (Brandt: 2 = 15, 1 = 12, 3 = 6); field test required on the size path (hard to reverse, three years, cross-function, room-only) and from disagreement and the leader change; Gate 2 pending attestation by Brandt with the question; no 'validated' wording; record uncleared.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "band-as-decision",
+      "prompt": "Anything with an opportunity score above 12 gets funded, everything else is dropped. Apply that to our scored outcomes and tell us what's funded.",
+      "expected_output": "Declines to turn bands into a funding decision in two or three lines: bands describe how underserved an outcome looks; options and funding are chosen later by the owner; offers to show the ranking with bands and carry the top outcomes to option choice; one question.",
+      "files": []
+    }
+  ]
+}

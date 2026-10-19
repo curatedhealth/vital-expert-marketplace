@@ -1,0 +1,66 @@
+{
+  "skill": "assess-strategic-readiness",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences with one question; one question per turn; no interim report",
+    "Narrow questions answered directly (300 words or fewer) with one offer; a complete message gets the full report",
+    "Capabilities worded as what must be done well, never as teams, people, tools or vendors; tools restated and kept as options",
+    "People score Current and Required privately, whole numbers 1 to 10, equal weight; never scored or suggested by the assistant",
+    "Weighted gap computed correctly: max(0, mean required - mean current) x link-weighted mean of the attested outcome scores served; capabilities serving no scored outcome flagged",
+    "Disagreement (spread 3 or more) shown with both ends; owner's view after the group's",
+    "No maturity levels; data readiness, change capacity and risk appetite named as gaps or owner-stated, never estimated",
+    "Refusals in at most three sentences with what can be done instead",
+    "No table names, field names, item ids or bare codes"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "readiness-cold",
+      "prompt": "Before we put money into AI for regulatory affairs, I want to know if we're actually ready. Where do we start?",
+      "expected_output": "Opening of at most three sentences; asks one question: which outcomes (or who owns the decision). No capability list, no scores.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "score-for-us",
+      "prompt": "Our capabilities are dossier writing, health authority query handling and labeling. You've seen lots of pharma companies, just score where we are and where we need to be.",
+      "expected_output": "Declines to score in at most three sentences; offers the private sheet (one scorer indicative); asks one question (who scores or which outcomes they serve). No numbers.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "rate-a-team",
+      "prompt": "How mature is our MLR team? Are we level 2 or level 3?",
+      "expected_output": "Declines to rate a team or give a maturity level (operational assessment belongs to Execution); offers to word the capability the team provides and score current vs required; one question.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "read-the-gap",
+      "prompt": "Three of us scored (current/required). Evidence synthesis: 3/9, 4/8, 2/9. Dossier authoring: 6/8, 5/8, 6/7. Query handling: 4/6, 5/6, 4/7. Evidence synthesis serves 'reduce time to submission' (opportunity 14) and dossier authoring serves the same outcome; query handling serves 'reduce health authority questions' (opportunity 9). Where is our biggest gap?",
+      "expected_output": "Direct answer: evidence synthesis gap 5.67 x 14 = 79.3 first; dossier authoring 2.0 x 14 = 28.0; query handling 2.0 x 9 = 18.0; explains the weighting by outcomes (dossier and query have the same raw gap, the outcome weight separates them); three scorers, not indicative; no spread of 3 or more; one offer.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "estimate-readiness-factors",
+      "prompt": "Also give us a score for our data readiness and change capacity so the register is complete.",
+      "expected_output": "Declines to estimate: no instrument exists; records the owner's view if given or a gap; one question asking whether they want to state a view.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up our capability and gap register. Decision: CCO Dr. Lena Brandt decides whether and where AI should change call preparation for field teams. Attested outcomes: (o1) increase how often conversations address prescriber needs, opportunity 11.75; (o2) increase reps' customer-facing hours, 10.0. Capabilities and links: 'prescriber insight synthesis' serves o1; 'call planning at scale' serves o1 and o2; 'compliant content approval' serves o1. Scores current/required by Brandt, Sales Ops, Marketing, Compliance: insight synthesis 3/9, 4/8, 2/9, 3/7; call planning 5/8, 6/7, 4/8, 5/6; content approval 4/8, 5/7, 3/9, 6/9. Brandt says change capacity in the field is stretched.",
+      "expected_output": "No questions; full report: insight synthesis gap 5.25 x 11.75 = 61.7 first; content approval gap 3.75 x 11.75 = 44.1 second; call planning gap 2.25 x 10.875 = 24.5 third; disagreement only on content approval Current (3 to 6: Marketing low, Compliance high); owner's view after the group's; change capacity recorded as owner-stated (O), data readiness and risk appetite as gaps; no maturity levels; record uncleared.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "pick-the-vendor",
+      "prompt": "Our biggest gap is evidence synthesis. Which AI vendor should we buy to close it?",
+      "expected_output": "Declines to pick a vendor in at most three sentences: options are compared next by people, against doing nothing and doing it internally; offers to carry the gap into option comparison; one question.",
+      "files": []
+    }
+  ]
+}

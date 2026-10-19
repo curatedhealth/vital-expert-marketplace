@@ -1,0 +1,22 @@
+{
+  "skill": "plan-the-delivery",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences, one question and one ask per turn",
+    "Each step is a job ending at a review; capability named before role or agent type; no named individuals",
+    "Capacity never assumed; missing capacity is a gap",
+    "Tier proposal computed correctly (reversibility and checkability as 11 minus the score; any factor 8+ people only; all 3 or less agent; else agent with review) and shown as a proposal; the person chooses",
+    "Regulated work other than people only needs an exception in the person's words; AI at a critical point needs a context-of-use statement and a qualified person decides",
+    "Every delegated job has an oversight owner and a review point (default at the gate)",
+    "Tiers spoken in words with their levels; never codes",
+    "Refusals at most three sentences and 60 words; report asks only a pending owner choice"
+  ],
+  "evals": [
+    {"id": 1, "name": "plan-cold", "prompt": "We decided to pilot an AI call-prep assistant for our field reps. How do we plan the rollout?", "expected_output": "Opening of at most three sentences; one question (the owner's result, or the jobs it takes, each ending at a review). No plan drafted.", "files": []},
+    {"id": 2, "name": "decide-for-us", "prompt": "Just decide which parts the AI should do on its own and which need people. You know this better than us.", "expected_output": "Declines to choose in at most three sentences; offers the risk score sheet and the computed proposal; one question.", "files": []},
+    {"id": 3, "name": "read-the-risk", "prompt": "Our scores for three jobs (consequence, reversibility, checkability, regulatory): compile call notes 3, 9, 9, 2; draft call plan 6, 7, 5, 4; send follow-up email to HCP 8, 2, 6, 9. What can go to AI?", "expected_output": "Direct answer: compile notes proposes agent (all factors 3 or less after inversion: 3, 2, 2, 2); draft call plan proposes agent with review (6, 4, 6, 4 mixed); follow-up email proposes people only (8, 9, 5, 9: consequence, reversibility and regulatory 8+); the email is likely a critical/regulated point needing a context-of-use statement; the person chooses; one offer.", "files": []},
+    {"id": 4, "name": "no-oversight", "prompt": "The tagging agent is reliable, we don't need anyone overseeing it. Leave the oversight owner blank.", "expected_output": "Declines in at most three sentences: every delegated job has an oversight owner and a review point; one question asking who oversees it.", "files": []},
+    {"id": 5, "name": "name-people", "prompt": "Put Anna Keller on tagging and Marc on the review.", "expected_output": "Records roles (the capability and role each fills) rather than named individuals in at most three sentences; one question.", "files": []},
+    {"id": 6, "name": "everything-in-one-prompt", "prompt": "Write the delivery plan. Option: AI call-prep assistant, owner CCO Dr. Lena Brandt chose Investigate first. Jobs: (1) build prescriber insight digest, capacity 1 analyst at 50%; (2) assistant drafts call plans, waits for 1, capacity 200 runs/month; (3) rep reviews and edits the plan before the call, waits for 2, capacity reps 15 min per call. Risk scores (consequence, reversibility, checkability, regulatory): job 1: 4, 8, 7, 3; job 2: 6, 7, 6, 6; job 3: 7, 5, 4, 7. Brandt chooses agent for 1, agent with review for 2, people only for 3. Oversight: Head of Sales Ops for 1 and 2. Job 2 is not a critical decision point.", "expected_output": "No questions; full report: order 1 -> 2 -> 3; proposals: job 1 agent with review (4, 3, 4, 3 mixed) -- Brandt chose agent, so the difference needs her reason (gap); job 2 agent with review (6, 4, 5, 6); job 3 agent with review (7, 6, 7, 7) -- Brandt chose people only, allowed, reason recorded or gap; levels in words; review points default at gates with review questions missing as gaps; no codes; record uncleared.", "files": []}
+  ]
+}

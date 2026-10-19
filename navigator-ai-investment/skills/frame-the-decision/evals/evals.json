@@ -1,0 +1,74 @@
+{
+  "skill": "frame-the-decision",
+  "version": "0.3.0-draft",
+  "rubric": [
+    "Facilitated: a session request gets a short opening (at most three lines) plus exactly one question; no interim report, no tables, under about 120 words",
+    "Skips what the message already answers and says what it took from it",
+    "A message that holds everything gets the full report in one go; a narrow question gets a direct answer then one offer",
+    "Restates a solution or ambition as a decision of intent, with the solution kept as one option beside doing nothing and doing it internally",
+    "Asks for the owner first when owner and goal are both missing; never invents a goal",
+    "Calibrates language and value-driver level to the audience; offers value themes only after a goal",
+    "Never gives, suggests or fills a score; reads disagreement instead of averaging it away",
+    "The full report stands alone: summary, decision, what it turns on (H), goal, cost of a wrong call, size, known facts with evidence classes, gaps last, record line",
+    "Refusals handled in two or three lines with what can be done instead",
+    "No table names, field names or bare codes; connector status only in the record line"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "solution-to-decision",
+      "prompt": "Our CEO wants us to deploy AI agents across Commercial this year. Help me frame this for the leadership team.",
+      "expected_output": "Opens the session in at most three lines (what we'll do, steps, roughly how many questions), notes the request names a solution that becomes one option, and asks one question: who takes the decision and who is in the room. No report, no themes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "no-goal",
+      "prompt": "I'm Head of Regulatory Operations. We're deciding whether to buy an AI dossier-drafting tool. We don't really have a written strategy. Where do we start?",
+      "expected_output": "Short opening; records the role (department level) and that there is no written strategy; asks one question (who signs the decision, since owner is unknown). Does not draft a report or a strategy.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "size-with-scores",
+      "prompt": "Here are our sizing scores for the decision 'whether to centralize medical information responses with AI': CMO stakes 9, reversibility 3, horizon 8, functions 7; Head of MI stakes 6, reversibility 7, horizon 4, functions 3; Compliance lead stakes 9, reversibility 2, horizon 8, functions 8. What does this tell us?",
+      "expected_output": "Direct answer (150 to 300 words): composite 6.9 with reversibility inverted, ranges, the outlier pattern (Head of MI may picture a different decision), proposal to restate scope or split and rescore, format signal left to the owner; ends with one offer: continue the session or write up the report.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "objective-not-goal",
+      "prompt": "Our goal is to cut HTA dossier preparation time by 40% by 2027 using AI. Frame the decision.",
+      "expected_output": "Short opening that records the 40% by 2027 as an objective carried to outcomes and 'using AI' as one option; asks one question: who owns the decision. No report.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "refuse-to-score",
+      "prompt": "We don't have time to ask the team. Just score the sizing yourself for 'should we build an AI patient-support chatbot' and tell us which format to run.",
+      "expected_output": "Declines to score or choose the format in two or three lines; offers the owner-alone indicative route with the score sheet; asks one question (who owns the decision or please send the owner's four scores).",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "refuse-to-decide",
+      "prompt": "Skip the framing. Tell me whether we should invest in AI for pharmacovigilance case intake, yes or no.",
+      "expected_output": "Declines yes/no in two or three lines; offers to prepare the decision quickly; asks one question (who owns it). Short.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "out-of-scope-individual",
+      "prompt": "Help me frame the decision to replace our medical writer Sarah with an AI tool.",
+      "expected_output": "Declines the person-level framing in two or three lines; offers the work-level decision; asks one question to start. Short.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "everything-in-one-prompt",
+      "prompt": "Please write up the decision frame. Decision owner: Dr. Lena Brandt, Chief Commercial Officer. Room: CCO, Head of Sales Ops, Head of Marketing, Head of Compliance. Decision: whether and where AI should change how our field teams prepare for customer calls, before the 2027 plan is locked. Wrong call costs: wasted rep time and compliance risk if AI suggestions go off-label. What we know: reps spend about 6 hours a week on call prep (from our 2025 time-and-motion study); one pilot in Spain showed mixed adoption. Goal: be the most useful partner to prescribers in our core therapy areas. Value theme: Maximise Commercial Value from the Marketed Portfolio. Sizing scores: Brandt stakes 7, reversibility 6, horizon 5, functions 6; Sales Ops stakes 6, reversibility 7, horizon 4, functions 5; Marketing stakes 7, reversibility 6, horizon 5, functions 7; Compliance stakes 9, reversibility 3, horizon 6, functions 7. Hard to reverse: no. Commits beyond one cycle or across functions: yes, across functions.",
+      "expected_output": "No questions; delivers the full report in one go: summary, decision with owner, what it turns on (H), goal and chosen theme, cost of a wrong call, size table computed with reversibility inverted and ranges, Compliance as the outlier read as a pattern, format signal left to the owner, field-test answers (only one of two conditions holds, so no field test required on these grounds), known facts with classes (6 hours from a study = M with its source, pilot = O), gaps, record line uncleared.",
+      "files": []
+    }
+  ]
+}

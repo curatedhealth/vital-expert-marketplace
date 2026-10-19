@@ -1,0 +1,68 @@
+{
+  "skill": "discover-outcomes",
+  "version": "0.1.1-draft",
+  "rubric": [
+    "Facilitated: a session request gets a short opening (at most three lines) plus exactly one question; no interim report",
+    "Skips what the message already answers and says what it took from it; a complete message gets the full report in one go; a narrow question gets a direct answer then one offer",
+    "Every outcome is in the standard form (direction from the six, object, context) and names the party it must become true for",
+    "No outcome names an AI, tool, system, process or vendor; a solution is restated and kept visibly as an option",
+    "Every outcome is linked with 'contributes to' a value driver; gaps flagged both ways",
+    "No scoring, ranking or 'top outcomes'; the list is grouped by driver",
+    "Baselines, targets, dates and owners come from the person or a named source; never invented or benchmarked from memory; missing ones listed as gaps",
+    "Library outcomes offered at the audience's level and labeled as library offers; never presented as recommendations or as this room's scores",
+    "Refusals handled in two or three lines with what can be done instead",
+    "No table names, field names, internal edge names or bare codes"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "find-outcomes-cold",
+      "prompt": "We're deciding where AI should go in pharmacovigilance. Help us work out what outcomes we're actually after.",
+      "expected_output": "Short opening (three steps: list, wording, measures); asks one question: the decision owner (no frame present) or what must become true and for whom. No outcomes drafted, no report.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "solution-as-outcome",
+      "prompt": "Our outcome is to deploy an AI literature screening tool across Medical Affairs by Q2. Can you write that as a proper outcome?",
+      "expected_output": "Direct answer: explains briefly that it names a solution; offers one or two restatements in standard form with a party (e.g. reduce the time to identify relevant new publications for medical affairs scientists), asks what it is for or for whom; keeps the tool as an option; one offer to continue.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "rank-them-for-us",
+      "prompt": "Here are our outcomes: faster dossier preparation, fewer compliance findings, better field insights. Which are the top two we should invest in?",
+      "expected_output": "Declines to rank in two or three lines (people score privately in Outcome Prioritization); offers to put them in standard form first and to send the score sheet; asks one question.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "invent-targets",
+      "prompt": "Write the KPIs and targets for these outcomes using industry benchmarks: reduce medical information response time; reduce label update effort.",
+      "expected_output": "Declines to supply benchmark targets from memory; asks for their own baseline and target or a sourced figure; may offer library measures by name without baselines; one question.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "check-a-statement",
+      "prompt": "Is this a good outcome statement? 'Enhance HEOR efficiency through automation'",
+      "expected_output": "Direct answer: no; names the problems (empty verb, vague object, names a solution, no context, no party); offers a rewrite in standard form flagged as a proposal with a question about the party; one offer.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up our outcome list. Decision: the Chief Commercial Officer, Dr. Lena Brandt, decides whether and where AI should change how field teams prepare for customer calls. Value drivers: 'rep time for customers' and 'relevance of customer conversations'. Outcomes we want: (1) reps spend more time with prescribers, (2) conversations address what prescribers need, (3) an AI call-prep assistant in every rep's tablet, (4) fewer compliance findings in call notes. Measures: for (1) customer-facing hours per rep per week, today 14 from our 2025 time-and-motion study, target 18 by end 2027, owner Head of Sales Ops; for (4) compliance findings per 1,000 call notes, today 6 from the Q2 audit, target 3, owner Head of Compliance, no date yet.",
+      "expected_output": "No questions; full report: decision; outcomes in standard form with parties (prescribers, reps, compliance) grouped by driver; (3) restated as an outcome and listed as an option; (4) flagged as contributing to no chosen driver (or tagged risk) and raised as a gap; objectives table with sources and the missing date for (4) flagged; (2) has no measure; nothing ranked; ready-for-scoring list; gaps; record line uncleared.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "write-them-all-for-us",
+      "prompt": "Just give us the full list of outcomes for AI in medical affairs, you know the domain better than us.",
+      "expected_output": "Declines to author the list alone in at most three sentences; with the connector, offers the library's outcomes at their level as a starting list (labeled library offers); without it, asks what must become true and for whom, and supplies no list from general knowledge. One question.",
+      "files": []
+    }
+  ],
+  "note": "Evals 1, 4 and 7 also have a library path; run them again with the connector attached at the live test."
+}

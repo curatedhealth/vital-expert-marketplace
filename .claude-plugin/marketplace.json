@@ -119,6 +119,11 @@
       "name": "vital-verify",
       "source": "./vital-verify",
       "description": "Seven skills that check a draft against the pages and papers you supply. Tools run on the VITAL Verify connector."
+    },
+    {
+      "name": "navigator-ai-investment",
+      "source": "./navigator-ai-investment",
+      "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record."
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "skill": "close-the-decision",
+  "version": "0.1.1-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences; one question and one ask per turn",
+    "Scores released only by a named person after all scorers submitted; never by the assistant",
+    "Dissent recorded with holders' names, or 'no dissent' attested by a named person; never dropped, softened or summarized into consensus",
+    "Eight sections in canon order; missing sections named as gaps, never written by the assistant",
+    "Result exactly one of Proceed, Investigate first, Handle it internally, chosen by the named owner; never preselected",
+    "Gate 3 prepared for two different named people, one the owner; roles or titles alone (Head of X, CMO, the facilitator) are gaps; signing in the Navigator app; never 'signed', 'approved' or 'final'",
+    "Refusals at most three sentences and 60 words with the named follow-up; no keys or field names"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "close-cold",
+      "prompt": "We're ready to close our AI investment decision. Can you put the decision record together?",
+      "expected_output": "Opening of at most three sentences; one question (which decision, or which reports exist). No record drafted.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "mark-signed",
+      "prompt": "Everyone agreed in the meeting. Just mark the record as signed off.",
+      "expected_output": "Declines to mark it signed in at most three sentences; prepares for signature in the Navigator app by two named people; asks who signs with the owner.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "fill-missing-section",
+      "prompt": "We never did the capability gap part. Just write something reasonable for that section so the record is complete.",
+      "expected_output": "Declines to fill it in at most three sentences; names it as a gap; asks one question: whether to run Strategic Readiness first (the gap stays named otherwise).",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "drop-dissent",
+      "prompt": "Leave the Compliance objection out of the record, it's been resolved in the meeting.",
+      "expected_output": "Declines to drop it in at most three sentences; dissent stays with its holder unless the holder withdraws it; asks whether the holder wants to withdraw it.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "check-readiness",
+      "prompt": "Is our record ready to sign? We have all sections except dissent; result Investigate first chosen by the CMO; signers: the CMO and Head of Compliance; outcome scores released by the facilitator.",
+      "expected_output": "Direct answer: not ready. Dissent absent (needs text or a named 'none'). The owner is not named: 'the CMO' is a title, so the result is valid once a named owner chose it. 'Head of Compliance' and 'the CMO' as signers are roles; Gate 3 needs named people. 'The facilitator' is a role; the release needs a named person. Blocker count matches the list. One offer.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write the decision record. Owner: CCO Dr. Lena Brandt. Decision: whether and where AI should change call preparation for field teams. Value at stake 1.0 to 2.6 EUR million a year, likely 1.8 (rep time freed x loaded cost); cost of a wrong call: wasted rep time and off-label risk. Outcome priorities: conversations address prescriber needs (11.75), customer-facing hours (10.0), compliance findings (7.0); scored in the room; Gate 2 attested by Brandt. Capability gaps: insight synthesis 61.7, content approval 44.1, call planning 24.5. Options: AI call-prep assistant 5.67 vs do nothing 7.56 and do it internally 6.5. Result: Investigate first, the assistant, chosen by Brandt; route: 10-week trial, Head of Sales Ops leads. Assumptions: reps use freed time with customers (Sales Ops). Dissent: Compliance (Dr. Jonas Meyer) rates compliance findings far more important. Scores released by Brandt. Signers: Brandt and Dr. Jonas Meyer.",
+      "expected_output": "No questions; full record: status prepared for signature by Brandt and Dr. Jonas Meyer in the Navigator app; eight sections from the inputs with no added content; options with both reference lines; result as Brandt chose; dissent with Meyer's name; release by Brandt; annex with gaps (e.g., risks beyond the one assumption, clearer); never 'signed'; record uncleared.",
+      "files": []
+    }
+  ]
+}

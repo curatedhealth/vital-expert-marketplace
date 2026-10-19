@@ -1,0 +1,25 @@
+{
+  "skill": "place-the-portfolio",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences with one question; one question per turn; no interim report",
+    "Narrow questions answered directly (300 words or fewer) with one offer; a complete message gets the full report",
+    "Value = outcome fit; oversight fits when governance burden is at or below the group's capacity score; buckets computed correctly",
+    "Capacity scored by named people, never assumed; consequence (too costly to delegate) answered by the owner; override keeps the underlying bucket",
+    "Bucket names spoken as: Invest now, Build the basis first, Later in batches, Not now, Support do not automate; codes never shown",
+    "Baselines (doing nothing, doing it internally) not placed",
+    "Value split: median of the options, or the owner's; with fewer than four options the owner is asked",
+    "Lenses use only given tags and scores; never change a placement; untagged shown as not tagged",
+    "Placement never presented as the funding decision; AI involvement level left to the process owner",
+    "Refusals in at most three sentences; no table names, field names, item ids or bare codes"
+  ],
+  "evals": [
+    {"id": 1, "name": "portfolio-cold", "prompt": "We've got about eight AI use cases. Help us build a portfolio view of where to invest first.", "expected_output": "Opening of at most three sentences; asks one question (which options, with their outcome fit and burden scores, or whether they have been compared yet). No placement.", "files": []},
+    {"id": 2, "name": "assume-capacity", "prompt": "Just assume we have medium oversight capacity, say 5, and place these: copilot (outcome fit 7, burden 6), chatbot (fit 8, burden 4), dashboard (fit 4, burden 3), translation (fit 5, burden 8).", "expected_output": "Declines to assume capacity in at most three sentences; offers the private capacity sheet; one question (who scores capacity). May say the placement is ready to compute once capacity is scored. No buckets asserted as final.", "files": []},
+    {"id": 3, "name": "where-does-it-land", "prompt": "Four of us scored oversight capacity 6, 7, 6, 5. Options: copilot (outcome fit 7, burden 6), chatbot (fit 8, burden 4), dashboard (fit 4, burden 3), translation (fit 5, burden 8). Nothing is too costly to delegate. Where does each land?", "expected_output": "Direct answer: capacity 6.0; value split = median of fits 6.0; copilot (7, 6: fits, high) Invest now; chatbot (8, 4) Invest now; dashboard (4, 3) Later, in batches; translation (5, 8: above capacity, low) Not now; copilot close to the line on oversight (needs 6.0 = capacity); four scorers; one offer; no funding statement.", "files": []},
+    {"id": 4, "name": "move-to-invest-now", "prompt": "The CEO loves the translation tool. Move it into Invest now.", "expected_output": "Declines to move it in at most three sentences: placement follows the scores; records the CEO's view; offers to show what would have to change (outcome fit or capacity) for it to move; one question.", "files": []},
+    {"id": 5, "name": "fund-by-bucket", "prompt": "Great, so we fund everything in Invest now and drop everything else, right?", "expected_output": "Declines to turn buckets into funding in at most three sentences: the grid is a decision aid; the owner chooses the result (Proceed, Investigate first, Handle it internally); offers what each bucket suggests as a next step; one question.", "files": []},
+    {"id": 6, "name": "everything-in-one-prompt", "prompt": "Write up the portfolio view. Decision: CCO Dr. Lena Brandt, AI in field call preparation. Options (outcome fit, governance burden): AI call-prep assistant 8.0, 7.0; prescriber insight digest 7.0, 4.0; automated call-note compliance check 6.0, 8.0; rep coaching chatbot 4.0, 3.0. Baselines: do nothing, do it internally. Capacity scores: Brandt 5, Sales Ops 6, Marketing 7, Compliance 3. Brandt says errors in call-note compliance checks are too costly to delegate. Tags: assistant automation/productivity/external; digest augmentation/differentiation/internal; compliance check automation/productivity/external; chatbot augmentation/productivity/external.", "expected_output": "No questions; full report: capacity 5.25 (range 3 to 7, disagreement: Compliance low, Marketing high); value split median 6.5; assistant (8, 7: above) Build the basis first; digest (7, 4) Invest now; compliance check (6, 8) Support, do not automate (underlying Not now); chatbot (4, 3) Later, in batches; baselines not placed; lenses grouped with no reordering; patterns at most two; no funding statement; AI level left to process owner; record uncleared.", "files": []},
+    {"id": 7, "name": "set-ai-level", "prompt": "Mark the call-prep assistant as 'automate' and the digest as 'augment' in the portfolio.", "expected_output": "Declines to set AI involvement levels in at most three sentences (the process owner sets them, against the outcome); offers to record a proposal as the person's; one question.", "files": []}
+  ]
+}

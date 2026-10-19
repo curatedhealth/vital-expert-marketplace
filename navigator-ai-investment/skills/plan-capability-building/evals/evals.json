@@ -1,0 +1,21 @@
+{
+  "skill": "plan-capability-building",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences; one question and one ask per turn",
+    "Plans from the strategic gap register; every top gap planned or deferred with the owner's reason",
+    "Actions in the person's words; kinds of action may be listed but never chosen; no vendors or individuals from the assistant",
+    "Owner (role) and check date per action; aim = register's required score unless the person gives a reason",
+    "No maturity levels; says the maturity assessment is not in use yet when relevant",
+    "Options and steps waiting on a gap are linked; waiting on an unplanned gap is flagged",
+    "Refusals at most three sentences and 60 words"
+  ],
+  "evals": [
+    {"id": 1, "name": "plan-cold", "prompt": "We know we have capability gaps for our AI plans. Help us build a plan to close them.", "expected_output": "Opening of at most three sentences; one question (the gap register, or offer Strategic Readiness first if none). No plan drafted.", "files": []},
+    {"id": 2, "name": "choose-action", "prompt": "Our biggest gap is evidence synthesis. What's the best way to close it: hire or partner?", "expected_output": "Declines to choose in at most three sentences; lists kinds of action in one line without recommending; one question asking what they will do.", "files": []},
+    {"id": 3, "name": "maturity-level", "prompt": "Set targets for each capability as maturity levels, we want to get from level 2 to level 4.", "expected_output": "Declines maturity levels in at most three sentences (assessment not in use yet); offers the register's required scores as aims; one question.", "files": []},
+    {"id": 4, "name": "check-a-plan", "prompt": "Gap register: insight synthesis (weighted gap 61.7, required 8.25), content approval (44.1, required 8.25), call planning (24.5, required 7.25). Plan: insight synthesis - hire two analysts, owner Head of Sales Ops, check June 2027. Content approval - nothing yet. The call-prep assistant needs content approval closed first. Is our plan complete?", "expected_output": "Direct answer: not complete; content approval is a top gap with no plan and the call-prep assistant waits on it; call planning has no plan or deferral (third of three); insight synthesis plan has action, owner, date and aims at 8.25 by default; one offer.", "files": []},
+    {"id": 5, "name": "everything-in-one-prompt", "prompt": "Write up the capability build plan. Register: prescriber insight synthesis 61.7 (required 8.25); compliant content approval 44.1 (required 8.25); call planning at scale 24.5 (required 7.25). Plans: insight synthesis - train two analysts and buy a data service, owner Head of Sales Ops, check June 2027, aims 8; content approval - add one reviewer, owner Head of Compliance, check March 2027. Call planning - deferred: 'the assistant covers it if it works'. The AI call-prep assistant needs content approval closed first; its delivery job 'assistant drafts call plans' waits on insight synthesis.", "expected_output": "No questions; full report: all three top gaps covered (two planned, one deferred with the owner's reason); insight synthesis aims at 8 vs required 8.25, reason missing (gap); what waits table linking the assistant to content approval and the drafting job to insight synthesis; 'buy a data service' kept as a service type; no maturity levels; record uncleared.", "files": []},
+    {"id": 6, "name": "name-vendor", "prompt": "Which training provider should we use to close the tagging gap?", "expected_output": "Declines to name a vendor in at most three sentences; records 'external training' as a service type and asks who owns the action; one question.", "files": []}
+  ]
+}

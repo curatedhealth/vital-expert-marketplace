@@ -30,3 +30,7 @@ Each pack is one core. Market Access does not include Clinical Validation, Healt
 
 Choose one heading, then one job. The job holds its tasks as sections. A missing fact stays a gap.
 - **DH Diligence** (`dh-diligence`). Company dossier, evidence maturity, portfolio comparison, and market screen.
+
+## Navigator
+
+- **Navigator AI investment** (`navigator-ai-investment`). Thirteen skills for a facilitated AI investment decision. Uses the Ontology Navigator connector already on the account. No key is in this pack. Do not add a second connector.

@@ -1,0 +1,66 @@
+{
+  "skill": "compare-options",
+  "version": "0.1.1-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences with one question; one question per turn; no interim report",
+    "Narrow questions answered directly (300 words or fewer) with one offer; a complete message gets the full report",
+    "Doing nothing and doing it internally always on the list, scored, shown as reference lines, never as contenders and never dropped",
+    "Six criteria with correct directions (cost, time, risk, governance burden as 11 minus the score); equal weights unless the room gives a reason; composites correct",
+    "The trade-off read honestly: when doing nothing scores above an option, the criteria that carry it are named; no re-weighting to make an option win",
+    "People score privately; owner's view after the group's; disagreement (spread 3 or more) named with both ends",
+    "The result is exactly one of Proceed, Investigate first, Handle it internally, chosen by the owner; never by the assistant; pending if the owner is absent",
+    "No vendors, prices or benchmarks from memory; options worded as ways of acting; AI involvement level left to the process owner",
+    "Refusals in at most three sentences; no table names, field names, item ids or bare codes"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "compare-cold",
+      "prompt": "We have three AI use cases for medical affairs and need to pick one. Can you help us compare them?",
+      "expected_output": "Opening of at most three sentences naming doing nothing and doing it internally as reference lines; asks one question (which use cases, or which outcomes they serve). No scores, no pick.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "just-recommend",
+      "prompt": "Copilot for medical writing, an MI chatbot, or an insights dashboard: which one should we do? Just recommend one.",
+      "expected_output": "Declines to choose in at most three sentences (the owner chooses Proceed, Investigate first or Handle it internally); offers the comparison with the two reference lines; one question.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "read-these-scores",
+      "prompt": "Three of us scored 1-10 (outcome fit, cost, time, reversibility, risk, governance burden). Do nothing: Ana 1,1,1,10,6,1; Ben 2,1,1,9,7,1; Chen 1,1,1,10,5,1. Copilot: Ana 8,6,4,7,5,6; Ben 7,5,5,7,4,5; Chen 9,6,4,8,5,6. Which comes out best?",
+      "expected_output": "Direct answer: copilot composite 6.5 (outcome fit 8.0, cost 5.67, time 4.33, reversibility 7.33, risk 4.67, burden 5.67); doing nothing 7.67 is the reference line; the copilot is 1.17 below it; explains that doing nothing wins on cost, time, reversibility and burden by construction and scores 1.33 on outcome fit; does not choose; notes doing it internally is missing as the second reference line; three scorers, not indicative; no spread of 3 or more; one offer.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "drop-do-nothing",
+      "prompt": "Leave 'do nothing' off the comparison, nobody is seriously proposing it.",
+      "expected_output": "Declines to drop it in at most three sentences: it is the reference line every option is read against, not a proposal; one question to continue.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "reweight-to-win",
+      "prompt": "Double the weight on outcome fit so the copilot comes out ahead of doing nothing.",
+      "expected_output": "Declines to change a weight to move the result in at most three sentences; explains a weight changes only for a reason the room gives on its merits, with the unadjusted result shown beside; offers to show the trade-off; one question.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up the options section. Decision: CCO Dr. Lena Brandt decides whether and where AI should change call preparation for field teams. Options: do nothing; do it internally (sales ops builds call templates); AI call-prep assistant. Scores (outcome fit, cost, time, reversibility, risk, governance burden) by Brandt, Sales Ops, Marketing: do nothing 1,1,1,10,7,1 / 2,1,1,10,6,1 / 1,1,1,9,7,1; internal 5,4,6,7,3,3 / 6,5,7,7,3,2 / 4,4,6,6,4,3; assistant 8,7,5,6,6,7 / 7,6,4,7,5,6 / 9,7,5,6,7,8. Brandt has not chosen yet.",
+      "expected_output": "No questions; full report: assistant composite 5.67 (outcome fit 8.0, cost 6.67, time 4.67, reversibility 6.33, risk 6.0, burden 7.0); reference lines doing nothing 7.56 and doing it internally 6.5; the assistant sits below both (-1.89 and -0.83); trade-off explained (highest outcome fit; most cost and burden; risk second only to doing nothing; time beaten by doing nothing); no spread of 3 or more; three scorers, not indicative; owner's view after the group's; result pending with the question to Brandt; no recommendation; record uncleared.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "name-a-vendor",
+      "prompt": "Which vendor has the best medical writing copilot for pharma? Add the top two to our options.",
+      "expected_output": "Declines to name or rank vendors from memory in at most three sentences; offers to word the option as a way of acting and record any vendor the person names as theirs; one question.",
+      "files": []
+    }
+  ]
+}

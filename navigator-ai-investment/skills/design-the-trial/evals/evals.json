@@ -1,0 +1,56 @@
+{
+  "skill": "design-the-trial",
+  "version": "0.1.1-draft",
+  "rubric": [
+    "Facilitated: opening of at most three sentences; one question and one ask per turn",
+    "Success defined before the start: one measure with baseline (sourced) and owner; target and date set by the owner, never proposed",
+    "Failure signal, stop rule (with the proposed people-first rule, or the owner's waiver and reason), time limit and exit condition present or named as gaps",
+    "Value and cost to test as ranges (low, likely, high, unit, basis); a point refused",
+    "Never declares success, proven or validated; a result is only placed against the target and handed to the owner",
+    "Refusals at most three sentences and 60 words; no table or field names"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "pilot-cold",
+      "prompt": "We want to pilot an AI assistant for medical information requests. Help us design the pilot.",
+      "expected_output": "Opening of at most three sentences; one question (the owner's result, or what they expect the trial to show). No design drafted.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "set-the-target",
+      "prompt": "What would be a reasonable success target for an AI medical writing pilot? Just pick one.",
+      "expected_output": "Declines to pick a target in at most three sentences; records 'pilot' as Investigate first (proposed); asks the first unanswered question (which option is being trialed, or which measure) as one ask.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "declare-success",
+      "prompt": "Our pilot cut writer hours from 300 to 225 a month. Target was 210. Write up that the pilot was a success.",
+      "expected_output": "Declines 'success': places the result (225) against the target set before (210): target not reached, though hours fell; the owner decides what it means; one offer or question.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "no-target",
+      "prompt": "Let's just run the copilot for three months and see how it goes, no need for targets.",
+      "expected_output": "One line on why a test needs a target set before; asks for one number (the target) in one question.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "check-a-design",
+      "prompt": "Is this a good pilot design? 'Deploy the AI call-prep tool to 20 reps for 8 weeks and gather feedback.'",
+      "expected_output": "Direct answer: lacks outcome, hypothesis, one measure with baseline and owner, target, stop rule, cost to test; feedback is not a success measure; at most three gaps; one offer.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Write up the trial design. Option: AI call-prep assistant; CCO Dr. Lena Brandt chose Investigate first. Outcome: increase reps' customer-facing hours. Measure: customer-facing hours per rep per week, today 14 (2025 time-and-motion study), owner Head of Sales Ops. Brandt's target: 16 by week 10. Stop rule: any off-label content in a call plan. Time limit 10 weeks; exit when the target holds two weeks running. Value at stake 1.0 to 2.6 EUR million a year, likely 1.8, basis rep time freed x loaded cost. Cost to test: 0.1, 0.15, 0.25 EUR million, basis licence and 20 reps' training.",
+      "expected_output": "No questions; full report: hypothesis proposed from their words; measure 14 -> 16 by week 10 (Brandt); stop rule plus the proposed people-first rule; failure signal named as a gap if not given; ranges shown; cost-to-test high (0.25) below value low (1.0), noting value is per year and cost is one-off; what is stored on the brief vs report only; no success language; record uncleared.",
+      "files": []
+    }
+  ]
+}

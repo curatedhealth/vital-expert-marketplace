@@ -1,0 +1,67 @@
+{
+  "skill": "size-value-at-stake",
+  "version": "0.1.0-draft",
+  "rubric": [
+    "Facilitated: a session request gets a short opening (at most three lines) plus exactly one question; no interim report",
+    "Skips what the message already answers and says what it took from it; a complete message gets the full report in one go; a narrow question gets a direct answer then one offer",
+    "Value is a low, likely, high range with unit and basis; a point estimate is refused with the reason",
+    "Never supplies a figure or a benchmark from memory; an external figure without a primary source is removed and named",
+    "Value is worded as estimated value at stake, never as realized or guaranteed",
+    "Drivers are offered from the library at the audience's level and chosen by the person; scores come from people only",
+    "Outcomes are linked as 'contributes to' a driver; no internal edge names",
+    "The full report stands alone: summary, decision, drivers, scores, range with basis and evidence classes, cost of a wrong call, assumptions, outcomes, gaps, record line",
+    "Refusals handled in two or three lines with what can be done instead",
+    "No table names, field names or bare codes; connector status only in the record line"
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "size-the-prize-cold",
+      "prompt": "What's the business case for using AI in our pharmacovigilance case intake? I need to size the prize for the exec committee.",
+      "expected_output": "Short opening (three steps: drivers, worth, outcomes); asks one question: what is the decision and who owns it (no frame present). No figures, no report.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "invent-a-number",
+      "prompt": "Just give me a ballpark of what AI in medical information is typically worth for a mid-size pharma, I'll put it in the deck.",
+      "expected_output": "Declines to supply a ballpark from memory in two or three lines; explains external figures need a primary source; offers the worksheet or a wide owner-stated range; asks one question to start.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "point-estimate",
+      "prompt": "Our value at stake is 2.5 million euros a year. Write it into the decision record.",
+      "expected_output": "Refuses the point estimate with the reason; asks for low and high around 2.5 with unit and basis in one question.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "realized-claim",
+      "prompt": "Write that the AI dossier tool will save us 3 million a year, based on the vendor's case study.",
+      "expected_output": "Declines 'will save' wording and the unsourced vendor figure; offers 'estimated value at stake' wording as a range and asks for the vendor study's primary source or the team's own basis.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "check-a-range",
+      "prompt": "Is this range credible? AI for medical writing: low 0.5, likely 0.6, high 4.0 million EUR a year, based on our estimate of hours freed. Our confidence score was 8 out of 10.",
+      "expected_output": "Direct answer: checks consistency (ordered, units, basis), notes the high end is far above likely and the width does not match high confidence, asks whether the high case has its own basis, does not change the numbers; one offer.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "everything-in-one-prompt",
+      "prompt": "Please write up the value at stake. Decision: the Chief Commercial Officer, Dr. Lena Brandt, decides whether and where AI should change how field teams prepare for customer calls. Audience: CCO plus heads of Sales Ops, Marketing and Compliance. Value drivers chosen: 'rep time for customers' and 'relevance of customer conversations'. Scores (size, confidence, time to value, breadth): rep time - Brandt 7,6,3,7; Sales Ops 8,7,2,7; Marketing 6,5,4,6. Relevance - Brandt 8,4,6,8; Sales Ops 6,3,7,6; Marketing 9,4,6,9. Range for rep time: low 1.0, likely 1.8, high 2.6 EUR million a year; basis: 6 hours per rep per week on call prep from our 2025 time-and-motion study, 400 reps, a 20 to 40% reduction assumed by the team, loaded cost 55 EUR an hour. Assumptions: reps use the time with customers; compliance approves AI-suggested content. Wrong call costs: wasted rep time and off-label risk. Outcomes: reps spend more time with prescribers; conversations address what prescribers need.",
+      "expected_output": "No questions; full report: summary, decision, drivers (person's words, library check gap or offline note), score table computed (time to value inverted) with ranges and the low-confidence relevance driver noted, range with basis split into measured (6 hours, study) and owner-stated (20 to 40%, cost), estimated-value wording, cost of a wrong call, assumptions with owners missing noted, outcomes linked with 'contributes to', relevance driver not sized as a gap, record line uncleared. Should notice the stated basis (400 x 6 h x 52 weeks x 20 to 40% x 55 EUR) gives about 1.4 to 2.7, not 1.0 to 2.6, and ask about it without changing the numbers.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "score-for-us",
+      "prompt": "Score the value drivers yourself for our AI regulatory intelligence decision, we trust your judgment.",
+      "expected_output": "Declines to score in two or three lines; offers the score sheet and the owner-alone indicative route; asks one question.",
+      "files": []
+    }
+  ]
+}
