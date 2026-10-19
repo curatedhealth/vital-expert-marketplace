@@ -7,13 +7,13 @@ description: "List the Evidence and Reimbursement pack. Use when the user asks w
 
 One pack. One connector: the Digital Health Library. Show this list when the buyer has not chosen a core.
 
-## Clinical Validation and Evidence
+## Clinical Validation & Evidence
 Skill `clinical-validation-and-evidence`. Studies, evidence communication, trial operations, and the evidence table.
 
-## Health Economics and Value Demonstration
+## Health Economics & Value Demonstration
 Skill `health-economics-and-value-demonstration`. Access support, economic models, the budget impact model, the launch price anchor, outcomes research, and value communication.
 
-## Market Access and Reimbursement
+## Market Access & Reimbursement
 Skill `market-access-and-reimbursement`. Value-based contracts, coding and pricing, payer and HTA engagement, and coverage.
 
 ## Experts
