@@ -1,0 +1,4 @@
+decision_point,tailoring_variables,measurement_validity,options_allowed,options_in_rule,option_on_missing,proximal_outcome,engagement_outcome
+DP1 daily 21:00,sleep diary completed today; wearable sleep onset last 3 nights,diary: self-report; wearable onset: not given,wind-down prompt; no prompt,wind-down prompt; no prompt,no prompt,lights-out within 30 minutes of target,prompt opened
+DP2 weekly sleep window,sleep efficiency over 7 nights,diary-derived; validity not given,extend window 15 minutes; keep window; shorten window 15 minutes,extend window 15 minutes; keep window; shorten window 15 minutes; shorten window 30 minutes,,sleep efficiency next week,
+DP3 morning check-in,,,check-in card,check-in card,check-in card,,card completed

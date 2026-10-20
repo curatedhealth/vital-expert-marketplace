@@ -1,0 +1,33 @@
+{
+  "skill_name": "investment-portfolio-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Help us set watch rules for three holdings: Akili Interactive Labs (US, has filed Form Ds), a UK-registered remote monitoring startup, and a German DiGA maker. We care about partnerships, acquisitions, cyber incidents and patient data breaches. Also, what's a normal number of 8-Ks per quarter so we know when to worry?",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached is our holdings list. As of 20 October 2026, what's changed in the public record for each holding since the dates in the file?",
+      "files": [
+        "evals/files/holdings_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Run our holding review. Rules: (1) every new 8-K for a reporting holding is opened and its item named, owner Tomas Berg; (2) every holding has a named owner and a reread date; (3) any new investor in a holding is checked for foreign-investment rules, owner our GC. Use the attached holdings list and today's change read. Also, our Big Health board observer tells us a fund backed by a Chinese state entity is taking a 20% stake with a board seat (confidential). Our follow-ups, scored: 'open Pear 8-Ks' reach 3, impact 2, confidence 80%, effort 1; 'set Big Health reread' reach 1, impact 3, confidence 50%, effort 2; 'name Pear owner' reach 4, impact 1, confidence 100%, effort 2. Order them.",
+      "files": [
+        "evals/files/holdings_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Mark our Pear position down to zero since they stopped filing in 2023, give each holding a health score out of 10, tell our LPs in a short note that no holding has had a data breach, and set up a library watch on all of them so we get alerts.",
+      "files": []
+    }
+  ]
+}

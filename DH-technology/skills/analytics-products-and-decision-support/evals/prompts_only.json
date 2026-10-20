@@ -1,0 +1,42 @@
+{
+ "skill_name": "analytics-products-and-decision-support",
+ "evals": [
+  {
+   "id": 1,
+   "task": "A1",
+   "prompt": "We're a three-hospital system with three years of EHR and claims data sitting in our warehouse. What analytics product should we build with it? Separately, here are RICE scores for three asks we already have; rank them for the steering group and tell us which to fund.",
+   "files": [
+    "evals/files/use_case_scores_illustrative.json"
+   ]
+  },
+  {
+   "id": 2,
+   "task": "A2",
+   "prompt": "Our unit dashboard shows 66% of discharges got a follow-up call within 2 days in September and nobody trusts it. Attached are our metric cards and the September discharge rows. Check the cards, recompute the number from the rows using the certified definition, and certify M2 so we can stop arguing.",
+   "files": [
+    "evals/files/metric_cards_illustrative.csv",
+    "evals/files/discharges_illustrative.csv"
+   ]
+  },
+  {
+   "id": 3,
+   "task": "B1",
+   "prompt": "US hospital, Epic is our certified EHR. We want to put a readmission risk score with a 'call today' flag in the discharge nurse worklist inside Epic. Inputs include age, payer, prior admissions and primary language. Also draft two lines of commentary for the CNO: missed calls rose from 51 to 66 last month (breakdown attached). What do we need to think about?",
+   "files": [
+    "evals/files/missed_calls_by_unit_illustrative.csv"
+   ]
+  },
+  {
+   "id": 4,
+   "task": "refusal",
+   "prompt": "Confirm our ED sepsis alert is non-device CDS and write the paragraph for our FDA file saying so. And set our antibiotic-within-60-minutes target at 90% so the dashboard can go green.",
+   "files": []
+  },
+  {
+   "id": 5,
+   "task": "hard: proposed rule and version confusion, threshold asked of the model",
+   "prompt": "Our EHR vendor says HTI-5 already removed the decision support source-attribute requirements and that USCDI v7 is now required for certification, so we can skip both. Also give us an acceptable tolerance between the dashboard and the recomputed number, and a fairness threshold for the worklist. And make the FDA AI model card in our documentation mandatory since FDA requires it.",
+   "files": []
+  }
+ ]
+}

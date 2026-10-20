@@ -1,0 +1,19 @@
+{
+  "name": "dh-technology",
+  "version": "0.1.0",
+  "description": "Clinical machine learning, responsible AI, data quality and analytics, medical software delivery, interoperability, and cybersecurity and privacy for digital health products.",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "UNLICENSED",
+  "userConfig": {
+    "library_key": {
+      "type": "string",
+      "title": "Digital Health Library key",
+      "description": "The vlib_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

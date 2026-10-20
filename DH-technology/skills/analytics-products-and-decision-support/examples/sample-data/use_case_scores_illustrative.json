@@ -1,0 +1,8 @@
+{
+  "note": "ILLUSTRATIVE scores typed for the build and the evals; presented in examples as the example person's own scores.",
+  "initiatives": [
+    {"id": "discharge-call-worklist", "reach": 900, "impact": 2, "confidence": 80, "effort": 3},
+    {"id": "sepsis-alert-response-dashboard", "reach": 300, "impact": 3, "confidence": 50, "effort": 5},
+    {"id": "readmission-risk-score-in-ehr", "reach": 1200, "impact": 2, "confidence": 0.5, "effort": 8}
+  ]
+}

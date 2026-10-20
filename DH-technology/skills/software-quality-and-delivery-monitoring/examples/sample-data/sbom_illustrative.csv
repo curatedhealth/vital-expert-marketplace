@@ -1,0 +1,6 @@
+component,version,supplier,support_level,end_of_support,cves
+Mobile OS runtime,17.5,Apple Inc.,maintained,,
+Local database library,3.39.2,SQLite Consortium,maintained,2027-12-31,CVE-2099-00017
+Charting library,4.1.0,,abandoned,2025-06-30,
+Cloud sync SDK,2.8,ExampleCloud Ltd,end of life,2026-03-31,CVE-2099-00042;CVE-2099-00043
+TLS library,3.0.13,OpenSSL Project,maintained,2026-09-07,

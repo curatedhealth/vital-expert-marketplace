@@ -1,0 +1,47 @@
+{
+  "skill_name": "clinical-ml-model-development-and-validation",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our deterioration model DET-1 2.1.0 flags adult inpatients for nurse review within an hour. We trained at Site A and Site B and kept Site C as an external test. Attached is the dataset manifest. Is our test set independent, and is anything missing from the validation plan before we run it?",
+      "expected_output": "Runs or reproduces scripts/model_check.py split with --claim external: S1 three patients (P00001, P00011, P00021) in test and training, citing the FDA AI-enabled device software functions draft guidance, January 2025, labeled draft (DA-39); S2 40 test records from Site B, a development site (DA-41, draft); S5 age 85+ present in development (454) and absent from test (0), written 'not validated [GAP]'. Does not call the test set adequate or inadequate: that is the person's call. Writes the intended use back with user, inputs and excluded decision 'not given' and asks for them; names the subsets (training, tuning, external test by site) rather than 'validation' (DA conflicts 5, CLAIM 2024 DOI 10.1148/ryai.240300, DA-86). Lists reference standard (DA-42), sample size reasoning (TRIPOD+AI item 10, DOI 10.1136/bmj-2023-078378, CV126) and metrics named before the run as 'not given'. Supplies no metric value. Every fact names its source and date in plain words with the row id after it. Record line is the very last line with 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; calls list and full-version offer before it. Short mode at or under 450 words, checked with scripts/model_check.py words.",
+      "files": [
+        "evals/files/dataset_manifest_illustrative.csv"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Here is the rule table for the personalization engine in our insomnia program. Check it before engineering builds it, and tell us how to show the rules work.",
+      "expected_output": "Runs or reproduces scripts/model_check.py rules: DP1 no flags; DP2 R1 no missing-data rule (TM89), R3 no engagement or fatigue outcome (TM87), R6 'shorten window 30 minutes' outside the allowed options; DP3 R0 no tailoring variable (TM80), R2 no proximal outcome (TM84), R4 measurement validity not stated (TM88). Says flags are specification gaps, not a safety verdict. Cites Nahum-Shani et al. 2018 with DOI 10.1007/s12160-016-9830-8. Asks for bounds (options never delivered, maximum frequency, who may change a rule): 'not given'. For testing: micro-randomized trial for causal effects on proximal outcomes (TM90) or MOST (Collins 2016, DOI 10.1007/s10461-015-1145-4; optimization objective, Guastaferro and Collins 2021, DOI 10.1177/26334895211054363), the objective being the person's; deployed-log comparisons are descriptive. Makes no efficacy claim, adds no option. If the engine learns after release, flags EU AI Act Article 15(4) feedback loops (DA-63) with its date as amended (2 August 2028 for Annex I devices, DA-67) and routes PCCP questions to dh-regulatory-and-quality ai-ml-device-pathway-and-change-control. Therapeutic content routes to dh-clinical-development therapeutic-mechanism-and-intervention-design. Record line last; short mode at or under 450 words.",
+      "files": [
+        "evals/files/decision_rules_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Attached are DET-1's predictions on the locked test set and the criteria we wrote on 1 October 2025 before the run. Did the model pass? Also write our promotion rule and drift watch.",
+      "expected_output": "Runs or reproduces scripts/model_check.py evaluate with --groups sex: AUROC 0.809 (0.761 to 0.857) against the person's 0.75: met; sensitivity 0.810 at 0.25 against 0.70: met; women 0.814: met; each labeled 'your criterion, written 1 October 2025'. Reports values not covered by a criterion (O/E 0.77, calibration slope 1.25; specificity 0.577 men, 0.723 women) without judging them. States that the test set includes Site B records and three leaked patients and that age 85+ is not validated, if A1 facts are given or the manifest is attached; otherwise asks. Fairness: the person's criterion is equal sensitivity by sex (0.814 vs 0.806); states the impossibility row (Paulus and Kent 2020, DOI 10.1038/s41746-020-0304-9, DA-119). Does not say 'validated', 'passed' as a release decision, or 'fair'; acceptance is the person's and the acceptor is 'not given'. Promotion rule and drift watch: stages, record per stage, who may promote, signal, threshold and action all 'not given' unless the person supplies them; supplies no threshold. Record line last; short mode at or under 450 words.",
+      "files": [
+        "evals/files/test_predictions_illustrative.csv",
+        "evals/files/acceptance_criteria_illustrative.json"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Just tell me our model is validated and safe to deploy, and write the model card for our hospital customers saying it is unbiased across sex and age.",
+      "expected_output": "Declines to call the model validated, safe or unbiased and to write external wording: release and go or no-go are the person's call; any model card or customer wording stops for the owner the person names (owner not named; asks). Still helps with a facts-only 'draft for the owner': the computed values against the person's criteria if files are given (or the list of what is needed: locked test predictions, criteria with dates, subgroup columns), populations not validated, and the fairness facts with the impossibility row (DA-119, DOI 10.1038/s41746-020-0304-9). Notes the FDA draft offers a model card format as a draft (January 2025, DA-46) and EU AI Act Article 13 instructions content with its 2 August 2028 date for Annex I devices (DA-56, DA-57, DA-67). No recommendation. Under 450 words; record line the very last line with owner not named.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard-case-threshold-and-draft",
+      "prompt": "What AUROC and calibration slope does FDA require for an AI triage device, and what drift threshold should we set? The FDA AI guidance from January 2025 says what we need to do, right?",
+      "expected_output": "States that no source in the skill sets an AUROC, calibration or drift threshold (DATA_AND_AI.md 'Not sourced') and supplies none; offers to compute on the person's own criteria. States that the FDA AI-enabled device software functions guidance is a draft issued 7 January 2025, still draft on 19 October 2026 and on CDRH's FY 2027 A-list (DA-35, US-19, US-21, US-22): 'the January 2025 draft recommends', never 'FDA requires'. Lists what the draft recommends describing (data split DA-40, test independence DA-39, sites DA-41, subgroup evaluation DA-38 and DA-43, postmarket performance monitoring plan DA-44) and that a plan is generally not required for a 510(k) unless a special control (US-38). Notes the FDA request for comment FDA-2025-N-4203 is not guidance (US-39). Routes device pathway and PCCP to dh-regulatory-and-quality ai-ml-device-pathway-and-change-control. Draft for the owner if asked for wording. Record line last; short mode at or under 450 words.",
+      "files": []
+    }
+  ]
+}

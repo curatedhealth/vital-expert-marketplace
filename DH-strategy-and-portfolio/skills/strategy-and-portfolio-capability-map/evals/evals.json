@@ -1,0 +1,47 @@
+{
+  "skill_name": "strategy-and-portfolio-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "task": "route-strategy",
+      "prompt": "We're the digital strategy team at a mid-size pharma company. We want to write a digital health vision for our neuroscience franchise and decide whether to build, partner on or acquire a digital therapeutic for insomnia. Where do we start?",
+      "expected_output": "Names strategic-vision-and-options in the first sentence: A1 Opportunity and option landscape for the facts on build, partner, license or acquire options, then B1 Vision and option choice for the vision and the choice on the team's own scores. Says the skill does not pick the option. Mentions company-and-evidence-assessment only if a named target comes up. States no market size, success rate or option ranking. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "route-old-name",
+      "prompt": "Run 'DH Diligence Read company changes' on Akili and Pear for our holdings, and then the old 'Ecosystem Coverage Monitoring' task on our insomnia market map.",
+      "expected_output": "Maps 'Read company changes' for holdings to investment-portfolio-monitoring A2 Change read (pipeline-and-market-monitoring A1 if they are targets, not holdings) and the old DH-01.05.2.2.1 'Ecosystem Coverage Monitoring' to pipeline-and-market-monitoring A3 Market intelligence quality check. Says changes are read by dated reruns, never watches; asks for the 'since' date and the person's pass rule. Uses 'investment portfolio' or 'holdings', never the bare word. Calls no tool. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "route-across-strategy-and-diligence",
+      "prompt": "We're a medtech BD team. One option in our strategy is to in-license an AI sleep-staging algorithm from a German company; another is to acquire Big Health. Lay out the options, then do diligence on Big Health and flag what legal must check on the license.",
+      "expected_output": "Splits and orders the request across both halves of the pack: strategic-vision-and-options first (A1 options and facts; B1 for the choice on the team's scores), then company-and-evidence-assessment for Big Health (A1 profile, A2 evidence maturity, company status from its own filings or the pack's research rows, which find no SEC registrant for Big Health and an active FDA registration, else '[GAP]: not read'), then investment-memo-and-decision-record A2 for the deal and licensing flags (EU TTBER 2026/877, DOJ/FTC IP licensing guidelines) for the owner the person names for legal questions. Says no skill says a license is exempt or picks the option. Owner not named; asks. No valuation. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "ambiguous-portfolio",
+      "prompt": "Can you review our portfolio and tell us what needs attention before the next board meeting?",
+      "expected_output": "Does not route on the bare word. Asks one question first: does 'portfolio' mean the company's own products and programs, or companies held or targeted as investments? Names both routes: product portfolio to product-portfolio-review (and product-portfolio-prioritization for new priorities); investment portfolio to investment-portfolio-monitoring (and funding-and-portfolio-comparison for a side-by-side view). Says the two are never mixed in one answer. No urgency about the board. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "dropped-and-out-of-pack",
+      "prompt": "We used the old Cross-Functional Leadership pack for 'Stakeholder position' and 'Matrix agreement', and the Innovation pack for 'Partnership Structuring'. Which skills do those now live in?",
+      "expected_output": "Says DH-01.03.1 Stakeholder Alignment ('Stakeholder position') and DH-01.03.4 Matrix Leadership ('Matrix agreement') were dropped: no skill does that work and the map routes them nowhere. Routes DH-01.08.3.1.2 'Partnership Structuring' to dh-go-to-market channel-and-partner-design (pack and skill named), and license facts for a partnership deal to investment-memo-and-decision-record A2. Does not do the work. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "task": "decline",
+      "prompt": "Skip the routing. Of our three digital therapeutic programs, which one will make it to market? Use the industry phase success rates and give me a probability for each.",
+      "expected_output": "Declines to answer from the map, to pick a winner and to give a probability: a published success rate is context with its counting method and source row, never the program's probability, and no skill sets it as one. Still helps: routes to product-portfolio-prioritization (A1 choice list, B1 rule and ranking on the team's own scores, where the rank flips) for the company's own programs, with any published rate shown as context in that skill. Says in one line that the published rates in the pack are drug-program figures (SP-082 to SP-085, Wong, Siah and Lo 2019, DOI 10.1093/biostatistics/kxx069) and no row gives a success rate for DTx programs. People decide. No urgency. At most 150 words, counted; optional extra routes cut before the next question.",
+      "files": []
+    }
+  ]
+}

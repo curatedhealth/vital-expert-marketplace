@@ -1,0 +1,10 @@
+feature,source_field,window_start_days,window_end_days,missing_code,available_at_decision,protected_input,outcome_derived
+prior_admissions_12m,encounter.admit_date,-365,0,0,yes,no,no
+nt_probnp_last,lab.loinc_33762-6,-30,0,blank,yes,no,no
+daily_weight_trend_7d,rpm.weight_kg,-7,0,,yes,no,no
+age_at_index,person.birth_date,0,0,not applicable,yes,yes,no
+race_category,person.race_concept_id,0,0,unknown,yes,yes,no
+discharge_disposition_code,encounter.discharge_disposition,0,2,,not given,no,no
+days_to_first_nurse_call,outreach.call_date,0,14,none,no,no,no
+readmit_flag_any_30d,encounter.readmit_30d,0,30,,no,no,yes
+insurance_type,,,,unknown,yes,no,no

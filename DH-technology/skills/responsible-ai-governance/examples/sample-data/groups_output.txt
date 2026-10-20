@@ -1,0 +1,29 @@
+Dataset: holdout-2026Q2-illustrative | Model: v2.1 | Threshold: 0.3 | Reference group: English
+Rows read: 700; skipped (outcome or prediction unreadable): 0; group not recorded: 20
+
+| Group | n | Outcome rate | Mean score | O/E | Sensitivity (95% CI) | Specificity (95% CI) | PPV | NPV | FNR | FPR | Selection rate |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| (group not recorded) | 20 | 0.250 | 0.257 | 0.97 | 0.600 (3/5; 0.231 to 0.882) | 0.867 (13/15; 0.621 to 0.963) | 0.600 (3/5) | 0.867 (13/15) | 0.400 (2/5) | 0.133 (2/15) | 0.250 (5/20) |
+| English | 400 | 0.122 | 0.228 | 0.54 | 0.714 (35/49; 0.576 to 0.822) | 0.809 (284/351; 0.765 to 0.847) | 0.343 (35/102) | 0.953 (284/298) | 0.286 (14/49) | 0.191 (67/351) | 0.255 (102/400) |
+| Other language | 80 | 0.113 | 0.241 | 0.47 | 0.889 (8/9; 0.565 to 0.980) | 0.746 (53/71; 0.634 to 0.833) | 0.308 (8/26) | 0.981 (53/54) | 0.111 (1/9) | 0.254 (18/71) | 0.325 (26/80) |
+| Spanish | 200 | 0.160 | 0.225 | 0.71 | 0.312 (10/32; 0.180 to 0.486) | 0.786 (132/168; 0.718 to 0.841) | 0.217 (10/46) | 0.857 (132/154) | 0.688 (22/32) | 0.214 (36/168) | 0.230 (46/200) |
+| Interpreter-assisted visits | [GAP]: not visible in this data; not tested | | | | | | | | | | |
+
+Differences against your reference group 'English' (group minus reference; ratio group/reference):
+| Group | Metric | Group value | Reference value | Difference | Ratio |
+|---|---|---|---|---|---|
+| Other language | sensitivity | 0.889 | 0.714 | +0.175 | 1.24 |
+| Other language | specificity | 0.746 | 0.809 | -0.063 | 0.92 |
+| Other language | ppv | 0.308 | 0.343 | -0.035 | 0.90 |
+| Other language | fpr | 0.254 | 0.191 | +0.063 | 1.33 |
+| Other language | fnr | 0.111 | 0.286 | -0.175 | 0.39 |
+| Other language | selection_rate | 0.325 | 0.255 | +0.070 | 1.27 |
+| Spanish | sensitivity | 0.312 | 0.714 | -0.402 | 0.44 |
+| Spanish | specificity | 0.786 | 0.809 | -0.023 | 0.97 |
+| Spanish | ppv | 0.217 | 0.343 | -0.126 | 0.63 |
+| Spanish | fpr | 0.214 | 0.191 | +0.023 | 1.12 |
+| Spanish | fnr | 0.688 | 0.286 | +0.402 | 2.41 |
+| Spanish | selection_rate | 0.230 | 0.255 | -0.025 | 0.90 |
+
+Outcome rates differ between groups (Other language 0.113, Spanish 0.160). For any single threshold, a well-calibrated model will not have the same sensitivity and specificity for groups with different outcome rates (Paulus and Kent 2020, DA-119, DOI 10.1038/s41746-020-0304-9). Which criterion fits the decision is yours (DA-116).
+No pass or fail is printed: the criterion, the allowed difference and the decision are yours.

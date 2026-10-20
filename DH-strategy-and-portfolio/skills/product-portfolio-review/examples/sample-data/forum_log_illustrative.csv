@@ -1,0 +1,5 @@
+item,decision,rule_ref,rank,decider,date,record_location,capacity_use,s_unmet_need,s_evidence_readiness,s_regulatory_path_clarity,s_strategic_fit,s_capacity_fit
+Program A: insomnia DTx label expansion,continue,Rule 2026-09,1,Dana Okafor,2026-07-08,board minutes 8 July 2026,5,3,4,4,3,3
+Program B: anxiety DTx pivotal study,continue,Rule 2026-09,2,Dana Okafor,2026-07-08,board minutes 8 July 2026,7,4,2,2,4,1
+Program C: clinician dashboard add-on,continue,,,Dana Okafor,2026-07-08,steering deck slide 14,3,2,3,3,2,4
+Program D: pediatric ADHD prototype,stop,Rule 2026-09,4,,2026-07-08,,4,4,1,1,3,2

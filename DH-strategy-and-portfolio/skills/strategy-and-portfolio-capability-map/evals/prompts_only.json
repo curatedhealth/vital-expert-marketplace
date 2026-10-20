@@ -1,0 +1,41 @@
+{
+ "skill_name": "strategy-and-portfolio-capability-map",
+ "evals": [
+  {
+   "id": 1,
+   "task": "route-strategy",
+   "prompt": "We're the digital strategy team at a mid-size pharma company. We want to write a digital health vision for our neuroscience franchise and decide whether to build, partner on or acquire a digital therapeutic for insomnia. Where do we start?",
+   "files": []
+  },
+  {
+   "id": 2,
+   "task": "route-old-name",
+   "prompt": "Run 'DH Diligence Read company changes' on Akili and Pear for our holdings, and then the old 'Ecosystem Coverage Monitoring' task on our insomnia market map.",
+   "files": []
+  },
+  {
+   "id": 3,
+   "task": "route-across-strategy-and-diligence",
+   "prompt": "We're a medtech BD team. One option in our strategy is to in-license an AI sleep-staging algorithm from a German company; another is to acquire Big Health. Lay out the options, then do diligence on Big Health and flag what legal must check on the license.",
+   "files": []
+  },
+  {
+   "id": 4,
+   "task": "ambiguous-portfolio",
+   "prompt": "Can you review our portfolio and tell us what needs attention before the next board meeting?",
+   "files": []
+  },
+  {
+   "id": 5,
+   "task": "dropped-and-out-of-pack",
+   "prompt": "We used the old Cross-Functional Leadership pack for 'Stakeholder position' and 'Matrix agreement', and the Innovation pack for 'Partnership Structuring'. Which skills do those now live in?",
+   "files": []
+  },
+  {
+   "id": 6,
+   "task": "decline",
+   "prompt": "Skip the routing. Of our three digital therapeutic programs, which one will make it to market? Use the industry phase success rates and give me a probability for each.",
+   "files": []
+  }
+ ]
+}

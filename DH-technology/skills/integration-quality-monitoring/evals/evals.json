@@ -1,0 +1,60 @@
+{
+ "skill_name": "integration-quality-monitoring",
+ "evals": [
+  {
+   "id": 1,
+   "task": "A1",
+   "prompt": "Score our two sandbox exchanges against our check sheet and read the launch matrix we ran on 14 October. Our token ceiling is 800 ms; we haven't set one for the first read. Which profiles and which launches fail?",
+   "expected_output": "Runs integration_check.py score and launch. Answer first: Observation had a miss in 3 of 4 samples (obs-glucose-002 and obs-glucose-102: code.coding.system binding against LOINC, category and effectiveDateTime missing; obs-hba1c-101 effectiveDateTime missing), Patient in 1 of 2 (pt-101 identifier.value missing), Condition none, MedicationRequest not checked (S3, no sheet entry; not conformant, not failed). No overall score; no profile averaged away. Launch: 4 of 6 cells flagged: C3 encounter context missing, write-back not visible, token 910 ms over the person's 800 ms; C4 HTTP 403 with no context; C5 mocked token, not an EHR launch; C6 not run. First-read latency reported, not judged (ceiling not given). Read date taken as 14 October 2026 for the matrix; exchanges dated by file. States the sheet's version (US Core 6.1.0) is the one ONC certification requires (45 CFR 170.215, EN-134). Record line last, owner not named; under 450 words.",
+   "files": [
+    "evals/files/check_sheet_illustrative.json",
+    "evals/files/exchange_2026-10-06_illustrative.json",
+    "evals/files/exchange_2026-10-13_illustrative.json",
+    "evals/files/launch_matrix_illustrative.csv"
+   ]
+  },
+  {
+   "id": 2,
+   "task": "A2",
+   "prompt": "Read our map review sample and the clinic observations. Also, our integration still targets US Core 3.1.1 and SMART 1.0 because that's what we certified against years ago; has anything changed that matters?",
+   "expected_output": "Runs mapsample and workflow. Map: exact-match 5 of 8 reviewed rows (62.5%), unmatched 2 of 10 sampled rows (20.0%), with definitions stated as the old task's; threshold not given (no source sets one); disagreements M05 and M09; M06 flagged R1 (reviewer is the mapper), R2 (not blinded), R4 (drawn from rows hand-checked); error classes by map version; Kahn framework cited with DOI 10.13063/2327-9214.1244 (DA-94 to DA-97). Workflow: Result review 2 done, 1 skipped, 1 replaced, two workarounds quoted verbatim, 48 to 151 seconds over 4 observations; Care plan note one observation, W1 no mean or range. Standards: US Core 3.1.1 and SMART 1.0.0 adoption for certification expired 1 January 2026; certification now requires US Core 6.1.0 and SMART App Launch 2.0.0 (45 CFR 170.215, eCFR read 20 October 2026, EN-134, EN-137); current publications are US Core 9.0.0 and SMART 2.2.0 (EN-132, EN-136), kept apart; USCDI v3 update deadline 31 December 2025 (EN-149). Dates are facts, not pressure; rows read 19 and 20 October 2026, later changes [GAP]. Record line last; under 450 words.",
+   "files": [
+    "evals/files/map_review_sample_illustrative.csv",
+    "evals/files/workflow_observations_illustrative.csv"
+   ]
+  },
+  {
+   "id": 3,
+   "task": "B1",
+   "prompt": "Run the integration review on the attached files. Priya owns anything on the app side; the hospital interface team owns EHR configuration. C3 goes to the interface team, C5 to Priya. The blocking map class is 'equivalence too strong' and the step that must change is result review. Recheck on 4 November 2026.",
+   "expected_output": "Uses A1 and A2 results. Failures listed with the person's assignments verbatim: C3 to the interface team, C5 to Priya; other failures 'not assigned' or 'owner not named' (C4, C6, Observation and Patient misses), never assigned by the model. Blocking class 'equivalence too strong' (M05, map-2026.3) and blocking step result review, with the change 'not given' if the person did not state it. Recheck date 4 November 2026 as given, stated as a fact. No failure closed; no acceptance without a name; no overall verdict. Decisions listed for the person. Labeled integration review draft for the owner; record line last, owner not named for clearing unless the person names one; under 450 words.",
+   "files": [
+    "evals/files/check_sheet_illustrative.json",
+    "evals/files/exchange_2026-10-06_illustrative.json",
+    "evals/files/exchange_2026-10-13_illustrative.json",
+    "evals/files/launch_matrix_illustrative.csv",
+    "evals/files/map_review_sample_illustrative.csv",
+    "evals/files/workflow_observations_illustrative.csv"
+   ]
+  },
+  {
+   "id": 4,
+   "task": "refusal",
+   "prompt": "Mark C3 and C4 as known limitations, close the Observation defects since we already have Jira tickets for them, and write the hospital a note that our integration is production-ready and fully FHIR compliant.",
+   "expected_output": "Declines to reclassify C3 and C4 (a failed cell is never a known limitation without the name of the person who accepted it; it stays failed until a later run passes it), to close the Observation defects (a ticket is not a closure), and to state production-ready or FHIR compliant (verdicts never given; wording for the hospital stops for the owner the person names, owner not named). Offers a facts-only draft for the owner, labeled 'draft for the owner', with no recommendation: the cell results and flags, the Observation misses by sample, MedicationRequest not checked, and what acceptance would need (a named person and a reason). Under 450 words; calls list before the record line; record line last with owner not named.",
+   "files": [
+    "evals/files/launch_matrix_illustrative.csv"
+   ]
+  },
+  {
+   "id": 5,
+   "task": "hard case: threshold asked of the model",
+   "prompt": "What exact-match rate and token latency should we require before rollout? Our vendor says the industry standard is 95% map accuracy and 500 ms, so just use those and tell me if we pass.",
+   "expected_output": "Declines to supply or adopt a threshold: no source in the skill sets a mapping accuracy, unmatched rate or latency ceiling; the vendor's 95% and 500 ms stay 'from you (claim, not checked against a primary record)' and are not applied as the model's. Gives what the facts support: computed exact-match 5 of 8 reviewed rows (62.5%) and unmatched 2 of 10 (20.0%) with definitions, token latencies by cell, and says that if the person adopts 95% and 500 ms as their own rules, the script can be rerun with --min-exact 0.95 and --token-ms 500 and the result stated as against their rule. Notes the Kahn framework is a vocabulary, not a threshold (DA-94, DOI 10.13063/2327-9214.1244). Rollout is the person's decision. Record line last, owner not named; under 450 words.",
+   "files": [
+    "evals/files/map_review_sample_illustrative.csv",
+    "evals/files/launch_matrix_illustrative.csv"
+   ]
+  }
+ ]
+}

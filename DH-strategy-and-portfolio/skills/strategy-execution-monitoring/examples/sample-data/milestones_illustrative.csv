@@ -1,0 +1,6 @@
+id,milestone,objective,owner,due,completed_on,evidence,depends_on,pass_rule_elements,recheck_date
+M1,Data protection impact assessment signed,O1,Priya Nair,2026-03-31,2026-03-20,DPIA v2 signed 20 March 2026,,owner;evidence;on_time,
+M2,EHR integration live in region North,O1,Tom Avery,2026-06-30,2026-08-14,go-live note 14 August 2026,M1,owner;evidence;on_time,2026-11-01
+M3,Region South contract signed,O1,,2026-07-31,,,,owner;evidence;on_time,
+M4,Nurse workflow redesign rolled out,O2,Lena Fischer,2026-09-30,2026-09-28,,M2,owner;evidence;on_time,2026-11-15
+M5,Outcome evaluation protocol approved,O3,Omar Haddad,2026-10-31,,,,owner;evidence,

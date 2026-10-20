@@ -1,0 +1,1 @@
+Illustrative data. `deterioration_scores_illustrative.csv` was generated with a fixed random seed for this skill's examples and evals (700 cases: language_group, deteriorated_48h, risk_score). It describes no real model, site or patient. `groups_output.txt` and `rule_output.txt` are the outputs of `scripts/subgroup_check.py` on it (20 October 2026).

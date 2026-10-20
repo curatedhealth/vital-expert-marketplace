@@ -1,0 +1,8 @@
+# ILLUSTRATIVE control matrix written for this skill's tests (20 October 2026).
+control_id,claimed_control,citation,artifact,artifact_type,artifact_date,reviewer_note,owner,due,gap_class
+CT-01,Unique user identification for every clinician account,45 CFR 164.312(a)(2)(i),SSO configuration export,configuration,2026-10-01,,,,
+CT-02,Audit log review every month,45 CFR 164.308(a)(1)(ii)(D),control matrix row 2,control matrix,,,,,
+CT-03,Encryption of ePHI at rest,45 CFR 164.312(a)(2)(iv),storage encryption policy,policy,,contradicted: one backup bucket unencrypted in the 2026-09 scan,Priya N.,,blocking
+CT-04,Data backup plan,45 CFR 164.308(a)(7)(ii)(A),,,,,,,
+CT-05,Records of processing and DPIA for remote monitoring,GDPR Art 35,DPIA v1 2025-11-03,policy,2025-11-03,,,,
+CT-06,Minimum operating environment published to hospitals,,IT requirements sheet v2,policy,2026-02-10,,,,

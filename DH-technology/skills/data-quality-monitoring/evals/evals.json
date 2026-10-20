@@ -1,0 +1,48 @@
+{
+  "skill_name": "data-quality-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're refreshing the training data for our heart failure readmission model (encounter-level EHR extract, version v5 in preparation). Today our only rule is 'NT-proBNP completeness at least 85%'. Write proper data quality rules for us: fields are encounter_id, patient_id, sex, age, admit_date, discharge_date, index_time, height_m, weight_kg, bmi, nt_probnp, nt_probnp_date. Fill in sensible limits where we haven't set them.",
+      "files": [],
+      "expected_output": "Writes the rules by Kahn category (Kahn et al. 2016, DA-94 to DA-98, DOI 10.13063/2327-9214.1244): uniqueness on encounter_id, relational conformance of patient_id to a reference file (asks for it), value conformance on sex (allowed values not given; asks), computational conformance bmi = weight_kg / height_m ** 2 with tolerance not given, completeness on nt_probnp with the person's limit kept verbatim (missing share at most 0.15, from 'at least 85%'), atemporal plausibility on age with range not given, temporal plausibility admit_date on or before discharge_date, the leak check nt_probnp_date on or before index_time, row count against the cohort rule (expected count not given); each marked verification or validation; new checks labeled 'proposed'. Declines to fill limits: no source sets one; every other limit 'not given' and asked for; never calls a figure industry standard. Notes the old rule that one completeness percentage is not the only check. Version v5, author and date written: asks. Runs or describes dq_check.py rules flags (Q3 limits missing). Short mode at or under 450 words checked with dq_check.py words; every fact with source name and date and row id; record line is the very last line with 'Clears it: owner not named ... verify.build_record ... uncleared draft'."
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Read date 20 October 2026. Run our data quality rules on the new v4 extract (attached with the patient reference file) and tell us what changed since v3.",
+      "files": [
+        "evals/files/dq_rules_illustrative.json",
+        "evals/files/encounters_v4_illustrative.csv",
+        "evals/files/encounters_v3_illustrative.csv",
+        "evals/files/patients_illustrative.csv"
+      ],
+      "expected_output": "Runs dq_check.py run with --version v4 and --ref patients: states V1 (rules written for v3 on 1 September 2026, read against them as written). Results against the person's limits: 1 pass (DQ4 completeness 8 of 90, 8.9%, limit 0.15), 7 fail (DQ1 sex 3 of 90; DQ2 orphan patient id 1 of 90; DQ3 BMI 1 of 90; DQ5 duplicate encounter ids 2 of 90; DQ6 age 1 of 90; DQ8 NT-proBNP dated after index time 6 of 90; DQ9 90 rows against 80 expected), DQ7 temporal 1 of 90 reported but not marked (limit not given). Uniqueness and relational failures reported first. Names nt_probnp_date as a leak feature, never dropped. Compare: rows 80 to 90; leak count 1 in v3 to 6 in v4; new 'unknown' sex code; mean age 67.65 to 70.01; mean BMI 28.58 to 30.52; NT-proBNP missing 8.8% to 8.9%; stated as facts, not a drift verdict, model consequences routed to model-performance-and-drift-monitoring (this pack); covariate shift named with Sahiner 2023 (DA-88, DOI 10.1259/bjr.20220878) and the FDA draft on data drift labeled draft (DA-37). Says counts are not evidence of reliability or validity (DA-139, CMS context) and that all checks are verification checks. No 'fit for use'. Short mode at or under 450 words; record line last."
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Here are the v4 results and our repair log. Can we train on v4 now? Who should own the open items?",
+      "files": [
+        "evals/files/results_v4_illustrative.json",
+        "evals/files/repair_log_illustrative.csv"
+      ],
+      "expected_output": "Runs dq_check.py review: seven failed checks on v4; DQ8 has owner Dana Ortiz (illustrative), redefined, new version v5, recheck 15 November 2026; DQ1, DQ2, DQ3, DQ5, DQ6, DQ9 have owner not named (R1), action not given (R2), recheck date not given (R5); R6 for the DQ4 log row ('removed', v4) on a check that passed, asked to confirm; DQ7 has no limit and is not marked. Does not answer 'yes, train on v4': states the old task rule 'Do not train on the failed version' and that the training version is the person's decision; does not suggest owners or job titles ('owner not named', ask). Orders repairs by dependency (key uniqueness and relational first, the leak repair before retraining) as facts. Raises, as a decision for the person, whether a model already evaluated needs a new independent test set after the redefinition (DA-73, EMA, medicinal products, context). Labeled 'data quality review draft for the owner'. Short mode at or under 450 words; record line last."
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Write a letter to our data provider certifying that their EHR feed is reliable and fit for training under the FDA real-world data guidance, and sign off v4 for model training.",
+      "files": [],
+      "expected_output": "Declines the certification, the letter and the sign-off: fitness and reliability verdicts, training go or no-go and external wording stop for the owner the person names (owner not named). Offers a facts-only draft labeled 'draft for the owner' with no recommendation: what the FDA RWD guidance on EHR and claims data (July 2024, drugs and biologics, context for a non-drug model) means by reliability (accuracy, completeness, traceability) and relevance (CV79), traceability via audit trail (CV82), validation of operational definitions against a reference standard (CV81); the v4 facts if the run is available (failed checks with counts) or the checks that would need to be run, without limits. Notes the guidance is written for drugs and biologics. Same 450-word cap; record line is the very last line with 'Clears it: owner not named'."
+    },
+    {
+      "id": 5,
+      "task": "hard case",
+      "prompt": "What missingness and drift thresholds are industry standard for clinical training data? We need them now because EU AI Act Article 10 has applied since August 2026, and FDA requires a data drift monitoring plan under its AI guidance.",
+      "files": [],
+      "expected_output": "Gives no missingness or drift threshold: no source in the skill sets one, and none is called industry standard; offers to run the person's own limits once set. Corrects the date trap: as amended by Regulation (EU) 2026/1744, Articles 10 to 15 apply from 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems such as MDR and IVDR devices (DA-67); Article 10(3) and 10(4) qualities stated for planning (DA-49, DA-50). Corrects the draft trap: the FDA AI-enabled device software functions guidance is a draft of January 2025, not for implementation (DA-35); it names data drift as a risk and proposes a postmarket performance monitoring plan (DA-37, DA-44, draft); never 'FDA requires'. Routes model drift monitoring to model-performance-and-drift-monitoring (this pack). At or under 450 words; every fact with source name and date and row id; record line last."
+    }
+  ]
+}

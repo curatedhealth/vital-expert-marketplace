@@ -1,0 +1,27 @@
+Prediction log: prediction_log_illustrative.csv (1560 predictions, periods 2026-Q1, 2026-Q2, 2026-Q3); reference period 2026-Q1.
+Thresholds: the person's, written 2025-12-15
+
+Performance and calibration by period (outcomes known only)
+| Period | Predictions | Outcomes known | Event rate | Mean predicted | O/E | AUROC | Calibration slope | Sensitivity at your threshold | Flags (your thresholds) |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-Q1 | 520 | 520 | 0.213 | 0.210 | 1.02 | 0.736 | 0.83 | 0.586 | none |
+| 2026-Q2 | 520 | 520 | 0.190 | 0.172 | 1.11 | 0.763 | 0.92 | 0.576 | none |
+| 2026-Q3 | 520 | 445 | 0.283 | 0.271 | 1.05 | 0.795 | 1.15 | 0.738 | none |
+
+Inputs against the reference period (standardized mean difference; missing share)
+| Input | Period | Mean | SD | Missing share | SMD vs reference | Flags (your thresholds) |
+|---|---|---|---|---|---|---|
+| lactate | 2026-Q1 | 1.86 | 0.68 | 0.042 | 0.00 | none |
+| lactate | 2026-Q2 | 1.74 | 0.65 | 0.052 | -0.18 | none |
+| lactate | 2026-Q3 | 2.16 | 0.68 | 0.140 | 0.43 | |SMD| above 0.2; missing above 0.1 |
+
+By group, latest period (outcomes known)
+| Group | n known | Event rate | AUROC | Sensitivity at your threshold |
+|---|---|---|---|---|
+| sex=F | 218 | 0.298 | 0.825 | 0.738 |
+| sex=M | 227 | 0.269 | 0.762 | 0.738 |
+
+What moved between the reference and the latest period (facts, no verdict)
+- event rate 0.213 to 0.283; O/E 1.02 to 1.05; AUROC 0.736 to 0.795.
+- Davis et al. 2017 (DOI 10.1093/jamia/ocx030, DA-92): recalibration is indicated for calibration drift with event-rate shift and stable discrimination; association or case-mix shifts need more. Whether discrimination is 'stable' here is the person's call on their own threshold.
+- 75 predictions in 2026-Q3 have no outcome yet; the period's performance is read on the outcomes known only (not given for the rest).

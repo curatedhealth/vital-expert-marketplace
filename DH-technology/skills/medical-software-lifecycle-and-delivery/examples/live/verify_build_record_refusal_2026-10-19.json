@@ -1,0 +1,7 @@
+{
+ "call": "verify.build_record {clearances: [{cleared_by: {name: 'Claude'}, scope: 'change decision record draft'}], text: 'Test of refusal ...'}",
+ "called_on": "2026-10-19",
+ "result": {
+  "error": "build_record refuses a record without a human cleared_by.name"
+ }
+}

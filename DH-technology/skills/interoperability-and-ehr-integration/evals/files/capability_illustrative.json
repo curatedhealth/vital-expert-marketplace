@@ -1,0 +1,10 @@
+{
+ "resourceType": "CapabilityStatement",
+ "note": "ILLUSTRATIVE sandbox CapabilityStatement",
+ "status": "active",
+ "kind": "instance",
+ "fhirVersion": "4.0.1",
+ "implementationGuide": [
+  "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|6.1.0"
+ ]
+}

@@ -9,9 +9,9 @@ If you previously added `curatedhealth/vital-expert-plugins`, remove that market
 - **VITAL TRUSTED** (`vital-trusted`). Nineteen skills for daily life-sciences work against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). No connector required. Prove skills use VITAL Verify when that connector is installed.
 - **VITAL Verify** (`vital-verify`). Connector plus check skills. Paste a `vvfy_` key when you have one. URL `https://mcp.vital.expert/api/mcp/verify`.
 
-## Digital Health (five merged packs)
+## Digital Health (seven packs)
 
-Each Digital Health pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector. Legacy one-core packs are retired from this marketplace; install only these five.
+Each Digital Health pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector. Legacy one-core packs are retired from this marketplace; install only these seven.
 
 | Pack | Plugin id | Folds in |
 |---|---|---|
@@ -20,10 +20,12 @@ Each Digital Health pack asks for the same `vlib_` key and uses `https://mcp.vit
 | Clinical development | `dh-clinical-development` | Clinical Product Development, Clinical Validation (plus DTx safety and engagement) |
 | Go to market | `dh-go-to-market` | Commercial, Customer Success |
 | Patient and user experience | `dh-patient-and-user-experience` | Patient Engagement, User Experience |
+| Strategy and portfolio | `dh-strategy-and-portfolio` | Diligence, Digital Health Strategy, Innovation, Cross-Functional Leadership (governance and portfolio) |
+| Technology | `dh-technology` | Data Science, Advanced Analytics, Decision Support, Analytics Product, Interoperability, Cybersecurity, Software Engineering, and DTx design (.1 and .4) |
 
 Choose one heading, then one job. The job holds its tasks as sections. A missing fact stays a gap.
 
-Diligence, strategy, innovation, leadership, and the other former one-core Digital Health packs are not listed here. They will return only as later merged packs.
+Former one-core Digital Health packs are not listed here; they are superseded by the seven packs above.
 
 ## Navigator
 

@@ -1,0 +1,97 @@
+{
+ "_note": "Trimmed copy of a live response, 19 October 2026; source_coverage and studies shortened.",
+ "call": {
+  "tool": "diligence-dh.build_company_profile",
+  "arguments": {
+   "company": "Akili Interactive Labs, Inc."
+  }
+ },
+ "response": {
+  "resolution": {
+   "status": "resolved",
+   "basis": "normalized_legal_name"
+  },
+  "identifiers": {
+   "EUDAMED_SRN": "US-MF-000048993",
+   "SEC_CIK": "0001741200"
+  },
+  "products": [
+   {
+    "product": "EndeavorOTC",
+    "fda_submission": "K233496",
+    "product_code": "QFT",
+    "regulation_number": "882.5803",
+    "pathway": "FDA_510K",
+    "status": "Substantially Equivalent",
+    "decision_date": "2024-06-14",
+    "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K233496"
+   },
+   {
+    "product": "EndeavorRx",
+    "fda_submission": "K231337",
+    "product_code": "QFT",
+    "regulation_number": "882.5803",
+    "pathway": "FDA_510K",
+    "status": "Substantially Equivalent",
+    "decision_date": "2023-12-13",
+    "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231337"
+   },
+   {
+    "product": "EndeavorRx",
+    "fda_submission": "DEN200026",
+    "product_code": "QFT",
+    "regulation_number": "882.5803",
+    "pathway": "FDA_DE_NOVO",
+    "status": "DENG",
+    "decision_date": "2020-06-15",
+    "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN200026"
+   }
+  ],
+  "reimbursement": "[GAP]",
+  "reimbursement_gap_reason": "no reimbursement source loaded",
+  "clinical_evidence": {
+   "studies_total": 10,
+   "studies_linked_by_brand": 3,
+   "studies_linked_by_indication_only": 6
+  },
+  "funding": "[GAP]",
+  "funding_gap_reason": "no funding source licensed or integrated",
+  "funding_and_filings": {
+   "sec_edgar": {
+    "count": 2,
+    "by_type": {
+     "D": 2
+    },
+    "latest": [
+     {
+      "type": "D",
+      "date": "2021-06-09",
+      "amount": 110000007,
+      "currency": "USD"
+     },
+     {
+      "type": "D",
+      "date": "2018-05-23",
+      "amount": 55000010,
+      "currency": "USD"
+     }
+    ]
+   }
+  },
+  "evidence_maturity": {
+   "rubric_version": "v1 (7 October 2026)",
+   "score": 100,
+   "assessable_points": {
+    "earned": 90,
+    "maximum": 90
+   },
+   "excluded_dimensions": [
+    "reimbursement",
+    "jurisdiction_breadth"
+   ]
+  },
+  "provenance": {
+   "retrieved_at": "2026-10-19T18:59:19.242707+00:00"
+  }
+ }
+}

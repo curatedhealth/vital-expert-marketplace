@@ -1,0 +1,75 @@
+{
+ "note": "ILLUSTRATIVE. The person's own check sheet, written by them from the guide they chose. Not US Core's must-support list; the model does not supply one.",
+ "guide": "Illustrative local sheet modeled by the person on US Core",
+ "version": "6.1.0 (person's choice)",
+ "profiles": {
+  "Patient": [
+   {
+    "path": "identifier.value",
+    "min": 1,
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "name.family",
+    "min": 1,
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "gender",
+    "min": 1,
+    "blocks_go_live": "no"
+   },
+   {
+    "path": "birthDate",
+    "min": 1,
+    "blocks_go_live": "no"
+   }
+  ],
+  "Observation": [
+   {
+    "path": "status",
+    "min": 1,
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "category.coding.code",
+    "min": 1,
+    "blocks_go_live": "not given"
+   },
+   {
+    "path": "code.coding.system",
+    "min": 1,
+    "system": "http://loinc.org",
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "subject.reference",
+    "min": 1,
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "effectiveDateTime",
+    "min": 1,
+    "blocks_go_live": "not given"
+   }
+  ],
+  "Condition": [
+   {
+    "path": "clinicalStatus.coding.code",
+    "min": 1,
+    "blocks_go_live": "no"
+   },
+   {
+    "path": "code.coding.system",
+    "min": 1,
+    "system": "http://snomed.info/sct",
+    "blocks_go_live": "yes"
+   },
+   {
+    "path": "subject.reference",
+    "min": 1,
+    "blocks_go_live": "yes"
+   }
+  ]
+ }
+}

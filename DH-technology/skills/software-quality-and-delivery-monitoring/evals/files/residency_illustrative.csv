@@ -1,0 +1,4 @@
+store,data_class,design_region,live_region,replica_regions,backup_region
+Patient readings DB,ePHI,us-east,us-east,us-east,us-west
+Audit log store,ePHI,us-east,us-east,,us-east
+Analytics warehouse,de-identified,eu-central,eu-central,eu-central;us-east,

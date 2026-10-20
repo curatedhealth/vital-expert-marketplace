@@ -1,0 +1,45 @@
+{
+ "_illustrative": "ILLUSTRATIVE later snapshot written by the builder on 20 October 2026 to test scripts/maturity_diff.py. It is not a library response and states nothing about Pear Therapeutics or mementor. Changes made on purpose: K191716 shows one product-linked study with results posted (an input change); somnio shows a different rubric version and reimbursement made assessable (a method and coverage change).",
+ "calls": [
+  {
+   "arguments": {"company": "K191716"},
+   "retrieved_at": "2026-12-01T09:00:00Z",
+   "resolution": "resolved, fda_submission_number: Pear Therapeutics, Inc.",
+   "rubric_version": "v1 (7 October 2026)",
+   "score": 78,
+   "score_scale": "70 of 90 assessable points, shown as a percentage",
+   "components": [
+    {"component": "regulatory_status", "points": 30, "max_points": 30, "inputs": {"authorizations": 3, "de_novo_grants": 1}},
+    {"component": "clinical_evidence", "points": 30, "max_points": 40, "inputs": {"product_linked_studies": 3, "of_which_name_the_brand": 2, "of_which_same_sponsor_same_indication_only": 1, "completed_interventional_product_linked": 2, "randomized_among_those": 1, "product_linked_with_results_posted": 1}},
+    {"component": "active_development", "points": 0, "max_points": 10, "inputs": {"active_studies": 0}},
+    {"component": "product_breadth", "points": 10, "max_points": 10, "inputs": {"distinct_cleared_product_names": 3}}
+   ],
+   "not_assessable": [
+    {"component": "reimbursement", "reason": "no reimbursement source is loaded"},
+    {"component": "jurisdiction_breadth", "reason": "US sources are loaded as a census; EU is exact lookups of known names only, and UK and Swiss sources are not loaded"}
+   ]
+  },
+  {
+   "arguments": {"company": "somnio"},
+   "retrieved_at": "2026-12-01T09:00:10Z",
+   "resolution": "resolved, exact_brand_name: mementor DE GmbH; mementor DE GmbH, Deutschland",
+   "rubric_version": "v2 (ILLUSTRATIVE)",
+   "score": 40,
+   "score_scale": "40 of 100 assessable points",
+   "components": [
+    {"component": "regulatory_status", "points": 20, "max_points": 30, "inputs": {"authorizations": 3, "de_novo_grants": 0}},
+    {"component": "clinical_evidence", "points": 0, "max_points": 40, "inputs": {"product_linked_studies": 0}},
+    {"component": "active_development", "points": 0, "max_points": 10},
+    {"component": "product_breadth", "points": 10, "max_points": 10, "inputs": {"distinct_cleared_product_names": 3}},
+    {"component": "reimbursement", "points": 10, "max_points": 10, "inputs": {"listings": 1}}
+   ],
+   "not_assessable": [
+    {"component": "jurisdiction_breadth", "reason": "UK and Swiss sources are not loaded"}
+   ]
+  }
+ ],
+ "source_coverage_excerpt": {
+  "loaded_includes": {"diga_verzeichnis": 82, "clinicaltrials": 140, "openfda": 1224, "sec_edgar": 175},
+  "not_loaded": ["companies_house (API key not yet provisioned)", "funding (no funding source licensed)"]
+ }
+}

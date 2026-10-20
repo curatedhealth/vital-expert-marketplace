@@ -1,0 +1,7 @@
+Dataset: holdout-2026Q2-illustrative | Model: v2.1 | Threshold: 0.3 | Reference group: English
+Your rule (as given): sensitivity in a group may sit at most 0.05 below the reference 'English' (0.714). Rule written on: 1 October 2026.
+| Group | Value | Reference | Gap on the harmful side | Your rule | Extra events that would meet it (computed) |
+|---|---|---|---|---|---|
+| Other language | 0.889 (8/9) | 0.714 | -0.175 | met | none needed |
+| Spanish | 0.312 (10/32) | 0.714 | +0.402 | not met | 12 more of 32 (22/32 = 0.688) |
+Counts above are arithmetic on your data with the denominator held fixed; they are not a target.

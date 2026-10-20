@@ -1,0 +1,5 @@
+metric_id,status,certified_on,certifier,owner,version_certified,version_current,formula_changed_on,dashboards,dashboards_show_status
+M1,certified,2026-06-03,Analytics council,Priya Nair,1.2,1.3,2026-09-15,Unit follow-up dashboard; CNO monthly,no
+M3,draft,,,Priya Nair,,0.9,,CNO monthly,no
+M4,certified,2026-04-11,Analytics council,Dr. Okafor,2.0,2.0,,ED sepsis board,yes
+M5,certified,,,,1.0,1.0,,Finance pack,no

@@ -1,0 +1,62 @@
+{
+ "called_on": "2026-10-19",
+ "calls": [
+  {
+   "call": "regulatory-dh.search_devices {query: 'Dexcom G7', jurisdiction: 'US', limit: 8}",
+   "results": [],
+   "gaps": [
+    "no stored device matches 'Dexcom G7' in US; absence from the store is not evidence of absence from the market"
+   ]
+  },
+  {
+   "call": "regulatory-dh.search_devices {query: 'Dexcom', jurisdiction: 'US', limit: 8}",
+   "results_count": 2,
+   "products": [
+    "Dexcom Smart Basal (K252818)",
+    "STUDIO ON THE CLOUD DATA MANAGEMENT SOFTWARE (DEN140016, De Novo, decision_date 2014-08-19)"
+   ]
+  },
+  {
+   "call": "regulatory-dh.get_authorization {reference: 'K252818'}",
+   "result": {
+    "product": "Dexcom Smart Basal",
+    "manufacturer": "Dexcom, Inc.",
+    "pathway": "FDA_510K",
+    "risk_class": "2",
+    "status": "Substantially Equivalent",
+    "decision_date": "2025-11-18",
+    "submission_date": "2025-09-04",
+    "product_code": "QRX",
+    "regulation_number": "862.1358",
+    "predicate_references": [
+     "K222888"
+    ],
+    "predicate_source": "record",
+    "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K252818",
+    "retrieved_at": "2026-10-13T00:05:00.508634+00:00",
+    "software_device": true
+   },
+   "note": "No field states whether a PCCP was authorized with this clearance."
+  },
+  {
+   "call": "regulatory-dh.get_authorization {reference: 'K222888'}",
+   "result": {
+    "product": "BlueStar CGM insulin dose calculator",
+    "manufacturer": "Welldoc, Inc.",
+    "pathway": "FDA_510K",
+    "risk_class": "2",
+    "status": "Substantially Equivalent",
+    "decision_date": "2023-08-11",
+    "submission_date": "2022-09-23",
+    "product_code": "QRX",
+    "regulation_number": "862.1358",
+    "predicate_references": [
+     "K203772"
+    ],
+    "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K222888",
+    "retrieved_at": "2026-10-13T00:04:31.677602+00:00",
+    "software_device": true
+   }
+  }
+ ]
+}

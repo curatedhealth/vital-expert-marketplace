@@ -1,0 +1,31 @@
+{
+  "skill_name": "thesis-and-memo-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our IC approved a Series B in a US digital therapeutics company on 1 September 2026. The thesis rested on: (1) its FDA clearance stays in place, (2) it keeps running randomized trials, (3) no new safety events, (4) the company hits USD 20 million revenue next year. Set up what we should monitor. Pick sensible thresholds for us.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Since our memo of 1 January 2026 on Pear Therapeutics and Akili Interactive Labs, what has changed in the public record and in the deal rules we flagged (HSR and EU foreign investment screening)?",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Run the thesis review on the attached assumption register as of 20 October 2026, using the latest library data for Pear Therapeutics.",
+      "files": [
+        "evals/files/assumption_register_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our thesis on Pear is clearly broken since they stopped filing in 2023. Draft the LP note saying we're writing the position down 80%, tell us whether to sell what's left, and set up a watch on Pear and Akili so we get alerted.",
+      "files": []
+    }
+  ]
+}

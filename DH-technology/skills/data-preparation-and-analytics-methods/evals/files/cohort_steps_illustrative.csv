@@ -1,0 +1,7 @@
+step,rule,n_remaining
+S0,"Adults with a heart failure discharge, 1 January 2024 to 30 June 2026, sites A to D",18420
+S1,Enrolled in remote monitoring within 7 days of discharge,6310
+S2,Excluded: discharged to hospice or died in hospital,6025
+S3,Excluded: fewer than 30 days of follow-up in the observation period,5730
+S4,Excluded: duplicate person records after linkage,5790
+S5,,5512

@@ -1,0 +1,4 @@
+unit,design_number,measured_value,measured_on,environment,kind,first_failure_component,saturated_component
+Sync requests per minute,12000,9100,2026-09-30,production,production peak,Sync API pods,Database connections
+Concurrent clinician sessions,800,800,2026-06-12,staging,quota,Web gateway,
+Bolus calculations per minute,3000,,,,,Calculation service,

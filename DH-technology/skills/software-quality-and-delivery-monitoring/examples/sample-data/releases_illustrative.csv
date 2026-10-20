@@ -1,0 +1,8 @@
+release_id,date,build,stages_run,exception,exception_recorded_on,outcome,clinical_defect,caught_at
+R-31,2026-07-02,3.1.6,build;test;review;release,,,deployed,no,
+R-32,2026-07-20,3.1.7,build;test;release,hotfix,2026-07-20,deployed,no,
+R-33,2026-08-05,3.2.0,build;test;review;release,,,rolled_back,yes,production
+R-34,2026-08-06,3.2.0-h1,build;release,hotfix,,deployed,no,
+R-35,2026-09-14,3.2.0-h2,build;test;review;release,,,failed_health_check,no,release
+R-36,2026-09-15,3.2.0-h2,build;test;review;release,,,deployed,no,
+R-37,2026-10-01,3.2.1-rc1,build;test;review,,,failed_health_check,no,

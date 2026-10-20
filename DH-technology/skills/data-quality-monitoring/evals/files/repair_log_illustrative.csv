@@ -1,0 +1,4 @@
+check_id,owner,action,new_version,recheck_date,note
+DQ8,Dana Ortiz (illustrative),redefined,v5,2026-11-15,nt_probnp restricted to results dated on or before index_time
+DQ1,,,,,"sex codes outside F, M, U"
+DQ4,Sam Lee (illustrative),removed,v4,,

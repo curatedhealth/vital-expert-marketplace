@@ -1,0 +1,7 @@
+# ILLUSTRATIVE SBOM written for this skill's tests (20 October 2026). Component names and vulnerability ids are placeholders, not real software or real CVEs.
+component,supplier,version,release_date,patch,level_of_support,end_of_support,known_vulnerabilities
+example-tls-lib,Example Crypto Project,3.0.2,2024-03-01,2,maintained,2027-09-07,ILL-VULN-002
+example-ble-stack,Example Radio Inc.,5.1,2023-06-15,,no longer maintained,2026-06-30,ILL-VULN-005;ILL-VULN-006
+example-json-parser,,2.9,2025-01-10,1,maintained,,
+example-mobile-os,Example OS Vendor,14,2023-09-18,,maintained,2026-12-31,
+example-chart-widget,Example UI Co,1.4,,,abandoned,2025-05-01,ILL-VULN-009

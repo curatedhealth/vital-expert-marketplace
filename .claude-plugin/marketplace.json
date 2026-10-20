@@ -45,6 +45,16 @@
       "name": "dh-patient-and-user-experience",
       "source": "./DH-patient-and-user-experience",
       "description": "DH Patient Engagement and User Experience for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "dh-strategy-and-portfolio",
+      "source": "./DH-strategy-and-portfolio",
+      "description": "Digital health strategy, horizon scanning, product portfolio prioritization, and company, market and investment diligence for life sciences and digital health teams."
+    },
+    {
+      "name": "dh-technology",
+      "source": "./DH-technology",
+      "description": "Clinical machine learning, responsible AI, data quality and analytics, medical software delivery, interoperability, and cybersecurity and privacy for digital health products."
     }
   ]
 }

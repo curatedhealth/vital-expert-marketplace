@@ -1,0 +1,7 @@
+id,unit,element,pass_rule,result,blocks_release,owner,recheck_date,status,closed_evidence,build
+G-01,HZ-02 trace,Validation case on candidate build,Every hazard has a passing case on the candidate build,fail,yes,Maya Okafor,2026-10-27,open,,3.2.1-rc2
+G-02,TC-40,Integration test result,All integration cases pass,fail,,,,open,,3.2.1-rc1
+G-03,Release R-34,Required stages run,No release skips test or review unless the hotfix exception is recorded the same day,fail,no,Jonas Weber,2026-10-01,open,,3.2.0-h1
+G-04,Sync API component,Failure mode documented,not given,fail,,,,open,,3.2.1-rc2
+G-05,Charting library,End of support,No component past end of support at release,fail,no,Maya Okafor,,stopped,,3.2.1-rc2
+G-06,PR-103,Validation miss accepted,Accepted misses name the acceptor,pass,,Jonas Weber,,closed,,3.2.1-rc2

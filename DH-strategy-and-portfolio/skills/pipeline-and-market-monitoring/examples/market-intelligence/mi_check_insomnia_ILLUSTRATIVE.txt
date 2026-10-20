@@ -1,0 +1,33 @@
+Market intelligence check on 11 entries, as of 2026-10-20.
+Elements: source, date, age at most 60 days (your rule).
+| Lane | Jurisdiction | Entry | Source | Date | Age |
+|---|---|---|---|---|---|
+| Buyers | all | Who adopts and contracts | not measurable (gap: not given) | not measurable | not measurable |
+| Payers | DE | somnio: DE_DIGA permanent listing, listed 2020-10-22, identi | pass | pass | pass (1 day(s)) |
+| Payers | DE | DiGA directory counts: 62 listed, 18 delisted, 29 refused | pass | pass | pass (41 day(s)) |
+| Payers | US | US_CMS_DMHT 3 and US_CMS_RPM 4 rows, code-level | pass | pass | pass (1 day(s)) |
+| Peers | US | Pear Therapeutics, Inc.: reSet, reSET-O, Somryst; 3 authoriz | pass | pass | pass (1 day(s)) |
+| Peers | US | Somryst 510(k) K191716, decision 2020-03-23 | pass | pass | pass (1 day(s)) |
+| Peers | US | Big Health, Inc.: Daylight, Sleepio; 2 authorizations | pass | pass | pass (1 day(s)) |
+| Peers | DE | somnio maker in company store | not measurable (gap: lookup not run) | not measurable | not measurable |
+| Rules | DE | EHDS applies from 26 March 2027 | pass | pass | pass (0 day(s)) |
+| Rules | US | Data and deal rules (HSR, CFIUS, DOJ bulk data) with dates | pass | pass | pass (0 day(s)) |
+| From your material | DE | Market size figure from a vendor deck | FAIL: no source | FAIL: no date | not measurable |
+
+Coverage (an entry counts only if it is not a gap):
+- Buyers: 0 entries, 1 gaps; no entry for US, DE; FAIL: lane has no record
+- Payers: 3 entries, 0 gaps
+- Peers: 3 entries, 1 gaps; no entry for DE
+- Rules: 2 entries, 0 gaps
+Failed elements: 3. Owner and recheck date for each are yours; none is set here.
+
+Notes (not fails; facts from the research rows, read 20 October 2026):
+- Readable source for 'DiGA directory counts: 62 listed, 18 del': DE34 = Statistics: outcomes (https://www.bfarm.de/DE/Medizinprodukte/Aufgaben/DiGA-und-DiPA/DiGA/Wissenswertes/_node.html)
+- 'DiGA directory counts: 62 listed, 18 del' rests on a whole-directory BfArM figure (DE33, DE34): not specific to your indication
+- Peer 'Pear Therapeutics, Inc.: reSet, reSET-O,': holder as stored by the applicant. Somryst: 510(k) applicant Pear Therapeutics, Inc. (SP-165); current FDA listing holder Nox Medical, listing created 18 December 2024 (SP-167)
+- Peer 'Pear Therapeutics, Inc.: reSet, reSET-O,': holder as stored by the applicant. Pear Therapeutics: chapter 11 (Pear 8-K, 7 April 2023, SP-156 [WF]); Nasdaq delisting notice (Pear 8-K, 10 April 2023, SP-160 [WF]); Form 25-NSE 2 May 2023, not dissolution (SP-155, DL-144); reSET and reSET-O now listed by Harvest Bio (SP-169)
+- Peer 'Somryst 510(k) K191716, decision 2020-03': holder as stored by the applicant. Somryst: 510(k) applicant Pear Therapeutics, Inc. (SP-165); current FDA listing holder Nox Medical, listing created 18 December 2024 (SP-167)
+- Peer 'Big Health, Inc.: Daylight, Sleepio; 2 a': holder as stored by the applicant. Big Health: no SEC registrant found (SP-162 [WF]); active FDA registration; SleepioRx K233577 and DaylightRx K233872 listed (SP-163)
+- Readable source for 'EHDS applies from 26 March 2027': SP-068 = EHDS: general date of application (http://publications.europa.eu/resource/celex/32025R0327)
+- Readable source for 'Data and deal rules (HSR, CFIUS, DOJ bul': DL-044 = HSR 2026 thresholds: instrument (https://www.govinfo.gov/content/pkg/FR-2026-01-16/html/2026-00877.htm); DL-106 = GDPR Art 35(3)(b): DPIA (http://data.europa.eu/eli/reg/2016/679/oj)
+- Rules lane passes on count but holds no device or DiGA rule; route device rules to dh-regulatory-and-quality regulatory-pathway-and-classification (a note, not a fail, unless your rule says so)

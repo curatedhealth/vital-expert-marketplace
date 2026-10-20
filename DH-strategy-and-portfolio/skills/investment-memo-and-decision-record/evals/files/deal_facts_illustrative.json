@@ -1,0 +1,17 @@
+{
+  "_label": "ILLUSTRATIVE deal facts written for the build; not a real transaction.",
+  "value_usd": 150000000,
+  "closing_date": "2026-12-15",
+  "party_sizes_usd": null,
+  "foreign_investors": [
+    {"name": "Co-investor fund", "country": "not given", "voting_pct": 20, "govt_interest_pct": 30, "board_seat": true, "observer": false}
+  ],
+  "us_individuals_health_data": 40000,
+  "genetic_test_results": null,
+  "us_persons_omic": null,
+  "us_persons_genomic": null,
+  "country_of_concern_access": null,
+  "eu_member_states": null,
+  "swiss_target": false,
+  "hipaa_role": null
+}

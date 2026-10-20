@@ -1,0 +1,10 @@
+element,document,version,status,product
+Documentation Level Evaluation,DOC-001 Level rationale,1.0,present,GlucoStep
+Software Description,DOC-002 Description,2.1,present,GlucoStep
+Risk Management File,RMF-GS-01,4.0,present,GlucoStep
+Software Requirements Specification,SRS-GS,3.2,present,GlucoStep
+System and Software Architecture Diagram,ARC-GS,3.0,draft,GlucoStep
+Software Design Specification,SDS-GS,3.1,present,GlucoStep
+"Software Development, Configuration Management, and Maintenance Practices",SDP-PLATFORM,1.4,present,CardioTrack
+Software Testing as part of Verification and Validation,VVR-GS,3.2,draft,GlucoStep
+Unresolved Software Anomalies,ANOM-GS,3.2,present,GlucoStep

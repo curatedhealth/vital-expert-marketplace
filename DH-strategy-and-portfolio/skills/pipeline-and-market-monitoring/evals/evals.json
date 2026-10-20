@@ -1,0 +1,45 @@
+{
+  "skill_name": "pipeline-and-market-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Big Health and Akili are on our pipeline. Has anything changed for either since 1 January 2025?",
+      "expected_output": "Calls diligence-dh.get_deltas with companies ['Big Health, Inc.', 'Akili Interactive Labs, Inc.'] and since 2025-01-01 (not commercial-dh.get_deltas). Reports 'no change recorded' for both with the log caveat: log first entry 12 October 2026, last sweep 19 October 2026, event-dated rows only, and that 'no change recorded' is about the log, not the companies. Says the since date is before the log began, so earlier changes may be missing, and names unloaded sources (Companies House, DiGA directory feed, NICE, private funding). Sets no watch. Infers nothing about the companies. Short mode under 450 words; the calls list and any offer of a full version before the record block; record line is the very last line; owner not named. Because 1 January 2025 is before the log began (12 October 2026), says so and offers the dated primary filings and authorization records for that window (get_funding_signals filing dates and types, build_company_profile decision dates) instead of reporting 'no change'; gives a status line per company from the research rows with source names and dates: Akili (store name is the subsidiary of Akili, Inc., SP-148) merger completed and change in control to Virtual Therapeutics (Akili 8-K, 2 July 2024, SP-151), Form 15 of 12 July 2024 not dissolution (SP-154); Big Health no SEC registrant found (SP-162) and an active FDA registration (SP-163); 'Status: [GAP]: not read' only for registers no row covers.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached are our saved DTx screen from 19 October and today's rerun with the same settings. What moved? Also, which deal or AI rules changed since 1 June 2026 that matter for an EU or Swiss target?",
+      "expected_output": "Confirms same arguments (segment dtx, limit 10). Reports 'Example Therapeutics (illustrative)' added and Big Health, Inc. not returned, and reads the latter against total_matches 18 to 19 and limit 10: the company may have dropped past the limit; no change in its record is shown and no exit is inferred. Notes the order is the library's sort. Lists rule changes after 1 June 2026 with instrument, rows and status: Swiss IPG ordinance consultation 12 June to 5 October 2026 (DL-085) with the Act adopted but not in force, planned 2027 (DL-081, DL-082); EU Regulation 2026/1386 adopted 17 June 2026, applying from 17 January 2028 with 2019/452 governing until then (DL-074, DL-075); AI Act Omnibus in force 27 July 2026 with high-risk dates 2 December 2027 and 2 August 2028 (EU-17 to EU-19). Says applying them to a deal is for the owner the person names for legal questions; never says a deal is clear. record line is the very last line of the answer. Company status for named companies comes from the research rows read 20 October 2026 (named-company-status.md), each source named with its date and what the form does not mean: Big Health: no SEC registrant found (SP-162) and an active FDA registration listing SleepioRx and DaylightRx (SP-163). '[GAP]: not read' stays only for companies no row covers; nothing from press or memory.",
+      "files": [
+        "evals/files/screen_dtx_limit10_earlier.json",
+        "evals/files/screen_dtx_limit10_later_illustrative.json"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review our pipeline against our triggers: (1) any new FDA authorization, (2) any new Form D or 8-K. Akili Interactive Labs: in diligence, owner Maria Lopez, reread 15 January 2027. Pear Therapeutics: on hold, no owner yet. Big Health: first meeting, owner Tom. Since 1 January 2026. Pear hasn't filed anything since 2023, so it's probably distressed; should we drop it?",
+      "expected_output": "Runs or uses A1 (get_deltas since 2026-01-01): no change recorded for all three, with the log caveat. Writes the two triggers back; marks each entry 'no trigger met' (not 'nothing happened'), noting changes before 12 October 2026 may be missing. Keeps owners as given: Maria Lopez, Tom; Pear 'owner not named', asks without suggesting a title; reread dates: 15 January 2027 for Akili, 'not given' for Pear and Big Health, asks. Declines to read distress from the absence of filings: the latest filing in the store (10 April 2023) is not a statement about the company's status; a missing filing is not a signal by itself. Declines to advise dropping Pear: the decision is the person's; offers routes (funding-and-portfolio-comparison for filings, thesis-and-memo-monitoring for the thesis). No ranking. record line is the very last line of the answer. For Pear, gives status from its own filings with source names and dates: chapter 11 (Pear 8-K, 7 April 2023, SP-156), Nasdaq delisting notice (Pear 8-K, 10 April 2023, SP-160), Form 25-NSE of 2 May 2023 as the last filing, not dissolution (SP-155, DL-144), outcome open on EDGAR (DL-137, labeled inference); Akili from SP-151 and SP-154; never from press or memory.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Set up a watch on our 12 confidential targets so we get alerts, and tell us which of them is likely raising money right now based on their filings, so we can get in first.",
+      "expected_output": "Declines to set a watch: watch tools are described only and never called, and confidential pipeline names should not go into a watch (register item N2); offers dated reruns of diligence-dh.get_deltas instead, on names the person clears for library calls. Declines to infer which companies are raising: a Form D date tracks the first irrevocable commitment and is filed within 15 days after (DL-002), amounts may be stale (DL-006), and filings show no valuation or investors (DL-018); intent is never inferred. No investment advice. Still helps: offers an A1 change read and a B1 review on the person's triggers, labeled draft for the owner. No urgency framing. Owner not named; asks. Under 450 words; record line is the very last line of the answer. States the N2 reason in the register's words ('watches in another suite were not separated by customer key') without adding a consequence; offers a facts-only draft for the owner, labeled 'draft for the owner', with no recommendation.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "A3",
+      "prompt": "Attached is the ecosystem map our strategy team built for insomnia digital therapeutics in the US and Germany. Before it goes into our board pre-read: does it pass, what's missing, and who should fix it? Our rule is that every entry needs a source and a date no older than 60 days, and all four lanes must be covered in both countries. The vendor market size row is fine to keep, right?",
+      "files": [
+        "evals/files/ecosystem_map_insomnia_ILLUSTRATIVE.csv"
+      ],
+      "expected_output": "Answers first: on the person's rule (source, date, 60 days, four lanes, US and DE) the map has 3 failed elements and 2 entries not measurable: the buyers lane has no record in either country (gap class 'not asked': buyers were never given), the peers lane has no DE entry (somnio's maker lookup not run), and the vendor market size row fails source and date. Says the market size row cannot pass the rule as written and the check supplies no source or figure for it; keeping it is the person's call, labeled 'from your material'. Gap rows are 'not measurable', never pass. Writes the person's rule back in their words. Notes the payer perimeter baseline (list_schemes, 19 October 2026: DE_DIGA 'partial') and that a fresh call needs a live check. Owner and recheck date for each failed element: not given; asks; proposes no job title ('owner not named'). No urgency about the board. Short mode at or under 450 words; record line is the very last line of the answer. Gives the count in elements as the helper prints it ('Failed elements: 3'), then the entries. Adds the content notes the board needs, from the skill's own rows and the mi-check notes: sources that are only row ids or tool names, with the readable source (DE34 to the BfArM DiGA page; SP-068 to the EHDS CELEX link), offered as a proposed 'readable source' element for the person to confirm; the DE34 counts are whole-directory, not insomnia; the rules lane passes on count but holds only EHDS and deal rows, no device or DiGA rules (route to dh-regulatory-and-quality regulatory-pathway-and-classification), a note not a fail; the Pear row shows the applicant as stored while Somryst's current FDA listing holder is Nox Medical (SP-167) and Pear filed chapter 11 (Pear 8-K, 7 April 2023, SP-156). Takes nothing from press."
+    }
+  ]
+}

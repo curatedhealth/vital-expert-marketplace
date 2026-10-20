@@ -1,0 +1,9 @@
+{
+ "_note": "ILLUSTRATIVE scores and weights written for the eval. They are not anyone's assessment of these companies.",
+ "alternatives": [
+  {"id": "Akili Interactive Labs, Inc.", "scores": {"regulatory_clarity": 4, "evidence_depth": 3, "thesis_fit": 2}},
+  {"id": "Big Health, Inc.", "scores": {"regulatory_clarity": 3, "evidence_depth": 2, "thesis_fit": 4}},
+  {"id": "Pear Therapeutics, Inc.", "scores": {"regulatory_clarity": 3, "evidence_depth": 3, "thesis_fit": 1}}
+ ],
+ "criteria_weights": {"regulatory_clarity": 0.4, "evidence_depth": 0.4, "thesis_fit": 0.2}
+}

@@ -1,0 +1,18 @@
+{
+  "_label": "ILLUSTRATIVE. Typed for the skill's evals; not any company's real scores.",
+  "scored_by": "Portfolio steering group, scoring session of 14 October 2026",
+  "proposed": false,
+  "criteria_weights": {
+    "strategic_fit": 0.3,
+    "evidence_in_hand": 0.25,
+    "speed_to_first_use": 0.2,
+    "control_of_roadmap": 0.15,
+    "capital_need_avoided": 0.1
+  },
+  "alternatives": [
+    {"id": "Build in house", "scores": {"strategic_fit": 4, "evidence_in_hand": 1, "speed_to_first_use": 1, "control_of_roadmap": 4, "capital_need_avoided": 1}},
+    {"id": "Co-development partnership", "scores": {"strategic_fit": 3, "evidence_in_hand": 2, "speed_to_first_use": 3, "control_of_roadmap": 2, "capital_need_avoided": 3}},
+    {"id": "In-license a cleared product", "scores": {"strategic_fit": 3, "evidence_in_hand": 4, "speed_to_first_use": 4, "control_of_roadmap": 1, "capital_need_avoided": 3}},
+    {"id": "Acquire a company", "scores": {"strategic_fit": 3, "evidence_in_hand": 4, "speed_to_first_use": 3, "control_of_roadmap": 4}}
+  ]
+}

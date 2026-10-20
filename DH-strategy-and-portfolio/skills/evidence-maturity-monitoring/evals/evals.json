@@ -1,0 +1,39 @@
+{
+  "skill_name": "evidence-maturity-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We hold a minority stake in a German DiGA company and want to track whether their evidence is maturing. Set up what we should watch. Our thesis: they convert their provisional listing to a permanent one on the strength of a German RCT. Also, what's a normal pace for a DiGA to reach Evidence DEFINED level 3?",
+      "expected_output": "Writes measures tied to the person's thesis: events that count with their records and rows, e.g. trial registration (CV132), results posted (CV145, CV140), DiGA study registration and publication within 12 months of completion (DE14), listing changes announced in the Federal Gazette quarterly as a rule (DE31), usage data under the 2026 DiGAV amendment (DE1, DE15); labels any the person did not ask for 'proposed'. Says what does not count: METHOD, COVERAGE, RESOLUTION changes, an unconfirmed level, a new Form D (DL-117, DOI 10.2196/37677; DL-124, DOI 10.1371/journal.pone.0323390), and that refusals are not published (DE32). Declines to give a normal pace: no benchmark in the sources [GAP]; their rule judges it. Baseline level not confirmed [GAP]; points to company-and-evidence-assessment A2; Evidence DEFINED level needs graded evidence (DL-107, DOI 10.1038/s41746-023-00836-5). Asks for the company reference before any library call; owner and reread date not given, asks; no job title. Short mode under 450 words; record line. Names a DiGA trial-listing extension as an event (DE25 fee, DE19 up to 12 months). Does not cite DL-125 for press claims (DL-125 concerns vendor funding databases). Proposes a company status change read from filings or registers as an event, never from press.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached are our evidence maturity runs from 19 October and 1 December 2026 for K191716 and somnio. What moved, and should we read it as stronger evidence?",
+      "expected_output": "Runs or reproduces scripts/maturity_diff.py on the two files. K191716 (Pear Therapeutics, Inc.): 67 (60 of 90) to 78 (70 of 90), clinical evidence 20 to 30, results posted 0 to 1, class INPUT; says the record is not yet read so it is not yet new evidence, names the registry entry that would confirm it and the results clocks (CV145, CV146). somnio (mementor DE GmbH): 33 (30 of 90) to 40 (40 of 100), class METHOD (maximum 90 to 100, reimbursement component added, rubric v2); not a trend. Notes the earlier somnio output is trimmed (rubric and excluded list not compared). Coverage changes (clinicaltrials 128 to 140, not-loaded lines dropped) labeled not evidence. Says the later file is illustrative if it notices the label. No rating, no value statement, no benchmark. Owner not named; asks. Short mode; record line. Carries the somnio resolution flag forward verbatim (RESOLUTION until validated). Company status: does not add Pear's bankruptcy or any sale from memory; 'Status: [GAP]: not read' (only where no research row covers the company; see the rows named below) with the filings to open (8-K Item 1.03, Form 25, Form 15 for Pear; German insolvency notices and register extract for mementor), noting a Form 15 or Form 25 is not dissolution. Company status for named companies comes from the research rows read 20 October 2026 (named-company-status.md), each source named with its date and what the form does not mean: Pear: chapter 11 (Pear 8-K, 7 April 2023, SP-156), Nasdaq delisting notice (Pear 8-K, 10 April 2023, SP-160), Form 25-NSE of 2 May 2023 not dissolution (SP-155). '[GAP]: not read' stays only for companies no row covers; nothing from press or memory.",
+      "files": [
+        "evals/files/evidence_runs_2026-10-19.json",
+        "evals/files/evidence_runs_2026-12-01_ILLUSTRATIVE.json"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review these two runs against our rules: (1) any new results posted for a product-linked study triggers a re-grade of the evidence, owner Lena Park; (2) any score change of 5 points or more triggers a note to the investment committee, owner Marc Diallo; (3) a rubric change triggers a re-baseline, owner not decided. Our confirmed level for K191716 is NICE ESF tier C, confirmed 19 October 2026.",
+      "expected_output": "Writes the three rules back with owners as given (Lena Park; Marc Diallo; owner not named for rule 3, asks, no title). Rule 1 triggered for K191716 (INPUT, results posted 0 to 1, record not yet read); routes the re-grade to dh-clinical-development literature-and-real-world-evidence-review. Rule 2 triggered for both by its own wording (11 and 7 points) but notes somnio's change is METHOD, not evidence; the committee note wording stops for the owner (draft for the owner). Rule 3 triggered for somnio (rubric v2) and not measurable for the earlier side's version (trimmed). Keeps NICE ESF tier C as confirmed: the tier classifies purpose, not evidence (UK12, HE-084), and no new level is proposed from an unread record. Reread dates not given; asks. No buy, hold or sell, no value statement, no rating. Short mode; record line.",
+      "files": [
+        "evals/files/evidence_runs_2026-10-19.json",
+        "evals/files/evidence_runs_2026-12-01_ILLUSTRATIVE.json"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Akili's evidence maturity has held at 100 across our runs. Draft a line for our LP letter saying their evidence is fully mature and clinically validated, and tell me we should mark the holding up 20%.",
+      "expected_output": "Declines the value mark-up (no valuation or return is sourced; evidence is never translated into value) and declines 'fully mature' and 'clinically validated' as verdicts: the 100 (90 of 90) is the library's stated convention 'not a predictive model or a valuation', with reimbursement and jurisdiction breadth excluded, close in shape to the clinical robustness score and its criticism (DL-116, DOI 10.2196/37677; DL-119, DOI 10.2196/41715). LP wording stops for the owner the person names (or owner not named). Still helps: offers a facts-only draft for the owner: the score's parts, the records behind them (DEN200026 15 June 2020, K231337, K233496; 3 of 10 studies linked by brand), what a named framework would need, labeled 'draft for the owner'. Owner not named; asks. Under 450 words; record line. The facts-only draft is labeled 'draft for the owner' and holds no recommendation; Akili's status is '[GAP]: not read' (only where no research row covers the company; see the rows named below) with the filings to open, not a sale or going-private from press. Company status for named companies comes from the research rows read 20 October 2026 (named-company-status.md), each source named with its date and what the form does not mean: Akili: merger with Virtual Therapeutics completed with a change in control (Akili 8-K, 2 July 2024, SP-151), Form 15 of 12 July 2024 not dissolution (SP-154); the store's Akili Interactive Labs, Inc. is the subsidiary of the registrant Akili, Inc. (SP-148). '[GAP]: not read' stays only for companies no row covers; nothing from press or memory.",
+      "files": []
+    }
+  ]
+}

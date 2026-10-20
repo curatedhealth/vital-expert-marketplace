@@ -1,0 +1,6 @@
+# ILLUSTRATIVE withdrawal test log, 20 October 2026.
+job,should_stop,ran_after_withdrawal,test_env,test_date
+usage analytics,yes,no,staging,2026-10-14
+model retraining export,yes,yes,staging,2026-10-14
+crash reporting,yes,,staging,2026-10-14
+nightly alert job,no,yes,staging,2026-10-14

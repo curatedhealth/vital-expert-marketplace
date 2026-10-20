@@ -98,7 +98,7 @@ A team is three to five experts, each with its own prompt and skills, plus a sea
 
 ## Boundaries
 
-- Do not run the expert here or answer as the expert. Route domain questions to the capability map of the pack the person installed (for example dh-regulatory-and-quality `regulatory-and-quality-capability-map`, dh-access-and-value `access-and-value-capability-map`, dh-clinical-development `clinical-development-capability-map`, dh-go-to-market `go-to-market-capability-map`, dh-patient-and-user-experience `patient-and-user-experience-capability-map`, dh-diligence `diligence-capability-map`).
+- Do not run the expert here or answer as the expert. Route domain questions to the capability map of the pack the person installed (for example dh-regulatory-and-quality `regulatory-and-quality-capability-map`, dh-access-and-value `access-and-value-capability-map`, dh-clinical-development `clinical-development-capability-map`, dh-go-to-market `go-to-market-capability-map`, dh-patient-and-user-experience `patient-and-user-experience-capability-map`, dh-strategy-and-portfolio `strategy-and-portfolio-capability-map`, dh-technology `technology-capability-map`).
 - Do not describe a hosted tool as included in the file.
 - Do not edit the file for the person without saying what changed; cleaning the prompt is their decision.
 - The downloaded expert produces advisory drafts. Its output is not a regulatory, quality or reimbursement decision, and a named human clears any record.

@@ -1,0 +1,49 @@
+person_id,role,site,in_scope,invited_on,trained_on,practice_task_done,practice_task_on,stopped_step,champion
+P001,charge nurse,Riverside,yes,2026-08-18,2026-08-31,yes,2026-09-01,,yes
+P002,charge nurse,Riverside,yes,2026-08-18,2026-08-31,yes,2026-09-01,,no
+P003,charge nurse,Riverside,yes,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P004,charge nurse,Riverside,yes,2026-08-18,2026-08-29,no,,filter by unit,no
+P005,charge nurse,Riverside,yes,2026-08-18,2026-08-25,no,,record the call outcome,no
+P006,charge nurse,Riverside,yes,2026-08-18,2026-08-26,yes,2026-08-27,,no
+P007,discharge nurse,Riverside,yes,,,,,,no
+P008,discharge nurse,Riverside,yes,2026-08-18,2026-08-31,yes,2026-09-01,,no
+P009,discharge nurse,Riverside,yes,2026-08-18,2026-08-28,no,,filter by unit,no
+P010,discharge nurse,Riverside,yes,2026-08-18,2026-08-27,no,,open the worklist from the EHR tab,no
+P011,discharge nurse,Riverside,yes,2026-08-18,2026-08-27,yes,2026-08-28,,no
+P012,discharge nurse,Riverside,yes,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P013,discharge nurse,Riverside,yes,2026-08-18,2026-08-28,yes,2026-08-29,,no
+P014,discharge nurse,Riverside,yes,2026-08-18,2026-08-30,no,,record the call outcome,no
+P015,discharge nurse,Riverside,yes,2026-08-18,2026-08-26,yes,2026-08-27,,no
+P016,discharge nurse,Riverside,no,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P017,charge nurse,Northgate,yes,2026-08-18,2026-08-25,yes,2026-08-26,,yes
+P018,charge nurse,Northgate,yes,2026-08-18,2026-08-30,yes,2026-08-31,,no
+P019,charge nurse,Northgate,yes,2026-08-18,2026-08-27,yes,2026-08-28,,no
+P020,charge nurse,Northgate,yes,2026-08-18,,,,,no
+P021,charge nurse,Northgate,yes,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P022,charge nurse,Northgate,yes,2026-08-18,2026-08-27,yes,2026-08-28,,no
+P023,discharge nurse,Northgate,yes,2026-08-18,2026-08-31,no,,record the call outcome,no
+P024,discharge nurse,Northgate,yes,2026-08-18,2026-08-28,yes,2026-08-29,,no
+P025,discharge nurse,Northgate,yes,2026-08-18,2026-08-30,no,,open the worklist from the EHR tab,no
+P026,discharge nurse,Northgate,yes,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P027,discharge nurse,Northgate,yes,2026-08-18,2026-08-31,no,,filter by unit,no
+P028,discharge nurse,Northgate,yes,2026-08-18,2026-08-29,no,,open the worklist from the EHR tab,no
+P029,discharge nurse,Northgate,yes,2026-08-18,2026-08-27,yes,2026-08-28,,no
+P030,discharge nurse,Northgate,yes,2026-08-18,2026-08-30,yes,2026-08-31,,no
+P031,discharge nurse,Northgate,yes,2026-08-18,2026-08-27,no,,record the call outcome,no
+P032,discharge nurse,Northgate,no,2026-08-18,2026-08-30,no,,filter by unit,no
+P033,charge nurse,Lakeview,yes,2026-08-18,,,,,no
+P034,charge nurse,Lakeview,yes,2026-08-18,,,,,no
+P035,charge nurse,Lakeview,yes,2026-08-18,,,,,no
+P036,charge nurse,Lakeview,yes,2026-08-18,,,,,no
+P037,charge nurse,Lakeview,yes,2026-08-18,,,,,no
+P038,charge nurse,Lakeview,yes,2026-08-18,2026-08-29,yes,2026-08-30,,no
+P039,discharge nurse,Lakeview,yes,2026-08-18,,,,,no
+P040,discharge nurse,Lakeview,yes,2026-08-18,2026-08-28,no,,record the call outcome,no
+P041,discharge nurse,Lakeview,yes,2026-08-18,,,,,no
+P042,discharge nurse,Lakeview,yes,2026-08-18,,,,,no
+P043,discharge nurse,Lakeview,yes,2026-08-18,2026-08-27,yes,2026-08-28,,no
+P044,discharge nurse,Lakeview,yes,2026-08-18,2026-08-26,yes,2026-08-27,,no
+P045,discharge nurse,Lakeview,yes,2026-08-18,,,,,no
+P046,discharge nurse,Lakeview,yes,2026-08-18,2026-08-29,no,,filter by unit,no
+P047,discharge nurse,Lakeview,yes,2026-08-18,2026-08-28,no,,record the call outcome,no
+P048,discharge nurse,Lakeview,no,2026-08-18,,,,,no

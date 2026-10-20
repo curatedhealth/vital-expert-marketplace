@@ -1,0 +1,7 @@
+# ILLUSTRATIVE list of processing the system performs, 20 October 2026.
+step,purpose,data_class,recipient
+nightly alert job,Remote monitoring by your care team,vital signs,care team
+usage analytics,Product improvement,usage events,internal
+model retraining export,Product improvement,vital signs,internal
+crash reporting,Product improvement,usage events,crash analytics vendor
+research data extract,Research,vital signs,university partner

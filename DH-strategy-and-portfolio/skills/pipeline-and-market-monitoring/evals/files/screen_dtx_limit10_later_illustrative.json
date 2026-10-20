@@ -1,0 +1,189 @@
+{
+ "call": {
+  "tool": "commercial-dh.screen_commercial_peers",
+  "args": {
+   "segment": "dtx",
+   "limit": 10
+  }
+ },
+ "retrieved": "illustrative",
+ "response_characters": 62474,
+ "coverage": [
+  "digital_health_census.screen_market: answered",
+  "regulatory_dh.search_devices: answered",
+  "market_access_dh.search_listings: [GAP]"
+ ],
+ "screen_market": {
+  "result_count": 10,
+  "total_matches": 19,
+  "ranking": "evidence maturity score, highest first, then company name; no other weighting",
+  "perimeter_statement": "this screen covers only the companies the store holds, not the market",
+  "jurisdictions_loaded": [
+   "CA",
+   "EU",
+   "TW",
+   "US"
+  ],
+  "retrieved_at": "2026-10-19T18:58:19.958190+00:00",
+  "results": [
+   {
+    "company": "Akili Interactive Labs, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "EndeavorOTC",
+     "EndeavorRx"
+    ],
+    "authorizations": 3,
+    "studies": 10,
+    "safety_events": 0,
+    "evidence_maturity_score": 100
+   },
+   {
+    "company": "Appliedvr, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "EaseVRx",
+     "RelieVRx",
+     "RelieVRx (Pico G3)"
+    ],
+    "authorizations": 3,
+    "studies": 5,
+    "safety_events": 1,
+    "evidence_maturity_score": 100
+   },
+   {
+    "company": "Click Therapeutics, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "CT-132",
+     "Motivista (CT-155)"
+    ],
+    "authorizations": 2,
+    "studies": 14,
+    "safety_events": 0,
+    "evidence_maturity_score": 89
+   },
+   {
+    "company": "Luminopia, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "Luminopia",
+     "Luminopia One"
+    ],
+    "authorizations": 4,
+    "studies": 3,
+    "safety_events": 0,
+    "evidence_maturity_score": 89
+   },
+   {
+    "company": "Example Therapeutics (illustrative)",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "Example App (illustrative)"
+    ],
+    "authorizations": 1,
+    "studies": 1,
+    "safety_events": 0,
+    "evidence_maturity_score": 89
+   },
+   {
+    "company": "Swing Therapeutics, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "Stanza"
+    ],
+    "authorizations": 1,
+    "studies": 5,
+    "safety_events": 0,
+    "evidence_maturity_score": 78
+   },
+   {
+    "company": "Cognifisense, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "VRNT"
+    ],
+    "authorizations": 2,
+    "studies": 2,
+    "safety_events": 0,
+    "evidence_maturity_score": 67
+   },
+   {
+    "company": "Nightware, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "NightWare Kit, Apple iPhone, Apple Watch, Apple iPhone Charging Cable, Apple Watch Charging Cable"
+    ],
+    "authorizations": 1,
+    "studies": 4,
+    "safety_events": 0,
+    "evidence_maturity_score": 67
+   },
+   {
+    "company": "Pear Therapeutics, Inc.",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "reSet",
+     "reSET-O",
+     "Somryst"
+    ],
+    "authorizations": 3,
+    "studies": 3,
+    "safety_events": 2,
+    "evidence_maturity_score": 67
+   },
+   {
+    "company": "Better Therapeutics",
+    "country": "US",
+    "jurisdictions": [
+     "US"
+    ],
+    "products": [
+     "BT-001"
+    ],
+    "authorizations": 1,
+    "studies": 5,
+    "safety_events": 0,
+    "evidence_maturity_score": 56
+   }
+  ]
+ },
+ "exhibit_cells": [
+  {
+   "rowId": "Better Therapeutics",
+   "columnId": "US",
+   "status": "DENG",
+   "date": "2023-07-07",
+   "sourceUrl": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN220058"
+  }
+ ],
+ "note": "Source: VITAL Commercial Intelligence for Digital Health. Facts are quoted from DH REG, DH DIL, and Market Access DH rows. Cite the upstream source URL and retrieval date. User, buyer, and payer stay three roles. [GAP] means the upstream tool did not return the fact. checklist g1-commercial-v1 is a count, not a score.",
+ "_illustrative": "ILLUSTRATIVE test file written for the build on 20 October 2026, not a library response. Copied from screen_dtx_limit10.json with one fictional company added ('Example Therapeutics (illustrative)') and total_matches set to 19, so the last real company drops past the limit. No real company's record was changed."
+}

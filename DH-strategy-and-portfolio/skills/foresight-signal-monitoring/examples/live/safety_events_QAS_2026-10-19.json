@@ -1,0 +1,52 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.search_safety_events",
+ "args": {
+  "product_code": "QAS",
+  "jurisdiction": "all",
+  "limit": 10
+ },
+ "results_first3": [
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Interventional Fluoroscopic X-Ray System: LUMINOS Q.namix T; ... With Software Version VB10D-SP02",
+   "event_date": "2025-12-29",
+   "severity": "Class II",
+   "manufacturer": "Siemens Medical Solutions USA, Inc.",
+   "summary": "Ortho images acquired with preset automatic horizontal flip are not flipped ...",
+   "source_url": "https://api.fda.gov/device/enforcement.json"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "NAEOTOM Alpha.Pro Software applications: syngo.CT Brain Quantification syngo.CT Vessel Hyperdensities syngo.CT ASPECTS",
+   "event_date": "2025-12-19",
+   "severity": "Class II",
+   "manufacturer": "Siemens Medical Solutions USA, Inc.",
+   "summary": "To remove the software applications from certain CT systems as the applications have not received FDA 510(k) clearance.",
+   "source_url": "https://api.fda.gov/device/enforcement.json"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "LUMINOS Lotus Max, Model 11574100 and Luminos dRF Max, Model 10762471",
+   "event_date": "2025-12-05",
+   "severity": "Class II",
+   "manufacturer": "Siemens Medical Solutions USA, Inc.",
+   "summary": "... When switching quickly between organ programs (OGPs) the collimation may be incorrect.",
+   "source_url": "https://api.fda.gov/device/enforcement.json"
+  }
+ ],
+ "results_count": 10,
+ "all_results_manufacturer": "Siemens Medical Solutions USA, Inc.",
+ "maude_counts": [
+  {
+   "product_code": "QAS",
+   "total_reports": 0,
+   "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events",
+   "retrieved_at": "2026-10-13T00:07:48Z"
+  }
+ ],
+ "observation": "None of the 10 recalls names a QAS device; the product_code filter applied to MAUDE counts, not to recalls."
+}

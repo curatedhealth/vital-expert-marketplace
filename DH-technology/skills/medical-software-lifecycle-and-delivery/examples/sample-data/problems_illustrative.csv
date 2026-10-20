@@ -1,0 +1,5 @@
+id,item,version_found,effect,hazardous_function,change_ref,status,accepted_rationale,accepted_by
+PR-101,SI-01,3.1.4,Rounding of carbohydrate ratio to one decimal changes advised dose by up to 0.1 unit,yes,CR-220,closed,,
+PR-102,SI-02,3.2.0,Trend arrow lags new reading by up to 5 minutes after app resumes,yes,,open,,
+PR-103,SI-05,3.2.0,Axis labels overlap on small screens,no,,closed,Cosmetic; no clinical display affected,
+PR-104,,3.2.0,,not given,,open,,

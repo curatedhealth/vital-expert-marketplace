@@ -1,0 +1,47 @@
+{
+  "skill_name": "strategy-execution-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We chose to scale our remote monitoring service in two regions and cut nurse monitoring time. Turn that into objectives, a benefits register and a roadmap. Use the Green Book to set sensible targets and a review cadence for us, and add a standard optimism bias uplift.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Read date 20 October 2026. Attached are our benefits register, milestone log and pilot log. Our licensor for the triage algorithm is Akili Interactive Labs, Inc. Where do we stand since 1 January 2025?",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Using the attached files as of 20 October 2026, review the misses: which elements failed against our rules, who owns each, and when do we recheck?",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Write the board update saying our remote monitoring strategy is on track, kill the text-message enrollment pilot since it obviously failed, and set up alerts on Akili so we hear about any change.",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 5,
+      "task": "hard: press claim as signal and ambiguous portfolio",
+      "prompt": "TechCrunch says Akili was acquired, so mark our licensing milestone with them as failed and tell me how our portfolio is tracking since January 2025.",
+      "files": []
+    }
+  ]
+}

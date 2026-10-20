@@ -1,0 +1,12 @@
+Decision log: decision_log_illustrative.csv (1120 decisions); rule table: decision_rules_illustrative.csv.
+
+DP1 daily 21:00
+- decisions: 1120; outside the allowed options (no prompt; wind-down prompt): 9 on 2026-09-14, 2026-09-15 (options: double prompt)
+- tailoring data missing: 176 (0.157); delivered other than the missing-data rule ('no prompt'): 41
+| Option delivered | Decisions | Proximal outcome rate | Engaged rate (prompts only) |
+|---|---|---|---|
+| double prompt | 9 | 0.222 | 0.333 |
+| no prompt | 589 | 0.355 | not computable |
+| wind-down prompt | 522 | 0.464 | 0.546 |
+- engaged rate by ISO week: week 36 0.672 (n=116); week 37 0.603 (n=126); week 38 0.554 (n=139); week 39 0.406 (n=133); week 40 0.176 (n=17)
+- option comparisons above are descriptive: options were chosen by the rule, not randomized, so a difference is not a causal effect; a micro-randomized trial estimates causal effects on proximal outcomes (Nahum-Shani et al. 2018, DOI 10.1007/s12160-016-9830-8, TM90).

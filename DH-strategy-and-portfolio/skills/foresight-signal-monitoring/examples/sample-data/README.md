@@ -1,0 +1,3 @@
+# Sample data (illustrative)
+
+`foresight_log_illustrative.csv` is an illustrative foresight log written for this build on 20 October 2026. The people (M. Keller, J. Osei), the calls, selections, resolution rules, outcomes and reread dates are invented to test the skill; they are nobody's. The records the rows point to are real and saved in `examples/live/` (K261317 and the EU Briefcase-Triage and ORTEC rows from `search_devices_*`, QAS counts from `pathway_precedents_QAS_2026-10-19.json`, Pear's latest 8-K from `funding_signals_pear.json`) or cited in the research files (Regulation (EU) 2026/1744, EU-17 to EU-19; the FDA lifecycle draft, US-20 to US-22).

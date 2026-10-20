@@ -1,0 +1,43 @@
+{
+ "call": "regulatory-dh.search_devices",
+ "args": {
+  "query": "Big Health",
+  "jurisdiction": "US"
+ },
+ "called": "19 October 2026",
+ "trimmed": true,
+ "results": [
+  {
+   "product": "Daylight",
+   "manufacturer": "Big Health, Inc.",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "decision_date": "2024-08-30",
+   "product_code": "SCP",
+   "regulation_number": "882.5801",
+   "predicate_references": [
+    "K191716"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K233872",
+   "retrieved_at": "2026-10-13T00:04:39.947670+00:00"
+  },
+  {
+   "product": "Sleepio®",
+   "manufacturer": "Big Health, Inc.",
+   "pathway": "FDA_510K",
+   "risk_class": "2",
+   "decision_date": "2024-08-05",
+   "product_code": "QVO",
+   "regulation_number": "882.5801",
+   "predicate_references": [
+    "K191716"
+   ],
+   "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K233577",
+   "retrieved_at": "2026-10-13T00:04:39.947670+00:00"
+  }
+ ],
+ "coverage": [
+  "US: 1226 authorizations loaded; dated software decisions; last load 2026-10-19; sources openfda, openfda_pma"
+ ],
+ "gaps": []
+}

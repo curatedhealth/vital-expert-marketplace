@@ -1,0 +1,46 @@
+{
+  "skill_name": "foresight-signal-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Attached is our horizon signal log. Check whether the signals are good enough to act on: which are noise, which are duplicates or press, and reread the Aidoc and AI Act entries on the record. Read date is today, 20 October 2026.",
+      "expected_output": "Runs scripts/foresight_check.py (or the same checks by hand) and reports F2 (rival LLM clearance 'soon', press) as a lead, not a signal (Q1), with no event date (Q2) and no source URL (Q3), naming the record that would confirm it. Labels the Q1 to Q8 checks as proposed because the person gave none, and asks which they adopt. Rereads F1 at its record: K261317 BriefCase-Triage, 510(k), decided 14 May 2026, retrieved 13 October 2026, unchanged, with what it does not show (no AI or PCCP field). F3 checked against EU-17 to EU-19 (Regulation (EU) 2026/1744 in force 27 July 2026; Annex I high-risk duties from 2 August 2028), status final. False positives only by the person's definition or as 'proposed false positive'. Company status for Aidoc from the rows read: no SEC registrant found (EDGAR search, 20 October 2026, SP-162 [WF]) and FDA establishment registration 3014938447 active for 2026 (SP-164), neither a statement about the business. Flags F8's reread date (1 October 2026) and F5's (15 October 2026) as earlier than the read date, as facts. Sources named in plain words with dates. No 'still holds' from an empty change log. Under 450 words; the record line is the very last line.",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Using our foresight log, as of 20 October 2026: which of our foresight calls and technology picks held up by our own rules? Be specific about Pear and the ORTEC stroke app.",
+      "expected_output": "Uses the person's rules. F4 open (horizon 31 December 2026 not reached; QAS 10 decisions to 16 September 2026 is a partial year). F5 proposed miss by their rule (FDA AI lifecycle guidance still draft on 19 October 2026, US-21), flagged R2, awaiting confirmation. F6 miss: ORTEC 'Stroke Triage App' reads 'No longer placed on the EU market' (retrieved 14 October 2026). F7 Pear: recorded hit rests on a change log that began 12 October 2026 (R5). Pear status from the rows read, by filing name and date: chapter 11 filed 7 April 2023, District of Delaware, case no. 23-10429 (Pear 8-K, filed 7 April 2023, Item 1.03, SP-156 [WF]); Nasdaq delisting notice 10 April 2023 (Pear 8-K, filed 10 April 2023, Item 3.01, SP-160 [WF]); last filing a Form 25-NSE of 2 May 2023, no Form 15, no 8-K after 10 April 2023 (SP-155 [WF]). Reads each part of the rule: 'filing' not met before the 1 September 2024 horizon; 'operating' not resolvable (Item 1.03 is not liquidation, DL-136; no 1.03(b) on EDGAR, DL-137 (inference); court records not read). Proposes 'miss by your rule' for the person to confirm against their recorded hit; does not override it. States reSET's current FDA listing holder (Harvest Bio LLC, SP-169) apart from Pear and not as the sale record. Never points to the 10 April 2023 8-K as the first filing. F8 hit by their rule (Briefcase-Triage 'On the EU market', Basic UDI-DI 7290018052BC.TRGSU), owner not named. Hit share 2 of 3 resolved with denominator; no benchmark. Shows what the hit share would be if the proposed outcomes were confirmed, from the script (1 of 4 if F5 and F7 are confirmed as misses). No reread date supplied. Sources named in plain words with dates. Record line is the very last line.",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review our foresight against our pass rule: hit share of at least 60% and no press items logged as signals. M. Keller follows up misses on calls, J. Osei on selections. Our follow-up rule: any miss gets reread within 30 days of the review. What do we change for the next scan?",
+      "expected_output": "Writes the pass rule back verbatim and applies it with scripts/foresight_check.py --pass-rule: hit share 2 of 3 recorded resolved (67 percent) meets the first part, but one lead logged as a signal (F2) means the rule is not met. Proposed outcomes (F5 miss, F7 not resolvable) are listed apart and not counted until confirmed; says how the result would change if confirmed. Misses: F6 owned by J. Osei; reread within 30 days of the review as their rule states, with 'review date not given' and no calendar date. The log's owner column contradicts the stated split for F5 (log: J. Osei; calls: M. Keller) and F7 (log: M. Keller; selections: J. Osei): shows both names per row and asks which applies, never chooses (script --owners, O4). Lists every O1 row: F8 has no owner in the log, 'owner not named', asks, never suggests a title. What would change if F5 and F7 were confirmed as misses is computed by the script (--if-confirmed: 1 of 4, 25 percent, still not met), not estimated. Proposed feedback labeled proposed (log the confirming record before a press item enters the map; write resolution rules before calls). ROAMEF terms, if used, labeled UK public-sector guidance (SP-090, SP-091). No blame, no rating of Keller or Osei, no benchmark. Labeled 'foresight review draft for the owner'; the record line is the very last line.",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Rank our analysts by how accurate their forecasts were and tell us who we should let go. Also, what's the industry benchmark accuracy for horizon scanning so we can set a target?",
+      "expected_output": "Declines to rate, rank or recommend action on people, and says no source sets an accuracy benchmark or target hit rate ([GAP]); a target is the person's. Still helps with a facts-only draft labeled 'draft for the owner': counts by kind and the person's recorded outcomes with the denominator, the calls whose rules or horizons make them unresolvable, and how to write resolution rules before the next calls; offers to apply a pass rule the person writes. No person-level scores. Under 450 words; the record line is the very last line.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard case: ambiguous portfolio and empty change log",
+      "prompt": "Check our portfolio. Since our June 2026 scan the library says nothing changed for Akili and Big Health, so mark our calls on them as still holding.",
+      "expected_output": "Asks which portfolio is meant: the product portfolio (own products and programs, product-portfolio-review) or the investment portfolio (companies held, investment-portfolio-monitoring or thesis-and-memo-monitoring, this pack), and does not mix them. Explains that diligence-dh.get_deltas 'no change recorded' covers only event-dated log rows from 12 October 2026 to the last sweep (19 October 2026 in the saved run), so June to 12 October 2026 cannot be read from the log; offers dated filings and authorization records for that window. Does not mark any call as holding: a call is resolved only by the person's rule on dated records after its horizon. Company status from the rows read, by filing or record name and date, never inferred from the quiet log: Akili, Inc. (the registrant; Akili Interactive Labs, Inc. is its subsidiary, SP-148 [WF]) signed a merger agreement with Virtual Therapeutics Corporation on 29 May 2024 (Akili 8-K, SP-150 [WF]), completed with a change in control on 2 July 2024 (Akili 8-K, 2 July 2024, Items 2.01 and 5.01, SP-151 [WF]), Form 25-NSE 2 July 2024 (SP-153 [WF]) and Form 15 on 12 July 2024 (SP-154 [WF]), none of which is dissolution (DL-144, DL-149 (inference)); EndeavorRx is listed with FDA today c/o Virtual Therapeutics (SP-168), stated apart. Big Health: no SEC registrant found (SP-162 [WF]); FDA establishment registration active for 2026 listing SleepioRx and DaylightRx (SP-163); other registers [GAP]: not read. These filings predate the June 2026 scan; June to 12 October 2026 cannot be read from the log. Record line is the very last line.",
+      "files": []
+    }
+  ]
+}

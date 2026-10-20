@@ -1,0 +1,7 @@
+# ILLUSTRATIVE file written for this skill's tests (20 October 2026). Not a real product or company.
+data_class,region,legal_basis,control_access,retention,leaves_region,artifact,in_force
+Patient vital signs (PHI),US,HIPAA business associate under hospital BAA,role-based access in IAM policy v3,7 years per customer contract,no,IAM policy export 2026-09-30,yes
+Patient vital signs (health data),EU (Germany),GDPR Art 9(2)(h),role-based access in IAM policy v3,not given,no,,intended
+Device identifiers,US and EU,not given,device certificate store,life of device,yes,,intended
+Application logs,US and EU,legitimate interest,HIPAA,90 days,yes,log retention config,yes
+Account data (email and name),US and EU,contract,SSO with MFA,until account deletion,no,SSO config screenshot 2026-10-01,yes

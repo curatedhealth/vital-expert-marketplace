@@ -1,0 +1,7 @@
+source_system,source_code,source_display,target_system,target_code,equivalence,map_version,terminology_version,status
+urn:local:lab,GLU-FAST,Fasting glucose,http://loinc.org,1558-6,equal,map-2026.3,LOINC 2.80,production
+urn:local:lab,HBA1C,HbA1c,http://loinc.org,4548-4,equal,map-2026.3,LOINC 2.80,production
+urn:local:lab,LIPID-PNL,Lipid panel,http://loinc.org,,unmatched,map-2026.3,LOINC 2.80,production
+urn:local:dx,DM2,Type 2 diabetes,http://snomed.info/sct,44054006,narrower,map-2026.3,,production
+urn:local:dx,PREDM,Prediabetes,http://snomed.info/sct,,unmatched,map-2026.3,SNOMED CT US 2026-03,hold
+,,free text: sugar problem,http://snomed.info/sct,73211009,approximate,map-2026.3,SNOMED CT US 2026-03,production

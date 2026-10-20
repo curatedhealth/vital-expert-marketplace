@@ -1,0 +1,9 @@
+{
+ "note": "ILLUSTRATIVE sandbox token response; tokens are fake strings",
+ "access_token": "FAKE-ACCESS-TOKEN",
+ "token_type": "Bearer",
+ "expires_in": 3600,
+ "scope": "launch openid fhirUser patient/Observation.rs patient/Condition.rs",
+ "patient": "pt-001",
+ "id_token": "eyJhbGciOiAibm9uZSJ9.eyJmaGlyVXNlciI6ICJQcmFjdGl0aW9uZXIvcHJhYy0wMSIsICJzdWIiOiAic2FuZGJveC11c2VyIn0.sig"
+}

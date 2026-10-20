@@ -1,0 +1,6 @@
+plan,document,version,status,product
+Software development plan,SDP-GS,3.0,present,GlucoStep
+Software risk management plan,RMP-GS,2.1,present,GlucoStep
+Configuration management plan,CMP-PLATFORM,1.2,present,CardioTrack
+Problem resolution procedure,PRP-QMS,4.0,present,
+Software maintenance plan,SMP-TEMPLATE,0.1,template,GlucoStep

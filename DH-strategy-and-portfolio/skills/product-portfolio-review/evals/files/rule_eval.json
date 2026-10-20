@@ -1,0 +1,3 @@
+{"label": "ILLUSTRATIVE rule written for the eval.", "rule_ref": "Rule R7", "rule_date": "2026-08-28",
+ "weights": {"need": 0.4, "evidence": 0.35, "fit": 0.25},
+ "decision_rule": {"type": "capacity_in_rank_order", "capacity": 12, "unit": "FTE", "period": "next two quarters"}}

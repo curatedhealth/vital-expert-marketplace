@@ -1,0 +1,5 @@
+id,hazard,item,class,influences_clinical_action
+HZ-01,Advised dose too high after unit conversion error,SI-01,C,yes
+HZ-02,Stale glucose value shown as current,SI-02,B,yes
+HZ-03,Alert not delivered when app is in background,SI-07,A,yes
+HZ-04,Data loss on sync conflict,SI-06,,no

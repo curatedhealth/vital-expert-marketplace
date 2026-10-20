@@ -1,0 +1,7 @@
+# ILLUSTRATIVE threat register written for this skill's tests (20 October 2026). Placeholder names only.
+id,hop,actor,asset,threat,control,accepted_by,reopen_condition,design_version
+TH-01,sensor to phone (BLE),nearby unauthenticated device,glucose readings in transit,readings altered or read in transit,authenticated pairing and link encryption (design spec 4.2),,,2.3
+TH-02,phone app to cloud API,network adversary,session tokens,token replay on hostile network,,,,2.3
+TH-03,cloud API to EHR (FHIR write-back),compromised integration account,patient record in EHR,unauthorized write of observations,,Dana Ruiz,new write-back resource or new EHR customer,2.3
+TH-04,cloud admin console,insider with admin role,all tenants' data,cross-tenant data access,,team,,2.2
+TH-05,update server to app,supply chain,app binary,tampered update package,,,,

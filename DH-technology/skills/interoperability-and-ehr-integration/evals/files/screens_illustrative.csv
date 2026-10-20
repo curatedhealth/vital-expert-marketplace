@@ -1,0 +1,6 @@
+screen,resource,interaction,write_back
+Glucose trend,Observation,search,no
+Problem list banner,Condition,search,no
+Care plan note,DocumentReference,create,yes
+Risk score card,Observation,read,yes
+Settings,,,no

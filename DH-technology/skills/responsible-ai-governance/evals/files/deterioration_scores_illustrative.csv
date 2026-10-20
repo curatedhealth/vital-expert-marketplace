@@ -1,0 +1,701 @@
+case_id,language_group,deteriorated_48h,risk_score
+C0001,English,0,0.394
+C0002,English,0,0.230
+C0003,English,0,0.052
+C0004,English,1,0.295
+C0005,English,0,0.233
+C0006,English,0,0.296
+C0007,English,0,0.344
+C0008,English,1,0.576
+C0009,English,0,0.266
+C0010,English,0,0.132
+C0011,English,0,0.104
+C0012,English,0,0.398
+C0013,English,0,0.199
+C0014,English,0,0.015
+C0015,English,0,0.346
+C0016,English,0,0.202
+C0017,English,1,0.080
+C0018,English,0,0.155
+C0019,English,0,0.167
+C0020,English,0,0.397
+C0021,English,0,0.033
+C0022,English,0,0.039
+C0023,English,1,0.548
+C0024,English,0,0.331
+C0025,English,0,0.075
+C0026,English,0,0.131
+C0027,English,0,0.265
+C0028,English,0,0.029
+C0029,English,0,0.381
+C0030,English,0,0.626
+C0031,English,0,0.266
+C0032,English,0,0.365
+C0033,English,0,0.131
+C0034,English,0,0.588
+C0035,English,0,0.029
+C0036,English,0,0.180
+C0037,English,0,0.209
+C0038,English,0,0.093
+C0039,English,0,0.179
+C0040,English,0,0.055
+C0041,English,0,0.325
+C0042,English,0,0.263
+C0043,English,0,0.105
+C0044,English,0,0.210
+C0045,English,0,0.401
+C0046,English,0,0.417
+C0047,English,0,0.116
+C0048,English,0,0.193
+C0049,English,0,0.417
+C0050,English,0,0.128
+C0051,English,0,0.260
+C0052,English,0,0.148
+C0053,English,0,0.118
+C0054,English,0,0.148
+C0055,English,0,0.068
+C0056,English,0,0.163
+C0057,English,0,0.390
+C0058,English,0,0.259
+C0059,English,0,0.287
+C0060,English,1,0.542
+C0061,English,0,0.146
+C0062,English,0,0.127
+C0063,English,1,0.299
+C0064,English,0,0.029
+C0065,English,0,0.010
+C0066,English,0,0.056
+C0067,English,0,0.602
+C0068,English,1,0.434
+C0069,English,0,0.089
+C0070,English,0,0.280
+C0071,English,0,0.292
+C0072,English,0,0.010
+C0073,English,0,0.091
+C0074,English,0,0.288
+C0075,English,0,0.363
+C0076,English,0,0.232
+C0077,English,1,0.505
+C0078,English,1,0.599
+C0079,English,0,0.012
+C0080,English,0,0.223
+C0081,English,0,0.359
+C0082,English,1,0.200
+C0083,English,1,0.609
+C0084,English,0,0.010
+C0085,English,0,0.119
+C0086,English,0,0.233
+C0087,English,0,0.046
+C0088,English,0,0.135
+C0089,English,0,0.104
+C0090,English,0,0.179
+C0091,English,0,0.111
+C0092,English,0,0.160
+C0093,English,0,0.019
+C0094,English,0,0.287
+C0095,English,0,0.111
+C0096,English,0,0.305
+C0097,English,1,0.303
+C0098,English,0,0.116
+C0099,English,0,0.043
+C0100,English,0,0.204
+C0101,English,0,0.112
+C0102,English,0,0.223
+C0103,English,0,0.080
+C0104,English,0,0.077
+C0105,English,0,0.254
+C0106,English,0,0.141
+C0107,English,0,0.079
+C0108,English,0,0.403
+C0109,English,0,0.198
+C0110,English,0,0.295
+C0111,English,0,0.032
+C0112,English,0,0.331
+C0113,English,0,0.104
+C0114,English,0,0.411
+C0115,English,0,0.010
+C0116,English,0,0.130
+C0117,English,1,0.386
+C0118,English,0,0.260
+C0119,English,0,0.329
+C0120,English,0,0.247
+C0121,English,0,0.012
+C0122,English,0,0.199
+C0123,English,0,0.074
+C0124,English,0,0.128
+C0125,English,0,0.168
+C0126,English,0,0.071
+C0127,English,0,0.061
+C0128,English,0,0.116
+C0129,English,0,0.096
+C0130,English,0,0.265
+C0131,English,0,0.246
+C0132,English,0,0.160
+C0133,English,1,0.229
+C0134,English,0,0.030
+C0135,English,0,0.215
+C0136,English,0,0.058
+C0137,English,0,0.044
+C0138,English,0,0.319
+C0139,English,0,0.280
+C0140,English,0,0.111
+C0141,English,0,0.194
+C0142,English,0,0.140
+C0143,English,0,0.131
+C0144,English,0,0.384
+C0145,English,1,0.726
+C0146,English,0,0.126
+C0147,English,0,0.141
+C0148,English,0,0.144
+C0149,English,0,0.205
+C0150,English,1,0.615
+C0151,English,1,0.566
+C0152,English,0,0.111
+C0153,English,0,0.329
+C0154,English,0,0.101
+C0155,English,0,0.197
+C0156,English,0,0.331
+C0157,English,0,0.066
+C0158,English,0,0.018
+C0159,English,0,0.069
+C0160,English,0,0.048
+C0161,English,1,0.291
+C0162,English,1,0.677
+C0163,English,0,0.359
+C0164,English,1,0.529
+C0165,English,0,0.131
+C0166,English,0,0.326
+C0167,English,1,0.154
+C0168,English,0,0.283
+C0169,English,0,0.411
+C0170,English,0,0.110
+C0171,English,0,0.312
+C0172,English,0,0.162
+C0173,English,0,0.042
+C0174,English,0,0.205
+C0175,English,0,0.011
+C0176,English,0,0.210
+C0177,English,1,0.709
+C0178,English,0,0.043
+C0179,English,0,0.130
+C0180,English,0,0.067
+C0181,English,0,0.058
+C0182,English,0,0.288
+C0183,English,0,0.286
+C0184,English,1,0.586
+C0185,English,0,0.293
+C0186,English,0,0.235
+C0187,English,0,0.351
+C0188,English,0,0.226
+C0189,English,0,0.093
+C0190,English,0,0.114
+C0191,English,0,0.091
+C0192,English,0,0.142
+C0193,English,0,0.038
+C0194,English,0,0.116
+C0195,English,0,0.140
+C0196,English,0,0.302
+C0197,English,0,0.113
+C0198,English,0,0.393
+C0199,English,0,0.188
+C0200,English,0,0.126
+C0201,English,0,0.194
+C0202,English,0,0.034
+C0203,English,0,0.264
+C0204,English,0,0.091
+C0205,English,1,0.452
+C0206,English,0,0.055
+C0207,English,0,0.196
+C0208,English,1,0.496
+C0209,English,0,0.116
+C0210,English,0,0.385
+C0211,English,0,0.110
+C0212,English,0,0.155
+C0213,English,0,0.062
+C0214,English,0,0.211
+C0215,English,0,0.303
+C0216,English,0,0.143
+C0217,English,0,0.533
+C0218,English,0,0.301
+C0219,English,1,0.444
+C0220,English,0,0.202
+C0221,English,0,0.138
+C0222,English,0,0.091
+C0223,English,0,0.220
+C0224,English,1,0.888
+C0225,English,0,0.018
+C0226,English,0,0.314
+C0227,English,0,0.236
+C0228,English,0,0.237
+C0229,English,0,0.273
+C0230,English,0,0.149
+C0231,English,0,0.158
+C0232,English,1,0.459
+C0233,English,1,0.321
+C0234,English,0,0.325
+C0235,English,0,0.044
+C0236,English,0,0.187
+C0237,English,0,0.287
+C0238,English,0,0.045
+C0239,English,0,0.105
+C0240,English,0,0.194
+C0241,English,0,0.171
+C0242,English,0,0.096
+C0243,English,0,0.210
+C0244,English,0,0.151
+C0245,English,1,0.298
+C0246,English,0,0.381
+C0247,English,0,0.185
+C0248,English,0,0.237
+C0249,English,0,0.106
+C0250,English,0,0.142
+C0251,English,0,0.142
+C0252,English,1,0.542
+C0253,English,0,0.163
+C0254,English,0,0.122
+C0255,English,0,0.253
+C0256,English,1,0.502
+C0257,English,1,0.762
+C0258,English,0,0.287
+C0259,English,0,0.205
+C0260,English,0,0.171
+C0261,English,1,0.090
+C0262,English,0,0.073
+C0263,English,0,0.065
+C0264,English,0,0.247
+C0265,English,0,0.039
+C0266,English,0,0.304
+C0267,English,0,0.233
+C0268,English,0,0.118
+C0269,English,0,0.053
+C0270,English,0,0.010
+C0271,English,0,0.094
+C0272,English,0,0.024
+C0273,English,0,0.228
+C0274,English,0,0.126
+C0275,English,0,0.380
+C0276,English,1,0.788
+C0277,English,0,0.176
+C0278,English,0,0.122
+C0279,English,1,0.459
+C0280,English,0,0.300
+C0281,English,0,0.286
+C0282,English,0,0.229
+C0283,English,0,0.127
+C0284,English,1,0.196
+C0285,English,1,0.281
+C0286,English,0,0.653
+C0287,English,0,0.319
+C0288,English,0,0.266
+C0289,English,0,0.084
+C0290,English,0,0.010
+C0291,English,0,0.189
+C0292,English,0,0.181
+C0293,English,0,0.305
+C0294,English,0,0.085
+C0295,English,0,0.159
+C0296,English,0,0.360
+C0297,English,0,0.147
+C0298,English,1,0.893
+C0299,English,0,0.375
+C0300,English,0,0.271
+C0301,English,1,0.756
+C0302,English,0,0.144
+C0303,English,0,0.362
+C0304,English,0,0.268
+C0305,English,1,0.468
+C0306,English,0,0.286
+C0307,English,0,0.191
+C0308,English,0,0.274
+C0309,English,0,0.142
+C0310,English,0,0.226
+C0311,English,0,0.255
+C0312,English,0,0.202
+C0313,English,0,0.182
+C0314,English,0,0.101
+C0315,English,0,0.114
+C0316,English,0,0.107
+C0317,English,1,0.237
+C0318,English,1,0.375
+C0319,English,0,0.309
+C0320,English,0,0.189
+C0321,English,0,0.116
+C0322,English,0,0.138
+C0323,English,0,0.100
+C0324,English,0,0.218
+C0325,English,0,0.279
+C0326,English,0,0.100
+C0327,English,0,0.273
+C0328,English,0,0.419
+C0329,English,0,0.064
+C0330,English,0,0.364
+C0331,English,0,0.288
+C0332,English,0,0.270
+C0333,English,0,0.289
+C0334,English,0,0.206
+C0335,English,0,0.089
+C0336,English,0,0.283
+C0337,English,0,0.161
+C0338,English,0,0.259
+C0339,English,0,0.146
+C0340,English,0,0.029
+C0341,English,0,0.047
+C0342,English,0,0.463
+C0343,English,0,0.191
+C0344,English,0,0.152
+C0345,English,0,0.140
+C0346,English,1,0.445
+C0347,English,0,0.390
+C0348,English,0,0.578
+C0349,English,0,0.150
+C0350,English,0,0.117
+C0351,English,0,0.283
+C0352,English,1,0.525
+C0353,English,0,0.093
+C0354,English,0,0.305
+C0355,English,0,0.147
+C0356,English,0,0.154
+C0357,English,0,0.220
+C0358,English,0,0.200
+C0359,English,0,0.296
+C0360,English,0,0.075
+C0361,English,1,0.421
+C0362,English,0,0.091
+C0363,English,0,0.071
+C0364,English,0,0.217
+C0365,English,0,0.015
+C0366,English,0,0.177
+C0367,English,0,0.138
+C0368,English,1,0.927
+C0369,English,0,0.220
+C0370,English,0,0.181
+C0371,English,0,0.092
+C0372,English,0,0.369
+C0373,English,0,0.061
+C0374,English,0,0.381
+C0375,English,0,0.121
+C0376,English,0,0.379
+C0377,English,0,0.475
+C0378,English,0,0.258
+C0379,English,0,0.295
+C0380,English,1,0.256
+C0381,English,0,0.088
+C0382,English,0,0.237
+C0383,English,0,0.161
+C0384,English,0,0.310
+C0385,English,0,0.080
+C0386,English,0,0.062
+C0387,English,0,0.057
+C0388,English,0,0.130
+C0389,English,0,0.155
+C0390,English,0,0.283
+C0391,English,0,0.178
+C0392,English,0,0.415
+C0393,English,0,0.139
+C0394,English,1,0.238
+C0395,English,0,0.335
+C0396,English,0,0.301
+C0397,English,0,0.459
+C0398,English,0,0.363
+C0399,English,0,0.201
+C0400,English,0,0.153
+C0401,Spanish,1,0.159
+C0402,Spanish,0,0.046
+C0403,Spanish,1,0.201
+C0404,Spanish,0,0.028
+C0405,Spanish,0,0.073
+C0406,Spanish,0,0.363
+C0407,Spanish,0,0.234
+C0408,Spanish,0,0.131
+C0409,Spanish,0,0.146
+C0410,Spanish,0,0.013
+C0411,Spanish,0,0.038
+C0412,Spanish,0,0.293
+C0413,Spanish,0,0.229
+C0414,Spanish,0,0.259
+C0415,Spanish,0,0.408
+C0416,Spanish,1,0.144
+C0417,Spanish,1,0.354
+C0418,Spanish,0,0.103
+C0419,Spanish,0,0.102
+C0420,Spanish,0,0.444
+C0421,Spanish,0,0.386
+C0422,Spanish,0,0.223
+C0423,Spanish,0,0.217
+C0424,Spanish,0,0.509
+C0425,Spanish,0,0.141
+C0426,Spanish,0,0.347
+C0427,Spanish,0,0.079
+C0428,Spanish,0,0.148
+C0429,Spanish,0,0.124
+C0430,Spanish,0,0.352
+C0431,Spanish,1,0.408
+C0432,Spanish,0,0.118
+C0433,Spanish,0,0.264
+C0434,Spanish,0,0.370
+C0435,Spanish,0,0.116
+C0436,Spanish,1,0.516
+C0437,Spanish,0,0.412
+C0438,Spanish,0,0.182
+C0439,Spanish,0,0.089
+C0440,Spanish,0,0.278
+C0441,Spanish,0,0.090
+C0442,Spanish,0,0.209
+C0443,Spanish,0,0.037
+C0444,Spanish,0,0.173
+C0445,Spanish,0,0.492
+C0446,Spanish,0,0.094
+C0447,Spanish,0,0.514
+C0448,Spanish,0,0.209
+C0449,Spanish,0,0.051
+C0450,Spanish,0,0.171
+C0451,Spanish,1,0.196
+C0452,Spanish,0,0.200
+C0453,Spanish,0,0.143
+C0454,Spanish,1,0.297
+C0455,Spanish,0,0.168
+C0456,Spanish,0,0.279
+C0457,Spanish,1,0.416
+C0458,Spanish,0,0.010
+C0459,Spanish,1,0.284
+C0460,Spanish,0,0.316
+C0461,Spanish,0,0.386
+C0462,Spanish,0,0.177
+C0463,Spanish,0,0.141
+C0464,Spanish,0,0.344
+C0465,Spanish,0,0.210
+C0466,Spanish,0,0.106
+C0467,Spanish,0,0.604
+C0468,Spanish,0,0.110
+C0469,Spanish,0,0.193
+C0470,Spanish,0,0.226
+C0471,Spanish,0,0.117
+C0472,Spanish,0,0.126
+C0473,Spanish,0,0.212
+C0474,Spanish,1,0.446
+C0475,Spanish,0,0.283
+C0476,Spanish,0,0.209
+C0477,Spanish,0,0.036
+C0478,Spanish,0,0.386
+C0479,Spanish,0,0.185
+C0480,Spanish,1,0.285
+C0481,Spanish,0,0.087
+C0482,Spanish,0,0.010
+C0483,Spanish,0,0.189
+C0484,Spanish,0,0.148
+C0485,Spanish,0,0.262
+C0486,Spanish,0,0.160
+C0487,Spanish,0,0.109
+C0488,Spanish,0,0.400
+C0489,Spanish,0,0.252
+C0490,Spanish,0,0.189
+C0491,Spanish,1,0.270
+C0492,Spanish,0,0.189
+C0493,Spanish,0,0.140
+C0494,Spanish,0,0.349
+C0495,Spanish,0,0.278
+C0496,Spanish,1,0.292
+C0497,Spanish,1,0.185
+C0498,Spanish,0,0.186
+C0499,Spanish,0,0.021
+C0500,Spanish,0,0.127
+C0501,Spanish,0,0.123
+C0502,Spanish,1,0.259
+C0503,Spanish,0,0.452
+C0504,Spanish,0,0.281
+C0505,Spanish,0,0.346
+C0506,Spanish,0,0.284
+C0507,Spanish,0,0.145
+C0508,Spanish,0,0.519
+C0509,Spanish,0,0.299
+C0510,Spanish,0,0.094
+C0511,Spanish,0,0.337
+C0512,Spanish,1,0.264
+C0513,Spanish,0,0.339
+C0514,Spanish,0,0.274
+C0515,Spanish,1,0.388
+C0516,Spanish,0,0.301
+C0517,Spanish,0,0.183
+C0518,Spanish,0,0.094
+C0519,Spanish,0,0.153
+C0520,Spanish,1,0.366
+C0521,Spanish,1,0.219
+C0522,Spanish,0,0.185
+C0523,Spanish,0,0.235
+C0524,Spanish,0,0.010
+C0525,Spanish,0,0.413
+C0526,Spanish,0,0.263
+C0527,Spanish,0,0.055
+C0528,Spanish,0,0.147
+C0529,Spanish,0,0.159
+C0530,Spanish,1,0.250
+C0531,Spanish,0,0.023
+C0532,Spanish,0,0.274
+C0533,Spanish,1,0.221
+C0534,Spanish,0,0.257
+C0535,Spanish,0,0.259
+C0536,Spanish,0,0.155
+C0537,Spanish,0,0.105
+C0538,Spanish,0,0.030
+C0539,Spanish,0,0.298
+C0540,Spanish,1,0.209
+C0541,Spanish,0,0.193
+C0542,Spanish,0,0.301
+C0543,Spanish,0,0.122
+C0544,Spanish,0,0.199
+C0545,Spanish,0,0.422
+C0546,Spanish,0,0.101
+C0547,Spanish,0,0.266
+C0548,Spanish,0,0.248
+C0549,Spanish,0,0.143
+C0550,Spanish,1,0.283
+C0551,Spanish,0,0.099
+C0552,Spanish,0,0.299
+C0553,Spanish,0,0.493
+C0554,Spanish,0,0.164
+C0555,Spanish,0,0.207
+C0556,Spanish,0,0.104
+C0557,Spanish,0,0.497
+C0558,Spanish,0,0.167
+C0559,Spanish,0,0.427
+C0560,Spanish,0,0.234
+C0561,Spanish,0,0.062
+C0562,Spanish,0,0.255
+C0563,Spanish,0,0.476
+C0564,Spanish,0,0.027
+C0565,Spanish,0,0.250
+C0566,Spanish,0,0.188
+C0567,Spanish,1,0.351
+C0568,Spanish,0,0.140
+C0569,Spanish,1,0.461
+C0570,Spanish,0,0.072
+C0571,Spanish,0,0.275
+C0572,Spanish,0,0.329
+C0573,Spanish,0,0.255
+C0574,Spanish,0,0.165
+C0575,Spanish,0,0.202
+C0576,Spanish,0,0.034
+C0577,Spanish,0,0.174
+C0578,Spanish,0,0.140
+C0579,Spanish,0,0.157
+C0580,Spanish,1,0.156
+C0581,Spanish,0,0.149
+C0582,Spanish,1,0.206
+C0583,Spanish,1,0.273
+C0584,Spanish,0,0.146
+C0585,Spanish,0,0.142
+C0586,Spanish,0,0.126
+C0587,Spanish,0,0.365
+C0588,Spanish,0,0.347
+C0589,Spanish,0,0.369
+C0590,Spanish,0,0.187
+C0591,Spanish,0,0.279
+C0592,Spanish,1,0.240
+C0593,Spanish,1,0.493
+C0594,Spanish,0,0.109
+C0595,Spanish,1,0.192
+C0596,Spanish,0,0.280
+C0597,Spanish,0,0.059
+C0598,Spanish,0,0.199
+C0599,Spanish,0,0.093
+C0600,Spanish,0,0.356
+C0601,Other language,0,0.221
+C0602,Other language,0,0.222
+C0603,Other language,1,0.331
+C0604,Other language,0,0.325
+C0605,Other language,0,0.222
+C0606,Other language,0,0.082
+C0607,Other language,0,0.175
+C0608,Other language,0,0.068
+C0609,Other language,1,0.486
+C0610,Other language,1,0.549
+C0611,Other language,0,0.238
+C0612,Other language,0,0.337
+C0613,Other language,0,0.336
+C0614,Other language,0,0.223
+C0615,Other language,0,0.291
+C0616,Other language,0,0.492
+C0617,Other language,0,0.060
+C0618,Other language,0,0.153
+C0619,Other language,0,0.267
+C0620,Other language,1,0.438
+C0621,Other language,0,0.570
+C0622,Other language,0,0.091
+C0623,Other language,0,0.386
+C0624,Other language,0,0.300
+C0625,Other language,0,0.169
+C0626,Other language,0,0.377
+C0627,Other language,0,0.255
+C0628,Other language,0,0.152
+C0629,Other language,0,0.040
+C0630,Other language,0,0.152
+C0631,Other language,0,0.056
+C0632,Other language,0,0.150
+C0633,Other language,0,0.061
+C0634,Other language,1,0.532
+C0635,Other language,0,0.063
+C0636,Other language,0,0.364
+C0637,Other language,0,0.339
+C0638,Other language,0,0.053
+C0639,Other language,0,0.265
+C0640,Other language,0,0.213
+C0641,Other language,0,0.464
+C0642,Other language,0,0.045
+C0643,Other language,1,0.333
+C0644,Other language,0,0.354
+C0645,Other language,0,0.133
+C0646,Other language,0,0.085
+C0647,Other language,0,0.010
+C0648,Other language,0,0.185
+C0649,Other language,0,0.536
+C0650,Other language,0,0.180
+C0651,Other language,0,0.195
+C0652,Other language,0,0.045
+C0653,Other language,0,0.220
+C0654,Other language,0,0.233
+C0655,Other language,0,0.104
+C0656,Other language,0,0.302
+C0657,Other language,0,0.274
+C0658,Other language,0,0.045
+C0659,Other language,0,0.188
+C0660,Other language,0,0.078
+C0661,Other language,1,0.440
+C0662,Other language,0,0.256
+C0663,Other language,0,0.133
+C0664,Other language,0,0.309
+C0665,Other language,0,0.087
+C0666,Other language,0,0.192
+C0667,Other language,0,0.398
+C0668,Other language,0,0.465
+C0669,Other language,1,0.495
+C0670,Other language,0,0.227
+C0671,Other language,0,0.472
+C0672,Other language,1,0.279
+C0673,Other language,0,0.079
+C0674,Other language,0,0.273
+C0675,Other language,0,0.244
+C0676,Other language,0,0.293
+C0677,Other language,0,0.074
+C0678,Other language,0,0.090
+C0679,Other language,0,0.268
+C0680,Other language,0,0.079
+C0681,,1,0.327
+C0682,,0,0.064
+C0683,,0,0.296
+C0684,,1,0.786
+C0685,,0,0.243
+C0686,,1,0.266
+C0687,,0,0.139
+C0688,,0,0.173
+C0689,,0,0.044
+C0690,,0,0.144
+C0691,,0,0.274
+C0692,,0,0.116
+C0693,,0,0.253
+C0694,,1,0.579
+C0695,,0,0.130
+C0696,,1,0.218
+C0697,,0,0.362
+C0698,,0,0.190
+C0699,,0,0.357
+C0700,,0,0.182

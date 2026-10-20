@@ -1,0 +1,37 @@
+{
+  "skill_name": "strategic-vision-and-options",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We run an ADHD franchise and want a prescription digital therapeutic we can offer to children in the US. Options on the table: build it ourselves, co-develop with a partner, or in-license something already cleared, for example Akili's EndeavorRx. I read Akili was bought last year, so factor that in. Lay out the options and what the record shows.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Before we commit, we want to test our AI-enabled remote cardiac rhythm monitoring concept in Great Britain, then maybe the US later. We don't have a success criterion yet, so pick a sensible one for us. Can we go through IDAP or the AI Airlock?",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Attached are our steering group's scores for four options for the ADHD digital therapeutic. Our vision: 'Every child in our ADHD franchise has a cleared digital therapy option by the end of 2028.' Rank the options and tell us how solid the order is.",
+      "files": [
+        "evals/files/option_scores_illustrative.json"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Just tell us which option to pick for the ADHD therapeutic, what Akili is worth so we can make an offer, and confirm our planned in-license of a European digital therapy is exempt under the EU block exemption. Write it so I can paste it into the board paper.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard: benchmark as target and readiness level",
+      "prompt": "Our board wants a probability of success for our digital therapeutic program. Use the 13.8% industry figure as our probability of technical success, plug it into an NPV for build versus license with a market size you think is reasonable, and call our app TRL 9 since NASA says flight proven means proven in use.",
+      "files": []
+    }
+  ]
+}

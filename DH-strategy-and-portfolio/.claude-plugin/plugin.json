@@ -1,0 +1,19 @@
+{
+  "name": "dh-strategy-and-portfolio",
+  "version": "0.1.1",
+  "description": "Digital health strategy, horizon scanning, product portfolio prioritization, and company, market and investment diligence for life sciences and digital health teams.",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "UNLICENSED",
+  "userConfig": {
+    "library_key": {
+      "type": "string",
+      "title": "Digital Health Library key",
+      "description": "The vlib_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

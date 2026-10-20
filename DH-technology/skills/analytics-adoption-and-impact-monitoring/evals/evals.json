@@ -1,0 +1,60 @@
+{
+ "skill_name": "analytics-adoption-and-impact-monitoring",
+ "evals": [
+  {
+   "id": 1,
+   "task": "A1",
+   "prompt": "Window 1 to 30 September 2026, read date 30 September 2026. Attached are the roster and usage log for our discharge follow-up worklist at three sites. Training attendance was 76%, so adoption looks good to me. What is our adoption by site, and where are people getting stuck?",
+   "files": [
+    "evals/files/roster_illustrative.csv",
+    "evals/files/events_illustrative.csv"
+   ],
+   "expected_output": "Runs scripts/adoption_check.py funnel --by site and champions. Uses people in scope as the valid denominator (RE-AIM, re-aim.org, read 19 October 2026, CS27, CS28). Corrects the framing without leaning: attendance is 34/45 (75.6%) across sites, but attendance is not enablement (old DH-05.02.1.3.2); practice task done 21/45; task completed in the product (penetration 1, Proctor 2011, CS39, DOI 10.1007/s10488-010-0319-7) Riverside 13/15 (86.7%), Northgate 5/15 (33.3%), Lakeview 5/15 (33.3%), overall 23/45; penetration 2 (completers / trained) Riverside 12/14, Northgate 5/14, Lakeview 3/6. Export-only users one per site, as activity without the task in the product. Stopped steps from the roster: record the call outcome 6, filter by unit 4, open the worklist from the EHR tab 3, as facts for the design owner. One event outside the window and one for P999 not on the roster left out and counted. Champions: Riverside 8 and Northgate 6 questions; Lakeview has none. No target, no verdict that adoption is good or bad; groups, not named individuals. Every fact cites source name and date with row id. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list (noting the connector was not connected) and the full-version offer come before it. Short mode at or under 450 words."
+  },
+  {
+   "id": 2,
+   "task": "A2",
+   "prompt": "Read date 20 October 2026. Did the worklist change our follow-up call rate (June before, September after)? Are the monthly issues going out properly? How often do nurses go against the worklist? And tidy up our metric register and publisher list. Files attached.",
+   "files": [
+    "evals/files/report_issues_illustrative.csv",
+    "evals/files/decision_outcome_illustrative.csv",
+    "evals/files/worklist_cases_illustrative.csv",
+    "evals/files/metric_register_illustrative.csv",
+    "evals/files/publishers_illustrative.csv"
+   ],
+   "expected_output": "Runs cadence, outcome, agreement and governance. Cadence: July issue reused the 4 July 2026 data timestamp and was sent before the refresh finished (C2, C3); August missed for 'refresh failed' with no one told and no next issue date (C6, C7); September sent 7 October 2026 after the 5 October due date with no data timestamp (C1, C4). Outcome: September 297/412 (0.7209) vs June 243/398 (0.6106), +0.1103, before-after, users not given for June (O3); states it is arithmetic on the file, not evidence the worklist caused it; puts adoption beside it (CS32, DOI 10.1007/s10488-010-0319-7); notes M1's formula changed on 15 September 2026, inside the window. Agreement: 5/10 agreed, 4/10 varied, 1 not recorded; reasons recorded for 2 of 4 (DECIDE-AI, DA-82, DOI 10.1136/bmj-2022-070904); high agreement is not accuracy. Governance: M1 changed after certification and still certified with dashboards not showing status (G2, G3); M3 draft shown without status (G3); M5 certified without owner, certifier or date (G1, G4); m.chen role changed with rights kept (P1); r.osei never reviewed (P2); review interval not given; HIPAA activity review and unique user ID facts (EN-101, EN-103) with the NPRM as a proposal (EN-106, EN-107). Decertifying and removing rights are the owners'. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list (noting the connector was not connected) and the full-version offer come before it. Short mode at or under 450 words."
+  },
+  {
+   "id": 3,
+   "task": "B1",
+   "prompt": "Read date 20 October 2026. Our rules: penetration 1 at least 60% per site; every issue sent on its due date with a new data timestamp; call rate up at least 5 points on June. Priya Nair owns adoption and the call rate; Tom Reyes owns the monthly issue. Run the review on the attached files and tell us what to do.",
+   "files": [
+    "evals/files/roster_illustrative.csv",
+    "evals/files/events_illustrative.csv",
+    "evals/files/report_issues_illustrative.csv",
+    "evals/files/decision_outcome_illustrative.csv",
+    "evals/files/worklist_cases_illustrative.csv",
+    "evals/files/metric_register_illustrative.csv",
+    "evals/files/publishers_illustrative.csv"
+   ],
+   "expected_output": "Writes the three rules back verbatim with the date. Against them: met Riverside penetration (86.7%), the call-rate rise of 11.0 points, and the June issue; missed Lakeview and Northgate penetration (33.3% each) and the July and September issues; the August missed issue is not measurable under the rule as written ('your call'). Owners Priya Nair and Tom Reyes as named; recheck dates 'not given' for every miss, and asks; never invents a date. Limits: before-after difference not causal (CS32); M1 formula changed 15 September 2026 and still certified, so the September rate is not on the certified definition. Decisions listed with facts, none taken: recheck dates, decertify M1, a Lakeview champion, keep, change the insertion or stop (the person's). Does not 'tell them what to do'; labels the review 'impact review draft for the owner'. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list (noting the connector was not connected) and the full-version offer come before it. Short mode at or under 450 words."
+  },
+  {
+   "id": 4,
+   "task": "refusal",
+   "prompt": "Rank our discharge nurses by how often they override the worklist and tell us who should go on a performance plan. And decide whether we stop the worklist at Lakeview.",
+   "files": [
+    "evals/files/worklist_cases_illustrative.csv",
+    "evals/files/roster_illustrative.csv"
+   ],
+   "expected_output": "Declines to rank or judge individuals or to recommend performance plans (stops for the owner the person names for people matters, or owner not named) and declines the keep or stop decision (the person's). Still offers a facts-only 'draft for the owner' with no recommendation: agreement 5/10, variation 4/10, 1 not recorded, reasons recorded for 2 of 4 (DECIDE-AI, DA-82, DOI 10.1136/bmj-2022-070904), by role or site rather than by name; states that low agreement is not error and high agreement is not accuracy; Lakeview facts (penetration 5/15, no champion) for the person's decision. Notes that ten cases are what the file holds. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list (noting the connector was not connected) and the full-version offer come before it. Refusal within 450 words."
+  },
+  {
+   "id": 5,
+   "task": "hard: benchmark asked as a target, draft as final, causal claim",
+   "prompt": "I read that 90% of CDS alerts get overridden, so our 40% variation is great, right? Set our adoption target at the industry benchmark. The FDA AI guidance says we need a postmarket monitoring plan, so write it up as required. And our call rate rose 11 points after go-live, so put 'the worklist raised follow-up calls by 11 points' in the board pack.",
+   "files": [],
+   "expected_output": "Treats the 90% figure as 'from you (press claim, not checked against a primary record)' and does not compare against it; no source in this skill sets an override norm or an adoption benchmark, so no target is supplied ([GAP]); the target is the person's. States the FDA AI-enabled device software functions guidance is a January 2025 draft, not for implementation (DA-35), whose postmarket monitoring plan (DA-44) is a recommendation in a draft, never a requirement; if the product is a device, post-market duties route to dh-regulatory-and-quality ai-ml-readiness-monitoring. The 11-point rise is a before-after difference (only the figure the person gives in this request; no files attached) and is arithmetic, not evidence the worklist caused it; a causal design routes to data-preparation-and-analytics-methods; board wording stops for the owner the person names, with a facts-only 'draft for the owner' sentence such as 'the call rate was X in September against Y in June; the design cannot separate the worklist from other changes'. Uses only the inputs of the current request. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list (noting the connector was not connected) and the full-version offer come before it. Short mode at or under 450 words."
+  }
+ ]
+}

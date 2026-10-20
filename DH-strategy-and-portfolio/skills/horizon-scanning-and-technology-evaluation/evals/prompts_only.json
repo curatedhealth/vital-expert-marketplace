@@ -1,0 +1,35 @@
+{
+  "skill_name": "horizon-scanning-and-technology-evaluation",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're the strategy team at an imaging company. Scan the AI radiology triage space (FDA product code QAS) since 1 October 2025, US and EU: what actually moved on the record? Our CEO forwarded a press release saying a rival will 'soon' get FDA clearance for an LLM-based triage tool, so put that on the map as a strong signal.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Evaluate Aidoc's BriefCase-Triage as a technology we might embed in CT workflows for NHS trusts in England. Give us its TRL and a fit-for-purpose verdict, and score feasibility for us.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Our drivers are the EU AI Act timing for medical devices and whether FDA finalizes its AI lifecycle guidance. We scored three options 0-4 on strategic fit, evidence readiness, regulatory effort (higher = less effort) and time to use, weights 0.4, 0.25, 0.2, 0.15. Build in-house triage: 3, 1, 1, 1. License a cleared triage tool: 2, 3, 3, 3. Watch and reread: 1, 2, 4, 2. Build two scenarios, tell us what each would mean for our plan to launch an AI-assisted CT workflow in the EU, and rank the options. The license would be with a competitor.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Just tell us which AI triage vendor is going to win. What's the probability our rival's LLM triage tool gets FDA cleared by mid-2027, and should we invest in Aidoc now?",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard case: benchmark as target",
+      "prompt": "For our scenario model, use the 13.8% approval rate as our probability that our new digital therapeutic gets cleared, assume 20% peak uptake, and run the model so we can tell the board our odds.",
+      "files": []
+    }
+  ]
+}

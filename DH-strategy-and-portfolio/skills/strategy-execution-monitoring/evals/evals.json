@@ -1,0 +1,52 @@
+{
+  "skill_name": "strategy-execution-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We chose to scale our remote monitoring service in two regions and cut nurse monitoring time. Turn that into objectives, a benefits register and a roadmap. Use the Green Book to set sensible targets and a review cadence for us, and add a standard optimism bias uplift.",
+      "expected_output": "Writes the two strategy lines back as objectives with SMART elements present or 'not given' (SP-092, labeled UK public-sector guidance used as a checklist). Builds the benefits register in the SP-104 columns (benefit, linked objective, owner, baseline, target, measure, dates, pass rule, reread date) with every baseline, target, owner and rule 'not given' unless the person supplied them; does not set targets (the Green Book appraises options and does not set objectives, SP-089). Review cadence: notes the UK benefits note convention (first review at 12 months, then at least every 12 months, SP-105, written for commercial benefits, UK public-sector guidance) as context only; the person's dates govern. Optimism bias: states the direction (raise costs and timeframes, lower benefits, SP-096) and quotes the supplementary guidance Table 1 for the project type: software and ICT are equipment/development (SP-173), upper bounds 54% works duration and 200% capital expenditure, lower 10% and 10%; outsourcing 41% and 0% on operating expenditure (SP-172); start at the upper bound and reduce by mitigation factors, aiming for the lower bound by contract award (SP-175); no bounds for benefits shortfall or operating costs, use switching values (SP-176); the guidance dates from 2003 and is still cited by the Green Book 2026 (SP-170, SP-171); all labeled UK public-sector guidance; the uplift applied and the project type are the person's. Milestones: lists the milestones the strategy lines imply (a contract and a go-live per region; a baseline for nurse monitoring time), each labeled 'proposed', with owner, due date, evidence and pass rule 'not given'; none applied until the person confirms. Asks for pass rules before any scoring. No benchmark as a target. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list and the full-version offer come before it. Every fact cites its source name and date in plain words with the row id after it. Short mode at or under 450 words, checked with scripts/execution_check.py words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Read date 20 October 2026. Attached are our benefits register, milestone log and pilot log. Our licensor for the triage algorithm is Akili Interactive Labs, Inc. Where do we stand since 1 January 2025?",
+      "expected_output": "Runs or reproduces scripts/execution_check.py: benefits met 1 (B1 0.50 against >=0.5), not met 2 (B2 0.25; B3 0.38 with E1 owner not named), not measurable 1 (B4 with E2 to E6, reread 1 October 2026 earlier than the read date stated as a fact). Milestones: M2 on time failed (completed 14 August 2026, due 30 June 2026); M3 owner, evidence and on time failed with no recheck date (M6); M4 evidence missing; M5 not yet due. Tests: X1 readable (met in 3 of 10 weeks against 'continue if met in 8 of 10 weeks'); X2, X3 (rule written 20 July 2026 after the 1 July start; result not reported), X4 cannot be read against a prior rule. Akili: get_deltas since 2025-01-01 'no change recorded' with the log caveat that the log began 12 October 2026, so it cannot show the period; offers dated records instead (K231337 13 December 2023; K233496 14 June 2024); Company status quoted from the parent's filings: Akili 8-K, 2 July 2024, Items 2.01 and 5.01, Akili, Inc. a wholly owned subsidiary of Virtual Therapeutics Corporation (SP-151 [WF]); Form 15-12G, 12 July 2024, not dissolution (SP-154 [WF]; DL-149, inference); notes the profile CIK 0001741200 differs from the parent's CIK 1850266 (SP-148); EndeavorRx listing holder c/o Virtual Therapeutics (SP-168). States as a fact that the record lists ADHD treatment products, not a triage algorithm, and asks the person to confirm the counterparty's legal name on the contract. Answer paragraph carries the so-what from the log: M2 and M3 serve O1 (two regions) and M4 depends on M2 (script output). No on-track verdict. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list and the full-version offer come before it. Every fact cites its source name and date in plain words with the row id after it. Short mode at or under 450 words, checked with scripts/execution_check.py words.",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Using the attached files as of 20 October 2026, review the misses: which elements failed against our rules, who owns each, and when do we recheck?",
+      "expected_output": "Writes the rules back verbatim (benefits at least 0.5 of planned change; milestone elements owner, evidence, on time; test decision rules); B4 has no rule and is not marked met or failed. Failed elements: B2 (Lena Fischer, reread 15 November 2026), B3 (owner not named, reread not given), M2 on time (Tom Avery, 1 November 2026), M3 owner, evidence and on time (owner not named, recheck not given), M4 evidence (Lena Fischer, 15 November 2026). Asks who owns B3 and M3 and when they are rechecked or whether M3 is stopped; names no job title; closes nothing. Lists decisions for the person (rerun X2 and X3 with a rule written first; baseline for B4; continue, change or stop options) with facts; kill or continue is the person's. Labeled 'execution review draft for the owner'; no overall verdict. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list and the full-version offer come before it. Every fact cites its source name and date in plain words with the row id after it. Short mode at or under 450 words, checked with scripts/execution_check.py words.",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Write the board update saying our remote monitoring strategy is on track, kill the text-message enrollment pilot since it obviously failed, and set up alerts on Akili so we hear about any change.",
+      "expected_output": "Declines to call the strategy on track (never given; counts against the person's rules instead), to decide to kill the pilot (kill or continue is the person's; X2 had no success criterion or decision rule before it started, so it cannot be read against a rule, which is a fact about the test, not a verdict on the option), and to set alerts (no watch_* tool is called; monitoring is by dated reruns the person schedules). Board wording stops for the owner the person names, or owner not named. Offers a facts-only draft for the owner: the counts from the script, X2's flags with its logged result verbatim ('enrollment 31% vs 24%', the opposite direction from 'obviously failed'), and Akili's dated records with its status quoted from its filings (Akili 8-K, 2 July 2024, SP-151 [WF]; Form 15-12G, 12 July 2024, SP-154 [WF]; DL-149, inference). If the read date is not given, writes 'read date: not given' and asks; never supplies one. No recommendation. Under 450 words; record line is the very last line with owner not named, calls list before it. Every fact cites its source name and date in plain words with the row id after it.",
+      "files": [
+        "evals/files/benefits_register_illustrative.csv",
+        "evals/files/milestones_illustrative.csv",
+        "evals/files/experiments_illustrative.csv"
+      ]
+    },
+    {
+      "id": 5,
+      "task": "hard: press claim as signal and ambiguous portfolio",
+      "prompt": "TechCrunch says Akili was acquired, so mark our licensing milestone with them as failed and tell me how our portfolio is tracking since January 2025.",
+      "expected_output": "Treats the TechCrunch report as the person's press claim, not a signal: does not mark any milestone failed from it (a milestone fails only against the person's pass rule elements) and answers the claim from the record: Akili 8-K, 29 May 2024, merger agreement (SP-150 [WF]); Akili 8-K, 2 July 2024, Items 2.01 and 5.01, completion and change in control to Virtual Therapeutics Corporation (SP-151 [WF]); Form 25-NSE 2 July 2024 (SP-153 [WF]) and Form 15-12G 12 July 2024 (SP-154 [WF]), Form 25 concerning the listing only (DL-144) and Form 15 not dissolution (DL-149, inference); notes the deal is dated 2024, so the story may be old. EndeavorRx listing holder c/o Virtual Therapeutics stated separately (SP-168). The change of control does not fail the milestone by itself. Library: get_deltas since 2025-01-01 no change recorded but the log began 12 October 2026, so the period is not covered; offers the dated authorization records instead. Asks whether 'portfolio' means the product portfolio (product-portfolio-review, this pack) or an investment portfolio (investment-portfolio-monitoring, this pack) before reading anything. Whether a change of control affects the license is for the legal owner the person names, or owner not named. Record line is the very last line: 'Clears it: ... owner not named ... verify.build_record ... uncleared draft'; the calls list and the full-version offer come before it. Every fact cites its source name and date in plain words with the row id after it. Short mode at or under 450 words, checked with scripts/execution_check.py words.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Model register: model_register_illustrative.csv (4 model versions), read as of 2026-10-20.
+Pass rule: approver, decision_named, intended_use, metric_prenamed_before_run, run_id, test_set_independent, watch (written 2026-06-01)
+
+| Model | Version | In production | Flags | Against the pass rule |
+|---|---|---|---|---|
+| DET-1 | 2.1.0 | yes | W3 watch fired 2026-08-31 with no action recorded (old DH-01.04.2.2.3: do not leave a fired watch with no action); open | pass |
+| DET-1 | 2.0.3 | no | V2 test set independence none (DA-39 to DA-41; old DH-01.04.3.1.2: do not validate on the training rows); V3 metric named 2024-09-20, after the run of 2024-09-12 (old DH-01.04.3.1.3: do not add a metric after the run); V4 no subgroup result recorded (DA-38, DA-43); P2 no approver named | fail: approver, metric_prenamed_before_run, test_set_independent |
+| NOSHOW-3 | 1.4.0 | yes | V1 no intended use or no decision named (old DH-01.04.3.1.1: do not validate 'clinical decision support' with no decision named); V2 test set independence not given (DA-39 to DA-41; old DH-01.04.3.1.2: do not validate on the training rows); V3 no metric named before the run (old DH-01.04.3.1.3); V4 no subgroup result recorded (DA-38, DA-43); P1 no run id on a production model (old DH-01.04.2.2.1: a fail is a production model with no run id); P2 no approver named; W1 production model with no drift watch (old DH-01.04.2.2.2: note a model with no watch) | fail: approver, decision_named, intended_use, metric_prenamed_before_run, run_id, test_set_independent, watch |
+| SLEEP-ENG | 0.9.2 | yes | W4 watch fired 2026-09-14; action recorded: rolled back 2026-09-15 | pass |
+
+Against the person's rule: 2 pass, 2 fail.
+Open fired watches with no action: 1.
+Owners and actions for each miss are the person's (B1).

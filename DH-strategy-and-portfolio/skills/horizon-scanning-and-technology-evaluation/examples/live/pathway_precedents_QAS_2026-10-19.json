@@ -1,0 +1,49 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.get_pathway_precedents",
+ "args": {
+  "product_code": "QAS",
+  "jurisdiction": "US"
+ },
+ "results": [
+  {
+   "code": "QAS",
+   "decisions": 88,
+   "by_pathway": {
+    "FDA_DE_NOVO": 1,
+    "FDA_510K": 87
+   },
+   "by_year": {
+    "2018": 3,
+    "2019": 5,
+    "2020": 12,
+    "2021": 5,
+    "2022": 15,
+    "2023": 11,
+    "2024": 12,
+    "2025": 15,
+    "2026": 10
+   },
+   "time_to_decision": {
+    "basis": "between stored dates (submission_date to decision_date), calendar days",
+    "n": 88,
+    "median_days": 104,
+    "min_days": 18,
+    "max_days": 449,
+    "not_computable_for": 0
+   },
+   "de_novo_grants": [
+    {
+     "reference": "DEN170073",
+     "device": "ContaCT",
+     "applicant": "Viz.Al, Inc.",
+     "decision_date": "2018-02-13",
+     "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN170073"
+    }
+   ],
+   "regulation_number": "892.2080",
+   "first_decision": "2018-02-13",
+   "last_decision": "2026-09-16"
+  }
+ ]
+}

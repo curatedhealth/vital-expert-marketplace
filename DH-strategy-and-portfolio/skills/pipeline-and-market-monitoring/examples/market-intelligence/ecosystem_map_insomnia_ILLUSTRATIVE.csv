@@ -1,0 +1,12 @@
+lane,jurisdiction,entry,source,date,gap
+Buyers,all,Who adopts and contracts,,,not given
+Payers,DE,"somnio: DE_DIGA permanent listing, listed 2020-10-22, identifier 00508","commercial-dh.map_money_flow {reference: somnio}",2026-10-19,
+Payers,DE,"DiGA directory counts: 62 listed, 18 delisted, 29 refused",DE34,2026-09-09,
+Payers,US,"US_CMS_DMHT 3 and US_CMS_RPM 4 rows, code-level",market-access-dh.list_schemes {},2026-10-19,
+Peers,US,"Pear Therapeutics, Inc.: reSet, reSET-O, Somryst; 3 authorizations",commercial-dh.screen_commercial_peers {segment: dtx; limit: 10},2026-10-19,
+Peers,US,"Somryst 510(k) K191716, decision 2020-03-23","commercial-dh.screen_commercial_peers {segment: dtx, name: Somryst}",2026-10-19,
+Peers,US,"Big Health, Inc.: Daylight, Sleepio; 2 authorizations",commercial-dh.screen_commercial_peers {segment: dtx; limit: 10},2026-10-19,
+Peers,DE,somnio maker in company store,,,lookup not run
+Rules,DE,"EHDS applies from 26 March 2027",SP-068,2026-10-20,
+Rules,US,"Data and deal rules (HSR, CFIUS, DOJ bulk data) with dates",DL-044 to DL-106,2026-10-20,
+From your material,DE,"Market size figure from a vendor deck",,,

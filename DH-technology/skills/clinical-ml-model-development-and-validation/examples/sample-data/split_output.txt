@@ -1,0 +1,25 @@
+Manifest: dataset_manifest_illustrative.csv (2003 records). Claim for the test set: external.
+
+| Split | Records | Patients | Sites | First date | Last date |
+|---|---|---|---|---|---|
+| test | 603 | 603 | Site B, Site C | 2024-11-03 | 2025-09-30 |
+| train | 1200 | 1200 | Site A, Site B | 2023-01-01 | 2024-12-29 |
+| tune | 200 | 200 | Site B | 2024-07-01 | 2024-12-30 |
+
+| age_band | Development records | Test records |
+|---|---|---|
+| 18-64 | 479 | 296 |
+| 65-84 | 467 | 307 |
+| 85+ | 454 | 0 |
+
+| sex | Development records | Test records |
+|---|---|---|
+| F | 682 | 290 |
+| M | 718 | 313 |
+
+Flags
+- S1: 3 patient(s) appear in the test split and in a development split (for example P00001, P00011, P00021); data leakage between development and test data creates uncertainty about true performance (FDA AI-enabled device software draft, January 2025, DA-39)
+- S2: test set claimed external but shares site(s) Site B with development data; the draft says test data should generally come from sites different from those used to develop the model (DA-41)
+- S5: age_band = 85+: present in development data, absent from the test set; write it as not validated [GAP] (old task DH-01.04.3.1.2 step 3; subgroup evaluation, DA-38, DA-43)
+
+Whether the test set is adequate is the person's call; this check reports facts about the manifest only.

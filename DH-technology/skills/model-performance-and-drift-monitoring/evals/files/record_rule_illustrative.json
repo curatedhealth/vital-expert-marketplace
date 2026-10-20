@@ -1,0 +1,13 @@
+{
+  "_label": "ILLUSTRATIVE pass rule written by the person, not by the model",
+  "written_on": "2026-06-01",
+  "required": [
+    "intended_use",
+    "decision_named",
+    "test_set_independent",
+    "metric_prenamed_before_run",
+    "run_id",
+    "approver",
+    "watch"
+  ]
+}

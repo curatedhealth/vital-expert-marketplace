@@ -1,0 +1,18 @@
+{
+ "call": {
+  "tool": "verify.build_record",
+  "args": {
+   "clearances": [
+    {
+     "cleared_by": {
+      "name": "Claude"
+     },
+     "role": "model"
+    }
+   ],
+   "text": "Segment and GTM draft for an insomnia DTx. Uncleared."
+  }
+ },
+ "retrieved": "2026-10-19",
+ "error": "build_record refuses a record without a human cleared_by.name"
+}

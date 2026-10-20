@@ -1,0 +1,11 @@
+case_id,user,shown_on,recommendation,action,agreed,override_reason
+C01,P001,2026-09-03,call today (high risk),called today,yes,
+C02,P002,2026-09-03,call today (high risk),called next day,no,patient asked for a later call
+C03,P004,2026-09-04,call within 2 days,called within 2 days,yes,
+C04,P005,2026-09-04,call today (high risk),called within 2 days,no,
+C05,P017,2026-09-05,call within 2 days,called today,no,nurse judged higher risk
+C06,P018,2026-09-05,call within 2 days,called within 2 days,yes,
+C07,P020,2026-09-08,call today (high risk),no call,no,
+C08,P021,2026-09-08,call within 2 days,called within 2 days,yes,
+C09,P003,2026-09-09,call today (high risk),called today,,
+C10,P006,2026-09-09,call within 2 days,called within 2 days,yes,

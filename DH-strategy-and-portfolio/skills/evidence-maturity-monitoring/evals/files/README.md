@@ -1,0 +1,1 @@
+`evidence_runs_2026-10-19.json` is a real saved library output (diligence-dh.get_evidence_maturity for K191716 and somnio, 19 October 2026, trimmed). `evidence_runs_2026-12-01_ILLUSTRATIVE.json` is an illustrative later run written by the builder; it states nothing about the companies.

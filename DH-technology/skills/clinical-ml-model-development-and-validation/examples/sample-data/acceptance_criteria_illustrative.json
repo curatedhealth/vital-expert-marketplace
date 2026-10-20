@@ -1,0 +1,27 @@
+{
+  "_label": "ILLUSTRATIVE criteria written by the person, not by the model",
+  "threshold": 0.25,
+  "metric_named_on": "2025-10-01",
+  "run_date": "2025-11-03",
+  "acceptance": [
+    {
+      "metric": "auroc",
+      "op": ">=",
+      "value": 0.75,
+      "population": "all"
+    },
+    {
+      "metric": "sensitivity",
+      "op": ">=",
+      "value": 0.7,
+      "population": "all"
+    },
+    {
+      "metric": "sensitivity",
+      "op": ">=",
+      "value": 0.7,
+      "population": "sex=F"
+    }
+  ],
+  "fairness_criterion": "equal sensitivity across sex (the person's choice)"
+}

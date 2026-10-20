@@ -1,0 +1,12 @@
+{
+ "label": "ILLUSTRATIVE: decisions, capacity use and named capacity written for this build; not any company's data.",
+ "capacity_named": 14,
+ "capacity_unit": "FTE", "capacity_period": "next two quarters (the person's period)",
+ "order": ["Program A: insomnia DTx label expansion", "Program B: anxiety DTx pivotal study", "Program C: clinician dashboard add-on", "Program D: pediatric ADHD prototype"],
+ "items": [
+  {"id": "Program A: insomnia DTx label expansion", "decision": "continue", "capacity_use": 5},
+  {"id": "Program B: anxiety DTx pivotal study", "decision": "continue", "capacity_use": 7},
+  {"id": "Program C: clinician dashboard add-on", "decision": "continue", "capacity_use": 3},
+  {"id": "Program D: pediatric ADHD prototype", "decision": "delay", "capacity_use": 4}
+ ]
+}

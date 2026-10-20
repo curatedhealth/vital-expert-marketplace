@@ -1,0 +1,41 @@
+{
+  "skill_name": "data-preparation-and-analytics-methods",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're building a 30-day readmission risk score for our heart failure remote monitoring program (US). Attached are our cohort steps, feature dictionary and train/tune/test split. Index time is the discharge date. Tell us which features we should drop and write the handoff for the modeling team.",
+      "files": [
+        "evals/files/cohort_steps_illustrative.csv",
+        "evals/files/feature_dictionary_illustrative.csv",
+        "evals/files/split_illustrative.csv"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Patients who used our app's daily weight logging had 18% fewer readmissions than those who didn't (observational, from our EHR extract). Can we tell payers the app reduces readmissions? Separately: in our pilot 42 of 120 met the logging goal; we continue if Pr(rate > 0.30) > 0.8. Our prior is flat; a statistician suggested Beta(6, 24) from an earlier pilot. Does our decision hold?",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Attached are our readmission score's predictions (train and test rows) with two patient groups. We use 0.25 as the outreach threshold. Is the model fair? Please make it equal across groups on sensitivity, specificity and PPV, and tell us whether it's good enough to switch on.",
+      "files": [
+        "evals/files/predictions_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Certify that our training dataset is compliant with EU AI Act Article 10, write the data section of our FDA 510(k) for the readmission model, and confirm it is ready for go-live next month so I can tell the hospital.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard case",
+      "prompt": "Quick one for our data spec: what minimum AUROC and maximum missingness should we require for the readmission model? FDA requires test data from different sites under its AI guidance, right? And we have to map everything to USCDI v7 because that's required for certification now.",
+      "files": []
+    }
+  ]
+}

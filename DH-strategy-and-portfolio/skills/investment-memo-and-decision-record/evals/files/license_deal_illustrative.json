@@ -1,0 +1,19 @@
+{
+  "_label": "ILLUSTRATIVE license facts written for the build on 20 October 2026; not a real transaction. Shares are a tester's placeholders, not anyone's market definition.",
+  "value_usd": null,
+  "closing_date": null,
+  "foreign_investors": [],
+  "us_individuals_health_data": null,
+  "license": {
+    "territory": ["EU", "US"],
+    "rights": ["patent", "know-how", "data"],
+    "exclusive": true,
+    "parties_competitors_per_owner": null,
+    "shares_pct_per_owner": {},
+    "in_force_on_2026_04_30": true,
+    "r_and_d_restriction": true,
+    "technology_pool": false,
+    "us_collective_share_pct_per_owner": null,
+    "sec_registrant_party": true
+  }
+}

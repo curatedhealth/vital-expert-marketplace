@@ -1,0 +1,5 @@
+id,benefit,objective,owner,measure,direction,baseline,baseline_date,target,target_date,actual,actual_date,pass_rule,reread_date,source
+B1,Clinics using the remote monitoring service,O1 Scale remote monitoring in two regions,Lena Fischer,clinics live,up,4,2026-01-15,40,2026-12-31,22,2026-09-30,>=0.5,2026-12-01,monthly operations report
+B2,Nurse time per monitored patient per week (minutes),O2 Cut monitoring workload,Lena Fischer,minutes,down,30,2026-01-15,18,2026-12-31,27,2026-09-30,>=0.5,2026-11-15,time-and-motion sample
+B3,Patients enrolled in the remote monitoring service,O1 Scale remote monitoring in two regions,,patients enrolled,up,300,2026-01-15,5000,2026-12-31,2100,2026-09-30,>=0.5,,enrollment database
+B4,30-day readmissions among enrolled patients,O3 Better outcomes for enrolled patients,Omar Haddad,readmission rate %,down,,,,2027-06-30,,,,2026-10-01,not yet measured

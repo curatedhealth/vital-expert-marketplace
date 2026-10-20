@@ -1,0 +1,28 @@
+Release: v3.0 | Read date: 20 October 2026 | Index: evals/files/evidence_index_illustrative.csv
+| Item | Requirement | Rows | Status | Evidence | Evidence date | Flags | Note |
+|---|---|---|---|---|---|---|---|
+| R01 | Intended purpose users and setting documented | DA-10; CV125 | present | IU-3.0 intended use statement | 1 September 2026 |  |  |
+| R02 | Subgroup performance test on the release model | DA-48; DA-57; CV127 | not assessable | SG-2.4 subgroup report | 10 June 2026 | G3, G5 | evidence on v2.4, release is v3.0 |
+| R03 | Bias examination of training validation and test data (AI Act Art 10(2)(f)) | DA-48; AI EU-19 | not yet applicable | none | not given |  | applies from 2 August 2028 |
+| R04 | Human oversight: override and stop (AI Act Art 14(4)) | DA-61; AI EU-19 | not yet applicable | none | not given |  | applies from 2 August 2028 |
+| R05 | DCB0129 clinical risk management file and safety case report | CP-UK-06; CP-UK-07; CP-UK-11 | present | CSCR-3.0 clinical safety case report | 20 September 2026 |  |  |
+| R06 | DCB0160 deploying organization clinical risk assessment | CP-UK-09; CP-UK-10 | missing | none | not given | G1, G6, G7, G8 |  |
+| R07 | GDPR DPIA covering special-category data | EN-111; EN-112 | present | DPIA-2025-04 | 1 March 2025 |  |  |
+| R08 | Bias test using the ethnicity attribute | DA-52; EN-111 | missing | Fairness policy v1 | 15 January 2026 | G2, G7 |  |
+| R09 | AI literacy measures for staff (AI Act Art 4 as amended) | AI EU-14; AI EU-20 | present | Training log Q3 2026 | 30 September 2026 |  |  |
+| R10 | Post-release monitoring plan by group | DA-14; DA-65 | missing | none | not given | G1 |  |
+| R11 | Automatic event logging (AI Act Art 12) | DA-54; AI EU-19 | not yet applicable | none | not given |  | applies from 2 August 2028 |
+| R12 | Instructions state performance for specific groups (AI Act Art 13(3)(b)(v)) | DA-57 | not assessable | none | not given |  | applicability not given |
+| R13 | Calibration by site on the release model | CV127 | present | CAL-3.0 calibration by site | 25 October 2026 | G4 |  |
+
+Counts: missing 3; not assessable 2; not yet applicable 3; present 5
+G5 R02: not seen at test time and not tested: interpreter-assisted visits
+G1: no evidence recorded
+G2: policy statement given in place of a test
+G3: evidence is for a different model version than this release
+G4: evidence dated after the read date
+G5: groups not seen at test time, still not tested
+G6: owner not named for a missing item
+G7: date the item will be present: not given, or earlier than the read date
+G8: whether release waits: not given
+Completeness only: whether present evidence is good enough is yours.

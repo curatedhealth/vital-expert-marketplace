@@ -1,0 +1,7 @@
+cell_id,role,patient_state,encounter_state,scope_requested,http_status,context_needed,context_present,writeback_expected,writeback_visible,token_ms,first_read_ms,mocked_token,run_on,sandbox
+C1,physician,active outpatient,open encounter,patient/Observation.rs,200,patient;encounter;fhirUser,patient;encounter;fhirUser,no,n/a,640,1180,no,2026-10-14,Sandbox A
+C2,physician,active outpatient,no encounter,patient/Observation.rs,200,patient;fhirUser,patient;fhirUser,no,n/a,700,1350,no,2026-10-14,Sandbox A
+C3,nurse,inpatient,open encounter,patient/Observation.rs patient/DocumentReference.c,200,patient;encounter;fhirUser,patient;fhirUser,yes,no,910,2400,no,2026-10-14,Sandbox A
+C4,nurse,discharged,closed encounter,patient/Observation.rs,403,patient;fhirUser,,no,n/a,,,no,2026-10-14,Sandbox A
+C5,pharmacist,inpatient,open encounter,patient/Observation.rs,200,patient;fhirUser,patient;fhirUser,no,n/a,520,980,yes,2026-10-14,Sandbox A
+C6,physician,deceased,closed encounter,patient/Observation.rs,not run,patient;fhirUser,,no,not run,,,no,,Sandbox A

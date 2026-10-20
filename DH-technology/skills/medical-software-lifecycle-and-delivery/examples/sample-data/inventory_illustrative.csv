@@ -1,0 +1,7 @@
+id,item,origin,manufacturer,version,release_date,patch,support_level,end_of_support,safety_class,hazard_ref
+SI-01,Bolus advice engine,own,,3.2.0,,,,,C,HZ-03
+SI-02,Glucose trend display,own,,3.2.0,,,,,B,
+SI-03,Mobile OS runtime (iOS),ots,Apple Inc.,17.5,2024-05-13,17.5.1,maintained,,C,HZ-03
+SI-04,Local database library,open-source,SQLite Consortium,3.39.2,2022-07-21,,maintained,2027-12-31,B,HZ-05
+SI-05,Charting library,open-source,,4.1.0,2023-02-10,,abandoned,2025-06-30,,
+SI-06,Cloud sync SDK,ots,ExampleCloud Ltd,2.8,2024-11-04,2.8.3,end of life,2026-03-31,B,HZ-07

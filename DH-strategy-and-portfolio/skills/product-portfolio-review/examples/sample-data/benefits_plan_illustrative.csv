@@ -1,0 +1,4 @@
+benefit,item,objective,owner,beneficiaries,baseline,target,actual,actual_date,measure,review_date
+Prescriptions per month,Program A: insomnia DTx label expansion,Grow insomnia franchise,Ana Ruiz,Adult insomnia patients,1200,1800,1500,2026-09-30,Dispensed prescriptions per month,2026-12-15
+Sites activated,Program B: anxiety DTx pivotal study,Pivotal evidence for anxiety DTx,,Trial sites,0,12,4,2026-09-30,Sites with first patient in,2026-11-30
+Clinician weekly active users,Program C: clinician dashboard add-on,Clinician workflow fit,Sam Patel,Clinicians,,400,150,2026-09-30,Weekly active clinician accounts,

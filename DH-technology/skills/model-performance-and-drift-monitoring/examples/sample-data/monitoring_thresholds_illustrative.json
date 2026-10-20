@@ -1,0 +1,12 @@
+{
+  "_label": "ILLUSTRATIVE thresholds written by the person, not by the model",
+  "written_on": "2025-12-15",
+  "threshold": 0.25,
+  "oe_range": [
+    0.8,
+    1.25
+  ],
+  "auroc_min": 0.72,
+  "smd_max": 0.2,
+  "missing_max": 0.1
+}

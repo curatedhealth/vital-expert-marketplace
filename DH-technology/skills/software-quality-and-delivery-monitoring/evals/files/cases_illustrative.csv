@@ -1,0 +1,7 @@
+id,hazard_ids,level,spec_ref,expected,build,result,waiver
+TC-10,HZ-01,system,SRS-4.2,Dose shown equals reference table value for 40 unit pairs,3.2.1-rc2,pass,
+TC-11,HZ-01,unit,SRS-4.2,Conversion function returns mmol/L value to 1 decimal,3.2.1-rc2,pass,
+TC-20,HZ-02,unit,SRS-5.1,Works correctly,3.2.1-rc2,pass,
+TC-21,HZ-02,unit,SRS-5.3,Timestamp label updates within 1 second of new value,3.2.0,pass,
+TC-40,HZ-04,integration,SRS-7.2,Conflicting edits resolved by server timestamp,3.2.1-rc1,fail,
+TC-41,HZ-04;HZ-09,system,SRS-7.3,No record lost after 500 simulated conflicts,3.2.1-rc1,pass,Re-run waived by owner; sync code unchanged since rc1

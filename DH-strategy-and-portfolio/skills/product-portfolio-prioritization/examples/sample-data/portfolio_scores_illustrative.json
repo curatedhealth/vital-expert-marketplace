@@ -1,0 +1,10 @@
+{
+ "label": "ILLUSTRATIVE: programs, criteria, weights and 0 to 4 scores written for this build to show the method. They are not any company's data or judgment.",
+ "alternatives": [
+  {"id": "Program A: insomnia DTx label expansion", "scores": {"unmet_need": 3, "evidence_readiness": 4, "regulatory_path_clarity": 4, "strategic_fit": 3, "capacity_fit": 3}},
+  {"id": "Program B: anxiety DTx pivotal study", "scores": {"unmet_need": 4, "evidence_readiness": 2, "regulatory_path_clarity": 2, "strategic_fit": 4, "capacity_fit": 1}},
+  {"id": "Program C: clinician dashboard add-on", "scores": {"unmet_need": 2, "evidence_readiness": 3, "regulatory_path_clarity": 3, "strategic_fit": 2, "capacity_fit": 4}},
+  {"id": "Program D: pediatric ADHD prototype", "scores": {"unmet_need": 4, "evidence_readiness": 1, "regulatory_path_clarity": 1, "strategic_fit": 3, "capacity_fit": 2}}
+ ],
+ "criteria_weights": {"unmet_need": 0.30, "evidence_readiness": 0.25, "regulatory_path_clarity": 0.15, "strategic_fit": 0.20, "capacity_fit": 0.10}
+}

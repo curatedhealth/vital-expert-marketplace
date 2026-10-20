@@ -1,0 +1,11 @@
+Release: v3.0 | Read date: 20 October 2026 | Your pass rule: all applicable (written on 2 September 2026)
+| Item | Requirement | Status | Why | Owner | Present by | Release waits |
+|---|---|---|---|---|---|---|
+| R02 | Subgroup performance test on the release model | not assessable | evidence is for a different model version than this release; evidence on v2.4, release is v3.0 | Priya Nair | 15 November 2026 | yes |
+| R06 | DCB0160 deploying organization clinical risk assessment | missing | no evidence recorded | owner not named | not given | not given |
+| R08 | Bias test using the ethnicity attribute | missing | policy statement given in place of a test | data science lead | 1 October 2026 (earlier than the read date) | no |
+| R10 | Post-release monitoring plan by group | missing | no evidence recorded | Priya Nair | 1 December 2026 | no |
+| R12 | Instructions state performance for specific groups (AI Act Art 13(3)(b)(v)) | not assessable | applicability not given | owner not named | not given | not given |
+
+Your rule is not met: 5 item(s) are missing or not assessable; all 5 would have to become present and assessable for this release to meet it (computed from the index).
+Release go or no-go is yours; a failed item stays open until you close it with evidence.

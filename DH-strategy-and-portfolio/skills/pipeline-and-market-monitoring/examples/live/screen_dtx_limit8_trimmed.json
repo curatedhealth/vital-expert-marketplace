@@ -1,0 +1,81 @@
+{
+ "_note": "Trimmed copy of a live response, 19 October 2026. The full response repeated the 16-scheme and 5-jurisdiction coverage block for each of the eight peers.",
+ "call": {
+  "tool": "commercial-dh.screen_commercial_peers",
+  "arguments": {
+   "segment": "dtx",
+   "limit": 8
+  }
+ },
+ "response": {
+  "screen_market": {
+   "result_count": 8,
+   "total_matches": 18,
+   "ranking": "evidence maturity score, highest first, then company name; no other weighting",
+   "perimeter": {
+    "companies_in_store": 2205,
+    "segments_loaded": [
+     "dtx"
+    ],
+    "statement": "this screen covers only the companies the store holds, not the market"
+   },
+   "results": [
+    {
+     "company": "Akili Interactive Labs, Inc.",
+     "products": [
+      "EndeavorOTC",
+      "EndeavorRx"
+     ],
+     "authorizations": 3,
+     "studies": 10,
+     "evidence_maturity": 100
+    },
+    {
+     "company": "Appliedvr, Inc.",
+     "authorizations": 3,
+     "evidence_maturity": 100
+    },
+    {
+     "company": "Click Therapeutics, Inc.",
+     "authorizations": 2,
+     "evidence_maturity": 89
+    },
+    {
+     "company": "Luminopia, Inc.",
+     "authorizations": 4,
+     "evidence_maturity": 89
+    },
+    {
+     "company": "Swing Therapeutics, Inc.",
+     "authorizations": 1,
+     "evidence_maturity": 78
+    },
+    {
+     "company": "Cognifisense, Inc.",
+     "authorizations": 2,
+     "evidence_maturity": 67
+    },
+    {
+     "company": "Nightware, Inc.",
+     "authorizations": 1,
+     "evidence_maturity": 67
+    },
+    {
+     "company": "Pear Therapeutics, Inc.",
+     "authorizations": 3,
+     "evidence_maturity": 67
+    }
+   ]
+  },
+  "per_peer_example": {
+   "name": "Akili Interactive Labs, Inc.",
+   "search_devices_gap": "no stored device matches 'Akili Interactive Labs, Inc.' in US, EU, UK, CH, TW; absence from the store is not evidence of absence from the market",
+   "search_listings_gap": "no stored listing matches 'Akili Interactive Labs, Inc.' in DE_DIGA, ... SE_TLV"
+  },
+  "coverage": [
+   "digital_health_census.screen_market: answered",
+   "regulatory_dh.search_devices: [GAP]",
+   "market_access_dh.search_listings: [GAP]"
+  ]
+ }
+}

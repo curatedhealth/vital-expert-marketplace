@@ -1,0 +1,86 @@
+{
+ "dataset": "HF readmission training set (illustrative)",
+ "version": "v3",
+ "unit_of_row": "encounter (one heart failure discharge)",
+ "written_on": "2026-09-01",
+ "written_by": "Data engineering lead, Dana Ortiz (illustrative)",
+ "checks": [
+  {
+   "id": "DQ1",
+   "category": "value_conformance",
+   "field": "sex",
+   "allowed": [
+    "F",
+    "M",
+    "U"
+   ],
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ2",
+   "category": "relational_conformance",
+   "field": "patient_id",
+   "ref": "patients",
+   "ref_field": "patient_id",
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ3",
+   "category": "computational_conformance",
+   "field": "bmi",
+   "formula": "weight_kg / height_m ** 2",
+   "tolerance": 0.2,
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ4",
+   "category": "completeness",
+   "field": "nt_probnp",
+   "decision_time": true,
+   "context": "verification",
+   "limit": 0.15
+  },
+  {
+   "id": "DQ5",
+   "category": "plausibility_uniqueness",
+   "fields": [
+    "encounter_id"
+   ],
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ6",
+   "category": "plausibility_atemporal",
+   "field": "age",
+   "min": 18,
+   "max": 110,
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ7",
+   "category": "plausibility_temporal",
+   "before": "admit_date",
+   "after": "discharge_date",
+   "context": "verification"
+  },
+  {
+   "id": "DQ8",
+   "category": "leak",
+   "field": "nt_probnp_date",
+   "index_field": "index_time",
+   "context": "verification",
+   "limit": 0
+  },
+  {
+   "id": "DQ9",
+   "category": "row_count",
+   "expected_rows": 80,
+   "limit": 0
+  }
+ ]
+}

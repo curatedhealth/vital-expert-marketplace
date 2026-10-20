@@ -1,0 +1,11 @@
+row_id,map_version,code_system,source_code,target_code,mapper_label,mapper_id,reviewer_id,reviewer_blinded,reviewer_accepts,error_class,sampled_how
+M01,map-2026.3,LOINC,GLU-FAST,1558-6,equal,m.lee,r.ortiz,yes,yes,,random
+M02,map-2026.3,LOINC,HBA1C,4548-4,equal,m.lee,r.ortiz,yes,yes,,random
+M03,map-2026.3,LOINC,CHOL-T,2093-3,equal,m.lee,r.ortiz,yes,yes,,random
+M04,map-2026.3,LOINC,LIPID-PNL,,unmatched,m.lee,r.ortiz,yes,not reviewed,uncoded source,random
+M05,map-2026.3,SNOMED CT,DM2,44054006,equal,m.lee,r.ortiz,yes,no,equivalence too strong,random
+M06,map-2026.3,SNOMED CT,HTN,38341003,equal,m.lee,m.lee,no,yes,,hand-checked yesterday
+M07,map-2026.3,SNOMED CT,CKD3,,unmatched,m.lee,r.ortiz,yes,not reviewed,uncoded source,random
+M08,map-2026.3,SNOMED CT,OBES,414916001,wider,m.lee,r.ortiz,yes,yes,,random
+M09,map-2026.3,LOINC,K-SER,2823-3,equal,m.lee,r.ortiz,yes,no,stale code,random
+M10,map-2026.3,LOINC,NA-SER,2951-2,equal,m.lee,r.ortiz,yes,yes,,random

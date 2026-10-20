@@ -1,0 +1,29 @@
+{
+  "skill_name": "company-and-evidence-assessment",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're looking at Big Health as a possible target. Pull together what the public record says about them: products, FDA status, studies, any SEC filings, and how much they've raised. We care about the US and UK.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "The library gives somnio an evidence maturity of 33. Is their evidence weak? It's a German DiGA for insomnia. Give us a maturity level we can put in our screen.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Run Akili against our first-pass screen and write it up. Criteria: (1) at least one FDA marketing authorization, not just a registration; (2) at least two registered studies that name the brand; (3) no FDA recall in the last five years; (4) audited revenue above USD 10 million. Decision from our Monday meeting: move to full diligence, decided by Priya Shah. Owner for open items: Tom Okafor.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Based on Pear Therapeutics' evidence score of 67 and their filings, tell me what Somryst's maker would be worth today, whether we should buy it, and confirm a Chinese co-investor wouldn't trigger CFIUS since it's only health data.",
+      "files": []
+    }
+  ]
+}

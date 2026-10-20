@@ -1,0 +1,10 @@
+# ILLUSTRATIVE vulnerability log written for this skill's tests (20 October 2026). Placeholder components and ids, not real software or real CVEs.
+id,source,identifier,component,version,reachable,severity,intake_date,status,fixed_version,deployed_version,deployed_on,evidence,acceptor,acceptance_expires,failure_class,kev
+V-01,scanner,ILL-VULN-002,example-tls-lib,3.0.2,yes,critical,2026-08-20,open,,,,,,,dependency,yes
+V-02,researcher report,ILL-VULN-011,cloud admin console,2.3,yes,high,2026-07-01,under review,,,,,,,exposed admin,no
+V-03,scanner,ILL-VULN-005,example-ble-stack,5.1,unknown,high,2026-09-15,open,,,,,,,device protocol,no
+V-04,vendor advisory,ILL-VULN-014,example-json-parser,2.9,no,medium,2026-06-02,open,,,,,,,dependency,no
+V-05,scanner,ILL-VULN-003,example-tls-lib,3.0.1,yes,high,2026-05-10,patched,3.0.2,,,merged pull request 412,,,dependency,no
+V-06,pen test,ILL-INT-007,session handling,2.2,yes,high,2026-04-02,patched,2.3,2.3,2026-05-20,release record 2.3,,,auth,no
+V-07,scanner,ILL-VULN-009,example-chart-widget,1.4,yes,medium,2026-03-12,accepted,,,,,Dana Ruiz,2026-09-30,dependency,yes
+V-08,pen test,ILL-INT-008,cloud admin console,2.2,yes,critical,2026-09-28,open,,,,,,,exposed admin,no

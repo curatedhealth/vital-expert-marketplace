@@ -1,0 +1,5 @@
+id,option,question,prespecified_endpoint,success_criterion,decision_rule,rule_written_on,started_on,sample_planned,sample_actual,result,status
+X1,Remote monitoring in region North,Do nurses complete weekly reviews in under 20 minutes?,median review minutes per patient,median under 20 minutes,continue if met in 8 of 10 weeks,2026-02-01,2026-02-15,10,10,median 22 minutes; met in 3 of 10 weeks,complete
+X2,Patient self-enrollment by text message,Does text invitation raise enrollment?,enrollment rate at 30 days,,,,2026-05-01,400,160,enrollment 31% vs 24%,complete
+X3,AI triage of alerts,Does triage cut false alerts?,false alerts per 100 patients,30% fewer false alerts,stop if fewer than 15% fewer,2026-07-20,2026-07-01,500,480,not reported,running
+X4,Pharmacy refill reminders,,,,,,2026-08-01,200,,,

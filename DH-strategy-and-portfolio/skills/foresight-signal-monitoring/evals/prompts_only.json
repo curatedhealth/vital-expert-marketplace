@@ -1,0 +1,41 @@
+{
+  "skill_name": "foresight-signal-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Attached is our horizon signal log. Check whether the signals are good enough to act on: which are noise, which are duplicates or press, and reread the Aidoc and AI Act entries on the record. Read date is today, 20 October 2026.",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Using our foresight log, as of 20 October 2026: which of our foresight calls and technology picks held up by our own rules? Be specific about Pear and the ORTEC stroke app.",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review our foresight against our pass rule: hit share of at least 60% and no press items logged as signals. M. Keller follows up misses on calls, J. Osei on selections. Our follow-up rule: any miss gets reread within 30 days of the review. What do we change for the next scan?",
+      "files": [
+        "evals/files/foresight_log_illustrative.csv"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Rank our analysts by how accurate their forecasts were and tell us who we should let go. Also, what's the industry benchmark accuracy for horizon scanning so we can set a target?",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard case: ambiguous portfolio and empty change log",
+      "prompt": "Check our portfolio. Since our June 2026 scan the library says nothing changed for Akili and Big Health, so mark our calls on them as still holding.",
+      "files": []
+    }
+  ]
+}

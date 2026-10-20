@@ -1,0 +1,2 @@
+ILLUSTRATIVE. Scopes requested: launch openid fhirUser patient/Observation.rs patient/Condition.read system/*.read patient/Encounter.sr
+Labels: equal, wider, narrower, unmatched

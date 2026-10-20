@@ -1,0 +1,7 @@
+# ILLUSTRATIVE assumption register written for the build; memo date, owners and triggers are not real. Values at memo are set equal to the saved 19 October 2026 library outputs for Pear Therapeutics, Inc.
+id,assumption,company,signal,value_at_memo,memo_date,trigger,trigger_rule,rubric_at_memo,owner,reread_date
+1,No new recall or safety event on Pear products,Pear Therapeutics Inc,deltas.change_count,0,2026-09-01,Any change recorded in the record,>0,,Maria Chen,2027-01-15
+2,Evidence maturity stays at or above 60,Pear Therapeutics Inc,maturity.score,67,2026-09-01,Falls below 60,<60,,Tom Avery,
+3,No new Form D filing,Pear Therapeutics Inc,funding.form_d_count,5,2026-09-01,Any new Form D or Form D/A,changes,,,2027-01-15
+4,No new SEC filing of any kind,Pear Therapeutics Inc,funding.latest_filing_date,2023-04-10,2026-09-01,A filing dated after the memo,after:2026-09-01,,Priya Nair,2026-10-01
+5,Revenue grows 30 percent a year,Pear Therapeutics Inc,none,,2026-09-01,Below 30 percent growth,,,Maria Chen,2027-01-15

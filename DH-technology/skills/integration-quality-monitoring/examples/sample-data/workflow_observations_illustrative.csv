@@ -1,0 +1,6 @@
+obs_id,site,step,designed_action,observed,workaround,seconds,observed_on
+O1,Clinic North,Result review,Open glucose trend from chart banner,done,,48,2026-10-15
+O2,Clinic North,Result review,Open glucose trend from chart banner,done,,62,2026-10-15
+O3,Clinic South,Result review,Open glucose trend from chart banner,replaced,Printed the lab flowsheet and wrote values on paper,151,2026-10-16
+O4,Clinic South,Result review,Open glucose trend from chart banner,skipped,Asked the patient to read values from their phone,95,2026-10-16
+O5,Clinic North,Care plan note,Send care plan note back to chart,replaced,Copied the note text into a free-text chart note,120,2026-10-15

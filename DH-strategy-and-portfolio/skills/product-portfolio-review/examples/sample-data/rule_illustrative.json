@@ -1,0 +1,7 @@
+{
+ "label": "ILLUSTRATIVE rule written for this build; not any company's rule.",
+ "rule_ref": "Rule 2026-09",
+ "rule_date": "2026-06-30",
+ "weights": {"unmet_need": 0.30, "evidence_readiness": 0.25, "regulatory_path_clarity": 0.15, "strategic_fit": 0.20, "capacity_fit": 0.10},
+ "decision_rule": {"type": "capacity_in_rank_order", "capacity": 14, "unit": "FTE", "period": "two quarters from 8 July 2026"}
+}

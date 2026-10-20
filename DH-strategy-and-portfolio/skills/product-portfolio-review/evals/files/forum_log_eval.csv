@@ -1,0 +1,5 @@
+item,decision,rule_ref,rank,decider,date,record_location,capacity_use,s_need,s_evidence,s_fit
+Cardio remote monitoring v3,continue,Rule R7,1,Priya Shah,2026-09-10,portfolio minutes 10 September 2026,6,4,3,3
+Diabetes coaching app,continue,Rule R7,3,Priya Shah,2026-09-10,portfolio minutes 10 September 2026,5,2,2,3
+COPD inhaler companion,delay,Rule R7,2,Priya Shah,2026-09-10,portfolio minutes 10 September 2026,4,3,3,2
+Sleep DTx (in-licensed),continue,,,Priya Shah,2026-09-10,quarterly review deck,3,3,4,2

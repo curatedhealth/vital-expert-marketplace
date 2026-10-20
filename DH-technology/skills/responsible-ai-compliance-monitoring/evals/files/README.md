@@ -1,0 +1,1 @@
+Illustrative data. `evidence_index_illustrative.csv` was written for this skill's examples and evals: a readmission risk model, release v3.0, England and Germany (class IIa, as the person states). It describes no real product, organization or person. `read_output.txt` and `review_output.txt` are the outputs of `scripts/evidence_check.py` on it with read date 20 October 2026.

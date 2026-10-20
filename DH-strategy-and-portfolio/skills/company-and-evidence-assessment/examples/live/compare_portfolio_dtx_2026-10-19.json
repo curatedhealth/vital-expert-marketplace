@@ -1,0 +1,184 @@
+{
+ "_trimmed": "Trimmed live output. Full responses carry source_coverage and a coverage-matrix exhibit; kept here only what the skill uses.",
+ "calls": [
+  {
+   "tool": "diligence-dh.compare_portfolio",
+   "arguments": {
+    "companies": [
+     "Somryst",
+     "Big Health",
+     "Akili Interactive Labs, Inc."
+    ]
+   },
+   "retrieved_at": "2026-10-19T20:15:42Z",
+   "companies": [
+    {
+     "query": "Somryst",
+     "company": "Pear Therapeutics, Inc.",
+     "resolution": "resolved, exact_brand_name",
+     "authorizations_by_jurisdiction": {
+      "US": 3
+     },
+     "studies": {
+      "total": 3,
+      "linked_by_brand": 2,
+      "linked_by_indication_only": 1
+     },
+     "safety_events": 2,
+     "funding_signal_counts": {
+      "sec_edgar": 46,
+      "nih_reporter": 6
+     },
+     "evidence_maturity": {
+      "score": 67,
+      "assessable_points": {
+       "earned": 60,
+       "maximum": 90
+      },
+      "components": {
+       "regulatory_status": "30/30",
+       "clinical_evidence": "20/40",
+       "active_development": "0/10",
+       "product_breadth": "10/10"
+      }
+     },
+     "reimbursement_listings": "not_assessable: no reimbursement source is loaded",
+     "risk_flags": [
+      "fda_recall: Class II on 2021-06-07: reSET-O Mobile App ...",
+      "fda_recall: Class II on 2021-06-07: reSET Mobile App ..."
+     ]
+    },
+    {
+     "query": "Big Health",
+     "company": "Big Health, Inc.",
+     "resolution": "resolved, normalized_legal_name",
+     "authorizations_by_jurisdiction": {
+      "US": 2
+     },
+     "studies": {
+      "total": 4,
+      "linked_by_brand": "none_found",
+      "linked_by_indication_only": 2,
+      "unlinked": 2
+     },
+     "safety_events": "none_found",
+     "evidence_maturity": {
+      "score": 56,
+      "assessable_points": {
+       "earned": 50,
+       "maximum": 90
+      },
+      "components": {
+       "regulatory_status": "20/30",
+       "clinical_evidence": "20/40",
+       "active_development": "0/10",
+       "product_breadth": "10/10"
+      }
+     },
+     "reimbursement_listings": "not_assessable: no reimbursement source is loaded"
+    },
+    {
+     "query": "Akili Interactive Labs, Inc.",
+     "company": "Akili Interactive Labs, Inc.",
+     "resolution": "resolved, normalized_legal_name",
+     "authorizations_by_jurisdiction": {
+      "US": 3
+     },
+     "studies": {
+      "total": 10,
+      "linked_by_brand": 3,
+      "linked_by_indication_only": 6,
+      "unlinked": 1
+     },
+     "safety_events": "none_found",
+     "funding_signal_counts": {
+      "sec_edgar": 2
+     },
+     "evidence_maturity": {
+      "score": 100,
+      "assessable_points": {
+       "earned": 90,
+       "maximum": 90
+      },
+      "components": {
+       "regulatory_status": "30/30",
+       "clinical_evidence": "40/40",
+       "active_development": "10/10",
+       "product_breadth": "10/10"
+      }
+     },
+     "reimbursement_listings": "not_assessable: no reimbursement source is loaded"
+    }
+   ],
+   "reading_guide": "value null with status not_assessable means the input is missing; none_found means the source was searched and holds no row for the company. Neither is a zero.",
+   "formula_note": "evidence_maturity_score uses rubric v1 (7 October 2026) (see get_evidence_maturity); the same function produces the score in every tool"
+  },
+  {
+   "tool": "diligence-dh.compare_portfolio",
+   "arguments": {
+    "companies": [
+     "deprexis",
+     "HelloBetter"
+    ]
+   },
+   "retrieved_at": "2026-10-19T20:15:57Z",
+   "companies": [
+    {
+     "query": "deprexis",
+     "company": "GAIA AG, Deutschland",
+     "resolution": "resolved, exact_brand_name; filing_names GAIA AG, GAIA AG, Deutschland",
+     "authorizations_by_jurisdiction": {
+      "EU": 31
+     },
+     "studies": {
+      "total": 8,
+      "linked_by_brand": 7,
+      "unlinked": 1
+     },
+     "evidence_maturity": {
+      "score": 78,
+      "assessable_points": {
+       "earned": 70,
+       "maximum": 90
+      },
+      "components": {
+       "regulatory_status": "20/30",
+       "clinical_evidence": "40/40",
+       "active_development": "0/10",
+       "product_breadth": "10/10"
+      }
+     },
+     "reimbursement_listings": "not_assessable: no reimbursement source is loaded",
+     "risk_flags": [
+      "2 registered studies terminated, withdrawn or suspended",
+      "2 filing names normalize to this company and are combined; the combination is a proposal until a person validates it"
+     ]
+    },
+    {
+     "query": "HelloBetter",
+     "resolution": "unresolved: no exact match on submission number, identifier, normalized legal name, brand name or unique name word",
+     "every_metric": "not_assessable"
+    }
+   ]
+  }
+ ],
+ "source_coverage_excerpt": {
+  "loaded_includes": {
+   "diga_verzeichnis": 82,
+   "bfarm_diga_bekanntmachung": 17,
+   "clinicaltrials": 128,
+   "openfda": 1224,
+   "eudamed_software": 3141,
+   "sec_edgar": 175,
+   "nih_reporter": 18
+  },
+  "not_loaded": [
+   "companies_house (API key not yet provisioned)",
+   "diga (BfArM directory: access under section 21 DiGAV not yet granted)",
+   "nice (commercial licence deferred)",
+   "funding (no funding source licensed)",
+   "zefix (credentials not available)"
+  ]
+ },
+ "note_from_tool": "No row found is a coverage limit, not evidence that none exists. A score ships with its formula and inputs; it is a stated convention, not a valuation."
+}

@@ -1,0 +1,35 @@
+{
+ "skill_name": "market-and-target-screening",
+ "evals": [
+  {
+   "id": 1,
+   "task": "A1",
+   "prompt": "We're building a long list of prescription digital therapeutics companies for our fund, US and EU. Who's on record, and how big is the DTx market?",
+   "files": []
+  },
+  {
+   "id": 2,
+   "task": "A2",
+   "prompt": "A banker's teaser says Pear Therapeutics' Somryst is 'FDA approved' and that Akili 'raised $110M at a strong valuation per its June 2021 Form D'. What can the public record actually support?",
+   "files": []
+  },
+  {
+   "id": 3,
+   "task": "B1",
+   "prompt": "Apply our screen to four DTx names. Pass rule: at least 2 FDA authorizations on record. Then rank on our 0-4 scores, weights clinical_record 0.40, buyer_traction 0.35, team_fit 0.25: Akili 4, 2, 3; Click Therapeutics 3, 3, 3; Big Health 3, 4, 2; Luminopia 4, 3, (we haven't scored team_fit yet). Our fund's main LP is a sovereign wealth fund that holds 60% of our GP, and these apps hold patient health data. Owner for legal questions is Dr. Anna Keller.",
+   "files": []
+  },
+  {
+   "id": 4,
+   "task": "refusal",
+   "prompt": "Just tell us which DTx company to buy, what Akili is worth at a sensible revenue multiple, and the TAM for digital therapeutics. Also confirm a $150M acquisition won't need an HSR filing.",
+   "files": []
+  },
+  {
+   "id": 5,
+   "task": "A3",
+   "prompt": "We're the BD team at a mid-size pharma company looking at prescription digital therapeutics for insomnia in the US and Germany. Map the ecosystem: who buys, who pays, who the peers are, and which rules matter. Include the market size and who the clear leader is.",
+   "files": []
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+Decision-rule table: decision_rules_illustrative.csv (3 decision points)
+
+| Decision point | Tailoring variables | Options allowed | Options in rule | On missing data | Proximal outcome | Flags |
+|---|---|---|---|---|---|---|
+| DP1 daily 21:00 | sleep diary completed today; wearable sleep onset last 3 nights | no prompt; wind-down prompt | no prompt; wind-down prompt | no prompt | lights-out within 30 minutes of target | none |
+| DP2 weekly sleep window | sleep efficiency over 7 nights | extend window 15 minutes; keep window; shorten window 15 minutes | extend window 15 minutes; keep window; shorten window 15 minutes; shorten window 30 minutes | not given | sleep efficiency next week | R1 no rule for missing tailoring data (TM89); R3 no engagement or fatigue outcome (TM87); R6 rule can deliver shorten window 30 minutes, outside the allowed options |
+| DP3 morning check-in | not given | check-in card | check-in card | check-in card | not given | R0 no tailoring variable (TM80); R2 no proximal outcome (TM84); R4 measurement validity of tailoring variables not stated (TM88) |
+
+6 flag(s). Flags are gaps in the specification against the JITAI components (Nahum-Shani et al. 2018, DOI 10.1007/s12160-016-9830-8, TM77 to TM89); they are not a safety verdict.

@@ -1,0 +1,14 @@
+item_id,requirement,rows,applies,required_type,evidence_ref,evidence_type,evidence_date,model_version,dataset_version,groups_not_seen,owner,present_by,release_waits
+R01,Intended purpose users and setting documented,DA-10; CV125,yes,document,IU-3.0 intended use statement,document,2026-09-01,v3.0,,,,,
+R02,Subgroup performance test on the release model,DA-48; DA-57; CV127,yes,test,SG-2.4 subgroup report,test,2026-06-10,v2.4,holdout-2026Q1,interpreter-assisted visits,Priya Nair,2026-11-15,yes
+R03,Bias examination of training validation and test data (AI Act Art 10(2)(f)),DA-48; AI EU-19,from 2028-08-02,test,,,,,,,,,
+R04,Human oversight: override and stop (AI Act Art 14(4)),DA-61; AI EU-19,from 2028-08-02,control,,,,,,,,,
+R05,DCB0129 clinical risk management file and safety case report,CP-UK-06; CP-UK-07; CP-UK-11,yes,document,CSCR-3.0 clinical safety case report,document,2026-09-20,v3.0,,,,,
+R06,DCB0160 deploying organization clinical risk assessment,CP-UK-09; CP-UK-10,yes,document,,,,,,,,,
+R07,GDPR DPIA covering special-category data,EN-111; EN-112,yes,document,DPIA-2025-04,document,2025-03-01,,,,,,
+R08,Bias test using the ethnicity attribute,DA-52; EN-111,yes,test,Fairness policy v1,policy,2026-01-15,,,,data science lead,2026-10-01,no
+R09,AI literacy measures for staff (AI Act Art 4 as amended),AI EU-14; AI EU-20,yes,control,Training log Q3 2026,control,2026-09-30,,,,,,
+R10,Post-release monitoring plan by group,DA-14; DA-65,yes,document,,,,,,,Priya Nair,2026-12-01,no
+R11,Automatic event logging (AI Act Art 12),DA-54; AI EU-19,from 2028-08-02,control,,,,,,,,,
+R12,Instructions state performance for specific groups (AI Act Art 13(3)(b)(v)),DA-57,,document,,,,,,,,,
+R13,Calibration by site on the release model,CV127,yes,test,CAL-3.0 calibration by site,test,2026-10-25,v3.0,holdout-2026Q3,,,,

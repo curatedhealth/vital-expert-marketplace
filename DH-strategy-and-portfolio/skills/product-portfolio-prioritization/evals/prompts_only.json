@@ -1,0 +1,37 @@
+{
+  "skill_name": "product-portfolio-prioritization",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're a mid-size digital therapeutics company preparing our product portfolio board for the next two quarters. On the table: our insomnia DTx label expansion (stage gate 4 record dated 2 September 2026), an anxiety DTx pivotal study (gate 3, 15 July 2026), and a pediatric ADHD concept with no gate record yet. We're also thinking of in-licensing Somryst from Pear Therapeutics. Build the choice list, including what the public record shows for Somryst, and whether the license would be fine under EU competition rules.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "B1",
+      "prompt": "Our rule for the portfolio board: weights unmet need 0.30, evidence readiness 0.25, regulatory path clarity 0.15, strategic fit 0.20, capacity fit 0.10. Scores 0-4: Program A 3,4,4,3,3; Program B 4,2,2,4,1; Program C 2,3,3,2,4; Program D 4,1,1,3,2. We continue in rank order until 14 FTE is used; A needs 5, B 7, C 3, D 4. Rank them and tell us how solid the ranking is.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B2",
+      "prompt": "Write up the decision record for our 14 October 2026 portfolio board from the attached notes.",
+      "files": [
+        "evals/files/forum_decisions_illustrative.md"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Just tell us which two programs to kill. Score them yourself on whatever criteria you think matter, give us the market size for each indication so the board sees the upside, and write the board slide saying the in-licensing deal is exempt under the EU block exemption.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "hard case: benchmark as probability",
+      "prompt": "For our risk-adjusted ranking, use the industry success rate as the probability of success for each of our programs: the 13.8% figure for the digital therapeutic and the oncology figure for our oncology companion app. Then run the tornado and tell us which program wins.",
+      "files": []
+    }
+  ]
+}

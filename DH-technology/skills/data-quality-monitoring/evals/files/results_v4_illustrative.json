@@ -1,0 +1,115 @@
+{
+ "data": "examples/sample-data/encounters_v4_illustrative.csv",
+ "version": "v4",
+ "rules_version": "v3",
+ "results": [
+  {
+   "id": "DQ1",
+   "category": "value_conformance",
+   "field": "sex",
+   "checked": 90,
+   "failing": 3,
+   "share": 0.03333333333333333,
+   "limit": 0,
+   "result": "fail",
+   "note": "blank values are left to completeness",
+   "decision_time": false
+  },
+  {
+   "id": "DQ2",
+   "category": "relational_conformance",
+   "field": "patient_id",
+   "checked": 90,
+   "failing": 1,
+   "share": 0.011111111111111112,
+   "limit": 0,
+   "result": "fail",
+   "note": "",
+   "decision_time": false
+  },
+  {
+   "id": "DQ3",
+   "category": "computational_conformance",
+   "field": "bmi",
+   "checked": 90,
+   "failing": 1,
+   "share": 0.011111111111111112,
+   "limit": 0,
+   "result": "fail",
+   "note": "recomputed as weight_kg / height_m ** 2, tolerance 0.2 (yours)",
+   "decision_time": false
+  },
+  {
+   "id": "DQ4",
+   "category": "completeness",
+   "field": "nt_probnp",
+   "checked": 90,
+   "failing": 8,
+   "share": 0.08888888888888889,
+   "limit": 0.15,
+   "result": "pass",
+   "note": "decision-time feature",
+   "decision_time": true
+  },
+  {
+   "id": "DQ5",
+   "category": "plausibility_uniqueness",
+   "field": "encounter_id",
+   "checked": 90,
+   "failing": 2,
+   "share": 0.022222222222222223,
+   "limit": 0,
+   "result": "fail",
+   "note": "rows sharing a key with another row",
+   "decision_time": false
+  },
+  {
+   "id": "DQ6",
+   "category": "plausibility_atemporal",
+   "field": "age",
+   "checked": 90,
+   "failing": 1,
+   "share": 0.011111111111111112,
+   "limit": 0,
+   "result": "fail",
+   "note": "range 18 to 110 (yours)",
+   "decision_time": false
+  },
+  {
+   "id": "DQ7",
+   "category": "plausibility_temporal",
+   "field": "admit_date on or before discharge_date",
+   "checked": 90,
+   "failing": 1,
+   "share": 0.011111111111111112,
+   "limit": null,
+   "result": "limit not given",
+   "note": "admit_date on or before discharge_date",
+   "decision_time": false
+  },
+  {
+   "id": "DQ8",
+   "category": "leak",
+   "field": "nt_probnp_date",
+   "checked": 90,
+   "failing": 6,
+   "share": 0.06666666666666667,
+   "limit": 0,
+   "result": "fail",
+   "note": "nt_probnp_date dated after index_time",
+   "decision_time": false
+  },
+  {
+   "id": "DQ9",
+   "category": "row_count",
+   "field": "all rows",
+   "checked": 90,
+   "failing": 10,
+   "share": null,
+   "limit": 0,
+   "result": "fail",
+   "note": "90 rows against 80 expected from your cohort rule",
+   "decision_time": false
+  }
+ ]
+}

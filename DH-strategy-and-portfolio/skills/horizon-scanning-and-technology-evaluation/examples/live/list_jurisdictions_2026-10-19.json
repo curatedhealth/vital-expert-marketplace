@@ -1,0 +1,41 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.list_jurisdictions",
+ "results": [
+  {
+   "jurisdiction": "US",
+   "authorizations": 1226,
+   "safety_events": 892,
+   "last_load": "2026-10-19"
+  },
+  {
+   "jurisdiction": "EU",
+   "authorizations": 3142,
+   "safety_events": 0,
+   "last_load": "2026-10-19",
+   "scope": "Decision date is empty on 3142 of 3142."
+  },
+  {
+   "jurisdiction": "UK",
+   "authorizations": 0,
+   "safety_events": 10,
+   "last_load": "2026-10-14",
+   "scope": "MHRA medical safety alerts only; device registration (MHRA PARD) is not loaded [GAP]"
+  },
+  {
+   "jurisdiction": "CH",
+   "authorizations": 0,
+   "safety_events": 0,
+   "last_load": null
+  },
+  {
+   "jurisdiction": "TW",
+   "authorizations": 32
+  },
+  {
+   "jurisdiction": "CA",
+   "authorizations": 227,
+   "scope": "is_software is null on 227 of 227, so a software-only search excludes them"
+  }
+ ]
+}
