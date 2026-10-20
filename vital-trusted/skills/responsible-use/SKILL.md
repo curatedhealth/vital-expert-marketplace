@@ -1,24 +1,8 @@
 ---
 name: responsible-use
-description: >
-  Help people in pharma, biotech, medtech and digital health use AI-drafted work
-  responsibly once it exists: who must read it before it is used, whether AI help should
-  be disclosed and how to say it plainly, whose name it goes out under, and whether its
-  language respects the people it describes. For replies to doctors, patient materials,
-  payer dossiers, publications, KOL articles, campaigns, posts and everyday emails. Use it
-  when someone says "send this without review", "no need to check it", "should I say AI
-  helped", "do we have to disclose AI", "write it for Dr X to sign", "ghostwrite this",
-  "can I put my name on this", "is this wording OK for patients", or when work about to
-  leave the company calls people "sufferers", "addicts" or "non-compliant". One line when
-  the stakes are low. Not for what may be pasted into the tool (responsible-inputs),
-  recording how work was made (work-record), funding or interest disclosures
-  (honest-framing), or reading level (fit-for-reader).
+description: "Help people in pharma, biotech, medtech and digital health use AI-drafted work responsibly once it exists: who must read it before it is used, whether AI help should be disclosed and how to say it plainly, whose name it goes out under, and whether its language respects the people it describes. For replies to doctors, patient materials, payer dossiers, publications, KOL articles, campaigns, posts and everyday emails. Use it when someone says \"send this without review\", \"no need to check it\", \"should I say AI helped\", \"do we have to disclose AI\", \"write it for Dr X to sign\", \"ghostwrite this\", \"can I put my name on this\", \"is this wording OK for patients\", or when work about to leave the company calls people \"sufferers\", \"addicts\" or \"non-compliant\". One line when the stakes are low. Not for what may be pasted into the tool (responsible-inputs), recording how work was made (work-record), funding or interest disclosures (honest-framing), or reading level (fit-for-reader).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. A future AI-policy companion could read the company's AI use and publication
-  policies; until one exists, the skill asks. Optional script for a wording scan where
-  code can run.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. A future AI-policy companion could read the company's AI use and publication policies; until one exists, the skill asks. Optional script for a wording scan where code can run.\n"
 metadata:
   framework_code: "TR-6.2"
   framework_path: "TRUSTED > Build > Ethical > Responsible use"

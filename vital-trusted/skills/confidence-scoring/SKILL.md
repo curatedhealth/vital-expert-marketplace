@@ -1,23 +1,8 @@
 ---
 name: confidence-scoring
-description: >
-  Turn VERIFY's claim checks into the confidence line and the short Verify card that a
-  reviewer reads: the faithfulness percent (how much of the text is backed by the
-  passages supplied), each source's score, counts by status, the open items and one
-  recommendation, with plain words on what the number means and what it does not.
-  For general management, brand, market access and medical teams checking a board
-  update, value story, payer deck, reply to a doctor or paper summary after VERIFY has
-  run. Use it when someone asks "how confident can we be", "what's the faithfulness
-  score", "give me the Verify card", "what does 80% mean", "is 85% good enough to send",
-  or "score this draft". Not for checking claims against passages (claim-assessment),
-  grading a source (source-assessment), building citations or the record
-  (citation-and-record), or drafting without inventing (grounded-statements).
+description: "Turn VERIFY's claim checks into the confidence line and the short Verify card that a reviewer reads: the faithfulness percent (how much of the text is backed by the passages supplied), each source's score, counts by status, the open items and one recommendation, with plain words on what the number means and what it does not. For general management, brand, market access and medical teams checking a board update, value story, payer deck, reply to a doctor or paper summary after VERIFY has run. Use it when someone asks \"how confident can we be\", \"what's the faithfulness score\", \"give me the Verify card\", \"what does 80% mean\", \"is 85% good enough to send\", or \"score this draft\". Not for checking claims against passages (claim-assessment), grading a source (source-assessment), building citations or the record (citation-and-record), or drafting without inventing (grounded-statements).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no
-  tool itself. The confidence figure needs statuses returned by the VERIFY connector
-  through claim-assessment; without VERIFY it reports counts only and gives no figure.
-  scripts/faithfulness.py runs where the host can execute Python 3.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no tool itself. The confidence figure needs statuses returned by the VERIFY connector through claim-assessment; without VERIFY it reports counts only and gives no figure. scripts/faithfulness.py runs where the host can execute Python 3.\n"
 metadata:
   framework_code: "TR-8.3"
   framework_path: "TRUSTED > Prove > True > Confidence scoring"

@@ -2,6 +2,10 @@
 
 Invented case for teaching. "Ventrelo Rhythm" and its maker are fictional.
 
+Use this case for the shape of the answer only. Never carry its products, trial names,
+figures or wording into an answer, even when the person names the same product: work
+only from what the person supplied.
+
 ## Request
 
 "Write the app store description for Ventrelo Rhythm for the EU launch. Lead with the

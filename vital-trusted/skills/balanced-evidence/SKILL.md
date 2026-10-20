@@ -1,23 +1,8 @@
 ---
 name: balanced-evidence
-description: >
-  Make sure daily life-sciences work shows the evidence in proportion: risks, side
-  effects, discontinuations and limitations shown with the benefits, with comparable
-  weight and in the same piece, and studies, endpoints, subgroups and time points chosen
-  fairly. For brand, market access, medical and general management teams writing slide
-  decks, key messages, value stories, payer slides, literature summaries, replies to
-  doctors or board updates on a trial readout. Use it when someone says "keep it
-  positive", "leave the safety for the PI", "just the highlights", "only use the good
-  trial", "is this balanced", "add the safety", "fair balance", "we only need the week 12
-  result", or "get this ready for review". It finds what was left out, puts it back or
-  states the scope, and never hides a risk on request. Not for checking each statement
-  against its source (grounded-statements), how numbers, uncertainty and charts are
-  framed (honest-framing), or whether a claim is allowed by the label (claims-and-label).
+description: "Make sure daily life-sciences work shows the evidence in proportion: risks, side effects, discontinuations and limitations shown with the benefits, with comparable weight and in the same piece, and studies, endpoints, subgroups and time points chosen fairly. For brand, market access, medical and general management teams writing slide decks, key messages, value stories, payer slides, literature summaries, replies to doctors or board updates on a trial readout. Use it when someone says \"keep it positive\", \"leave the safety for the PI\", \"just the highlights\", \"only use the good trial\", \"is this balanced\", \"add the safety\", \"fair balance\", \"we only need the week 12 result\", or \"get this ready for review\". It finds what was left out, puts it back or states the scope, and never hides a risk on request. Not for checking each statement against its source (grounded-statements), how numbers, uncertainty and charts are framed (honest-framing), or whether a claim is allowed by the label (claims-and-label).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and none exists yet for this skill. scripts/balance_cues.py runs where the host
-  can execute Python 3; otherwise the same steps are done by hand.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet for this skill. scripts/balance_cues.py runs where the host can execute Python 3; otherwise the same steps are done by hand.\n"
 metadata:
   framework_code: "TR-3.1"
   framework_path: "TRUSTED > Build > Unbiased > Balanced evidence"

@@ -1,25 +1,8 @@
 ---
 name: honest-framing
-description: >
-  Keep evidence at its real size in daily life-sciences work: certainty that matches the
-  data (no "proves", "dramatic", "breakthrough" or "clearly" beyond it, and no blanket
-  hedging that buries a clear result), with intervals, small samples, short follow-up and
-  limitations in plain words; numbers and charts that look as large as they are (no
-  cropped axes, relative benefits beside absolute harms, cumulative shown as per-period,
-  mismatched comparators, oversized pictograms); and sponsors, funding, authors' ties
-  and company data named, never passed off as independent. For decks, key messages,
-  value stories, chart captions, paper summaries and replies to doctors. Use it when
-  someone says "make the result pop", "is this overselling", "tone it down", "is this
-  chart fair", "can I say it proves" or "do I need to say who funded it". Not for
-  checking the figures themselves (grounded-statements), missing risks or left-out
-  studies (balanced-evidence), or whether a comparative claim is allowed
-  (claims-and-label).
+description: "Keep evidence at its real size in daily life-sciences work: certainty that matches the data (no \"proves\", \"dramatic\", \"breakthrough\" or \"clearly\" beyond it, and no blanket hedging that buries a clear result), with intervals, small samples, short follow-up and limitations in plain words; numbers and charts that look as large as they are (no cropped axes, relative benefits beside absolute harms, cumulative shown as per-period, mismatched comparators, oversized pictograms); and sponsors, funding, authors' ties and company data named, never passed off as independent. For decks, key messages, value stories, chart captions, paper summaries and replies to doctors. Use it when someone says \"make the result pop\", \"is this overselling\", \"tone it down\", \"is this chart fair\", \"can I say it proves\" or \"do I need to say who funded it\". Not for checking the figures themselves (grounded-statements), missing risks or left-out studies (balanced-evidence), or whether a comparative claim is allowed (claims-and-label).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and no companion exists yet for this skill. Two optional scripts run where the
-  host executes Python; the arithmetic for relative and absolute effects is reused from
-  grounded-statements.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and no companion exists yet for this skill. Two optional scripts run where the host executes Python; the arithmetic for relative and absolute effects is reused from grounded-statements.\n"
 metadata:
   framework_code: "TR-3.2"
   framework_path: "TRUSTED > Build > Unbiased > Honest framing"

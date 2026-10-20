@@ -3,6 +3,10 @@
 Invented case for teaching. "Brevanzo", "Kelandro", the trials and all figures are
 fictional.
 
+Use this case for the shape of the answer only. Never carry its products, trial names,
+figures or wording into an answer, even when the person names the same product: work
+only from what the person supplied.
+
 ## Request
 
 "Draft four key messages for the field team in Germany for the Brevanzo relaunch.

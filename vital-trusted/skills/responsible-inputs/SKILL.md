@@ -1,24 +1,8 @@
 ---
 name: responsible-inputs
-description: >
-  Help people in pharma, biotech, medtech and digital health think before material goes
-  into an AI assistant: unpublished study data, clinical study reports, pricing and
-  contracts, strategy and forecasts, client or partner confidential material, personal
-  or patient details, information that could move a share price, and other people's
-  copyrighted or licensed work (full articles, paid reports, guidelines, agency work). It recognizes what the material is, asks whether the company's AI use policy
-  allows this tool for it, and offers safer routes. Use it when someone asks "can I paste
-  this into ChatGPT", "is it OK to upload this", "summarize this confidential report",
-  "rewrite this article for our newsletter", or pastes material that looks confidential,
-  personal or copyrighted. Stays silent or to one line when the material is public.
-  Not for patient data in a finished output (market-rules-and-data), how much review or
-  AI disclosure a piece needs (responsible-use), or recording how work was made
-  (work-record).
+description: "Help people in pharma, biotech, medtech and digital health think before material goes into an AI assistant: unpublished study data, clinical study reports, pricing and contracts, strategy and forecasts, client or partner confidential material, personal or patient details, information that could move a share price, and other people's copyrighted or licensed work (full articles, paid reports, guidelines, agency work). It recognizes what the material is, asks whether the company's AI use policy allows this tool for it, and offers safer routes. Use it when someone asks \"can I paste this into ChatGPT\", \"is it OK to upload this\", \"summarize this confidential report\", \"rewrite this article for our newsletter\", or pastes material that looks confidential, personal or copyrighted. Stays silent or to one line when the material is public. Not for patient data in a finished output (market-rules-and-data), how much review or AI disclosure a piece needs (responsible-use), or recording how work was made (work-record).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. A future AI-policy companion could read the company's policy and approved-tool
-  list; until one exists, the skill asks. Optional script for a pattern scan where code
-  can run.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. A future AI-policy companion could read the company's policy and approved-tool list; until one exists, the skill asks. Optional script for a pattern scan where code can run.\n"
 metadata:
   framework_code: "TR-6.1"
   framework_path: "TRUSTED > Build > Ethical > Responsible inputs"

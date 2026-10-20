@@ -1,23 +1,8 @@
 ---
 name: patient-safety
-description: >
-  Keep everyday life-sciences work from causing harm: dose, contraindications, warnings,
-  interactions and special populations (pregnancy, children, elderly, kidney or liver
-  problems) quoted word for word from the supplied label, never from memory; patient
-  material with no advice, false reassurance or scare framing, and always a route to a
-  doctor, nurse or pharmacist; and any possible side effect, pregnancy exposure, overdose,
-  misuse, quality problem or lack of effect in an email, notes, a social post or a market
-  research transcript flagged in plain words to the company's safety reporting procedure.
-  Use it for replies to doctors, patient leaflets, dosing tables, social media replies and
-  call notes, or when someone says "fill in the dosing", "is this OK for patients", "a
-  doctor mentioned a reaction", "someone commented about a side effect". Not for label or
-  promotional boundaries (claims-and-label), benefit-risk balance (balanced-evidence), or
-  invented figures in general (grounded-statements).
+description: "Keep everyday life-sciences work from causing harm: dose, contraindications, warnings, interactions and special populations (pregnancy, children, elderly, kidney or liver problems) quoted word for word from the supplied label, never from memory; patient material with no advice, false reassurance or scare framing, and always a route to a doctor, nurse or pharmacist; and any possible side effect, pregnancy exposure, overdose, misuse, quality problem or lack of effect in an email, notes, a social post or a market research transcript flagged in plain words to the company's safety reporting procedure. Use it for replies to doctors, patient leaflets, dosing tables, social media replies and call notes, or when someone says \"fill in the dosing\", \"is this OK for patients\", \"a doctor mentioned a reaction\", \"someone commented about a side effect\". Not for label or promotional boundaries (claims-and-label), benefit-risk balance (balanced-evidence), or invented figures in general (grounded-statements).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. Two scripts run where the host can execute Python 3; the method runs by hand
-  without them. No label-source or safety-routing companion exists yet.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. Two scripts run where the host can execute Python 3; the method runs by hand without them. No label-source or safety-routing companion exists yet.\n"
 metadata:
   framework_code: "TR-4.1"
   framework_path: "TRUSTED > Build > Safe > Patient safety"

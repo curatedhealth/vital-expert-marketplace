@@ -1,23 +1,8 @@
 ---
 name: substance-and-usefulness
-description: >
-  Make everyday life-sciences work useful to the person who reads it: specific rather
-  than generic, free of filler and buzzwords, with the "so what" drawn for this reader, a
-  decision, recommendation or next step where the work needs one, and a structure that
-  follows the content instead of an invented framework. For general management, brand,
-  market access and medical teams writing board updates, business reviews, competitor
-  summaries, briefs, meeting notes, emails and slide decks. Use it when someone says
-  "too generic", "so what", "cut the fluff", "make it more concrete", "tighten this",
-  "what should the board do with this", "make it actionable", or the draft says
-  "leverage synergies across the landscape". It never adds a figure, name or date that
-  was not supplied; it asks or leaves a visible gap. Not for audience level, format or
-  translation (fit-for-reader), invented or unsupported facts (grounded-statements), or
-  voice and brand style, which it leaves alone.
+description: "Make everyday life-sciences work useful to the person who reads it: specific rather than generic, free of filler and buzzwords, with the \"so what\" drawn for this reader, a decision, recommendation or next step where the work needs one, and a structure that follows the content instead of an invented framework. For general management, brand, market access and medical teams writing board updates, business reviews, competitor summaries, briefs, meeting notes, emails and slide decks. Use it when someone says \"too generic\", \"so what\", \"cut the fluff\", \"make it more concrete\", \"tighten this\", \"what should the board do with this\", \"make it actionable\", or the draft says \"leverage synergies across the landscape\". It never adds a figure, name or date that was not supplied; it asks or leaves a visible gap. Not for audience level, format or translation (fit-for-reader), invented or unsupported facts (grounded-statements), or voice and brand style, which it leaves alone.\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and none planned. Optional script for a filler and repetition scan where code
-  can run.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional script for a filler and repetition scan where code can run.\n"
 metadata:
   framework_code: "TR-1.1"
   framework_path: "TRUSTED > Build > Tangible > Substance and usefulness"

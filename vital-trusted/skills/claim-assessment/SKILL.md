@@ -1,25 +1,8 @@
 ---
 name: claim-assessment
-description: >
-  Fact-check finished life-sciences work sentence by sentence against the passages the
-  person supplied: break the text into checkable claims, pair each with the exact words
-  it rests on, and decide support with the VERIFY companion (extract_claims, check_claim,
-  verify_text), or by hand, labeled "not tool-checked", when VERIFY is not connected.
-  For general management, brand, market access and medical teams checking value
-  stories, key messages, board updates, replies to doctors, slide text or summaries of
-  papers. Use it when someone says "fact-check this", "is this supported by the paper",
-  "check this against the registry summary", "what does partial mean" or "does the
-  source back this up". Explains each result in plain words and what to do: keep,
-  rewrite to match, remove, or ask. Not for drafting
-  without inventing (grounded-statements), judging whether a source is good enough
-  (source-assessment), the confidence percentage and card (confidence-scoring), or
-  citations and the record (citation-and-record).
+description: "Fact-check finished life-sciences work sentence by sentence against the passages the person supplied: break the text into checkable claims, pair each with the exact words it rests on, and decide support with the VERIFY companion (extract_claims, check_claim, verify_text), or by hand, labeled \"not tool-checked\", when VERIFY is not connected. For general management, brand, market access and medical teams checking value stories, key messages, board updates, replies to doctors, slide text or summaries of papers. Use it when someone says \"fact-check this\", \"is this supported by the paper\", \"check this against the registry summary\", \"what does partial mean\" or \"does the source back this up\". Explains each result in plain words and what to do: keep, rewrite to match, remove, or ask. Not for drafting without inventing (grounded-statements), judging whether a source is good enough (source-assessment), the confidence percentage and card (confidence-scoring), or citations and the record (citation-and-record).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY
-  connector adds extract_claims, check_claim and verify_text. Without it the same method
-  runs by hand and every result is labeled "not tool-checked"; VERIFY status words are
-  never used for a manual result.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector adds extract_claims, check_claim and verify_text. Without it the same method runs by hand and every result is labeled \"not tool-checked\"; VERIFY status words are never used for a manual result.\n"
 metadata:
   framework_code: "TR-8.1"
   framework_path: "TRUSTED > Prove > True > Claim assessment"

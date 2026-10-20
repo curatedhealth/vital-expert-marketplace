@@ -1,23 +1,8 @@
 ---
 name: market-rules-and-data
-description: >
-  Check that what an AI assistant writes fits the market it is going to and does not
-  expose people. Covers which country's rules apply (US wording in an EU or Swiss piece,
-  an approval stated for the wrong country, material for doctors that could reach the
-  public); the statements a market usually expects on promotional or external material
-  (prescribing information or where to find it, safety information, side-effect
-  reporting statement, audience statement, date of preparation, job code); and patient
-  or personal details that would appear in the output (names, small numbers, case
-  stories). For emails to doctors, payer follow-ups, decks, posts and leaflets. Use it
-  when someone says "this is for Germany", "can we use the US deck in Switzerland",
-  "what goes at the bottom", "add the job code", "take the patient out" or "is this
-  anonymous". Not for label or comparative claims (claims-and-label), what goes into the
-  assistant (responsible-inputs), or benefit and risk balance (balanced-evidence).
+description: "Check that what an AI assistant writes fits the market it is going to and does not expose people. Covers which country's rules apply (US wording in an EU or Swiss piece, an approval stated for the wrong country, material for doctors that could reach the public); the statements a market usually expects on promotional or external material (prescribing information or where to find it, safety information, side-effect reporting statement, audience statement, date of preparation, job code); and patient or personal details that would appear in the output (names, small numbers, case stories). For emails to doctors, payer follow-ups, decks, posts and leaflets. Use it when someone says \"this is for Germany\", \"can we use the US deck in Switzerland\", \"what goes at the bottom\", \"add the job code\", \"take the patient out\" or \"is this anonymous\". Not for label or comparative claims (claims-and-label), what goes into the assistant (responsible-inputs), or benefit and risk balance (balanced-evidence).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and none exists yet. Optional script for a cue scan of required statements and
-  personal details where code can run.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. Optional script for a cue scan of required statements and personal details where code can run.\n"
 metadata:
   framework_code: "TR-2.2"
   framework_path: "TRUSTED > Build > Rule-compliant > Market rules and data"

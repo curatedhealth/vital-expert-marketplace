@@ -1,24 +1,8 @@
 ---
 name: citation-and-record
-description: >
-  Build the reference list and the formal record for finished life-sciences work, with
-  the VERIFY companion: one citation per source from the source's own details, and a
-  record that names the person who cleared it or says plainly that it is an uncleared
-  draft. Open items, contradictions and policy questions are handed to the right
-  internal process instead of being cleared. For teams finishing a literature summary,
-  a value story, a doctor reply, an advisory board pre-read or a board paper. Use it when someone says "build
-  the references", "format the citations", "make the reference list", "build the
-  record", "file this check", "who signed this off", "put my manager as the clearer",
-  "show me the evidence table" or "what do I do with the contradicted claims". Not for
-  the everyday record of how a draft was made (work-record), testing claims against
-  passages (claim-assessment), judging a source (source-assessment) or the confidence
-  figure and VERIFY card (confidence-scoring).
+description: "Build the reference list and the formal record for finished life-sciences work, with the VERIFY companion: one citation per source from the source's own details, and a record that names the person who cleared it or says plainly that it is an uncleared draft. Open items, contradictions and policy questions are handed to the right internal process instead of being cleared. For teams finishing a literature summary, a value story, a doctor reply, an advisory board pre-read or a board paper. Use it when someone says \"build the references\", \"format the citations\", \"make the reference list\", \"build the record\", \"file this check\", \"who signed this off\", \"put my manager as the clearer\", \"show me the evidence table\" or \"what do I do with the contradicted claims\". Not for the everyday record of how a draft was made (work-record), testing claims against passages (claim-assessment), judging a source (source-assessment) or the confidence figure and VERIFY card (confidence-scoring).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. With the
-  VERIFY connector it builds citations and the record with VERIFY tools; building the
-  record needs a VERIFY key with write access. Without VERIFY it writes plain reference
-  lines and a plain record note, both marked "not tool-built".
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. With the VERIFY connector it builds citations and the record with VERIFY tools; building the record needs a VERIFY key with write access. Without VERIFY it writes plain reference lines and a plain record note, both marked \"not tool-built\".\n"
 metadata:
   framework_code: "TR-8.4"
   framework_path: "TRUSTED > Prove > True and Defensible > Citation and record"

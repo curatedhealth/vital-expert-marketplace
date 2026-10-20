@@ -1,22 +1,8 @@
 ---
 name: fit-for-reader
-description: >
-  Make everyday life-sciences work fit the person who will read it: the right words,
-  depth and "what do I need to decide" for a board, headquarters, the sales force, a
-  doctor, nurse, pharmacist, payer, patient, regulator or investor; plain words and short
-  sentences for patients, without scaring or falsely reassuring; the format, length and
-  structure that were asked for (one-pager, email, slide, memo, reply), not an essay in
-  their place; and translations that keep the meaning, medical terms, numbers and units
-  exactly. Use it when someone says "make this patient-friendly", "rewrite this for the
-  payer", "keep it to one page", "turn this into an email", "translate this into
-  German", "is this too technical", or a draft answers a patient in clinician language. Not for vague or filler content (substance-and-usefulness),
-  invented facts or numbers (grounded-statements), the route to a doctor or pharmacist
-  in patient material (patient-safety), or voice and brand style, which it leaves alone.
+description: "Make everyday life-sciences work fit the person who will read it: the right words, depth and \"what do I need to decide\" for a board, headquarters, the sales force, a doctor, nurse, pharmacist, payer, patient, regulator or investor; plain words and short sentences for patients, without scaring or falsely reassuring; the format, length and structure that were asked for (one-pager, email, slide, memo, reply), not an essay in their place; and translations that keep the meaning, medical terms, numbers and units exactly. Use it when someone says \"make this patient-friendly\", \"rewrite this for the payer\", \"keep it to one page\", \"turn this into an email\", \"translate this into German\", \"is this too technical\", or a draft answers a patient in clinician language. Not for vague or filler content (substance-and-usefulness), invented facts or numbers (grounded-statements), the route to a doctor or pharmacist in patient material (patient-safety), or voice and brand style, which it leaves alone.\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and none planned. Optional scripts for a plain-language scan and a number and
-  unit comparison of an original and its translation, where code can run.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional scripts for a plain-language scan and a number and unit comparison of an original and its translation, where code can run.\n"
 metadata:
   framework_code: "TR-1.2"
   framework_path: "TRUSTED > Build > Tangible > Fit for reader"

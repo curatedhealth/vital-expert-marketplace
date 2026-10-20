@@ -1,24 +1,8 @@
 ---
 name: sourced-claims
-description: >
-  Make sure every claim in daily life-sciences work that needs a source has one, of the
-  right kind, cited so a reviewer can find it, and that claims with no source are shown
-  as gaps rather than dressed up. For brand, market access, medical and general
-  management teams writing slide decks, key messages, value stories, payer slides,
-  competitor summaries, board updates or replies to doctors. Use it when someone says
-  "add references", "does this need a source", "is a press release good enough for
-  this", "can I cite data on file", "studies show", "experts agree", "per the guidance",
-  "what's the latest", or "get this ready for review". It decides which statements need
-  a source, which kind of source can carry each claim for its audience, and what a
-  usable citation looks like. It never invents or recalls a reference. Not for checking
-  that statements match the material supplied (grounded-statements), grading a
-  specific source with tools (source-assessment), or testing a claim against its passage
-  (claim-assessment).
+description: "Make sure every claim in daily life-sciences work that needs a source has one, of the right kind, cited so a reviewer can find it, and that claims with no source are shown as gaps rather than dressed up. For brand, market access, medical and general management teams writing slide decks, key messages, value stories, payer slides, competitor summaries, board updates or replies to doctors. Use it when someone says \"add references\", \"does this need a source\", \"is a press release good enough for this\", \"can I cite data on file\", \"studies show\", \"experts agree\", \"per the guidance\", \"what's the latest\", or \"get this ready for review\". It decides which statements need a source, which kind of source can carry each claim for its audience, and what a usable citation looks like. It never invents or recalls a reference. Not for checking that statements match the material supplied (grounded-statements), grading a specific source with tools (source-assessment), or testing a claim against its passage (claim-assessment).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. When VERIFY is connected, sources can go to source-assessment for grading and
-  to citation-and-record for formatted citations.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, sources can go to source-assessment for grading and to citation-and-record for formatted citations.\n"
 metadata:
   framework_code: "TR-5.2"
   framework_path: "TRUSTED > Build > True > Sourced claims"

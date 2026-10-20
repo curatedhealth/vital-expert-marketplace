@@ -1,24 +1,8 @@
 ---
 name: claims-and-label
-description: >
-  Keep what an AI assistant drafts for life-sciences work inside the approved label or
-  a device's intended purpose, on the right side of the line between scientific
-  exchange and promotion, and fair in any comparison with a competitor. For brand,
-  medical, market access and digital health teams writing key messages, sales-force
-  materials, agency briefs, replies to doctors, MSL answers, app or website copy and
-  competitor slides. Use it when someone says "is this on-label", "can we say this",
-  "say we're better than", "faster", "first", "only", "a doctor asked about an
-  unapproved use", "is this promotional" or "get this ready for promotional review". It
-  asks for the label when it was not supplied, flags what goes beyond it, rewrites or
-  marks the rest, and points to the company's review process. Not for market rules or
-  required statements (market-rules-and-data), fair balance (balanced-evidence), dosing
-  and safety wording (patient-safety), or which source a claim needs (sourced-claims).
+description: "Keep what an AI assistant drafts for life-sciences work inside the approved label or a device's intended purpose, on the right side of the line between scientific exchange and promotion, and fair in any comparison with a competitor. For brand, medical, market access and digital health teams writing key messages, sales-force materials, agency briefs, replies to doctors, MSL answers, app or website copy and competitor slides. Use it when someone says \"is this on-label\", \"can we say this\", \"say we're better than\", \"faster\", \"first\", \"only\", \"a doctor asked about an unapproved use\", \"is this promotional\" or \"get this ready for promotional review\". It asks for the label when it was not supplied, flags what goes beyond it, rewrites or marks the rest, and points to the company's review process. Not for market rules or required statements (market-rules-and-data), fair balance (balanced-evidence), dosing and safety wording (patient-safety), or which source a claim needs (sourced-claims).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed; the person supplies the label or intended-purpose statement. No companion
-  exists yet for this skill. When VERIFY is connected, the sources behind a comparison
-  can go to claim-assessment for tool checking.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed; the person supplies the label or intended-purpose statement. No companion exists yet for this skill. When VERIFY is connected, the sources behind a comparison can go to claim-assessment for tool checking.\n"
 metadata:
   framework_code: "TR-2.1"
   framework_path: "TRUSTED > Build > Rule-compliant > Claims and label"
@@ -26,7 +10,7 @@ metadata:
   letter: "Rule-compliant"
   worker: "Regulatory and promotional reviewer who helps drafts through review"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Claims and label
@@ -116,6 +100,12 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **Specific, never invented (TR-H2).** When a stronger claim is wanted, sharpen what
   the label and the supplied data support. Never add a population, a comparison, a
   "first" or a result to make the message land.
+- **Teaching material is never input (TR-H2).** The products, trials, figures and
+  wording in this skill's examples, patterns, tasks and gap rules are invented for
+  teaching. Use them for the shape of the answer only. Never carry a name, trial,
+  figure or result from them into an answer, even when the person's product has the
+  same name: work only from what the person supplied in this conversation, and leave a
+  gap for anything else.
 - **Rewrite where you can, gap where you cannot.** Offer a version that stays inside
   the label. Where no such version exists, leave a visible gap and say what would close
   it.

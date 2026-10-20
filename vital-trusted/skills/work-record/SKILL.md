@@ -1,24 +1,8 @@
 ---
 name: work-record
-description: >
-  Keep a short, honest record of how a piece of daily life-sciences work was made, and
-  keep its status honest. For general management, brand, market access and medical teams
-  whose board updates, analyses, briefs, payer decks, replies to doctors or summaries
-  were made with an AI assistant. It notes which materials the work was built from,
-  which assistant and connectors were involved and what the AI did (drafted,
-  summarized, translated, checked); makes assumptions, gaps and pending decisions
-  visible with who decides; and keeps work a draft unless a named person cleared it. Use
-  it when someone says "HQ asked how this was made", "add a note on sources", "what did
-  we assume", "list the open points", "mark this as final", "say it was approved", or
-  when work is about to leave the company. Light for internal notes, fuller for anything
-  external. Not for deciding whether AI use must be disclosed (responsible-use), adding
-  references to claims (sourced-claims), or a formal record with VERIFY
-  (citation-and-record).
+description: "Keep a short, honest record of how a piece of daily life-sciences work was made, and keep its status honest. For general management, brand, market access and medical teams whose board updates, analyses, briefs, payer decks, replies to doctors or summaries were made with an AI assistant. It notes which materials the work was built from, which assistant and connectors were involved and what the AI did (drafted, summarized, translated, checked); makes assumptions, gaps and pending decisions visible with who decides; and keeps work a draft unless a named person cleared it. Use it when someone says \"HQ asked how this was made\", \"add a note on sources\", \"what did we assume\", \"list the open points\", \"mark this as final\", \"say it was approved\", or when work is about to leave the company. Light for internal notes, fuller for anything external. Not for deciding whether AI use must be disclosed (responsible-use), adding references to claims (sourced-claims), or a formal record with VERIFY (citation-and-record).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. When VERIFY is connected and a named person clears the work, the formal record
-  can be built through citation-and-record.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected and a named person clears the work, the formal record can be built through citation-and-record.\n"
 metadata:
   framework_code: "TR-7.1"
   framework_path: "TRUSTED > Build > Defensible > Work record"

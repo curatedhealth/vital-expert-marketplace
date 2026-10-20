@@ -55,7 +55,8 @@ rewritten without the absolute, or gapped (R20, R21, R22).
    offer what can be said: each product's own result with its own comparator, a
    factual difference the label states (dosing, route), or a gap for the study that
    would be needed.
-2. **Name the comparator and the measure** in every comparison you do write: "in
+2. **Name the comparator and the measure** in every comparison you do write, using only
+   the trial, measure and figures the person supplied. Invented illustration: "in
    KESTREL-3, time to response was shorter with Brevanzo than with Kelandro (median 4
    versus 7 weeks)", as supplied.
 3. **Scope every absolute** with what, where and since when, from a supplied source, or

@@ -1,23 +1,8 @@
 ---
 name: grounded-statements
-description: >
-  Make sure everything an AI assistant writes for daily life-sciences work is grounded in
-  what was actually supplied: no invented facts, figures, names, dates, quotes or
-  sources; numbers that add up and are expressed honestly (percent vs percentage points,
-  before-and-after figures, not only a percentage drop); studies described as they were.
-  For general management, brand, market access and medical teams writing board updates,
-  business reviews, key messages, value stories, meeting notes, emails, slide decks,
-  replies to doctors or summaries of papers. Use it when drafting from notes, data or
-  papers, and when someone says "don't make anything up", "check the numbers", "make it
-  stronger", "is this right", "summarize these papers" or "fix this before it goes out".
-  Not for testing a claim against its source with tools (claim-assessment), judging
-  whether a source is good enough (source-assessment), or deciding which claims need a
-  reference (sourced-claims).
+description: "Make sure everything an AI assistant writes for daily life-sciences work is grounded in what was actually supplied: no invented facts, figures, names, dates, quotes or sources; numbers that add up and are expressed honestly (percent vs percentage points, before-and-after figures, not only a percentage drop); studies described as they were. For general management, brand, market access and medical teams writing board updates, business reviews, key messages, value stories, meeting notes, emails, slide decks, replies to doctors or summaries of papers. Use it when drafting from notes, data or papers, and when someone says \"don't make anything up\", \"check the numbers\", \"make it stronger\", \"is this right\", \"summarize these papers\" or \"fix this before it goes out\". Not for testing a claim against its source with tools (claim-assessment), judging whether a source is good enough (source-assessment), or deciding which claims need a reference (sourced-claims).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. When VERIFY is connected, finished text can go to claim-assessment for tool
-  checking.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, finished text can go to claim-assessment for tool checking.\n"
 metadata:
   framework_code: "TR-5.1"
   framework_path: "TRUSTED > Build > True > Grounded statements"

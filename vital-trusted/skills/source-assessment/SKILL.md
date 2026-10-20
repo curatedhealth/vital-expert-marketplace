@@ -1,24 +1,8 @@
 ---
 name: source-assessment
-description: >
-  Say what a source can carry and what it cannot, before it goes in front of a payer,
-  the board, doctors or the public. For brand, market access, medical and management
-  teams citing papers, preprints, abstracts, labels, regulator or HTA documents,
-  guidelines, data on file, market research, press releases, news or blogs. It names
-  the kind of source, peer review, who funded or wrote it, fit for the question and
-  reader, where the evidence sits (trial, observational, case report, expert opinion,
-  model), one study or many, retractions, superseded guidance and dates. Uses VERIFY
-  when connected. Use it
-  when someone asks "is this source good enough", "can I use this in the payer deck",
-  "is this peer reviewed", "is this still current", "has this been retracted", "is a
-  preprint OK", "can I quote their press release". Not for checking a sentence against
-  its source (claim-assessment), deciding which claims need a reference
-  (sourced-claims), or the confidence percentage (confidence-scoring).
+description: "Say what a source can carry and what it cannot, before it goes in front of a payer, the board, doctors or the public. For brand, market access, medical and management teams citing papers, preprints, abstracts, labels, regulator or HTA documents, guidelines, data on file, market research, press releases, news or blogs. It names the kind of source, peer review, who funded or wrote it, fit for the question and reader, where the evidence sits (trial, observational, case report, expert opinion, model), one study or many, retractions, superseded guidance and dates. Uses VERIFY when connected. Use it when someone asks \"is this source good enough\", \"can I use this in the payer deck\", \"is this peer reviewed\", \"is this still current\", \"has this been retracted\", \"is a preprint OK\", \"can I quote their press release\". Not for checking a sentence against its source (claim-assessment), deciding which claims need a reference (sourced-claims), or the confidence percentage (confidence-scoring).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. The method
-  runs without a connector and is marked "not tool-checked". With the VERIFY connector,
-  qualify_source, ingest_document and check_currency add tool results.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The method runs without a connector and is marked \"not tool-checked\". With the VERIFY connector, qualify_source, ingest_document and check_currency add tool results.\n"
 metadata:
   framework_code: "TR-8.2"
   framework_path: "TRUSTED > Prove > True > Source assessment"

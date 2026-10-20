@@ -1,23 +1,8 @@
 ---
 name: trusted-intake
-description: >
-  Works out the context of a piece of life-sciences work before an AI assistant drafts
-  it, asking only what is missing and would change the answer. Reads the request first:
-  who will read it, which market or country, whether the product is approved or
-  investigational, scientific exchange or promotion, what is being asked for, what
-  material was supplied, how much is at stake, and whether an internal review process
-  applies. Also notices what the person is about to put into the assistant (confidential,
-  unpublished, client or patient data) and asks what their company AI use policy says,
-  without deciding whether a tool is approved. Use it when someone starts a board update,
-  a doctor email, key messages, a payer follow-up or a brief, or says "can I paste this",
-  "here's our client deck", "draft this for me". Usually 0 to 3 plain questions, never a
-  form. Not for choosing letters (trusted-capability-map), checking a finished draft
-  (trusted-check) or judging confidential inputs in depth (responsible-inputs).
+description: "Works out the context of a piece of life-sciences work before an AI assistant drafts it, asking only what is missing and would change the answer. Reads the request first: who will read it, which market or country, whether the product is approved or investigational, scientific exchange or promotion, what is being asked for, what material was supplied, how much is at stake, and whether an internal review process applies. Also notices what the person is about to put into the assistant (confidential, unpublished, client or patient data) and asks what their company AI use policy says, without deciding whether a tool is approved. Use it when someone starts a board update, a doctor email, key messages, a payer follow-up or a brief, or says \"can I paste this\", \"here's our client deck\", \"draft this for me\". Usually 0 to 3 plain questions, never a form. Not for choosing letters (trusted-capability-map), checking a finished draft (trusted-check) or judging confidential inputs in depth (responsible-inputs).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed and none exists yet. The context card lives in the conversation; hosts that do
-  not keep it between conversations need it again next time.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. The context card lives in the conversation; hosts that do not keep it between conversations need it again next time.\n"
 metadata:
   framework_code: "TR-0.2"
   framework_path: "TRUSTED > Core > Intake"

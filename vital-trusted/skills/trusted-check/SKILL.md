@@ -1,22 +1,8 @@
 ---
 name: trusted-check
-description: >
-  Final read of a finished draft against VITAL TRUSTED before it goes anywhere: an
-  email, meeting notes, a board update, a brief, key messages, a value story, a deck, a
-  reply to a doctor or a paper summary. Runs every letter the person has turned on, at a
-  depth set by who will read it, and writes a plain TRUSTED summary: what to fix, what
-  is missing, what a person must decide, what could not be checked, and which internal
-  process the work goes to next. Hands factual claims to the VERIFY companion when it is
-  connected. Use it when someone says "check this", "run TRUSTED on this", "is this OK
-  to send", "is this ready for review", "give it a last look" or "what's wrong with
-  this draft". It never says a draft passes or is ready to send. Not for drafting or
-  fixing (use the letter skills such as grounded-statements), for explaining or setting
-  up TRUSTED (trusted-capability-map), or for gathering context (trusted-intake).
+description: "Final read of a finished draft against VITAL TRUSTED before it goes anywhere: an email, meeting notes, a board update, a brief, key messages, a value story, a deck, a reply to a doctor or a paper summary. Runs every letter the person has turned on, at a depth set by who will read it, and writes a plain TRUSTED summary: what to fix, what is missing, what a person must decide, what could not be checked, and which internal process the work goes to next. Hands factual claims to the VERIFY companion when it is connected. Use it when someone says \"check this\", \"run TRUSTED on this\", \"is this OK to send\", \"is this ready for review\", \"give it a last look\" or \"what's wrong with this draft\". It never says a draft passes or is ready to send. Not for drafting or fixing (use the letter skills such as grounded-statements), for explaining or setting up TRUSTED (trusted-capability-map), or for gathering context (trusted-intake).\n"
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
-compatibility: >
-  Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector
-  needed. When VERIFY is connected, factual claims go to the Prove skills for checking
-  against supplied sources; without it, the summary names what VERIFY would check.
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, factual claims go to the Prove skills for checking against supplied sources; without it, the summary names what VERIFY would check.\n"
 metadata:
   framework_code: "TR-0.3"
   framework_path: "TRUSTED > Core > Check"
