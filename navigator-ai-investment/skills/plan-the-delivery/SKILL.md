@@ -20,7 +20,7 @@ metadata:
   framework_path: "AI Investment Navigation > 4 Execution: Delivery Planning > 4.1 Delivery and Oversight Planning"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Delivery and Oversight Planning
@@ -70,14 +70,17 @@ Then the full report ([assets/delivery-plan-report.md](assets/delivery-plan-repo
 
 **Capacity comes from people.** A job with no stated capacity is a gap.
 
-**The tier is proposed, the person chooses.** Any risk factor at 8 or more proposes people only; all at 3 or less propose agent; otherwise agent with review. A choice that differs from the proposal carries the person's reason. Speak the tiers and their levels: people only (assist), agent with review (augment, or automate with a human approving), agent (automate).
+**The tier is proposed, the person chooses.** Any risk factor at 8 or more proposes people only; all at 3 or less propose agent; otherwise agent with review. A choice that differs from the proposal carries the person's reason. Speak the tiers as people only, agent with review, or agent (connector strings). Map them to **DC09** execution modes when the person sets who initiates and who executes; keep **DC05** intervention levels on the option from cluster 3. Never rename a DC09 tier as ASSIST, AUGMENT or AUTOMATE.
 
 **Every delegated job has an oversight owner and a review point.** By default the review is at the job's gate, with a question the owner sets. A critical decision point needs a context-of-use statement first, and a qualified person decides there.
+
+**Ontology DC (cluster 4).** Delivery tiers and oversight use **DC09 AI Execution Modes** (who initiates / who executes). Keep DC05 intervention levels from cluster 3 on the option; do not rename DC09 tiers as ASSIST/AUGMENT/AUTOMATE. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
 
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md) (X1 to X7). Display names only; never tier codes.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method shared by the three Execution skills, tools, gap rules, governance).
 - `assets/delivery-plan-report.md`, `assets/job-risk-score-sheet.md`, `assets/context-of-use-statement.md`.
 - `scripts/delivery_check.py` dependency order, capacity, tier proposal (same rule as the engine), oversight checks.

@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 4 Execution: Delivery Planning > 4.3 Trial Design"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Trial Design
@@ -74,10 +74,13 @@ Then the full report ([assets/trial-design-report.md](assets/trial-design-report
 
 **Never declare success.** After the trial, place the result against the target and hand it to the owner.
 
+**Ontology DC (cluster 4).** Trial design and stop rules sit under **DC09** execution modes for who runs and who oversees the trial. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md) (X8 to X10, X12).
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method shared by the three Execution skills, tools, gap rules, governance).
 - `assets/trial-design-report.md`, `assets/trial-design-sheet.md`.
 - `scripts/trial_check.py` completeness, ranges, target direction, cost against value, placing a result.

@@ -21,7 +21,7 @@ metadata:
   framework_path: "AI Investment Navigation > 3 Intelligence Core: Investment Choice > 3.1 Strategic Readiness"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Strategic Readiness
@@ -74,10 +74,13 @@ Then deliver the full report ([assets/readiness-report.md](assets/readiness-repo
 
 **Disagreement is recorded, never averaged away.** A spread of 3 or more is shown with both views. The owner's view comes after the group's.
 
+**Ontology DC (cluster 3).** Capability gaps stay capability language. When the room names how far AI should go for a gap or option, use **DC05** (ASSIST→REDESIGN), not free tags and not DC09. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md` how the session runs.
 - `references/method.md` every rule, with source, version and read date (shared by the three Intelligence Core skills).

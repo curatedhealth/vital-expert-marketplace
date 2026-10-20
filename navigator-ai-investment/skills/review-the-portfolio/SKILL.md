@@ -18,7 +18,7 @@ metadata:
   framework_path: "AI Investment Navigation > 5 Organizational Learning > 5.2 Portfolio Review"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Portfolio Review
@@ -72,10 +72,13 @@ Then the full report ([assets/review-report.md](assets/review-report.md)). A com
 
 **Scale only what was kept and shown to work.** The plan is written by the person: what, owner, order. If the outcome was not measured as achieved: keep and watch.
 
+**Ontology DC (cluster 5, when measuring).** Reviews and re-scores keep outcomes on **DC06**. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md) (L6 to L10).
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method shared by the two Organizational Learning skills, tools, gap rules, governance).
 - `assets/review-report.md`, `assets/review-sheet.md`, `assets/rescore-candidate.md`.
 - `scripts/review_check.py` decisions, tracing, scaling conditions, steward and direction checks, readiness factors.

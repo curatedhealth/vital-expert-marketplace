@@ -23,7 +23,7 @@ metadata:
   framework_path: "AI Investment Navigation > 3 Intelligence Core: Investment Choice > 3.2 Option Comparison"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Option Comparison
@@ -76,10 +76,13 @@ Then deliver the full report ([assets/options-report.md](assets/options-report.m
 
 **Options name what, not who.** An option is a way of acting ("AI-drafted label updates with human review"), not a named vendor you supplied. A vendor the person names is recorded as theirs (O). The level of AI involvement is proposed by the process owner and stays open until set.
 
+**Ontology DC (cluster 3).** Each option's level of AI involvement is **DC05** (ASSIST→REDESIGN), proposed by the process owner and left open until set. Do not invent Augment/Automate tags; do not use DC09 here. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md`, `references/method.md` (shared by the three Intelligence Core skills), `references/tools.md`, `references/gap-rules.md`, `references/governance.md`.
 - `assets/options-report.md` the full report and the direct answer format.

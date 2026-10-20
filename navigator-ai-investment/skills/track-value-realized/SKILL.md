@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 5 Organizational Learning > 5.1 Value Realization"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.3-draft"
+  version: "0.1.4-draft"
 ---
 
 # Value Realization
@@ -70,10 +70,13 @@ Then the full report ([assets/realization-report.md](assets/realization-report.m
 
 **Contribution, not proof.** List what else changed that could explain the result, as the person states it.
 
+**Ontology DC (cluster 5, when measuring).** Place realized value on the same **DC06 Value Dimensions** used when the range was declared. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md) (L1 to L5).
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method shared by the two Organizational Learning skills, tools, gap rules, governance).
 - `assets/realization-report.md`.
 - `scripts/realization_check.py` outcome status, counting rule, unit check, placement.

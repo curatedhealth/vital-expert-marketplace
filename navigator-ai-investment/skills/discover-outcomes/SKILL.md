@@ -22,7 +22,7 @@ metadata:
   framework_path: "AI Investment Navigation > 2 Outcomes: Outcome Discovery & Prioritization > 2.1 Outcome Discovery"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Outcome Discovery
@@ -76,10 +76,13 @@ Then deliver the full report ([assets/outcome-list-report.md](assets/outcome-lis
 
 **Calibrate to the room.** Offer outcomes at the audience's level ([references/audience-calibration.md](references/audience-calibration.md)).
 
+**Ontology DC (cluster 2).** Link outcomes to drivers on **DC06 Value Dimensions**. When the library already holds an AI intervention level on the JT/PH row, speak **DC05** (ASSIST→REDESIGN); never invent a free tag. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only; codes in brackets if needed.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md` how the session runs.
 - `references/method.md` every rule, with source, version and read date.

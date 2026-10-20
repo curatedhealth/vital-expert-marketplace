@@ -23,7 +23,7 @@ metadata:
   framework_path: "AI Investment Navigation > 3 Intelligence Core: Investment Choice > 3.3 Portfolio Placement"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Portfolio Placement
@@ -76,10 +76,13 @@ Then deliver the full report ([assets/portfolio-report.md](assets/portfolio-repo
 
 **Placement is not the result.** The owner's result (Proceed, Investigate first, Handle it internally) stands; placement shows where it sits in the portfolio. The level of AI involvement stays with the process owner.
 
+**Ontology DC (cluster 3).** Portfolio placement keeps the option's **DC05** intervention level from the comparison. Lenses may use that tag when people set it; untagged stays "not tagged". Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only; codes never spoken.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md`, `references/method.md` (shared by the three Intelligence Core skills), `references/tools.md`, `references/gap-rules.md`, `references/governance.md`.
 - `assets/portfolio-report.md` the full report and the direct answer format.

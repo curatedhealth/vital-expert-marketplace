@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 1 Direction: Decision & Value Framing > 1.1 Decision Framing"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.3.4-draft"
+  version: "0.3.5-draft"
 ---
 
 # Decision Framing
@@ -86,6 +86,8 @@ Routing hints: a vague ambition ("we need an AI strategy") starts at A. "Is this
 
 **People score.** The size of the decision is scored by named people, 1 to 10, privately and before discussion. You compute, chart and check. You never give a score, and you never fill a missing one.
 
+**Ontology DC (cluster 1).** Use **DC06 Value Dimensions** when offering or recording value themes and dimensions. Do not invent Augment/Automate tags. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes.** Every fact you write carries its class: measured (M), owner-stated (O), hypothesis (H), asserted by a document (V). What the room believes is O, never M.
 
 **Gaps.** A fact you cannot source stays `[GAP]` with the reason. Read [references/gap-rules.md](references/gap-rules.md) before writing one.
@@ -100,6 +102,7 @@ During the session: short turns only (turn template in references/facilitation.m
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md` how the session runs: one question per turn, then one full report.
 - `references/method.md` every rule this skill applies, with its source, version and read date.

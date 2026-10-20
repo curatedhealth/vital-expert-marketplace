@@ -17,7 +17,7 @@ metadata:
   framework_path: "AI Investment Navigation > 4 Execution: Delivery Planning > 4.2 Capability Build Planning"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Capability Build Planning
@@ -67,10 +67,13 @@ Then the full report ([assets/build-plan-report.md](assets/build-plan-report.md)
 
 **What waits is named.** Options that need a gap closed first, and delivery steps that depend on it, are linked; an option waiting on an unplanned gap is flagged.
 
+**Ontology DC (cluster 4).** Build actions and owners use **DC09** when the work is delegated or overseen. Do not invent Augment/Automate tags. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md) (X2, X11).
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method shared by the three Execution skills, tools, gap rules, governance).
 - `assets/build-plan-report.md`.
 - `scripts/build_plan_check.py` coverage of top gaps, owners and dates, what waits on unplanned gaps.

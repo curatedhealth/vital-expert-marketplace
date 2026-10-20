@@ -20,7 +20,7 @@ metadata:
   framework_path: "AI Investment Navigation > 1 Direction: Decision & Value Framing > 1.2 Value-at-Stake Sizing"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Value-at-Stake Sizing
@@ -76,10 +76,13 @@ Then deliver the full report ([assets/value-at-stake-report.md](assets/value-at-
 
 **Calibrate to the room.** Offer drivers at the audience's level ([references/audience-calibration.md](references/audience-calibration.md)). Finer measures belong to the outcome work.
 
+**Ontology DC (cluster 1).** Value drivers and the declared range sit on **DC06 Value Dimensions**. Do not invent Augment/Automate tags. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only; codes in brackets if needed.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md` how the session runs.
 - `references/method.md` every rule, with source, version and read date.

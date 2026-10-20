@@ -79,10 +79,13 @@ Then deliver the full report ([assets/outcome-priorities-report.md](assets/outco
 
 **The field-test rule.** Read it every time (task C). The owner may proceed without a test only by recording a reason.
 
+**Ontology DC (cluster 2).** Opportunity scores keep the outcome's **DC06** value dimension from its driver. Read or record **DC05** intervention levels from linked JT/PH rows when present; never invent Augment/Automate tags. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md) and [references/governance.md](references/governance.md). Display names only; codes in brackets if needed.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/` the how-to guide for each task.
 - `references/facilitation.md` how the session runs.
 - `references/method.md` every rule, with source, version and read date (shared with *Outcome Discovery*).

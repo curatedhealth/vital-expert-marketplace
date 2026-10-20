@@ -19,7 +19,7 @@ metadata:
   framework_path: "AI Investment Navigation > 6 Decision Governance & Record > 6.1 Decision Facilitation; 6.2 Decision Record"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.3-draft"
+  version: "0.1.4-draft"
 ---
 
 # Close the Decision
@@ -72,10 +72,13 @@ Then the full report: the record itself ([assets/decision-record.md](assets/deci
 
 **Gate 3: two named people, one the owner.** Roles or titles alone ("Head of Compliance", "the CMO", "the facilitator") are not signers, releasers or dissent holders. You prepare; they sign in the Navigator app. Never write "signed".
 
+**Ontology DC (cluster 6).** No new dictionary. The record inherits DC06 / DC05 / DC09 values earlier clusters stored. Detail: [references/ontology-dc-by-cluster.md](references/ontology-dc-by-cluster.md).
+
 **Evidence classes, gaps, governance, names.** As in [references/gap-rules.md](references/gap-rules.md), [references/governance.md](references/governance.md) and [references/method.md](references/method.md). Never show section numbers as keys, compile keys or field names.
 
 ## Files in this skill
 
+- `references/ontology-dc-by-cluster.md` which ontology DC this cluster uses (owner ruling, 20 October 2026).
 - `tasks/`, `references/` (facilitation, method, tools, gap rules, governance).
 - `assets/decision-record.md` the record format; `assets/signoff-sheet.md`.
 - `scripts/record_check.py` sections, range, baselines, result, dissent, release, signers.
