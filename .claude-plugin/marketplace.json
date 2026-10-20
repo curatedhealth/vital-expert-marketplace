@@ -119,7 +119,7 @@
     {
       "name": "vital-trusted",
       "source": "./vital-trusted",
-      "description": "Nineteen foundational skills for daily life-sciences work on any AI host. Checks against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). No connector required; Prove skills use VITAL Verify when connected."
+      "description": "Nineteen foundational skills for daily life-sciences work on any AI host. Checks against TRUSTED. Prove skills use the VITAL Verify connector (mcp.vital.expert/api/mcp/verify) when a vvfy_ key is present."
     },
     {
       "name": "vital-verify",

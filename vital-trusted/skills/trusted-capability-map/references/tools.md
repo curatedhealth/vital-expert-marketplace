@@ -41,8 +41,12 @@ be confirmed against the connector schema before the Prove skills are finalized.
 | `build_record` | `citation-and-record` |
 | `build_evidence_table` | `citation-and-record`, only when the person asks for a table |
 
-How to connect VERIFY: [CHECK: connection steps and key request page to be confirmed by
-the owner before publication.]
+How to connect VERIFY: this pack already declares the connector at
+`https://mcp.vital.expert/api/mcp/verify` (server id `vital-verify`). In Cowork, paste the
+`vvfy_` key from the VITAL purchase when the pack asks for it. Tools appear in the
+assistant tool list when the key is accepted. Do not add a second MCP entry for the same
+URL. The standalone `vital-verify` pack uses the same connector; installing both does not
+create a second product host.
 
 ## Future companions
 

@@ -4,7 +4,7 @@ Nineteen skills for people across a life-sciences company who use an AI assistan
 for daily work: general management, brand, market access, medical and other teams.
 TRUSTED supports the company's own SOPs and review processes. It never replaces them.
 
-Status: version 0.2.0 on `curatedhealth/vital-expert-marketplace`. Not yet reviewed by
+Status: version 0.2.1 on `curatedhealth/vital-expert-marketplace`. Not yet reviewed by
 medical, legal or regulatory reviewers. Rules the skills could not trace to a dated
 primary document are marked `[CHECK]` inside the skill files and are described, not
 enforced. License terms are still to be set (`UNLICENSED` in plugin metadata).
@@ -57,10 +57,13 @@ board update.
 
 ## VITAL Verify
 
-TRUSTED works without any connector. Without VITAL Verify, the Prove skills run by hand,
-label their output "not tool-checked" and give no confidence figure. With the VITAL
-Verify connector or plugin connected, they call its tools. This plugin does not bundle
-the connector; install it separately.
+The connector is `https://mcp.vital.expert/api/mcp/verify` — the same host as the
+`vital-verify` pack. Paste a `vvfy_` key when Cowork asks (optional). Do not add a
+second Verify connector by hand, and do not install `vital-verify` only to get tools if
+this pack is already installed.
+
+Without a key, Prove skills still run by hand, label output "not tool-checked", and give
+no confidence figure. With the key, they call the VERIFY tools on that host.
 
 ## Choosing letters
 

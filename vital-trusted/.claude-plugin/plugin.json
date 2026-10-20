@@ -1,12 +1,22 @@
 {
   "name": "vital-trusted",
-  "version": "0.2.0",
-  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Works without any connector; the Prove skills use the VITAL Verify connector when it is connected.",
+  "version": "0.2.1",
+  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Works without a key; Prove skills call the VITAL Verify connector (mcp.vital.expert/api/mcp/verify) when a vvfy_ key is present.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
   },
   "license": "UNLICENSED",
   "keywords": ["life sciences", "pharma", "medical", "market access", "brand", "responsible AI", "evidence"],
-  "skills": "./skills"
+  "skills": "./skills",
+  "userConfig": {
+    "verify_key": {
+      "type": "string",
+      "title": "VITAL Verify key",
+      "description": "The vvfy_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert. Optional: without it, Prove skills still run by hand and label results not tool-checked.",
+      "required": false,
+      "sensitive": true
+    }
+  }
 }
+
