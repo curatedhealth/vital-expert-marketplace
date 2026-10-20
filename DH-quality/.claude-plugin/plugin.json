@@ -1,6 +1,6 @@
 {
   "name": "dh-quality",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "DH Quality Management & Compliance for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
@@ -15,6 +15,5 @@
       "required": true,
       "sensitive": true
     }
-  },
-  "icon": "./icon.png"
+  }
 }

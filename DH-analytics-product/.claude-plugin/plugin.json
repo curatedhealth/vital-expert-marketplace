@@ -1,6 +1,6 @@
 {
   "name": "dh-analytics-product",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DH Analytics Product Management & Enablement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
@@ -15,6 +15,5 @@
       "required": true,
       "sensitive": true
     }
-  },
-  "icon": "./icon.png"
+  }
 }

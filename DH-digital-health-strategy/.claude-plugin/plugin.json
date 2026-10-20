@@ -1,6 +1,6 @@
 {
   "name": "dh-digital-health-strategy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "DH Digital Health Strategy & Vision for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
@@ -15,6 +15,5 @@
       "required": true,
       "sensitive": true
     }
-  },
-  "icon": "./icon.png"
+  }
 }

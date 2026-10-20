@@ -1,6 +1,6 @@
 {
   "name": "navigator-ai-investment",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record.",
   "author": {
     "name": "Vital.Expert",
@@ -13,6 +13,5 @@
     "decision",
     "outcomes",
     "vital"
-  ],
-  "icon": "./icon.png"
+  ]
 }
