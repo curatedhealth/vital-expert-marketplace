@@ -29,7 +29,7 @@ What the sources fix (ES-77, ES-74) and what you set (ROBINS-I overall below cri
 |---|---|---|---|
 
 ### Certainty context
-Per outcome, the GRADE starting point (ES-90, ES-100); the rating is yours or the HTA body's.
+Per outcome, the GRADE starting point (ES-90, ES-100); the rating is yours or the HTA body's. Level definitions ES-195 to ES-198; finding wording per Table 15.6.b once rated (ES-203 to ES-207).
 
 ### Record
 Not a validated score (HE-005, ES-94). Clears it: [the person named, in their words, or owner not named]. The record is built with verify.build_record once that named person clears it; until then, uncleared draft. AI-assisted draft.

@@ -4,12 +4,13 @@
 Usage: python3 rigor_tally.py JUDGMENTS.csv RULE.json [--md OUT.md]
 
 JUDGMENTS.csv columns: study_id, result_id, tool, domain, judgment, note
-  tool: ROBINS-I (2016 published version) or RoB2
+  tool: ROBINS-I (2016 published version), RoB2, or RoB1 (EU JCA randomized results, ES-163)
   judgment: the reviewer's level, in the tool's own words (see LEVELS)
 RULE.json (the person's rule; see examples/illustrative_rule.json):
   {"overall": {"ROBINS-I": "least_favorable" | "custom", "RoB2": "least_favorable"},
    "points": {"Low": 3, ...}            optional, the person's points per level
    "domain_weights": {"confounding": 2}  optional, default weight 1
+   "key_domains": {"RoB1": [...]}       optional, the reviewers' key RoB 1 domains (default: all seven)
    "rule_owner": "name the person gave"}
 
 Fixed by the sources (references/rigor-checks.md):
@@ -17,6 +18,10 @@ Fixed by the sources (references/rigor-checks.md):
   ROBINS-I critical in any domain -> critical overall, exclude from synthesis ... ES-77
   RoB 2 domains and levels ................. ES-71, ES-73
   RoB 2 overall = least favorable domain ... ES-74
+  RoB 1 seven domains, Low / High / Unclear ES-171, ES-172 (Handbook 5.1.0 chapter 8)
+  RoB 1 summary per outcome ................ ES-192 [PAPER] doi 10.1136/bmj.d5928: Low if all key
+      domains low; Unclear if low or unclear for all key domains; High if any key domain high.
+      Which domains are key is the reviewers' choice.
 Not fixed by the sources and therefore the person's: the ROBINS-I overall level when no
 domain is critical ([GAP] in the sourced rows), any points, weights or study score.
 No validated quality score exists for CHEERS (HE-005) and GRADE is not a score (ES-94):
@@ -33,10 +38,16 @@ DOMAINS = {
                  "selection of the reported result"],
     "RoB2": ["randomization process", "deviations from intended interventions", "missing outcome data",
              "measurement of the outcome", "selection of the reported result"],
+    "RoB1": ["random sequence generation", "allocation concealment", "blinding of participants and personnel",
+             "blinding of outcome assessment", "incomplete outcome data", "selective outcome reporting",
+             "other bias"],
 }
+DOMAIN_ALIASES = {"sequence generation": "random sequence generation", "selective reporting": "selective outcome reporting",
+                  "other issues": "other bias", "other sources of bias": "other bias"}
 LEVELS = {
     "ROBINS-I": ["Low", "Moderate", "Serious", "Critical"],  # least to most severe; "No information" separate
     "RoB2": ["Low", "Some concerns", "High"],
+    "RoB1": ["Low", "Unclear", "High"],  # ES-172; insufficient detail usually means Unclear (ES-176)
 }
 NOINFO = "No information"
 GAP = "[GAP]"
@@ -48,6 +59,8 @@ def norm_tool(t):
         return "ROBINS-I"
     if t in ("ROB2", "ROB-2"):
         return "RoB2"
+    if t in ("ROB1", "ROB-1"):
+        return "RoB1"
     return None
 
 
@@ -60,6 +73,16 @@ def overall(tool, judged, rule):
         notes.append(f"domains not judged: {', '.join(missing)} {GAP}")
     if any(j == NOINFO for j in judged.values()):
         notes.append("one or more domains 'No information'")
+    if tool == "RoB1":
+        key = [d.lower() for d in ((rule.get("key_domains") or {}).get("RoB1") or DOMAINS["RoB1"])]
+        basis = "your key domains" if (rule.get("key_domains") or {}).get("RoB1") else "all seven domains treated as key (default; key domains are the reviewers' choice)"
+        if any(judged.get(d) == "High" for d in key):
+            return "High", notes + [f"High in one or more key domains (ES-192 [PAPER] doi 10.1136/bmj.d5928); {basis}"]
+        if any(d not in judged for d in key):
+            return f"Not determinable {GAP}", notes + [f"key domains not all judged; {basis}"]
+        if all(judged[d] == "Low" for d in key):
+            return "Low", notes + [f"Low in all key domains (ES-192 [PAPER] doi 10.1136/bmj.d5928); {basis}"]
+        return "Unclear", notes + [f"Low or unclear in all key domains (ES-192 [PAPER] doi 10.1136/bmj.d5928); {basis}"]
     if tool == "ROBINS-I" and "Critical" in known:
         return "Critical", notes + ["critical in at least one domain: exclude from any synthesis (ES-77)"]
     if not known:
@@ -84,12 +107,16 @@ def run(rows, rule):
         tool = norm_tool(r.get("tool"))
         key = (r["study_id"].strip(), r["result_id"].strip())
         if tool is None:
-            problems.append(f"{key}: tool '{r.get('tool')}' not recognized (ROBINS-I 2016 or RoB2) {GAP}")
+            problems.append(f"{key}: tool '{r.get('tool')}' not recognized (ROBINS-I 2016, RoB2 or RoB1) {GAP}")
             continue
         dom = r["domain"].strip().lower()
+        dom = DOMAIN_ALIASES.get(dom, dom) if tool == "RoB1" else dom
         j = r["judgment"].strip()
         if dom not in DOMAINS[tool]:
             problems.append(f"{key}: domain '{dom}' is not a {tool} domain")
+            continue
+        if tool == "RoB1" and j == NOINFO:
+            problems.append(f"{key}: RoB 1 has no 'No information' level; insufficient detail is usually 'Unclear' (ES-176)")
             continue
         if j not in LEVELS[tool] and j != NOINFO:
             problems.append(f"{key}: level '{j}' is not a {tool} level")

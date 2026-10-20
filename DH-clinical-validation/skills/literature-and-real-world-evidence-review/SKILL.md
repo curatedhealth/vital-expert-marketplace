@@ -59,7 +59,7 @@ Routing hints: "PICO", "search string", "which databases", "PRESS", "PROSPERO", 
 
 **Output.** Output = template (data from the library) + the task's fixed sections + the request (scope, depth, form). Answer first, then support. Short mode: 450 words maximum, counted without the calls list and tables' source column. Before handing over, count the words. If over 450, cut in this order until under: context paragraphs, repeated row ids in prose, secondary rules, rows not tied to the person's question. Never cut a gap, a stop or the record line. Refusals follow the same 450-word cap. Offer the full version in one line.
 
-**Knowledge.** Rules come only from `references/` and live library output, never from memory. Every rule carries its row id as written in the research file: `ES-` rows (EVIDENCE_SYNTHESIS_METHODS.md) and `CV` rows (CLINICAL_STUDY_AND_RWE.md). Rows marked [PAPER] are published methods: cite the DOI. The DOI travels with the row id wherever the row appears: in prose, in tables and in any script output that prints row ids. This holds when the row reaches the answer through a script line too. Rows marked [WF] were read through a summarizing fetch tool: say so if a rule rests on one. Rows read as abstract only (PRESS 2015) say so. Where the references are silent, write `[GAP]` and name the source to read.
+**Knowledge.** Rules come only from `references/` and live library output, never from memory. Every rule carries its row id as written in the research file: `ES-` rows (EVIDENCE_SYNTHESIS_METHODS.md) and `CV` rows (CLINICAL_STUDY_AND_RWE.md). Rows marked [PAPER] are published methods: cite the DOI. The DOI travels with the row id wherever the row appears: in prose, in tables and in any script output that prints row ids. This holds when the row reaches the answer through a script line too. Rows marked [WF] were read through a summarizing fetch tool: say so if a rule rests on one. Rows read as abstract only (PRESS 2015, Balshem 2011, Santesso 2020) say so; the PRESS checklist questions were not reachable and stay `[GAP]`. Where the references are silent, write `[GAP]` and name the source to read.
 
 **Gaps.** Read `references/gap-rules.md` before writing any gap. A study the library did not find is "not found in the sources searched", never "does not exist". When a source is open access, read the full text before marking a field `[GAP]` from an abstract.
 
@@ -71,13 +71,13 @@ Routing hints: "PICO", "search string", "which databases", "PRESS", "PROSPERO", 
 
 **AI-use disclosure.** Every output is identifiable as AI-assisted. When the review is for an EU JCA, list every AI-assisted step (retrieval and screening, extraction, risk of bias, analysis, reporting) for the dossier and name the human responsible for each (ES-169, ES-170). PRISMA asks for automation tools used in selection and extraction (ES-08, ES-09) and for human versus automation exclusions in the flow (ES-21).
 
-**Dates.** Dates in full. Every rule is "as read on 19 October 2026"; every library result is "as retrieved" with its date. Draft or superseded guidance is labeled with its date (for example ROBINS-I V2 is a draft, ES-80).
+**Dates.** Dates in full. Every rule is "as read on 19 October 2026" (section 15 rows ES-171 to ES-234: 20 October 2026); every library result is "as retrieved" with its date. Draft or superseded guidance is labeled with its date (for example ROBINS-I V2 is a draft, ES-80).
 
 ## Files in this skill
 
 - `tasks/` the how-to guide for each task. Read only the one you are running.
 - `references/review-rules-by-body.md` protocol, search, screening, extraction and reporting rules side by side for Cochrane, NICE, IQWiG, the EU JCA and rapid reviews. A1 and A2.
-- `references/appraisal-and-certainty.md` RoB 2, RoB 1 for the JCA, ROBINS-I, retractions, when not to pool, GRADE and the Summary of Findings. A2 and B1.
+- `references/appraisal-and-certainty.md` RoB 2, RoB 1 for the JCA (seven domains and criteria), ROBINS-I, retractions, when not to pool, GRADE definitions and certainty wording, and the Summary of Findings. A2 and B1.
 - `references/rwe-and-digital-endpoints.md` real-world data definitions and fitness frameworks, the FDA device RWE guidance, EMA RWD paper, FDA DHT guidance, V3, and the reporting guidelines a review checks studies against. A1 and A2.
 - `references/EVIDENCE_SYNTHESIS_METHODS.md` and `references/CLINICAL_STUDY_AND_RWE.md` the shared research files, unchanged, with quotes and read dates. The rows cited everywhere live here.
 - `references/tools.md` every library call used, with arguments and measured behavior, including design-label errors.

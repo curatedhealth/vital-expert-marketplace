@@ -51,7 +51,7 @@ Full version available: adds the B1 options table and the AI-use table for a JCA
 
 ## Script demonstration (illustrative ratings)
 
-With an illustrative ratings file (item 7 "No", item 10 "No", item 4 "Partial yes"), `review_check.py amstar2` returns: one critical flaw (item 7), one non-critical weakness (item 10), item 4 left to the appraisers, overall "Low: one critical flaw (ES-107)", and no score (ES-108).
+With an illustrative ratings file (item 7 "No", item 10 "No", item 4 "Partial yes"), `review_check.py amstar2` returns: one critical flaw (item 7), one non-critical weakness (item 10), item 4 "Partial yes" listed as partial adherence (allowed on item 4, ES-209), overall "Low: one critical flaw, with or without non-critical weaknesses (ES-107, ES-227)", and no score (ES-108). A "Partial yes" on an item other than 2, 4, 7, 8 or 9, or "No meta-analysis conducted" outside items 11, 12 and 15, is rejected and goes back to the appraisers (ES-209).
 
 ## What the run showed about the tools
 

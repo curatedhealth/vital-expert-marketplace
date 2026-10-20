@@ -19,7 +19,7 @@ A gap is information: each kind leads to a different next step.
 | Situation | How to word it |
 |---|---|
 | Item not yet rated | "Not rated (appraisers)." The script treats unrated items as not flaws and says so; report that. |
-| Item wording beyond the seven critical domains | "AMSTAR 2 item wording not in the sourced rows `[GAP]`; use the paper (doi 10.1136/bmj.j4008)." |
+| A rating option not allowed on that item | "Rating not an AMSTAR 2 option for item N (ES-209); back to the appraisers." All 16 items, options and overall ratings are sourced (ES-208 to ES-227). |
 | Paper silent on an item | "Not reported in the paper" with where you looked (section, PRISMA item). |
 | Full text not available | "Abstract only; most AMSTAR 2 items cannot be assessed `[GAP]`." |
 | RWD framework not chosen | "Framework not named by the person `[GAP]`; the three sourced frameworks use different terms." |

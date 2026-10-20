@@ -1,13 +1,15 @@
-Origin: authored in value-narrative-and-dossier/references/certainty-and-wording.md (19 October 2026), copied unchanged below so this package stands alone.
+Origin: authored in value-narrative-and-dossier/references/certainty-and-wording.md (19 October 2026, updated 20 October 2026), copied unchanged below so this package stands alone.
 # Certainty and wording
 
-Interpretive reference for tasks A1 and B1. Rows from `evidence-synthesis-research.md` (ES) and `promotion-and-claims-research.md` (PC), read 19 October 2026.
+Interpretive reference for tasks A1 and B1. Rows from `evidence-synthesis-research.md` (ES) and `promotion-and-claims-research.md` (PC), read 19 October 2026; ES-195 to ES-207 read 20 October 2026.
 
 ## Certainty belongs to a person, per outcome
 
 | Rule | Rows |
 |---|---|
-| GRADE has four levels: High, Moderate, Low, Very low. The handbook's wording for High is "We are very confident that the true effect lies close to that of the estimate of the effect" and for Very low "We have very little confidence in the effect estimate". The wording for Moderate and Low is not in the rows: `[GAP]`; state those levels by name. | ES-89 |
+| GRADE has four levels, applied to a body of evidence, not to single studies. GRADE handbook Table 5.1 (it says "quality" where later guidance says "certainty"): High, "We are very confident that the true effect lies close to that of the estimate of the effect"; Moderate, "We are moderately confident in the effect estimate: The true effect is likely to be close to the estimate of the effect, but there is a possibility that it is substantially different"; Low, "Our confidence in the effect estimate is limited: The true effect may be substantially different from the estimate of the effect."; Very low, "We have very little confidence in the effect estimate: The true effect is likely to be substantially different from the estimate of effect". | ES-89, ES-195 to ES-199 |
+| Statements tie the verb to the rating (Cochrane Handbook 6.5 Table 15.6.b). High: state the effect directly ("X reduces outcome"). Moderate: "likely" or "probably" ("X likely reduces outcome"). Low: "may" or "the evidence suggests" ("X may reduce outcome"). Very low: "The evidence is very uncertain about the effect of X on outcome". GRADE guidelines 26 likewise bases statements on effect size and certainty (abstract only). | ES-203 to ES-206, ES-201 |
+| A wide interval that includes no effect is never "no effect" or "no different"; if one possibility is named, name the other too. | ES-207 |
 | Randomized evidence starts high, non-randomized starts low; sound non-randomized studies are generally graded low even with ROBINS-I. | ES-90, ES-100 |
 | Rate down for risk of bias, inconsistency, indirectness, imprecision, publication bias; up for large effect, opposing confounding, dose-response. | ES-91, ES-92 |
 | GRADE is judgment, not a score; usually one level per factor, at most three overall; nothing below very low. | ES-94, ES-95 |
@@ -16,7 +18,7 @@ Interpretive reference for tasks A1 and B1. Rows from `evidence-synthesis-resear
 | A Summary of Findings table states population, comparison, up to seven outcomes, comparator burden, absolute and relative effects, numbers, certainty, comments. | ES-97, ES-98 |
 | EU JCA reports state the degree of certainty of relative effects; the JCA guideline's "uncertainty" is not GRADE certainty. | ES-149, ES-166 |
 
-Practice: the narrative names the level the person or the review assigned, for that outcome, with who assigned it. A `literature.grade_evidence` result is never a certainty: with GRADE it returns only the starting level from the design label, factors empty; with CEBM 2011 it returns a level for a design. If nobody has rated an outcome, write "certainty not yet rated `[GAP]`".
+Practice: the narrative names the level the person or the review assigned, for that outcome, with who assigned it. A `literature.grade_evidence` result is never a certainty: with GRADE it returns only the starting level from the design label, factors empty; with CEBM 2011 it returns a level for a design. The verb follows that rating (Table 15.6.b, ES-203 to ES-206); the model never picks the level to fit the verb. If nobody has rated an outcome, write "certainty not yet rated `[GAP]`" and use no certainty verb: quote the effect as the source reports it, attributed.
 
 ## A claim enters only with a passage read in the same direction
 

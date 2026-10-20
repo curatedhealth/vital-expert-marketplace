@@ -40,7 +40,7 @@ Lay out each line with its A1 result (on the person's measure, with base) and A2
 Pick the class the facts support, and say which fact:
 
 1. **Evidence moved:** A2 shows retraction, correction, a passage that no longer matches, or candidate new studies.
-2. **Line overstated its source:** wider population, conclusion words, a held claim in use (`references/certainty-and-wording.md`).
+2. **Line overstated its source:** wider population, conclusion words, a certainty verb stronger than the person's rating allows under Table 15.6.b (ES-203 to ES-207), a held claim in use (`references/certainty-and-wording.md`).
 3. **Audience expected something else:** the notes ask for something a source speaks to (budget impact on own population HE-021, [PAPER] DOI 10.1016/j.jval.2013.08.2291, PMPM HE-138, UK costs HE-089, cost-effectiveness for higher financial risk HE-090) and the dossier did not supply it.
 4. **Rule crossed or guidance moved:** a PC row the line crosses, or a currency signal (PC-US-47, HE-131).
 5. **Not a communication issue:** price, coverage or contract terms (dh-market-access or dh-commercial). Say so and route.

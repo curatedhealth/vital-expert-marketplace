@@ -38,8 +38,8 @@ Numbered lines, concept blocks, limits with justification. "Draft for the search
 | Query | Merged records | On-topic in top N | Missed seed studies | Change made |
 |---|---|---|---|---|
 
-### PRESS 2015 check (abstract-level elements, ES-63)
-| Element | What the draft shows | Question for the peer reviewer |
+### PRESS 2015 check (abstract-level elements, ES-63; checklist questions not reachable `[GAP]`)
+| Element | What the draft shows | Question for the peer reviewer (the person's; not from the checklist) |
 |---|---|---|
 
 ### Reporting checklist

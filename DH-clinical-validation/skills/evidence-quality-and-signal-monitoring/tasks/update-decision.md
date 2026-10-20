@@ -48,7 +48,7 @@ A review rated "critically low" by the appraisers "should not be relied on" (ES-
 |---|---|---|
 | Rely as is | Relevant, adequate quality, no material new evidence, and the body's date rule is met | A note of the checks done and their dates |
 | Update | Relevant and adequate, with new studies or methods (ES-103); NICE HealthTech allows use or update of existing reviews (ES-133) | Rerun searches for all sources; screen; re-check retractions of included studies (ES-119, ES-120); report the previous version's study count (ES-21) |
-| Rerun under the body's rules | The body's rules differ from the review's (for example JCA databases, cut-off, RoB 1, AI disclosure; ES-151 to ES-168) | A new protocol and search through the sibling skill's A1 |
+| Rerun under the body's rules | The body's rules differ from the review's (for example JCA databases, cut-off, RoB 1 with its seven domains, AI disclosure; ES-151 to ES-168, ES-171; RoB 2 remains Cochrane's current tool, ES-69) | A new protocol and search through the sibling skill's A1 |
 | Living review | High-importance question with frequent new evidence (ES-104) | A standing search and screening process with owners |
 
 Label any recommendation "proposed". The choice is the person's.

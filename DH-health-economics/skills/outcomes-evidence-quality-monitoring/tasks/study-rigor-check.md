@@ -42,7 +42,7 @@ From the methods section, state design, comparator (concurrent or historical; ES
 
 ### Step 3. Pick the tool and lay out facts per domain
 
-Use `references/rigor-checks.md` section 1 to pick the tool, and say why. For each domain (section 2 or 3), fill the facts listed in section 4 with quotes and locators. Where the paper is silent, write "Not reported `[GAP]`". Add the questions the sources raise for this design: uncontrolled before-after designs (ES-78; not a historical comparison group), confounding (ES-79), immortal time when "users" are defined by later use (ES-82, V2 draft question). Do not judge; leave the level column for the reviewers.
+Use `references/rigor-checks.md` section 1 to pick the tool, and say why. For each domain (section 2, 3, or 3a for RoB 1 in an EU JCA), fill the facts listed in section 4 with quotes and locators. Where the paper is silent, write "Not reported `[GAP]`". Add the questions the sources raise for this design: uncontrolled before-after designs (ES-78; not a historical comparison group), confounding (ES-79), immortal time when "users" are defined by later use (ES-82, V2 draft question). For RoB 1, list all seven domains (ES-171) and show beside each the Low, High and Unclear criteria with their rows (ES-180 to ES-187); state "no information" explicitly where the paper is silent (ES-174). RoB 2 remains Cochrane's current tool (ES-69). Do not judge; leave the level column for the reviewers.
 
 ### Step 4. Data fitness and prespecification
 

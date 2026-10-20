@@ -18,7 +18,8 @@ A claim may enter the narrative only when check_claim returned "supported",
 the reader marked same_direction true, no mismatch is recorded and a passage
 exists. Certainty never comes from a tool: an empty rating stays [GAP].
 The script also screens claim wording for terms the sourced rows bind
-(references/certainty-and-wording.md). It decides nothing for the person.
+(references/certainty-and-wording.md), including certainty verbs stronger than
+Table 15.6.b allows for the rating given (ES-203 to ES-206). It decides nothing for the person.
 """
 import json
 import re
@@ -33,6 +34,28 @@ OVERREACH = [
     (r"\bsave[sd]? money\b|\bcost[- ]saving\b", "savings stated as fact; HCEI for US payors (PC-US-06)"),
     (r"\ball patients\b|\bevery\b|\balways\b", "universal wording; check population against the passage (PC-US-27, PC-EU-02)"),
 ]
+
+
+# Certainty verbs, Cochrane Handbook 6.5 Table 15.6.b (ES-203 to ES-206): an unhedged effect verb
+# is high-certainty wording, "likely"/"probably" moderate, "may"/"the evidence suggests" low,
+# "the evidence is very uncertain" very low. The rating is the person's; the script only compares.
+LEVELS = {"very low": 1, "low": 2, "moderate": 3, "high": 4}
+EFFECT_VERB = re.compile(r"\b(reduce[sd]?|increase[sd]?|improve[sd]?|lower(s|ed)?|results? in|resulted in|fell|dropped)\b", re.I)
+HEDGE_MOD = re.compile(r"\b(likely|probably)\b", re.I)
+HEDGE_LOW = re.compile(r"\b(may|might|evidence suggests|very uncertain)\b", re.I)
+
+
+def verb_flag(text, cert):
+    level = LEVELS.get((cert or "").strip().lower(), 0)
+    if HEDGE_LOW.search(text):
+        return None
+    if HEDGE_MOD.search(text):
+        if level < LEVELS["moderate"]:
+            return "wording: 'likely'/'probably' is moderate-certainty wording (ES-204); rating is " + (cert or "not given")
+        return None
+    if EFFECT_VERB.search(text) and level < LEVELS["high"]:
+        return "wording: unhedged effect verb is high-certainty wording (ES-203); word it to the rating (ES-204 to ES-206) or attribute it to the source; rating is " + (cert or "not given")
+    return None
 
 
 def load(path):
@@ -77,6 +100,9 @@ def decide(c):
         if re.search(pat, text, re.I):
             flags.append("wording: " + why)
     cert = c.get("certainty")
+    vf = verb_flag(text, cert)
+    if vf:
+        flags.append(vf)
     cert_txt = f"{cert} ({c.get('certainty_by') or 'rater not named'})" if cert else "[GAP] not yet rated by a person"
     return {
         "id": c.get("id"),

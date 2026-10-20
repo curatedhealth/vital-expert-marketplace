@@ -22,14 +22,14 @@ A gap is information: each kind leads to a different next step. Word it so the r
 | Risk-of-bias judgment not yet made | "Not yet assessed (reviewers)." Never fill it in. |
 | Signalling question with no information in the paper | "No information" is a valid RoB 2 answer (ES-72); write it, do not guess. |
 | Retraction status checked only in Crossref | "No retraction found in Crossref on DATE." |
-| A rule the research did not read (RoB 1 domains, PROSPERO fields, PRESS checklist text, HTACG reviewer numbers, HAS literature rules) | "`[GAP]` not in the sourced rules; read SOURCE before applying." |
+| A rule the research did not read (PRESS 2015 checklist questions, PROSPERO fields, HTACG reviewer numbers, HAS literature rules) | "`[GAP]` not in the sourced rules; read SOURCE before applying." For PRESS: "PRESS checklist text not reachable on 20 October 2026 `[GAP]`; elements only (ES-63)." RoB 1 domains and criteria are now sourced (ES-171 to ES-193). |
 
 ## Synthesis
 
 | Situation | How to word it |
 |---|---|
 | Pooling not appropriate | "Not pooled: REASON (row)." A narrative synthesis is a valid result (ES-83). |
-| Certainty not yet rated | "Certainty: not yet rated (reviewers)." Never "high" from the library's draft. |
+| Certainty not yet rated | "Certainty: not yet rated (reviewers)." Never "high" from the library's draft, and no certainty verb ("likely", "may") until rated (ES-203 to ES-206). |
 | Minimally important difference or decision threshold not given | "Threshold not given by the person `[GAP]`." Never supply one. |
 | Flow counts do not reconcile | Quote the failing line from `scripts/prisma_flow.py`; do not adjust counts to make them fit. |
 

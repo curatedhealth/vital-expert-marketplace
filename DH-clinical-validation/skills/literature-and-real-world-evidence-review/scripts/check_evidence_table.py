@@ -40,6 +40,7 @@ REQUIRED = ["study_id", "report_ids", "design", "design_basis", "population", "i
             "ci", "rob_tool", "rob_judgement", "retraction_status", "source_locator"]
 RANDOMIZED = {"rct", "randomized", "randomised", "randomized controlled trial", "cluster rct", "crossover rct"}
 ROB2_LEVELS = {"low", "some concerns", "high"}                      # ES-73
+ROB1_LEVELS = {"low", "high", "unclear"}                            # ES-172 [PAPER] doi 10.1136/bmj.d5928 (ES-189)
 ROBINS_LEVELS = {"low", "moderate", "serious", "critical", "no information"}  # ES-76
 
 
@@ -115,6 +116,8 @@ def check(rows, jca=False):
                 problems.append(f"{label}: EU JCA validity guidance asks for Cochrane RoB 1 for RCT outcomes (ES-163); table shows '{r.get('rob_tool')}'.")
             if not jca and "rob1" in tool:
                 notes.append(f"{label}: RoB 1 used; the Cochrane Handbook uses RoB 2, the EU JCA asks for RoB 1 (ES-163, conflict noted in the research file).")
+            if "rob1" in tool and not blank(judg) and judg.replace("risk of bias", "").replace("risk", "").strip() not in ROB1_LEVELS:
+                problems.append(f"{label}: RoB 1 judgment '{r.get('rob_judgement')}' is not one of Low, High, Unclear risk (ES-172).")
             if "rob2" in tool and not blank(judg) and judg not in ROB2_LEVELS:
                 problems.append(f"{label}: RoB 2 judgment '{r.get('rob_judgement')}' is not one of Low, Some concerns, High (ES-73).")
         elif design and design not in ("systematic_review", "meta_analysis", "other", "preprint"):

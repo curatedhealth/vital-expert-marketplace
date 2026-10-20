@@ -15,7 +15,7 @@ Why it matters: the search decides what the review can ever find. EU law sets a 
 | Worker | Clinical Informatics Lead (`clinical-informatics-lead`) |
 | Skill | DH-01.02.4.1 Part A, Review protocol and search |
 | Workflow | The steps below |
-| Knowledge | `references/review-rules-by-body.md` sections 1 to 3, 5 and 6; `references/rwe-and-digital-endpoints.md` sections 1 and 5 when RWD or digital endpoints are in scope; ES-01 [PAPER] doi 10.1136/bmj.n71 to ES-68, ES-110 [PAPER] doi 10.1016/j.jclinepi.2020.10.007 to ES-118 [PAPER] doi 10.1136/bmjebm-2024-112899, ES-145 to ES-170 |
+| Knowledge | `references/review-rules-by-body.md` sections 1 to 3, 5 and 6; `references/rwe-and-digital-endpoints.md` sections 1 and 5 when RWD or digital endpoints are in scope; ES-01 [PAPER] doi 10.1136/bmj.n71 to ES-68, ES-110 [PAPER] doi 10.1016/j.jclinepi.2020.10.007 to ES-118 [PAPER] doi 10.1136/bmjebm-2024-112899, ES-145 to ES-170, ES-194, ES-228 to ES-234 |
 | Tool | `literature.list_sources` (free); `literature.search_literature` to test terms; `literature.get_record` for known key papers (seed set); `literature.find_related` for citation searching |
 | Prompt | This guide |
 | Template | `assets/protocol-and-search-output.md` |
@@ -54,7 +54,7 @@ Build the source table from `review-rules-by-body.md` section 2 for the named bo
 
 ### Step 5. PRESS check, before any search is run
 
-Lay out the six PRESS 2015 elements (ES-63, abstract only) against the draft strategy, with what you see for each, and name the person's peer reviewer as owner (or "owner not named"). Cochrane strongly recommends peer review before running (ES-67); IQWiG always does it (ES-138); timing is after the MEDLINE draft and before translation to other databases (ES-65). The PRESS checklist text itself was not read `[GAP]`.
+Lay out the six PRESS 2015 elements (ES-63, abstract only) against the draft strategy, with what you see for each, and name the person's peer reviewer as owner (or "owner not named"). Cochrane strongly recommends peer review before running (ES-67); IQWiG always does it (ES-138); NICE's guideline manual has a second information specialist use a PRESS-based checklist (ES-231); timing is after the MEDLINE draft and before translation to other databases (ES-65). A missing element without explanation means the search may not be complete (ES-228). Plan to report how the strategy was developed and peer reviewed, with the reviewer named if they agree (ES-229, ES-230). The questions under each element were not reachable on 20 October 2026: write "PRESS checklist text not reachable `[GAP]`" and do not supply questions from memory.
 
 ### Step 6. Reporting and registration plan
 

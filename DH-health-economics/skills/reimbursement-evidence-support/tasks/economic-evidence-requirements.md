@@ -45,7 +45,7 @@ For each body, one row per element the references hold: evaluation type, perspec
 - ESF tier (A, B or C, and the tier C group) from the intended purpose the person gives (`HE-083`, `HE-084`). Standard 17 applies to all tiers (`HE-087`); standard 18 only for "higher financial risk", which the commissioner and the owner judge (`HE-090`).
 - NICE guidance type: early use or routine use (`HE-071`, `HE-073`). Early use changes what the economic evaluation must show (`HE-068`, `HE-069`).
 - ICER-PHTI tier (`HE-125`): tier 1 self-directed without clinician involvement; tier 2 diagnostic and prognostic with professionals. Tiers 3a and 3b are named in the row without definitions: `[GAP]`.
-- EU JCA: in scope only for class IIb or III devices with an expert-panel opinion that are selected (`HE-096`, `HE-097`); the first selection on 6 October 2026 held no digital-only product (`HE-101`). Whatever the scope, JCA does not assess cost or economics (`HE-094`).
+- EU JCA: in scope only for class IIb or III devices with an expert-panel opinion that are selected (`HE-096`, `HE-097`); the first selection on 6 October 2026 held no digital-only product (`HE-101`). Whatever the scope, JCA does not assess cost or economics (`HE-094`). Where a JCA is in scope and the person asks what the clinical review must apply, list RoB 1's seven domains with their Low, High and Unclear criteria and the summary rule from `references/body-economic-standards.md` (`ES-163`, `ES-171` to `ES-193`), and say RoB 2 remains Cochrane's current tool; the review itself belongs to dh-clinical-validation.
 
 Placement is a proposal from the person's facts, labeled "proposed"; the classification decision is the owner's.
 

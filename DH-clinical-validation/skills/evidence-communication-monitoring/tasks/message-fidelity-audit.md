@@ -47,7 +47,7 @@ Find the passage in the A1 statement or the paper. When a source is open access,
 
 ### Step 4. Check certainty and required statements
 
-Compare every certainty word with the person's rating per outcome (`references/certainty-wording.md`). Check the required statements for the audience and market (`references/audience-rules.md`): limitations and balanced information for US payors (PC-US-40), unfavorable findings for US clinicians (PC-US-31), study identification in German advertising (PC-DE-05).
+Compare every certainty word and effect verb with the person's rating per outcome, using the Table 15.6.b wording for that rating (ES-203 to ES-207; `references/certainty-wording.md`, rule 5). Check the required statements for the audience and market (`references/audience-rules.md`): limitations and balanced information for US payors (PC-US-40), unfavorable findings for US clinicians (PC-US-31), study identification in German advertising (PC-DE-05).
 
 ### Step 5. Classify and flag
 

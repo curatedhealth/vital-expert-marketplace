@@ -74,11 +74,11 @@ Routing hints: "still current", "how old is the search", "JCA cut-off", "retract
 
 - `tasks/` the how-to guide for each task. Read only the one you are running.
 - `references/currency-rules.md` search currency and update rules (Cochrane, EU JCA, IQWiG, NICE), retraction handling, what the library's currency check does and does not mean. A1 and B1.
-- `references/review-and-data-quality.md` AMSTAR 2 items, critical domains and the overall rating rule; RWD reliability and relevance frameworks; digital signal validation (FDA DHT, V3). A2.
+- `references/review-and-data-quality.md` AMSTAR 2 items (all 16 with their response options, ES-208 to ES-227, read 20 October 2026), critical domains and the overall rating rule; RWD reliability and relevance frameworks; digital signal validation (FDA DHT, V3). A2.
 - `references/EVIDENCE_SYNTHESIS_METHODS.md` and `references/CLINICAL_STUDY_AND_RWE.md` the shared research files, unchanged.
 - `references/tools.md` library calls used here, with measured behavior.
 - `references/gap-rules.md`, `references/governance.md` gap wording, stop rules, AI disclosure and sign-off.
 - `assets/` output formats per task, short and full.
 - `examples/worked-run-dcbti-review.md` a run on a published 2025 review of fully automated digital CBT for insomnia; live outputs and passages in `examples/live/`.
-- `scripts/review_check.py` checks search dates against the Cochrane and EU JCA rules, lists candidate new studies after the last search, and applies the AMSTAR 2 overall-rating rule to the appraisers' item ratings.
+- `scripts/review_check.py` checks search dates against the Cochrane and EU JCA rules, lists candidate new studies after the last search, and applies the AMSTAR 2 overall-rating rule to the appraisers' item ratings, rejecting response options an item does not offer (ES-209).
 - `evals/evals.json` four test prompts, including one that must be refused.

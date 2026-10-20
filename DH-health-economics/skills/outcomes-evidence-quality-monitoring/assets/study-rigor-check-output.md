@@ -35,7 +35,7 @@ Retraction and currency results with the source checked; funding and every confl
 STROBE item numbers or CHEERS items not found (CV123, HE-005).
 
 ### Certainty context
-GRADE start for the design (ES-90, ES-100); the library's draft level, labeled as a draft.
+GRADE start for the design (ES-90, ES-100); the library's draft level, labeled as a draft. No certainty verb until the person rates; then Table 15.6.b wording (ES-203 to ES-207).
 
 ### Calls made
 Each call with arguments and retrieval date.

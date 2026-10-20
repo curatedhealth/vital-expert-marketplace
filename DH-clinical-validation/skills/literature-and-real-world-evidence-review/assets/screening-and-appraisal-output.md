@@ -7,7 +7,7 @@ Short mode: 450 words maximum, counted without the calls list and tables' source
 1. **Answer:** studies and reports included so far, the problems found (from the scripts, verbatim), and the one decision the reviewers must make next.
 2. **Flow counts:** from `scripts/prisma_flow.py`, with the reconciliation result.
 3. **Design check:** Report · Library label (basis) · Design from the paper (basis) · Note.
-4. **Risk-of-bias set-up:** Result · Tool (row) · Domains with "passage found" or "No information" · Judgment: reviewers.
+4. **Risk-of-bias set-up:** Result · Tool (row) · Domains with "passage found" or "No information" · Judgment: reviewers. For a JCA, the seven RoB 1 domains (ES-171) with Low, High, Unclear criteria rows (ES-180 to ES-187).
 5. **Retractions and registrations:** Report · Retraction (Crossref, date) · Registry id.
 6. **AI use:** steps and responsible human.
 7. **Calls made:** list.

@@ -21,7 +21,7 @@ Why it matters: a review with more than one critical flaw "should not be relied 
 | Worker | AI/ML Governance Director (`ai-ml-governance-director`) |
 | Skill | DH-01.02.4.2 Part A, Review and data quality appraisal |
 | Workflow | The steps below |
-| Knowledge | `references/review-and-data-quality.md`; ES-04 to ES-16, ES-105 [PAPER] doi 10.1136/bmj.j4008 to ES-109; CV23, CV42 to CV59, CV73 to CV94, CV155 [PAPER] doi 10.1038/s41746-020-0260-4 to CV159 [PAPER] doi 10.1038/s41746-020-0260-4 |
+| Knowledge | `references/review-and-data-quality.md`; ES-04 to ES-16, ES-105 [PAPER] doi 10.1136/bmj.j4008 to ES-109, ES-208 to ES-227; CV23, CV42 to CV59, CV73 to CV94, CV155 [PAPER] doi 10.1038/s41746-020-0260-4 to CV159 [PAPER] doi 10.1038/s41746-020-0260-4 |
 | Tool | `literature.get_record` (identifiers, open-access link); `scripts/review_check.py amstar2`; `verify.qualify_source` then `verify.check_claim` only for a finding the person wants to state |
 | Prompt | This guide |
 | Template | `assets/appraisal-output.md` |
@@ -41,9 +41,9 @@ Why it matters: a review with more than one critical flaw "should not be relied 
 ### Branch 1: published review (AMSTAR 2)
 
 1. `literature.get_record(doi=...)` for the PMCID and open-access link; read the methods and results from Europe PMC or the publisher.
-2. For each critical domain, find the passage, using the PRISMA item as a map (`review-and-data-quality.md` table): registration (item 24), sources and strategies (items 6 and 7), excluded studies with reasons (item 16b), risk-of-bias tool and reviewers (item 11), meta-analysis model and heterogeneity (item 13d), risk of bias in interpretation and certainty (items 15, 22), publication bias (item 14). Quote it with its locator, or write "not reported in the paper (looked in: ...)".
+2. For each item (all 16 are in `review-and-data-quality.md` section 1a, ES-210 to ES-225; critical ones first), find the passage, using the PRISMA item as a map (`review-and-data-quality.md` table): registration (item 24), sources and strategies (items 6 and 7), excluded studies with reasons (item 16b), risk-of-bias tool and reviewers (item 11), meta-analysis model and heterogeneity (item 13d), risk of bias in interpretation and certainty (items 15, 22), publication bias (item 14). Quote it with its locator, or write "not reported in the paper (looked in: ...)".
 3. Example measured (2025 dCBT-I review, full text, 19 October 2026): registered on PROSPERO (CRD42024526617); PubMed, CENTRAL, Embase and PsycINFO searched to 31 March 2024; two authors screened and extracted independently; RoB 2 used (3 low, 19 some concerns, 7 high); random effects with I-squared 91% for insomnia severity; Egger's test reported; no GRADE or certainty statement, no grey literature and no excluded-studies list with reasons found by text search (`examples/live/passages_2026-10-19.json`). These are passages, not ratings.
-4. Hand the layout to the appraisers. When they return ratings, write them to a CSV (item, rating) and run `python3 scripts/review_check.py amstar2 RATINGS.csv [--critical ...]`. Report the critical flaws, non-critical weaknesses, "Partial yes" items left to the appraisers, and the overall confidence by the rule (ES-107). Never a total (ES-108).
+4. Hand the layout to the appraisers. When they return ratings, write them to a CSV (item, rating) and run `python3 scripts/review_check.py amstar2 RATINGS.csv [--critical ...]`. Report the critical flaws, non-critical weaknesses, "Partial yes" items, any rejected rating, and the overall confidence by the rule (ES-107, ES-226, ES-227). The script rejects "Partial yes" outside items 2, 4, 7, 8, 9 and "No meta-analysis conducted" outside items 11, 12, 15 (ES-209); a rejected rating goes back to the appraisers, never corrected by the model. Missing information is rated No (ES-208). Never a total (ES-108).
 5. A library CEBM level for the review is not an AMSTAR 2 rating (`tools.md`).
 
 ### Branch 2: real-world data source or study

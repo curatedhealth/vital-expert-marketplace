@@ -18,7 +18,7 @@ Interpretive reference for B1. Each option is a sourced method with the row it r
 | Reporting incomplete | Report the missing CHEERS 2022 items | Completeness of reporting, item by item, never a score | `HE-001`, `HE-005` |
 | No comparative clinical evidence for the comparator the body uses | A comparative study against that comparator. What a body asked for in comparable published decisions is read with the monitoring skill (`reimbursement-evidence-monitoring`, A1) | Study design belongs to dh-clinical-validation `study-protocol-and-endpoint-design` | `ES-127` (NICE); `HE-115` is ICER-PHTI context only |
 | Digital technology still in evidence generation | ESF early deployment subset (16 standards, no BIA or CEA) for evidence-generation programs | Not a substitute for standards 17 and 18 at commissioning | `HE-092` |
-| Evidence for an EU JCA | Systematic review to the JCA rules (MEDLINE and CENTRAL at least, 3-month cut-off, RoB 1 and ROBINS-I, PRISMA flow) | Method belongs to dh-clinical-validation `literature-and-real-world-evidence-review`; JCA does not assess economics | `ES-155`, `ES-156`, `ES-163`, `ES-164`, `ES-162`, `HE-094` |
+| Evidence for an EU JCA | Systematic review to the JCA rules (MEDLINE and CENTRAL at least, 3-month cut-off, RoB 1 with its seven domains and ROBINS-I, PRISMA flow; RoB 1 criteria in `body-economic-standards.md`) | Method belongs to dh-clinical-validation `literature-and-real-world-evidence-review`; JCA does not assess economics | `ES-155`, `ES-156`, `ES-163`, `ES-164`, `ES-171` to `ES-193`, `ES-162`, `HE-094` |
 
 ## Ordering by dependency (how to lay it out, not what to choose)
 

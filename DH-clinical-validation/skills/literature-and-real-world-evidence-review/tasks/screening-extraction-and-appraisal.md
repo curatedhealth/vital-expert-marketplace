@@ -15,7 +15,7 @@ Why it matters: duplicates counted twice inflate an effect; a conference abstrac
 | Worker | Clinical Informatics Lead (`clinical-informatics-lead`) |
 | Skill | DH-01.02.4.1 Part A, Screening, extraction and appraisal |
 | Workflow | The steps below |
-| Knowledge | `references/review-rules-by-body.md` section 4; `references/appraisal-and-certainty.md` sections 1 to 4; `references/rwe-and-digital-endpoints.md` sections 2 to 4; ES-20 [PAPER] doi 10.1136/bmj.n160 to ES-23, ES-54 to ES-61, ES-69 to ES-82, ES-119 to ES-125, ES-139 to ES-144, ES-163, ES-164; CV73 to CV94, CV42 to CV64, CV155 [PAPER] doi 10.1038/s41746-020-0260-4 to CV159 [PAPER] doi 10.1038/s41746-020-0260-4 |
+| Knowledge | `references/review-rules-by-body.md` section 4; `references/appraisal-and-certainty.md` sections 1 to 4; `references/rwe-and-digital-endpoints.md` sections 2 to 4; ES-20 [PAPER] doi 10.1136/bmj.n160 to ES-23, ES-54 to ES-61, ES-69 to ES-82, ES-119 to ES-125, ES-139 to ES-144, ES-163, ES-164, ES-171 to ES-193 [PAPER] doi 10.1136/bmj.d5928; CV73 to CV94, CV42 to CV64, CV155 [PAPER] doi 10.1038/s41746-020-0260-4 to CV159 [PAPER] doi 10.1038/s41746-020-0260-4 |
 | Tool | `literature.deduplicate`, `literature.get_record`, `literature.classify_study` (draft only), `literature.find_trial`, `literature.check_retraction`, `literature.grade_evidence` (draft only); `scripts/prisma_flow.py` on the screening log |
 | Prompt | This guide |
 | Template | `assets/screening-and-appraisal-output.md` |
@@ -69,8 +69,9 @@ One row per study result: study, reports, design and basis, population, interven
 
 1. Pick the tool by checked design and body (`appraisal-and-certainty.md` section 1).
 2. For each result, list the domains (RoB 2: ES-71; ROBINS-I: ES-75 [PAPER] doi 10.1136/bmj.i4919) and, under each, the exact passage from the paper with its locator that bears on it, or "No information" (ES-72).
-3. Leave the judgment column for the reviewers. A proposal, if the person asks for one, is labeled "proposed" and names the domain logic (overall = least favorable domain, ES-74; ROBINS-I critical means no synthesis, ES-77).
-4. `literature.grade_evidence` is not a risk-of-bias tool; do not use its level here.
+3. RoB 1 for an EU JCA (ES-163). RoB 2 remains Cochrane's current tool (ES-69); use RoB 1 only where the body asks. List the seven domains: random sequence generation, allocation concealment, blinding of participants and personnel, blinding of outcome assessment, incomplete outcome data, selective outcome reporting, other bias (ES-171). One entry per study for sequence, concealment and selective reporting; per outcome for the blinding domains and incomplete data (ES-173, ES-193). Under each, the passage with its locator, or "no information" stated explicitly (ES-174, ES-189). Show the Low, High and Unclear criteria for each domain from `appraisal-and-certainty.md` section 2a (ES-180 to ES-187); insufficient detail usually means Unclear (ES-176). The summary rule per outcome is ES-192; two people judge independently (ES-190); no quality scores (ES-191).
+4. Leave the judgment column for the reviewers. A proposal, if the person asks for one, is labeled "proposed" and names the domain logic (overall = least favorable domain, ES-74; ROBINS-I critical means no synthesis, ES-77).
+5. `literature.grade_evidence` is not a risk-of-bias tool; do not use its level here.
 
 ### Step 8. RWD and digital endpoints (when present)
 

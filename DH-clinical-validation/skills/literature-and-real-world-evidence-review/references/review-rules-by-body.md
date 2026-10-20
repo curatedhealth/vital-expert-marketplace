@@ -1,6 +1,6 @@
 # Review rules by body
 
-Interpretive reference. Every rule cites its row in `EVIDENCE_SYNTHESIS_METHODS.md` (ES rows), read on 19 October 2026. Where bodies disagree, the table shows each; the person names the target and the rule set follows it. Where a cell says `[GAP]`, the research did not read that body's rule.
+Interpretive reference. Every rule cites its row in `EVIDENCE_SYNTHESIS_METHODS.md` (ES rows), read on 19 October 2026 (section 15 rows, ES-171 to ES-234, on 20 October 2026). Where bodies disagree, the table shows each; the person names the target and the rule set follows it. Where a cell says `[GAP]`, the research did not read that body's rule.
 
 ## 1. Question and protocol
 
@@ -25,12 +25,12 @@ Interpretive reference. Every rule cites its row in `EVIDENCE_SYNTHESIS_METHODS.
 | Other sources | Grey literature highly desirable (ES-47); reference lists mandatory (ES-48); preprints considered (ES-53) | Diagnostic accuracy: no search filters (ES-130) | Device sources: no central EU approval database; future EUDAMED and Devices@FDA (ES-143) | Devices: sponsor and third-party studies including ongoing ones, HTA reports, the CER, device and patient registries (ES-155) | `[GAP]` |
 | Limits | No language or publication-status restriction (MECIR C19) (ES-43); justify date or format limits (MECIR C35) (ES-50) | `[GAP]` | All search limitations documented (ES-141) | Restrictions described and justified (ES-159) | English only unless justified (ES-115) |
 | Strategy structure | PICO and study-design concepts; controlled vocabulary plus free text (ES-49) | | | | |
-| Peer review of the strategy | Strongly recommended before running; use PRESS (ES-67, ES-68) | `[GAP]` | PRESS always before searches; plus testing against an independent set of relevant citations (ES-138) | `[GAP]` | Consider peer review of at least one strategy (ES-111) |
+| Peer review of the strategy | Strongly recommended before running; use PRESS (ES-67, ES-68); missing PRESS dimensions without explanation mean the search may not be complete (ES-228); report how the search was developed and peer reviewed, and name the peer reviewers with permission (ES-229, ES-230) | PMG36 and PMG48 `[GAP]`; the guideline manual PMG20 has a second information specialist check each initial MEDLINE strategy with a PRESS-based checklist and record the comments (ES-231, ES-232) | PRESS always before searches; plus testing against an independent set of relevant citations (ES-138) | `[GAP]` | Consider peer review of at least one strategy (ES-111) |
 | Search currency | Rerun within 12 months, preferably six, before publication (MECIR C37) (ES-52) | `[GAP]` | Drug assessments: up-to-dateness check of ongoing studies replaced the search update (research "Changes and conflicts") | Cut-off at most 3 months before dossier submission, medicines and devices; applies to anything informing relative effectiveness (ES-152, ES-156, ES-168) | `[GAP]` |
 | Who searches | One person; duplication not needed (ES-62) | | | | |
 | Documentation | Enough detail to report (MECIR C36) (ES-51) | Log of ineligible studies with reasons (ES-129) | PRISMA-S adapted; flowchart (ES-141) | All strategies in Appendix D.2; PRISMA flowchart; excluded full texts with reasons in Appendix D.2.2; results as RIS files (ES-152, ES-162) | Report deviations from standard methods (ES-118 [PAPER] doi 10.1136/bmjebm-2024-112899) |
 
-PRESS 2015 elements (abstract only, ES-63): translation of the research question; Boolean and proximity operators; subject headings; text word search; spelling, syntax and line numbers; limits and filters. Best timing: after the MEDLINE strategy is drafted, before translation to other databases (ES-65). The PRESS checklist itself was not read (research "Not sourced").
+PRESS 2015 elements (abstract only, ES-63): translation of the research question; Boolean and proximity operators; subject headings; text word search; spelling, syntax and line numbers; limits and filters. Best timing: after the MEDLINE strategy is drafted, before translation to other databases (ES-65). The 2015 update found no new elements, and structured PRESS can find search errors and improve term selection (ES-194, abstract only, doi 10.1016/j.jclinepi.2016.01.021). IQWiG uses it because strategies are error-prone (ES-233); PRISMA-S names it for search peer review (ES-234 [PAPER] doi 10.1186/s13643-020-01542-z). These are restatements: no source read lists the checklist questions under each element, and the PRESS full text was not reachable on 20 October 2026 `[GAP]`.
 
 ## 3. Reporting the search (PRISMA 2020 and PRISMA-S)
 
@@ -47,7 +47,7 @@ PRESS 2015 elements (abstract only, ES-63): translation of the research question
 | Disagreements | Process defined in advance (ES-57) | Report how resolved (ES-129) | Resolved by discussion (ES-139) | Conflict resolution (ES-112) |
 | Outcome data extraction | Two people independently (MECIR C46, mandatory) (ES-59) | `[GAP]` | `[GAP]` | One extractor, second checks (ES-113) |
 | Study characteristics | Duplicate extraction highly desirable (MECIR C45) (ES-60) | | | |
-| Risk of bias | `[GAP]` in rows read for the number of assessors; PRISMA item 11 asks how many and whether independent (ES-10) | Validated tool for non-randomized studies (ES-131) | | One rater, full verification by a second (ES-113) |
+| Risk of bias | RoB 1 paper: at least two people independently, discrepancies resolved by discussion first (ES-190 [PAPER] doi 10.1136/bmj.d5928); for RoB 2 the number is `[GAP]` in rows read; PRISMA item 11 asks how many and whether independent (ES-10) | Validated tool for non-randomized studies (ES-131) | | One rater, full verification by a second (ES-113) |
 
 EU JCA: selection and synthesis follow HTACG methodological guidance or deviations are described and justified (ES-153). The number of reviewers the HTACG guidance sets was not read `[GAP]`.
 
@@ -68,7 +68,7 @@ Records, reports and studies: a record is a title or abstract; records of the sa
 2. Databases: MEDLINE and CENTRAL at least (ES-151, ES-155); device registries list (ES-161); device sources including the CER and registries (ES-155).
 3. Cut-off at most 3 months before submission (ES-152, ES-156), including searches for covariates and indirect-comparison networks (ES-160, ES-168).
 4. Strategies in Appendix D.2; PRISMA flowchart; exclusion list with reasons in Appendix D.2.2; RIS files (ES-152, ES-162).
-5. Risk of bias: RoB 1 for RCT outcomes, ROBINS-I for comparative non-RCTs, per outcome in scope (ES-163, ES-164).
+5. Risk of bias: RoB 1 for RCT outcomes, ROBINS-I for comparative non-RCTs, per outcome in scope (ES-163, ES-164). RoB 1 seven domains and Low, High, Unclear criteria: `appraisal-and-certainty.md` section 2a (ES-171 to ES-193).
 6. Synthesis: exchangeability; random effects usually, fixed effect only with rigorous justification (ES-165).
 7. AI-assisted steps disclosed, a named human responsible for each (ES-169, ES-170).
 8. Scope of devices in JCA: class IIb and III with an expert panel opinion, class D IVDs (ES-146); selection criteria include incorporation of AI (ES-147). Whether a product is selected is a fact the owner the person names confirms (or "owner not named"); dh-regulatory-strategy owns device status.

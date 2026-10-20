@@ -15,7 +15,7 @@ Why it matters: a pooled number over diverse studies can mislead (ES-83, ES-88);
 | Worker | Clinical Informatics Lead (`clinical-informatics-lead`) |
 | Skill | DH-01.02.4.1 Part B, Synthesis and evidence table |
 | Workflow | The steps below |
-| Knowledge | `references/appraisal-and-certainty.md` sections 5 to 8; `references/review-rules-by-body.md` sections 6 and 7; ES-11 to ES-21, ES-83 to ES-100, ES-132, ES-149, ES-162, ES-165, ES-166 |
+| Knowledge | `references/appraisal-and-certainty.md` sections 5 to 8; `references/review-rules-by-body.md` sections 6 and 7; ES-11 to ES-21, ES-83 to ES-100, ES-195 to ES-207, ES-132, ES-149, ES-162, ES-165, ES-166 |
 | Tool | `scripts/prisma_flow.py`, `scripts/check_evidence_table.py`; `literature.build_evidence_table` (scaffold only); `literature.build_citation`; `verify.qualify_source` then `verify.check_claim` for any stated finding; `verify.build_record` on release |
 | Prompt | This guide |
 | Template | `assets/synthesis-output.md` |
@@ -46,7 +46,8 @@ For each critical or important outcome:
 1. Starting level from study design: randomized high, non-randomized low; state the convention for ROBINS-I-assessed studies (ES-90, ES-100, research "Changes and conflicts").
 2. Five downgrading domains with the evidence for each from A2 and Step 2: risk of bias (the reviewers' judgments), inconsistency (direction, heterogeneity), indirectness (PICO match), imprecision (interval, participants), publication bias (ES-91). Upgrading only per ES-92 and ES-93.
 3. Leave the rating column for the reviewers; limits per ES-95. Every rating other than high needs an explanation (ES-99).
-4. `literature.grade_evidence(standard="grade")` gives only a per-record starting level with empty factors (`tools.md`). Do not present it as an outcome's certainty. For a JCA, the QES "uncertainty" is not GRADE certainty (ES-166); report both terms as their sources use them.
+4. Definitions for the levels are ES-195 to ES-198 (GRADE handbook Table 5.1); quote them when the person asks what a level means.
+5. `literature.grade_evidence(standard="grade")` gives only a per-record starting level with empty factors (`tools.md`). Do not present it as an outcome's certainty. For a JCA, the QES "uncertainty" is not GRADE certainty (ES-166); report both terms as their sources use them.
 
 ### Step 4. Evidence table
 
@@ -77,12 +78,12 @@ Complete the AI-use table for the whole review (steps, what AI did, responsible 
 
 ## Build the output
 
-Follow `assets/synthesis-output.md`. Answer first: what the evidence shows per critical outcome in plain words with its limits, whether pooling was appropriate, the open certainty ratings, and the one decision the reviewers must make next. Never write "proves", "demonstrates efficacy" or "cost-effective".
+Follow `assets/synthesis-output.md`. Answer first: what the evidence shows per critical outcome in plain words with its limits, worded by the reviewers' certainty rating per Cochrane Table 15.6.b ("reduces"; "likely reduces"; "may reduce"; "the evidence is very uncertain") (ES-203 to ES-206), never "no effect" from a wide interval (ES-207), and with no certainty verb while unrated, whether pooling was appropriate, the open certainty ratings, and the one decision the reviewers must make next. Never write "proves", "demonstrates efficacy" or "cost-effective".
 
 ## Before you hand it over
 
 - Counts and table flags are from the scripts' output.
-- Every certainty rating is the reviewers' or marked "not yet rated".
+- Every certainty rating is the reviewers' or marked "not yet rated"; every finding's verb matches that rating (ES-203 to ES-206).
 - Every stated finding has a passage, a locator and your same-direction reading.
 - JCA outputs carry the AI-use table and use RoB 1 for RCT outcomes.
 - Wording for a body or for promotion is labeled "draft for the owner".

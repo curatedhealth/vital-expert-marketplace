@@ -16,6 +16,6 @@ These are signals for the update decision, not included studies: each needs scre
 Critical items used: [2, 4, 7, 9, 11, 13, 15] (default AMSTAR 2 list, ES-106)
 Critical flaws (No on a critical item): [7]
 Non-critical weaknesses (No on another item): [10]
-Partial yes (appraisers decide how these count): [4]
-Overall confidence by the AMSTAR 2 rule (Shea et al. 2017, ES-105 [PAPER] doi 10.1136/bmj.j4008): Low: one critical flaw (ES-107)
+Partial yes (partial adherence, not counted as No, ES-208): [4]
+Overall confidence by the AMSTAR 2 rule (Shea et al. 2017, ES-105 [PAPER] doi 10.1136/bmj.j4008): Low: one critical flaw, with or without non-critical weaknesses (ES-107, ES-227)
 No total score is computed (ES-108). The ratings and the final call are the appraisers'.

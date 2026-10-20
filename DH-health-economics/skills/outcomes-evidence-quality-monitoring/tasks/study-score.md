@@ -33,11 +33,11 @@ Why it matters: evidence portfolios are reviewed again and again, by different p
 
 ### Step 1. Collect the judgments
 
-Write them as `study_id, result_id, tool, domain, judgment, note` (see `examples/illustrative_judgments.csv`). Levels in the tool's own words (ES-73, ES-76). Check: every domain judged, levels valid for the tool, ROBINS-I version stated (2016 published; V2 is a draft, ES-80).
+Write them as `study_id, result_id, tool, domain, judgment, note` (see `examples/illustrative_judgments.csv`). Levels in the tool's own words (ES-73, ES-76; RoB 1 for a JCA: Low, High, Unclear, ES-172). Check: every domain judged, levels valid for the tool, ROBINS-I version stated (2016 published; V2 is a draft, ES-80).
 
 ### Step 2. Write the person's rule
 
-What the sources fix, applied always: ROBINS-I critical in any domain means critical overall and no synthesis (ES-77); RoB 2 overall is the least favorable domain (ES-74); where two or more domains are "Some concerns", say that ES-74 lets reviewers judge the result High overall, and leave that call to them. What the person sets: the ROBINS-I overall below critical (the sourced rows do not fix it `[GAP]`; "least favorable domain" is available as a proposal), and, only if they want a score, points per level and weights per domain. Write the rule back in their words with the person who owns it.
+What the sources fix, applied always: ROBINS-I critical in any domain means critical overall and no synthesis (ES-77); RoB 2 overall is the least favorable domain (ES-74); RoB 1 per outcome is High if any key domain is high, Low if all are low, otherwise Unclear, with the key domains the reviewers' choice (ES-192 [PAPER] DOI 10.1136/bmj.d5928); where two or more domains are "Some concerns", say that ES-74 lets reviewers judge the result High overall, and leave that call to them. What the person sets: the ROBINS-I overall below critical (the sourced rows do not fix it `[GAP]`; "least favorable domain" is available as a proposal), and, only if they want a score, points per level and weights per domain. Write the rule back in their words with the person who owns it.
 
 ### Step 3. Run the tally
 
@@ -49,7 +49,7 @@ Counts per overall level. Results at critical risk are excluded from any synthes
 
 ### Step 5. Certainty context, not a rating
 
-For each outcome, restate that non-randomized evidence starts low in GRADE and sound non-randomized studies are generally graded low (ES-90, ES-100), and that rating down for risk of bias is one of five domains (ES-91). The certainty rating is the person's or the HTA body's.
+For each outcome, restate that non-randomized evidence starts low in GRADE and sound non-randomized studies are generally graded low (ES-90, ES-100), and that rating down for risk of bias is one of five domains (ES-91). If the person asks what a level means, quote the GRADE definitions (ES-195 to ES-198). The certainty rating is the person's or the HTA body's; once they give it, word any finding with the Table 15.6.b verb for that rating (ES-203 to ES-207), and use no certainty verb before.
 
 ## Build the output
 

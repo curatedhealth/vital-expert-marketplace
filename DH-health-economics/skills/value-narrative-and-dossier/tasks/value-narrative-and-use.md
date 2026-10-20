@@ -38,7 +38,7 @@ Use only claims A1 marked "may enter". Any new claim runs A1 Step 3 first. A cla
 
 ### Step 2. Write the narrative per audience
 
-One short paragraph per audience, in plain words, built from: the problem the audience owns (in the person's words), what the product does within its intended use, the checked results with population, comparator, outcome and time point, and the certainty level named as the person assigned it (ES-89, ES-96). Where certainty is `[GAP]`, say "certainty not yet rated". Use "proposed" for any framing the person did not give. Never write "proves", "cost-effective" or "saves money" as fact (`references/certainty-and-wording.md`).
+One short paragraph per audience, in plain words, built from: the problem the audience owns (in the person's words), what the product does within its intended use, the checked results with population, comparator, outcome and time point, and the certainty level named as the person assigned it (ES-89, ES-96), worded with the Table 15.6.b verb for that level: direct for high, "likely" or "probably" for moderate, "may" for low, "the evidence is very uncertain" for very low (ES-203 to ES-206). Where certainty is `[GAP]`, say "certainty not yet rated" and quote the effect as the source reports it, attributed. Use "proposed" for any framing the person did not give. Never write "proves", "cost-effective" or "saves money" as fact (`references/certainty-and-wording.md`).
 
 ### Step 3. State what the narrative does not say
 

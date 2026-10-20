@@ -1,6 +1,6 @@
 # What each body asks of the economic case and the evidence
 
-Interpretive reference for A1 and A2. Every line cites a row in `health-economics-methods-research.md` (`HE-` ids) or `evidence-synthesis-research.md` (`ES-` ids). All rows were read on 19 October 2026 and are not owner-reviewed. Re-read the source before external use. Where a body's rule is not here, it is `[GAP]`. Rows marked [PAPER] cite their DOI when used; "abstract only" rows say so.
+Interpretive reference for A1 and A2. Every line cites a row in `health-economics-methods-research.md` (`HE-` ids) or `evidence-synthesis-research.md` (`ES-` ids). All rows were read on 19 October 2026 (`ES-171` to `ES-193` on 20 October 2026) and are not owner-reviewed. Re-read the source before external use. Where a body's rule is not here, it is `[GAP]`. Rows marked [PAPER] cite their DOI when used; "abstract only" rows say so.
 
 ## England: NICE
 
@@ -84,9 +84,25 @@ The ESF cites "NICE health technology evaluations: the manual" for cost-utility 
 | Dossier | Complete for available studies, appropriate methods, transparent, with underlying documentation | `ES-148` |
 | Device evidence sources | Sponsor and third-party studies including ongoing ones; at least MEDLINE and CENTRAL; registries; HTA reports; the clinical evaluation report; device and patient registries | `ES-155` |
 | Search cut-off | At most 3 months before dossier submission | `ES-156` |
-| Risk of bias | RoB 1 for RCT outcomes (conflicts with Cochrane's RoB 2); ROBINS-I for comparative non-randomized outcomes | `ES-163`, `ES-164` |
+| Risk of bias | RoB 1 for RCT outcomes (conflicts with Cochrane's RoB 2; domains and criteria below); ROBINS-I for comparative non-randomized outcomes | `ES-163`, `ES-164`, `ES-171` to `ES-193` |
 | PICO | One population, one intervention, one comparator, at least one outcome; scoping aims for the fewest PICOs | `ES-167` |
 | AI use | No dossier step fully automated without a responsible human; all AI-assisted steps documented | `ES-169`, `ES-170` |
+
+### RoB 1 as the JCA applies it (read 20 October 2026)
+
+The HTACG validity guidance asks JCA assessors to use RoB 1 for RCT outcomes (`ES-163`); RoB 2 remains Cochrane's current tool for randomized trials (research file, "Changes and conflicts"). RoB 1 is the Cochrane Handbook 5.1.0 tool: for each domain, a support for judgment (what happened, with verbatim quotes, and an explicit statement when no information exists) and a judgment of Low, High or Unclear risk (`ES-171`, `ES-172`, `ES-174`, `ES-189`). Judgments concern material bias; insufficient detail usually means Unclear (`ES-176`). Two people judge independently (`ES-190`); quality scales are not used (`ES-191`). `ES-189` to `ES-193` are [PAPER] rows: Higgins et al., BMJ 2011, DOI 10.1136/bmj.d5928.
+
+| Domain | Low risk | High risk | Unclear | Rows |
+|---|---|---|---|---|
+| Random sequence generation | A random component described (random number table, computer generator, coin, cards, dice, lots; minimization) | A non-random rule (date of birth, admission date, record number) or allocation by judgment or preference | Insufficient information | `ES-180`, `ES-181` |
+| Allocation concealment | Central allocation, identical numbered containers, numbered opaque sealed envelopes | Open schedule, unsafeguarded envelopes, alternation, date of birth, record number | Method not described in enough detail | `ES-182` |
+| Blinding of participants and personnel | Blinding ensured, or no blinding but the outcome is unlikely to be influenced | No or broken blinding and the outcome likely influenced | Insufficient information, or outcome not addressed | `ES-183` |
+| Blinding of outcome assessment | Assessment blinded, or measurement unlikely to be influenced | No blinding and measurement likely influenced | Insufficient information | `ES-184` |
+| Incomplete outcome data | None missing, reasons unrelated or balanced, impact not clinically relevant, appropriate imputation | Outcome-related reasons with imbalance, clinically relevant impact, as-treated with substantial departure, inappropriate simple imputation | Attrition or exclusions insufficiently reported | `ES-185` |
+| Selective outcome reporting (per trial) | Protocol available and all pre-specified outcomes reported as planned | Pre-specified primary outcomes missing, changed, added or reported too incompletely to meta-analyze | Expected for most studies | `ES-186`, `ES-193` |
+| Other bias | Apparently free of other bias | At least one important risk (design-specific bias, claimed fraud) | Insufficient information or rationale | `ES-187` |
+
+Entries: one per study for sequence generation, allocation concealment and selective reporting; per outcome where needed for the two blinding domains and incomplete outcome data (`ES-173`). Summary per outcome: Low if all key domains are low; Unclear if low or unclear for all key domains; High if any key domain is high (`ES-192`). Which domains are key is the assessor's call. The model lays out the criteria; the judgments are the reviewers'.
 
 The review method behind a JCA dossier belongs to dh-clinical-validation `literature-and-real-world-evidence-review`. For this skill, the JCA matters in two ways: whether the product could be in scope at all, and that the economic case is national.
 

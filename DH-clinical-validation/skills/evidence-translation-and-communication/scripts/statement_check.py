@@ -16,7 +16,12 @@ Checks:
   1. Numbers in the draft that appear in no supplied passage (a number the reader cannot trace).
   2. Certainty words in the draft that are higher than every rating supplied, or any certainty
      word when no outcome has a rating (ratings are the person's; ES-94, ES-96).
-  3. Wording tied to sourced rows (row ids as in the skill's research files), filtered by market.
+  3. Certainty verbs stronger than Cochrane Handbook Table 15.6.b allows for the highest rating
+     supplied: "likely"/"probably" needs moderate or high (ES-204); an unhedged "reduces",
+     "increases" or "results in" needs high (ES-203); low takes "may" or "the evidence suggests"
+     (ES-205); very low takes "the evidence is very uncertain" (ES-206). Wide-interval "no effect"
+     wording is flagged for the owner to check against the interval (ES-207).
+  4. Wording tied to sourced rows (row ids as in the skill's research files), filtered by market.
 Rows are listed for the owner the person names for regulatory or legal review, or owner not named; a hit is a candidate, never a finding.
 """
 import argparse
@@ -51,6 +56,10 @@ WORDING = [
 ]
 
 CERT_RE = re.compile(r"\b(very low|low|moderate|high)\b[^.\n]{0,40}\bcertainty\b|\bcertainty\b[^.\n]{0,40}\b(very low|low|moderate|high)\b", re.I)
+EFFECT_VERB_RE = re.compile(r"\b(reduces|reduced|increases|increased|results? in|resulted in|improves|improved|lowers|lowered|fell|falls|dropped|drops|treats)\b", re.I)
+HEDGE_MOD_RE = re.compile(r"\b(likely|probably)\b", re.I)
+HEDGE_LOW_RE = re.compile(r"\b(may|might|evidence suggests|very uncertain)\b", re.I)
+NO_EFFECT_RE = re.compile(r"\bno (effect|difference)\b|\bno different\b|\bdoes not (reduce|increase|improve)\b", re.I)
 NUM_RE = re.compile(r"(?<![\w.])[-+]?\d+(?:[.,]\d+)?(?![\w])")
 
 
@@ -105,7 +114,24 @@ def main():
         if c in LEVELS and not r:
             print(f"- rating for '{o}' has no rater named: say who rated it")
 
-    # 3. wording
+    # 3. certainty verbs (Table 15.6.b)
+    print("\n## Certainty verbs against Table 15.6.b for the highest rating supplied")
+    top = max(rated_levels) if rated_levels else 0
+    vhits = []
+    for sent in re.split(r"(?<=[.;])\s+|\n+", draft):
+        if not sent.strip():
+            continue
+        if HEDGE_MOD_RE.search(sent) and top < LEVELS["moderate"] and not HEDGE_LOW_RE.search(sent):
+            vhits.append(f"- \"{sent.strip()[:120]}\": \"likely\"/\"probably\" is moderate-certainty wording (ES-204); highest rating supplied: {('not rated' if not top else [k for k, v in LEVELS.items() if v == top][0])}")
+        m = EFFECT_VERB_RE.search(sent)
+        if m and top < LEVELS["high"] and not HEDGE_MOD_RE.search(sent) and not HEDGE_LOW_RE.search(sent) \
+                and not re.search(r"\b(authors?|report(s|ed)?|as reported|showed|found)\b", sent, re.I):
+            vhits.append(f"- \"{sent.strip()[:120]}\": unhedged \"{m.group()}\" is high-certainty wording (ES-203); hedge to the rating given (ES-204 to ES-206) or attribute it to the source")
+        if NO_EFFECT_RE.search(sent):
+            vhits.append(f"- \"{sent.strip()[:120]}\": check the interval; a wide interval including no effect is not \"no effect\" (ES-207)")
+    print("\n".join(vhits) if vhits else "- none")
+
+    # 4. wording
     print(f"\n## Wording tied to sourced rows (market: {a.market})")
     found = 0
     for pat, note, rows in WORDING:

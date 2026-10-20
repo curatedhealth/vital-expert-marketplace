@@ -6,7 +6,7 @@ Short mode: 450 words maximum, counted without the calls list and tables' source
 
 1. **Answer:** for a review, which critical domains have a passage and which do not, and the overall confidence only if the appraisers have rated; for RWD or a digital measure, the framework named and the checks with gaps. Then the one decision next.
 2. **Critical domains (AMSTAR 2):** Item · Passage and locator, or "not reported (looked in ...)" · Rating (appraisers).
-3. **Overall (if rated):** script lines from `review_check.py amstar2`; critical-item list used; never a score.
+3. **Overall (if rated):** script lines from `review_check.py amstar2`, rejected ratings included; critical-item list used; never a score.
 4. **RWD or digital measure (if that branch):** Check · Row · Evidence or `[GAP]` · Answer (appraisers).
 5. **Calls made:** list.
 6. **Record:** "AI-assisted. Clears it: [the person named, in their words, or owner not named]. The record is built with verify.build_record once that named person clears it; until then, uncleared draft." This line appears in every answer, refusals included; never drop the verify.build_record clause.
@@ -20,7 +20,7 @@ Short mode: 450 words maximum, counted without the calls list and tables' source
 |---|---|---|---|---|
 
 ### Overall confidence by the AMSTAR 2 rule (ES-107)
-Script output; "Partial yes" items left to the appraisers.
+Script output: flaws, weaknesses, "Partial yes" items (allowed on 2, 4, 7, 8, 9), rejected ratings, overall by Box 2 (ES-107, ES-209, ES-226, ES-227).
 
 ### RWD fitness (framework named)
 | Dimension | Check | Row | Evidence | Answer (appraisers) |

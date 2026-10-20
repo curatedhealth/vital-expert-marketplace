@@ -1,8 +1,8 @@
-> Copied from the sibling skill evidence-translation-and-communication (references/certainty-wording.md, 19 October 2026) so this package stands alone. Row ids refer to the research files copied into this skill.
+> Copied from the sibling skill evidence-translation-and-communication (references/certainty-wording.md, 19 October 2026; updated 20 October 2026) so this package stands alone. Row ids refer to the research files copied into this skill.
 
 # Certainty: who rates it and how it is worded
 
-Interpretive reference. Every rule cites a row in `evidence-synthesis-research.md` (ES rows, read 19 October 2026). Where the rows are silent, the rule says `[GAP]`.
+Interpretive reference. Every rule cites a row in `evidence-synthesis-research.md` (ES rows, read 19 October 2026; section 15 rows ES-171 to ES-234 read 20 October 2026). Where the rows are silent, the rule says `[GAP]`.
 
 ## Who rates certainty
 
@@ -15,7 +15,7 @@ Interpretive reference. Every rule cites a row in `evidence-synthesis-research.m
 
 | Element | Rule | Row |
 |---|---|---|
-| Levels | Four: High, Moderate, Low, Very low. Handbook wording for the ends: High, "We are very confident that the true effect lies close to that of the estimate of the effect"; Very low, "We have very little confidence in the effect estimate". The handbook wording for Moderate and Low is not quoted in the research row `[GAP]`; quote it from the GRADE handbook before using it. | ES-89 |
+| Levels | Four, applied to a body of evidence, not to single studies (ES-199). GRADE handbook Table 5.1 (it says "quality" where later guidance says "certainty"): High, "We are very confident that the true effect lies close to that of the estimate of the effect" (ES-195); Moderate, "We are moderately confident in the effect estimate: The true effect is likely to be close to the estimate of the effect, but there is a possibility that it is substantially different" (ES-196); Low, "Our confidence in the effect estimate is limited: The true effect may be substantially different from the estimate of the effect." (ES-197); Very low, "We have very little confidence in the effect estimate: The true effect is likely to be substantially different from the estimate of effect" (ES-198). The handbook notes any four-way split of a continuum is somewhat arbitrary (ES-198). | ES-89, ES-195 to ES-199 |
 | Start | Randomized trials start high; non-randomized studies start low. Cochrane chapter 14 also shows studies assessed with ROBINS-I starting high in a figure, and adds that sound non-randomized studies are generally graded low even with ROBINS-I. State which convention the rater used. | ES-90, ES-100, Changes and conflicts |
 | Down | Risk of bias, inconsistency, indirectness, imprecision, publication bias: 1 or 2 levels each. | ES-91 |
 | Limits | Usually one level per factor, at most three overall; nothing below very low. | ES-95 |
@@ -33,5 +33,5 @@ Population and setting, the comparison, up to seven critical or important outcom
 2. Each statement names: the outcome as measured, the population, the comparator, the time point, the effect as the passage reports it, the study count, and the certainty with its rater ("certainty rated low by [the rater the person named, in their words], 12 October 2026") or "certainty not rated `[GAP]`".
 3. Quote the effect as reported. Do not convert a within-arm change into a between-arm difference, a standardized effect into points, or a p-value into "proven".
 4. Not in any output: "proves", "proven", "conclusive", "cost-effective", "safe and effective". Where a source uses them, quote them as the source's words, attributed.
-5. Plain-language phrasings that tie certainty to verbs ("probably", "may") are not in the sourced rows `[GAP]`. Until a sourced rule exists, a lay version states the level and the handbook definition in plain words and names the rater.
+5. Words tied to certainty follow Cochrane Handbook 6.5 Table 15.6.b, keyed to the rating the person gave, never chosen by the model. High: state the effect directly ("X reduces outcome"; "X results in little to no difference in outcome") (ES-203). Moderate: "likely" or "probably" ("X likely reduces outcome"; "X probably reduces outcome") (ES-204). Low: "may" or "the evidence suggests" ("X may reduce outcome") (ES-205). Very low, any effect size: "The evidence is very uncertain about the effect of X on outcome" (ES-206). GRADE guidelines 26 likewise bases statements on effect size and certainty (abstract only, ES-201, ES-202). A wide interval that includes no effect is never "no effect" or "no different"; if one possibility is named, name the other too (ES-207). A lay version uses the same verb, states the level and its Table 5.1 meaning in plain words, and names the rater. With no rating, no certainty verb is used: the effect is quoted as the passage reports it and certainty stays "not rated `[GAP]`".
 6. A single study is a single study. Its result is "in one randomized trial of N participants", never "the evidence shows".

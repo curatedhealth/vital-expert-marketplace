@@ -4,7 +4,7 @@
 
 Short mode: 450 words maximum, counted without the calls list and tables' source column. Before handing over, count the words. If over 450, cut in this order until under: context paragraphs, repeated row ids in prose, secondary rules, rows not tied to the person's question. Never cut a gap, a stop or the record line. Refusals follow the same 450-word cap.
 
-1. **Answer:** per critical outcome, what the studies report in plain words with its limits; pooled or not and why (row); certainty "reviewers' rating" or "not yet rated"; the one decision the reviewers must make next. Never "proves".
+1. **Answer:** per critical outcome, what the studies report in plain words with its limits; pooled or not and why (row); certainty "reviewers' rating" or "not yet rated", with the Table 15.6.b verb for that rating (ES-203 to ES-206); the one decision the reviewers must make next. Never "proves".
 2. **Flow:** the PRISMA 2020 counts and reconciliation result.
 3. **Evidence table check:** the problems `scripts/check_evidence_table.py` printed.
 4. **Summary of Findings (condensed):** Outcome · Studies (participants) · Effect as reported · Certainty (reviewers) · Note.
@@ -29,8 +29,8 @@ Counts in ES-20 [PAPER] doi 10.1136/bmj.n160 order, excluded full texts with rea
 |---|---|---|---|---|---|---|---|---|---|
 
 ### Summary of Findings
-| Outcome | Comparator burden | Relative effect | Absolute effect | Participants (studies) | Certainty | Comments |
-|---|---|---|---|---|---|---|
+| Outcome | Comparator burden | Relative effect | Absolute effect | Participants (studies) | Certainty | Statement (Table 15.6.b wording, ES-203 to ES-207) | Comments |
+|---|---|---|---|---|---|---|---|
 
 ### Evidence table and check
 The table, then the script's missing fields, problems and notes.

@@ -10,7 +10,7 @@ A gap is information, not an apology. Each reason leads to a different next step
 | Date not supplied | First consent, first enrollment, primary completion, end of trial, certification, approval | "Primary completion date not given: results due date not computed `[GAP]`." | Ask for the registry record or the date. |
 | Library cannot answer | No registration found, design label unchecked, table field empty, tool error | "The library found no ClinicalTrials.gov link for this paper; registry id from the paper: DRKS..." | Use the paper and the person's registry record. |
 | Intended use not stated | No label or authorization text for the market | "Cleared indication for the US not stated: payer and clinician narratives are provisional `[GAP]`." | Point to the owner the person names for regulatory status, or owner not named, or to dh-regulatory-strategy (regulatory-pathway-and-classification) for device status. |
-| Not sourced | A rule the research files do not hold (EU CTR Annex V content, STROBE item wording, plain-language certainty verbs, press-release rules) | "Not sourced here `[GAP]`." | Name the text to read; never fill from memory. |
+| Not sourced | A rule the research files do not hold (EU CTR Annex V content, STROBE item wording, press-release rules) | "Not sourced here `[GAP]`." | Name the text to read; never fill from memory. |
 
 ## Never
 
