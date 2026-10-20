@@ -19,7 +19,7 @@ Threshold reviews, value evidence checks on notes and data the person supplies, 
 When the work reaches one of these, finish the draft, label it "draft for the owner", and say who must decide. Refusals follow the same 450-word cap as short mode.
 
 - Any wording sent to a customer, including a correction or retraction notice.
-- Any effect, cost, forecast or comparison wording, in a sent note or a new one. Uptake, use and customer-reported outcomes are not clinical evidence (CS32). Claims clearance belongs to the person's regulatory or legal owner; the Commercial pack can flag, never clear.
+- Any effect, cost, forecast or comparison wording, in a sent note or a new one. Uptake, use and customer-reported outcomes are not clinical evidence: they have no comparator (outcome-measures.md), and implementation outcomes are preconditions for clinical outcomes (CS32 [PAPER], Proctor 2011, DOI 10.1007/s10488-010-0319-7). Claims clearance belongs to the person's regulatory or legal owner; the Commercial pack can flag, never clear.
 - Any outcome tied to payment: Market Access `outcomes-contract-monitoring` (dh-market-access).
 - Any statement that a customer has realized value, achieved outcomes or is healthy, made outside the person's own rule.
 - Renewal, expansion, price or discount positions.

@@ -1,0 +1,7 @@
+{
+  "_note": "ILLUSTRATIVE rule written for the build test, 19 October 2026. A real rule is the person's.",
+  "overall": {"ROBINS-I": "least_favorable", "RoB2": "least_favorable"},
+  "points": {"Low": 3, "Moderate": 2, "Some concerns": 2, "Serious": 1, "High": 1, "Critical": 0, "No information": 1},
+  "domain_weights": {"confounding": 2, "selection of the reported result": 2},
+  "rule_owner": "Head of Evidence (as named in the test prompt)"
+}

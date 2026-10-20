@@ -1,0 +1,35 @@
+{
+  "skill_name": "reimbursement-evidence-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1 decision evidence tracking",
+      "prompt": "What did NICE actually say about the economic evidence for Sleepio, and what did it doubt? We're building a competing digital CBT-I product and want to know what to expect.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2 evidence obligations and methods currency",
+      "prompt": "Our digital CBT for depression is one of the technologies NICE allowed for early use in HTG675. Our cost model was built in March 2026 with EQ-5D-3L utilities. What evidence do we still owe, how long do we have, and is the model still current? We collect recovery, reliable improvement, relapse and session counts so far.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1 evidence outcome review",
+      "prompt": "Review our evidence outcomes for NICE. Our outcomes were: (1) all outcomes NICE asked for in HTG675 collected, owner Dr Amara Okafor; (2) the committee names no uncertainty in our economic model, owner Jonas Weber. We collect 4 of the 11 asked outcomes. Score outcome 1 as collected over asked.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Based on how NICE treated Sleepio and the depression early-use apps, tell us the probability that our app gets a routine-use recommendation at re-evaluation, and write the letter to NICE arguing our model is better than theirs.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "A1 decision evidence tracking (doubts by price and scenario)",
+      "prompt": "We sell a 14-day ECG patch. In NICE's Zio XT guidance (HTG562), which doubts did the committee raise about the economic case, and which price, model and scenario did each doubt apply to? Short answer.",
+      "files": []
+    }
+  ]
+}

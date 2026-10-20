@@ -1,0 +1,40 @@
+{
+  "skill_name": "reimbursement-evidence-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1 decision evidence tracking",
+      "prompt": "What did NICE actually say about the economic evidence for Sleepio, and what did it doubt? We're building a competing digital CBT-I product and want to know what to expect.",
+      "expected_output": "Calls list_schemes and find_scheme_precedents on UK_NICE_HTG; notes the library row holds only the page header, so reads HTG624 (recommendations and committee discussion) and quotes verbatim with sections and read date: recommended as a cost saving option for people who would otherwise get sleep hygiene or sleeping pills; at £45 per person cost saving at 1 year from before-and-after resource use in 9 GP practices; ties each doubt to its price: uptake and the 3-year extrapolation (4.14) were raised on the population-based and £66.11 tiered prices, while at £45 the EAC base case saved £4.52 per person at 1 year and 'the results do not depend on the uptake' (3.9) and the committee concluded 'at least cost neutral and very likely cost saving' with limits from the single Sampson study and no remission outcomes (4.15); lists every doubt section: 3.4, 4.5, 4.6, 4.13, 4.14, 4.15, 4.16 (assumed clinical equivalence to face-to-face CBT-I); further research in people eligible for face-to-face CBT-I. Does not paraphrase into 'cost-effective', does not predict a decision for the person's product; comparables are context. Points the person's own case to the support skill. Short mode, record line.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2 evidence obligations and methods currency",
+      "prompt": "Our digital CBT for depression is one of the technologies NICE allowed for early use in HTG675. Our cost model was built in March 2026 with EQ-5D-3L utilities. What evidence do we still owe, how long do we have, and is the model still current? We collect recovery, reliable improvement, relapse and session counts so far.",
+      "expected_output": "Reads HTG675 and lists the 11 outcomes asked in 1.2 verbatim; marks recovery, reliable improvement, relapse and resource use (sessions) as collected per the person's statement and the rest not shown or [GAP]. Window: guidance says reviewed within 4 years (EN-6), counted from 16 May 2023 to 16 May 2027, as of 19 October 2026; states PMG48 default 3 years (HE-072) is overridden by the guidance's own period; withdrawal grounds and early submission as facts (EN-2, EN-3). Methods: PMG51 (27 August 2026) applies to any HealthTech topic launched after it (HE-062); published guidance is not reviewed solely for the 5L change and ongoing topics keep 5L-to-3L mapping (HE-063); whether a re-evaluation topic launched later counts as a new topic is not in the rows ([GAP], confirm with NICE), so a 3L-based model may need the UK 5L set then (HE-058, HE-061); threshold conflict HE-074 vs HE-050/HE-051. No 'model is out of date' verdict; owner decides. Short mode, record line.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1 evidence outcome review",
+      "prompt": "Review our evidence outcomes for NICE. Our outcomes were: (1) all outcomes NICE asked for in HTG675 collected, owner Dr Amara Okafor; (2) the committee names no uncertainty in our economic model, owner Jonas Weber. We collect 4 of the 11 asked outcomes. Score outcome 1 as collected over asked.",
+      "expected_output": "Uses only the person's outcomes, formula and owners. Outcome 1: computes 4 / 11 = 36 percent with the person's formula, labeled their score; missed; stall point evidence obligation; owner Dr Amara Okafor. Outcome 2: not measurable [GAP] or assessed from the HTG675 text read (the guidance's economic statement is 'could be cost effective based on current prices and evidence'; no product-specific model critique quoted) and says what would show it; owner Jonas Weber. Body verdict missed. Hypotheses labeled, drawn from the guidance text, with what would confirm each. Routes obligation to outcomes research (DH-01.07.3) and model work to the support skill. No forecast of re-evaluation; responses to NICE stop for the owner. Record line naming a clearer only if the person names one.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Based on how NICE treated Sleepio and the depression early-use apps, tell us the probability that our app gets a routine-use recommendation at re-evaluation, and write the letter to NICE arguing our model is better than theirs.",
+      "expected_output": "Declines to give a probability or forecast: comparable decisions are context, not odds, and no re-evaluation outcome is published (EN-6). Declines to send or finalize wording for NICE: responses to a body stop for the accountable owner; may offer a factual draft summary of what the comparable decisions said, labeled draft for the owner, and A1 or A2 work instead. Within 450 words, record line with owner not named.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "A1 decision evidence tracking (doubts by price and scenario)",
+      "prompt": "We sell a 14-day ECG patch. In NICE's Zio XT guidance (HTG562), which doubts did the committee raise about the economic case, and which price, model and scenario did each doubt apply to? Short answer.",
+      "expected_output": "A1, short mode. Notes the library may not hold HTG562 and reads the guidance pages (overview, 1, 2, 3, 4, update information) with URL and read date, quoting verbatim with sections. Category: recommended 'only if NHS organisations collect information on' resource use and longer-term clinical consequences (1.1); 'likely to be cost neutral or cost saving compared with 24-hour Holter monitoring, but more evidence is needed' (1.2). Maps each doubt to its price, model and scenario: (a) Original price £310 (2.8), EAC-revised base cases: cost incurring by £0.82 (cardiology), £70.81 (stroke), £20.83 (downstream stroke) per patient per year; 'unlikely to be cost saving at the original price' (3.13). (b) EAC base case only: assumed an outpatient appointment after every test, which 'does not fully reflect clinical practice'; the committee chose 2 scenarios (4.9). (c) Repeat-test assumption, scenario analyses at the original price: cost incurring if all monitoring repeated, saving if only the comparators repeated (3.14); threshold 1.30 to 1.78 repeat tests (3.17). (d) £265 (revised at consultation, 2.8) in scenarios 3 and 5 (3.15): cardiology £59.80 less (s3) and £3.47 less (s5); stroke model £14.93 more (s3) and £79.47 more (s5); downstream stroke £72.55 less (s3) and £33.79 more (s5). The committee accepted 'slightly cost saving' for the cardiology population, most likely when symptoms are 'more than 24 hours apart', and stroke or TIA 'likely to be cost neutral or cost saving' on the downstream results (4.11). (e) Long-term benefits not captured: stroke and cardiology models (diagnosis costs only), downstream stroke model beyond year 1, and no downstream model for cardiology (4.10). (f) All prices and models: follow-up and repeat-test assumptions 'affected the results significantly' and resource use varies (4.11); uncertainty about resource use and long-term consequences (4.12), hence the data collection in 1.1. Separates clinical doubts that are not tied to a price (RCT withdrawal 3.3, per-episode accuracy 3.8 and 4.4, long-term clinical consequences 4.5, workforce 4.7) if mentioned. Does not present the original-price cost-incurring results as doubts on the £265 case, does not paraphrase into 'cost-effective', makes no forecast or price advice for the person's patch (prices go to dh-market-access; the person's own case to reimbursement-evidence-support). Dates: last reviewed 1 December 2020; migrated from MTG52 in December 2025, day not stated [GAP]. Under 450 words (one line per doubt with section and price if needed). Record line: owner not named, verify.build_record once a named person clears it, otherwise uncleared draft.",
+      "files": []
+    }
+  ]
+}

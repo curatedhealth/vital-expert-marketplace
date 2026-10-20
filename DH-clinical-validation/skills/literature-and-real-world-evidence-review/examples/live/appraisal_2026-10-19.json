@@ -1,0 +1,130 @@
+{
+ "_note": "Trimmed live outputs from the VITAL Digital Health Library, 19 October 2026. Fields kept as returned; long lists cut.",
+ "deduplicate": {
+  "call": {
+   "tool": "literature.deduplicate",
+   "records": "Sakata search record (PMCID only), Sakata get_record record (DOI, PMID, PMCID), RESiLIENT parent trial, conference abstract",
+   "identifiers": [
+    "39836656",
+    "10.1371/journal.pmed.1004510"
+   ]
+  },
+  "input_count": 6,
+  "output_count": 4,
+  "merges": [
+   {
+    "record_id": "4641c102-0a19-5d8a-882d-d4cab3e4ec45",
+    "merge_rule": "pmcid",
+    "merged_from": 2
+   },
+   {
+    "record_id": "fc439824-fbb5-5dff-9434-f43a64c4b401",
+    "merge_rule": "doi",
+    "merged_from": 2
+   }
+  ],
+  "_observed": "records of the same report merged; the secondary-analysis report was not linked to its parent trial (study-level linking is not done); merged input records came back with design null and authors empty"
+ },
+ "classify_sakata": {
+  "design": "other",
+  "confidence": 0.3,
+  "rule": "no decisive metadata or text cue",
+  "_observed": "secondary analysis of a randomized trial"
+ },
+ "classify_conference_abstract": {
+  "design": "meta_analysis",
+  "confidence": 0.78,
+  "decided_by": [
+   "title:meta-analysis"
+  ],
+  "rule": "text:meta-analysis",
+  "_observed": "the title says 'pooled analysis'; the word meta-analysis is not in it; publication type is conference-abstract"
+ },
+ "classify_knutzen": {
+  "design": "rct",
+  "confidence": 0.78,
+  "decided_by": [
+   "title:randomized"
+  ],
+  "_observed": "PubMed publication type does not say RCT; label from title word"
+ },
+ "grade_cebm": [
+  {
+   "doi": "10.1371/journal.pmed.1004510",
+   "level": "2",
+   "rule": "rct for a treatment question -> level 2",
+   "provisional": false
+  },
+  {
+   "doi": "10.1093/ijnp/pyae059.428",
+   "level": "1",
+   "rule": "meta_analysis of randomized trials -> level 1",
+   "provisional": false,
+   "confidence": 0.78
+  },
+  {
+   "doi": "10.1038/s41746-025-01514-4",
+   "level": "1",
+   "rule": "meta_analysis -> level 1 (assumes randomized trials; included-study design not established)",
+   "provisional": true,
+   "confidence": 0.546
+  },
+  {
+   "doi": "10.1016/j.invent.2026.101009",
+   "level": "[GAP]",
+   "rule": "other: design not established",
+   "provisional": true
+  }
+ ],
+ "grade_grade_draft": [
+  {
+   "doi": "10.1371/journal.pmed.1004510",
+   "level": "high",
+   "draft": true,
+   "rule": "GRADE draft: starting certainty 'high' from design 'rct'; downgrade factors left empty for a human reviewer",
+   "factors": {
+    "risk_of_bias": null,
+    "inconsistency": null,
+    "indirectness": null,
+    "imprecision": null,
+    "publication_bias": null
+   }
+  },
+  {
+   "doi": "10.1038/s41746-025-01514-4",
+   "level": "high",
+   "draft": true,
+   "rule": "GRADE draft: starting certainty 'high' from design 'meta_analysis'; downgrade factors left empty for a human reviewer"
+  }
+ ],
+ "check_retraction_wakefield": {
+  "doi": "10.1016/s0140-6736(97)11096-0",
+  "status": "retracted",
+  "notice_ref": "10.1016/s0140-6736(10)60175-4",
+  "date": "2010-02-06",
+  "sources_checked": [
+   "crossref"
+  ]
+ },
+ "check_retraction_chen": {
+  "doi": "10.1371/journal.pmed.1004510",
+  "status": "none",
+  "sources_checked": [
+   "crossref"
+  ]
+ },
+ "find_trial_chen": {
+  "registrations": [
+   {
+    "nct_id": "NCT04069247",
+    "status": "COMPLETED",
+    "sponsor": "Chinese University of Hong Kong",
+    "match_via": "pubmed_secondary_id"
+   }
+  ],
+  "warnings": [
+   "1 registrations cite this paper as background only and were not linked"
+  ],
+  "_observed": "the record's own trial_ids stays empty"
+ }
+}

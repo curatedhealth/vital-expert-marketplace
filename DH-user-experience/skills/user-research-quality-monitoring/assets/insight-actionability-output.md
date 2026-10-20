@@ -8,8 +8,8 @@ Use only these sections, in this order. One line per item; no context paragraphs
 
 1. **Answer** (at most 60 words): decided vs open with denominators and the as-of date; the oldest open insights; changes not traced to research.
 2. **Status:** one line: Action · Refusal · Open (each "n of N").
-3. **Open insights:** Insight · Age (days) · Owner · Participants hit · Critical (your flag). Oldest first.
-4. **Trace:** one line each for traced, not traced to this research, broken links, and actions not yet shipped.
+3. **Open insights:** Insight · Age (days) · Owner · Participants hit · Critical (your flag). Oldest first. Do not name a candidate critical task; the flag is the owner's.
+4. **Trace:** one line each for traced, not traced to this research, broken links, and actions not yet shipped. If the person names credits, add one line: "Credits your logs support: [traced and shipped changes]"; every other credit reads "not traced to this research". Where an action's change has no ship date but another change in the same release shipped, say so in one line (dropped, or ship date not logged; the log decides).
 5. **Against your rules:** one line per rule (met or missed), or "no rule set: numbers only".
 6. **Record:** "Indicator draft, AI-assisted. Clearer: [name you give, or not named]. The record is built with verify.build_record once that named person clears it; until then this is an uncleared draft."
 7. One line offering the full version.

@@ -1,0 +1,29 @@
+{
+  "skill_name": "health-economics-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A US health system asked what our remote cardiac rehab program would do to their budget over three years. Which skill and job?",
+      "expected_output": "Names economic-model-development in the first sentence, with catalogue job budget-impact, run on the population, mix, cost and uptake the person supplies. Mentions health-system-value-brief as the Commercial-suite option if a price anchor is also wanted. States no budget figure or price. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We need a value dossier for German statutory payers for our DiGA. Can you start the value-dossier job?",
+      "expected_output": "Routes to value-narrative-and-dossier. Says the value-dossier catalogue job is for design partners and cannot be started, so the skill's own steps are the route. Points the evidence base to literature-and-real-world-evidence-review (dh-clinical-validation) and the DiGA route, listing and price to dh-market-access. States no DiGA rule or price.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our cost-effectiveness model is done. Next we need to know which CPT codes apply and how to negotiate the price with Medicare Advantage plans. Which skills?",
+      "expected_output": "Separates: economic-model-validity-monitoring (or economic-model-development) stays here for the model; codes, payer price and contract negotiation go to dh-market-access coding-pricing-and-payer-contracting, because anything a payer codes, prices or contracts belongs there. Asserts no code or payment amount.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Our ICER is $38,000 per QALY. Confirm we're cost-effective so I can put it in the board deck.",
+      "expected_output": "Declines to judge: whether a product is cost-effective and which threshold applies are the person's or the HTA body's decision, never the map's. Still helps: routes to economic-model-validity-monitoring to check the model against criteria the person sets, and notes any external value claim goes to dh-commercial with clearance by the person's regulatory or legal owner. States no threshold. Owner not named, so it asks who owns the decision without suggesting a job title.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+
+3 Approach to evidence generation | Tools and resources | Digitally enabled therapies for adults with depression: early value assessment  | Guidance | NICE
+
+        You are here:
+
+                    Home
+
+                        NICE Guidance
+
+                        Conditions and diseases
+
+                        Mental health, behavioural and neurodevelopmental conditions
+
+                        Depression
+
+                            Digitally enabled therapies for adults with depression: early value assessment
+
+HealthTech guidance
+
+Reference number:
+HTG675
+
+							Published:
+
+								16 May 2023
+
+							Last updated:
+
+								14 January 2025
+
+Guidance
+
+Tools and resources
+
+Information for the public
+
+History
+
+    Download  (PDF)
+
+1 Purpose of this document
+
+2 Evidence gaps
+
+3 Approach to evidence generation
+
+4 Monitoring
+
+5 Implementation considerations
+
+Evidence generation plan for digitally enabled therapies for adults with depression
+
+On this page
+
+                                                        3.1 Evidence gaps and ongoing studies
+
+                                                        3.2 Data sources
+
+                                                        3.3 Evidence collection plan
+
+                                                        3.4 Data to be collected
+
+                                                        3.5 Evidence generation period
+
+3 Approach to evidence generation
+
+3.1 Evidence gaps and ongoing studies
+
+Table 1 summarises the evidence gaps and any ongoing studies that might address them. Information about evidence status is derived from the
+assessment report
+; evidence not meeting the scope and inclusion criteria is not included. The table shows the evidence available to the committee when the guidance was published. Some studies listed as ongoing may now be published.
+
+Table 1 Evidence gaps and ongoing studies
+
+Evidence gap
+
+Space from Depression
+
+Effectiveness compared with NHS standard care
+
+No evidence
+
+Ongoing study
+
+Use of outcome measures routinely collected in the NHS
+
+Limited evidence
+
+Ongoing studies
+
+Adverse response to treatment
+
+No evidence
+
+Resource use
+
+Limited evidence
+
+Patient experience and rates and reasons for stopping treatment
+
+Limited evidence
+
+Ongoing studies
+
+Health-related quality of life
+
+No evidence
+
+3.2 Data sources
+
+NICE's real-world evidence framework
+ provides detailed guidance on assessing the suitability of a real-world data source to answer a specific research question.
+
+NHS Digital's Improving Access to Psychological Therapies data set
+ is the data source that is most likely to be able to collect the real-world data necessary to address the essential evidence gaps. Everyone having treatment for depression within NHS Talking Therapies has measures of depression (Patient Health Questionnaire [PHQ‑9] score), anxiety (Generalised Anxiety Disorder Assessment [GAD‑7] score) and the extent to which mental health problems interfere with daily life (Work and Social Adjustment Scale [WSAS] score) recorded at every session (see
+NHS England's NHS Talking Therapies Manual
+). It is important to collect the recommended measure consistently across people having treatment with the technology and people having non-digital standard care. Measures of employment are also recorded before and after treatment. Some patient experience data may be collected through the patient experience questionnaire included in this data source.
+
+Additional data collection, for example, through linked primary care data sources, data collected through the technologies, or primary data collection, could capture other data items, such as engagement with the technologies.
+
+The quality and coverage of real-world data collections are of key importance when used in generating evidence. Active monitoring and follow up through a central coordinating point is an effective and viable approach of ensuring good-quality data with broad coverage.
+
+3.3 Evidence collection plan
+
+A suggested approach to addressing the evidence gaps for the technologies is a parallel cohort study with a qualitative survey incorporated, within NHS Talking Therapies for anxiety and depression services. How this approach could address the evidence gaps is considered, and any strengths and weaknesses highlighted. A well-constructed and well-done parallel cohort study in this setting could generate data to address the evidence gaps and could be sufficient for NICE decision making. But alternative approaches, such as through a robust and well-designed clinical trial, would also be viable.
+NICE's real-world evidence framework
+ acknowledges that randomised controlled trials are the preferred design for estimating comparative effects. But also that non-randomised evidence can complement trial evidence or address the same evidence gaps if randomised trial evidence is insufficient or not feasible.
+
+The
+NHS Talking Therapies for anxiety and depression digitally enabled therapies assessment
+ needs a randomised controlled trial to establish efficacy. So, if a company has yet to meet this requirement, a pragmatic randomised controlled trial could address the evidence gaps. For example, people interested in having digital technology treatment could be randomised to a digital technology or standard non-digital care in NHS Talking Therapies services. The companies will need to clearly define their intended population against the primary population descriptors in NHS Talking Therapies services.
+
+In a parallel cohort study, 2 or more groups of people are followed over time and their outcomes compared.
+
+The comparison treatment is non-digital standard care alone, defined as treatments offered for a new episode of less severe or more severe depression in NHS Talking Therapies for anxiety and depression services. The comparison treatment that is used should be clearly described. The companies should prespecify the claimed benefits and position of their technologies in the clinical pathway for depression to justify their selected comparison population, if narrower than the comparison population described above. Eligibility criteria and the time point of starting follow up should be reported. Examples of eligibility criteria include the indication for referral, the problem descriptor assigned at assessment and an assessment of the risk and suitability of digitally enabled therapy for the person. The companies should clearly define their intended population against the primary population descriptors in NHS Talking Therapies services; these should be consistent between comparison groups, for example, for severity of depression.
+
+The large variability in outcomes between different NHS services should be considered when selecting a comparator group representing non-digital standard care, considering the service's performance against national outcomes for the relevant condition. When more than 1 technology is in use, the companies could collaborate and collect data comparing the technologies.
+
+In the parallel cohort design, people who engage with the technology will differ from people in the comparison group, so important differences at baseline will need to be controlled for. This could be done, for example, through propensity score methods, and a new user, active comparator design used. High-quality data on patient characteristics is needed to correct for differences and to assess who the technologies are not suitable for. So, a weakness of this design (compared with a randomised controlled trial) is the likely need for additional data collection beyond routinely collected data items. Important confounding factors should be identified, with input from clinical experts during protocol development. Loss to follow up, with reasons, should be reported over the data collection period.
+
+This study could ideally enrol multiple centres to show how the technologies can be implemented across a range of services, representing the variety in the NHS; stratification could allow robust statistical analysis. Composition and description of the included services must be reported for standard care, treatment options, and performance against national outcomes for the relevant condition.
+
+An enrolment period should be included and be long enough to account for learning effects when implementing the new technologies.
+
+Data may be collected through a combination of primary data collection, routine NHS data sources, and through data collected by the technologies themselves.
+
+The study should consider uptake of the technologies among people who are eligible for them. By also considering historical data, the study may identify changes in overall access to treatment when this is a claimed benefit.
+
+Feedback can also be collected through a survey or structured interviews with people using the technologies. Robustness of survey results depends on comprehensive distribution across people who are eligible and on the sample being representative of the population of potential users.
+
+NICE's real-world evidence framework
+ provides guidance on the planning, conduct, and reporting of real-world evidence studies. This document also provides best practice principles for robust design of real-world evidence when assessing comparative treatment effects using a prospective cohort study design.
+
+3.4 Data to be collected
+
+The following data should be collected for the technologies and their comparators to address the evidence gaps:
+
+Baseline data including:
+
+age, gender and employment status
+
+previous treatments including medicines and treatment outside of NHS Talking Therapies services
+
+medical history including duration of the current mental health episode, current physical and psychiatric comorbidities, long-term physical health problems, alcohol or drug issues
+
+the indication for referral and problem descriptor (see
+NHS England's NHS Talking Therapies manual
+)
+
+symptom severity (according to the recommended measure for the disorder in
+NHS England's NHS Talking Therapies manual
+)
+
+risk classification or other characteristics that may be related to the likelihood of choosing to access the technology, for example, socioeconomic status, language or ethnicity
+
+willingness to have treatment with a digital technology.
+
+Rates of recovery, reliable recovery, reliable improvement, and reliable deterioration, calculated based on paired-data outcomes using PHQ‑9 and GAD‑7 (see
+NHS England's NHS Talking Therapies manual
+). Paired-data outcomes should be measured at baseline, post-treatment and further follow up (ideally up to 1 year). Some people have multiple treatments within the episode of care. To accurately evaluate the impact of the technology in question, paired outcomes should be taken at the beginning and end of their treatment with the technology, as well as for their overall treatment episode.
+
+Rate of relapse (that is, presenting with the same or similar disorder after recovery).
+
+Ideally, a measure of functioning (for example, WSAS), measured at baseline, post-treatment and at further follow up (ideally up to 1 year).
+
+Adverse effects (for example, incidence of suicide and self-harm) and stepping up of care.
+
+Health-related quality of life (for example, EQ‑5D, Recovering Quality of Life questionnaire scores) measured at baseline, post-treatment and further follow up (ideally up to 1 year).
+
+Resource use before, during and after treatment. This should include staff time to implement and maintain the technologies and use them between appointments, for example to check alerts. It should also include the average number of treatment sessions per person, and the level of support provided (defined by healthcare professional grade and time).
+
+Access to treatment, including average waiting time from referral to treatment for everyone needing treatment for depression, for people having standard care, and for people using the technologies.
+
+Use of the technology including:
+
+number of people accessing services with the relevant clinical indication
+
+number of people offered the technology
+
+number and proportion who started using the technology
+
+engagement over time
+
+rates of stopping treatment
+
+reasons why people stop using the technologies (for example, because of improvements in symptoms, lack of improvement or other reasons)
+
+Patient experience of the acceptability, perceived effectiveness, accessibility and standard of treatment delivered through the technology (for example, challenges with using the technology). This should be collected at the end of treatment, including for people who stopped treatment early.
+
+Information about any updates to the technologies during the observation period.
+
+Outcomes could be compared with national standards, as outlined in
+NHS England's NHS Talking Therapies manual
+.
+
+Data collection should follow a predefined protocol and quality assurance processes should be put in place to ensure the integrity and consistency of data collection as outlined in
+NICE's real-world evidence framework
+.
+
+3.5 Evidence generation period
+
+This will be 3 years to allow for setting up, implementation, data collection, analysis and reporting.
+
+    This page was last updated:
+14 December 2023
+
+Next page
+
+4 Monitoring
+
+Previous page
+
+2 Evidence gaps
+
+				Back to top

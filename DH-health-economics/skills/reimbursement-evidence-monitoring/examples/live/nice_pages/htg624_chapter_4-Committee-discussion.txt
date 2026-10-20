@@ -1,0 +1,105 @@
+
+4 Committee discussion | Sleepio to treat insomnia and insomnia symptoms | Guidance | NICE
+        You are here:
+                    Home
+                        NICE Guidance
+                        Conditions and diseases
+                        Sleep and sleep conditions
+                            Sleepio to treat insomnia and insomnia symptoms
+HealthTech guidance
+Reference number: 
+HTG624
+							Published: 
+								20 May 2022
+Guidance
+Tools and resources
+Information for the public
+History
+    Download guidance (PDF)
+                                    Overview
+1 Recommendations
+2 The technology
+3 Evidence
+4 Committee discussion
+5 Committee members and NICE project team
+Update information
+On this page
+                                                        Treatment pathway
+                                                        Clinical-effectiveness overview
+                                                        Drop-out rates
+                                                        Other patient benefits or issues
+                                                        Training
+                                                        Side effects and adverse events
+                                                        Cost modelling overview
+                                                        Potential for cost savings
+                                                        Further research
+4 Committee discussion
+Treatment pathway
+Sleepio can be used to treat symptoms of insomnia after primary care referral
+4.1
+The evaluation considered Sleepio as a treatment for the symptoms of insomnia. The proposed patient population included people with symptoms or a diagnosis of insomnia. The committee accepted that this broad population was relevant and understood people could be referred to this technology by their GP or social prescriber if they live in a region where Sleepio is available. The committee accepted that insomnia symptoms are a common problem and that Sleepio has the potential to benefit many people.
+The most relevant comparator is treatment as usual including sleep hygiene advice and short-term medication
+4.2
+Sleepio provides a sleep improvement programme based on cognitive behavioural therapy for insomnia (CBT‑I) for people with clinically diagnosed insomnia or symptoms of insomnia. Clinical experts explained that the gold standard treatment for clinically diagnosed insomnia that is unlikely to resolve soon is face-to-face CBT‑I, but its availability is limited in the NHS. Instead, they agreed that the most relevant comparator to treat clinically diagnosed insomnia and insomnia symptoms that are likely to resolve soon is 'treatment as usual', which includes sleep hygiene education and hypnotic medication. Several other digital technologies provide CBT‑I or other support for people with clinically diagnosed insomnia and insomnia symptoms, but their uptake and use is limited. The committee concluded that the appropriate comparator for people with clinically diagnosed insomnia and insomnia symptoms that are likely to resolve soon is treatment as usual consisting of sleep hygiene advice and short-term medication.
+Sleepio has the potential to provide another CBT-I option
+4.3
+Clinical experts explained that digital CBT‑I, such as Sleepio and other digital CBT‑I technologies, increases the options available to primary and secondary care practitioners when treating insomnia. They explained that the gold standard treatment for insomnia is face-to-face CBT-I, but its availability is very limited in the NHS. The committee considered that there is space in the care pathway for Sleepio. It concluded that Sleepio has the potential to provide another option for people who would benefit from access to CBT‑I.
+Clinical-effectiveness overview
+Sleepio is effective at reducing insomnia symptoms compared with treatment as usual
+4.4
+The committee noted the large evidence base for Sleepio, and that the 28 studies in the evidence base included a range of patients who had a diagnosis or symptoms of insomnia. The external assessment centre (EAC) explained that changes in lifestyle are expected as part of treatment as usual, but it is unclear whether there was any explicit control for these factors in the evidence. The committee concluded that the evidence shows that Sleepio is more effective than treatment as usual in reducing symptoms of insomnia in adults.
+The limited evidence comparing Sleepio with face-to-face CBT-I means it should not be prescribed to people who would be offered face-to-face CBT-I
+4.5
+The EAC explained that it did not identify any studies that compared Sleepio with other methods of delivering CBT‑I directly (for example face‑to‑face or other digital methods) and had clinical outcomes. Clinical experts confirmed that other digital devices are available that also deliver digital CBT‑I. They considered that the clinical effectiveness of Sleepio is likely to be comparable to other digital devices delivering CBT‑I as well as face-to-face CBT‑I, but recognised that there are some advantages to the latter. The committee noted that, although the Sleepio programme includes a virtual therapist, a real therapist is not present during any of the sessions. The EAC also highlighted 2 network meta-analyses (Soh et al. 2020 and Hasan et al. 2022) that explored the effectiveness of various digital CBT‑I and face-to-face CBT‑I and broadly concluded that the clinical effectiveness of these treatments is likely to be similar. The committee noted some limitations with these meta-analyses, for example few of the included studies assessed face-to-face CBT‑I. It recognised that the lack of comparative clinical evidence between Sleepio and face‑to‑face CBT‑I was a limitation in the evidence. The committee concluded that people should not be referred for Sleepio if they are eligible for and have access to face-to-face CBT-I.
+Drop-out rates
+There are high drop-out rates with Sleepio, but these are thought to be consistent with other forms of CBT-I
+4.6
+The evidence shows a high drop-out rate for people using Sleepio, from 11.2% (Luik et al. 2017) up to 61.6% (Freeman et al. 2017). High drop-out rates were also observed from the rollout of Sleepio in Buckinghamshire. These occurred throughout the programme from session 1 to session 5. The EAC highlighted that the definition of a drop-out varied among these studies. The committee noted that the meta-analysis (Soh et al. 2020) that compared digital CBT‑I (including Sleepio) and face-to-face CBT‑I reported similar levels of engagement and completion in both arms. Clinical experts explained that in some cases people's insomnia symptoms can resolve after sleep hygiene advice or active CBT‑I treatment. The Sleepio programme includes sleep hygiene advice and active CBT‑I treatment, and it is possible some people's symptoms may resolve before completing all 6 sessions of the programme. However, the reason for participants dropping out was not recorded, so people may have left the programme because their symptoms did not improve. The committee concluded that the direction of bias as a result of high drop-out rates with Sleepio is unclear, but recognised that high drop-out rates are common with CBT‑I in general and not specific to Sleepio.
+Other patient benefits or issues
+Sleepio may be another option for pregnant women, who currently have fewer options to treat insomnia
+4.7
+The EAC identified 2 studies that assessed digital CBT‑I in pregnant women (Felder et al. 2020 and Kalmbach et al. 2020). The studies concluded that Sleepio is more effective than control in treating insomnia symptoms. The clinical experts highlighted how important it is to do a medical assessment in pregnant women before referral to CBT‑I, because insomnia can mimic other conditions like restless legs, or it could be a consequence of undiagnosed sleep apnoea. The clinical experts also explained that, although hypnotic medication is avoided in pregnant women, some drugs are given for short courses when symptoms are likely to resolve soon. The committee concluded that Sleepio may be an alternative option for insomnia symptoms in pregnant women who have had a medical assessment to rule out other conditions.
+Following the Sleepio programme can be challenging but the Sleepio community provides support
+4.8
+The patient expert described the sleep restriction component and quarter‑hour rule as particularly challenging aspects of the Sleepio programme that were difficult to implement, especially in the beginning. These challenges were also reported by people who responded to the patient survey. The patient expert said the support from the Sleepio website community was particularly helpful during this time. The company said that the community is monitored by volunteers with experience of using Sleepio. It also said that Sleepio users can access a weekly question and answer session on the Sleepio forum, facilitated by a clinical psychologist who specialises in insomnia. The committee noted the importance of the Sleepio community and its role in supporting people using Sleepio.
+Sleepio may be difficult to use for some people
+4.9
+Sleepio requires access to a computer and the internet, which some people do not have at home. The patient expert said that it was possible to use Sleepio by accessing the internet occasionally (for example, at a public library) and keeping a paper sleep diary, but that this was more difficult. Some users of Sleepio may find it difficult to use a computer, such as people with a visual or cognitive impairment, limited manual dexterity or hearing impairment. The patient expert said that using Sleepio was relatively straightforward and that people with minimal computer skills could use it. But they agreed that some skill in using a computer is needed. They added that the Sleepio community can help people who need it. Also, Sleepio may be difficult to use for people who have limited English language skills. The company noted that the programme is being restructured so it can be translated into other languages. The committee accepted that Sleepio would be harder to use for some people with access or language restrictions.
+Training
+Patient selection and the implementation model used for introducing Sleepio might affect patient uptake
+4.10
+The company said that during the roll out of Sleepio they noticed that the different levels of training it provided for referring services (such as GP practices) affected the uptake of Sleepio. It said that training and support varies depending on the implementation model used to introduce it. In the 9 GP practices in Buckinghamshire, which used a comprehensive implementation model, the estimated uptake was 0.94%. Regions that did not have this implementation model had an uptake of 0.54% to 0.55% (Sampson et al. 2021). Clinical experts said patient selection was important to improve the chances of people using Sleepio properly and benefiting from it. They also said it would be helpful to give feedback to referrers, such as GPs, about how many people register to use Sleepio and what impact it has on their insomnia symptoms. This would help to understand outcomes and inform referral and training. The committee agreed that the training and support for referrers has an important effect on patient uptake.
+Side effects and adverse events
+Adverse events are rare in people using Sleepio
+4.11
+The EAC explained that very few adverse events were reported in the literature, and no serious adverse events were related to using Sleepio. Sleepio has been available in some regions of the NHS since 2013 and unpublished real-world evidence reports that over 100,000 people have used Sleepio in the UK. For full information about adverse events in the studies, see 
+section 6 of the EAC's assessment report in the supporting documents
+.
+Sleepio is unlikely to harm people who have other sleeping disorders
+4.12
+Clinical experts said that some people who present with symptoms of insomnia might have underlying conditions causing their symptoms. They explained that using Sleepio in this population may delay them having more appropriate treatment but is unlikely to cause harm. The company said that it has procedures in place for managing risk and adverse events but that they are uncommon. The committee concluded that Sleepio is unlikely to harm people who have sleeping difficulties because of an underlying condition.
+Cost modelling overview
+There are uncertainties in the cost modelling because of the limited data available
+4.13
+The resource use captured in the Sampson et al. (2021) study was used to inform the cost modelling. The statistical analysis in this study assumed that all changes in resource use over the study duration were because of the introduction of Sleepio. The committee had concerns about whether the variables included in the generalised linear model adequately captured all the important parameters, such as seasonal affect and comorbidities. The EAC reviewed the statistical analysis described in the study and confirmed that it was appropriate, and that it gave similar results to its own preferred statistical model. Despite some reassurance on the statistical analysis, the committee understood it was only possible to adjust for known confounders, and the quasi-experimental nature of the study means some uncertainty remains. The EAC also reported that it was not possible to link individual patient data from Sleepio with NHS resource use data. So, from the NHS data it is unclear which patients used Sleepio, if their symptoms improved with use, and what the associated resource impact was. This meant it was not possible to include remission status in the cost modelling. The committee accepted that the data available was limited, particularly around linking user data to NHS system data, and understood that this resulted in uncertainties in the cost modelling.
+Potential for cost savings
+At the initial proposed prices, the technology was unlikely to be cost saving compared with treatment as usual
+4.14
+When the population-based price proposed in the company submission was used in the EAC base case, Sleepio was cost incurring compared with treatment as usual after 1 year and 3 years. The main driver of the results was the uptake rate of the technology across the population. The EAC reduced the uptake rate to 0.58% from the company's estimate of 1%, and this increased the cost of Sleepio from £90 to £155.17 per user. The committee agreed with the EAC estimates and noted that any cost savings depended on the uptake rate. The tiered licence-based cost model was proposed after the first committee discussion and the price per user was updated to £66.11. When this cost was applied in the EAC base case, Sleepio was cost incurring by £16.59 per user at the end of year 1 but cost saving by £68.97 per user at 3 years. The committee did not agree that there was enough evidence to extrapolate the data to 3 years and concluded that the cost savings were uncertain.
+At the new proposed price, Sleepio is cost saving at 1 year compared with treatment as usual
+4.15
+At consultation, the company proposed a price of £45 per user. When the EAC applied this new cost in its base case, Sleepio was cost saving compared with treatment as usual after 1 year, and the cost savings increased if benefits were extrapolated beyond 1 year. The committee noted that there were limitations in the economic modelling because of its dependence on the Sampson et al. (2021) study and the lack of remission outcomes. However, the committee decided on balance that at this price the technology was likely to be at least cost neutral and very likely cost saving, and decided to recommend it as an option for people with insomnia and insomnia symptoms who would otherwise receive treatment as usual.
+The economic model assumes that Sleepio is clinically equivalent to face-to-face CBT-I but more evidence is needed to evaluate this
+4.16
+Both the company's and the EAC's cost models assumed Sleepio was clinically equivalent to face-to-face CBT‑I. This assumption was based on indirect evidence from several different digital CBT‑I interventions. The committee noted that the resource use for these models was based on the Sampson et al. (2021) study, which includes a large population with different severities of insomnia. It noted that it was not possible to identify people who would have been eligible for CBT‑I according to the criteria in 
+NICE's clinical knowledge summary on insomnia
+, to evaluate the clinical effectiveness of Sleepio in that group. Derose et al. (2021) reported reduced resource use for Sleepio users compared with people attending face-to-face CBT‑I group sessions in the US. The committee noted however that no clinical outcomes were reported, and it was not clear how generalisable this study is to the NHS in terms of the patient characteristics and type of face-to-face CBT‑I used. It concluded that a study on people eligible for CBT‑I that includes both resource use data and clinical outcomes is needed to evaluate the resource impact of making Sleepio available to this population.
+Further research
+A real-world study is suggested to compare the effectiveness of Sleepio with face-to-face CBT-I
+4.17
+The committee concluded that more research is needed on the effectiveness of Sleepio as an alternative to face-to-face CBT‑I. It noted that there are some studies comparing Sleepio with face-to-face CBT‑I, but the evidence is limited. The committee acknowledged the difficulties of carrying out comparative research, given the accessibility issues with face-to-face CBT‑I in the NHS. It understood that a study based on real‑world evidence that collects clinical and resource use data in a population eligible for face-to-face CBT‑I, may be appropriate. It also considered a link between any Sleepio user data and resource use would help address uncertainties in the economic modelling. The committee also agreed that high-quality, non-UK based direct evidence could be acceptable.
+Next page
+5 Committee members and NICE project team
+Previous page
+3 Evidence
+				Back to top

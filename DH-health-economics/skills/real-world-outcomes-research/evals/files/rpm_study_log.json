@@ -1,0 +1,37 @@
+{
+  "_note": "ILLUSTRATIVE eval file written 19 October 2026. Not a real study.",
+  "study": "Illustrative: remote monitoring app and heart-failure readmissions in a US health-system EHR (cohort)",
+  "study_type": "HETE",
+  "study_type_declared_on": "2026-02-10",
+  "documents": [
+    {
+      "id": "protocol",
+      "version": "1.0",
+      "finalized_on": "2026-03-02"
+    },
+    {
+      "id": "analysis_plan",
+      "version": "1.0",
+      "finalized_on": "2026-03-20"
+    }
+  ],
+  "registration": {
+    "registry": "ClinicalTrials.gov",
+    "id": null,
+    "submitted_on": "2026-03-25"
+  },
+  "first_outcome_access": null,
+  "analysis_started_on": "2026-05-11",
+  "revisions": [
+    {
+      "doc": "analysis_plan",
+      "version": "1.1",
+      "date": "2026-07-02",
+      "reason": "Added hospital site as a covariate"
+    }
+  ],
+  "deviations": [],
+  "linkage": {
+    "planned": false
+  }
+}

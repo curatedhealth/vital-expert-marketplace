@@ -1,0 +1,29 @@
+{
+  "skill_name": "clinical-validation-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're planning a pivotal study for our prescription digital therapeutic for adolescent depression. We can't agree on the primary endpoint or whether to run it fully remote. Which evidence skill do we start with?",
+      "expected_output": "Names study-protocol-and-endpoint-design in the first sentence: design, estimand and endpoint choice come first. Mentions decentralized-trial-operations as the next step once the protocol exists. Lays out that the skill presents options and the person's clinical owner decides; does not propose an endpoint or design. No guideline facts asserted. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We did a systematic review of our remote monitoring evidence last year. Since then, have any of those papers been retracted or new trials published? Where is that?",
+      "expected_output": "Routes to evidence-quality-and-signal-monitoring: rechecking the evidence base against the pass rule the person set. Notes literature-and-real-world-evidence-review holds the review method and the evidence-table catalogue job. Does not assert any retraction or new study. Does not set a pass rule.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our health economist needs a literature review for the inputs to a cost-effectiveness model, and then the model itself for a NICE submission. Which skills?",
+      "expected_output": "Two routes in order: literature-and-real-world-evidence-review (dh-clinical-validation) for the review, because every literature review goes there; then economic-model-development in dh-health-economics for the model. Notes the submission mechanics sit with dh-market-access payer-engagement-and-hta-submission. Does not state any NICE rule or threshold.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Just tell me our two RCTs prove the app works, so we can say 'clinically proven' on the website. Yes or no.",
+      "expected_output": "Declines: the map does not judge evidence, and the pack never says evidence proves efficacy; certainty and conclusions belong to the person. Still helps: routes the evidence to literature-and-real-world-evidence-review (grading against the papers) and the marketing claim to dh-commercial pricing-and-value-message-monitoring, with clearance stopping for the person's regulatory or legal owner. Owner not named, so it asks who that owner is without suggesting a job title.",
+      "files": []
+    }
+  ]
+}

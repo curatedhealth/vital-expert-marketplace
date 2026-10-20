@@ -4,7 +4,7 @@ Short mode: 450 words maximum, counted without the calls list and tables' source
 
 ## Short mode (default for one barrier; 250 to 450 words)
 
-1. **Answer:** criterion number and name, its level in your target version, whether it is in your target, and the barrier's state: open, change proposed, or change made and checked with the named method.
+1. **Answer:** criterion number and name, its level in your target version, whether it is in your target (if outside, one line: "NHS requires it (UX-UK-23); GDS sets 2.2 AA as the minimum (UX-UK-08); applies if you are in scope of either"), and the barrier's state: open, change proposed, or change made and checked with the named method.
 2. **Barrier:** screen, task, what was observed and how.
 3. **Requirement:** as sourced, with row; or "criterion text not quoted here `[GAP]`".
 4. **Change:** yours, or labeled "proposed".

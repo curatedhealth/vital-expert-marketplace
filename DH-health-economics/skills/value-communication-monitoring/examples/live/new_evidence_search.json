@@ -1,0 +1,13 @@
+{
+  "measured": "19 October 2026",
+  "call": "literature.search_literature {query: \"digital cognitive behavioral therapy insomnia cost-effectiveness\", limit: 5, filters: {date_from: \"2025-01-01\"}}",
+  "result_trimmed": [
+    {"doi": "10.2196/71750", "pmid": "41554115", "title": "Digital Cognitive Behavioral Therapy for Chronic Insomnia in South Korea: Cost-Effectiveness Analysis Using Decision Tree and Markov Modeling Based on a Secondary Analysis of a Randomized Clinical Trial", "venue": "JMIR mHealth and uHealth", "year": 2026, "publication_type_raw": ["crossref:journal-article", "crossref:posted-content", "Journal Article", "Research Support, Non-U.S. Gov't", "openalex:article"], "design": "preprint", "design_confidence": 0.95, "is_preprint_only": false, "preprint_dois": ["10.2196/preprints.71750"]},
+    {"doi": "10.1037/ccp0001020", "pmid": "42574103", "title": "Guided digital cognitive-behavioral therapy for insomnia: A (cost-)effective intervention for people with insomnia and psychological distress? Results of a randomized controlled trial", "year": 2026, "design": "rct", "design_confidence": 0.98, "trial_ids": []},
+    {"doi": "10.2139/ssrn.7040939", "title": "Clinical and Cost-Effectiveness of Intelligent Digital Cognitive Behavioral Therapy for Insomnia: A Multicenter Pragmatic Randomized Controlled Trial", "venue": "SSRN Electronic Journal", "year": 2026, "design": "preprint", "is_preprint_only": true},
+    {"doi": "10.1038/s41746-025-01514-4", "pmid": "40075149", "title": "Systematic review and meta-analysis on fully automated digital cognitive behavioral therapy for insomnia", "year": 2025, "design": "meta_analysis", "design_confidence": 0.78},
+    {"doi": "10.1016/j.jjcc.2024.11.005", "title": "Digital therapeutics in Japan: Present and future directions", "year": 2025, "design": "narrative_review"}
+  ],
+  "total_merged": 14,
+  "builder_reading": "The first record is a published journal article (PMID, journal-article) labeled preprint because it carries a preprint DOI (register N8). The search finds candidates to read; it does not decide whether a claim has changed."
+}

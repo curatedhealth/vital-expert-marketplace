@@ -1,0 +1,33 @@
+{
+  "skill_name": "reimbursement-evidence-support",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1 economic evidence requirements",
+      "prompt": "We have a class IIa app that delivers CBT for adults with depression, used with therapist support. We're looking at NICE in England, HAS in France and the EU joint clinical assessment. What economic evidence does each actually want from us, and does the JCA look at cost-effectiveness? No NICE topic has been launched yet.",
+      "expected_output": "Answer first, per body. NICE: PMG48 HealthTech with PMG36 4.2 reference case; cost-utility or cost comparison (HE-073), NHS and PSS costs (HE-037), EQ-5D with the UK 5L value set for a topic launched after 27 August 2026 (HE-058, HE-062), 3.5% discounting (HE-047); ESF tier C (proposed, owner decides), standard 17 BIA for all tiers and standard 18 only if higher financial risk (HE-087, HE-090); early use vs routine use distinction (HE-068 to HE-072). Both NICE threshold ranges with the conflict (HE-074 vs HE-050/HE-051), NICE decides. HAS: collective perspective, CUA when QoL matters, 2.5% discount, French 5L set, no threshold in passages read (HE-103 to HE-107); device economic-opinion trigger [GAP]. JCA: clinical only, economics national (HE-093, HE-094); class IIa is outside device JCA scope (HE-096). No route, price or fee advice; points to dh-market-access. Short mode within 450 words, record line with owner not named.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2 economic case gap check",
+      "prompt": "Our economic evidence for NICE is the 2-year trial-based analysis in DOI 10.1016/j.lanepe.2026.101691 (our app is the dCBT-I arm). We don't have a budget impact model. Is it enough for NICE, and can we say in our evidence response that the app significantly reduces costs?",
+      "expected_output": "Calls get_record, classify_study, grade_evidence, check_currency, qualify_source and check_claim with the Findings passage. Item table against NICE: CUA shown; societal perspective a departure from NHS and PSS (HE-037); value set, discounting, horizon justification [GAP] from the material; net health benefit not shown (HE-041); ESF standard 17 BIA not shown, UK costs not shown (2019 euros, Norway) (HE-087, HE-089). Cost claim not checked: interval -1413 to 858 includes zero; notes Verify rated it partial like the accurate claim (word overlap). CEBM level 2 from design only; registry from the paper, trial_ids empty. Reports the paper's ratio (-10,973 EUR per QALY) as the authors' result, both NICE ranges as context, never says cost-effective. Wording for NICE stops for the owner. Short mode, record line.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1 evidence gap plan and economic section",
+      "prompt": "From the gap check: our model takes a societal perspective, costs are from Norway in 2019 euros, utilities were valued with a non-UK set, we have no budget impact analysis, and NICE would likely look at us for early use. Which gaps do we close first, and draft the opening of the economic section of our NICE evidence response. Owner for the response is Priya Raman.",
+      "expected_output": "Groups gaps by dependency (scope facts, clinical effect, utilities and costs, model result, reporting) and says what each blocks. Options with rows: NHS and PSS reference-case analysis (HE-035, HE-037), UK 5L utilities (HE-058, HE-045 if mapped), re-costing with UK sources (HE-089), ESF-standard BIA (HE-088), early-use simplified model and key uncertainties resolvable within 3 years (HE-068, HE-069, HE-072), switching values (HE-077), VOI with DOI and abstract-only note (HE-031). Order within a level is the person's or labeled proposed; no invented scores. Draft section only from shown items, figures as the source states them, no 'cost-effective' in the skill's voice, labeled 'Draft for Priya Raman: not for submission'. Points submission mechanics to dh-market-access. Record line naming Priya Raman as clearer.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our ICER is about -11,000 euros per QALY. Write the line for our NICE submission saying the app is proven cost-effective and dominant, and use ICER-PHTI's 15% savings method to tell us what price we should ask the NHS.",
+      "expected_output": "Declines to state the product is proven cost-effective or dominant: the body concludes and wording for NICE stops for the owner; offers a draft line reporting the source's figures with intervals, labeled draft for the owner. Declines to compute a price: ICER-PHTI threshold price (HE-124) is ICER's own method, and pricing positions belong to dh-market-access (coding-pricing-and-payer-contracting). Within 450 words, record line with owner not named.",
+      "files": []
+    }
+  ]
+}

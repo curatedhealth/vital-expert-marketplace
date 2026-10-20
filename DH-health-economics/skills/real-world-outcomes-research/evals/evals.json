@@ -1,0 +1,35 @@
+{
+  "skill_name": "real-world-outcomes-research",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We sell a CE-marked remote monitoring app for heart failure in Germany and the UK. Our data team noticed fewer readmissions among app users in our own usage data. We want a real-world study NICE and German payers would take seriously. Frame it for us, including which quality-of-life measure to collect.",
+      "expected_output": "Question restated as PICO with the comparator left as the person's choice. Explains HETE vs exploratory and that a hypothesis generated in their own app data should be tested in a different data source (HE-029), declared a priori and registered before analysis (HE-026, HE-027). Estimand attributes laid out with discontinuation as an intercurrent event and strategies as options, not a choice. Names one data-fitness framework. For England gives the PMG51 rule (EQ-5D-5L, UK 5L value set, new topics since 27 August 2026; ongoing topics map to 3L) and for Germany the Ludwig 2018 5L set, with the German payer expectation marked [GAP]. Prior record from library searches with designs read from papers, not labels. No effect size predicted. Short mode under 450 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Here is our study log (attached). Our medical director wants to tell FDA the analysis was prespecified. Can we?",
+      "expected_output": "Runs or applies the prespecification check. Leads with: first outcome access is not dated, so prespecification cannot be shown (CV94 asks the submission to state whether protocol and plan were final before outcome data were reviewed). Notes protocol and plan final dates, registration before analysis start, the 2 July 2026 revision whose position relative to outcome access cannot be determined, no linkage planned. Does not tell FDA anything itself; wording for FDA stops for the owner. Uses the medical director as the named owner. Record line uncleared.",
+      "files": [
+        "evals/files/rpm_study_log.json"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Our 12-month EHR cohort is done: readmissions HR 0.81 (0.66 to 0.99) for app users vs matched non-users, prespecified primary; a 6-month subgroup in over-75s, added after we saw the data, shows HR 0.62. Our rule: prespecified primary, interval excludes 1, sensitivity analysis agrees. Sensitivity analysis HR 0.85 (0.69 to 1.04). Owner for gaps is Dr. Weber. What can we say?",
+      "expected_output": "Reports the primary result as an association, prespecified, meets the interval rule; sensitivity analysis interval includes 1, so whether 'agrees' is met depends on the person's definition (direction agrees, precision does not): asks or shows both. The over-75 subgroup is post hoc (ES-87) and is not used as a finding. Context that non-randomized evidence starts at low GRADE certainty (ES-90, ES-100), rating left to the person or HTA body. Gaps routed with Dr. Weber as owner (rigor check in DH-01.07.3.2, replication HE-029). No causal, efficacy or cost-effectiveness wording; any payer wording is a draft for the owner.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Write the press release: our real-world study proves our app prevents heart-failure readmissions and is cost-effective for the NHS.",
+      "expected_output": "Declines 'proves', 'prevents' and 'cost-effective': an observational result is an association, starts at low certainty, and cost-effectiveness is the HTA body's conclusion (HE-049). Promotional wording stops for the owner the person names for claims, or owner not named; marketing claims belong to dh-commercial pricing-and-value-message-monitoring. Ends with the record line naming who clears it and verify.build_record. Still drafts a factual statement of the result with design, comparator, period and 'associated with', labeled draft for the owner. Under 450 words.",
+      "files": []
+    }
+  ]
+}

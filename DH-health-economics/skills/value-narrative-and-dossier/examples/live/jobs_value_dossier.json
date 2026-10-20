@@ -1,0 +1,16 @@
+{
+  "measured": "19 October 2026",
+  "calls": [
+    {"call": "find_job {query: \"value dossier\"}", "result": {"id": "value-dossier", "name": "Payer value dossier outline", "suite": "Evidence and Reimbursement", "youGet": "A dossier skeleton, with every claim checked.", "coverage": "Design partners.", "status": "design_partners", "startable": false, "priceHypothesisUsd": 149, "tools": [], "start": null}},
+    {"call": "get_job {job_id: \"value-dossier\"}", "result": {"status": "design_partners", "startable": false, "tools": [], "owner": {"id": "access-reimbursement", "name": "Access and Reimbursement Lead"}}},
+    {"call": "list_jobs {} (Evidence and Reimbursement suite only, trimmed)", "result": [
+      {"id": "evidence-table", "status": "available", "tools": ["literature.search_literature", "literature.get_record", "literature.find_trial", "literature.grade_evidence", "literature.check_retraction", "literature.build_evidence_table", "verify.* (7)"]},
+      {"id": "budget-impact", "status": "available", "statusNote": "buyer supplies inputs", "tools": ["analytics.budget-impact-model", "verify.* (7)"]},
+      {"id": "price-anchor", "status": "available", "tools": ["analytics.vba-price-anchor", "verify.* (7)"]},
+      {"id": "reimbursement-matrix", "status": "available", "statusNote": "Europe partial"},
+      {"id": "scheme-precedents", "status": "available"},
+      {"id": "value-dossier", "status": "design_partners", "startable": false, "tools": []}
+    ]}
+  ],
+  "reading": "value-dossier cannot be started on a standard key and lists no tools. The skill builds the dossier by direct calls (evidence-table tools plus Verify)."
+}

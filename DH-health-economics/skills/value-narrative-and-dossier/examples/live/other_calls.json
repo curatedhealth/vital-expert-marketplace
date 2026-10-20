@@ -1,0 +1,11 @@
+{
+  "measured": "19 October 2026",
+  "calls": [
+    {"call": "market-access-dh.retrieve_guidance {query: \"AMCP Format formulary submission dossier\", limit: 3}", "result": {"results": [], "gaps": ["[GAP]", "no passage retrieved in this namespace"]}},
+    {"call": "market-access-dh.retrieve_guidance {query: \"NICE evidence standards framework budget impact analysis\", limit: 3}", "result": {"results": [], "gaps": ["[GAP]", "no passage retrieved in this namespace"]}},
+    {"call": "analytics.budget-impact-model {eligible_population: 10000, current_mix: [{name: \"Usual care\", share: 0.7, annual_cost_per_patient: 500}, {name: \"Face-to-face CBT-I\", share: 0.3, annual_cost_per_patient: 900}], new_treatment_annual_cost_per_patient: 400, uptake_curve: [{year: 1, uptake: 0.05}, {year: 2, uptake: 0.1}, {year: 3, uptake: 0.15}]} (ILLUSTRATIVE inputs)", "result": "The Digital Health Library could not answer this call (422). Nothing was counted."},
+    {"call": "agent-pack.list_experts {query: \"value\", limit: 10}", "result": ["sales-leader-digital-health", "health-tech-investor", "data-visualization-specialist-health"]},
+    {"call": "agent-pack.list_experts {query: \"health economics\", limit: 10}", "result": []},
+    {"call": "agent-pack.list_experts {function: \"digital-regulatory-evidence\", limit: 25}", "result_trimmed": ["real-world-evidence-director-digital (\"... translation for regulators, payers and medical affairs\")", "digital-health-evidence-regulatory-director (\"claim architecture ... DiGA and DTx evidence programmes\")", "samd-regulatory-affairs-director", "and eight others"]}
+  ]
+}

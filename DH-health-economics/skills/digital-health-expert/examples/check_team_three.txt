@@ -1,0 +1,50 @@
+Expert: SaMD Regulatory Affairs Director (samd-regulatory-affairs-director), department Digital Regulatory & Evidence
+  System prompt: 5287 characters. Skills: 49. Tools: 32.
+  Not included (per file): corpus, runners, memory, model, tool implementations
+  PLUMBING in prompt: foreign key, 1 occurrence(s), e.g. 'trust the foreign key'
+  PLUMBING in prompt: [GAP] field marker, 6 occurrence(s), e.g. '[GAP] (persona_archetype)'
+  PLUMBING in prompt: work-product titled None, 7 occurrence(s), e.g. 'None (WP-EN.04.DH.4)'
+  PLUMBING in prompt: archetype code, 1 occurrence(s), e.g. 'AL03-PLN'
+  PLUMBING in prompt: internal id, 1 occurrence(s), e.g. 'de21_function_id'
+  COUNT MISMATCH: prompt says 8 bound competencies, lists 6
+  Competencies named in prompt: AI/ML Device Regulatory Pathway Navigation & Submission Execution; AI/ML Regulatory Compliance Assessment & Approval Readiness Monitoring; Global Regulatory Pathway Strategy & Classification Management; Harmonisation Effectiveness Assessment & Cross-Region Compliance Monitoring; Multi-Region Regulatory Alignment & Harmonisation Execution; Regulatory Strategy Effectiveness Assessment & Pathway Success Monitoring
+  COUNT MISMATCH: prompt says 24 tools, file lists 32
+  TOOLS with no hosted product or call route (20): ICTRP, bioRxiv/medRxiv, Digital Health Census, UniProt, WHO GHO, CDC, EMA, Consensus, Unified Digital Health Taxonomy, PubChem, Medical Terminologies, DailyMed, HTA Intelligence, Digital Health Signal, Open Targets, ChEMBL, NPI Registry, ClinicalTrials.gov, OpenFDA Intelligence, MyVariant
+  Hosted products named: literature (7), regulatory (1), regulatory-dh (4)
+  Skill families: regulatory strategy and submissions (24), clinical validation and evidence (18), quality management and compliance (6), CF-EV-05-AP (1)
+  SKILLS with an empty or unbound Prompt or Template section: 24
+  TEMPLATE CODE: skills reference ST05-PHARMA-DH-OVERLAY (register C16)
+
+Expert: Quality & Software Lifecycle Director (quality-systems-director-software), department Digital Regulatory & Evidence
+  System prompt: 5885 characters. Skills: 67. Tools: 32.
+  Not included (per file): corpus, runners, memory, model, tool implementations
+  PLUMBING in prompt: foreign key, 1 occurrence(s), e.g. 'trust the foreign key'
+  PLUMBING in prompt: [GAP] field marker, 6 occurrence(s), e.g. '[GAP] (persona_archetype)'
+  PLUMBING in prompt: work-product titled None, 3 occurrence(s), e.g. 'None (WP04-DH-01.5.5.1)'
+  PLUMBING in prompt: archetype code, 1 occurrence(s), e.g. 'AL03-PLN'
+  PLUMBING in prompt: internal id, 1 occurrence(s), e.g. 'de21_function_id'
+  Competencies named in prompt: AI/ML Regulatory Compliance Assessment & Approval Readiness Monitoring; Multi-Region Regulatory Alignment & Harmonisation Execution; Regulatory Strategy Effectiveness Assessment & Pathway Success Monitoring; Regulatory Submission Preparation & Dossier Assembly Execution; Study Design Quality Assessment & Protocol Robustness Monitoring; Submission Quality Assessment & Approval Outcome Monitoring
+  COUNT MISMATCH: prompt says 24 tools, file lists 32
+  TOOLS with no hosted product or call route (20): ICTRP, bioRxiv/medRxiv, Digital Health Census, UniProt, WHO GHO, CDC, EMA, Consensus, Unified Digital Health Taxonomy, PubChem, Medical Terminologies, DailyMed, HTA Intelligence, Digital Health Signal, Open Targets, ChEMBL, NPI Registry, ClinicalTrials.gov, OpenFDA Intelligence, MyVariant
+  Hosted products named: literature (7), regulatory (1), regulatory-dh (4)
+  Skill families: quality management and compliance (24), regulatory strategy and submissions (24), clinical validation and evidence (18), CF-EV-05-AP (1)
+  SKILLS with an empty or unbound Prompt or Template section: 24
+  TEMPLATE CODE: skills reference ST05-PHARMA-DH-OVERLAY (register C16)
+
+Expert: Regulatory Submission Manager (SaMD) (regulatory-submission-manager-samd), department Digital Regulatory & Evidence
+  System prompt: 5178 characters. Skills: 49. Tools: 32.
+  Not included (per file): corpus, runners, memory, model, tool implementations
+  PLUMBING in prompt: foreign key, 1 occurrence(s), e.g. 'trust the foreign key'
+  PLUMBING in prompt: [GAP] field marker, 6 occurrence(s), e.g. '[GAP] (persona_archetype)'
+  PLUMBING in prompt: work-product titled None, 7 occurrence(s), e.g. 'None (WP-EN.04.DH.4)'
+  PLUMBING in prompt: archetype code, 1 occurrence(s), e.g. 'AL04-DEL'
+  PLUMBING in prompt: internal id, 1 occurrence(s), e.g. 'de21_function_id'
+  COUNT MISMATCH: prompt says 8 bound competencies, lists 6
+  Competencies named in prompt: AI/ML Device Regulatory Pathway Navigation & Submission Execution; AI/ML Regulatory Compliance Assessment & Approval Readiness Monitoring; Global Regulatory Pathway Strategy & Classification Management; Harmonisation Effectiveness Assessment & Cross-Region Compliance Monitoring; Multi-Region Regulatory Alignment & Harmonisation Execution; Regulatory Strategy Effectiveness Assessment & Pathway Success Monitoring
+  COUNT MISMATCH: prompt says 24 tools, file lists 32
+  TOOLS with no hosted product or call route (20): ICTRP, bioRxiv/medRxiv, Digital Health Census, UniProt, WHO GHO, CDC, EMA, Consensus, Unified Digital Health Taxonomy, PubChem, Medical Terminologies, DailyMed, HTA Intelligence, Digital Health Signal, Open Targets, ChEMBL, NPI Registry, ClinicalTrials.gov, OpenFDA Intelligence, MyVariant
+  Hosted products named: literature (7), regulatory (1), regulatory-dh (4)
+  Skill families: regulatory strategy and submissions (24), clinical validation and evidence (18), quality management and compliance (6), CF-EV-05-AP (1)
+  SKILLS with an empty or unbound Prompt or Template section: 24
+  TEMPLATE CODE: skills reference ST05-PHARMA-DH-OVERLAY (register C16)
+

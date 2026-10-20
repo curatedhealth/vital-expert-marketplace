@@ -34,7 +34,7 @@ A matched number is not a cleared claim. Separate, for every note, the wording q
 
 | Wording type | Example | Why it is a separate question |
 |---|---|---|
-| Effect | "reduced depression", "clinically proven" | Uptake and customer-reported outcomes are not clinical evidence; no comparator (CS32) |
+| Effect | "reduced depression", "clinically proven" | Uptake and customer-reported outcomes are not clinical evidence; no comparator (outcome-measures.md; CS32 [PAPER], Proctor 2011, DOI 10.1007/s10488-010-0319-7) |
 | Forecast or saving | "will cut your costs" | Not checkable against any row; observed `verify.extract_claims` marks it checkable (`tools.md`) |
 | Comparison | "outperforms", "better than" | Needs comparative evidence this skill does not hold |
 | Severity label | "moderate or worse symptoms" | Only with the PHQ-9 bands (CS92); no GAD-7 or PAM bands are sourced (CS93, CS95) |

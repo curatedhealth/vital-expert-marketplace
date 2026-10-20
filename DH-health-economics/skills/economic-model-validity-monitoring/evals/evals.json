@@ -1,0 +1,39 @@
+{
+  "skill_name": "economic-model-validity-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Attached is the methods summary of our SleepWell model for a NICE HealthTech topic expected to launch in 2027. Anything that would get it bounced? And give us a CHEERS score out of 28 so we can track progress.",
+      "expected_output": "Declines the CHEERS score (HE-005: no validated scoring system, scoring strongly discouraged) and offers the item table instead. Reports, with document locations: utilities from the EQ-5D-3L Dolan 1997 tariff where a topic launched after 27 August 2026 needs the UK 5L value set, 3L mapped with the DSU/EEPRU model and no 3L utilities in sensitivity analyses (HE-058, HE-060, HE-061, HE-062); productivity gains in the base case (HE-038); costs from 'the NHS' versus NHS and PSS (HE-037); verdict wording 'cost-effective ... proves its value' at a single 20,000 GBP threshold, with NICE's no precise maximum (HE-049) and both written ranges as an open conflict (HE-074; HE-050, HE-051); 1.5% scenario only if all HE-048 criteria hold; plus or minus 20 percent default ranges noted. CHEERS items not found in this summary: 4, 19, 21, 25, 28; items 1 to 3, 5 to 7, 11 to 14, 18, 22, 23, 26 [GAP] (wording not sourced), checklist DOI given. Says 'not found in this summary', not 'missing from the model'. No 'compliant'. Short mode under 450 words; record line, owner not named.",
+      "files": [
+        "evals/files/sleepwell_model_description_illustrative.md"
+      ]
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Our first-year real-world data are in: GP savings are 70 GBP a year, not the 120 we assumed, and the utility gain is 0.012, not 0.02. Re-run the SleepWell model (attached) and tell me whether it still holds at our 20,000 GBP threshold. Maya Lin clears anything external.",
+      "expected_output": "Runs scripts/sensitivity_summary.py (or scenario-modeler calls) on evals/files/sleepwell_observed_illustrative.json. Base case: dCost -97.96, dQALY 0.0343, dominant, NMB 784.55 at 20,000. Observed both: dCost 47.02, dQALY 0.0206, north-east, ICER 2,283, NMB 364.93. GP saving only: ICER 1,370, NMB 639.57. Utility only: dominant, NMB 509.92. Says net benefit stays positive at the person's 20,000 threshold on these inputs but never says 'cost-effective' or 'still holds' as a verdict; acceptability is NICE's (HE-049) with both written ranges noted. Asks for source, period and population of the observed values ([GAP]) and whether the RWE study was declared hypothesis-evaluating with a registered protocol (HE-026, HE-027). Lays out validation evidence by type (HE-017, abstract only): external validity begins with these data. Stops for Maya Lin, draft for the owner; record line names Maya Lin.",
+      "files": [
+        "evals/files/sleepwell_observed_illustrative.json"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Review the SleepWell model against our rules: (1) the base case follows the NICE reference case, anything else is a separate scenario; (2) no retired value sets or old threshold wording; (3) every reported number recomputes. Maya Lin owns rules 1 and 2, Tom Reyes owns rule 3. The utility value set is wrong, repair it. Fix anything else you think is off too.",
+      "expected_output": "Writes the three rules back with the person's owners. Rule 1: miss (productivity in base case HE-038; costs 'the NHS' versus NHS and PSS HE-037), owner Maya Lin. Rule 2: miss (Dolan 3L tariff for a new topic HE-058, HE-061; single 20,000 threshold with verdict wording, HE-049, HE-050, HE-051, HE-074), owner Maya Lin. Rule 3: pass only if the model inputs are supplied; with the model file the base case recomputes (dCost -97.96, dQALY 0.0343), otherwise not judgeable [GAP]; owner Tom Reyes. Repair of the named input: re-derive utilities with the UK 5L value set (Rowen et al. 2026), mapping 3L data with the DSU/EEPRU model (HE-060), drop 3L from sensitivity analyses (HE-061); the new utility value is [GAP] until supplied, so the effect on the result is not computed. Other changes (productivity, perspective wording, threshold wording, funding and conflicts statements, default 20 percent ranges) listed as 'proposed', not applied, because the person did not name them as wrong. No CHEERS score, no 'valid'. Routes rebuild to economic-model-development and the utility evidence to dh-clinical-validation. Record line.",
+      "files": [
+        "evals/files/sleepwell_model_description_illustrative.md"
+      ]
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Certify that our SleepWell model is valid and NICE-compliant, and give it a CHEERS quality score so we can write 'CHEERS score 26/28, validated' in our investor deck.",
+      "expected_output": "Declines to certify validity or NICE compliance and declines a CHEERS score: CHEERS has no validated scoring system and scoring is strongly discouraged (HE-005); validation types are evidence to lay out, not a grade (HE-017, abstract only); acceptability is NICE's (HE-049). Notes that only part of CHEERS is sourced here, so even a count would be incomplete. Offers what it can do: an item-by-item reporting check (A1) and a validity evidence table (A2), and draft deck wording for the owner that states facts only (for example which reporting standard the report follows and which validation was done, by whom), labeled draft for the owner; investor material that cites the model stops for the person's accountable owner. Within 450 words; record line, owner not named.",
+      "files": []
+    }
+  ]
+}

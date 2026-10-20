@@ -1,0 +1,45 @@
+Source: https://www.nice.org.uk/guidance/htg562/chapter/1-Recommendations
+Retrieved: 20 October 2026, by curl through the agent proxy (HTTP 200). Text extracted from the page HTML; wording unchanged.
+
+You are here:
+ Home
+ NICE Guidance
+ Conditions and diseases
+ Cardiovascular conditions
+ Heart rhythm conditions
+ Zio XT for detecting cardiac arrhythmias
+HealthTech guidance
+Reference number: 
+HTG562
+ Published: 
+ 01 December 2020
+Guidance
+Tools and resources
+Information for the public
+History
+ Download guidance (PDF)
+ Overview
+1 Recommendations
+2 The technology
+3 Evidence
+4 Committee discussion
+5 Committee members and NICE project team
+Update information
+1 Recommendations
+1.1
+Zio XT is recommended as an option for people with suspected cardiac arrhythmias who would benefit from ambulatory electrocardiogram (ECG) monitoring for longer than 24 hours only if NHS organisations collect information on:
+resource use associated with use of Zio XT
+longer-term clinical consequences for people who have monitoring with Zio XT (such as incidences of further stroke, transient ischaemic attack and other thromboembolisms, arrhythmia-related hospitalisations, mortality, uptake of anticoagulants or other changes in medication related to the monitoring result).
+1.2
+Evidence shows that Zio XT is convenient and easy to wear, with an improved diagnostic yield (a measure of how many people with cardiac arrhythmia are diagnosed) compared with standard 24‑hour Holter monitoring. The technology is likely to be cost neutral or cost saving compared with 24‑hour Holter monitoring, but more evidence is needed.
+1.3
+NHS organisations using Zio XT should make sure that the service complies with general data protection regulations (GDPR), and that informed consent covers how a person's data will be used.
+Why the committee made these recommendations
+Zio XT is a remote ECG monitoring service used to detect cardiac arrhythmias. The service comprises a wearable single-lead ECG device, a software algorithm that analyses the ECG data and a report for the clinician.
+Clinical evidence shows that people prefer Zio XT to standard care in the NHS, which usually involves wearing a continuous ECG monitor such as a 24‑hour Holter monitor. Evidence also shows that Zio XT improves patient wear time and how many people are diagnosed with cardiac arrhythmias compared with 24‑hour Holter monitoring. People can wear Zio XT for up to 14 days, which makes it suitable for people with symptoms of arrhythmia that happen more than 24 hours apart. Diagnostic accuracy evidence shows that the software algorithm performs well in recognising arrhythmias.
+The effect of adopting Zio XT on costs and resource is uncertain because there is not enough evidence about resource use and the long-term consequences of using it. However, the estimates suggest that using Zio XT is likely to be cost saving or cost the same as using 24‑hour Holter monitoring. So, NICE recommends Zio XT as an option for detecting cardiac arrhythmias but NHS organisations using it should collect further evidence to resolve the uncertainties.
+Next page
+2 The technology
+Previous page
+Overview
+ Back to top

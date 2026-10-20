@@ -1,0 +1,46 @@
+PRISMA 2020 flow counts from screening-log-illustrative.csv
+  records_identified: 27
+  records_identified_by_source:
+      PubMed: 7
+      Europe PMC: 6
+      OpenAlex: 6
+      Crossref: 4
+      ClinicalTrials.gov: 2
+      WHO ICTRP: 1
+      Citation searching: 1
+  records_identified_by_source_type:
+      database: 23
+      register: 3
+      citation: 1
+  duplicates_removed: 4
+  records_marked_ineligible_by_automation: 2
+  records_removed_other_reasons: 1
+  records_screened: 20
+  records_excluded: 9
+  reports_sought_for_retrieval: 11
+  reports_not_retrieved: 1
+  reports_assessed_for_eligibility: 10
+  reports_excluded: 4
+  reports_excluded_reasons:
+      Intervention not digital: 1
+      Conference abstract; trials reported elsewhere: 1
+      Not a primary study: 2
+  new_studies_included: 4
+  reports_of_included_studies: 6
+  ai_assisted_steps:
+      screening: 16
+
+Reconciliation
+  [ok] identified = duplicates + automation + other removed + screened
+  [ok] screened = excluded + included at title/abstract + undecided
+  [ok] sought = not retrieved + assessed
+  [ok] assessed = excluded + included + undecided
+  [ok] excluded reports = sum of reasons
+  [ok] studies <= reports of included studies
+  [ok] sum of records by source = records identified
+
+Notes
+  - Reviewer rule applied: Cochrane MECIR C39: title/abstract by one person is acceptable; full-text decisions by two people independently (ES-57, ES-58).
+  - 2 record(s) removed by automation tools; report them separately from human exclusions in the flow diagram (ES-21).
+
+Problems: none found

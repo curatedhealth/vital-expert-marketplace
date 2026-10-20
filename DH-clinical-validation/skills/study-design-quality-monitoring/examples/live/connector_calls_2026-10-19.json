@@ -1,0 +1,42 @@
+{
+ "note": "Trimmed live outputs of the VITAL Digital Health Library connector, 19 October 2026 (UTC times as returned). Fields not shown were returned as in tools.md.",
+ "calls": [
+  {"call": "literature.search_literature", "args": {"query": "digital cognitive behavioral therapy insomnia randomized controlled trial app", "limit": 6, "filters": {"designs": ["rct"]}},
+   "returned": {"total_merged": 23, "records_shown": 5, "sources_answered": ["pubmed","europepmc","openalex","crossref","biorxiv"],
+    "records": [
+     {"doi": "10.1371/journal.pmed.1004510", "pmid": "39836656", "pmcid": "PMC11750088", "year": 2025, "venue": "PLoS medicine", "design": "rct", "design_confidence": 0.98, "trial_ids": [], "excerpt": ""},
+     {"doi": "10.5665/sleep.4752", "year": 2015, "venue": "SLEEP", "design": "rct", "design_confidence": 0.78, "trial_ids": [], "sources": ["crossref"]},
+     {"doi": "10.1038/s41591-025-03639-1", "pmid": "40269333", "year": 2025, "venue": "Nature medicine", "design": "rct", "design_confidence": 0.98, "trial_ids": []},
+     {"doi": "10.1093/sleep/zsaa056.467", "year": 2020, "venue": "SLEEP", "publication_type_raw": ["openalex:conference-abstract"], "design": "rct", "design_confidence": 0.78, "trial_ids": []},
+     {"doi": "10.1001/jamanetworkopen.2023.4866", "pmid": "36972049", "year": 2023, "venue": "JAMA network open", "design": "rct", "design_confidence": 0.98, "trial_ids": []}
+    ],
+    "warnings": ["biorxiv: no preprint in the last 30 days matched the query (the source has no keyword search)"]}},
+  {"call": "literature.find_trial", "args": {"record": {"doi": "10.1371/journal.pmed.1004510", "pmid": "39836656"}},
+   "returned": {"registrations": [{"nct_id": "NCT04069247", "status": "COMPLETED", "phases": ["NA"], "sponsor": "Chinese University of Hong Kong", "match_via": "pubmed_secondary_id", "year": 2019, "landing_url": null}], "warnings": ["1 registrations cite this paper as background only and were not linked"],
+    "not_returned": ["registered outcomes", "enrollment", "registration date", "start date", "primary completion date", "masking"]}},
+  {"call": "literature.find_trial", "args": {"nct_id": "NCT04069247"},
+   "returned": {"registrations": [{"nct_id": "NCT04069247", "match_via": "nct_id"}], "publications": [{"doi": "10.1371/journal.pmed.1004510", "design": null, "trial_ids": []}]}},
+  {"call": "literature.find_trial", "args": {"record": {"doi": "10.1001/jamanetworkopen.2023.4866", "pmid": "36972049"}},
+   "returned": {"registrations": [{"nct_id": "NCT04779372", "status": "COMPLETED", "sponsor": "Peking University First Hospital", "match_via": "pubmed_secondary_id"}]}},
+  {"call": "literature.find_trial", "args": {"record": {"doi": "10.1038/s41591-025-03639-1", "pmid": "40269333"}},
+   "returned": {"registrations": [], "publications": [], "warnings": ["no linked registration found"]}},
+  {"call": "literature.classify_study", "args": {"record": {"doi": "10.1371/journal.pmed.1004510", "publication_type_raw": ["Journal Article", "Randomized Controlled Trial", "openalex:article"]}},
+   "returned": {"design": "rct", "confidence": 0.98, "decided_by": ["publication_type_raw:randomized controlled trial", "title:randomized"]}},
+  {"call": "verify.qualify_source", "args": {"doi": "10.1371/journal.pmed.1004510", "question": "What primary endpoint did the app-based CBT-I prevention trial use?"},
+   "returned": {"tier": "gold", "status": "current", "source_score": {"total": 61}, "literature_record": {"pmid": "39836656", "retraction_status": "none"}}},
+  {"call": "verify.check_claim", "args": {"claim": {"text": "The trial's primary outcome was time to onset of major depressive disorder, assessed by telephone MINI interviews at post-intervention, 6 and 12 months."}, "passage": {"text": "The primary outcome was time to onset of MDD determined by telephone clinical interviews using the Chinese version of MINI at post-intervention, 6- and 12-month follow-ups.", "locator": "PMC11750088, section 2.4 Outcome measures"}, "source": "full qualify_source object"},
+   "returned": {"status": "supported", "rationale": "Strong overlap (61%) with context", "citation": {"identifiers": {"doi": null, "pmid": null}, "authors": [], "year": null}}},
+  {"call": "verify.check_claim", "args": {"claim": {"text": "The trial's primary outcome was the number of participants with major depressive disorder at 12 months, not time to onset."}, "passage": "same passage", "source": "same object"},
+   "returned": {"status": "supported", "rationale": "Strong overlap (36%) with context"}},
+  {"call": "regulatory-dh.retrieve_guidance", "args": {"query": "digital health technologies remote data acquisition clinical investigations verification validation endpoint", "limit": 5},
+   "returned": {"results": [], "gaps": ["[GAP]", "no passage retrieved in this namespace"]}},
+  {"call": "agent-pack.list_experts", "args": {"query": "clinical"}, "returned": {"clinical-informatics-lead": "Department head who specifies how a digital health product reads and writes the care record, where decision support may sit, and how remote and decentralized capture stays integer. Does not configure a live EHR or sign a clinical evaluation.", "clinical-validation-director": "Director who plans clinical-validation programmes for digital health products: endpoint and COA strategy, protocol robustness for software-generated evidence, fitness of remote-monitoring and decentralised capture, data integrity of digitally collected endpoints, and the clinical"}},
+  {"call": "agent-pack.list_experts", "args": {"query": "statist"}, "returned": {"experts": []}},
+  {"call": "list_jobs", "args": {}, "returned": {"evidence_suite_jobs": {"evidence-table": "available", "reimbursement-matrix": "available", "scheme-precedents": "available", "budget-impact": "available", "price-anchor": "available", "value-dossier": "design_partners"}, "study_design_job": "none"}},
+  {"call": "literature.list_sources", "args": {}, "returned": {"loaded": ["pubmed","europepmc","openalex","crossref","biorxiv","clinicaltrials","semantic_scholar","unpaywall"], "gap": ["consensus","cochrane","prospero","embase","scopus","web_of_science"]}}
+ ],
+ "direct_reads_outside_the_connector": [
+  {"what": "ClinicalTrials.gov API v2 study records", "urls": ["https://clinicaltrials.gov/api/v2/studies/NCT04069247", "https://clinicaltrials.gov/api/v2/studies/NCT04779372"], "files": ["nct04069247.json", "nct04779372.json"], "note": "The record history endpoint returned 403; history not read."},
+  {"what": "Europe PMC full text of PMC11750088", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11750088/fullTextXML", "passage": "The primary outcome was time to onset of MDD determined by telephone clinical interviews using the Chinese version of MINI at post-intervention, 6- and 12-month follow-ups."}
+ ]
+}

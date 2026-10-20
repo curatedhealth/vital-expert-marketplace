@@ -1,0 +1,80 @@
+Source: https://www.nice.org.uk/guidance/htg562/chapter/4-Committee-discussion
+Retrieved: 20 October 2026, by curl through the agent proxy (HTTP 200). Text extracted from the page HTML; wording unchanged.
+
+You are here:
+ Home
+ NICE Guidance
+ Conditions and diseases
+ Cardiovascular conditions
+ Heart rhythm conditions
+ Zio XT for detecting cardiac arrhythmias
+HealthTech guidance
+Reference number: 
+HTG562
+ Published: 
+ 01 December 2020
+Guidance
+Tools and resources
+Information for the public
+History
+ Download guidance (PDF)
+ Overview
+1 Recommendations
+2 The technology
+3 Evidence
+4 Committee discussion
+5 Committee members and NICE project team
+Update information
+On this page
+ Clinical-effectiveness overview
+ Other patient benefits or issues
+ NHS considerations overview
+ Cost-modelling overview
+4 Committee discussion
+Clinical-effectiveness overview
+Zio XT is an innovative technology which shows promise for ambulatory monitoring
+4.1
+The clinical experts who had experience of using Zio XT explained that it offers continuous monitoring over 14 days and is well accepted by patients. Experts commented on how easy it is to fit and that patients find it acceptable, adding that people are more likely to wear Zio XT for longer. The committee agreed that Zio XT is an innovative design and there is a plausible patient benefit.
+The evidence shows that Zio XT can improve diagnostic yield and patient wear time
+4.2
+Evidence shows that Zio XT can increase patient wear time. Three of the 4 comparative studies showed improved diagnostic yield over total wear time compared with 24‑hour Holter monitoring. Eysenck et al. (2019) reported a longer wear time for Zio XT compared with the R-test (a cardiac event recorder). The clinical experts agreed that it was plausible that monitoring with Zio XT could increase diagnostic yield, primarily because Zio XT is worn for 14 days, which is much longer than the Holter monitor. The clinical experts also advised that Zio XT has usability advantages for patients. It is more discreet and convenient to wear than a Holter monitor and the Zio biosensor stays on better. The committee concluded that Zio XT increases diagnostic yield for detection of cardiac arrhythmias compared with 24‑hour Holter monitoring.
+The committee considers Zio XT to be a diagnostic service for detecting cardiac arrhythmia
+4.3
+The committee questioned whether Zio XT is a diagnostic service. The company said that the Zio XT algorithm highlights areas of concern on the electrocardiogram (ECG) trace, then a company-based cardiac physiologist reviews and confirms the arrhythmia type. A report including a sample of the ECG trace is generated for the referring healthcare professional. The company said that the technology is a decision support tool that provides a report allowing the referring healthcare professional to make a diagnosis. The company also said that full disclosure of ECG traces is available on request. The committee discussed the likely dependence of healthcare professionals on the report and queried the reliability of the data in it. The committee accepted that although Zio XT provides useful information about the number of episodes and type of arrhythmic events, the final diagnosis and treatment decision remains with the referring healthcare professional. The committee concluded that Zio XT is a diagnostic service, which provides information to clinicians to help make a diagnosis.
+Zio XT has good diagnostic accuracy on a per-episode basis
+4.4
+The available published evidence did not provide reliable estimates of diagnostic sensitivity or specificity. Hannun et al. (2019) showed that Zio XT's ZEUS algorithm was able to classify a broad range of distinct arrhythmias and had a similar accuracy to cardiologists. However, the study was not done with the Zio Patch or in a clinical setting. Also, Zio XT's ECG recordings are captured using a single-lead biosensor while Holter monitors use 3 leads. Experts said that although 3‑lead ECG recordings may be better at detecting certain types of arrhythmia, most clinical decisions can be made from 1 lead. At the draft guidance meeting the committee was concerned about the lack of detail for the diagnostic accuracy data and recommended further research. After consultation, the committee considered the technical data provided by the company and the EAC's review of this data. It agreed with the EAC's view that the Zio XT software has good per-episode performance for detecting cardiac arrhythmia and this should translate to good per-patient performance. The committee concluded that Zio XT shows good performance in recognising episodes of identified arrhythmia in ECG traces but noted that publication of future data would be valuable.
+Additional information about the long-term clinical consequences of using Zio XT would be valuable
+4.5
+In their evidence review the EAC queried the effect of an increased diagnostic yield on clinical consequences. It considered that further comparative evidence about how Zio XT affects clinical management of cardiac arrhythmias and patient outcomes would be helpful. The committee understood the limitations of the evidence base and agreed that more information about the long-term clinical consequences of using Zio XT would be valuable.
+Other patient benefits or issues
+Shaving of bodily hair is common to both Zio XT and Holter monitoring and is unlikely to restrict access for patients
+4.6
+Applying the Zio XT biosensor may mean body hair needs to be shaved. Some religions forbid cutting or shaving body hair. The clinical experts advised that shaving is needed for both Zio XT and Holter monitoring. They believed this would not restrict access for particular groups of people and said that, in their experience, most people agree to shave when using the Zio XT biosensor.
+NHS considerations overview
+Zio XT is scalable but there are concerns about its impact on NHS resources
+4.7
+Clinical experts highlighted that there is currently a shortage of cardiac physiologists in the NHS. They noted that more widespread adoption of Zio XT in the NHS may further affect the recruitment of cardiac physiologists if they leave the NHS to work for the service. But they also said that reducing the burden on cardiac physiologists in the NHS of analysing ECG reports should be considered a benefit of Zio XT. The company said that it has the capability to scale up its service to the UK, and that it would adapt a successful model used in the US. The company confirmed that the turnaround time for reports (4 days maximum but usually 24 hours) would not change. The committee was reassured that Zio XT is potentially scalable across the NHS but it was less certain about the impact on the NHS cardiac physiologist workforce.
+Zio XT uses anonymised patient data and appears to comply with privacy laws
+4.8
+The data used for developing and training the algorithm come from a database of anonymised ECG traces from patients who have previously used the service. The committee queried if patients are aware of this when they use the service and discussed considerations for the use of anonymised data in software development and training. The company explained that Zio XT meets all the relevant NHS data governance standards including the NHS Digital Toolkit and general data protection regulation (GDPR) privacy requirements. The committee noted that people give consent for their data to be used and that Zio XT appears to comply with all applicable privacy laws. The committee concluded that NHS organisations using Zio XT should make sure that the service is compliant with GDPR, and that informed consent for the investigation covers how a patient's data will be used.
+Cost-modelling overview
+The EAC's base case does not fully reflect clinical practice regarding outpatient appointments
+4.9
+In its base-case analysis, the EAC assumed that all monitoring tests would be followed up with an outpatient appointment. Clinical advice was that outpatient appointments are not usually needed after a negative result from Zio XT, and that practice varies. In scenarios in which follow-up outpatient appointments were included for standard care but not for Zio XT, Zio XT was cost saving across all 3 of the EAC's revised models. Comments and clinical expert advice received at consultation suggested that an outpatient appointment would normally only be needed after a significant positive result, regardless of the ECG monitoring device used. The committee concluded that out of the scenarios explored by the EAC, 2 scenarios best reflected current clinical practice (see 
+section 3.15
+).
+Zio XT may have additional benefits not captured in the cost modelling
+4.10
+The committee noted that the long-term clinical benefits of identifying significant arrhythmias were not captured in the stroke or cardiology models, which only evaluated diagnosis costs. The committee considered the downstream stroke model to be more informative because it took into account the benefits in terms of stroke outcomes within the first year, in addition to the cost of diagnosis. However, longer-term benefits were not included. There is no equivalent model for the cardiology patients so the longer-term benefits of earlier diagnosis in this group have not been calculated. The EAC advised that there was not enough information available to model longer-term benefits in the cardiology model. The committee concluded that there are likely to be additional benefits of using Zio XT which have not been captured in the current cost modelling.
+Zio XT is likely to be cost saving or broadly cost neutral, but this is uncertain
+4.11
+After consultation, the EAC presented new cost-modelling results including the reduced price for Zio XT. The committee accepted that this reduction in price made Zio XT slightly cost saving compared with standard care for patients in the cardiology model (people with symptomatic palpitations or syncope). The clinical experts explained that the benefits of Zio XT in this population are likely to be realised with careful patient selection based on frequency of symptoms. The committee considered that Zio XT is most likely to be cost saving when used by patients who have symptoms more than 24 hours apart. For patients who have had ischaemic stroke or a transient ischaemic attack without current evidence of atrial fibrillation, the downstream results show Zio XT is likely to be cost neutral or cost saving. The assumptions about follow-up appointments and repeat tests affected the results significantly. Expert advice showed that there is significant variation in the resources used for monitoring. The committee accepted the limitations of the current models and concluded that Zio XT is likely to be cost saving or broadly cost neutral, but more information is needed about resource use.
+Further information about resource use and the long-term consequences of Zio XT monitoring would be valuable
+4.12
+The committee accepted the EAC's changes to the models but considered there was still uncertainty about resource use and the long-term consequences of using Zio XT. Therefore, it was difficult to draw firm conclusions about the extent of any cost benefits. The committee noted the influence of assumptions about the need for outpatient appointments and the number of repeat tests on the cost modelling and the variation in ECG monitoring practice across the NHS. It concluded that more detailed data from sites that have used Zio XT in their ECG monitoring pathway could provide valuable information about resource use. This could inform the cost modelling and possibly some best practice guidelines for adopting Zio XT. The committee also concluded that further information on the long-term consequences of Zio XT monitoring (such as incidences of further stroke, transient ischaemic attack and other thromboembolisms, arrhythmia-related hospitalisations, mortality, uptake of anticoagulants or other changes in medication related to the monitoring result) would likely strengthen the certainty of cost benefits associated with its use.
+Next page
+5 Committee members and NICE project team
+Previous page
+3 Evidence
+ Back to top

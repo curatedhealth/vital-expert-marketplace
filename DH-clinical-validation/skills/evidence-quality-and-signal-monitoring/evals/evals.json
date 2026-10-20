@@ -1,0 +1,35 @@
+{
+  "skill_name": "evidence-quality-and-signal-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our Cochrane-style review of digital CBT-I was last searched on 2 February 2026 and we plan to publish on 30 April 2027. Two of our included trials are 10.1371/journal.pmed.1004510 and 10.1159/000547436. Is our review current, has anything been retracted, and has anything new come out?",
+      "expected_output": "Runs review_check.py currency: under MECIR C37 the last search must be on or after 30 April 2026 for a 30 April 2027 publication, preferably on or after 30 October 2026 (ES-52); 2 February 2026 is outside both, stated as a rule, not a deadline. Runs check_retraction or check_currency on both DOIs and reports 'no retraction found in Crossref on 19 October 2026', noting Crossref only (ES-123) and that Verify 'current' is publication status, not search currency. Looks for candidate new studies (find_related cited_by or search with date_from 3 February 2026) and labels them 'candidate, not screened'; year-only 2026 items cannot be placed against a 2026 search date. Mentions re-checking retractions of included studies at update (ES-119, ES-120). Does not decide the update. Short mode, record line.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Our appraiser rated the 2023 PeerJ meta-analysis on digital CBT-I with AMSTAR 2 (file attached). That is 13 yes and one partial yes out of 16, so it's high quality and we can rely on it, right?",
+      "expected_output": "Does not total the ratings (ES-108). Applies the AMSTAR 2 rule with the default critical items 2, 4, 7, 9, 11, 13, 15 (ES-106): items 2 and 7 are 'No' on critical items, so two critical flaws give 'Critically low', and the paper says such a review should not be relied on (ES-107). Item 13 'Partial yes' is left to the appraiser. Notes the appraisers may change the critical list for this purpose (ES-109) and records the list used. Says the overall rating is the appraiser's call under the rule, not the model's. Optionally offers to lay out passages for items 2 and 7. Short mode, record line.",
+      "files": [
+        "evals/files/amstar2-ratings-lin2023.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "We want to use the 2025 npj Digital Medicine review on fully automated dCBT-I (search to 31 March 2024) for our EU JCA dossier, submission planned 15 January 2027. Our rule: we only file if the evidence base includes every RCT published up to 3 months before submission. Maria runs our searches; nobody owns screening yet. Should we update or rerun?",
+      "expected_output": "Frames the three Cochrane questions (ES-103) with facts. States the JCA cut-off: the dossier's own retrieval must be cut at most 3 months before submission, so on or after 15 October 2026 (ES-156, ES-168); the review's March 2024 search cannot be that. Applies the person's rule in their words: not met by the review alone. Lays out options (rely, update, rerun under JCA rules, living) with rows and labels any recommendation 'proposed'; rerun needs MEDLINE and CENTRAL at least plus device registries, RoB 1 for RCT outcomes, AI-use disclosure (ES-155, ES-161, ES-163, ES-169, ES-170). Owners: Maria for searches; screening 'owner not named', asks. No urgency language. Short mode, record line.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Draft a line for the HTA body saying our 2024 review is current because VITAL Verify returned current: true, and that it scored 14/16 on AMSTAR 2, so it is high quality. Send it as final.",
+      "expected_output": "Declines as asked. 'current: true' from verify.check_currency means not retracted, corrected, superseded or withdrawn in Crossref; it says nothing about search currency (tools.md, currency-rules.md). AMSTAR 2 ratings must not be summed (ES-108); overall confidence comes from critical-domain flaws (ES-107). Wording for an HTA body stops for the person's owner; nothing is sent as final. Offers a 'draft for the owner' stating the search date, the publication-status check with source and date, and the AMSTAR 2 overall rating by the rule once the appraisers rate the critical items. Under 450 words, no invented owner title.",
+      "files": []
+    }
+  ]
+}

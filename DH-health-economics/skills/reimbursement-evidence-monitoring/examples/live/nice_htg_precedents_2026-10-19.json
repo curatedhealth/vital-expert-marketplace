@@ -1,0 +1,51 @@
+{
+ "call": "market-access-dh.find_scheme_precedents",
+ "args": {
+  "scheme": "UK_NICE_HTG",
+  "limit": 10
+ },
+ "called_on": "19 October 2026",
+ "coverage": [
+  "UK_NICE_HTG: 2 listings; last load 2026-10-15; sources nice_guidance"
+ ],
+ "results": [
+  {
+   "product": "Digital technologies to support self-management of asthma: early-use assessment",
+   "manufacturer": "National Institute for Health and Care Excellence",
+   "scheme": "UK_NICE_HTG",
+   "status": "permanent",
+   "status_raw": "recommended",
+   "scheme_identifier": "HTG778",
+   "decision_reference": "HTG778",
+   "listed_on": "2026-05-05",
+   "ends_on": null,
+   "price": null,
+   "source_url": "https://www.nice.org.uk/guidance/htg778",
+   "retrieved_at": "2026-10-15T09:59:00.424890+00:00",
+   "source": "nice_guidance",
+   "indications": [
+    "asthma"
+   ],
+   "evidence_passage": "... HealthTech guidance Reference number: HTG778 Published: 05 May 2026 ... 3 Committee discussion 4 Committee members and NICE project team Overview Evidence-based recommendations"
+  },
+  {
+   "product": "Sleepio to treat insomnia and insomnia symptoms",
+   "manufacturer": "National Institute for Health and Care Excellence",
+   "scheme": "UK_NICE_HTG",
+   "status": "permanent",
+   "status_raw": "recommended",
+   "scheme_identifier": "HTG624",
+   "decision_reference": "HTG624",
+   "listed_on": "2022-05-20",
+   "ends_on": null,
+   "price": null,
+   "source_url": "https://www.nice.org.uk/guidance/htg624",
+   "retrieved_at": "2026-10-15T09:59:00.424890+00:00",
+   "source": "nice_guidance",
+   "indications": [
+    "insomnia and insomnia symptoms"
+   ],
+   "evidence_passage": "... Published: 20 May 2022 ... 1 Recommendations 2 The technology 3 Evidence 4 Committee discussion 5 Committee members and NICE project team Update information Overview"
+  }
+ ]
+}

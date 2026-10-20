@@ -1,0 +1,403 @@
+{
+ "measured_on": "19 October 2026",
+ "inputs_are": "ILLUSTRATIVE numbers typed for the build test; not any product's data",
+ "calls": [
+  {
+   "call": "analytics.budget-impact-model",
+   "arguments": {
+    "eligible_population": 10000,
+    "current_mix": [
+     {
+      "name": "Usual care",
+      "share": 1,
+      "annual_cost_per_patient": 600
+     }
+    ],
+    "new_treatment_annual_cost_per_patient": 850,
+    "uptake_curve": [
+     {
+      "year": 1,
+      "uptake": 0.05
+     },
+     {
+      "year": 2,
+      "uptake": 0.1
+     },
+     {
+      "year": 3,
+      "uptake": 0.15
+     }
+    ]
+   },
+   "result": "ERROR: The Digital Health Library could not answer this call (422). Nothing was counted. Try again, or ask my_usage."
+  },
+  {
+   "call": "analytics.budget-impact-model",
+   "arguments": {
+    "eligible_population": 10000,
+    "current_mix": [
+     {
+      "name": "Usual care",
+      "share": 0.6,
+      "annual_cost_per_patient": 600
+     },
+     {
+      "name": "Group CBT-I",
+      "share": 0.4,
+      "annual_cost_per_patient": 900
+     }
+    ],
+    "new_treatment_annual_cost_per_patient": 850,
+    "uptake_curve": [
+     {
+      "year": 1,
+      "share": 0.05
+     },
+     {
+      "year": 2,
+      "share": 0.1
+     }
+    ]
+   },
+   "result": "ERROR: 422, nothing counted"
+  },
+  {
+   "call": "analytics.budget-impact-model",
+   "arguments": {
+    "eligible_population": 10000,
+    "current_mix": "as above, two items",
+    "new_treatment_annual_cost_per_patient": 850,
+    "uptake_curve": [
+     {
+      "value": 0.05
+     },
+     {
+      "value": 0.1
+     }
+    ]
+   },
+   "result": "ERROR: 422, nothing counted"
+  },
+  {
+   "call": "analytics.vba-price-anchor",
+   "arguments": {
+    "comparator_cost_per_patient": 600,
+    "incremental_qalys": 0.02,
+    "wtp_thresholds": [
+     20000,
+     30000
+    ]
+   },
+   "result": {
+    "method": "Value-Based Price Anchor (ICER/QALY willingness-to-pay threshold inversion)",
+    "citation": "Neumann, P.J., Cohen, J.T., & Weinstein, M.C. (2014). Updating Cost-Effectiveness -- The Curious Resilience of the $50,000-per-QALY Threshold. NEJM, 371(9), 796-797. DOI:10.1056/NEJMp1405158; NICE (2022). NICE health technology evaluations: the manual.",
+    "comparator_cost_per_patient": 600,
+    "incremental_qalys": 0.02,
+    "non_drug_cost_offset_per_patient": 0,
+    "units_per_patient": 1,
+    "results": [
+     {
+      "wtp_threshold_per_qaly": 20000,
+      "value_based_budget_per_patient": 1000,
+      "price_per_unit_ceiling": 1000
+     },
+     {
+      "wtp_threshold_per_qaly": 30000,
+      "value_based_budget_per_patient": 1200,
+      "price_per_unit_ceiling": 1200
+     }
+    ],
+    "count": 2,
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   }
+  },
+  {
+   "call": "analytics.scenario-modeler",
+   "arguments": {
+    "parameters": {
+     "population": 10000,
+     "uptake": [
+      0.05,
+      0.1,
+      0.15
+     ],
+     "device_cost": 250,
+     "offset": 120
+    },
+    "formula": "population * uptake * (device_cost - offset)",
+    "periods": 3,
+    "aggregate": "none"
+   },
+   "result": {
+    "formula": "population * uptake * (device_cost - offset)",
+    "periods": [
+     {
+      "t": 0,
+      "value": 65000,
+      "cumulative_value": 65000
+     },
+     {
+      "t": 1,
+      "value": 130000,
+      "cumulative_value": 195000
+     },
+     {
+      "t": 2,
+      "value": 195000,
+      "cumulative_value": 390000
+     }
+    ],
+    "aggregate": "none",
+    "aggregate_value": null,
+    "parameters_used": [
+     "device_cost",
+     "offset",
+     "population",
+     "uptake"
+    ],
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   }
+  },
+  {
+   "call": "analytics.scenario-modeler",
+   "arguments": {
+    "parameters": {
+     "cost": 1000,
+     "r": 0.035
+    },
+    "formula": "cost / (1 + r) ^ t",
+    "periods": 3,
+    "aggregate": "sum"
+   },
+   "result": "ERROR: The Digital Health Library could not answer this call (400). Nothing was counted."
+  },
+  {
+   "call": "analytics.scenario-modeler",
+   "arguments": {
+    "parameters": {
+     "cost": 1000,
+     "r": 0.035
+    },
+    "formula": "cost / (1 + r) ** t",
+    "periods": 3,
+    "aggregate": "sum"
+   },
+   "result": {
+    "formula": "cost / (1 + r) ** t",
+    "periods": [
+     {
+      "t": 0,
+      "value": 1000,
+      "cumulative_value": 1000
+     },
+     {
+      "t": 1,
+      "value": 966.183575,
+      "cumulative_value": 1966.183575
+     },
+     {
+      "t": 2,
+      "value": 933.5107,
+      "cumulative_value": 2899.694275
+     }
+    ],
+    "aggregate": "sum",
+    "aggregate_value": 2899.694275,
+    "parameters_used": [
+     "cost",
+     "r"
+    ],
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   }
+  },
+  {
+   "call": "analytics.risk-tornado",
+   "arguments": {
+    "parameters": {
+     "population": 10000,
+     "uptake": [
+      0.05,
+      0.1,
+      0.15
+     ],
+     "device_cost": 250,
+     "offset": 120
+    },
+    "formula": "population * uptake * (device_cost - offset)",
+    "periods": 3,
+    "aggregate": "sum"
+   },
+   "result": {
+    "method": "One-at-a-time (OAT) sensitivity analysis / tornado diagram",
+    "citation": "Eschenbach (1992) Interfaces 22(6) 40-46; Saltelli et al. (2008) Global Sensitivity Analysis: The Primer, Ch. 1",
+    "base_value": 390000,
+    "results": [
+     {
+      "parameter": "device_cost",
+      "base_value": 250,
+      "low_value": 200,
+      "high_value": 300,
+      "low_output": 240000,
+      "high_output": 540000,
+      "swing": 300000
+     },
+     {
+      "parameter": "population",
+      "base_value": 10000,
+      "low_value": 8000,
+      "high_value": 12000,
+      "low_output": 312000,
+      "high_output": 468000,
+      "swing": 156000
+     },
+     {
+      "parameter": "offset",
+      "base_value": 120,
+      "low_value": 96,
+      "high_value": 144,
+      "low_output": 462000,
+      "high_output": 318000,
+      "swing": 144000
+     }
+    ],
+    "skipped_parameters": [
+     "uptake"
+    ],
+    "variation_pct": 0.2,
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   }
+  },
+  {
+   "call": "analytics.risk-tornado",
+   "arguments": {
+    "parameters": {
+     "cost_new": 1450,
+     "cost_old": 1200,
+     "qaly_new": 0.74,
+     "qaly_old": 0.72
+    },
+    "formula": "(cost_new - cost_old) / (qaly_new - qaly_old)",
+    "periods": 1,
+    "aggregate": "sum",
+    "parameter_ranges": {
+     "cost_new": [
+      1300,
+      1600
+     ],
+     "qaly_new": [
+      0.73,
+      0.75
+     ]
+    }
+   },
+   "result": {
+    "base_value": 12500,
+    "results": [
+     {
+      "parameter": "cost_old",
+      "base_value": 1200,
+      "low_value": 960,
+      "high_value": 1440,
+      "low_output": 24500,
+      "high_output": 500,
+      "swing": 24000
+     },
+     {
+      "parameter": "qaly_new",
+      "base_value": 0.74,
+      "low_value": 0.73,
+      "high_value": 0.75,
+      "low_output": 25000,
+      "high_output": 8333.333333,
+      "swing": 16666.666667
+     },
+     {
+      "parameter": "cost_new",
+      "base_value": 1450,
+      "low_value": 1300,
+      "high_value": 1600,
+      "low_output": 5000,
+      "high_output": 20000,
+      "swing": 15000
+     },
+     {
+      "parameter": "qaly_old",
+      "base_value": 0.72,
+      "low_value": 0.576,
+      "high_value": 0.864,
+      "low_output": 1524.390244,
+      "high_output": -2016.129032,
+      "swing": 3540.519276
+     }
+    ],
+    "skipped_parameters": [],
+    "variation_pct": 0.2,
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   },
+   "observation": "qaly_old at its high value (0.864) exceeds qaly_new (0.74): the incremental QALY turns negative and the ratio becomes -2016, a dominated or south-west result, yet the tool ranks it as the smallest swing and raises no flag. A ratio is not safe to tornado."
+  },
+  {
+   "call": "analytics.risk-tornado",
+   "arguments": {
+    "parameters": {
+     "wtp": 20000,
+     "d_qaly": 0.02,
+     "d_cost": 250
+    },
+    "formula": "wtp * d_qaly - d_cost",
+    "periods": 1,
+    "aggregate": "sum",
+    "parameter_ranges": {
+     "wtp": [
+      20000,
+      20000
+     ],
+     "d_qaly": [
+      0.01,
+      0.03
+     ],
+     "d_cost": [
+      150,
+      400
+     ]
+    }
+   },
+   "result": {
+    "base_value": 150,
+    "results": [
+     {
+      "parameter": "d_qaly",
+      "base_value": 0.02,
+      "low_value": 0.01,
+      "high_value": 0.03,
+      "low_output": -50,
+      "high_output": 350,
+      "swing": 400
+     },
+     {
+      "parameter": "d_cost",
+      "base_value": 250,
+      "low_value": 150,
+      "high_value": 400,
+      "low_output": 250,
+      "high_output": 0,
+      "swing": 250
+     },
+     {
+      "parameter": "wtp",
+      "base_value": 20000,
+      "low_value": 20000,
+      "high_value": 20000,
+      "low_output": 150,
+      "high_output": 150,
+      "swing": 0
+     }
+    ],
+    "skipped_parameters": [],
+    "variation_pct": 0.2,
+    "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+   },
+   "observation": "d_cost high 400 gives output 0, but 20000 x 0.02 - 400 = 0 exactly: correct. Net monetary benefit at the person's threshold is linear and safe to tornado."
+  }
+ ]
+}

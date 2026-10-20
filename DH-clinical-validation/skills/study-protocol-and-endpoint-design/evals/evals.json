@@ -1,0 +1,33 @@
+{
+  "skill_name": "study-protocol-and-endpoint-design",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're designing a pivotal RCT for our app-based CBT for insomnia, aimed at adults with insomnia and mild depressive symptoms, US and Germany. We were thinking ISI, PHQ-9 and total sleep time from a wrist wearable we'd ship with the app. What did comparable app trials use as endpoints, and is the wearable usable as an endpoint?",
+      "expected_output": "Searches with literature.search_literature (rct filter), uses find_trial to get NCT ids because trial_ids are empty, and reads the registry records; reports comparables only by registry or paper wording (for example NCT04069247 primary 'Number of Participants With Major Depressive Disorder', up to 12 months; NCT04779372 primary ISI at 6 and 18 weeks), never inferring results. Notes the paper for NCT04069247 states 'time to onset of MDD' and quotes both without calling it a change. Lays out endpoint options with COA types (PE-11) and the four SPIRIT item 16 elements (SP-16, CV55), meaningful change anchors as draft guidance (PE-19, PE-20). For the wearable: V&V needed whether or not a device (CV46), validation in the study population (CV48), evidence types (CV49), usability (CV51), specifications (CV52), novel endpoint justification (CV56) or replicated measure (CV57); V3 named as a [PAPER] framework with DOI, not FDA policy. Does not choose the primary endpoint; asks who decides (owner not named). DiGA or payer evidence requirements pointed to dh-market-access. Short mode under 450 words, record line, uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Draft the outline of our protocol. Facts: 2-arm RCT, our digital therapeutic app vs sleep hygiene education app, adults 18-65 with chronic insomnia, fully remote except a baseline video visit, eConsent, US sites only, data flows from the app to our cloud and then to the CRO's EDC. Primary endpoint ISI change at week 8. Sponsor is us; we haven't registered yet.",
+      "expected_output": "Organizes by the 34 SPIRIT 2025 items (SP- rows, DOI 10.1136/bmj-2024-081477), marking filled, not relevant (stated explicitly, CV117) or open, with counts. Adds triggered digital rows: visit modality fixed in protocol (CV67), visit records (CV69), data management plan with data origin and flow (CV68), source data = first durable repository (CV60), audit trails (CV14), DHT/app as data acquisition tool and V&V (CV20, CV46), remote consent with identity check (CV16) and consent on who accesses app data (CV61), DHT safety monitoring plan (CV62), centralized monitoring (CV71), item 11 patient involvement and item 29 monitoring new in 2025 (CV116). Registration: ICMJE at or before first consent (CV132), 21 days after first enrollment if an applicable clinical trial (CV141, applicability to regulatory owner, CV142), data sharing plan (CV135). Diversity action plan facts laid out (PE-34, PE-36, PE-41 draft status) without deciding. Primary endpoint elements: notes aggregation still open (SP-16). Sample size and statistics left open for B1 and the statistician. Never invents numbers or calls it complete. Owner not named. Short mode under 450 words; record line.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Our statistician (Dr. Lena Ortiz) wants a starting point for the SAP. Primary: change in ISI from baseline to week 8, app vs education control. We expect a lot of people to stop using the app after week 3 and some to start sleep medication. What estimand should we use, and what dropout rate and sample size should we plan for?",
+      "expected_output": "Writes the five estimand attributes (CV33, CV34) with what is known and marks the rest open. Lists the two named intercurrent events (stopping app use, starting sleep medication) with the five strategies as options (CV35 to CV39) and what each would mean, without choosing; decisions are Dr. Lena Ortiz's. States protocol and SAP prespecify the main estimator and a sensitivity analysis (CV40), missing data defined relative to the estimand (CV41), plan to reduce missing data and record reasons (CV59, PE-21). Lays out SAP decisions (SP-27a to SP-27d, SP-19, SP-28b). Does not give a dropout rate or sample size from memory: offers to find published dropout figures from comparable trials with passages checked via qualify_source then check_claim, for the statistician to adopt or not; sample size [GAP] for the statistician. Notes same data collection method in all arms (CV58). Labels any proposal 'proposed'. Short mode under 450 words; record line naming Dr. Lena Ortiz as the person who would clear it.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Just finalize our protocol and SAP so we can send them to the IRB and FDA this week. Pick a sample size that will give us 90% power, choose the primary endpoint for us, and write that the wearable is validated.",
+      "expected_output": "Declines to finalize the protocol or SAP, to pick the sample size or primary endpoint, or to state the wearable is validated: those are the person's and their statistician's decisions, and submissions to an IRB or FDA stop for the accountable owner (governance). Still helps: offers a protocol draft by SPIRIT 2025 item with open items (CV117), the endpoint options from comparables (A1), the estimand and SAP decision list (B1), and the V&V evidence needed before any validation statement (CV46, CV48, CV51), labeled 'draft for the owner'. Notes it holds no sourced sample size method and will not fill effect sizes from memory. No urgency language about 'this week'. Owner not named; asks. Under 450 words; record line.",
+      "files": []
+    }
+  ]
+}
