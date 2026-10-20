@@ -1,6 +1,6 @@
 # VITAL Digital Health plugins for Cowork
 
-Add the marketplace `curatedhealth/vital-expert-plugins`. Do not paste a file link. Each pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector.
+Add the marketplace `curatedhealth/vital-expert-plugins`. In Claude it shows as **from vital-expert** (Vital.Expert). Do not paste a file link. Each pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector.
 
 Each pack is one core. Market Access does not include Clinical Validation, Health Economics, or Regulatory Strategy.
 

@@ -1,9 +1,10 @@
 {
   "name": "vital-verify",
-  "version": "2026-10-19.2",
+  "version": "2026-10-19.3",
   "description": "Seven skills for checking a draft against the pages and papers you supply. Facts come from the VITAL Verify connector. The method still runs when the key is absent, and the connector steps say when they need it.",
   "author": {
-    "name": "VITAL"
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
   },
   "license": "UNLICENSED",
   "skills": "./skills",
@@ -15,5 +16,6 @@
       "required": false,
       "sensitive": true
     }
-  }
+  },
+  "icon": "./icon.png"
 }

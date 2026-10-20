@@ -1,9 +1,10 @@
 {
   "name": "dh-diligence",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DH Diligence for digital health companies. The person starts one job. Tools run on the Digital Health Library. This pack is the diligence suite. It is not a CF-12 core.",
   "author": {
-    "name": "VITAL"
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
   },
   "license": "UNLICENSED",
   "userConfig": {
@@ -14,5 +15,6 @@
       "required": true,
       "sensitive": true
     }
-  }
+  },
+  "icon": "./icon.png"
 }

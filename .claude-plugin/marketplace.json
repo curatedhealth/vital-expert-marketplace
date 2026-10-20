@@ -1,8 +1,9 @@
 {
-  "name": "vital-expert-plugins",
-  "description": "VITAL Digital Health plugins for Cowork. One pack per core.",
+  "name": "vital-expert",
+  "description": "Vital.Expert Digital Health plugins for Cowork. One pack per core.",
   "owner": {
-    "name": "VITAL"
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
   },
   "plugins": [
     {

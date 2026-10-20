@@ -1,9 +1,10 @@
 {
   "name": "dh-market-access",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "DH Market Access and Reimbursement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library. This pack is only DH-03.01.",
   "author": {
-    "name": "VITAL"
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
   },
   "license": "UNLICENSED",
   "userConfig": {
@@ -14,5 +15,6 @@
       "required": true,
       "sensitive": true
     }
-  }
+  },
+  "icon": "./icon.png"
 }
