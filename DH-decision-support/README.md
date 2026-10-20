@@ -1,6 +1,6 @@
 # DH Decision Support & Business Intelligence
 
-Install **DH Decision Support & Business Intelligence** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Decision Support & Business Intelligence** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-05.02 Decision Support & Business Intelligence. Other Digital Health cores are separate packs.
 

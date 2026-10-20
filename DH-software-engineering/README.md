@@ -1,6 +1,6 @@
 # DH Software Engineering Excellence
 
-Install **DH Software Engineering Excellence** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Software Engineering Excellence** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-04.03 Software Engineering Excellence. Other Digital Health cores are separate packs.
 

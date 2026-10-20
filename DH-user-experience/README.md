@@ -1,6 +1,6 @@
 # DH User Experience Excellence
 
-Install **DH User Experience Excellence** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH User Experience Excellence** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-02.04 User Experience Excellence. Other Digital Health cores are separate packs.
 

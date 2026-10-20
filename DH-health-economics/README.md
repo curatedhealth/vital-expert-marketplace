@@ -1,6 +1,6 @@
 # DH Health Economics & Value Demonstration
 
-Install **DH Health Economics & Value Demonstration** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Health Economics & Value Demonstration** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.07 Health Economics & Value Demonstration. Other Digital Health cores are separate packs.
 

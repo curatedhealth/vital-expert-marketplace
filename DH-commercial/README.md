@@ -1,6 +1,6 @@
 # DH Commercial & GTM Strategy
 
-Install **DH Commercial & GTM Strategy** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Commercial & GTM Strategy** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-02.01 Commercial & GTM Strategy. Other Digital Health cores are separate packs.
 

@@ -1,6 +1,6 @@
 # DH Digital Therapeutic Design
 
-Install **DH Digital Therapeutic Design** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Digital Therapeutic Design** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.06 Digital Therapeutic Design. Other Digital Health cores are separate packs.
 

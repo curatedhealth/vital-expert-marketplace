@@ -1,6 +1,6 @@
 # DH Diligence
 
-Install **DH Diligence** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Diligence** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is the Digital Health Library diligence suite. No CF-12 core is named Diligence, so these skills are library jobs, not register codes.
 

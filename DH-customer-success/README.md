@@ -1,6 +1,6 @@
 # DH Customer Success & Implementation
 
-Install **DH Customer Success & Implementation** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Customer Success & Implementation** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-02.02 Customer Success & Implementation. Other Digital Health cores are separate packs.
 

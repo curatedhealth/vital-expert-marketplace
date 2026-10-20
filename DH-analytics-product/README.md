@@ -1,6 +1,6 @@
 # DH Analytics Product Management & Enablement
 
-Install **DH Analytics Product Management & Enablement** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Analytics Product Management & Enablement** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-05.03 Analytics Product Management & Enablement. Other Digital Health cores are separate packs.
 

@@ -1,6 +1,6 @@
 # VITAL Verify
 
-Install **VITAL Verify** from `curatedhealth/vital-expert-plugins`, then paste the Verify key if you have one. The key is not in this pack.
+Install **VITAL Verify** from `curatedhealth/vital-expert-marketplace`, then paste the Verify key if you have one. The key is not in this pack.
 
 The connector is `https://mcp.vital.expert/api/mcp/verify`. Do not add a second connector.
 

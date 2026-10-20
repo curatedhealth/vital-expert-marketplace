@@ -1,6 +1,6 @@
 # DH Cybersecurity & Privacy
 
-Install **DH Cybersecurity & Privacy** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Cybersecurity & Privacy** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-04.02 Cybersecurity & Privacy. Other Digital Health cores are separate packs.
 

@@ -1,6 +1,6 @@
 # DH Patient Engagement & Advocacy
 
-Install **DH Patient Engagement & Advocacy** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Patient Engagement & Advocacy** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-02.03 Patient Engagement & Advocacy. Other Digital Health cores are separate packs.
 

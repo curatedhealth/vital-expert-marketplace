@@ -1,6 +1,6 @@
 # DH Clinical Product Development
 
-Install **DH Clinical Product Development** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Clinical Product Development** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.01 Clinical Product Development. Other Digital Health cores are separate packs.
 

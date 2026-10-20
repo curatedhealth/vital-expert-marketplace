@@ -1,6 +1,6 @@
 # DH Data Science & AI/ML
 
-Install **DH Data Science & AI/ML** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Data Science & AI/ML** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.04 Data Science & AI/ML. Other Digital Health cores are separate packs.
 

@@ -1,6 +1,6 @@
 # DH Innovation & Emerging Technologies
 
-Install **DH Innovation & Emerging Technologies** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Innovation & Emerging Technologies** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.08 Innovation & Emerging Technologies. Other Digital Health cores are separate packs.
 

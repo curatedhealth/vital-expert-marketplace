@@ -1,6 +1,6 @@
 # DH Cross-Functional Leadership
 
-Install **DH Cross-Functional Leadership** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Cross-Functional Leadership** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 This pack is only DH-01.03 Cross-Functional Leadership. Other Digital Health cores are separate packs.
 

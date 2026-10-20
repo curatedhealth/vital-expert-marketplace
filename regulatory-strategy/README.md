@@ -1,11 +1,11 @@
 # DH Regulatory Strategy and Submissions
 
-Install **DH Regulatory Strategy and Submissions** from `curatedhealth/vital-expert-plugins`, then paste the Digital Health Library key. The key is not in this pack.
+Install **DH Regulatory Strategy and Submissions** from `curatedhealth/vital-expert-marketplace`, then paste the Digital Health Library key. The key is not in this pack.
 
 ## Install
 
 1. In Cowork, open Customize, then Plugins, then Add marketplace.
-2. Enter `curatedhealth/vital-expert-plugins`.
+2. Enter `curatedhealth/vital-expert-marketplace`.
 3. Install **DH Regulatory Strategy and Submissions**.
 4. When Cowork asks for the Digital Health Library key, paste the `vlib_` key from your purchase.
 5. Leave the plugin switched on.
