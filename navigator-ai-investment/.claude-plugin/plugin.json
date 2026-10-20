@@ -1,17 +1,27 @@
 {
   "name": "navigator-ai-investment",
-  "version": "0.1.6",
-  "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record.",
+  "version": "0.1.7",
+  "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record. Tools run on the Ontology Navigator connector.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
   },
   "license": "Proprietary",
+  "skills": "./skills",
   "keywords": [
     "navigator",
     "ai-investment",
     "decision",
     "outcomes",
     "vital"
-  ]
+  ],
+  "userConfig": {
+    "navigator_key": {
+      "type": "string",
+      "title": "Ontology Navigator key",
+      "description": "The vont_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
 }

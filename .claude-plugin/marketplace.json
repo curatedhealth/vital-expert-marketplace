@@ -124,7 +124,7 @@
     {
       "name": "navigator-ai-investment",
       "source": "./navigator-ai-investment",
-      "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator: frame, size, outcomes, readiness, options, portfolio, delivery, trial, capability, value realized, review, and the decision record."
+      "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator. Tools run on the Ontology Navigator connector (vont_ key)."
     }
   ]
 }
