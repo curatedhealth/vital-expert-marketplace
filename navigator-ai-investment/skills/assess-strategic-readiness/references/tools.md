@@ -7,12 +7,12 @@ Connector: VITAL Ontology Navigator (listed as `Ontology_Navigator` or `vital-on
 - Payload: `{"template_id": "nav.options", "items": [{"item_id": "o1"}, {"item_id": "base", "is_baseline": true}, ...], "scores": [{"scorer_id": "...", "item_id": "o1", "criterion_key": "outcome_fit" | "cost" | "time" | "reversibility" | "risk" | "governance_burden", "value": 1-10}, ...], "owner_scorer_id": "..."}`; optional `weight_adjustments` with a reason each.
 - Refuses: no baseline ("this template needs a baseline option ... mark one item with is_baseline: true"); a non-whole or out-of-range score; a missing cell; a weight change without a reason.
 - Returns per option: composite, median, rank, ties, disagreement by criterion; owner's view; sensitivity (scorer drop, weights ±20%); indicative under three scorers; the unadjusted result when weights changed.
-- Pitfall: the baseline is ranked like any option. Present it as the reference line (method.md I7) and re-read the leader among the other options; the local script does this.
+- Since build fba9f1feb (checked live 20 October 2026, M): template version 2 leaves the baselines unranked under `reference_lines`, in the group view, the owner view and the sensitivity check. Present them as reference lines (method.md I7); the local script gives the same order.
 - Pitfall (live, 19 October 2026): the hosted engine call returned an error three times. When it fails, compute with the skill's local script and say once, in a clause, that the connector could not compute; the result is the same formula.
 
 ## methods_capability_gap (counted): do not use for the outcome-weighted gap
 
-- It scores current against required, 1 to 10, but passes no outcome links, so every capability is weighted 1. Use `scripts/readiness_check.py`, which applies the engine's own formula with the outcome weights. If you do call it, label the result "unweighted".
+- Since build fba9f1feb (checked live 20 October 2026, M): pass `outcome_links` (`[{"capability_id", "outcome_id"}]`) with `brief_id`; the tool weights each gap by the brief's released outcome scores (`weight_label: "attested"`). Unreleased scores weight nothing and return a gap; without links every capability stays at weight 1 and the gap says so. The local `scripts/readiness_check.py` (in assess-strategic-readiness) applies the same formula and stays the check you report from.
 - It refuses rows carrying the old 0 to 5 fields ("The 0 to 5 calculator is not this tool").
 
 ## catalogue_search, chain_trace (counted): capabilities and outcome links

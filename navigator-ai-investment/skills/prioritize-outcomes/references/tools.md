@@ -33,7 +33,7 @@ Connector: VITAL Ontology Navigator (listed as `Ontology_Navigator` or `vital-on
 
 ## methods_odi_score (counted): one score set only
 
-- Takes one importance and satisfaction per outcome (decimals allowed). Use only when a single person scores, labeled indicative. Its band words differ from the engine's; use the engine's words (method.md O11).
+- Takes one importance and satisfaction per outcome (decimals allowed). Use only when a single person scores, labeled indicative. Since build fba9f1feb it returns the engine's band words (extreme, strong, moderate, low; checked live 20 October 2026).
 
 ## Storing scores on a brief (decide_attach_scores, then decide_release_scores)
 

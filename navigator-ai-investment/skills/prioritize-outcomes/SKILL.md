@@ -23,7 +23,7 @@ metadata:
   framework_path: "AI Investment Navigation > 2 Outcomes: Outcome Discovery & Prioritization > 2.2 Outcome Prioritization"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.4-draft"
+  version: "0.1.5-draft"
 ---
 
 # Outcome Prioritization

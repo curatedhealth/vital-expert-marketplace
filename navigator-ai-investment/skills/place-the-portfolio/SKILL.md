@@ -23,7 +23,7 @@ metadata:
   framework_path: "AI Investment Navigation > 3 Intelligence Core: Investment Choice > 3.3 Portfolio Placement"
   worker: "ai-investment-decision-lead"
   pack: "navigator-ai-investment"
-  version: "0.1.3-draft"
+  version: "0.1.4-draft"
 ---
 
 # Portfolio Placement

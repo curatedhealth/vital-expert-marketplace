@@ -26,7 +26,7 @@ All of them need an open brief (`brief_id` from `decide_start`). Without one, no
 
 ## methods_capability_gap
 
-- Now runs the engine's 1 to 10 gap, but passes no outcome links, so every capability is weighted 1 (M). For an outcome-weighted register use *Strategic Readiness*' local script.
+- Runs the engine's 1 to 10 gap. With `outcome_links` and `brief_id` it weights by the brief's released outcome scores (build fba9f1feb, checked live); without them every capability is weighted 1. For the register itself use *Strategic Readiness*.
 
 ## Not available
 
