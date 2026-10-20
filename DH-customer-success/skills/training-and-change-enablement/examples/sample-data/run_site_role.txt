@@ -1,8 +1,0 @@
-Session coverage. Attendance is not completion. Rates show numerator/denominator.
-
-Group                        In role        Attended    Completed once   Attended, not completed  Not recorded  Not attended  Trainers
-North / care coordinator           4       2/4 (50%)         1/4 (25%)                         1             0             2         0
-North / nurse                     14     13/14 (93%)       13/14 (93%)                         0             0             1         0
-South / care coordinator           3        0/3 (0%)          0/3 (0%)                         0             0             3         0
-South / nurse                     12     11/12 (92%)        8/12 (67%)                         1             2             1         2
-All                               33     26/33 (79%)       22/33 (67%)                         2             2             7         2

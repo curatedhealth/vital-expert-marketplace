@@ -1,9 +1,0 @@
-change_id,item,description,assessment_ref,assessment_date,decision,rationale,approved_by,approval_date,implemented_date,touches_hazard,risk_review_ref,aggregate_ref
-CR-0201,app-ios,Fix crash on login screen,IA-0201,2026-03-02,no submission,Restores cleared spec (Q2); RA-0201,J. Meyer,2026-03-04,2026-03-10,no,,
-CR-0202,app-ios,Background alert processing for new iOS version,IA-0202,2026-04-20,no submission,,J. Meyer,2026-04-22,2026-04-15,yes,,
-CR-0203,dose-engine,Rounding to 0.5 unit,IA-0203,2026-05-05,510(k),Q4 yes per SRS-112,A. Novak,2026-05-07,2026-05-06,yes,RMF-7 rev 5,
-CR-0204,labeling,IFU translation update,,,,,J. Meyer,2026-05-12,2026-05-13,no,,
-CR-0205,app-ios,Analytics SDK upgrade,IA-0205,2026-06-01,no submission,Non-medical feature; RA-0205,,2026-06-03,2026-06-04,no,,
-CR-0206,dose-engine,Unit conversion table update,IA-0206,2026-06-10,not significant,MDCG 2020-3 C4 no; RA-0206,A. Novak,2026-06-11,2026-06-12,yes,,AGG-02
-CR-0207,cloud-api,Certificate rotation,IA-0207,2026-07-01,no submission,Cybersecurity only (Q1),J. Meyer,2026-07-01,2026-07-01,no,,
-CR-0208,cloud-api,Rate limiter change,,,,,,,2026-07-15,no,,

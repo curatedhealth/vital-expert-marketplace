@@ -1,9 +1,0 @@
-{
-  "_source": "Illustrative population-average contract: every target, weight and share is an example input, not a sourced rule.",
-  "mode": "population_average",
-  "measures": {
-    "phq9": {"target": {"type": "reduction", "value": 5}, "population_target": {"type": "mean_reduction", "value": 5}, "weight": 0.5, "final_window_days": 425},
-    "gad7": {"target": {"type": "reduction", "value": 4}, "population_target": {"type": "mean_reduction", "value": 4}, "weight": 0.5, "final_window_days": 425}
-  },
-  "payment": {"type": "per_measure", "outcome_share": 0.2}
-}

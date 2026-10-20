@@ -1,6 +1,0 @@
-[
- {"metric": "retention_pct", "op": ">=", "value": 85, "scope": "site", "owner": "Clinical Operations lead", "text": "At least 85% of enrolled participants retained at each site"},
- {"metric": "completeness_pct", "op": ">=", "value": 90, "scope": "site", "owner": "Data Management", "text": "Primary endpoint data at least 90% complete per site"},
- {"metric": "important_deviations_per_participant", "op": "<=", "value": 0.1, "scope": "site", "owner": "QA", "text": "No more than 1 important deviation per 10 participants"},
- {"metric": "completeness_gap_between_arms_pts", "op": "<=", "value": 5, "scope": "all", "text": "Arms within 5 points on completeness"}
-]

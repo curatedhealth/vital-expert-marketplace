@@ -1,7 +1,0 @@
-{"called_on":"2026-10-19","call":"agent-pack.list_experts {query: \"patient\", limit: 10}","returned":10,"matched":16,"truncated":true,
-"experts_trimmed":[
- {"slug":"patient-experience-designer","display_name":"Patient Experience Designer","department":"Digital Product","description":"Designs patient-facing journeys for digital health support programmes: onboarding, drop-off, recovery, and channel mix. Does not produce interface mockups, human-factors protocols, or usability-test reports."},
- {"slug":"ux-research-lead","display_name":"UX Research Lead","department":"Digital Product","description":"Leads human-factors and usability research for regulated digital health: IEC 62366-aligned formative and summative protocols, patient ethnography, HCP workflow studies, accessibility evaluation, sample-size and ethics advice, and synthesis into product recommendations. Does not d"},
- {"slug":"health-equity-access-lead","display_name":"Health Equity & Digital Access Lead","department":"Digital Health Programs"},
- {"slug":"behavioral-science-lead","display_name":"Behavioral Science Lead","department":"Digital Product"},
- {"slug":"real-world-evidence-director-digital"},{"slug":"remote-monitoring-program-director"},{"slug":"digital-therapeutics-ceo"},{"slug":"chief-medical-information-officer"},{"slug":"behavior-change-designer"},{"slug":"healthcare-api-platform-lead"}]}

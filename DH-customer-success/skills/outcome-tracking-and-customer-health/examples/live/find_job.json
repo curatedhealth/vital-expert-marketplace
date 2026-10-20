@@ -1,2 +1,0 @@
-{"called_on": "19 October 2026", "call": "find_job", "args": {"query": "customer health value realization outcomes"},
- "result": {"matches": [], "note": "At most three jobs. Call list_jobs for the full catalogue. A missing start action means the job is listed and cannot be run."}}

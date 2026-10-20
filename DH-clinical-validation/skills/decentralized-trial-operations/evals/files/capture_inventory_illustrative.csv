@@ -1,6 +1,0 @@
-# ILLUSTRATIVE DATA: invented for testing the skill; not a real trial.
-stream,dht_model_version,endpoint_role,arms,same_method_all_arms,entered_by,first_durable_repository,audit_trail,timestamps_utc,verification_evidence,validation_evidence,validation_in_trial_population,usability_evidence,can_show_abnormal,safety_review_plan,critical_to_quality,contingency,participant_entry_safeguard
-Daily step count (wrist accelerometer),Vendor wrist sensor v3.2 firmware 5.1,primary,A;B,yes,device,Vendor cloud (EU region),yes,yes,Vendor bench report 2025,Validation study in healthy adults,no,,no,,yes,,
-Resting heart rate (same wrist sensor),Vendor wrist sensor v3.2 firmware 5.1,safety,A;B,yes,device,Vendor cloud (EU region),yes,no,Vendor bench report 2025,Vendor validation in cardiology outpatients,yes,Usability study n=24 in target population,yes,,yes,Paper diary fallback SOP,
-Pain score ePRO (app),App v2.0,key_secondary,A;B,,participant,,yes,yes,n/a software form,,,Cognitive interviews report,no,,yes,Phone call-in by site,
-Home spirometry,,exploratory,B,,participant,Spirometry vendor portal,no,,,,,,yes,Protocol section 9.4,no,,

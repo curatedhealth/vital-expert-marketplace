@@ -1,2 +1,0 @@
-{"call": "regulatory-dh.get_authorization", "args": {"reference": "K191716"}, "called_on": "2026-10-19",
- "result_excerpt": {"product": "Somryst", "pathway": "FDA_510K", "decision_date": "2020-03-23", "product_code": "QVO", "regulation_number": "882.5801", "predicate_references": ["DEN160018"], "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K191716", "retrieved_at": "2026-10-13T00:04:19.182594+00:00", "source": "openfda"}}

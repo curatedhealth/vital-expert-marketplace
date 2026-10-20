@@ -1,4 +1,0 @@
-{"called_on":"2026-10-19","calls":[
- {"call":"regulatory-dh.retrieve_guidance {query: \"patient preference information\", limit: 5}","results":[],"gaps":["[GAP]","no passage retrieved in this namespace"]},
- {"call":"regulatory-dh.retrieve_guidance {query: \"co-design\", limit: 5}","results_count":5,"source_url_each":"[GAP]","retrieved_at_each":null,"content":"Chunks from journal articles (one carries its own DOI in the text, https://doi.org/10.1038/s41746-025-01691-2, npj Digital Medicine, mobile stroke unit web app usability) rather than guidance; label_basis 'lexical match on stored knowledge; not a register decision'."}
-]}

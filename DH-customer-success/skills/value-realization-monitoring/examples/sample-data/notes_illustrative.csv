@@ -1,6 +1,0 @@
-note_id,account_id,sent_on,author,measure,period_end,stated_value,claim
-VN-01,Northfield,2026-10-06,J. Ortiz,activation,2026-09-30,0.62,"62 percent of eligible members activated since go-live"
-VN-02,Northfield,2026-10-06,J. Ortiz,phq9_mean_drop,2026-09-30,6,"Members who completed 8 weeks saw PHQ-9 scores fall by an average of 6 points"
-VN-03,Lakeside,2026-10-08,M. Chen,active_90d,2026-09-30,0.416,"42 percent of activated members were active in the last 90 days"
-VN-04,Riverbend,2026-10-09,,,,,"The program is clinically proven to reduce depression"
-VN-05,Northfield,2026-10-06,J. Ortiz,phq9_5pt_share,2026-09-30,0.55,"55 percent of members who started with moderate or worse symptoms improved by 5 points or more"

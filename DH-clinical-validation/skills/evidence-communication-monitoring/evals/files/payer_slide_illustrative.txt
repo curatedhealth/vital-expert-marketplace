@@ -1,6 +1,0 @@
-ILLUSTRATIVE TEXT written for testing; not from any company. Audience: US health plan P&T committee.
-Slide 4: Strong evidence that our digital CBT-I app treats depression.
-In a randomized trial, depressive symptoms fell versus usual care at 12 and 24 weeks.
-Effects were large and consistent across all patient groups.
-Certainty of evidence: high.
-Source: Schuffelen et al., Depression and Anxiety 2025.

@@ -1,8 +1,0 @@
-insight_id,summary,status,decision_date,reason,owner,decision_due,linked_change,version,safety_constraint
-I1,Meal and reading logging takes too many steps,accepted,2026-09-10,Raised by three patients in two sessions,product owner for logging,,CH-12,2.4,no
-I2,Carers want shared view of readings,deferred,2026-09-10,Needs consent design first,,,,,no
-I3,Number size too small to read,accepted,2026-09-10,Two patients in two sessions,,,CH-14,,no
-I4,Red out-of-range color read as emergency,open,,,clinical safety lead,2026-10-01,,,yes
-I5,Printable weekly summary,open,,,,,,,no
-I6,Works offline,refused,2026-09-10,,design lead,,,,no
-I7,Remove dose guidance text,open,,,,,,,yes

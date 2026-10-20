@@ -1,6 +1,0 @@
-K1: match.
-K2: DRIFT in denominator.
-    denominator: card {"population": "enrolled", "start_event": "enrolled", "min_days_observed": 56} | dashboard {"population": "enrolled", "start_event": "enrolled"}
-K3: not on the dashboard under this id; dashboard KPI MAP has the same formula under the name 'Monthly active patients'. Renamed: confirm with the card owner before treating them as one.
-MAP: on the dashboard with no KPI card ('Monthly active patients'). No card, no agreed definition.
-K9: on the dashboard with no KPI card ('Average sessions per active user'). No card, no agreed definition.

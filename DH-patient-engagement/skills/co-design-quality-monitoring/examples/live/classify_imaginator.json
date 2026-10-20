@@ -1,3 +1,0 @@
-{"call":"literature.classify_study {record: {doi: \"10.1111/camh.70135\", title: \"... a co-produced qualitative study\", publication_type_raw: [\"Journal Article\"], excerpt: \"...\"}}","called_on":"2026-10-19",
- "response":{"design":"other","confidence":0.3,"decided_by":[],"rule":"no decisive metadata or text cue","warnings":["no decisive metadata or text cue; design left as 'other'"]},
- "observations":["The same record carried design 'rct' at 0.6 in search_literature; classify_study returns 'other' at 0.3. The word 'qualitative' in the title is not used as a cue."]}

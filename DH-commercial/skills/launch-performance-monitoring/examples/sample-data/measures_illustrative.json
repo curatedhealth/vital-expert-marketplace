@@ -1,6 +1,0 @@
-[
- {"id": "M1", "label": "Accounts reached in launch week", "metric": "accounts_reached", "comparison": ">=", "threshold": 5},
- {"id": "M2", "label": "Customer-facing roster briefed", "metric": "roster_briefed_share", "comparison": ">=", "threshold": 1.0},
- {"id": "M3", "label": "Unapproved claim uses", "metric": "unapproved_claim_uses", "comparison": "<=", "threshold": 0},
- {"id": "M4", "label": "Meetings held", "metric": "meetings_held", "comparison": ">=", "threshold": 4}
-]
