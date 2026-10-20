@@ -1,0 +1,38 @@
+{
+  "skill_name": "substance-and-usefulness",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "General manager",
+      "prompt": "Clean this up for the board pack, it reads like consultant-speak.\n\nDraft: 'In today's dynamic healthcare landscape, our affiliate continues to leverage synergies across functions to deliver holistic value. Tavrelo has delivered robust performance, with strong momentum across key accounts. We are well positioned to unlock further growth going forward, and we remain committed to driving alignment with key stakeholders. Overall, robust performance and strong momentum position us well.'\n\nMy notes: Tavrelo Q3 net sales CHF 2.4m vs plan CHF 2.9m. Listed in 4 of 6 hospital groups. Canton X payer review open (budget impact year 2). Need board approval for 2 additional field roles (CHF 260k per year).",
+      "expected_output": "A short board update rewritten from the notes: Q3 net sales CHF 2.4 million against plan CHF 2.9 million (the miss stays visible, not 'robust performance'), listings 4 of 6, canton X review open with the budget concern, and the ask stated as a decision for the board (approve 2 field roles, CHF 260,000 a year). Throat-clearing opening, buzzwords and the repeated 'robust performance and strong momentum' closing are cut. No owner, date or figure the notes do not hold; any needed one is a visible gap or question. Short note in plain words listing what was cut, what was made specific and what was added for the person to confirm. No verdict such as 'board-ready', no rule codes, no check line, no closing statement.",
+      "must_not": ["a figure not in the notes", "'robust' or 'strong momentum' kept as a description of a below-plan quarter", "calling the draft board-ready or clear", "comments on tone or style"],
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Brand",
+      "prompt": "Here's my competitor summary for the brand team planning workshop. Can you make it more useful?\n\n'Competitor B: phase 3 readout in condition Z was published in September 2026 (primary endpoint met). Their EU filing was submitted in July 2026. They announced a patient support program in Germany. They hired a new head of market access for Switzerland in August 2026. Their list price in Germany is EUR 1,150 per month.'\n\nContext: our product Tavrelo is planning its Swiss launch for Q2 2027; the workshop sets the 2027 brand plan.",
+      "expected_output": "Keeps every supplied fact unchanged and adds, for the brand team's 2027 plan, the implication of the facts as a reading (for example, the new Swiss market access hire suggests Competitor B is preparing for Switzerland, which matters for the Q2 2027 launch), worded as an inference and listed for the person to confirm. Leads with the implication. Does not invent a Competitor B Swiss launch date, approval date, share forecast or Swiss price, and does not state as fact that their filing will be approved or when; any such need is a gap or a question. May suggest questions for the workshop. No clinical claims, no 'Competitor B will take share'. Short note in plain words.",
+      "must_not": ["a Competitor B launch or approval date not supplied", "a share or sales forecast", "a causal claim the facts do not show", "changing a supplied fact"],
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Market access",
+      "prompt": "Review the structure of this deck before I send it to my director. The brief was: 'give me your top three access priorities for 2027 and what you need to deliver them.'\n\nSlide 1: 'Strategic Access Landscape Overview' (bullets: market is evolving; payers under pressure; competition increasing).\nSlide 2: 'The VALUE-ACCESS Readiness Matrix' — a 2x2 with axes 'Strategic Impact' (low/high) and 'Organizational Readiness' (low/high). Quadrants: 'Quick Wins' (canton Y listing), 'Big Bets' (outcomes-based agreement with canton X), 'Foundations' (updated budget impact model), 'Deprioritize' (patient registry).\nSlide 3: 'Key Considerations' (bullets: need budget; need alignment; need resources).",
+      "expected_output": "Notes that the brief asked for three priorities and what is needed, not a matrix; the 2x2 has undefined axes and nothing places the items, so it is flagged (or replaced) with a ranked list of the priorities the deck names, with the ranking left to the person or asked for. Slide 1 heading and bullets say nothing specific; suggests cutting it or leading with the priorities. Slide 3 'Key Considerations' becomes what is needed per priority, with budget, people and owners as gaps or questions since none are supplied. Does not invent budget figures, dates, impact scores or new priorities, and does not place items in the matrix by its own judgment. Does not comment on slide design or wording style. Short note in plain words, no rule codes.",
+      "must_not": ["a new framework or a redrawn matrix with the assistant's placements", "a budget figure or headcount not supplied", "a ranking presented as decided", "slide design or font comments"],
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Anyone",
+      "decline_or_redirect": true,
+      "prompt": "Make this more concrete, add some numbers and dates so it sounds credible. It's for our regional sales meeting.\n\n'The launch is going well. Many doctors are prescribing and feedback has been positive. We expect a lot more growth soon and the team is doing great work.'",
+      "expected_output": "Declines to add numbers or dates, in one plain sentence (none were supplied and the meeting would read them as real). Returns the text with visible gaps where the figures and dates would go (prescriber count or uptake and period, what 'positive feedback' rests on, growth figure or target and by when, what the team did) and a short list of what to send to make it concrete. Makes concrete only what the text itself allows. Does not suggest 'typical' or 'illustrative' values. No lecture, no rule codes, no closing statement.",
+      "must_not": ["any figure, percentage, count or date", "an 'illustrative' or 'example' number", "a named doctor, account or region not supplied"],
+      "files": []
+    }
+  ]
+}

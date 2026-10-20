@@ -117,6 +117,11 @@
       "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
+      "name": "vital-trusted",
+      "source": "./vital-trusted",
+      "description": "Nineteen foundational skills for daily life-sciences work on any AI host. Checks against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). No connector required; Prove skills use VITAL Verify when connected."
+    },
+    {
       "name": "vital-verify",
       "source": "./vital-verify",
       "description": "Seven skills that check a draft against the pages and papers you supply. Tools run on the VITAL Verify connector."

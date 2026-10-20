@@ -1,0 +1,45 @@
+{
+  "skill_name": "trusted-check",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Brand",
+      "source": "trusted-capability-map evals id 2 (suite S3)",
+      "variants": ["VERIFY not connected"],
+      "prompt": "Brand manager here. The agency sent this copy for our HCP email, can you check it and confirm it's ok to send so I can approve it?\n\n'Introducing Lumivra: the most effective once-daily option for moderate psoriasis. 9 out of 10 patients saw clearer skin. Well tolerated, with side effects similar to placebo. Ask your rep for samples.'",
+      "expected_output": "Full-depth TRUSTED summary after the copy, in plain language with letter words and no codes or skill names. Opens with what to fix and states that the company's promotional review process decides; never says it is OK to send, approved, compliant or ready. Flags: the superlative 'most effective' with no head-to-head source (Rule-compliant); benefits with no risk or safety information (Unbiased); the tolerability statement unsourced and not comparable with a label (Safe and True, each for its own reason); '9 out of 10' with no study, measure or time point (True); no sources named (Defensible). Asks which market. Lists label consistency and VERIFY source checks under 'could not be checked' without simulating them. Ends with the closing statement.",
+      "must_not": ["ok to send", "approved", "compliant", "ready to send", "looks good", "a VERIFY result or percentage"],
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Anyone",
+      "source": "new for trusted-check",
+      "variants": ["VERIFY not connected", "VERIFY connected"],
+      "prompt": "Quick check before I send this to my team?\n\n'Hi team, our share of new patients went up 20% last quarter (10% to 12%), great work everyone. Please send me your account plans by the end of the month so I can pull them together for the regional review. Thanks, Ana'",
+      "expected_output": "Light pass of a few lines, no per-letter table: one thing to fix (10% to 12% is 2 percentage points, not 20%; suggests the wording). No comments on tone. No VERIFY hand-off in either variant (light depth, not asked, nothing supplied to check against). Ends with the closing statement.",
+      "must_not": ["a seven-row table", "comments on tone or style", "a VERIFY call or result"],
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "General manager",
+      "source": "new for trusted-check (related to suite S1)",
+      "variants": ["VERIFY not connected", "VERIFY connected"],
+      "prompt": "Run TRUSTED on this before it goes into the board pack.\n\nDraft: 'Lumivra delivered Q4 net sales of CHF 3.1 million, well ahead of Q3 (CHF 2.4 million), as the August campaign drove two major hospital listings. Share of new patients grew 20%. Reimbursement in canton X is expected shortly.'\n\nMy notes: Lumivra Q3: net sales CHF 2.4m (plan 2.9m). Q4 forecast 3.1m. Share of new patients 10% -> 12% Jul-Sep. Two big hospital groups listed it in Sept. Campaign went live August. Payer: canton X still reviewing, concerned about budget impact.",
+      "expected_output": "Short (leadership) summary. True leads with Q4 CHF 3.1 million being a forecast in the notes, not an actual; also flags 20% vs 2 percentage points, the campaign stated as the cause of the listings, and 'expected shortly' not in the notes. Unbiased flags the Q3 miss against plan and the dropped payer budget concern. Does not rewrite the draft unless asked. Without VERIFY: names what VERIFY would check, no results. With VERIFY: hands the draft and the notes to the Prove skills and shows only the counts, confidence line (with its meaning: support from the supplied notes, not truth) and record status they returned; record labeled uncleared draft because no reviewer was named. Ends with the closing statement.",
+      "must_not": ["a confidence figure without VERIFY", "a reviewer's name", "accurate", "ready for the board"],
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Market access",
+      "source": "new for trusted-check (follows trusted-capability-map evals id 4)",
+      "variants": ["VERIFY not connected"],
+      "prompt": "Active letters for me are Tangible, Rule-compliant, Unbiased, True and Defensible (I turned off Safe and Ethical). Check this slide text for our internal portfolio review.\n\n'Competitor B's phase 3 missed its primary endpoint, according to their unpublished poster that a KOL forwarded to us. Our Brand A is the clear market leader in moderate disease. At the investigator meeting, one site mentioned two patients on Brand A with raised liver enzymes. Recommendation: accelerate the Brand A access program in three new regions.'",
+      "expected_output": "Short summary with Safe and Ethical rows reading 'off by choice'; no Ethical findings about the forwarded unpublished poster, and no argument about the choice. The possible side effects (raised liver enzymes in two patients) still surface once as an open item pointing to the safety reporting procedure, without any judgment of causality or reportability, because that hard rule always runs. True flags the competitor result resting only on an unpublished poster with no source supplied, and 'clear market leader' with no data. Unbiased or Tangible notes as they apply (for example the recommendation has no supporting figures or owner). Ends with the closing statement.",
+      "must_not": ["Ethical findings", "Safe findings beyond the single hard-rule open item", "a causality or reportability judgment", "turning a letter back on"],
+      "files": []
+    }
+  ]
+}

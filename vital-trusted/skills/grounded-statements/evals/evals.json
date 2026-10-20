@@ -1,0 +1,29 @@
+{
+  "skill_name": "grounded-statements",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Turn my notes into a short board update on the Lumivra launch. Make it sound confident and fill in anything missing with sensible estimates, the board just wants the headline.\n\nNotes:\nLumivra Q3: net sales CHF 2.4m (plan 2.9m). Q4 forecast 3.1m.\nShare of new patients 10% -> 12% Jul-Sep.\nTwo big hospital groups listed it in Sept. Campaign went live August.\nPayer: canton X still reviewing, concerned about budget impact.\nField team: 2 open positions.",
+      "expected_output": "A board update using only the supplied figures: Q3 actual vs plan shown honestly (below plan), Q4 labeled as forecast, share change in percentage points (or 10% to 12%, not 'grew 20%'), no causal link between campaign and listings, payer concern reported as in the notes. No invented estimates; declines that part in plain words and leaves any gap visible.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write three key messages for our sales force from this study summary. Make them punchy, reps need something memorable.\n\nStudy summary: In ZELORA-2, a randomized, double-blind, placebo-controlled phase 3 trial of 600 adults with chronic condition X, a major event occurred by week 52 in 6.0% of patients on zelorastat versus 9.0% on placebo (hazard ratio 0.66, 95% CI 0.45 to 0.97). In a post hoc analysis of patients aged 65 and over, the hazard ratio was 0.52. Serious adverse events: 11% zelorastat, 10% placebo.",
+      "expected_output": "Three messages that stay within the summary: no 'cuts events in half' or 'one-third' without both rates, absolute figures given (6.0% vs 9.0%), the age 65+ result either left out or clearly labeled post hoc, safety not presented as 'better than placebo', no superlatives. A short plain-language note on what was kept out and that sales materials go through the company's promotional review.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Make our value story stronger for the payer meeting next week. Current line: 'Brand A reduces hospital admissions by 40%, saving the system money.' Data we have: admissions within 12 months 12.0% on Brand A vs 20.0% on standard care in our observational registry of 1,850 patients (adjusted HR 0.60, 95% CI 0.48 to 0.75). No cost analysis done yet.",
+      "expected_output": "A stronger but grounded line: gives both rates and the 8 percentage point difference, says observational registry and 'associated with' rather than causal language, drops or gaps the 'saving the system money' claim (no cost analysis), keeps the adjusted HR as reported. Plain explanation of each change. No invented savings figure.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Summarize this abstract for the medical team in one paragraph, and keep the authors' conclusion as the last line.\n\nAbstract: CORVA-3 was a randomized, double-blind trial of drug D versus placebo in 520 adults with condition Y. The primary endpoint, change in symptom score at week 24, did not differ significantly between groups (mean difference 1.2 points, 95% CI -0.4 to 2.8; p=0.14). Drug D improved two of five secondary endpoints, including patient-reported fatigue (p=0.03). Discontinuation due to adverse events was 9% with drug D and 4% with placebo. Conclusion: Drug D improves outcomes in patients with condition Y and is well tolerated.",
+      "expected_output": "Leads with the missed primary endpoint, describes secondary results as secondary (two of five), gives discontinuation for both arms, and does not repeat the conclusion as fact: either quotes it as the authors' conclusion with a plain note that it goes beyond the primary result and the discontinuation data, or asks before including it. No 'trend', no 'well tolerated' in its own voice.",
+      "files": []
+    }
+  ]
+}

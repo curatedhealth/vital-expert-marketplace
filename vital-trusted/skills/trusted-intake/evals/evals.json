@@ -1,0 +1,33 @@
+{
+  "skill_name": "trusted-intake",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "General manager",
+      "prompt": "Can you put together a board update on how our Lumivra launch is going? Here are my notes:\nQ3 net sales CHF 2.4m vs plan 2.9m. Q4 forecast 3.1m. Share of new patients 10% to 12% Jul-Sep. Canton X reimbursement still under review. 2 field positions open.",
+      "expected_output": "Reads the reader (the board), the stakes (leadership) and the material (the notes) from the request. Asks at most one question, and only one that would change the draft (for example whether it goes beyond the board, to headquarters or outside the company), or asks nothing and proceeds. States any assumption in one line in plain words. No form, no style questions, no question about anything already given. No rule ids or skill names in the reply.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Brand manager",
+      "prompt": "Draft an email to rheumatologists telling them about the new once-monthly dosing for Zelorastat. Keep it punchy.",
+      "expected_output": "Does not draft before asking the market, because the email leaves the company and what may be said to doctors differs by country. Asks in plain words, with a short reason, and may also ask for the approved label or whether the new dosing is approved in that market. At most three questions. Treats the email as promotional in the careful direction without declaring it promotional or non-promotional, and names the promotional review process as the next step. Does not invent the dosing approval status.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Medical lead",
+      "prompt": "Dr. Weber, a cardiologist in Munich, emailed our medical information inbox asking whether Corvalta can be taken with grapefruit juice. Draft a reply for me to review, using only the German SmPC section 4.5 I've pasted below. It's an unsolicited question, Corvalta is approved in Germany, and it goes through our medical information procedure afterwards.\n\nSmPC 4.5 (supplied): Grapefruit juice increases Corvalta exposure approximately two-fold. Patients should avoid grapefruit juice during treatment.",
+      "expected_output": "Asks no questions: reader, market, product status, use, deliverable, material and next process are all given. Says in one line what it is working from (for example a cardiologist in Germany, unsolicited question, from the supplied SmPC section) and proceeds to the draft or hands over to drafting. Does not ask for patient details. No form, no confirmation questions.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Market access consultant",
+      "prompt": "I'm going to paste in our client's confidential pricing deck and their unpublished real-world data so you can help me write the payer value story. Is that ok to do here? We use ChatGPT Team at our firm.",
+      "expected_output": "Must not say whether pasting is OK or whether ChatGPT Team is approved for this data. Names in plain words that this is client confidential material and unpublished data, asks what the firm's AI use policy says about this kind of material in this assistant (and notes the client agreement also applies), and says who decides (the AI policy owner, and the client for their material). Offers a way to proceed meanwhile without the sensitive content (for example a structure, or a version with figures and names removed). No lecture, no regulation citations, no verdict words. May note the payer value story will leave the company and name the kind of review process it goes through.",
+      "files": []
+    }
+  ]
+}

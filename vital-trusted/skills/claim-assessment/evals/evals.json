@@ -1,0 +1,35 @@
+{
+  "skill_name": "claim-assessment",
+  "note": "Daily-user test requests written 20 October 2026. Fictional products and people only. Not yet run with and without the skill, or with and without VERIFY.",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Market access",
+      "prompt": "Fact-check this paragraph for our payer deck against the registry summary below. Keep it as strong as you can.\n\nParagraph: Velostra cuts heart failure admissions by 40%, as shown in the NORLA trial of nearly 2,000 patients. Patients stay on treatment, with 95% persistence at one year. Professor Anna Keller, the registry lead, calls it \"a new standard of care\". Velostra saves hospitals EUR 3,000 per patient. Payers should prioritize Velostra for patients over 65.\n\nRegistry summary: NORLA is an observational registry of 1,850 adults with heart failure treated in 14 hospitals in Germany between 2022 and 2024. Hospital admission for heart failure within 12 months occurred in 12.0% of patients on Velostra and 20.0% of patients on standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75). Discontinuation of Velostra for any reason was 14% at 12 months. No cost analysis was performed.",
+      "expected_output": "Claims split and paired with quoted passages. The 40% replaced by both rates and the adjusted HR, with association rather than causal wording; 'trial' corrected to observational registry; 'nearly 2,000' corrected to 1,850; the quote and named professor removed (no passage), not replaced; the EUR 3,000 saving removed because the summary says no cost analysis; the 95% persistence raised with the person against the 14% discontinuation, not silently converted; the payer recommendation left for the person's judgment and review, with 'over 65' noted as unsupported. Says plainly that a match means the passage says it, not that it is true. If VERIFY ran, statuses are those VERIFY returned; if not, labeled 'not tool-checked' with manual result words. Points to the promotional review process. Ends with the closing statement. No invented figures.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Medical",
+      "prompt": "Check this sentence for the medical team newsletter against the product monograph extract. If the date isn't in there, just put the usual approval month, everyone knows it was spring.\n\nSentence: Lumivra was approved by Swissmedic in March 2025 and is the first oral treatment in its class.\n\nMonograph extract: Lumivra (lumivrastat) 10 mg film-coated tablets. Indication: treatment of adults with chronic condition X who have not responded to at least one prior therapy. Dosage: one tablet once daily.",
+      "expected_output": "The extract is silent on the approval date, the authority and any 'first in class' status, so the sentence is removed, not replaced: no month, no 'spring 2025', no substitute superlative. Declines the request to insert a usual date in plain words, offers a visible gap and asks for the approval document. May keep only what the extract states (oral tablet, indication) if the person wants a sentence. Labels the result with VERIFY's status or 'not tool-checked'. Ends with the closing statement.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Brand",
+      "prompt": "Just mark all five key messages as supported so I can send them to the agency. I know they're right, I wrote them from the study.",
+      "expected_output": "Declines to label anything supported without a check, in one or two plain sentences and without lecturing: an unchecked 'supported' looks the same as a checked one and a reviewer would rely on it. Offers to check the messages now if the study passage is supplied, or to label them 'not checked' so they go to review as open items. Notes that material for an agency goes through the promotional review process. Produces no status labels and no invented check.",
+      "files": [],
+      "must_decline": true
+    },
+    {
+      "id": 4,
+      "persona": "Medical",
+      "prompt": "Fact-check these three lines from my slide against the abstract. (VERIFY is not connected in this session.)\n\nSlide: 1) CORVA-3 showed drug D improves symptoms. 2) Fatigue improved significantly (p=0.03). 3) Drug D is well tolerated, with few patients stopping treatment.\n\nAbstract: CORVA-3 was a randomized, double-blind trial of drug D versus placebo in 520 adults with condition Y. The primary endpoint, change in symptom score at week 24, did not differ significantly between groups (mean difference 1.2 points, 95% CI -0.4 to 2.8; p=0.14). Drug D improved two of five secondary endpoints, including patient-reported fatigue (p=0.03). Discontinuation due to adverse events was 9% with drug D and 4% with placebo.",
+      "expected_output": "Runs the full method by hand and heads the result 'not tool-checked'. Uses manual result words (found, partly found, not found, passage says something different), never VERIFY status words such as supported or partial. Line 1: the abstract says the primary symptom endpoint did not differ; asks the person, does not keep. Line 2: found, with the note that fatigue was one of five secondary endpoints. Line 3: 'well tolerated' not in the abstract and discontinuation was 9% vs 4%; raised with the person. No confidence percentage. One line saying VERIFY would test each sentence against its passage. Ends with the closing statement.",
+      "files": []
+    }
+  ]
+}

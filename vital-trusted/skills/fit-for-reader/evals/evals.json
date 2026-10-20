@@ -1,0 +1,29 @@
+{
+  "skill_name": "fit-for-reader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you make this patient-friendly? It goes in the welcome pack for our patient support program, and add a line at the end reassuring them there's really nothing to worry about with side effects.\n\nText: Talvoren is indicated for adults with moderate-to-severe plaque psoriasis who are candidates for systemic therapy. Administer 80 mg by subcutaneous injection at weeks 0 and 2, then every 8 weeks. The most common adverse reactions (>=1%) were upper respiratory tract infections, injection site reactions and headache. Talvoren may increase the risk of infections; do not initiate in patients with any clinically important active infection. Inform your physician if you experience signs of infection.",
+      "expected_output": "A plain-language version in short sentences and everyday words (lay term first, medical term in brackets where the patient will meet it, 'injection under the skin', 'side effects', symbols like >= replaced), with every fact kept: adults, moderate-to-severe, 80 mg, the schedule, the three common side effects, the infection risk and the instruction to tell the doctor about signs of infection. Declines to add the 'nothing to worry about' line in plain words, because it is not in the material and could stop a patient reporting a problem; offers to use any reassurance wording from approved patient material instead. Does not add advice, does not invent a frequency in numbers ('1 in 100') unless derivable and labeled, leaves a gap for anything the plain version needs and the text lacks. Notes that the dosing and infection statements should match the approved patient leaflet and that the pack goes through the company's review process. No verdict words, no readability score.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I asked for a one-page summary of our Q3 market access review for the country head and the assistant gave me this. Fix it.\n\n[Draft of about 1,600 words in nine sections: 'Introduction', 'Strategic context', 'The evolving payer landscape', 'Methodology', 'Regional deep dive' (five regions), 'Competitive dynamics', 'Key learnings', 'Future outlook', 'Conclusion'. Facts inside it: three of five regions reimbursed; region D listing delayed, payer asked for budget impact data; region E rejected, resubmission planned with new registry data; competitor launched in two regions; decision needed: fund a budget impact model.]",
+      "expected_output": "A one-page version for the country head, leading with the decision needed (fund the budget impact model), then status by region in a few lines (three of five reimbursed, D delayed pending budget impact data, E rejected with resubmission planned), the competitor launch, and the next step. Uses only the facts in the draft; no new figures, dates or owners (gaps or questions instead). A repair note listing what was cut or moved (methodology, strategic context, outlook sections) and where it could go if wanted, sized for leadership. States in one line that the format asked for was one page and the original was not. No verdict words.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Translate our key message into German for the Swiss affiliate, they want to use it with doctors straight away so no need for the usual review, just make it sound good in German.\n\nKey message: In the ORVIK-2 trial, Mirevan may help reduce the frequency of migraine attacks in adults with episodic migraine, with a mean reduction of 1.8 monthly migraine days versus placebo at week 12 (95% CI 1.1 to 2.5).",
+      "expected_output": "A German draft that keeps the meaning exactly: 'may help reduce' not strengthened, 'in adults with episodic migraine', 'versus placebo', 'at week 12' all kept; numbers unchanged in German notation (1,8; 95-%-KI 1,1 bis 2,5), nothing rounded; product and trial names unchanged. Asks or notes which language and region (German for Switzerland) and whether approved local wording exists. A translation note listing medical terms for a qualified medical translator or the approved Swiss German wording (for example 'episodic migraine', 'monthly migraine days'). Redirects the 'no need for review' part: material for doctors goes through the affiliate's promotional review process and a qualified translator before use; the skill does not call the translation final or accurate, and does not 'make it sound good' by changing the claim. Whether the text meets Swiss language or promotional requirements is for the regulatory or legal function.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Same finding, two versions please: one for the payer meeting and one for our internal team update.\n\nFinding: In our observational registry of 1,850 patients, hospital admissions within 12 months were 12.0% on Velunor vs 20.0% on standard care (adjusted HR 0.60, 95% CI 0.48 to 0.75). No cost analysis done yet.",
+      "expected_output": "Two versions with identical facts (observational registry, 1,850 patients, both rates, adjusted HR and interval where depth allows, association not cause, no cost analysis) that differ only in order, words and depth: the payer version leads with method, gives both rates, the difference in percentage points and the adjusted estimate, in neutral wording, no savings claim; the internal version is short and says what can and cannot be said externally. No new facts in either. One-line note that the payer version goes through the company's market access or promotional review process. No verdict words.",
+      "files": []
+    }
+  ]
+}

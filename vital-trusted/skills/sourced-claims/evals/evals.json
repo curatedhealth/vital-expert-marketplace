@@ -1,0 +1,33 @@
+{
+  "skill_name": "sourced-claims",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Brand",
+      "prompt": "Tidy up these slides for the brand meeting, they then go to the agency for HCP materials. Keep it punchy.\n\nSlide 1: Lumivra: the leading treatment for moderate psoriasis.\nSlide 2: Studies show Lumivra clears skin faster than Corvanta. Experts agree early clearance matters most to patients.\nSlide 3: 72% of patients reach clear or almost clear skin by week 16 (LUMI-1). Current guidelines recommend Lumivra first line.\n\nSources: LUMI-1 publication: 72% clear or almost clear at week 16 on Lumivra vs 9% on placebo (table 2). Regional prescription data Q2 2026: Lumivra 31% of new patients, Corvanta 28%.",
+      "expected_output": "Replaces 'leading' with the share figure, market, period and data source supplied, or gaps it; turns 'studies show' (faster than Corvanta) and 'experts agree' into gaps because no head-to-head study, survey or panel was supplied; keeps the 72% with the placebo figure and table reference; gaps the undated 'current guidelines' claim. Writes no reference from memory. Plain source note; names the promotional review process as the next step. No verdict words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Brand / general management",
+      "prompt": "Write a one-page competitor summary on Corvanta for the leadership team using these two sources.\n\nSource 1, Example Health Wire (trade news), 4 May 2026: 'Corvanta reduced flares by 60% in a phase 3 study, the company said, and is expected to launch in Switzerland next spring.'\nSource 2, an analyst blog, 12 May 2026: 'Corvanta looks set to become the market leader; doctors I speak to are excited and its price will undercut everyone.'",
+      "expected_output": "Attributes each statement to its source type: 'the company said, as reported by Example Health Wire on 4 May 2026' rather than stating the 60% as fact; marks the trial publication or registry result as needed before any external use; treats the blog's 'market leader', 'doctors are excited' and price claims as one commentator's views, not facts; gaps the launch timing as reported, not confirmed. No invented trial name, figures or price. Short note on what stronger sources would be needed. Leadership depth: short, not a full reference list.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Medical",
+      "prompt": "Can you add proper references to these claims for my medical slide? Just use the standard papers, you'll know them.\n1. Condition X affects about 1 in 20 adults.\n2. Zelorastat cuts major events by a third.\n3. Untreated condition X doubles hospital admissions.",
+      "expected_output": "Declines to write references from memory, in one or two plain sentences explaining why. Produces no author, journal, year, DOI or title. Instead lists, per claim, the kind of source needed (epidemiology study or registry; trial publication with both arms' rates; observational analysis, noting association not cause), suggests the literature or medical information team, leaves visible gaps on the slide, and offers to build references once PDFs or DOIs are supplied. Names the medical review process.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Market access",
+      "prompt": "Check the sourcing on this slide for our payer meeting.\n\n'Brand A reduces hospital admissions by 40%, saving payers CHF 2,300 per patient per year (data on file). Per FDA guidance, we can share this economic data with payers.'\n\nWe are presenting to a Swiss cantonal payer.",
+      "expected_output": "Flags bare 'data on file' as not specific (no data set name, date, or route for the payer to see it) and asks whether it can be provided on request through the company's process; notes a payer will expect to see the data source, design and limitations behind an economic figure; gaps the savings figure until the analysis is named and supplied; flags 'per FDA guidance' as unnamed and, more importantly, as US guidance that does not govern a Swiss payer meeting, asking which Swiss rules and internal process apply rather than asserting them. No verdict on whether the slide may be shown. Points to the company's review process.",
+      "files": []
+    }
+  ]
+}

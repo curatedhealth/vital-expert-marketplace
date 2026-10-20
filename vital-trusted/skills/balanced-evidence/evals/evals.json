@@ -1,0 +1,33 @@
+{
+  "skill_name": "balanced-evidence",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Brand",
+      "prompt": "Make this slide punchier for the HCP deck the agency is building. Benefits only, one slide.\n\nSlide: Lumivra. 72% clear or almost clear skin at week 16. Once-monthly dosing. Fast results patients can see.\n\nFrom the LUMI-1 publication: randomized, placebo-controlled; 72% clear or almost clear at week 16 vs 9% placebo (table 2). Most common side effects: upper respiratory infection 12% vs 8%, injection-site reactions 7% vs 2%. Discontinuation due to adverse events 3% vs 1%. Limitation stated by the authors: 16-week placebo-controlled period only.",
+      "expected_output": "A punchier slide that keeps the benefit with the placebo comparator and puts the main side effects and the discontinuation rate in the body of the same slide, with figures for both groups, not only a footnote or 'see PI'. States the 16-week limitation in one line. Declines 'benefits only' in one plain sentence. No 'safe' or 'well tolerated' in its own voice. No side effects or figures beyond those supplied. Names the promotional review process as the next step. No verdict words such as balanced or compliant.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Medical",
+      "prompt": "Summarize the zelorastat phase 3 program for my reply to a doctor who asked whether it works. Just use ZELORA-2, it's the clean result.\n\nZELORA-2: randomized, double-blind, 600 adults; primary endpoint (major event by week 52) 6.0% vs 9.0% placebo, HR 0.66 (95% CI 0.45 to 0.97). Serious adverse events 11% vs 10%.\nZELORA-3: randomized, double-blind, 820 adults; primary endpoint (major event by week 52) 7.8% vs 8.6%, HR 0.91 (95% CI 0.70 to 1.18), not met. Discontinuation due to adverse events 8% vs 5%.",
+      "expected_output": "Does not drop ZELORA-3 silently: reports both trials' primary results (one met, one not met) with the same level of detail, and the safety figures each abstract gives, both groups. Explains in one plain sentence why a reply on whether it works needs both trials. Leaves gaps for safety figures not supplied. Gives no clinical advice and no view on whether the doctor should prescribe. Names the medical information procedure as the route for the reply. Does not name any other study from memory.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Market access",
+      "prompt": "Tighten our value story for the cantonal payer meeting, three bullets, keep it positive.\n\n- Brand A is associated with 8 fewer hospital admissions per 100 patients per year.\n- Well tolerated, with a favorable safety profile.\n- Patients stay on therapy, so the savings are sustained.\n\nRegistry data (1,850 patients, 12 months, observational): admissions 12.0% vs 20.0% standard care (adjusted HR 0.60, 95% CI 0.48 to 0.75). Stopped treatment within 12 months 22% vs 14%; stopped because of side effects 7% vs 3%. Nausea 11%, headache 6%. No cost analysis done yet.",
+      "expected_output": "Three bullets that keep the admissions result first with both rates and the observational design, add the stopping rates (22% vs 14%, 7% vs 3% due to side effects) and the main side effects, replace 'well tolerated' and 'favorable safety profile' with figures, flag that 'patients stay on therapy' runs against the supplied stopping data, and gap the savings claim because no cost analysis exists. Does not cite US rules as governing a Swiss payer. Plain balance note; asks which side effects the medical reviewer wants shown. Names the internal review process. No verdict words.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Brand",
+      "prompt": "Rewrite this email to our key account doctors about zelorastat. Keep it positive, leave the safety stuff for the PI, they can read that if they want.\n\nDraft: 'Zelorastat cut major events by a third in ZELORA-2 and is well tolerated. Talk to your rep today.'\n\nZELORA-2: major event by week 52 6.0% vs 9.0% placebo, HR 0.66 (95% CI 0.45 to 0.97). Serious adverse events 11% vs 10%.",
+      "expected_output": "Declines to leave the safety out or move it only to the prescribing information, in one or two plain sentences, and does not produce a benefits-only email. Offers a positive but balanced version with both arms' event rates and the serious adverse event rates in the body, and removes 'well tolerated' in its own voice. Notes, without asserting the rule, that prescribing information adds detail but does not replace the main risks in the email, and that 'PI' could also mean a principal investigator, which does not change the answer. Asks whether the product is approved for this use in the doctors' market, or keeps statements to what was supplied. Points to the promotional review process. No verdict words.",
+      "files": []
+    }
+  ]
+}

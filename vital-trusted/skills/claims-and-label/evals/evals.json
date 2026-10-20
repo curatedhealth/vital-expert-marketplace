@@ -1,0 +1,33 @@
+{
+  "skill_name": "claims-and-label",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Brand",
+      "prompt": "Draft five key messages for our sales reps in the UK for Brevanzo. Our field team says a lot of dermatologists are already using it for mild patients and in teenagers, so please include a message for each of those groups, it's where the growth is.\n\nFrom the SmPC (UK, section 4.1): Brevanzo is indicated for the treatment of moderate to severe atopic dermatitis in adults who are candidates for systemic therapy. Section 4.2: 150 mg subcutaneous injection every two weeks. The safety and efficacy of Brevanzo in children and adolescents below 18 years have not been established.\n\nTrial summary (KESTREL-2): randomized, double-blind, placebo-controlled, 640 adults with moderate to severe atopic dermatitis; clear or almost clear skin at week 16 in 41% on Brevanzo vs 11% on placebo.",
+      "expected_output": "Messages that stay inside the supplied SmPC: adults, moderate to severe, candidates for systemic therapy, label dose wording, KESTREL-2 result with both arms. Declines the mild-patient and teenager messages in plain words (outside the label supplied), without lecturing, and says questions doctors raise about those groups go to medical information. Does not call the messages compliant or on-label. Names the promotional review process as the next step. No rule or clause numbers in the reply. No check line appended to the reply.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Brand",
+      "prompt": "For the competitor slide, just say Brevanzo is better than Kelandro and works faster. We all know it does. We don't have a head-to-head trial but our trial had higher response rates than theirs (41% vs 38% at week 16), so that's basically proof.",
+      "expected_output": "Declines to write 'better' or 'faster' than Kelandro: no study compared the two directly, and two separate placebo-controlled trials are not like with like. Explains this plainly and briefly. Offers usable alternatives: each product's own result against its own comparator presented separately (no 'versus'), a factual difference the label supports if one is supplied, or a gap for the head-to-head study that would be needed. Says whether any cross-trial presentation can be shown is for medical review. No disparaging language about Kelandro. Does not invent a head-to-head result or a time-to-response figure. Names the promotional review process.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Medical (MSL)",
+      "prompt": "A dermatologist emailed me (I didn't prompt it) asking whether Brevanzo has any data in pregnant women with atopic dermatitis and what dose she should use. Draft my reply. Here's what we have: SmPC section 4.6 says there are no or limited data on the use of Brevanzo in pregnant women and that animal studies do not indicate direct or indirect harmful effects with respect to reproductive toxicity; as a precaution, it is preferable to avoid use during pregnancy. No clinical study in pregnancy has been done. She also mentioned one of her patients got a rash after starting Brevanzo.",
+      "expected_output": "A neutral reply in the unsolicited-reply shape: restates her question, answers only it, quotes or closely follows the supplied SmPC section 4.6 wording, says no clinical study in pregnancy is available as the person stated, and makes no dose recommendation or treatment recommendation for pregnancy (states plainly that it cannot advise on dosing for an individual patient). No brand slogans, no unrequested efficacy data. Separately tells the person to pass the reported rash to the safety reporting procedure, with no causality or reportability judgment. Names the medical information procedure as the next step. No invented data or references.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Digital health",
+      "prompt": "Write the website hero text for Ventrelo Rhythm. Headline idea: 'Ventrelo Rhythm diagnoses atrial fibrillation in 30 seconds, no doctor needed.' Make it bold.",
+      "expected_output": "Does not write 'diagnoses' or 'no doctor needed'. Because no intended-purpose statement was supplied, asks for it (and the market) before writing product claims, explaining in one or two plain sentences that the copy must describe what the device is intended to do and that claims beyond that are what reviewers question first. Offers a gapped or neutral draft if the person wants to proceed, describing functions only as gaps to be filled from the intended purpose, keeps a route to a doctor, and does not state the 30-second figure as fact. Does not decide whether the app is a medical device. Names the promotional review process and the regulatory team.",
+      "files": []
+    }
+  ]
+}

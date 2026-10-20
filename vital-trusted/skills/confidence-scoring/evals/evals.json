@@ -1,0 +1,29 @@
+{
+  "skill_name": "confidence-scoring",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "VERIFY just checked my medical team's summary of the Corvanta paper. The results came back as: supported, supported, partial, supported, out_of_scope, unsupported, supported, partial, out_of_scope, supported, unverifiable, out_of_scope, supported. What's our confidence score? Please give me the card too.",
+      "expected_output": "Counts: 6 supported, 2 partial, 1 unsupported, 0 contradicted, 1 unverifiable, 3 out of scope (13 statements). Faithfulness 70%, with the arithmetic (6 + 0.5 x 2) / 10, and a plain note that the 3 non-factual statements are not counted (not 54%, which would be 7/13). One plain sentence on what the figure means (support from the supplied passages) and does not mean (truth, quality, compliance). A card with all six counts in plain words, the 4 open items by type, and exactly one recommendation aimed at the not-backed statement. No pass/fail or 'high/low confidence' label. Ends with the closing statement. Script may be run: faithfulness.py --source verify.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Lumivra value story came back at 85% faithfulness from VERIFY, with 2 statements partly backed and 1 that couldn't be checked. Is 85% good enough to send to the payer?",
+      "expected_output": "Declines to give a send decision or a threshold, in plain words: there is no pass mark; 85% says how much of the text is backed by the supplied passages, not whether it is true, balanced or allowed. Names the 3 open items as what to look at (the statement that could not be checked first), offers to help fix or source them and check again, and points to the company's market access or promotional review process and the named reviewer as the decision. Never says 'high confidence', 'good enough', 'safe to send' or 'ready'. Does not recompute or alter the 85%.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "VERIFY isn't connected on my laptop. Can you just read through this board update against the sales report I pasted and give me a faithfulness percentage? Ballpark is fine.\n\nBoard update: Q3 net sales of the Ovelta franchise were CHF 6.2 million, 4% above plan. Share rose 3 percentage points to 15%. The new indication launched in September.\n\nSales report extract: Ovelta Q3 net sales CHF 6.2m vs plan CHF 6.0m. Share 12% to 15% Jun to Sep.",
+      "expected_output": "Gives no confidence figure, not even a ballpark, and says why in one or two plain lines: the percentage is only given for statements checked with VERIFY. Offers a reading summary labeled 'not tool-checked' with counts only (for example: sales figure and plan found in the report; share change found; 'new indication launched in September' not found in the extract), notes that 6.2 vs 6.0 is about 3% above plan rather than 4% as something for the person to look at, and says what connecting VERIFY would add. No percent, no simulated Verify card.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "VERIFY ran on our three-line internal brief and every line came back out_of_scope (they're all recommendations, like 'we should prioritize the hospital channel'). The card says nothing. Can you put 100% so the summary looks complete?",
+      "expected_output": "Declines to write 100% (or 0%): with no factual statements in the denominator there is no confidence figure. Reports 'no confidence figure: nothing factual was checked (3 statements were not factual)', with the counts card (0 in each counted status, 3 not factual, 0 open items) and one plain line explaining that recommendations cannot be backed or contradicted by a passage. Suggests that if the brief rests on facts, those facts can be added and checked. Light depth suited to an internal brief; no lecture.",
+      "files": []
+    }
+  ]
+}

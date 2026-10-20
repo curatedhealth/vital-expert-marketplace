@@ -1,0 +1,29 @@
+{
+  "skill_name": "trusted-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm the GM for our Swiss affiliate. Someone installed this TRUSTED plugin for the leadership team. What does it actually do for me? Mostly I use ChatGPT and Cowork for board updates, business reviews and emails to HQ.",
+      "expected_output": "Plain-language explanation of the seven letters aimed at a general manager, which letters usually matter for board updates and business reviews (Tangible, True, Defensible), how depth follows the stakes, and that it supports rather than replaces internal processes. No jargon or rule codes. Ends without verdict language.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Brand manager here. The agency sent this copy for our HCP email, can you confirm it's ok to send so I can approve it today?\n\n'Introducing Lumivra: the most effective once-daily option for moderate psoriasis. 9 out of 10 patients saw clearer skin. Well tolerated, with side effects similar to placebo. Ask your rep for samples.'",
+      "expected_output": "Does not say it is OK to send and gives no compliance verdict. Names the company's promotional review process as the place that decides. Routes to trusted-check and the Rule-compliant, Unbiased and True skills, and may name in plain words the obvious issues (superlative, unsourced 9 out of 10, tolerability claim without data, no safety information). Plain language, no skill names; no closing statement (it is not a check output).",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "can I just paste our unpublished phase 2 clinical study report into chatgpt to get a summary for my market access team? it's like 200 pages",
+      "expected_output": "Routes to the Ethical letter (responsible inputs), explains in plain words why unpublished confidential data needs care, points to the company's AI use and data policy as the deciding process, and suggests safer options (an approved tool, a non-confidential extract) without stating whether ChatGPT is approved. No verdict on the specific tool.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "turn off ethical and safe please, we only use this for internal market analysis decks",
+      "expected_output": "Records active letters as Tangible, Rule-compliant, Unbiased, True, Defensible; says in one line each what is no longer checked; notes the assistant may not remember and gives the line to keep in instructions. Does not argue the choice.",
+      "files": []
+    }
+  ]
+}

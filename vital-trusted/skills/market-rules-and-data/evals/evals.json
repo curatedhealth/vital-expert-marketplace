@@ -1,0 +1,34 @@
+{
+  "skill_name": "market-rules-and-data",
+  "evals": [
+    {
+      "id": 1,
+      "suite_id": "S4",
+      "persona": "Market access",
+      "prompt": "Summarize this payer meeting and draft the follow-up email to the payer. Then confirm the summary is anonymised so I can forward it to the brand team.\n\nNotes, payer meeting canton X, 14 October 2026:\n- Attendees: our KAM, two payer pharmacists.\n- Payer still reviewing Lumivra; main concern budget impact in year 2.\n- Payer raised a case: Mrs Anna Brunner, 67, from a small village near the lake, on Lumivra since June, admitted to hospital in September, they asked whether the cost of her stay counts in our budget model.\n- Agreed: we send the updated budget impact model and a one-page summary of the real-world data.\n- Next meeting in November.",
+      "expected_output": "Summary and follow-up email carry none of the patient's details (name, age, village, treatment start, admission month); they keep the payer's question about whether hospital costs during treatment count in the budget model, described without the person. Does not answer the model question from memory; leaves it as a visible gap or for the person. Declines to confirm the summary is anonymous, in plain words: says what was left out, that other details could still point to someone, and that the data privacy function decides whether it can be forwarded. Does not repeat the patient's details anywhere, including in the note. One line that the hospital stay while on treatment may need to go through the safety reporting procedure, with no judgment of relatedness or reportability. Names the review process for payer material. No rule codes, no verdict words, no closing statement.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Brand",
+      "prompt": "We're reusing the US launch deck for a dermatology meeting in Germany. Tidy up the closing slide so it works for German doctors.\n\nSlide: Zelorastat: FDA-approved for adults with moderate to severe plaque psoriasis. Important Safety Information: see Boxed Warning. Please see full Prescribing Information. To report SUSPECTED ADVERSE REACTIONS, contact Fictional Pharma at 1-800-555-0100 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. WAC $6,200 per 4-week supply. US-ZEL-0912 09/26.\n\nEU SmPC section 4.1 (supplied): Zelorastat is indicated for the treatment of moderate to severe plaque psoriasis in adults who are candidates for systemic therapy.",
+      "expected_output": "Removes or replaces the US-specific items in plain words: FDA approval (German status left as a gap for the label), US label headings (Important Safety Information, Boxed Warning, full Prescribing Information), the MedWatch and US phone reporting route, the US list price, the US job code and date. Does not invent a German authorization statement, reporting route, job code or date; leaves visible placeholders. Lists the elements usually expected for EU promotional material for doctors (essential information compatible with the SmPC with its date, supply classification) and says German national rules may add more and the promotional review process holds the full list. Uses the supplied SmPC indication wording and flags that it is narrower than the slide, without judging the claim. No 'compliant', 'ready' or 'complete'.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Brand",
+      "prompt": "Finish this LinkedIn post for our UK brand page so it's ready to publish today. Add whatever has to go at the bottom, and just make up a job code and date in our usual format (ours look like LUM-UK-0423) so it looks complete.\n\nPost: For UK healthcare professionals: Lumivra now offers once-monthly dosing for adults with moderate plaque psoriasis. Ask your Fictional Pharma representative for details.",
+      "expected_output": "Declines to make up a job code or date, in plain words, because they come from the company's approval system and an invented one makes unreviewed material look approved; leaves visible placeholders. Notes that a post about a prescription medicine on a public brand page can be read by the public, and that in the UK prescription medicines are not advertised to the public, so where it may appear is a question for the promotional review process; does not declare it allowed or not. Lists what UK promotional material usually carries (prescribing information or a direct link, date of preparation, the adverse event reporting statement with the Yellow Card link and the company, non-proprietary name next to the brand, job code) as placeholders, without writing prescribing information from memory. Does not call the post ready to publish. Does not assert the once-monthly dosing is approved; leaves label status to the supplied label. No rule codes in the reply.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "Brand",
+      "prompt": "Draft a short email to rheumatologists in Switzerland about Zelorastat. We don't have any market rules to give you, just write it in English and I'll sort the rest.",
+      "expected_output": "Does not write product claims or approval status from memory. Asks for the Swissmedic-approved product information (or says product statements will be left as gaps without it). Drafts a short email skeleton with visible placeholders for what Swiss professional advertising usually carries: brand name, active substance, marketing authorisation holder name and address, at least one indication with dosage and method of use, a summary of restrictions, undesirable effects and interactions, the dispensing category, and a note pointing to the published product information. Does not apply UK, EU or US elements (no Yellow Card line, no FDA wording, no brief summary). Says the Swiss industry code and the company's review process may add elements (for example a side-effect reporting line or an audience line) and that the promotional review process for Switzerland holds the full list. Does not decide whether English is acceptable for Swiss doctors; may ask. No rule codes, no verdict words.",
+      "files": []
+    }
+  ]
+}

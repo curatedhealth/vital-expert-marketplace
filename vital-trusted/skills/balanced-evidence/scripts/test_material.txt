@@ -1,0 +1,4 @@
+LUMI-1: 72% clear or almost clear at week 16 vs 9% placebo; at week 52, 61% vs 7%.
+ZELORA-2: primary endpoint met at 52 weeks, HR 0.66.
+ZELORA-3: primary endpoint not met at week 52, HR 0.91.
+Discontinuation due to adverse events by month 12: 9% vs 4%.

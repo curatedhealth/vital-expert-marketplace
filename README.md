@@ -1,8 +1,15 @@
-# VITAL Digital Health plugins for Cowork
+# VITAL Expert plugins for Cowork
 
-Add the marketplace `curatedhealth/vital-expert-marketplace`. In Claude it shows as **from vital-expert** (Vital.Expert). Cowork does not render custom plugin icons yet; packs ship the Veˣ mark as `icon.png` for directory use only. Do not paste a file link. Each pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector.
+Add the marketplace `curatedhealth/vital-expert-marketplace`. In Claude it shows as **from vital-expert** (Vital.Expert). Cowork does not render custom plugin icons yet; packs that ship an icon keep `icon.png` for directory use only. Do not paste a file link.
 
-Each pack is one core. Market Access does not include Clinical Validation, Health Economics, or Regulatory Strategy.
+## Foundational (no library key)
+
+- **VITAL TRUSTED** (`vital-trusted`, 0.2.0). Nineteen skills for daily life-sciences work against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). No connector required. Prove skills use VITAL Verify when that connector is installed.
+- **VITAL Verify** (`vital-verify`). Connector plus seven check skills. Paste a `vvfy_` key when you have one. URL `https://mcp.vital.expert/api/mcp/verify`.
+
+## Digital Health library packs
+
+Each Digital Health pack asks for the same `vlib_` key and uses `https://mcp.vital.expert/api/mcp/library`. Do not add a second connector. Each pack is one core. Market Access does not include Clinical Validation, Health Economics, or Regulatory Strategy.
 
 ## Packs
 

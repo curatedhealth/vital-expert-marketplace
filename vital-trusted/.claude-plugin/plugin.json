@@ -1,0 +1,12 @@
+{
+  "name": "vital-trusted",
+  "version": "0.2.0",
+  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Works without any connector; the Prove skills use the VITAL Verify connector when it is connected.",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["life sciences", "pharma", "medical", "market access", "brand", "responsible AI", "evidence"],
+  "skills": "./skills"
+}

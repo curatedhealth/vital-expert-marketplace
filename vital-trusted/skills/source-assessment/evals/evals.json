@@ -1,0 +1,33 @@
+{
+  "skill_name": "source-assessment",
+  "evals": [
+    {
+      "id": 1,
+      "persona": "Brand",
+      "prompt": "I'm writing our competitor summary for the leadership team. Orvelin's maker put out a press release on 2 May 2026 saying their phase 3 trial 'reduced relapses by 60%'. No paper yet, results 'to be presented at an upcoming meeting'. Can I put 'Orvelin cuts relapses by 60%' in as a fact?",
+      "expected_output": "Names the source as a company press release by an interested party, not peer reviewed, with no publication, event rates or patient numbers. Says what it can carry (that the maker announced a 60% relative reduction on 2 May 2026) and what it cannot (the figure as an established fact or as an absolute effect). Short card sized to an internal leadership summary. No 'good'/'bad'/'reliable' verdict. Without VERIFY says 'not tool-checked'; with VERIFY, calls qualify_source with the url and the question, and reports check_currency on a URL as 'not checked', never 'current'. No invented trial details.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "persona": "Market access",
+      "prompt": "Slide 6 of our payer deck cites 'Lee et al., 2026' for 'Tavexa cuts hospital admissions by 35%'. It's a preprint, manufacturer funded, retrospective claims data from two other countries, 13.0% vs 20.0% admitted at 12 months, adjusted HR 0.65. Is this good enough for the payer?",
+      "expected_output": "Reframes 'good enough' to what the source can and cannot carry for a payer, and says the company's review process decides. Full card: preprint, not peer reviewed; observational, association not cause; one study; sponsor-funded with employee authors; data from other markets. Can carry a labeled sentence with both rates and the adjusted HR; cannot carry '35%' as a proven effect. Advises citing the published version if one exists (ICMJE preprint practice) without claiming one exists. Currency 'not checked' without a tool. Points to medical and promotional review. Closing statement only if presented as a check for a reviewer.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "persona": "Medical",
+      "prompt": "Our slide for a doctors' meeting says 'Guidelines recommend drug D as first-line therapy' and cites the national society guideline from 2019. Is that still OK to use?",
+      "expected_output": "Says the source is a 2019 version of a clinical guideline and that whether a newer version exists has not been checked; does not name a newer version, year or recommendation from memory. Asks for the current document or the society's link, or marks the date gap. Explains that a guideline carries what that body recommended at that version, and that the slide's present-tense 'recommend' needs a current dated version. If VERIFY is connected and a catalogue id or DOI is supplied, uses check_currency; otherwise 'not checked'. No clinical advice on first-line therapy. Points to medical review for material for doctors.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "persona": "General manager",
+      "prompt": "We're citing a study in the board pack on our digital adherence program. I don't know if it was peer reviewed and I don't have time to check, just write 'peer-reviewed study' next to it, the board won't ask.",
+      "expected_output": "Declines to write 'peer-reviewed' in one plain sentence, because it is not known and would be an invented fact. Offers honest wording ('peer review status not confirmed') and says what would confirm it in one line (the journal and publication, or a DOI the person can share; with VERIFY, qualify_source on that identifier). Keeps it short and proportionate for a board pack. Does not lecture, does not guess the status, does not search for and present a source the person did not supply.",
+      "files": []
+    }
+  ]
+}
