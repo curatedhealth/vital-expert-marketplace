@@ -1,0 +1,24 @@
+{
+  "measured": "19 October 2026",
+  "calls": [
+    {"call": "literature.search_literature {query: \"digital cognitive behavioural therapy for insomnia Sleepio randomized controlled trial\", limit: 5}",
+     "result_trimmed": [
+      {"doi": "10.1016/j.cct.2023.107337", "title": "The Sleepio After Cancer (SAC) study ... Trial protocol of a randomised controlled trial", "design": "rct", "design_confidence": 0.78, "publication_type_raw": ["crossref:journal-article", "Clinical Trial Protocol", "Journal Article"], "trial_ids": []},
+      {"doi": "10.3390/ijerph23060695", "title": "Randomised Evaluation of Sleep in Cognitive Impairment Trial (REST)-Protocol for a Feasibility Study ...", "design": "rct", "design_confidence": 0.78, "publication_type_raw": ["Clinical Trial Protocol", "research-article", "Journal Article"], "trial_ids": []},
+      {"doi": "10.1093/sleep/zsaa034", "design": "rct", "trial_ids": []},
+      {"doi": "10.1001/jamapsychiatry.2019.4491", "pmid": "31968068", "pmcid": "PMC6990703", "title": "Efficacy of Digital Cognitive Behavioral Therapy for the Treatment of Insomnia Symptoms Among Pregnant Women: A Randomized Clinical Trial", "design": "rct", "design_confidence": 0.98, "trial_ids": [], "excerpt": ""},
+      {"doi": "10.1111/jsr.70317", "title": "... A Feasibility Randomised Controlled Trial", "design": "rct", "design_confidence": 0.98}
+     ],
+     "total_merged": 19, "sources_answered": ["pubmed", "europepmc", "openalex", "crossref", "biorxiv"]},
+    {"call": "literature.get_record {doi: \"10.1001/jamapsychiatry.2019.4491\"}",
+     "result_trimmed": {"found": true, "design": "rct", "design_confidence": 0.98, "retraction_status": "none", "trial_ids": [], "record_id": "332a0e7f-1356-5ba1-b2fd-7e01210c8e47",
+       "excerpt": "Importance Despite the prevalence ... Objective To test the efficacy of digital cognitive behavioral therapy for insomnia (CBT-I) compared with standard treatment among pregnant women with insomnia symptoms. Design, setting, and participants This randomized clinical trial enrolled pregnant women from November 23, 2016, to May 22, 2018.",
+       "note_by_builder": "The excerpt stops before the Results. The abstract on Europe PMC (abstract_felder_2020.txt) names ClinicalTrials.gov NCT02805998 while trial_ids is empty."}},
+    {"call": "literature.grade_evidence {record: <the record>, standard: \"grade\", question_type: \"treatment\"}",
+     "result_trimmed": {"level": "high", "draft": true, "provisional": true, "rule": "GRADE draft: starting certainty 'high' from design 'rct'; downgrade factors left empty for a human reviewer", "factors": {"risk_of_bias": null, "inconsistency": null, "indirectness": null, "imprecision": null, "publication_bias": null}}},
+    {"call": "literature.build_evidence_table {records: [<the record>], passages: {<record_id>: <three abstract sentences>}, question: {population: \"pregnant women with insomnia symptoms\", intervention: \"digital CBT-I\", comparator: \"standard treatment\", outcome: \"Insomnia Severity Index change\"}, question_type: \"treatment\"}",
+     "result_trimmed": {"standard": "cebm2011", "evidence_level": "2", "grade_confidence": 0.98, "population": "[GAP]", "intervention": "digital CBT-I (n = 105)", "comparator": "standard treatment (n = 103) for insomnia", "effect": "Women randomized to receive digital CBT-I experienced statistically significantly greater improvements ... (time-by-grou…", "landing_url": null}},
+    {"call": "literature.check_retraction {doi: \"10.1001/jamapsychiatry.2019.4491\"}", "result_trimmed": {"status": "none", "sources_checked": ["crossref"]}},
+    {"call": "verify.check_currency {doi: \"10.1001/jamapsychiatry.2019.4491\"}", "result_trimmed": {"retracted": false, "corrected": false, "superseded": false, "withdrawn": false, "current": true, "notices": ["crossref"]}}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "_note": "Illustrative. Built only from the words of evals/evals.json eval 2 (a clinician-delivered CBT-I manual turned into an app). It shows TIDieR items filled from what the person described, with open parts marked. No study was read; every claim is [GAP].",
+  "product": "CBT-I app (illustrative, from the person's description)",
+  "version": "draft, version not given",
+  "claims": [
+    {"id": "C1", "text": "Weekly sleep-window adaptation from the sleep diary", "status": "gap", "source": {}, "population": "[GAP]"},
+    {"id": "C2", "text": "Bedtime nudge", "status": "gap", "source": {}, "population": "[GAP]"}
+  ],
+  "program_theory": {
+    "components": ["sleep restriction", "stimulus control", "cognitive restructuring", "sleep hygiene", "relapse prevention", "sleep diary", "bedtime nudge"],
+    "mechanisms": ["[GAP]"],
+    "context": ["manual is clinician-delivered; app delivery; clinician role in the app not given"],
+    "proximal_outcomes": ["[GAP]"],
+    "distal_outcome": "[GAP]"
+  },
+  "tidier": {
+    "1": "CBT for insomnia app (name not given [GAP])",
+    "2": "[GAP]",
+    "3": "[GAP]",
+    "4": "Five components from the manual: sleep restriction, stimulus control, cognitive restructuring, sleep hygiene, relapse prevention; sleep diary; bedtime nudge",
+    "5": "Clinician in the manual; the app in the product (who provided changes from clinician to app); human support role not given [GAP]",
+    "6": "App, individual",
+    "7": "[GAP]",
+    "8": "6 weekly sessions in the manual; app regimen not given [GAP]",
+    "9": "Sleep restriction window adapted weekly from the sleep diary; thresholds and step sizes [GAP]",
+    "11": "[GAP]"
+  },
+  "decision_rules": [
+    {"id": "R1", "decision_point": "weekly", "tailoring_variables": ["sleep diary entries"],
+     "options": ["widen window", "keep window", "narrow window"], "rule": "[GAP]", "missing_data": "[GAP]", "claim_ids": ["C1"]},
+    {"id": "R2", "decision_point": "nightly, before the prescribed bedtime", "tailoring_variables": ["prescribed bedtime from R1"],
+     "options": ["send nudge", "do not send"], "rule": "[GAP]", "missing_data": "[GAP]", "claim_ids": ["C2"]}
+  ],
+  "limits": []
+}

@@ -1,0 +1,22 @@
+study_id,result_id,tool,domain,judgment,note
+S1,ED visits 6 months,ROBINS-I,confounding,Serious,ILLUSTRATIVE judgments for the build test; not an assessment of any published study
+S1,ED visits 6 months,ROBINS-I,selection of participants,Moderate,
+S1,ED visits 6 months,ROBINS-I,classification of interventions,Low,
+S1,ED visits 6 months,ROBINS-I,deviations from intended interventions,Moderate,
+S1,ED visits 6 months,ROBINS-I,missing data,Serious,complete-case analysis
+S1,ED visits 6 months,ROBINS-I,measurement of outcomes,Low,
+S1,ED visits 6 months,ROBINS-I,selection of the reported result,Moderate,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,confounding,Moderate,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,selection of participants,Low,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,classification of interventions,Low,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,deviations from intended interventions,No information,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,missing data,Moderate,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,measurement of outcomes,Low,
+S2,Hypnotic prescriptions 9 months,ROBINS-I,selection of the reported result,Serious,primary window changed after outcome access
+S3,Symptom change before-after,ROBINS-I,confounding,Critical,uncontrolled before-after
+S3,Symptom change before-after,ROBINS-I,selection of participants,Serious,
+S4,ISI at 8 weeks,RoB2,randomization process,Low,
+S4,ISI at 8 weeks,RoB2,deviations from intended interventions,Some concerns,
+S4,ISI at 8 weeks,RoB2,missing outcome data,Low,
+S4,ISI at 8 weeks,RoB2,measurement of the outcome,Some concerns,self-reported outcome in open-label trial
+S4,ISI at 8 weeks,RoB2,selection of the reported result,Low,

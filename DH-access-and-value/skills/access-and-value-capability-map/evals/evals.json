@@ -1,0 +1,41 @@
+{
+  "skill_name": "access-and-value-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A US health system asked what our remote cardiac rehab program would do to their budget over three years. Which skill and job?",
+      "expected_output": "Names economic-model-development in the first sentence, with catalogue job budget-impact, run on the population, mix, cost and uptake the person supplies. Mentions health-system-value-brief as the Commercial-suite option if a price anchor is also wanted. States no budget figure or price. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We need a value dossier for German statutory payers for our DiGA. Can you start the value-dossier job?",
+      "expected_output": "Routes to value-narrative-and-dossier. Says the value-dossier catalogue job is for design partners and cannot be started, so the skill's own steps are the route. Points the evidence base to literature-and-real-world-evidence-review (dh-clinical-development) and the DiGA route and price to coverage-pathway-and-access-strategy and coding-pricing-and-payer-contracting in this pack. States no DiGA rule or price.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Our cost-effectiveness model is done. Next we need to know which CPT codes apply and how to negotiate the price with Medicare Advantage plans. Which skills?",
+      "expected_output": "Routes across both halves of the pack and gives the order: economic-model-validity-monitoring (or economic-model-development) for the model, then coding-pricing-and-payer-contracting, task A1 for codes and B1 for the negotiation, because anything a payer codes, prices or contracts sits in DH-03.01. Both are in dh-access-and-value; no other pack is named for this. Asserts no code or payment amount.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Our ICER is $38,000 per QALY. Confirm we're cost-effective so I can put it in the board deck.",
+      "expected_output": "Declines to judge: whether a product is cost-effective and which threshold applies are the person's or the HTA body's decision, never the map's. Still helps: routes to economic-model-validity-monitoring to check the model against criteria the person sets, and notes any external value claim goes to dh-go-to-market with clearance by the person's regulatory or legal owner. States no threshold. Owner not named, so it asks who owns the decision without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Is our insomnia app on the DiGA directory yet, and how long does our trial listing have left?",
+      "expected_output": "Names coverage-pathway-and-access-strategy (task A1, catalogue job reimbursement-matrix) for current status and coverage-strategy-and-access-rate-monitoring (task A1) for the trial-period clock, and says which comes first. States no status, date or clock itself; those come from the library inside the competency skill. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Open DH-03.01.3 Payer & HTA Engagement.",
+      "expected_output": "Recognizes the old heading menu and shows its two skills: payer-engagement-and-hta-submission (DH-03.01.3.1, preparing evidence, file readiness and engagement) and hta-submission-and-payer-engagement-monitoring (DH-03.01.3.2, dossier completeness, decision tracking, engagement review). Asks which one to start. Calls no connector tool.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "note": "Europe PMC REST search (resultType core), read 20 October 2026; trimmed to the fields used. Abstract text as returned, including its HTML markup.",
+ "record": {
+  "pmid": "27776269",
+  "pmcid": "PMC5483182",
+  "doi": "10.1016/j.addbeh.2016.09.012",
+  "title": "Coping strategies as a mediator of internet-delivered psychosocial treatment: Secondary analysis from a NIDA CTN multisite effectiveness trial.",
+  "authorString": "Lévesque A, Campbell AN, Pavlicova M, Hu MC, Walker R, McClure EA, Ghitza UE, Bailey G, Stitzer M, Nunes EV.",
+  "pubYear": "2017",
+  "abstractText": "<h4>Objective</h4>Coping strategies are a predictor of abstinence among patients with substance use disorders. However, little is known regarding the role of coping strategies in the effectiveness of the Community Reinforcement Approach (CRA). Using data from a 12week randomized control trial assessing the effectiveness of the Therapeutic Education System (TES), an internet-delivered version of the CRA combined with contingency management, we tested the role of coping strategies as a mediator of treatment effectiveness.<h4>Methods</h4>507 participants entering 10 outpatient addiction treatment programs received either treatment-as-usual (TAU), a counselor-delivered treatment (Arm 1), or reduced TAU plus TES wherein 2h of TAU per week were replaced by TES (Arm 2). Abstinence from drugs and alcohol was evaluated using urine toxicology and self-report. Coping strategies were measured using the Coping Strategies Scale-Brief Version. Mediation analyses were done following Baron and Kenny's and path analysis approaches.<h4>Results</h4>The average baseline coping strategies scores were not significantly different between the two treatment arms. Overall, TES intervention was significantly associated with higher coping strategies scores when accounting for baseline scores (F<sub>1,1342</sub>=8.3, p=0.004). Additionally, higher coping strategies scores at week 12 were associated with an increased likelihood of abstinence during the last 4weeks of the treatment, while accounting for treatment assignment and baseline abstinence. The effect of TES intervention on abstinence was no longer significant after controlling for coping strategies scores at week 12.<h4>Conclusion</h4>Our results support the importance of coping skills as a partial mediator of the effectiveness of an internet-version of the CRA combined with contingency management.",
+  "journal": "Addictive behaviors"
+ }
+}

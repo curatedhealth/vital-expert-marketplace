@@ -1,0 +1,53 @@
+{
+ "called_on": "19 October 2026",
+ "calls": [
+  {
+   "call": "verify.qualify_source {doi: \"10.1007/s10488-010-0319-7\", question: \"How is penetration defined and calculated as an implementation outcome?\"}",
+   "response": {
+    "tier": "gold",
+    "title": "Outcomes for Implementation Research: Conceptual Distinctions, Measurement Challenges, and Research Agenda",
+    "date": "2010-01-01",
+    "pmid": "20957426",
+    "retraction_status": "none",
+    "source_score_total": 50
+   }
+  },
+  {
+   "call": "verify.check_claim (claim matching the passage)",
+   "claim": "Penetration can be calculated as the number of eligible persons who use a service divided by the total number of persons eligible for the service.",
+   "passage_locator": "Proctor et al. 2011, Implementation outcomes: Penetration (PMC3068522); passage text = research row CS39 quote",
+   "response": {
+    "status": "supported",
+    "rationale": "Strong overlap (100%) with context",
+    "citation": {
+     "title": null,
+     "authors": [],
+     "year": null,
+     "harvard": "Unknown (n.d.)."
+    }
+   }
+  },
+  {
+   "call": "verify.check_claim (distorted claim, same passage)",
+   "claim": "Penetration is calculated as the number of providers who logged in divided by the number of licenses sold, and high penetration shows the product is clinically effective.",
+   "response": {
+    "status": "supported",
+    "rationale": "Strong overlap (38%) with context"
+   },
+   "observed": "A claim with a different denominator and an efficacy inference the passage does not make was returned as supported (register N3)."
+  },
+  {
+   "call": "verify.qualify_source {url: \"https://www.nice.org.uk/corporate/ecd7/chapter/update-information\"}",
+   "response": {
+    "tier": "inadmissible",
+    "admissibility": [
+     "no provenance"
+    ],
+    "title": "Update information | Evidence standards framework for digital health technologies | Guidance | NICE",
+    "publisher": null,
+    "date": null
+   },
+   "observed": "Regulator and official guidance pages are rated inadmissible (register C1)."
+  }
+ ]
+}

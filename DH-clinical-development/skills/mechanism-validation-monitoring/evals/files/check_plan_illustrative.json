@@ -1,0 +1,20 @@
+{
+ "label": "illustrative: invented product, plan and thresholds, written for testing the skill",
+ "product": "StepClear (illustrative app: CRA lessons plus rewards for negative screens, outpatient stimulant and opioid use)",
+ "plan_date": "2026-06-01",
+ "data_read_before_plan": false,
+ "links": [
+  {"id": "L1", "type": "delivered", "measure": "Reward granted only after a negative screen (software fidelity log)", "column": "reward_logic_ok", "aggregation": "proportion_true", "direction": ">=", "threshold": 0.99, "prespecified": true},
+  {"id": "L2", "type": "used", "measure": "Core lessons completed per week, weeks 1 to 12", "column": "lessons_per_week", "aggregation": "mean", "direction": ">=", "threshold": 3, "prespecified": true},
+  {"id": "L3", "type": "changed", "measure": "Coping score change, baseline to week 12", "column_pre": "coping_base", "column_post": "coping_w12", "aggregation": "mean_change", "direction": ">=", "threshold": 0.3, "prespecified": true},
+  {"id": "L4", "type": "outcome", "measure": "Abstinent in weeks 9 to 12 (missing screens not imputed)", "column": "abstinent_w9_12", "aggregation": "proportion_true", "direction": ">=", "threshold": 0.4, "prespecified": true},
+  {"id": "L5", "type": "changed", "measure": "Craving rating at week 12 (added after the data were seen)", "column": "craving_w12", "aggregation": "mean", "direction": "<=", "threshold": 3, "prespecified": false}
+ ],
+ "subgroups": [
+  {"name": "primary opioid use", "column": "primary_substance", "value": "opioid"},
+  {"name": "primary stimulant use", "column": "primary_substance", "value": "stimulant"}
+ ],
+ "unmeasured": [
+  {"id": "L0", "type": "changed", "text": "Rewards strengthen motivation to stay abstinent", "reason": "no measure in the plan"}
+ ]
+}

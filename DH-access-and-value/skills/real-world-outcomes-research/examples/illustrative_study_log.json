@@ -1,0 +1,22 @@
+{
+  "_note": "ILLUSTRATIVE log written for the skill build on 19 October 2026. Not a real study.",
+  "study": "Illustrative: dCBT-I app and hypnotic prescriptions in German statutory claims data (cohort, active comparator: hypnotic prescription without app)",
+  "study_type": "HETE",
+  "study_type_declared_on": "2026-02-10",
+  "documents": [
+    {"id": "protocol", "version": "1.0", "finalized_on": "2026-03-02"},
+    {"id": "analysis_plan", "version": "1.0", "finalized_on": "2026-03-20"}
+  ],
+  "registration": {"registry": "ClinicalTrials.gov", "id": null, "submitted_on": "2026-03-25"},
+  "first_outcome_access": {"date": "2026-05-04", "by": "data partner analyst"},
+  "analysis_started_on": "2026-05-11",
+  "revisions": [
+    {"doc": "analysis_plan", "version": "1.1", "date": "2026-04-15", "reason": "Added sensitivity analysis excluding patients with fewer than 12 months of continuous insurance"},
+    {"doc": "analysis_plan", "version": "1.2", "date": "2026-06-01", "reason": "Changed primary outcome window from 12 to 9 months after app start"}
+  ],
+  "deviations": [
+    {"date": "2026-06-01", "description": "Primary outcome window changed to 9 months", "reason": "Data cut ended earlier than planned"},
+    {"date": "2026-06-20", "description": "Two covariates dropped from the weighting model", "reason": ""}
+  ],
+  "linkage": {"planned": true, "in_protocol": true, "inconsistency_rule": false}
+}

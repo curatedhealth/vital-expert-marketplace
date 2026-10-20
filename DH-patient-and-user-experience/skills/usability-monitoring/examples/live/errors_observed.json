@@ -1,0 +1,15 @@
+{
+ "called_on": "19 October 2026",
+ "observed_errors": [
+  {
+   "calls": "regulatory-dh.search_safety_events x3 in parallel, then x2 single retries",
+   "response": "The Digital Health Library could not answer this call (503). Nothing was counted. Try again, or ask my_usage.",
+   "resolved": "succeeded after a pause, one call at a time"
+  },
+  {
+   "calls": "verify.check_claim with source {source_id, doi} x4",
+   "response": "The Digital Health Library could not answer this call (502). Nothing was counted. Try again, or ask my_usage.",
+   "resolved": "succeeded with the full qualify_source record as source"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+record_id,source,source_type,doi_or_id,title,duplicate_of,auto_excluded,removed_other,ta_decision,ta_reviewers,report_sought,report_retrieved,ft_decision,ft_reason,ft_reviewers,study_id,ai_assisted
+P01,PubMed,database,10.1371/journal.pmed.1004510,App-based CBT-I preventing MDD in youth (RCT),,,,include,2,Y,Y,include,,2,S-CHEN2025,screening
+E01,Europe PMC,database,39836656,App-based CBT-I preventing MDD in youth (RCT),P01,,,,,,,,,,,
+O01,OpenAlex,database,W4406657985,App-based CBT-I preventing MDD in youth (RCT),P01,,,,,,,,,,,
+P02,PubMed,database,10.1016/j.invent.2026.101007,Smartphone-delivered CBT-I: preliminary RCT,,,,include,2,Y,Y,include,,2,S-KNUTZEN2026,screening
+E02,Europe PMC,database,PMC13670942,Smartphone-delivered CBT-I: preliminary RCT,P02,,,,,,,,,,,
+C01,Crossref,database,10.1159/000547436,Digital CBT-I in chronic pain (RCT),,,,include,2,Y,Y,include,,2,S-SCHUFFELEN2025,screening
+O02,OpenAlex,database,W4412430057,Digital CBT-I in chronic pain (RCT),C01,,,,,,,,,,,
+E03,Europe PMC,database,PMC13671329,Digital behavior therapy for insomnia: secondary analysis of RESiLIENT,,,,include,2,Y,Y,include,,2,S-RESILIENT,screening
+P03,PubMed,database,10.1038/s41591-025-03639-1,RESiLIENT RCT main report (subthreshold depression),,,,include,2,Y,Y,include,,2,S-RESILIENT,screening
+R01,ClinicalTrials.gov,register,NCT04069247,E-based CBT-I for mental health in Chinese youths,,,,include,2,Y,Y,include,,2,S-CHEN2025,
+R02,ClinicalTrials.gov,register,NCT-illustrative-1,"Ongoing dCBT-I trial, no results posted (illustrative)",,,,include,2,Y,N,,,,,
+R03,WHO ICTRP,register,ICTRP-illustrative-1,dCBT-I in shift workers (illustrative),,,,exclude,2,,,,,,,
+X01,Citation searching,citation,10.5665/sleep.4752,Single-shot CBT-I for acute insomnia,,,,include,2,Y,Y,exclude,Intervention not digital,2,,
+O03,OpenAlex,database,10.1093/ijnp/pyae059.428,Pooled analysis of two sham-controlled dCBT-I trials (conference abstract),,,,include,2,Y,Y,exclude,Conference abstract; trials reported elsewhere,2,,screening
+C02,Crossref,database,10.1016/j.smrv.2022.101693,CBT-I vs CBT-P network meta-analysis,,,,include,2,Y,Y,exclude,Not a primary study,2,,
+P04,PubMed,database,10.1038/s41746-025-01514-4,Fully automated dCBT-I SR and MA,,,,include,2,Y,Y,exclude,Not a primary study,2,,
+T01,PubMed,database,illustrative-1,CBT app for depression after brain injury,,,,exclude,2,,,,,,,screening
+T02,Europe PMC,database,illustrative-2,Medication trial in insomnia,,,,exclude,2,,,,,,,screening
+T03,OpenAlex,database,illustrative-3,Sleep hygiene leaflet study,,,,exclude,2,,,,,,,screening
+T04,Crossref,database,illustrative-4,Insomnia prevalence survey,,,,exclude,2,,,,,,,screening
+T05,PubMed,database,illustrative-5,Wearable sleep tracker validation,,,,exclude,2,,,,,,,screening
+T06,Europe PMC,database,illustrative-6,Narrative review of sleep apps,,,,exclude,2,,,,,,,screening
+T07,OpenAlex,database,illustrative-7,Protocol for dCBT-I trial,,,,exclude,1,,,,,,,screening
+T08,PubMed,database,illustrative-8,Qualitative study of app users,,,,exclude,1,,,,,,,screening
+A01,Crossref,database,illustrative-a1,Animal study of sleep deprivation,,Y,,,,,,,,,,screening
+A02,OpenAlex,database,illustrative-a2,Editorial on digital health,,Y,,,,,,,,,,screening
+M01,Europe PMC,database,illustrative-m1,"Record in Korean, no translation available",,,Language: protocol limit stated and justified,,,,,,,,,

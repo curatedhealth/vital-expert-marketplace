@@ -1,0 +1,56 @@
+{
+ "call": {
+  "tool": "commercial-dh.list_commercial_dh_sources",
+  "args": {},
+  "called": "19 October 2026",
+  "counted": false
+ },
+ "selected_rows": {
+  "census.diga": {
+   "status": "not_loaded",
+   "gap_reason": "access under section 21 DiGAV not yet granted"
+  },
+  "census.nice": {
+   "status": "not_loaded",
+   "gap_reason": "commercial licence deferred until the Market Access product"
+  },
+  "regulatory.UK": {
+   "authorizations": 0,
+   "scope": "MHRA medical safety alerts only; device registration (MHRA PARD) is not loaded [GAP]"
+  },
+  "regulatory.CH": {
+   "authorizations": 0,
+   "scope": "Swissmedic FSCA not loaded in this release [GAP]; swissdamed is web-only [GAP]"
+  },
+  "regulatory.EU": {
+   "authorizations": 3142,
+   "scope": "EUDAMED devices carrying an EMDN medical-device-software code. Decision date is empty on 3142 of 3142."
+  },
+  "regulatory.US": {
+   "authorizations": 1226,
+   "last_load": "2026-10-19"
+  },
+  "market_access.DE_DIGA": {
+   "listing_count": 82,
+   "last_load": "2026-10-15",
+   "posture": "partial",
+   "posture_reason": "Directory listings are stored. ends_on is empty on 82 of 82. BFARM_DIGA_API_TOKEN is absent, so this is not the history feed."
+  },
+  "market_access.CH_BAG": {
+   "listing_count": 0,
+   "posture": "gap",
+   "clock_rule": "position 40.01.01.00.1 valid from 1 July 2026; in evaluation until 31 December 2026; remuneration once for a maximum of 90 days",
+   "notes": "MiGeL chapter 40 is a class list. Position 40.01.01.00.1 names an interactive CBT dGA for depression, not a product. Class HVB 171.32 CHF per 90-day licence is not stored as a product price.",
+   "source_url": "https://www.bag.admin.ch/de/mittel-und-gegenstaendeliste-migel"
+  },
+  "market_access.US_CMS_DMHT": {
+   "listing_count": 3,
+   "posture": "partial"
+  },
+  "market_access.US_CMS_RPM": {
+   "listing_count": 4,
+   "posture": "partial"
+  }
+ },
+ "observation": "The census row 'diga' says not_loaded while market_access DE_DIGA holds 82 listings from diga_verzeichnis; the brief's gap list repeats 'DE authorization or listing: DiGA directory: access not granted' beside a DE_DIGA permanent row."
+}

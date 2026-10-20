@@ -1,7 +1,7 @@
 {
   "name": "dh-commercial",
-  "version": "0.2.3",
-  "description": "DH Commercial & GTM Strategy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
+  "version": "0.2.4",
+  "description": "Superseded by dh-go-to-market. DH Commercial & GTM Strategy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"

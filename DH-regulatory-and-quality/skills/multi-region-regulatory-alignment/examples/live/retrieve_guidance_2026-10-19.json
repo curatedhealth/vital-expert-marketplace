@@ -1,0 +1,59 @@
+{
+  "tool": "retrieve_guidance",
+  "called": "2026-10-19",
+  "calls": [
+    {
+      "arguments": {
+        "query": "MDSAP audit report acceptance Health Canada TGA reliance",
+        "limit": 5
+      },
+      "results": 0,
+      "gaps": [
+        "[GAP]",
+        "no passage retrieved in this namespace"
+      ]
+    },
+    {
+      "arguments": {
+        "query": "EUDAMED UDI device registration deadline devices already on the market",
+        "limit": 5
+      },
+      "results": 0
+    },
+    {
+      "arguments": {
+        "query": "MDSAP",
+        "limit": 5
+      },
+      "results": 5,
+      "summary": "Four chunks of MDCG 2020-14 (August 2020, NB use of MDSAP audit reports) and one chunk of a Health Canada guidance index page; every source_url [GAP], every retrieved_at null."
+    },
+    {
+      "arguments": {
+        "query": "software",
+        "limit": 5
+      },
+      "results": 5,
+      "summary": "NICE PMG36 (source_url given), an Azure digital-twin research paper, two FDA prescription drug-use-related software passages, a bias-mitigation paper; four of five without source_url; retrieved_at null on all."
+    },
+    {
+      "arguments": {
+        "query": "EUDAMED",
+        "limit": 3
+      },
+      "results": 3,
+      "summary": "MDCG 2019-15 rev1 (class I registration, written before Regulation (EU) 2024/1860), MDCG 2022-12, MDCG 2021-13 rev.1; all source_url [GAP], retrieved_at null."
+    },
+    {
+      "arguments": {
+        "query": "812.28",
+        "limit": 3
+      },
+      "results": 0
+    }
+  ],
+  "coverage": [
+    "namespace guidance; lexical match on stored chunks",
+    "not a vector search"
+  ]
+}

@@ -1,0 +1,12 @@
+date,audience,organization,use,line_id,claim_id,response_code,note
+2026-07-02,US payer,Health plan A (illustrative),P&T dossier,L1,C1,accepted,Committee accepted ISI result as presented
+2026-07-02,US payer,Health plan A (illustrative),P&T dossier,L2,C4,questioned,Asked for budget impact on own membership
+2026-07-15,US payer,Health plan B (illustrative),P&T dossier,L1,C1,questioned,Asked whether result applies outside pregnancy
+2026-07-15,US payer,Health plan B (illustrative),P&T dossier,L2,C4,rejected,Said year-one savings not shown
+2026-08-03,US payer,Health plan C (illustrative),payer meeting,L2,C4,rejected,Wanted PMPM not total
+2026-08-03,US payer,Health plan C (illustrative),payer meeting,L1,C1,accepted,
+2026-08-20,NHS commissioner,ICB D (illustrative),ESF evidence pack,L3,C5,questioned,Asked for UK costs in budget impact
+2026-08-20,NHS commissioner,ICB D (illustrative),ESF evidence pack,L1,C1,accepted,
+2026-09-10,US payer,Health plan E (illustrative),P&T dossier,L2,C4,no_response,
+2026-09-10,US payer,Health plan E (illustrative),P&T dossier,L1,C1,accepted,
+2026-09-25,NHS commissioner,ICB F (illustrative),ESF evidence pack,L3,C5,rejected,No cost-effectiveness for higher financial risk

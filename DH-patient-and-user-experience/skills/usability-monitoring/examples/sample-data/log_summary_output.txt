@@ -1,0 +1,30 @@
+Log: examples/sample-data/usability_log_illustrative.csv (56 rows)
+
+By task (severity and critical flag as the person assigned them)
+task | name | critical | participants | outcomes | use errors | returned to old step | severity assigned
+T1 | Confirm patient identity before dosing | yes | 14 | success 13, use_error 1 | 1 of 14 | 0 | serious 1
+T2 | Enter weight-based dose | yes | 14 | difficulty 1, not_completed 1, success 10, use_error 2 | 2 of 14 | 1 | serious 4
+T3 | Acknowledge allergy alert | yes | 14 | difficulty 1, success 12, use_error 1 | 1 of 14 | 0 | NOT ASSIGNED 1, serious 1
+T4 | Review potassium trend | no | 14 | difficulty 3, success 11 | 0 of 14 | 2 | minor 3
+
+Use errors and other non-success rows by severity (as assigned)
+NOT ASSIGNED: 1 rows (difficulty 1)
+  T3 P13 (pharmacist): difficulty
+minor: 3 rows (difficulty 3)
+  T4 P12 (pharmacist): difficulty; could not find date range control
+  T4 P13 (pharmacist): difficulty; could not find date range control
+  T4 P14 (pharmacist): difficulty; could not find date range control
+serious: 6 rows (difficulty 1, not_completed 1, use_error 4)
+  T1 P14 (pharmacist): use_error; selected adjacent patient in list
+  T2 P11 (pharmacist): use_error; entered mg instead of mg/kg
+  T2 P12 (pharmacist): use_error; entered mg instead of mg/kg
+  T2 P13 (pharmacist): difficulty; looked for unit toggle
+  T2 P14 (pharmacist): not_completed; returned to paper chart
+  T3 P14 (pharmacist): use_error; dismissed alert without reading
+
+By user group
+nurse: 8 participants (your minimum 15: not met)
+pharmacist: 6 participants (your minimum 15: not met)
+
+Flags
+- 1 non-success row(s) have no severity assigned: T3/P13

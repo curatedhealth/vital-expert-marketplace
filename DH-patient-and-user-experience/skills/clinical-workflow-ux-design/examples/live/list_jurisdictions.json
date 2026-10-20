@@ -1,0 +1,17 @@
+{
+ "call": "regulatory-dh.list_jurisdictions (free)",
+ "called_on": "19 October 2026",
+ "safety_events": {
+  "US": 892,
+  "EU": 0,
+  "UK": 10,
+  "CH": 0,
+  "TW": 0,
+  "CA": 0
+ },
+ "scope_quotes": {
+  "UK": "MHRA medical safety alerts only; device registration (MHRA PARD) is not loaded [GAP]",
+  "CH": "Swissmedic FSCA not loaded in this release [GAP]; swissdamed is web-only [GAP]"
+ },
+ "coverage_line_from_search": "US: FDA enforcement recalls whose product text mentions software, algorithm, application, firmware or app; MAUDE counts by year"
+}

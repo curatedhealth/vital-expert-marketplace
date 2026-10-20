@@ -1,0 +1,57 @@
+participant_id,user_group,employee,think_aloud,task_id,task_name,critical,severity,outcome,returned_to_old_step,note
+P01,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P02,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P03,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P04,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P05,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P06,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P07,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P08,nurse,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P09,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P10,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P11,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P12,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P13,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,success,no,
+P14,pharmacist,no,no,T1,Confirm patient identity before dosing,yes,serious,use_error,no,selected adjacent patient in list
+P01,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P02,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P03,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P04,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P05,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P06,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P07,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P08,nurse,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P09,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P10,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,success,no,
+P11,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,use_error,no,entered mg instead of mg/kg
+P12,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,use_error,no,entered mg instead of mg/kg
+P13,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,difficulty,no,looked for unit toggle
+P14,pharmacist,no,no,T2,Enter weight-based dose,yes,serious,not_completed,yes,returned to paper chart
+P01,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P02,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P03,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P04,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P05,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P06,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P07,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P08,nurse,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P09,pharmacist,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P10,pharmacist,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P11,pharmacist,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P12,pharmacist,no,no,T3,Acknowledge allergy alert,yes,serious,success,no,
+P13,pharmacist,no,no,T3,Acknowledge allergy alert,yes,,difficulty,no,
+P14,pharmacist,no,no,T3,Acknowledge allergy alert,yes,serious,use_error,no,dismissed alert without reading
+P01,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P02,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P03,nurse,no,no,T4,Review potassium trend,no,minor,success,yes,
+P04,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P05,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P06,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P07,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P08,nurse,no,no,T4,Review potassium trend,no,minor,success,no,
+P09,pharmacist,no,no,T4,Review potassium trend,no,minor,success,no,
+P10,pharmacist,no,no,T4,Review potassium trend,no,minor,success,yes,
+P11,pharmacist,no,no,T4,Review potassium trend,no,minor,success,no,
+P12,pharmacist,no,no,T4,Review potassium trend,no,minor,difficulty,no,could not find date range control
+P13,pharmacist,no,no,T4,Review potassium trend,no,minor,difficulty,no,could not find date range control
+P14,pharmacist,no,no,T4,Review potassium trend,no,minor,difficulty,no,could not find date range control

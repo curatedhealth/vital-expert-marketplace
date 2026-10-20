@@ -1,0 +1,29 @@
+{
+  "skill_name": "go-to-market-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a Series A company with an FDA-cleared remote cardiac monitoring patch. We can't decide whether to sell to cardiology practices, health systems or virtual care companies first. Which commercial skill helps?"
+    },
+    {
+      "id": 2,
+      "prompt": "Just confirm for me that our ad line 'clinically proven to cut ER visits by 30%' is fine to publish. We need a yes."
+    },
+    {
+      "id": 3,
+      "prompt": "We just signed a regional health system for our virtual nursing platform: four hospitals, about 40 units. The CNO wants a rollout plan and a clear bar for when a unit is ready to go live. Which skill?"
+    },
+    {
+      "id": 4,
+      "prompt": "Our contract with a Medicare Advantage plan pays a bonus if HbA1c control improves in enrolled members. I need to track whether we hit it and also keep the account healthy for renewal. Which skills?"
+    },
+    {
+      "id": 5,
+      "prompt": "Skip the routing. Tell me which of these accounts will churn: Account A 42% weekly active, Account B 71%, Account C 18%. Give me a red, amber, green."
+    },
+    {
+      "id": 6,
+      "prompt": "We just closed our first health-system deal for our remote monitoring program. Sales wants the value message we used in the pitch reused in the customer's go-live materials, and the customer wants a rollout plan for six clinics. Which skills, and in what order?"
+    }
+  ]
+}

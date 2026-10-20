@@ -1,0 +1,20 @@
+# illustrative: invented cohort, written for testing the skill; not real patients
+participant,version,primary_substance,reward_logic_ok,lessons_per_week,coping_base,coping_w12,abstinent_w9_12,craving_w12
+P001,2.3,stimulant,1,3.5,2.1,2.6,1,2
+P002,2.3,stimulant,1,4.0,2.0,2.5,1,1
+P003,2.3,stimulant,1,3.2,2.3,2.7,1,3
+P004,2.3,stimulant,1,2.8,2.2,2.4,0,4
+P005,2.3,stimulant,1,3.6,1.9,2.4,1,2
+P006,2.3,stimulant,1,3.1,2.4,2.8,1,2
+P007,2.3,stimulant,1,4.2,2.0,2.6,1,1
+P008,2.3,stimulant,1,2.5,2.1,2.2,0,5
+P009,2.3,stimulant,1,3.3,2.2,,1,3
+P010,2.3,stimulant,1,3.9,2.0,2.5,1,2
+P011,2.3,opioid,1,3.0,2.0,2.4,0,4
+P012,2.3,opioid,1,3.4,2.2,2.5,0,3
+P013,2.3,opioid,1,2.9,2.1,2.3,0,5
+P014,2.3,opioid,1,3.8,2.3,2.8,1,2
+P015,2.3,opioid,1,3.1,2.0,2.4,0,4
+P016,2.3,opioid,1,3.5,2.1,2.5,,3
+P017,2.2,stimulant,1,1.5,2.0,2.1,0,5
+P018,2.2,opioid,0,2.0,2.2,2.2,0,6

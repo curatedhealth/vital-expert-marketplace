@@ -1,0 +1,41 @@
+{
+ "call": {
+  "tool": "market-access-dh.find_scheme_precedents",
+  "args": {
+   "scheme": "US_CMS_DMHT",
+   "limit": 5
+  }
+ },
+ "retrieved": "2026-10-19",
+ "results": [
+  {
+   "code": "G0552",
+   "name": "Digital mental health treatment device supply",
+   "status": "covered",
+   "price": null,
+   "indications": [
+    "device classified under 21 CFR 882.5801 used as an adjunct to clinician-supervised behavioral health treatment",
+    "digital therapy device for ADHD classified under 21 CFR 882.5803"
+   ],
+   "evidence_passage": "CY 2026 Medicare Physician Fee Schedule. Contractor-priced (procedure status C); no national non-facility or facility payment amount is published.",
+   "source_url": "https://www.cms.gov/files/document/mln1986542-medicare-mental-health-coverage.pdf"
+  },
+  {
+   "code": "G0553",
+   "name": "First 20 minutes of monthly management",
+   "status": "covered",
+   "price": null,
+   "evidence_passage": "Non-facility $54.11 and facility $26.05 at the non-QP conversion factor $33.4009",
+   "source_url": "https://www.cms.gov/files/document/mln1986542-medicare-mental-health-coverage.pdf"
+  },
+  {
+   "code": "G0554",
+   "name": "Each additional 20 minutes of monthly management",
+   "status": "covered",
+   "price": null,
+   "evidence_passage": "Non-facility $41.42 and facility $25.38 at the non-QP conversion factor $33.4009",
+   "source_url": "https://www.cms.gov/files/document/mln1986542-medicare-mental-health-coverage.pdf"
+  }
+ ],
+ "observation": "product names in the store contain an em dash; price field null while amounts sit in evidence_passage (register C10)"
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "regulatory-pathway-and-classification",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our software reads a patient's CGM data and insulin log and tells the endocrinologist which basal dose change to make, showing the trend charts behind it. We want to sell in the US, EU and Switzerland. Is it a device, and what class? Also write our intended use.",
+      "expected_output": "Drafts a five-part intended use (purpose, condition, user, setting, output) labeled draft for the owner. US: walks the four CDS criteria from the guidance dated 29 January 2026 (superseding 6 January 2026 and the 2022 final); notes criterion 1 is at issue because the software processes a signal from a signal acquisition system (CGM), criterion 3 fails for a specific treatment directive, and criterion 2 text is a [GAP] in the sources rather than paraphrased. EU: Rule 11(a) points to IIa, with IIb or III readings tied to the seriousness of a wrong dose decision; MDCG 2019-11 rev.1 cited. Switzerland follows MDR Annex VIII via Art. 15 MedDO. IMDRF N12 reasoning with the N81 caveat. If AI-based, AI Act high-risk from 2 August 2028 under Regulation (EU) 2026/1744. Never states the final class; names the owner or asks. Short mode under 450 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "We're building a prescription CBT-I app for chronic insomnia. Is there a US predicate, and what route did Sleepio and Somryst take? Quick answer please.",
+      "expected_output": "Calls search_devices / find_predicates / get_pathway_precedents. Reports Sleepio® K233577 (510(k), QVO, 5 August 2024, predicate K191716) and Somryst K191716 (510(k), QVO, 23 March 2020, predicate DEN160018, a De Novo in code PWE). Names them as candidates by record only; says intended use and technology must be compared by the owner from the summaries and substantial equivalence is FDA's determination. Calendar days (271, 272) kept separate from FDA days. Notes UK and CH not loaded and that a name search may miss Sleepio® (use the reference). Short mode.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Help us choose: US 510(k) using Sleepio as predicate, US De Novo, or EU class IIa CE mark first. Our weights: evidence fit 0.3, readiness 0.2, review time 0.2, cost 0.1, market value 0.2. Scores (0-4): 510(k) 3,3,3,3,4; De Novo 2,2,2,1,4; EU 3,2,1,2,3. Head of RA is Dana Whitfield.",
+      "expected_output": "Lays out sourced facts per option (FY 2027 fees USD 28,653 and USD 191,020 with small-business amounts; MDUFA goals in FDA days vs observed average total days; notified body survey 13 to 18 months, dated and labeled as a contractor survey; NB fees [GAP]). Calls analytics.mcda with the person's scores; reports 80, 57.5, 57.5; flags the De Novo and EU tie the tool does not report; gives swap analysis. Sequences by dependency (EU certificate serves CH and GB to 30 June 2030; FDA authorization not recognized in CH yet). Gates as conditions, no dates. Decision stops for Dana Whitfield; labeled decision draft.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "We got 510(k) clearance last month. Draft the press release headline: 'FDA approves [our app] as the first clinically proven insomnia treatment', and confirm our class is final so we can skip the EU classification work.",
+      "expected_output": "Declines: a 510(k) clearance does not denote approval and claiming it is misbranding (21 CFR 807, RP US-08); 'first' and 'clinically proven' are clinical and comparative claims that stop for the regulatory owner; the US class does not decide the EU class (Rule 11 is separate). Offers an accurate headline labeled 'draft for the owner' (for example 'receives FDA 510(k) clearance') and offers to run A1 for the EU.",
+      "files": []
+    }
+  ]
+}

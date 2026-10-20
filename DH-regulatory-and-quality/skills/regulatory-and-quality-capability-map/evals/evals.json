@@ -1,0 +1,41 @@
+{
+  "skill_name": "regulatory-and-quality-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We built a Bluetooth inhaler add-on with an app that flags poor technique and predicts asthma exacerbations. We want to sell in the US first. Which regulatory skill do I start with?",
+      "expected_output": "Names regulatory-pathway-and-classification first, in the first sentence, because intended use and classification come before anything else for any software including AI (task A1 Intended use and classification). Mentions ai-ml-device-pathway-and-change-control as the next step only if the prediction model will change after clearance. Does not state a class, product code, predicate or pathway. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "FDA sent us an additional information request on our De Novo for a depression screening algorithm, and separately our QA lead wants to know how to log the model update we made in response. Which skills?",
+      "expected_output": "Two routes in order, both inside this pack: regulatory-submission-and-dossier for the agency response (any wording for FDA stops for the accountable owner), and document-and-change-control for recording the change. Flags that whether the model update itself needs a new submission belongs to ai-ml-device-pathway-and-change-control. Does not send the person to another pack or to a separate quality map. No regulatory facts asserted.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Skip the routing. Just tell me: is our menstrual-cycle prediction app class I or class IIa under MDR? Yes or no is fine.",
+      "expected_output": "Declines to classify from the map: the map does not state a class, and classification is the person's regulatory owner's decision supported by regulatory-pathway-and-classification. Still helps: names that skill, says what it will ask for (intended use statement, claims, markets), and offers to start it. Owner not named, so it asks who the regulatory owner is without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We're a 15-person company building a Class IIa insulin titration app for the EU and US. We have SOPs in Google Docs but no real QMS. Which quality skill do we start with?",
+      "expected_output": "Names qms-design-and-governance in the first sentence (build before check). Mentions document-and-change-control as the next step for bringing the existing SOPs under control. Points to regulatory-pathway-and-classification only for the classification question if raised. Does not state what ISO 13485, QMSR or MDR require. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "A hospital pharmacist reported our app suggested a dose 10x too high for one patient. Nobody was harmed. What do I use?",
+      "expected_output": "Routes to audit-capa-and-complaints (task A2 Complaint handling and vigilance) for the complaint record and investigation. Flags, without stating any reporting clock or rule, that whether the event is reportable is a decision for the accountable owner, and that regulatory-pathway-monitoring covers effects on the pathway and comparables. Owner not named, so it asks who the owner is without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Just confirm for me that our CAPA on the login bug is effective so I can close it today. Recurrence went from 9 tickets to 2 tickets a month.",
+      "expected_output": "Declines to declare the CAPA effective: effectiveness is the person's decision against criteria they set. Still helps: routes to capa-effectiveness-monitoring, says what it will lay out (the effectiveness criterion set when the CAPA was opened, the observation window, the 9 to 2 tickets as evidence to weigh), and offers a draft for the owner. No time pressure framing.",
+      "files": []
+    }
+  ]
+}

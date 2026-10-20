@@ -1,0 +1,162 @@
+{
+ "retrieved_on": "19 October 2026",
+ "qualify_source": {
+  "call": {
+   "doi": "10.1155/da/2171041",
+   "question": "Does digital CBT-I reduce depressive symptoms in adults with comorbid insomnia and depression compared with a waiting list?"
+  },
+  "result": {
+   "tier": "gold",
+   "admissibility": [
+    "six provenance fields from the resolver"
+   ],
+   "status": "current",
+   "source_score_total": 61,
+   "source_score_axes": {
+    "authority": 15,
+    "recency": 15,
+    "relevance": 15,
+    "provenance": 10,
+    "currency": null
+   },
+   "date": "2025-01-01"
+  }
+ },
+ "check_claim_runs": [
+  {
+   "claim": "Compared with a waiting list, digital CBT-I reduced depressive symptoms (PHQ-9) at 12 and 24 weeks in adults with comorbid insomnia and depression.",
+   "passage": "Participants with comorbid depression and insomnia were randomized to either the intervention group (dCBT-I) or the waiting group (WLC). ... Large treatment effects at 12- and 24 weeks showed significant reductions in depressive symptoms (-3.34 and -2.83; ps <0.001; ds = 0.66-0.78) in the dCBT-I group.",
+   "status": "partial",
+   "rationale": "the passage does not state the figure",
+   "reading": "Faithful claim; the token PHQ-9 is not in the passage, so the tool returned partial."
+  },
+  {
+   "claim": "Compared with a waiting list, digital CBT-I reduced depressive symptoms at 12 and 24 weeks in adults with comorbid insomnia and depression.",
+   "passage": "Participants with comorbid depression and insomnia were randomized to either the intervention group (dCBT-I) or the waiting group (WLC). ... Large treatment effects at 12- and 24 weeks showed significant reductions in depressive symptoms (-3.34 and -2.83; ps <0.001; ds = 0.66-0.78) in the dCBT-I group.",
+   "status": "supported",
+   "rationale": "Strong overlap (62%) with context",
+   "reading": "Same claim without PHQ-9: supported. Read in the same direction, same population and comparator."
+  },
+  {
+   "claim": "Compared with antidepressant medication, digital CBT-I reduced depressive symptoms at 12 and 24 weeks.",
+   "passage": "Participants with comorbid depression and insomnia were randomized to either the intervention group (dCBT-I) or the waiting group (WLC). ... Large treatment effects at 12- and 24 weeks showed significant reductions in depressive symptoms (-3.34 and -2.83; ps <0.001; ds = 0.66-0.78) in the dCBT-I group.",
+   "status": "partial",
+   "rationale": "Partial overlap (50%) with context",
+   "reading": "Wrong comparator (the trial used a waiting list). Tool says partial, not contradicted."
+  },
+  {
+   "claim": "Digital CBT-I is proven to cure depression in all patient groups.",
+   "passage": "This study demonstrates that digital dCBT-I can be effective not only for individuals with primary insomnia but also for those with depression. ... Moreover, the effects remained stable even in the heterogeneous sample investigated in this study, reinforcing the robustness of dCBT-I across diverse patient groups.",
+   "status": "partial",
+   "rationale": "Partial overlap (56%) with context",
+   "reading": "Overstatement (proven, cure, all groups). Tool says partial, the same status as the faithful claim with PHQ-9."
+  },
+  {
+   "claim": "Our app is clinically proven to treat depression.",
+   "passage": "This study demonstrates that digital dCBT-I can be effective not only for individuals with primary insomnia but also for those with depression.",
+   "status": "unsupported",
+   "rationale": "Low overlap (17%) with context",
+   "reading": "Overstatement with little word overlap: unsupported."
+  }
+ ],
+ "check_claim_citation_fields": {
+  "identifiers": {
+   "doi": null,
+   "pmid": null,
+   "pmcid": null
+  },
+  "authors": [],
+  "year": null,
+  "chicago": "Depression and Anxiety. 2025. \"Digital CBT-I in Comorbid Insomnia and Depression: Clinical Outcomes From a Pragmatic Randomized Controlled Trial.\" January 1, 2025. https://doi.org/10.1155/da/2171041."
+ },
+ "source_object_passed": {
+  "source_id": "10.1155/da/2171041",
+  "tier": "gold",
+  "source_type": "literature",
+  "publisher": "Depression and Anxiety",
+  "date": "2025-01-01",
+  "title": "Digital CBT-I in Comorbid Insomnia and Depression: Clinical Outcomes From a Pragmatic Randomized Controlled Trial",
+  "code": "10.1155/da/2171041",
+  "status": "current",
+  "official_url": "https://doi.org/10.1155/da/2171041",
+  "literature_record": {
+   "doi": "10.1155/da/2171041",
+   "pmid": "40458292",
+   "venue": "Depression and Anxiety",
+   "year": 2025,
+   "retraction_status": "none"
+  }
+ },
+ "check_currency": {
+  "call": {
+   "doi": "10.1155/da/2171041"
+  },
+  "result": {
+   "retracted": false,
+   "corrected": false,
+   "superseded": false,
+   "withdrawn": false,
+   "notices": [
+    "crossref"
+   ],
+   "current": true
+  }
+ },
+ "extract_claims": {
+  "text": "Our app is clinically proven to treat depression. In a randomized trial of 140 adults, depressive symptoms fell at 12 and 24 weeks compared with people on a waiting list. The effect was large and stable across all patient groups, so doctors can now prescribe it with confidence. Certainty of evidence: high.",
+  "claims": [
+   {
+    "id": "c1",
+    "kind": "factual",
+    "checkable": true,
+    "text": "Our app is clinically proven to treat depression."
+   },
+   {
+    "id": "c2",
+    "kind": "numeric",
+    "checkable": true,
+    "text": "In a randomized trial of 140 adults, depressive symptoms fell at 12 and 24 weeks compared with people on a waiting list."
+   },
+   {
+    "id": "c3",
+    "kind": "factual",
+    "checkable": true,
+    "text": "The effect was large and stable across all patient groups, so doctors can now prescribe it with confidence."
+   },
+   {
+    "id": "c4",
+    "kind": "factual",
+    "checkable": true,
+    "text": "Certainty of evidence: high."
+   }
+  ],
+  "method": "sentence_splitter"
+ },
+ "build_record_refusal": {
+  "call": {
+   "clearances": [
+    {
+     "cleared_by": {
+      "name": "Claude"
+     }
+    }
+   ]
+  },
+  "result": "build_record refuses a record without a human cleared_by.name"
+ },
+ "qualify_source_registry_url": {
+  "call": {
+   "url": "https://clinicaltrials.gov/study/NCT05067569"
+  },
+  "result": {
+   "tier": "inadmissible",
+   "admissibility": [
+    "no provenance"
+   ],
+   "publisher": null,
+   "date": null,
+   "title": "ClinicalTrials.gov",
+   "source_score_total": 33
+  }
+ }
+}

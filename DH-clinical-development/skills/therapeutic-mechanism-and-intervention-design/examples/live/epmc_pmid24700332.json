@@ -1,0 +1,13 @@
+{
+ "note": "Europe PMC REST search (resultType core), read 20 October 2026; trimmed to the fields used. Abstract text as returned, including its HTML markup.",
+ "record": {
+  "pmid": "24700332",
+  "pmcid": "PMC4079279",
+  "doi": "10.1176/appi.ajp.2014.13081055",
+  "title": "Internet-delivered treatment for substance abuse: a multisite randomized controlled trial.",
+  "authorString": "Campbell AN, Nunes EV, Matthews AG, Stitzer M, Miele GM, Polsky D, Turrigiano E, Walters S, McClure EA, Kyle TL, Wahle A, Van Veldhuisen P, Goldman B, Babcock D, Stabile PQ, Winhusen T, Ghitza UE.",
+  "pubYear": "2014",
+  "abstractText": "<h4>Objective</h4>Computer-delivered interventions have the potential to improve access to quality addiction treatment care. The objective of this study was to evaluate the effectiveness of the Therapeutic Education System (TES), an Internet-delivered behavioral intervention that includes motivational incentives, as a clinician-extender in the treatment of substance use disorders.<h4>Method</h4>Adult men and women (N=507) entering 10 outpatient addiction treatment programs were randomly assigned to receive 12 weeks of either treatment as usual (N=252) or treatment as usual plus TES, with the intervention substituting for about 2 hours of standard care per week (N=255). TES consists of 62 computerized interactive modules covering skills for achieving and maintaining abstinence, plus prize-based motivational incentives contingent on abstinence and treatment adherence. Treatment as usual consisted of individual and group counseling at the participating programs. The primary outcome measures were abstinence from drugs and heavy drinking (measured by twice-weekly urine drug screens and self-report) and time to dropout from treatment.<h4>Results</h4>Compared with patients in the treatment-as-usual group, those in the TES group had a lower dropout rate (hazard ratio=0.72, 95% CI=0.57, 0.92) and a greater abstinence rate (odds ratio=1.62, 95% CI=1.12, 2.35). This effect was more pronounced among patients who had a positive urine drug or breath alcohol screen at study entry (N=228) (odds ratio=2.18, 95% CI=1.30, 3.68).<h4>Conclusions</h4>Internet-delivered interventions such as TES have the potential to expand access and improve addiction treatment outcomes. Additional research is needed to assess effectiveness in non-specialty clinical settings and to differentiate the effects of the community reinforcement approach and contingency management components of TES.",
+  "journal": "The American journal of psychiatry"
+ }
+}

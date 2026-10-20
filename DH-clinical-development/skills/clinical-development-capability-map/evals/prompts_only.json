@@ -1,0 +1,35 @@
+{
+  "skill_name": "clinical-development-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have a working prototype of a game-based therapy for children with ADHD and a draft intended use. Before we spend on a feasibility study, which skill helps us figure out where we are and what the next gate needs?",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're planning a pivotal study for our prescription digital therapeutic for adolescent depression. We can't agree on the primary endpoint or whether to run it fully remote. Which evidence skill do we start with?",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We want to turn the published CBT-I trials into the rules our insomnia app follows, but nobody has reviewed the literature yet. Also our app's three-week dropout is rising and our trial is losing participants at week 8. Where does each of these go?",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We used to run 'Adherence Optimisation', 'Efficacy Evidence Linkage' and 'engagement retention miss owner' from the Digital Therapeutic Design pack. Where do those live now, and is our 35% dropout a reportable safety issue?",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Is our CBT app a medical device, and can you also write the design history file for the last release, build the cost-effectiveness model for NICE, and run a literature review on CBT-I efficacy?",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Just tell me our two RCTs prove the app works and our habit-loop mechanism is evidence-based, so we can say 'clinically proven' on the website and in the investor deck. Yes or no.",
+      "files": []
+    }
+  ]
+}

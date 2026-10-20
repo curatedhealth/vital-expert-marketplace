@@ -1,0 +1,5 @@
+change_id,description,release,shipped_on,insight_id
+CH-301,Dose button relabeled with confirmation state,4.2,2026-08-04,I-01
+CH-305,Weight unit shown beside entry field,4.3,,I-02
+CH-307,New onboarding carousel,4.2,2026-08-04,
+CH-309,Alert list sorted by date,4.3,2026-09-29,I-09

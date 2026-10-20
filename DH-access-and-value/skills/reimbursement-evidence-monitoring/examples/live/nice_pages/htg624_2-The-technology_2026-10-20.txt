@@ -1,0 +1,76 @@
+Source: https://www.nice.org.uk/guidance/htg624/chapter/2-The-technology
+Retrieved: 20 October 2026, by curl through the agent proxy (HTTP 200). Text extracted from the page HTML; wording unchanged.
+
+You are here:
+ Home
+ NICE Guidance
+ Conditions and diseases
+ Sleep and sleep conditions
+ Sleepio to treat insomnia and insomnia symptoms
+HealthTech guidance
+Reference number: 
+HTG624
+ Published: 
+ 20 May 2022
+Guidance
+Tools and resources
+Information for the public
+History
+ Download guidance (PDF)
+ Overview
+1 Recommendations
+2 The technology
+3 Evidence
+4 Committee discussion
+5 Committee members and NICE project team
+Update information
+On this page
+ Technology
+ Care pathway
+ Innovative aspects
+ Intended use
+ Training
+ Costs
+2 The technology
+Technology
+2.1
+Sleepio (Big Health) is a self-help sleep improvement programme based on cognitive behavioural therapy for insomnia (CBT‑I). It is primarily accessed through a website. There is a Sleepio app for iOS mobile and Android devices. The iOS app can be linked to a compatible wearable fitness tracker to monitor sleep (currently Fitbit and any other device that uses Apple's HealthKit). The Android app can be linked to Fitbit.
+2.2
+The programme is structured around a sleep test, weekly interactive CBT‑I sessions and regular sleep diary entries. The sessions focus on identifying thoughts, feelings and behaviours that contribute to the symptoms of insomnia. Cognitive interventions aim to improve the way a person thinks about sleep and the behavioural interventions aim to promote a healthy sleep routine. The programme is designed to be completed in 6 weeks, but people have full access to the programme for 12 months from registration, including redoing sessions. They can also access electronic library articles, online tools and the online Sleepio user community. A daily sleep diary helps users track their progress and the programme tailors advice to individuals. Users can fill in the diary manually or the data can be automatically uploaded from a compatible wearable tracking device.
+Care pathway
+2.3
+The 
+British Association for Psychopharmacology (BAP) consensus statement on insomnia
+ describes treatment options for adults with poor sleep, which depend on how long they have had insomnia symptoms. People are first offered advice about sleep hygiene. If this does not work and they are severely impaired during the day, and it is causing significant distress, a 3- to 7‑day course of a non-benzodiazepine hypnotic medication can be considered. Hypnotic medication should only be considered if symptoms are likely to resolve quickly (for example because of a short-term stressor). If symptoms are not likely to resolve soon, face‑to‑face or digital CBT‑I should be offered. Currently, face-to-face CBT‑I is not routinely available on the NHS for most people with insomnia. A short-term course of hypnotic medication can be offered in addition to CBT‑I but should not be offered routinely. People should be offered follow‑up consultations every 2 to 4 weeks to review their symptoms.
+2.4
+NICE's clinical knowledge summary on insomnia
+ summarises the latest evidence on managing insomnia in primary care, based on whether it is short term (less than 3 months) or long term (more than 3 months). For both, the advice is to consider referral to a sleep clinic or neurology if the person has symptoms of another sleep disorder, and to address whatever might be causing the insomnia. It also advises making sure comorbidities such as anxiety and depression are managed. It gives the same advice on sleep hygiene, hypnotic medication and CBT‑I as BAP.
+2.5
+People with insomnia often also have a mental health problem. 
+NICE's guideline on common mental health problems
+ recommends assessing people using the improving access to psychological therapies (IAPT) screening tools and validated scales. Treatment depends on symptom severity and includes education, monitoring, CBT and medication.
+Innovative aspects
+2.6
+Sleepio uses an artificial intelligence (AI) algorithm to provide people with tailored digital CBT‑I. There is also support available from a Sleepio community, which includes clinical experts and other people with insomnia.
+Intended use
+2.7
+Sleepio is primarily intended as an alternative to usual treatment, which includes sleep hygiene education and hypnotic medication. People can get Sleepio through self-referral, or through primary care or IAPT services. People who have mental health conditions managed in routine care who are using Sleepio may benefit from having a healthcare professional involved.
+Training
+2.8
+The company offers primary care training on prescribing Sleepio, technical training and set up.
+Costs
+2.9
+The cost of Sleepio is £45 (excluding VAT) per person who starts session 1 of the Sleepio programme. This price was proposed at consultation and differs from the previous cost models proposed by the company, which depended on regional uptake of Sleepio. The 2 previous cost models, the population-based and the tiered licence-based cost model, are outlined below.
+2.10
+The population-based cost model involved a cost per head per year depending on the size of the population within a region. This cost was independent of the number of people that used Sleepio. The larger the population, the lower the cost per head. Because a fixed price is paid by NHS organisations each year, increased uptake led to an increase in cost savings.
+2.11
+The tiered licence-based cost model was based on the number of people who had treatment with Sleepio. This was a tiered pricing system, so the cost per patient reduced as uptake increased beyond the number of people specified within each of the fixed tiers. For more details of these prices, see the 
+supporting documents for Sleepio on the NICE website
+.
+For more details about the technology, see the 
+website for Sleepio.
+Next page
+3 Evidence
+Previous page
+1 Recommendations
+ Back to top

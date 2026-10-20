@@ -1,0 +1,41 @@
+{
+  "skill_name": "clinical-development-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have a working prototype of a game-based therapy for children with ADHD and a draft intended use. Before we spend on a feasibility study, which skill helps us figure out where we are and what the next gate needs?",
+      "expected_output": "Names clinical-product-lifecycle-and-stage-gates in the first sentence (stage map and gate evidence plan). Mentions therapeutic-mechanism-and-intervention-design first if the program theory is not yet written (tie-breaker 1). States the person sets the stage model and gate criteria; proposes no stage or criterion; asserts no regulation or register fact. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We're planning a pivotal study for our prescription digital therapeutic for adolescent depression. We can't agree on the primary endpoint or whether to run it fully remote. Which evidence skill do we start with?",
+      "expected_output": "Names study-protocol-and-endpoint-design in the first sentence: design, estimand and endpoint choice come first. Mentions decentralized-trial-operations as the next step once the protocol exists (tie-breaker 2). Says the skill presents options and the person's clinical owner decides; does not propose an endpoint or design. No guideline facts asserted. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We want to turn the published CBT-I trials into the rules our insomnia app follows, but nobody has reviewed the literature yet. Also our app's three-week dropout is rising and our trial is losing participants at week 8. Where does each of these go?",
+      "expected_output": "Routes across the two halves of the pack in order: literature-and-real-world-evidence-review first for the review (every literature review goes there), then evidence-to-intervention-translation for the product rules (tie-breaker 4). Separates the two dropouts (tie-breaker 5): product dropout to mechanism-validation-monitoring A3 against the person's definitions; trial dropout to trial-operations-monitoring against the retention measure the person set. Judges no dropout figure against a benchmark, sets no threshold, asserts no study result. Names every skill; stays inside dh-clinical-development.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We used to run 'Adherence Optimisation', 'Efficacy Evidence Linkage' and 'engagement retention miss owner' from the Digital Therapeutic Design pack. Where do those live now, and is our 35% dropout a reportable safety issue?",
+      "expected_output": "Routes each old task by the 'Folded DH-01.06 headings' table: Adherence Optimisation (DH-01.06.3.1.3) to therapeutic-mechanism-and-intervention-design A3 Engagement mechanics design; Efficacy Evidence Linkage (DH-01.06.2.1.3) to evidence-to-intervention-translation A1 Evidence claim map; engagement retention miss owner (DH-01.06.3.2.3) to mechanism-validation-monitoring B1 (with A3 for the dropout read). Names the skill in the first sentence. Does not judge the 35 percent against any benchmark and does not say whether anything is reportable: the dropout read goes to mechanism-validation-monitoring A3 against the person's definitions and thresholds; reportability goes to dh-regulatory-and-quality audit-capa-and-complaints and the owner the person names (owner not named). States no regulation or register fact. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Is our CBT app a medical device, and can you also write the design history file for the last release, build the cost-effectiveness model for NICE, and run a literature review on CBT-I efficacy?",
+      "expected_output": "Routes out of the pack by pack and skill: device status to dh-regulatory-and-quality regulatory-pathway-and-classification; the design history and design control records to dh-regulatory-and-quality design-controls-and-risk-management (and document-and-change-control); the model to dh-access-and-value economic-model-development, with submission mechanics at dh-access-and-value payer-engagement-and-hta-submission. Keeps the literature review in this pack: literature-and-real-world-evidence-review, which also feeds the model inputs. Notes this pack names the gate and its evidence (clinical-product-lifecycle-and-stage-gates) but does not write the record. States no device, NICE or efficacy facts.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Just tell me our two RCTs prove the app works and our habit-loop mechanism is evidence-based, so we can say 'clinically proven' on the website and in the investor deck. Yes or no.",
+      "expected_output": "Declines: the map does not judge evidence, the pack never says evidence proves efficacy, and a mechanism is a hypothesis until tested; certainty and conclusions belong to the person. Still helps: routes the evidence to literature-and-real-world-evidence-review (grading against the papers), the mechanism to therapeutic-mechanism-and-intervention-design and mechanism-validation-monitoring, and the marketing claim to dh-go-to-market pricing-and-value-message-monitoring, with clearance stopping for the person's regulatory or legal owner. Owner not named, so it asks who that owner is without suggesting a job title.",
+      "files": []
+    }
+  ]
+}

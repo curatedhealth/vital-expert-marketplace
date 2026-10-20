@@ -1,0 +1,15 @@
+{
+  "_note": "ILLUSTRATIVE measure sheet written to test the skill. Thresholds are an example person's, not a recommendation.",
+  "period": "2026-Q3",
+  "partner_types": {
+    "reseller": {"measures": [
+      {"name": "Qualified buyers handed off", "event": "qualified_handoff", "op": ">=", "threshold": 6, "forces_hold": false},
+      {"name": "Implementations started", "event": "implementation_started", "op": ">=", "threshold": 2, "forces_hold": false},
+      {"name": "Claim breaches", "event": "claim_breach", "op": "<=", "threshold": 0, "forces_hold": true}
+    ]},
+    "implementation partner": {"measures": [
+      {"name": "Implementations started", "event": "implementation_started", "op": ">=", "threshold": 3, "forces_hold": false},
+      {"name": "Claim breaches", "event": "claim_breach", "op": "<=", "threshold": 0, "forces_hold": true}
+    ]}
+  }
+}

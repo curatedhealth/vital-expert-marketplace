@@ -12,11 +12,7 @@ One core on the Digital Health Library. This pack contains only this core. Show 
 ## DH-01.06.1 Personalization Engine
 Skill `DH-01.06.1 Personalization Engine`. Adaptive Intervention Design & Personalisation Engine Development, Personalisation Effectiveness Assessment & Adaptation Quality Monitoring.
 
-## DH-01.06.2 Safety & Efficacy
-Skill `DH-01.06.2 Safety & Efficacy`. Therapeutic Safety & Efficacy Standards Implementation, Safety & Efficacy Compliance Assessment & Therapeutic Quality Monitoring.
-
-## DH-01.06.3 Engagement Mechanics
-Skill `DH-01.06.3 Engagement Mechanics`. Sustained Engagement Pattern Design & Behavioural Mechanics Implementation, Engagement Effectiveness Assessment & Retention Quality Monitoring.
+DH-01.06.2 Safety & Efficacy and DH-01.06.3 Engagement Mechanics now live in dh-clinical-development: therapeutic-mechanism-and-intervention-design and mechanism-validation-monitoring (tasks A3 and A4).
 
 ## DH-01.06.4 DTx Architecture
 Skill `DH-01.06.4 DTx Architecture`. Therapeutic System Architecture Design & Platform Development, DTx Architecture Quality Assessment & Platform Performance Monitoring.

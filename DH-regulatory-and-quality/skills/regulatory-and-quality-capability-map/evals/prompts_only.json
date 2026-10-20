@@ -1,0 +1,29 @@
+{
+  "skill_name": "regulatory-and-quality-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We built a Bluetooth inhaler add-on with an app that flags poor technique and predicts asthma exacerbations. We want to sell in the US first. Which regulatory skill do I start with?"
+    },
+    {
+      "id": 2,
+      "prompt": "FDA sent us an additional information request on our De Novo for a depression screening algorithm, and separately our QA lead wants to know how to log the model update we made in response. Which skills?"
+    },
+    {
+      "id": 3,
+      "prompt": "Skip the routing. Just tell me: is our menstrual-cycle prediction app class I or class IIa under MDR? Yes or no is fine."
+    },
+    {
+      "id": 4,
+      "prompt": "We're a 15-person company building a Class IIa insulin titration app for the EU and US. We have SOPs in Google Docs but no real QMS. Which quality skill do we start with?"
+    },
+    {
+      "id": 5,
+      "prompt": "A hospital pharmacist reported our app suggested a dose 10x too high for one patient. Nobody was harmed. What do I use?"
+    },
+    {
+      "id": 6,
+      "prompt": "Just confirm for me that our CAPA on the login bug is effective so I can close it today. Recurrence went from 9 tickets to 2 tickets a month."
+    }
+  ]
+}

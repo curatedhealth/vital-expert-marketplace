@@ -1,0 +1,65 @@
+{
+  "tool": "compare_authorizations",
+  "called": "2026-10-19",
+  "arguments": {
+    "references": [
+      "K243294",
+      "++B720EASPECTSCEGK",
+      "K221564"
+    ],
+    "jurisdiction": "all"
+  },
+  "comparison_table": {
+    "columns": [
+      "K243294 (US)",
+      "++B720EASPECTSCEGK (EU)",
+      "K221564 (US)"
+    ],
+    "rows": [
+      {
+        "field": "class",
+        "cells": [
+          "2",
+          "Class IIb",
+          "2"
+        ]
+      },
+      {
+        "field": "pathway",
+        "cells": [
+          "FDA_510K",
+          "CE_MARK",
+          "FDA_510K"
+        ]
+      },
+      {
+        "field": "decision_date",
+        "cells": [
+          "2025-02-14",
+          "not assessable",
+          "2023-02-23"
+        ]
+      },
+      {
+        "field": "predicate",
+        "cells": [
+          "K221564, K192692, K223555, K231656, K231195, K231837, K232496, K232156",
+          "not assessable",
+          "K200760"
+        ]
+      },
+      {
+        "field": "safety_event_count",
+        "cells": [
+          "not assessable",
+          "not assessable",
+          "not assessable"
+        ]
+      }
+    ]
+  },
+  "gaps": [
+    "UK device registration (MHRA PARD) [GAP]",
+    "CH device registration (swissdamed) [GAP]"
+  ]
+}

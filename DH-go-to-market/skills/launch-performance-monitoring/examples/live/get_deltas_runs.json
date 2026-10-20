@@ -1,0 +1,36 @@
+{
+ "called": "19 October 2026",
+ "runs": [
+  {
+   "args": {
+    "reference": "deprexis",
+    "since": "2026-01-01"
+   }
+  },
+  {
+   "args": {
+    "reference": "Big Health",
+    "since": "2020-01-01"
+   }
+  }
+ ],
+ "response_both": {
+  "events": [],
+  "feeds": {
+   "regulatory_dh.get_deltas": {
+    "events": [],
+    "gap": null
+   },
+   "digital_health_census.get_deltas": {
+    "events": [],
+    "gap": null
+   },
+   "market_access_dh.get_deltas": {
+    "gap": "[GAP]",
+    "gap_reason": "market_access_dh.get_deltas is not on that server",
+    "events": []
+   }
+  }
+ },
+ "observation": "Big Health: Sleepio NICE listed_on 2022-05-20 falls inside the window; the feeds return no event and gap null."
+}

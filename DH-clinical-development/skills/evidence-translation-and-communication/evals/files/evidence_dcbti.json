@@ -1,0 +1,7 @@
+{"note": "Passages are verbatim from the abstract of Schuffelen et al., Depression and Anxiety 2025, DOI 10.1155/da/2171041 (Europe PMC, read 19 October 2026). The rating fields are left empty: no person has rated certainty.",
+ "outcomes": [
+  {"outcome": "depressive symptoms (PHQ-9), 12 and 24 weeks", "certainty": null, "rated_by": null,
+   "passages": ["A total of 140 participants (120 women, mean age: M = 39.76 ± 11.65 years) were randomized to dCBT-I (n=70) or WLC (n=70). Large treatment effects at 12- and 24 weeks showed significant reductions in depressive symptoms (-3.34 and -2.83; ps <0.001; ds = 0.66-0.78) in the dCBT-I group."]},
+  {"outcome": "insomnia severity", "certainty": null, "rated_by": null,
+   "passages": ["Treatment effects in favor of dCBT-I were also found for insomnia severity (ds = 1.46-1.94) and most secondary outcomes (ds = 0.33-1.14)."]}
+ ]}

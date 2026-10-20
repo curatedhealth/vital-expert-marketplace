@@ -1,0 +1,47 @@
+{
+ "label": "SleepWell (fictional) digital CBT for insomnia vs usual care, adults, England",
+ "illustrative": true,
+ "note": "ILLUSTRATIVE numbers typed for the build test. Not any product's data. SleepWell is fictional.",
+ "currency": "GBP",
+ "cost_year": 2026,
+ "perspective": "NHS and PSS costs; health effects for patients (stated by the person)",
+ "horizon_years": 3,
+ "discount": {"costs": 0.035, "effects": 0.035, "first_year_discounted": false},
+ "parameters": {
+  "c_uc": 600,
+  "c_app": [250, 0, 0],
+  "offset": 120,
+  "q_uc": 0.72,
+  "u_gain": 0.02,
+  "waning": 0.5
+ },
+ "arms": [
+  {"name": "Usual care", "cost": "c_uc", "qaly": "q_uc"},
+  {"name": "SleepWell + usual care", "cost": "c_uc + c_app - offset", "qaly": "q_uc + u_gain * waning ** t"}
+ ],
+ "reference_arm": "Usual care",
+ "thresholds": [20000, 30000],
+ "budget_impact": {
+  "years": 3,
+  "eligible_population": 10000,
+  "uptake": [0.05, 0.1, 0.15],
+  "current_mix": [{"name": "Usual care", "share": 1, "annual_cost_per_patient": "c_uc"}],
+  "new_cost_per_patient": "c_uc + 250",
+  "condition_cost_change_per_patient": "-offset"
+ },
+ "sensitivity": {
+  "comparison_arm": "SleepWell + usual care",
+  "threshold": 20000,
+  "ranges": {
+   "u_gain": [0.01, 0.03],
+   "c_app": [[150, 0, 0], [400, 0, 0]],
+   "offset": [60, 180],
+   "waning": [0.3, 0.8]
+  }
+ },
+ "scenarios": [
+  {"name": "Offsets not realized", "set": {"offset": 0}},
+  {"name": "No discounting", "discount": {"costs": 0, "effects": 0}},
+  {"name": "One-year horizon", "horizon_years": 1}
+ ]
+}

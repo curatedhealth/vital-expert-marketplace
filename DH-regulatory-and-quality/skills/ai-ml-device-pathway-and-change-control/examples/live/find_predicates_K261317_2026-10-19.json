@@ -1,0 +1,72 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "tool": "regulatory-dh.find_predicates",
+ "args": {
+  "reference": "K261317"
+ },
+ "chain": [
+  [
+   "K261317",
+   "BriefCase-Triage",
+   "FDA_510K",
+   "2026-05-14",
+   [
+    "K220709"
+   ],
+   0
+  ],
+  [
+   "K220709",
+   "BriefCase",
+   "FDA_510K",
+   "2022-10-07",
+   [
+    "K203508"
+   ],
+   1
+  ],
+  [
+   "K203508",
+   "BriefCase",
+   "FDA_510K",
+   "2020-12-29",
+   [
+    "K190896",
+    "K180647",
+    "K190072",
+    "K193298",
+    "K201020",
+    "K192383"
+   ],
+   2
+  ],
+  [
+   "K180647",
+   "BriefCase",
+   "FDA_510K",
+   "2018-08-01",
+   [
+    "DEN170073"
+   ],
+   3
+  ],
+  [
+   "DEN170073",
+   "ContaCT (Viz.Al, Inc.)",
+   "FDA_DE_NOVO",
+   "2018-02-13",
+   [],
+   4
+  ]
+ ],
+ "columns": [
+  "reference",
+  "device",
+  "pathway",
+  "decision_date",
+  "predicates",
+  "depth"
+ ],
+ "predicate_basis": "named in the FDA 510(k) summary",
+ "coverage": "Predicates are read from FDA 510(k) summary PDFs; openFDA carries no predicate field"
+}

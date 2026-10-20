@@ -1,0 +1,7 @@
+# ILLUSTRATIVE TEST DATA written for this skill's evals; not any company's deals.
+contract_id,deal_type,signed_on,unit,units,contract_value,currency,list_price_per_unit,notes
+D-101,new,2026-07-14,member-year,1000,380000,USD,450,
+D-102,renewal,2026-08-02,member-year,2500,700000,USD,450,
+D-103,pilot,2026-08-20,member-year,200,0,USD,450,free 6-month pilot for a health system that refers its patients
+D-104,new,2026-09-05,member-year,500,240000,USD,450,
+D-105,new,2026-09-28,site-year,3,90000,USD,,site license

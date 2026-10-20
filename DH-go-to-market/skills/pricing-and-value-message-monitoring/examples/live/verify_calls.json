@@ -1,0 +1,10 @@
+{
+  "called_on": "19 October 2026",
+  "calls": [
+    {"call": "verify.qualify_source {url: \"https://www.fda.gov/media/102575/download\", question: \"Does disclosing study limitations cure a promotional claim based on an inadequate study?\"}", "result": {"tier": "silver", "publisher": "U.S. Food and Drug Administration", "date": "2018-11-02", "title": "Medical Product Communications That Are Consistent With the FDA-Required Labeling  Questions and Answers Guidance for Industry", "status": "current", "admissibility": ["primary source missing one field: code"], "source_score_total": 47}, "first_attempt": "HTTP 503"},
+    {"call": "verify.check_claim, claim in the passage's direction: \"Under FDA's CFL guidance, disclosing the limitations of an inadequate study does not correct a misleading promotional message.\"", "passage": "if a CFL promotional communication relies on a study that is inadequate to support the representations or suggestions it presents, disclosure of the material limitations of that study does not correct the misleading message conveyed by the communication.", "result": {"status": "supported", "rationale": "Strong overlap (69%) with context", "citation_title": null, "citation_year": null}},
+    {"call": "verify.check_claim, the negated claim: \"Under FDA's CFL guidance, disclosing the limitations of an inadequate study corrects a misleading promotional message.\"", "passage": "same passage", "result": {"status": "partial", "rationale": "Partial overlap (58%) with context"}},
+    {"call": "verify.extract_claims {text: \"SleepWell Pro is the clinically proven app that cures insomnia in 6 weeks. Doctor-recommended and CE-certified. No side effects, unlike sleeping pills. Covered by your health insurance. Patients sleep 45 minutes longer on average.\"}", "result": "5 claims c1 to c5, one per sentence, kinds numeric or factual, all checkable: true, cited_refs empty"},
+    {"call": "verify.build_record {clearances: [{cleared_by: {name: \"Claude\"}, role: \"model\"}]}", "result": "error: build_record refuses a record without a human cleared_by.name"}
+  ]
+}

@@ -1,0 +1,83 @@
+{
+ "call": "market-access-dh.get_status_history",
+ "called": "19 October 2026",
+ "trimmed": true,
+ "runs": [
+  {
+   "args": {
+    "reference": "HelloBetter Schlafen",
+    "scheme": "DE_DIGA"
+   },
+   "scheme_identifier": "01772",
+   "current_status": "permanent",
+   "history": [
+    {
+     "status": "permanent",
+     "status_raw": "dauerhaft aufgenommen",
+     "changed_on": "2022-12-18",
+     "note": "day-zero snapshot 2026-10-15; first load from diga-verzeichnis.de (BfArM aggregator); diga.bfarm.de SPA not machine-readable without token. [GAP]: transition history not published in loaded sources",
+     "source_url": "https://diga.bfarm.de/de/verzeichnis/01772",
+     "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+     "source": "diga_verzeichnis"
+    },
+    {
+     "status": "permanent",
+     "status_raw": "dauerhaft aufgenommen",
+     "changed_on": "2024-12-17",
+     "note": "BfArM Bekanntmachung 18 (2 January 2025): nach Einreichung von Nachweisen für die endgültige Aufnahme dauerhaft aufgenommen; Datum der Änderung im Verzeichnis 2024-12-17. Listing status not updated.",
+     "source_url": "https://diga.bfarm.de/api/diga-vz/media/9593",
+     "retrieved_at": "2026-10-16T11:52:47.222157+00:00",
+     "source": "bfarm_diga_bekanntmachung"
+    }
+   ],
+   "gaps": []
+  },
+  {
+   "args": {
+    "reference": "somnio",
+    "scheme": "DE_DIGA"
+   },
+   "scheme_identifier": "00508",
+   "current_status": "permanent",
+   "history": [
+    {
+     "status": "permanent",
+     "status_raw": "dauerhaft aufgenommen",
+     "changed_on": "2020-10-22",
+     "note": "day-zero snapshot 2026-10-15; first load from diga-verzeichnis.de (BfArM aggregator); diga.bfarm.de SPA not machine-readable without token. [GAP]: transition history not published in loaded sources",
+     "source_url": "https://diga.bfarm.de/de/verzeichnis/00508",
+     "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+     "source": "diga_verzeichnis"
+    }
+   ],
+   "gaps": [
+    "[GAP]: transition history not published in loaded sources for somnio on DE_DIGA; only a day-zero snapshot is stored"
+   ]
+  },
+  {
+   "args": {
+    "reference": "somnovia",
+    "scheme": "DE_DIGA"
+   },
+   "scheme_identifier": "02097",
+   "current_status": "permanent",
+   "history": [
+    {
+     "status": "permanent",
+     "status_raw": "dauerhaft aufgenommen",
+     "changed_on": "2024-10-28",
+     "note": "day-zero snapshot 2026-10-15; first load from diga-verzeichnis.de (BfArM aggregator); diga.bfarm.de SPA not machine-readable without token. [GAP]: transition history not published in loaded sources",
+     "source_url": "https://diga.bfarm.de/de/verzeichnis/02097",
+     "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+     "source": "diga_verzeichnis"
+    }
+   ],
+   "gaps": [
+    "[GAP]: transition history not published in loaded sources for somnovia on DE_DIGA; only a day-zero snapshot is stored"
+   ]
+  }
+ ],
+ "coverage": [
+  "DE_DIGA: 82 listings; last load 2026-10-15; sources diga_verzeichnis"
+ ]
+}

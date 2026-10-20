@@ -1,0 +1,25 @@
+{
+ "label": "illustrative: invented product and facts, written for testing the skill; not a real design",
+ "product": "CalmPath (illustrative app for panic disorder)",
+ "outcome": "Fewer panic attacks per week at 12 weeks",
+ "population": "Adults with panic disorder in outpatient care, smartphone owners",
+ "exclusions": [],
+ "links": [
+  {"id": "L1", "type": "action", "text": "Users complete interoceptive exposure exercises at least 3 times a week", "measure": "Exercise completion logged in app"},
+  {"id": "L2", "type": "change", "text": "Exposure is expected to reduce fear of bodily sensations (psychological capability and automatic motivation)", "measure": null},
+  {"id": "L3", "type": "outcome", "text": "Reduced fear is expected to reduce panic attack frequency", "measure": "Weekly panic diary"}
+ ],
+ "components": [
+  {"id": "C1", "name": "Guided interoceptive exposure module", "link": "L1",
+   "function": ["training", "enablement"],
+   "tidier": {"1": "Exposure module", "2": "Delivers the exposure link", "3": "Audio scripts", "4": "Breathing and spinning exercises", "5": "none (software only)", "6": "App, individual", "7": "Home", "8": "?", "9": "Difficulty steps up after 3 completions", "11": "?"},
+   "fixed_function": "Exposure to feared sensations, graded",
+   "adaptive": {"decision_points": "After each session", "options": ["repeat level", "next level"], "tailoring_variables": [{"name": "Self-rated distress 0 to 10", "reliability_or_validity": null}], "rule": "Next level if distress at end is below start", "missing_data_rule": null}},
+  {"id": "C2", "name": "Mood journal", "link": null, "function": ["education"], "tidier": {"1": "Mood journal"}, "fixed_function": null, "adaptive": null},
+  {"id": "C3", "name": "Panic diary", "link": "L3", "function": [], "tidier": {"1": "Panic diary", "2": "Measures the outcome link", "3": "In-app form", "4": "Log each attack", "5": "none", "6": "App", "7": "Anywhere", "8": "Daily prompt", "9": "none", "11": "Completion rate reviewed weekly"}, "fixed_function": "Daily attack count", "adaptive": null}
+ ],
+ "assumptions": [
+  {"id": "A1", "link": "L1", "text": "Users will complete exposure despite discomfort", "signal": "Completion below the person's milestone by week 4", "measure": "Exercise completion logged in app", "milestone": null, "stopper": null},
+  {"id": "A2", "link": "L2", "text": "Exposure reduces fear of bodily sensations in app delivery", "signal": null, "measure": null, "milestone": null, "stopper": "Dr. Amara Okafor"}
+ ]
+}

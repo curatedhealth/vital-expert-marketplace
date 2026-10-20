@@ -1,0 +1,21 @@
+{
+  "skill_name": "digital-health-expert",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want a regulatory expert for our SaMD team inside our company's ChatGPT. Which VITAL experts do you have for regulatory and quality work?"
+    },
+    {
+      "id": 2,
+      "prompt": "Download the SaMD Regulatory Affairs Director for me and tell me exactly what I'm getting."
+    },
+    {
+      "id": 3,
+      "prompt": "Can I get the regulatory director, the quality systems director and the submission manager as a team for a review panel?"
+    },
+    {
+      "id": 4,
+      "prompt": "Just run the SaMD Regulatory Affairs Director here and have it confirm our app is compliant with MDR so I can tell the board."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+change_id,description,credited_to_codesign,insight_ids,in_backlog_before,shipped_version,shipped_date
+CH-12,Two-tap reading entry,yes,I1,,2.4,2026-10-05
+CH-13,New onboarding carousel,yes,,,2.4,2026-10-05
+CH-14,Larger reading numerals,yes,I3,2026-06-15,2.4,2026-10-05
+CH-15,Dark mode,no,,,2.4,2026-10-05

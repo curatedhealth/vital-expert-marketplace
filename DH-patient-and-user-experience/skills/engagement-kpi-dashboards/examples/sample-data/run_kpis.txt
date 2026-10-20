@@ -1,0 +1,25 @@
+Rows excluded before computing (missing data; report them, do not impute):
+  blank or invalid event_date: 1
+Rows used: 833
+
+KPI K1: Program reach, third quarter 2026
+  Period: 2026-07-01 to 2026-09-30
+  Numerator: 68 people with at least 1 'enrolled' event(s) in the period
+  Denominator: 160 (eligible)
+  Value: 42.5 percent
+  Threshold: none set; no verdict
+
+KPI K2: Effective engagement: 4 or more modules within 56 days of enrollment
+  Period: 2026-07-01 to 2026-10-19
+  Numerator: 11 people with at least 4 'module_complete' event(s) in the period, within 56 days of 'enrolled'
+  Denominator: 47 (enrolled, start event 'enrolled', observed at least 56 days)
+  Value: 23.4 percent
+  Check: 5 people meet the numerator but are not in the denominator (excluded from the value; check this is intended, for example people not yet observed for the full window, or a denominator that does not match the numerator)
+  Threshold (the person's, set by Head of Patient Programs (the example person's words)): 40 percent
+
+KPI K3: Active in September
+  Period: 2026-09-01 to 2026-09-30
+  Numerator: 32 people with at least 1 'session' event(s) in the period
+  Denominator: 68 (enrolled, start event 'enrolled')
+  Value: 47.1 percent
+  Threshold: none set; no verdict

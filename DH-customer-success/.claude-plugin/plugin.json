@@ -1,7 +1,7 @@
 {
   "name": "dh-customer-success",
-  "version": "0.2.4",
-  "description": "DH Customer Success & Implementation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
+  "version": "0.2.5",
+  "description": "Superseded by dh-go-to-market. DH Customer Success & Implementation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"

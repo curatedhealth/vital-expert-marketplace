@@ -1,0 +1,18 @@
+{
+ "call": "verify.build_record",
+ "called_on": "19 October 2026",
+ "arguments": {
+  "clearances": [
+   {
+    "cleared_by": {
+     "name": "Claude"
+    },
+    "scope": "usability test summary draft"
+   }
+  ],
+  "text": "Usability summary draft (illustrative)."
+ },
+ "response": {
+  "error": "build_record refuses a record without a human cleared_by.name"
+ }
+}

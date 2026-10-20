@@ -1,0 +1,47 @@
+{
+  "_note": "Built for this skill's worked example from public sources only: the FDA De Novo decision summary DEN200026 as recorded in rows TM141 to TM144, the regulatory-dh record for DEN200026, and the STARS-ADHD PubMed abstract (PMID 33334505) read on 20 October 2026. Anything those sources do not state is [GAP]. It is not Akili's specification and says nothing about the current product.",
+  "product": "EndeavorRx (public-source reconstruction)",
+  "version": "as described in DEN200026, granted 15 June 2020",
+  "claims": [
+    {"id": "C1", "text": "Improves attention function as measured by computer-based testing (TOVA API) in children aged 8 to 12 with ADHD.",
+     "status": "sourced",
+     "source": {"ref": "10.1016/s2589-7500(20)30017-0", "passage": "this study provides evidence that AKL-T01 might be used to improve objectively measured inattention in paediatric patients with ADHD", "locator": "Abstract, Interpretation"},
+     "population": "aged 8-12 years, without disorder-related medications, confirmed ADHD, TOVA API -1.8 and below"},
+    {"id": "C2", "text": "Improves hyperactivity.", "status": "refused",
+     "source": {"ref": "DEN200026 (TM144)", "passage": "may not display benefits in typical behavioral symptoms, such as hyperactivity.", "locator": "Indications for use"},
+     "population": "[GAP]"}
+  ],
+  "program_theory": {
+    "components": ["video game-like interface", "adaptive closed-loop difficulty algorithms (TM142)", "regimen enforcement: lock-out and reminders (TM142)"],
+    "mechanisms": ["[GAP] the decision summary rows name the algorithms but not the causal pathway to attention"],
+    "context": ["at-home play (PMID 33334505)", "prescription use (TM144 indication context) [GAP] beyond that"],
+    "proximal_outcomes": ["[GAP]"],
+    "distal_outcome": "TOVA API change (TM144)"
+  },
+  "tidier": {
+    "1": "EndeavorRx (AKL-T01)",
+    "2": "Targets attention and cognitive control (PMID 33334505); control arm without the adaptive algorithms isolates them (TM143)",
+    "3": "[GAP]",
+    "4": "[GAP]",
+    "5": "N/A",
+    "6": "Video game-like interface, at home, individual (PMID 33334505)",
+    "7": "At home (PMID 33334505)",
+    "8": "About 25 minutes per day, 5 days per week (TM142); 4 weeks in STARS-ADHD (PMID 33334505)",
+    "9": "Difficulty adjusted per patient by closed-loop algorithms (TM142); what, why, when [GAP]",
+    "11": "Lock-out after allocated gameplay and reminders to user and parents (TM142); compliance measured as sessions played (PMID 33334505)"
+  },
+  "decision_rules": [
+    {"id": "R1", "decision_point": "[GAP]", "tailoring_variables": ["[GAP] in-game performance is implied, not stated in the rows"],
+     "options": ["harder level", "easier level"], "rule": "Adaptive closed-loop algorithms adjust difficulty per patient (TM142)",
+     "missing_data": "[GAP]", "claim_ids": ["C1"]},
+    {"id": "R2", "decision_point": "end of the allocated daily gameplay", "tailoring_variables": ["minutes played today"],
+     "options": ["continue", "lock out"], "rule": "Lock out after the allocated gameplay (TM142)",
+     "missing_data": "[GAP]", "claim_ids": ["C1"]},
+    {"id": "R3", "decision_point": "[GAP]", "tailoring_variables": ["[GAP]"], "options": ["hyperactivity module"],
+     "rule": "Hypothetical rule added to show the check: a module aimed at hyperactivity", "missing_data": "[GAP]", "claim_ids": ["C2"]}
+  ],
+  "limits": [
+    {"id": "L1", "not_covered": "Behavioral symptoms such as hyperactivity (TM144)", "behavior_off": "No feature, message or claim aimed at hyperactivity", "reopen_owner": ""},
+    {"id": "L2", "not_covered": "Children outside 8 to 12, and children on ADHD medication in the pivotal trial (PMID 33334505 methods)", "behavior_off": "[GAP]", "reopen_owner": ""}
+  ]
+}

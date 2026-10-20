@@ -1,0 +1,168 @@
+
+3 Committee discussion | Digitally enabled therapies for adults with depression: early value assessment  | Guidance | NICE
+
+        You are here:
+
+                    Home
+
+                        NICE Guidance
+
+                        Conditions and diseases
+
+                        Mental health, behavioural and neurodevelopmental conditions
+
+                        Depression
+
+                            Digitally enabled therapies for adults with depression: early value assessment
+
+HealthTech guidance
+
+Reference number:
+HTG675
+
+							Published:
+
+								16 May 2023
+
+							Last updated:
+
+								14 January 2025
+
+Guidance
+
+Tools and resources
+
+Information for the public
+
+History
+
+    Download guidance (PDF)
+
+                                    Overview
+
+1 Recommendations
+
+2 The technology
+
+3 Committee discussion
+
+4 Further evidence
+
+5 Committee members and NICE project team
+
+Update information
+
+On this page
+
+                                                        Unmet need
+
+                                                        Implementation
+
+                                                        Patient considerations
+
+                                                        Equality considerations
+
+                                                        Clinical effectiveness overview
+
+                                                        Costs and resource use
+
+                                                        Evidence gap overview
+
+3 Committee discussion
+
+NICE's medical technologies advisory committee
+ considered evidence on digitally enabled therapies for treating depression in adults from several sources, including an early value assessment report by the external assessment group (EAG) and an overview of that report. Full details are in the
+project documents for this guidance
+.
+
+Unmet need
+
+3.1
+
+Mental health services are in high demand and access varies widely across the NHS. Because of this high demand, many people are not getting the treatment and support they need. Digitally enabled therapies can increase the treatment options available and reduce the time needed by mental health professionals to deliver treatment.
+
+3.2
+
+Patient experts noted that digitally enabled therapies can provide flexible access to therapy and remove barriers to treatment such as travel-related issues and having to take time off work, and may give access to people who are not able to leave the house. They also said that early access to treatment could alleviate mild symptoms of depression and prevent their symptoms getting worse. The use of these technologies could free up clinical resources and time that could be used to support those who need or would prefer face-to-face care. The committee concluded that there is an unmet clinical need and that access to effective mental health treatments needs to be improved.
+
+Implementation
+
+3.3
+
+Digitally enabled therapies will be used in NHS Talking Therapies for anxiety and depression with existing service protocols. All the technologies included in this assessment are being used in the NHS or have planned pilots for their use. The committee acknowledged that a recommendation for use with further evidence generation would support adoption of these technologies and provide a mechanism for collecting real-world clinical efficacy data.
+
+3.4
+
+The committee carefully considered the safety and risks of using these technologies while further evidence is generated. The clinical experts advised that NHS Talking Therapies for anxiety and depression services have established protocols, which include initial clinical assessment, matching the right treatment to people's needs and preferences, and ongoing monitoring and management of patient safety. Some digitally enabled therapies also have inbuilt functionalities to promote safety; for example, technologies may alert the practitioner or therapist of potential concerns so that they can contact the patient when needed. The practitioner or therapist may also contact the patient if they see worsening in patient-reported outcomes or if the patient has stopped using the programme. Decline in mental health or functioning while using digitally enabled therapies should be identified by the practitioner or therapist and treatment should be increased when needed, in line with the stepped care approach.
+
+3.5
+
+Practitioners and therapists need training and support to effectively deliver digitally enabled therapies. Healthcare professionals working in NHS Talking Therapies for anxiety and depression have ongoing supervision to ensure the quality of treatment and to provide support to practitioners and therapists in the delivery of assessments and treatment. The clinical experts advised that practitioners and therapists also need to be comfortable using digital technologies and need to have access to the necessary systems. Technologies should be integrated into a service's system rather than being a standalone technology. This would help with data collection and reporting. More information on the implementation of digitally enabled therapies can be found in the
+adoption report within the supporting documentation on the NICE website
+.
+
+Patient considerations
+
+3.6
+
+Treatment options should be discussed by healthcare professionals, the person considering treatment and (when appropriate) carers. Discussions should consider clinical assessment, the person's preferences and needs, and the level of support needed. Clinical and patient experts agreed that personal choice should be a main consideration when offering a digitally enabled therapy. People who want to use a digitally enabled therapy are more likely to engage with the content. This may allow people to feel they are taking responsibility for their treatment, which may create a sense of achievement. Clinical experts also said that other factors such as risk and depression severity should also be considered. This is because anyone at high risk (such as those with suicidal ideation) or those with reduced ability to engage with a digitally enabled therapy (such as people with reduced concentration) would be better suited to therapies with more therapist involvement. The committee concluded that personal choice and clinical judgement are most important when deciding on the suitability of using digitally enabled therapies.
+
+3.7
+
+Patient experts said that people need to be reassured that their level of care can be increased or an alternative treatment offered without being put to the end of a waiting list if a digitally enabled therapy does not improve symptoms. Clinical experts confirmed that symptom scores would be routinely monitored and if symptom severity is not improving, further therapist support or an alternative intervention should be considered.
+
+3.8
+
+Patient experts said that appropriate privacy and security measures should be in place to reassure people using the technology. People would also need to be told about any additional support measures in place, especially when the technology is used outside of working hours. People should discuss any concerns about using digitally enabled therapies with their practitioner or therapist before starting treatment.
+
+Equality considerations
+
+3.9
+
+Digitally enabled therapy may not be suitable for everyone. Adults with limited access to equipment or to an internet connection, or who are less comfortable or skilled at using digital technologies, may be less likely to benefit from digitally enabled therapies. The committee concluded that face-to-face treatment options may be more appropriate for some adults with depression.
+
+3.10
+
+Additional support and resources may also be needed for people with visual or hearing impairments, problems with manual dexterity, or who are unable to read or understand English. The companies said that they have taken steps to improve the accessibility of their technologies, including having a low reading age for the content and audio recording options, and considering diversity and inclusivity in their content design. One technology, Deprexis, is also available in 9 languages.
+
+Clinical effectiveness overview
+
+3.11
+
+The evidence shows that Beating the Blues, Deprexis and Space from Depression have potential benefits for adults with depression. There was limited evidence for Wysa and no evidence for Iona Mind or Minddistrict within the scope of this assessment. The evidence base consists of 46 papers, reporting on 32 studies. There were 14 randomised controlled trials, 1 meta-analysis, 1 non-randomised pilot study and 13 non-comparative studies. Of these, 12 studies were done in the UK using Beating the Blues or Space from Depression. The EAG noted that the populations were broadly relevant, but in 18 of the 32 studies the population was not restricted to depression and included adults with anxiety and other affective disorders. Most comparative studies also had waitlist or usual care controls. Some of the evidence was collected outside the UK, which may limit the generalisability of the evidence. The committee concluded that the evidence base was sufficient to recommend use of Beating the Blues, Deprexis and Space from Depression while further evidence is generated. These technologies can be used once they have Digital Technology Assessment Criteria (DTAC) approval and an
+NHS Talking Therapies for anxiety and depression digitally enabled therapies assessment from NHS England
+. But there was not enough evidence for Iona Mind, Minddistrict and Wysa to make a recommendation for their use. Further evidence is needed on these technologies, so they should only be used as part of formal research studies. See the
+assessment report on the NICE website
+ for further details.
+
+Costs and resource use
+
+3.12
+
+The economic modelling on Beating the Blues, Deprexis and Space from Depression showed that they could be cost-effective options for people with less severe depression. For more severe depression, only Deprexis could be included in the model. The results showed that Deprexis and generic computerised cognitive behavioural therapy with support could be cost-effective options for people with more severe depression. But the technologies are less likely to be the most cost-effective treatment option when compared with other standard care treatment options. The economic model included the licence costs, NHS clinicians' time, the cost of access to a computer, and the internet and costs associated with comparator treatment. Training, set-up and administrative costs for NHS staff were not included. The EAG noted that the main cost drivers are the effectiveness of the treatment and the follow-up treatment for people whose symptoms have not improved with a digitally enabled therapy. There was not enough clinical evidence on Iona Mind, Minddistrict or Wysa to evaluate the technologies quantitatively in the economic model. The committee concluded that there was enough evidence to recommend the use of Beating the Blues, Deprexis and Space from Depression while further evidence is generated. Evidence on measures of clinical effectiveness as well as resource use is needed to reduce uncertainty in the economics modelling.
+
+Evidence gap overview
+
+3.13
+
+The most important evidence gaps for the technologies relate to the comparator and the outcomes reported. The main evidence gaps are:
+
+A minority of the studies were done in an NHS Talking Therapies for anxiety and depression service setting and some evidence was collected outside the UK. Most comparative studies used waitlist or usual care as a control rather than the standard care options used in NHS Talking Therapies for anxiety and depression services. The committee concluded that the quality and quantity of the evidence for 3 of the technologies was enough to show that the technologies had promise of a clinical benefit. Evidence generation within an NHS Talking Therapies for anxiety and depression setting, with appropriate comparators, would be needed.
+
+Over half of studies included people with depression and other affective disorders. The clinical experts advised that the comorbidity of depression and anxiety is high, so this would not be a major limitation of the evidence base. The committee acknowledged that data collection in an NHS Talking Therapies for anxiety and depression service should include baseline measures of depression and anxiety symptoms.
+
+Published evidence was not available for some outcomes listed within the scope of this evaluation and there was some heterogeneity in how outcomes were reported. Further evidence generation should collect a wide range of outcomes to assess clinical effectiveness of the treatments, the rates and reasons for stopping treatment, adverse effects, further treatment, and patient experience data.
+
+The evidence did not report any adverse events related to the use of the technologies. The committee considered that few studies reported adverse events and more evidence is needed. The clinical experts said that they did not expect to see more adverse events for digitally enabled therapies compared with standard care once these were used with local service protocols. This includes offering digitally enabled therapies as one of a range of treatment options for people who do not need regular in-depth safety reviews or face-to-face care.
+
+The EAG noted that the economic modelling is limited by a lack of clinical evidence comparing the technologies with treatment as usual within an NHS Talking Therapies for anxiety and depression service. Longer follow up of up to 2 years, depression severity subgroup analyses of treatment effects, and reporting of resource use after treatment with digitally enabled therapies would also address uncertainty in the model. The economic model was also limited by not including costs relating to set up, training and administration.
+
+Next page
+
+4 Further evidence
+
+Previous page
+
+2 The technology
+
+				Back to top

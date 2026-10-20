@@ -1,0 +1,19 @@
+Intervention specification check: EndeavorRx (public-source reconstruction) as described in DEN200026, granted 15 June 2020
+A count, not a verdict. Nothing here says the mechanism works or a rule is acceptable.
+TIDieR items for a specification: 7 filled (1 with open parts), 1 N/A, 2 open, of 10 (TIDieR, DOI 10.1136/bmj.g1687; items 10 and 12 not completed before delivery, TM34, DOI 10.1136/bmj.g1687).
+  filled, open parts: 9 Tailoring: what, why, when, how (TM30)
+  open: 3 What: materials (TM24)
+  open: 4 What: procedures (TM25)
+Program theory open (TM6, DOI 10.1136/bmj.n2061):
+  open: mechanisms: causal links from components to outcomes (TM6, TM8)
+  open: proximal outcomes (TM84)
+Claims:
+  C1 [sourced]: no structural issue
+  C2 [refused]: no structural issue
+Decision rules (JITAI components, TM77, DOI 10.1007/s12160-016-9830-8):
+  R1: decision point (TM78); tailoring variables (TM80); behavior when tailoring data are missing (TM89)
+  R2: behavior when tailoring data are missing (TM89)
+  R3: decision point (TM78); tailoring variables (TM80); behavior when tailoring data are missing (TM89); rests on claim C2 with status refused: do not build (old DH-01.01.4.1.1 rule)
+Limits:
+  L1: reopened only by: owner not named
+  L2: missing behavior_off; reopened only by: owner not named

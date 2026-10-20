@@ -19,17 +19,17 @@
     {
       "name": "dh-clinical-product-development",
       "source": "./DH-clinical-product-development",
-      "description": "DH Clinical Product Development for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-clinical-development. DH Clinical Product Development for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-clinical-validation",
       "source": "./DH-clinical-validation",
-      "description": "DH Clinical Validation & Evidence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-clinical-development. DH Clinical Validation & Evidence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-commercial",
       "source": "./DH-commercial",
-      "description": "DH Commercial & GTM Strategy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-go-to-market. DH Commercial & GTM Strategy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-cross-functional-leadership",
@@ -39,7 +39,7 @@
     {
       "name": "dh-customer-success",
       "source": "./DH-customer-success",
-      "description": "DH Customer Success & Implementation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-go-to-market. DH Customer Success & Implementation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-cybersecurity",
@@ -74,7 +74,7 @@
     {
       "name": "dh-health-economics",
       "source": "./DH-health-economics",
-      "description": "DH Health Economics & Value Demonstration for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-access-and-value. DH Health Economics & Value Demonstration for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-innovation",
@@ -89,22 +89,22 @@
     {
       "name": "dh-market-access",
       "source": "./DH-market-access",
-      "description": "DH Market Access and Reimbursement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library. This pack is only DH-03.01."
+      "description": "Superseded by dh-access-and-value. DH Market Access and Reimbursement for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library. This pack is only DH-03.01."
     },
     {
       "name": "dh-patient-engagement",
       "source": "./DH-patient-engagement",
-      "description": "DH Patient Engagement & Advocacy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-patient-and-user-experience. DH Patient Engagement & Advocacy for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-quality",
       "source": "./DH-quality",
-      "description": "DH Quality Management & Compliance for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-regulatory-and-quality. DH Quality Management & Compliance for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-regulatory-strategy",
       "source": "./regulatory-strategy",
-      "description": "DH Regulatory Strategy and Submissions for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-regulatory-and-quality. DH Regulatory Strategy and Submissions for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-software-engineering",
@@ -114,7 +114,7 @@
     {
       "name": "dh-user-experience",
       "source": "./DH-user-experience",
-      "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Superseded by dh-patient-and-user-experience. DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "vital-trusted",
@@ -130,6 +130,31 @@
       "name": "navigator-ai-investment",
       "source": "./navigator-ai-investment",
       "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator. Tools run on the Ontology Navigator connector (vont_ key)."
+    },
+    {
+      "name": "dh-regulatory-and-quality",
+      "source": "./DH-regulatory-and-quality",
+      "description": "DH Regulatory Strategy and Quality Management for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "dh-access-and-value",
+      "source": "./DH-access-and-value",
+      "description": "DH Market Access and Health Economics for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "dh-clinical-development",
+      "source": "./DH-clinical-development",
+      "description": "DH Clinical Product Development and Clinical Validation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "dh-go-to-market",
+      "source": "./DH-go-to-market",
+      "description": "DH Commercial and Customer Success for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "dh-patient-and-user-experience",
+      "source": "./DH-patient-and-user-experience",
+      "description": "DH Patient Engagement and User Experience for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     }
   ]
 }

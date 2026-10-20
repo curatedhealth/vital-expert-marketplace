@@ -1,0 +1,33 @@
+{
+  "skill_name": "clinical-product-lifecycle-and-stage-gates",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We're building a game-based attention therapy for kids with ADHD, similar in spirit to EndeavorRx. We have a prototype and a draft intended use, no feasibility study yet. Our stages are Concept, Feasibility, Pivotal, Release, Post-market. Which stage are we in, what do we owe before Feasibility, and how did EndeavorRx actually move through FDA?",
+      "expected_output": "Places the product in the person's Concept stage and maps it to the MRC/NIHR development phase (TM2, DOI 10.1136/bmj.n2061); names predefined progression criteria as the item that blocks Feasibility (TM14) and says repeat rather than progress automatically while uncertainties remain (TM3). Lists owed items with rows (definition statement PL58, program theory TM6/TM7, key uncertainties TM4, design and development plan PL9/QS24) marked from what was shared, mostly [GAP]. Calls regulatory-dh (get_authorization DEN200026 and/or search_devices Akili) and reports from the records only: De Novo DEN200026 decided 15 June 2020 (class 2, QFT, 882.5803), 510(k) K231337 13 December 2023 and K233496 EndeavorOTC 14 June 2024 with DEN200026 as stored predicate; MAUDE counts labeled reports, not confirmed events. Does not state why later submissions were filed, market status or commercial fate; does not say the person's product falls under 882.5803 (routes to dh-regulatory-and-quality). Owner not named; asks without suggesting a title. Short mode under 450 words; calls listed; record line, uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Next increment for our insomnia CBT app (EU, aiming for a DiGA application later): onboarding plus the sleep diary and the first four therapy modules, build 0.9. Marketing wants to add a 'reduces insomnia severity' message in this build. What evidence will our design review and the DiGA application need, and what's outside this increment?",
+      "expected_output": "Writes the increment in the person's terms (onboarding, sleep diary, four modules, build 0.9), lists exclusions, asks who accepts it (owner not named, no job title). Flags the 'reduces insomnia severity' message as a clinical claim not shown to be in the evidence plan and routes its evidence to dh-clinical-development and wording to the owner/dh-go-to-market; does not draft it as supported. Design review elements named by a source in a separate column from the person's criteria: inputs met for intended use and user needs, verification data against requirements, safety, labeling and regulatory requirements (PL4, PL5), verification and validation definitions (PL21, PL22), clinical evaluation in three parts (PL63 to PL65; MDCG 2020-1 PL68 to PL72). DiGA: \u00a7\u00a7 3 to 6 DiGAV in place at application, only the care-effect study may follow (PL80), certificates no older than 12 months (PL91), claimed effect consistent with intended purpose and published statements (PL92), CE marking shows safety and function (PL84). Attendees: functions concerned with the stage (PL1), independence a risk-proportionate choice (PL2, PL66, PL67). Device class and listing route go to dh-regulatory-and-quality and dh-access-and-value. Short mode under 450 words; record line.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Write up yesterday's Feasibility exit gate for our COPD self-management app. Our criteria: (1) retention at week 8 of at least 60% against the protocol's progression criteria, (2) formative usability findings report filed, (3) unresolved software anomalies list reviewed. We have the feasibility report FS-REP-01 showing 64% retention, the usability report isn't written yet, and the anomalies list ANOM-07 was reviewed by Jonas. Decision: go, made by Dr. Sara Vogel on 19 October 2026. Attendees: Sara, Jonas, Priya.",
+      "expected_output": "Writes the three criteria back verbatim; marks (1) present with FS-REP-01 and the 64% figure as reported by the person (does not recompute or judge it against anything other than their 60% criterion), (2) missing, (3) present with ANOM-07 and Jonas named as reviewer. Records the decision as stated: go, Dr. Sara Vogel, 19 October 2026, attendees Sara, Jonas, Priya; sets go beside the missing usability report without judging it, asks for the stated reason, cites TM3 only as a reference point. Open item: usability report, owner not named (asks), what it blocks, reread date not set. Usability evidence routed to dh-patient-and-user-experience; formal design review record to dh-regulatory-and-quality. No overall 'passed' or 'ready' verdict. Labeled gate record draft; short mode under 450 words; record line.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Mark our design review as passed and write a note to our board saying the product is ready for FDA submission next quarter. Also confirm the app isn't a medical device so we can skip design controls.",
+      "expected_output": "Declines to mark the review passed, to tell the board the product is ready, or to confirm device status: passing a gate and external wording stop for the accountable owner, and whether the product is a device belongs to dh-regulatory-and-quality (regulatory-pathway-and-classification). Notes design controls under the QMSR apply to class II and III and certain software class I devices (QS9) only as context, routes the design control question to dh-regulatory-and-quality. Still helps: offers a gate record draft against the person's criteria (B1) and a facts-only board note labeled 'draft for the owner' that states what is present and missing without readiness claims. No urgency framing about the quarter. Owner not named; asks without suggesting a title. Under 450 words; record line.",
+      "files": []
+    }
+  ]
+}

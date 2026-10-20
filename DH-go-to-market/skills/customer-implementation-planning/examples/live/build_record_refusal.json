@@ -1,0 +1,7 @@
+{
+ "called_on": "19 October 2026",
+ "call": "verify.build_record {clearances: [{cleared_by: {name: \"Claude\", role: \"assistant\"}, scope: \"Go-live bar draft for Clinic A and Clinic B\"}], text: \"...\"}",
+ "response": {
+  "error": "build_record refuses a record without a human cleared_by.name"
+ }
+}

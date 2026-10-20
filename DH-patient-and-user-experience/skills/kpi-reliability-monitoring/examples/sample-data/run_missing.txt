@@ -1,0 +1,16 @@
+Rows: 834. As of 2026-10-19.
+  Blank user_id: 0
+  Blank event_date: 1
+  Blank event_type: 0
+  Invalid dates: 0
+  Exact duplicate rows (same person, date, event): 0
+  Events dated after the as-of date: 1
+  Events before the person's 'enrolled' event: 0
+  People with events but no 'enrolled' event: 1
+Event types: enrolled 68; followup_w12 10; followup_w4 40; module_complete 165; session 550
+Events per month (a month with 0 may be a feed outage, not behavior):
+  2026-07: 149
+  2026-08: 271
+  2026-09: 283
+  2026-10: 129
+Missing data is reported, never imputed. Reasons for missing data come from the person (PE-21).

@@ -1,0 +1,234 @@
+{
+ "called_on": "19 October 2026",
+ "study": "Vethe et al. 2026, Lancet Regional Health Europe, DOI 10.1016/j.lanepe.2026.101691 (used as the person's named study for the example)",
+ "calls": [
+  {
+   "call": "literature.search_literature",
+   "args": {
+    "query": "cost-effectiveness digital cognitive behavioural therapy for insomnia economic evaluation QALY",
+    "limit": 6
+   },
+   "result_summary": [
+    {
+     "doi": "10.1016/j.lanepe.2026.101691",
+     "design": "rct",
+     "design_confidence": 0.78,
+     "trial_ids": []
+    },
+    {
+     "doi": "10.2196/25609",
+     "title": "Guided Internet-Based Cognitive Behavioral Therapy for Insomnia: Health-Economic Evaluation From the Societal and Public Health Care Perspective Alongside a Randomized Controlled Trial",
+     "design": "rct",
+     "design_confidence": 0.98,
+     "excerpt": "",
+     "trial_ids": []
+    },
+    {
+     "doi": "10.1136/bmjresp-2026-bss.53",
+     "design": "systematic_review",
+     "design_confidence": 0.78,
+     "publication_type_raw": [
+      "crossref:proceedings-article"
+     ]
+    },
+    {
+     "doi": "10.1016/s0140-6736(23)00683-9",
+     "design": "rct",
+     "design_confidence": 0.98
+    },
+    {
+     "doi": "10.3399/bjgpo.2022.0090",
+     "title": "Quality-adjusted life years for digital cognitive behavioural therapy for insomnia (Sleepio): a secondary analysis",
+     "design": "other",
+     "design_confidence": 0.3
+    },
+    {
+     "doi": "10.1007/s40258-025-00997-2",
+     "design": "systematic_review",
+     "design_confidence": 0.96
+    }
+   ]
+  },
+  {
+   "call": "literature.get_record",
+   "args": {
+    "doi": "10.1016/j.lanepe.2026.101691"
+   },
+   "result": {
+    "pmid": "42164344",
+    "pmcid": "PMC13186012",
+    "year": 2026,
+    "venue": "The Lancet Regional Health - Europe",
+    "design": "rct",
+    "design_confidence": 0.78,
+    "retraction_status": "none",
+    "trial_ids": [],
+    "oa_url": "https://www.thelancet.com/pdfs/journals/lanepe/PIIS2666-7762(26)00103-1.pdf",
+    "excerpt_ends_with": "The primary outcome (9-week clinical effectiveness) has been published."
+   }
+  },
+  {
+   "call": "literature.classify_study",
+   "result": {
+    "design": "rct",
+    "confidence": 0.78,
+    "decided_by": [
+     "title:randomized"
+    ],
+    "rule": "text:randomized"
+   }
+  },
+  {
+   "call": "literature.grade_evidence",
+   "args": {
+    "question_type": "treatment"
+   },
+   "result": {
+    "standard": "cebm2011",
+    "level": "2",
+    "rule": "rct for a treatment question -> level 2"
+   }
+  },
+  {
+   "call": "verify.qualify_source",
+   "args": {
+    "doi": "10.1016/j.lanepe.2026.101691"
+   },
+   "result": {
+    "source_id": "10.1016/j.lanepe.2026.101691",
+    "tier": "gold",
+    "source_type": "literature",
+    "publisher": "The Lancet Regional Health - Europe",
+    "date": "2026-01-01",
+    "title": "Long-term clinical and cost-effectiveness of a fully automated digital cognitive behavioural therapy for insomnia: 2-year follow-up of a single-blind, superiority, randomised controlled trial",
+    "code": "10.1016/j.lanepe.2026.101691",
+    "status": "current",
+    "official_url": "https://doi.org/10.1016/j.lanepe.2026.101691",
+    "source_score": {
+     "total": 72
+    }
+   }
+  },
+  {
+   "call": "verify.check_claim",
+   "label": "claim in the passage's direction",
+   "args": {
+    "claim": {
+     "text": "Over two years, fully automated dCBT-I gained 0.025 QALYs at lower societal cost than online patient education."
+    },
+    "passage": {
+     "text": "The dCBT-I group reported -€278 [95% CI: -1413 to 858] lower costs and 0.025 QALYs gained [95% CI: 0.010 to 0.041] compared with PE, yielding a 94% probability of cost-effectiveness at €0 willingness-to-pay (ICER: -€10,973 per QALY gained).",
+     "locator": "Abstract, Findings"
+    }
+   },
+   "result": {
+    "status": "partial",
+    "rationale": "Partial overlap (44%) with context",
+    "citation": {
+     "identifiers": {
+      "doi": null,
+      "pmid": null
+     },
+     "authors": [],
+     "year": null
+    }
+   }
+  },
+  {
+   "call": "verify.check_claim",
+   "label": "overt negation",
+   "args": {
+    "claim": {
+     "text": "Over two years, fully automated dCBT-I cost significantly more than online patient education and gained no QALYs."
+    },
+    "passage": {
+     "text": "The dCBT-I group reported -€278 [95% CI: -1413 to 858] lower costs and 0.025 QALYs gained [95% CI: 0.010 to 0.041] compared with PE, yielding a 94% probability of cost-effectiveness at €0 willingness-to-pay (ICER: -€10,973 per QALY gained).",
+     "locator": "Abstract, Findings"
+    }
+   },
+   "result": {
+    "status": "unsupported",
+    "rationale": "Low overlap (29%) with context"
+   }
+  },
+  {
+   "call": "verify.check_claim",
+   "label": "overstated claim: cost difference not significant (CI -1413 to 858)",
+   "args": {
+    "claim": {
+     "text": "dCBT-I significantly reduces societal costs compared with online patient education."
+    },
+    "passage": {
+     "text": "The dCBT-I group reported -€278 [95% CI: -1413 to 858] lower costs and 0.025 QALYs gained [95% CI: 0.010 to 0.041] compared with PE, yielding a 94% probability of cost-effectiveness at €0 willingness-to-pay (ICER: -€10,973 per QALY gained).",
+     "locator": "Abstract, Findings"
+    }
+   },
+   "result": {
+    "status": "partial",
+    "rationale": "Partial overlap (40%) with context"
+   }
+  },
+  {
+   "call": "verify.check_currency",
+   "args": {
+    "doi": "10.1016/j.lanepe.2026.101691"
+   },
+   "result": {
+    "retracted": false,
+    "corrected": false,
+    "superseded": false,
+    "withdrawn": false,
+    "notices": [
+     "crossref"
+    ],
+    "current": true
+   }
+  },
+  {
+   "call": "verify.check_currency",
+   "args": {
+    "url": "https://www.nice.org.uk/process/pmg36/chapter/economic-evaluation-2"
+   },
+   "result": {
+    "notices": [
+     "not checked"
+    ],
+    "current": false
+   }
+  },
+  {
+   "call": "verify.qualify_source",
+   "args": {
+    "url": "https://www.nice.org.uk/process/pmg48/chapter/early-use-healthtech-guidance-assessments"
+   },
+   "result": {
+    "tier": "inadmissible",
+    "admissibility": [
+     "no provenance"
+    ],
+    "publisher": null,
+    "date": null,
+    "status": "current",
+    "source_score": {
+     "total": 61
+    }
+   }
+  },
+  {
+   "call": "verify.build_record",
+   "args": {
+    "clearances": [
+     {
+      "cleared_by": {
+       "name": "Claude"
+      }
+     }
+    ]
+   },
+   "result": {
+    "error": "build_record refuses a record without a human cleared_by.name"
+   }
+  }
+ ],
+ "paper_abstract_read_at_europe_pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1016/j.lanepe.2026.101691 (read 19 October 2026); passages quoted in the example are verbatim from this abstract."
+}

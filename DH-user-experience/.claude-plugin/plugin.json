@@ -1,7 +1,7 @@
 {
   "name": "dh-user-experience",
-  "version": "0.2.4",
-  "description": "DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
+  "version": "0.2.5",
+  "description": "Superseded by dh-patient-and-user-experience. DH User Experience Excellence for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"

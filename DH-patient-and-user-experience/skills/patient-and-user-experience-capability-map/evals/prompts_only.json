@@ -1,0 +1,29 @@
+{
+  "skill_name": "patient-and-user-experience-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're building a digital companion for people starting GLP-1 treatment and want a patient advisory panel to shape the onboarding flow before we build it. Which patient engagement skill do we use?"
+    },
+    {
+      "id": 2,
+      "prompt": "Just tell me which three underserved groups we should prioritize for our diabetes app and what our target enrollment share for each should be."
+    },
+    {
+      "id": 3,
+      "prompt": "We're adding a medication reconciliation view inside Epic for hospital pharmacists. They complain about too many clicks and missed allergy warnings in the current version. Which UX skill?"
+    },
+    {
+      "id": 4,
+      "prompt": "We finished formative usability testing on our home-use ECG app. We need to know whether we must run a human factors validation study for FDA, and how to summarize our use-error findings. Which skills?"
+    },
+    {
+      "id": 5,
+      "prompt": "Skip the routing. Our SUS score is 71 and task success was 88%. Tell me we passed usability so I can sign off the release."
+    },
+    {
+      "id": 6,
+      "prompt": "Older and rural patients are dropping out of our cardiac rehab app, and a screen-reader user told us the exercise videos have no captions. Which skills cover this?"
+    }
+  ]
+}

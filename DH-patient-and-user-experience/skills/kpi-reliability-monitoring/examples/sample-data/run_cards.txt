@@ -1,0 +1,11 @@
+
+KPI K1: Program reach, third quarter 2026  (pass 9, fail 0, check 0)
+
+KPI K2: Effective engagement: 4 or more modules within 56 days of enrollment  (pass 11, fail 0, check 0)
+
+KPI K3: Active in September  (pass 7, fail 1, check 1)
+  FAIL  Missing-data rule stated: not stated: blanks may be counted as zero, excluded or imputed without anyone knowing [PE-21]
+  CHECK Definition source named: no framework named; adoption, reach and penetration carry different published definitions [CS-CC]
+
+Cards: 3. Checks: pass 27, fail 1, check 1.
+A fail means the card cannot be recomputed as written. A check needs the person's reading. Neither is a verdict on the KPI value.

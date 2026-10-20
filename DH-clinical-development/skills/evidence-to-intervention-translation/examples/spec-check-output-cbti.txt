@@ -1,0 +1,22 @@
+Intervention specification check: CBT-I app (illustrative, from the person's description) draft, version not given
+A count, not a verdict. Nothing here says the mechanism works or a rule is acceptable.
+TIDieR items for a specification: 6 filled (4 with open parts), 0 N/A, 4 open, of 10 (TIDieR, DOI 10.1136/bmj.g1687; items 10 and 12 not completed before delivery, TM34, DOI 10.1136/bmj.g1687).
+  filled, open parts: 1 Brief name (TM22)
+  filled, open parts: 5 Who provided (TM26)
+  filled, open parts: 8 When and how much: sessions, schedule, duration, dose (TM29)
+  filled, open parts: 9 Tailoring: what, why, when, how (TM30)
+  open: 2 Why: rationale, theory or goal of essential elements (TM23)
+  open: 3 What: materials (TM24)
+  open: 7 Where (TM28)
+  open: 11 How well, planned: how fidelity is assessed and maintained (TM32)
+Program theory open (TM6, DOI 10.1136/bmj.n2061):
+  open: mechanisms: causal links from components to outcomes (TM6, TM8)
+  open: proximal outcomes (TM84)
+  open: distal outcome (TM83)
+Claims:
+  C1 [gap]: no structural issue
+  C2 [gap]: no structural issue
+Decision rules (JITAI components, TM77, DOI 10.1007/s12160-016-9830-8):
+  R1: decision rule (TM82); behavior when tailoring data are missing (TM89); rests on claim C1 with status gap: do not build (old DH-01.01.4.1.1 rule)
+  R2: decision rule (TM82); behavior when tailoring data are missing (TM89); rests on claim C2 with status gap: do not build (old DH-01.01.4.1.1 rule)
+Limits:

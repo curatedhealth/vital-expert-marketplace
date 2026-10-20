@@ -1,0 +1,29 @@
+{
+ "called_on": "19 October 2026",
+ "passage_source": "Abstract, Results, Katz et al., JAMA Netw Open 2024, as served by Europe PMC REST search EXT_ID:38353950 (saved katz_epmc.json)",
+ "qualify_source": {
+  "call": "verify.qualify_source {doi: \"10.1001/jamanetworkopen.2023.56070\", question: \"Do digital health interventions lower blood pressure in US populations experiencing health disparities?\"}",
+  "tier": "gold",
+  "status": "current",
+  "source_score_total": 78,
+  "retraction_status": "none"
+ },
+ "check_claim_same_direction": {
+  "claim": "In populations experiencing health disparities, digital health interventions for hypertension were associated with a 4.24 mm Hg greater reduction in systolic blood pressure at 6 months than control.",
+  "passage": "Between the intervention and control groups, there were statistically significant mean differences in SBP at 6 months (-4.24 mm Hg; 95% CI, -7.33 to -1.14 mm Hg; P = .01) and SBP changes at 12 months (-4.30 mm Hg; 95% CI, -8.38 to -0.23 mm Hg; P = .04).",
+  "status": "supported",
+  "rationale": "Strong overlap (33%) with context"
+ },
+ "check_claim_negated": {
+  "claim": "In populations experiencing health disparities, digital health interventions for hypertension showed no difference in systolic blood pressure at 6 months compared with control.",
+  "passage": "Between the intervention and control groups, there were statistically significant mean differences in SBP at 6 months (-4.24 mm Hg; 95% CI, -7.33 to -1.14 mm Hg; P = .01) and SBP changes at 12 months (-4.30 mm Hg; 95% CI, -8.38 to -0.23 mm Hg; P = .04).",
+  "status": "supported",
+  "rationale": "Strong overlap (18%) with context"
+ },
+ "citation_returned": {
+  "title": null,
+  "authors": [],
+  "year": null,
+  "harvard": "Unknown (n.d.)."
+ }
+}

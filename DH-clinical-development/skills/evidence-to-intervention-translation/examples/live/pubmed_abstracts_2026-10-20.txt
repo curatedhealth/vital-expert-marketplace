@@ -1,0 +1,116 @@
+1. Lancet Digit Health. 2020 Apr;2(4):e168-e178. doi: 
+10.1016/S2589-7500(20)30017-0. Epub 2020 Feb 24.
+
+A novel digital intervention for actively reducing severity of paediatric ADHD 
+(STARS-ADHD): a randomised controlled trial.
+
+Kollins SH(1), DeLoss DJ(2), Cañadas E(2), Lutz J(2), Findling RL(3), Keefe 
+RSE(4), Epstein JN(5), Cutler AJ(6), Faraone SV(7).
+
+Author information:
+(1)Psychiatry and Behavioral Sciences, Duke University Medical Center, Durham, 
+NC, USA; Duke Clinical Research Institute, Durham, NC, USA. Electronic address: 
+scott.kollins@duke.edu.
+(2)Akili Interactive Labs, Boston, MA, USA.
+(3)Department of Psychiatry, Virginia Commonwealth University, Richmond, VA, 
+USA.
+(4)Psychiatry and Behavioral Sciences, Duke University Medical Center, Durham, 
+NC, USA; VeraSci, Durham, NC, USA.
+(5)Department of Pediatrics, University of Cincinnati College of Medicine, 
+Cincinnati, OH, USA.
+(6)Meridien Research & Lake Erie College of Osteopathic Medicine, Bradenton, FL, 
+USA.
+(7)Psychiatry and Neuroscience and Physiology, SUNY Upstate Medical University, 
+Syracuse, NY, USA.
+
+Comment in
+    Lancet Digit Health. 2020 Apr;2(4):e150-e151. doi: 
+10.1016/S2589-7500(20)30058-3.
+
+BACKGROUND: Attention-deficit hyperactivity disorder (ADHD) is a common 
+paediatric neurodevelopmental disorder with substantial effect on families and 
+society. Alternatives to traditional care, including novel digital therapeutics, 
+have shown promise to remediate cognitive deficits associated with this disorder 
+and may address barriers to standard therapies, such as pharmacological 
+interventions and behavioural therapy. AKL-T01 is an investigational digital 
+therapeutic designed to target attention and cognitive control delivered through 
+a video game-like interface via at-home play for 25 min per day, 5 days per week 
+for 4 weeks. This study aimed to assess whether AKL-T01 improved attentional 
+performance in paediatric patients with ADHD.
+METHODS: The Software Treatment for Actively Reducing Severity of ADHD 
+(STARS-ADHD) was a randomised, double-blind, parallel-group, controlled trial of 
+paediatric patients (aged 8-12 years, without disorder-related medications) with 
+confirmed ADHD and Test of Variables of Attention (TOVA) Attention Performance 
+Index (API) scores of -1·8 and below done by 20 research institutions in the 
+USA. Patients were randomly assigned 1:1 to AKL-T01 or a digital control 
+intervention. The primary outcome was mean change in TOVA API from 
+pre-intervention to post-intervention. Safety, tolerability, and compliance were 
+also assessed. Analyses were done in the intention-to-treat population. This 
+trial is registered with ClinicalTrials.gov, NCT02674633 and is completed.
+FINDINGS: Between July 15, 2016, and Nov 30, 2017, 857 patients were evaluated 
+and 348 were randomly assigned to receive AKL-T01 or control. Among patients who 
+received AKL-T01 (n=180 [52%]; mean [SD] age, 9·7 [1·3] years) or control (n=168 
+[48%]; mean [SD] age, 9·6 [1·3] years), the non-parametric estimate of the 
+population median change from baseline TOVA API was 0·88 (95% CI 0·24-1·49; 
+p=0·0060). The mean (SD) change from baseline on the TOVA API was 0·93 (3·15) in 
+the AKL-T01 group and 0·03 (3·16) in the control group. There were no serious 
+adverse events or discontinuations. Treatment-related adverse events were mild 
+and included frustration (5 [3%] of 180) and headache (3 [2%] of 180). Patient 
+compliance was a mean of 83 (83%) of 100 expected sessions played (SD, 29·2 
+sessions).
+INTERPRETATION: Although future research is needed for this digital 
+intervention, this study provides evidence that AKL-T01 might be used to improve 
+objectively measured inattention in paediatric patients with ADHD, while 
+presenting minimal adverse events.
+FUNDING: Sponsored by Akili Interactive Labs.
+
+Copyright © 2020 The Author(s). Published by Elsevier Ltd. This is an Open 
+Access article under the CC BY 4.0 license. Published by Elsevier Ltd.. All 
+rights reserved.
+
+DOI: 10.1016/S2589-7500(20)30017-0
+PMID: 33334505 [Indexed for MEDLINE]
+
+
+2. NPJ Digit Med. 2021 Mar 26;4(1):58. doi: 10.1038/s41746-021-00429-0.
+
+Effectiveness of a digital therapeutic as adjunct to treatment with medication 
+in pediatric ADHD.
+
+Kollins SH(1), Childress A(2), Heusser AC(3), Lutz J(3).
+
+Author information:
+(1)Department of Psychiatry and Behavioral Sciences, Duke Clinical Research 
+Institute, Duke University, Durham, NC, USA. scott.kollins@duke.edu.
+(2)Center for Psychiatry and Behavioral Medicine, Las Vegas, NV, USA.
+(3)Akili Interactive Laboratories, Boston, MA, USA.
+
+STARS-Adjunct was a multicenter, open-label effectiveness study of AKL-T01, an 
+app and video-game-based treatment for inattention, as an adjunct to 
+pharmacotherapy in 8-14-year-old children with attention-deficit/hyperactivity 
+disorder (ADHD) on stimulant medication (n = 130) or not on any ADHD medication 
+(n = 76). Children used AKL-T01 for 4 weeks, followed by a 4-week pause and 
+another 4-week treatment. The primary outcome was change in ADHD-related 
+impairment (Impairment Rating Scale (IRS)) after 4 weeks. Secondary outcomes 
+included changes in IRS, ADHD Rating Scale (ADHD-RS). and Clinical Global 
+Impressions Scale-Improvement (CGI-I) on days 28, 56, and 84. IRS significantly 
+improved in both cohorts (On Stimulants: -0.7, p < 0.001; No Stimulants: -0.5, 
+p < 0.001) after 4 weeks. IRS, ADHD-RS, and CGI-I remained stable during the 
+pause and improved with a second treatment period. The treatment was 
+well-tolerated with no serious adverse events. STARS-Adjunct extends AKL-T01's 
+body of evidence to a medication-treated pediatric ADHD population, and suggests 
+additional treatment benefit.
+
+DOI: 10.1038/s41746-021-00429-0
+PMCID: PMC7997870
+PMID: 33772095
+
+Conflict of interest statement: Akili Interactive Labs provided research support 
+for this study and played a role in the conceptualization and design of the 
+trial and in the decision to publish and manuscript preparation. In addition, 
+the authors declare the following employment and financial interests: J.L. and 
+A.C.H. are Employees at Akili Interactive and own Stock or Equity. S.H.K. is a 
+Consultant for Akili Interactive, owns Stock or Equity, and received Research 
+support. A.C. served on the Advisory Board and received Research support. The 
+views and opinions expressed within this manuscript are those of all the authors 
+and do not necessarily represent those of the sponsor.

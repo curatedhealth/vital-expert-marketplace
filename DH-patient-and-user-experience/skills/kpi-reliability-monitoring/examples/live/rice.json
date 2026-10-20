@@ -1,0 +1,75 @@
+{
+  "calls": [
+    {
+      "call": "analytics.rice",
+      "args": {
+        "initiatives": [
+          {
+            "id": "K2 align dashboard denominator to card",
+            "reach": 68,
+            "impact": 2,
+            "confidence": 0.8,
+            "effort": 1
+          },
+          {
+            "id": "Write cards for MAP and K9",
+            "reach": 68,
+            "impact": 1,
+            "confidence": 0.8,
+            "effort": 2
+          },
+          {
+            "id": "Add missing-data rule to K3",
+            "reach": 68,
+            "impact": 0.5,
+            "confidence": 1,
+            "effort": 0.5
+          }
+        ]
+      },
+      "returned": [
+        {
+          "id": "K2 align dashboard denominator to card",
+          "score": 1.088,
+          "confidence": 0.008
+        },
+        {
+          "id": "Add missing-data rule to K3",
+          "score": 0.68,
+          "confidence": 0.01
+        },
+        {
+          "id": "Write cards for MAP and K9",
+          "score": 0.272,
+          "confidence": 0.008
+        }
+      ],
+      "note": "confidence given as a fraction was divided by 100 again"
+    },
+    {
+      "call": "analytics.rice",
+      "args": "same with confidence 80, 80, 100",
+      "returned": [
+        {
+          "id": "K2 align dashboard denominator to card",
+          "score": 108.8,
+          "confidence": 0.8
+        },
+        {
+          "id": "Add missing-data rule to K3",
+          "score": 68,
+          "confidence": 1
+        },
+        {
+          "id": "Write cards for MAP and K9",
+          "score": 27.2,
+          "confidence": 0.8
+        }
+      ],
+      "method": "RICE Prioritization (Reach x Impact x Confidence / Effort)",
+      "citation": "McClure, S. (2016). Product prioritization frameworks: RICE. Intercom.",
+      "note": "Public registers and published literature. A missing row is a gap. Price figures on finder tools are hypotheses, not invoices."
+    }
+  ],
+  "input_note": "Scores are illustrative, typed for the measurement and presented in the worked example as the example person's scores."
+}

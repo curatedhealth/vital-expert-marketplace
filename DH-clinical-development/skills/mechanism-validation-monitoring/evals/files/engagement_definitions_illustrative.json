@@ -1,0 +1,12 @@
+{
+ "note": "ILLUSTRATIVE. Invented definitions for testing scripts/engagement_read.py; not a real product. Thresholds are the invented person's, not benchmarks.",
+ "product": "SleepWell (illustrative DiGA)",
+ "rule": "digav",
+ "window_cap_days": 90,
+ "set_before_data": true,
+ "set_on": "2026-05-20",
+ "thresholds": {
+  "discontinued_share": {"direction": "<=", "value": 0.3},
+  "mean_weekly_minutes": {"direction": ">=", "value": 60}
+ }
+}

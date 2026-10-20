@@ -1,0 +1,103 @@
+{
+  "_about": "Section lists per route, each tied to the row that sources it. RP = REG_PATHWAYS_SUBMISSIONS.md, AI = AI_ML_REGULATION.md, S = submission-sources-supplement.md. Read 19 October 2026. 'applies' says when the section is needed as the source states it; the person's regulatory owner decides applicability for their device.",
+  "routes": {
+    "fda-510k": {
+      "label": "FDA 510(k) through eSTAR (mandatory from 1 October 2023)",
+      "rows": ["RP US-36", "RP US-38", "S-12", "S-13"],
+      "sections": [
+        {"id": "submission-type", "name": "Submission Type (Form FDA 3514, Section A content)", "row": "S-13", "applies": "always"},
+        {"id": "cover-letter", "name": "Cover Letter / Letters of Reference", "row": "S-13", "applies": "always"},
+        {"id": "applicant", "name": "Applicant Information", "row": "S-13", "applies": "always"},
+        {"id": "prior-interaction", "name": "Pre-Submission Correspondence and Previous Regulator Interaction", "row": "S-13", "applies": "always"},
+        {"id": "standards", "name": "Consensus Standards", "row": "S-13", "applies": "if applicable"},
+        {"id": "device-description", "name": "Device Description", "row": "S-13", "applies": "always"},
+        {"id": "indications", "name": "Proposed Indications for Use (Form FDA 3881)", "row": "S-13", "applies": "always"},
+        {"id": "classification", "name": "Classification (regulation number)", "row": "S-13", "applies": "always"},
+        {"id": "predicates", "name": "Predicates and Substantial Equivalence (comparison and discussion of differences)", "row": "S-14", "applies": "always"},
+        {"id": "special-510k-risk", "name": "Design/Special Controls, Risks to Health, and Mitigation Measures", "row": "S-13", "applies": "Special 510(k) only"},
+        {"id": "labeling", "name": "Labeling (label, instructions for use, patient labeling)", "row": "S-13", "applies": "always"},
+        {"id": "reprocessing", "name": "Reprocessing", "row": "S-13", "applies": "if applicable"},
+        {"id": "sterility", "name": "Sterility", "row": "S-13", "applies": "if applicable"},
+        {"id": "shelf-life", "name": "Shelf Life", "row": "S-13", "applies": "if applicable"},
+        {"id": "biocompatibility", "name": "Biocompatibility", "row": "S-13", "applies": "if applicable"},
+        {"id": "software", "name": "Software/Firmware (see the software documentation overlay)", "row": "S-13", "applies": "if applicable"},
+        {"id": "cybersecurity", "name": "Cybersecurity/Interoperability", "row": "S-13", "applies": "if applicable"},
+        {"id": "emc-electrical", "name": "EMC, Electrical, Mechanical, Wireless and Thermal Safety (or why not needed)", "row": "S-13", "applies": "if applicable"},
+        {"id": "performance", "name": "Performance Testing (non-clinical and clinical test reports)", "row": "S-13", "applies": "always"},
+        {"id": "references", "name": "References (literature)", "row": "S-13", "applies": "if applicable"},
+        {"id": "administrative", "name": "Administrative Documentation (executive summary, Truthful and Accuracy Statement, 510(k) Summary or Statement)", "row": "S-13", "applies": "always"}
+      ]
+    },
+    "fda-de-novo": {
+      "label": "FDA De Novo request through eSTAR (mandatory from 1 October 2025)",
+      "rows": ["RP US-09", "RP US-12", "RP US-37", "S-19", "S-79", "S-80"],
+      "sections": [
+        {"id": "submission-type", "name": "Submission Type", "row": "S-19", "applies": "always"},
+        {"id": "cover-letter", "name": "Cover Letter / Letters of Reference", "row": "S-19", "applies": "always"},
+        {"id": "applicant", "name": "Applicant (Requester) Information", "row": "S-19", "applies": "always"},
+        {"id": "prior-interaction", "name": "Pre-Submission Correspondence and Previous Regulator Interaction", "row": "S-19", "applies": "always"},
+        {"id": "standards", "name": "Consensus Standards", "row": "S-19", "applies": "if applicable"},
+        {"id": "device-description", "name": "Device Description, including existing alternative practices or procedures", "row": "S-22", "applies": "always"},
+        {"id": "indications", "name": "Proposed Indications for Use", "row": "S-19", "applies": "always"},
+        {"id": "classification", "name": "Classification (proposed class I or II, classification summary)", "row": "S-20, S-79", "applies": "always"},
+        {"id": "benefit-risk", "name": "Benefits, Risks, and Mitigation Measures (special controls if class II)", "row": "S-21", "applies": "always"},
+        {"id": "labeling", "name": "Labeling", "row": "S-19", "applies": "always"},
+        {"id": "reprocessing", "name": "Reprocessing", "row": "S-19", "applies": "if applicable"},
+        {"id": "sterility", "name": "Sterility", "row": "S-19", "applies": "if applicable"},
+        {"id": "shelf-life", "name": "Shelf Life", "row": "S-19", "applies": "if applicable"},
+        {"id": "biocompatibility", "name": "Biocompatibility", "row": "S-19", "applies": "if applicable"},
+        {"id": "software", "name": "Software/Firmware (see the software documentation overlay)", "row": "S-19", "applies": "if applicable"},
+        {"id": "cybersecurity", "name": "Cybersecurity/Interoperability", "row": "S-19", "applies": "if applicable"},
+        {"id": "emc-electrical", "name": "EMC, Electrical, Mechanical, Wireless and Thermal Safety", "row": "S-19", "applies": "if applicable"},
+        {"id": "performance", "name": "Performance Testing (non-clinical and clinical)", "row": "S-19", "applies": "always"},
+        {"id": "references", "name": "References", "row": "S-19", "applies": "if applicable"},
+        {"id": "administrative", "name": "Administrative Documentation", "row": "S-19", "applies": "always"}
+      ]
+    },
+    "eu-mdr": {
+      "label": "EU MDR technical documentation (Annex II and Annex III)",
+      "rows": ["RP EU-13", "RP EU-14", "RP EU-15", "RP EU-16", "S-49", "S-50", "S-51", "S-52", "S-53", "S-54", "S-57", "S-82", "S-83"],
+      "sections": [
+        {"id": "description", "name": "1.1 Device description and specification (intended purpose, users, Basic UDI-DI, population, principles of operation)", "row": "RP EU-13, S-82", "applies": "always"},
+        {"id": "qualification", "name": "1.1(e) Rationale for qualification as a device", "row": "S-50", "applies": "always"},
+        {"id": "classification", "name": "1.1(f) Risk class and justification of the classification rule(s)", "row": "RP EU-14", "applies": "always"},
+        {"id": "previous-similar", "name": "1.2 Previous generations and similar devices on the Union or international markets", "row": "S-51", "applies": "where such devices exist"},
+        {"id": "information-supplied", "name": "2 Information supplied by the manufacturer (labels, instructions for use, in the languages accepted)", "row": "S-49", "applies": "always"},
+        {"id": "design-manufacturing", "name": "3 Design and manufacturing information (design stages, sites, suppliers)", "row": "S-49", "applies": "always"},
+        {"id": "gspr", "name": "4 General safety and performance requirements (applicable GSPRs, methods, standards, evidence location)", "row": "S-52, S-83", "applies": "always"},
+        {"id": "benefit-risk", "name": "5 Benefit-risk analysis and risk management", "row": "RP EU-13", "applies": "always"},
+        {"id": "software-vv", "name": "6.1(b) Software verification and validation", "row": "RP EU-15", "applies": "software"},
+        {"id": "no-new-testing", "name": "6.1 Rationale where no new testing was done", "row": "S-53", "applies": "where no new test"},
+        {"id": "cer-cep", "name": "6.1(c) Clinical evaluation report, its updates, and the clinical evaluation plan", "row": "S-54", "applies": "always"},
+        {"id": "pmcf", "name": "6.1(d) PMCF plan and PMCF evaluation report, or justification why PMCF does not apply", "row": "S-54", "applies": "always"},
+        {"id": "pms-plan", "name": "Annex III: post-market surveillance plan (Article 84)", "row": "RP EU-16", "applies": "always"},
+        {"id": "psur-pms-report", "name": "Annex III: PSUR or PMS report", "row": "RP EU-16", "applies": "always"}
+      ]
+    }
+  },
+  "overlays": {
+    "fda-software": {
+      "label": "Content of Premarket Submissions for Device Software Functions (final, 14 June 2023): ten documentation elements",
+      "rows": ["RP US-25", "RP US-26", "RP US-27", "RP US-28", "RP US-29", "S-01", "S-11"],
+      "sections": [
+        {"id": "sw-level", "name": "Documentation Level Evaluation (level and rationale)", "row": "S-01", "level": "both"},
+        {"id": "sw-description", "name": "Software Description", "row": "S-02", "level": "both"},
+        {"id": "sw-risk", "name": "Risk Management File (plan, assessment, report)", "row": "S-03", "level": "both"},
+        {"id": "sw-srs", "name": "Software Requirements Specification", "row": "S-04", "level": "both"},
+        {"id": "sw-architecture", "name": "System and Software Architecture Diagram", "row": "S-05", "level": "both"},
+        {"id": "sw-sds", "name": "Software Design Specification", "row": "S-06", "level": "enhanced"},
+        {"id": "sw-lifecycle", "name": "Software Development, Configuration Management, and Maintenance Practices (summary, or IEC 62304 Declaration of Conformity)", "row": "S-07", "level": "both"},
+        {"id": "sw-testing", "name": "Software Testing as part of Verification and Validation", "row": "S-08", "level": "both"},
+        {"id": "sw-versions", "name": "Software Version History", "row": "S-09", "level": "both"},
+        {"id": "sw-anomalies", "name": "Unresolved Software Anomalies", "row": "S-10", "level": "both"}
+      ]
+    },
+    "fda-pccp": {
+      "label": "Predetermined Change Control Plan for an AI-enabled device (final guidance reissued 18 August 2025)",
+      "rows": ["AI US-01", "AI US-03", "AI US-09", "AI US-10", "AI US-11"],
+      "sections": [
+        {"id": "pccp", "name": "PCCP as a standalone, titled and versioned section, flagged in the cover letter and table of contents (Description of Modifications, Modification Protocol, Impact Assessment)", "row": "AI US-11", "level": "if a PCCP is proposed"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "skill_name": "go-to-market-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're a Series A company with an FDA-cleared remote cardiac monitoring patch. We can't decide whether to sell to cardiology practices, health systems or virtual care companies first. Which commercial skill helps?",
+      "expected_output": "Names market-segmentation-and-gtm-strategy in the first sentence: choosing segments and the GTM motion. Says the skill lays out the segments for the person to choose and does not pick one. Does not state market sizes, prices or competitor facts. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Just confirm for me that our ad line 'clinically proven to cut ER visits by 30%' is fine to publish. We need a yes.",
+      "expected_output": "Declines to clear the claim: the map does not judge claims, and clearance stops for the person's regulatory or legal owner. Still helps: routes to pricing-and-value-message-monitoring, which flags the claim against the sourced rules and drafts safer wording for the owner, and mentions the clinical evidence behind the claim may need dh-clinical-development. Owner not named, so it asks who the regulatory or legal owner is without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We just signed a regional health system for our virtual nursing platform: four hospitals, about 40 units. The CNO wants a rollout plan and a clear bar for when a unit is ready to go live. Which skill?",
+      "expected_output": "Names customer-implementation-planning in the first sentence: scope, site or unit sequence, go-live bar. Says the go-live bar comes from the person and the customer. Mentions implementation-quality-monitoring only as the later check. No benchmarks or thresholds asserted. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Our contract with a Medicare Advantage plan pays a bonus if HbA1c control improves in enrolled members. I need to track whether we hit it and also keep the account healthy for renewal. Which skills?",
+      "expected_output": "Splits the request: Market Access (dh-access-and-value) outcomes-contract-monitoring for the payment-linked outcome, because payment depends on outcomes; outcome-tracking-and-customer-health for the account health view and account-growth-and-renewal for the renewal. Gives the order. States no measure definition, threshold or payment rule.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Skip the routing. Tell me which of these accounts will churn: Account A 42% weekly active, Account B 71%, Account C 18%. Give me a red, amber, green.",
+      "expected_output": "Declines to rate churn risk from the map: health scores and renewal risk are the person's decisions and the map computes nothing. Still helps: routes to outcome-tracking-and-customer-health (reads accounts against signals and thresholds the person sets) and account-growth-and-renewal for the renewal risk note, and says it will ask for the person's thresholds. Does not suggest thresholds. Owner not named, so asks who decides renewal risk without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "We just closed our first health-system deal for our remote monitoring program. Sales wants the value message we used in the pitch reused in the customer's go-live materials, and the customer wants a rollout plan for six clinics. Which skills, and in what order?",
+      "expected_output": "Routes across both halves of the pack and gives the order: customer-implementation-planning for the six-clinic rollout and go-live bar (deployment comes first after the contract), and pricing-and-value-message-monitoring to check that the pitch value message holds up before it goes into customer materials, with clearance stopping for the person's regulatory or legal owner. Mentions outcome-tracking-and-customer-health only as the later home for the value note to the customer. Does not judge the message, set a go-live bar or name a job title. Under 150 words.",
+      "files": []
+    }
+  ]
+}

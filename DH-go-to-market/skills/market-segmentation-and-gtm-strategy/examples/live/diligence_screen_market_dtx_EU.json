@@ -1,0 +1,45 @@
+{
+ "call": {
+  "tool": "diligence-dh.screen_market",
+  "args": {
+   "segment": "dtx",
+   "jurisdiction": "EU",
+   "limit": 10
+  }
+ },
+ "retrieved": "2026-10-19",
+ "result_count": 1,
+ "total_matches": 1,
+ "results": [
+  {
+   "company": "Novasight , Ltd.",
+   "country": "IL",
+   "jurisdictions": [
+    "EU",
+    "US"
+   ],
+   "products": [
+    "CureSight-CS100"
+   ],
+   "authorizations": 2,
+   "studies": 5,
+   "evidence_maturity": {
+    "score": 56
+   }
+  }
+ ],
+ "perimeter": {
+  "companies_in_store": 2205,
+  "jurisdictions_loaded": [
+   "CA",
+   "EU",
+   "TW",
+   "US"
+  ],
+  "segments_loaded": [
+   "dtx"
+  ],
+  "statement": "this screen covers only the companies the store holds, not the market"
+ },
+ "contradiction": "perimeter.sources_loaded lists diga_verzeichnis (82 records) while not_loaded lists 'diga' (DiGA directory, access under section 21 DiGAV not yet granted); no DiGA manufacturer is returned for segment dtx"
+}

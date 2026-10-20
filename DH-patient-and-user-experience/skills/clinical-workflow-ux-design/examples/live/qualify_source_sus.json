@@ -1,0 +1,18 @@
+{
+ "call": "verify.qualify_source",
+ "called_on": "19 October 2026",
+ "arguments": {
+  "doi": "10.2196/37290",
+  "question": "What is the mean System Usability Scale score of digital health apps?"
+ },
+ "response": {
+  "tier": "gold",
+  "title": "System Usability Scale Benchmarking for Digital Health Apps: Meta-analysis",
+  "publisher": "JMIR mHealth and uHealth",
+  "date": "2022-01-01",
+  "status": "current",
+  "pmid": "35980732",
+  "retraction_status": "none",
+  "source_score_total": 67
+ }
+}

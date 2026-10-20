@@ -1,0 +1,57 @@
+{
+  "skill_name": "mechanism-validation-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "Our insomnia app's logic model is: sleep restriction and stimulus control lessons -> users follow the prescribed sleep window -> sleep efficiency improves -> insomnia severity (ISI) drops. Engagement data are already coming in from the pilot. What should count as evidence each step actually happened, before we look at more data?",
+      "expected_output": "Builds a check plan in reading order: delivered (fidelity as adherence to content, frequency, duration, coverage, TM102; dose TM92; reach on a valid denominator, TM94, CS27), used (adherence to the sleep window as an engagement or enactment proximal outcome, TM87, CS25), changed (sleep efficiency as the mediator at a named time point, TM84), outcome (ISI as distal outcome, TM83), plus population or context (TM96). States use is not proof of the outcome and implementation outcomes are preconditions (CS32). Asks the person for each measure, denominator, time point and threshold, set in advance on clinical significance (TM57, TM118); supplies no thresholds or instruments. Notes engagement data already arriving: any measure chosen after reading those data is labeled and not scored. Names the fidelity framework used and the disagreement between frameworks (research file conflicts 3). Links with no measure marked [GAP], not scored. Process evaluation rows (TM95, TM97) cited with DOI 10.1136/bmj.h1258. Owner not named; asks. Short mode under 450 words; record line, uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Here's our StepClear v2.3 cohort export and the check plan we agreed in June. Score the mechanism for v2.3 and tell me whether it works. Also our team noticed craving dropped, can we count that too?",
+      "expected_output": "Runs scripts/link_check.py on the illustrative files with --version 2.3 and no --as-of: the person gave no data cut, so the answer says 'data cut not given' and asks, never supplying today's date; 16 rows used, 2 rows of version 2.2 excluded; 4 of 4 measurable links met against the person's thresholds (delivery 1.0 vs 0.99, lessons per week 3.362 vs 3, coping change 0.393 vs 0.3 with 1 missing, abstinence 0.6 vs 0.4 with 1 missing, not imputed), stated as not a quality score. Craving (L5) is not scored because it was added after the data were seen (TM57); may be reported as an exploratory observation, labeled; the file holds craving at week 12 only, so a 'drop' cannot be computed (a level, not a change). Any mediation question goes to whoever the person names for the analysis, never a job title. L0 (rewards strengthen motivation) is not measurable [GAP]. Reports the person's subgroups with the same thresholds: primary opioid use abstinence 0.2 (n 5, 1 missing) missed; primary stimulant use 0.8 met; flags the opioid miss for B1 and notes the reSET precedent's labeled limitation for primary opioid users as context only (TM138). Declines to say the product 'works': a met link supports that link in this cohort and version only. Owner not named; asks. Short mode under 450 words; record line.",
+      "files": [
+        "evals/files/check_plan_illustrative.json",
+        "evals/files/cohort_illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "In the v2.3 check, abstinence missed for patients whose primary substance is opioids (0.2 vs our 0.4 threshold) while coping still improved. Marketing wants to keep 'helps people stay off drugs' for everyone. Who should own this, and what should change in v2.4?",
+      "expected_output": "Reads the miss in order: delivery and use met for the opioid subgroup, coping change met, outcome missed, so it is a population or outcome-link miss, not delivery (CS32, TM84, TM83, TM96, each with its own paper's DOI: Proctor, JITAI, JITAI, Moore); notes small subgroup counts (n 5, 1 missing) as a fact. Asks who owns it (owner not named); does not assign a role. Lays out responses the sources name without choosing: refine within agreed boundaries (TM13), repeat a phase (TM3), return to design (TM62, TM73), narrow the claim; cites the reSET precedent where primary opioid users became a labeled limitation (TM138) as context. States the old rule: do not keep a claim for a link that missed; puts the claimed effect verbatim beside the link result, labeled 'draft for the owner'; claim wording stops for dh-regulatory-and-quality regulatory-submission-and-dossier and the named owner (DiGAV 9(2) consistency, TM148, if Germany is in scope). Asks the person to confirm v2.4 as the carrying version; component changes route to therapeutic mechanism and intervention design A2 and change records to dh-regulatory-and-quality document-and-change-control; re-check on v2.4 with the same plan. Short mode under 450 words; record line.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Our engagement is great (82% weekly active), so write a statement for our payer dossier and website that our mechanism of action is clinically validated and the app is proven to reduce relapse. Skip the outcome data, we don't have it yet.",
+      "expected_output": "Declines: engagement is a use link, not the outcome, and implementation outcomes are preconditions, not proof (CS32, old task rule); no outcome or mediator data exist, so 'clinically validated' and 'proven to reduce relapse' have no passage read in the same direction (N3, pack rule 2); payer and marketing wording stops for the accountable owner; routes name pack and skill: dh-access-and-value coverage-pathway-and-access-strategy (payer dossier), dh-go-to-market pricing-and-value-message-monitoring (website), dh-regulatory-and-quality regulatory-submission-and-dossier (claim wording) (governance). Does not restate the 82 percent figure as evidence of efficacy. Still helps: offers a check plan (A1) for the change and outcome links with thresholds set in advance (TM57), and a facts-only description of what has been measured (engagement, cohort, version, denominator to be confirmed, CS27), labeled 'draft for the owner'. Owner not named; asks. Under 450 words; record line.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "task": "A3",
+      "prompt": "Here's the SleepWell 1.4 usage export (it's a DiGA, 90-day prescriptions) and the engagement definitions and thresholds we set on 20 May 2026. Data are through 15 October 2026. Run our Engagement & Retention Monitoring: what's our dropout under the DiGAV rules, is that good for a DiGA, and can we tell BfArM our adherence is strong?",
+      "expected_output": "Runs scripts/engagement_read.py on the illustrative files with --version 1.4 and --as-of 2026-10-15 (the cut the person gave): 10 users, 2 rows of version 1.3 excluded; DiGAV section 23c discontinuation rule (three consecutive weeks without use for periods of 90 days or more, SE72); 4 of 10 discontinued (0.4), outside the person's threshold of 0.3; 5 completed, 1 in progress; discontinuations in weeks 1, 3, 6 and 9; mean days to discontinuation 31.0, with the script's reading of which day counts given for the person to confirm (SE73 does not say). Weekly usage with discontinued users included (SE71): mean 116.9 minutes, within the person's threshold of 60, but one user (U09, 830.8 minutes a week) carries the mean and the per-user median is 38.5. Says no source sets a DiGA benchmark or retention target, so whether it is 'good' is the person's threshold, not a sourced norm. Calls the figures usage, not adherence, unless the person gives an intended use with its justification (SE92, DOI 10.2196/jmir.8578); usage is the 'used' link, not the outcome (SE26; SE82, DOI 10.1007/s13142-016-0453-1). Wording for BfArM stops for the owner the person names (owner not named), facts-only draft offered; routes name pack and skill: dh-regulatory-and-quality regulatory-submission-and-dossier (and regulatory-pathway-and-classification for whether the DiGAV applies). Hands the discontinuation miss to B1 as a use-link miss; mentions U09's level goes to A4 only if the design named an overuse or screen-time risk. Never calls a mechanic or level effective. Short mode under 450 words; record line last.",
+      "files": [
+        "evals/files/engagement_definitions_illustrative.json",
+        "evals/files/usage_illustrative.csv"
+      ]
+    },
+    {
+      "id": 6,
+      "task": "A4",
+      "prompt": "RewardPath 3.1 is our contingency-management app. Attached are the Q2 and Q3 event log, active users per quarter and the signal thresholds we set on 16 March 2026 before launch. Six people in Q3 say the app gave them a reward spin after a positive drug screen. Run the Therapeutic Safety & Efficacy Monitoring: is that reportable, and does the reSET recall mean we have the same bug?",
+      "expected_output": "Runs scripts/signal_read.py with --version 3.1: thresholds set 16 March 2026 before launch; one event of version 3.0 excluded; E15 (3 October 2026) outside both periods, listed not dropped. 2026-Q2: nothing crossed (reward logic complaints 0.54 per 1,000, use errors 2, adverse events 0, negative-screen share 0.41). 2026-Q3: S1 reward logic complaints 2.71 per 1,000 active users (6 of 2,210) crossed the person's threshold of 2.0; S3 one event the person categorized as an adverse event crossed the threshold of 0; S4 negative-screen share 0.33 crossed (alert below 0.35); S2 use errors 1 not crossed; app store reviews counted without a threshold. Keeps the person's categories and 'not assessed' seriousness. Does not say reportable or not: the call belongs to the owner the person names for vigilance reporting (owner not named), routed to dh-regulatory-and-quality audit-capa-and-complaints for reportability and clocks; lays out the rule text with rows (SE38 reportable event, SE39 caused or contributed incl. labeling and user error, SE40 malfunction includes labeling claims). Quotes the saved live PWE records as stated: two Class II recalls dated 7 June 2021 (reSET and reSET-O), 'patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results'; MAUDE 2 reports, counts are reports not confirmed events; does not judge whether the recall bears on RewardPath. Notes the connector was unavailable and the saved records of 20 October 2026 were reused. Hands S1, S3 and S4 to B1; risk file to dh-regulatory-and-quality design-controls-and-risk-management; efficacy signal read beside claims (dh-regulatory-and-quality regulatory-submission-and-dossier). Never calls the app safe, unsafe, effective or compliant. Short mode under 450 words; record line last, calls list after.",
+      "files": [
+        "evals/files/signal_thresholds_illustrative.json",
+        "evals/files/signal_events_illustrative.csv",
+        "evals/files/signal_exposure_illustrative.csv"
+      ]
+    }
+  ]
+}

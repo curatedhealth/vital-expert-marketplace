@@ -1,0 +1,18 @@
+Delivered dose against the regimen the person gave: 5 sessions per week for 4 weeks = 20 expected sessions.
+Minimum minutes per session (person's): 25.0. Counted from weekly averages, not single sessions.
+Adherence in Carroll's sense: frequency and duration delivered against the plan (TM102, DOI 10.1186/1748-5908-2-40).
+
+user_id | sessions | percent of expected | weeks with use | mean minutes per session | sessions at minimum minutes
+u01 | 20 | 100 | 4 of 4 | 25.0 | 20
+u02 | 16 | 80 | 4 of 4 | 24.0 | 0
+u03 | 12 | 60 | 3 of 4 | 22.0 | 0
+u04 | 6 | 30 | 3 of 4 | 12.0 | 0
+u05 | 19 | 95 | 4 of 4 | 25.0 | 19
+u06 | 0 | 0 | 0 of 4 | 0.0 | 0
+u07 | 19 | 95 | 4 of 4 | 20.0 | 0
+u08 | 8 | 40 | 2 of 4 | 25.0 | 8
+
+Users in log: 8; with any session: 7.
+Percent of expected sessions: mean 62, median 70, min 0, max 100.
+Coverage: 7 of 10 enrolled users had any session (70 percent).
+Whether any figure passes is the person's rule. No threshold is applied here.

@@ -1,0 +1,77 @@
+{
+ "call": "analytics.mcda",
+ "called_on": "19 October 2026",
+ "note": "Scores and weights are illustrative, typed for the measurement, presented in the worked example as the example person's scores.",
+ "arguments": {
+  "alternatives": [
+   {
+    "id": "close-open-implementation-items",
+    "scores": {
+     "risk_reason_addressed": 4,
+     "effort_avoided": 1,
+     "customer_time_avoided": 2
+    }
+   },
+   {
+    "id": "sponsor-review-of-agreed-outcomes",
+    "scores": {
+     "risk_reason_addressed": 3,
+     "effort_avoided": 3,
+     "customer_time_avoided": 2
+    }
+   },
+   {
+    "id": "bridge-term-until-go-live",
+    "scores": {
+     "risk_reason_addressed": 2,
+     "effort_avoided": 4,
+     "customer_time_avoided": 4
+    }
+   }
+  ],
+  "criteria_weights": {
+   "risk_reason_addressed": 0.5,
+   "effort_avoided": 0.25,
+   "customer_time_avoided": 0.25
+  }
+ },
+ "response": {
+  "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)",
+  "results": [
+   {
+    "id": "bridge-term-until-go-live",
+    "value_estimate": 75,
+    "contributions": {
+     "customer_time_avoided": 25,
+     "effort_avoided": 25,
+     "risk_reason_addressed": 25
+    }
+   },
+   {
+    "id": "close-open-implementation-items",
+    "value_estimate": 68.75,
+    "contributions": {
+     "customer_time_avoided": 12.5,
+     "effort_avoided": 6.25,
+     "risk_reason_addressed": 50
+    }
+   },
+   {
+    "id": "sponsor-review-of-agreed-outcomes",
+    "value_estimate": 68.75,
+    "contributions": {
+     "customer_time_avoided": 12.5,
+     "effort_avoided": 18.75,
+     "risk_reason_addressed": 37.5
+    }
+   }
+  ],
+  "weights_used": {
+   "customer_time_avoided": 0.25,
+   "effort_avoided": 0.25,
+   "risk_reason_addressed": 0.5
+  },
+  "negative_criteria": [],
+  "count": 3
+ }
+}

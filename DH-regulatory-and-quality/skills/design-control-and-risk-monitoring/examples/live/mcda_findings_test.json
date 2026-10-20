@@ -1,0 +1,78 @@
+{
+ "call": "analytics.mcda",
+ "called_on": "19 October 2026",
+ "args": {
+  "alternatives": [
+   {
+    "id": "F1 risk control RC-07 not verified",
+    "scores": {
+     "patient_impact": 4,
+     "regulatory_exposure": 3,
+     "effort_inverse": 2
+    }
+   },
+   {
+    "id": "F2 locale input not in hazard analysis",
+    "scores": {
+     "patient_impact": 3,
+     "regulatory_exposure": 2,
+     "effort_inverse": 3
+    }
+   },
+   {
+    "id": "F3 user need UN-12 without validation",
+    "scores": {
+     "patient_impact": 2,
+     "regulatory_exposure": 3,
+     "effort_inverse": 1
+    }
+   }
+  ],
+  "criteria_weights": {
+   "patient_impact": 0.5,
+   "regulatory_exposure": 0.3,
+   "effort_inverse": 0.2
+  }
+ },
+ "note": "Scores and weights are illustrative test inputs written for this build, standing in for a person's scores. Not a finding.",
+ "result": {
+  "method": "EVIDEM Multi-Criteria Decision Analysis (weighted-sum, 0-4 scale)",
+  "citation": "Goetghebeur et al. (2008) BMC Health Services Research 8:270 (EVIDEM); Marsh, IJzerman et al. (2016) Value in Health 19(2) 125-137 (ISPOR MCDA Emerging Good Practices)",
+  "results": [
+   {
+    "id": "F1 risk control RC-07 not verified",
+    "value_estimate": 82.5,
+    "contributions": {
+     "effort_inverse": 10,
+     "patient_impact": 50,
+     "regulatory_exposure": 22.5
+    }
+   },
+   {
+    "id": "F2 locale input not in hazard analysis",
+    "value_estimate": 67.5,
+    "contributions": {
+     "effort_inverse": 15,
+     "patient_impact": 37.5,
+     "regulatory_exposure": 15
+    }
+   },
+   {
+    "id": "F3 user need UN-12 without validation",
+    "value_estimate": 52.5,
+    "contributions": {
+     "effort_inverse": 5,
+     "patient_impact": 25,
+     "regulatory_exposure": 22.5
+    }
+   }
+  ],
+  "weights_used": {
+   "effort_inverse": 0.2,
+   "patient_impact": 0.5,
+   "regulatory_exposure": 0.3
+  },
+  "negative_criteria": [],
+  "count": 3
+ }
+}

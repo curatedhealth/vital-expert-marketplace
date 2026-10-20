@@ -1,0 +1,11 @@
+{"call": "literature.search_literature", "args": {"query": "decentralized randomized trial remote enrollment wearable digital health technology", "limit": 5, "filters": {"date_from": "2022-01-01"}},
+ "retrieved_at": "2026-10-19T21:08:24.490129+00:00", "total_merged": 15, "sources_answered": ["pubmed","europepmc","openalex","crossref","biorxiv"],
+ "warnings": ["biorxiv: no preprint in the last 30 days matched the query (the source has no keyword search)"],
+ "records_trimmed": [
+  {"pmcid": "PMC13657102", "doi": null, "title": "Stakeholder-reported perspectives on decentralized clinical trials: A multi-country descriptive survey", "year": 2026, "authors": [], "design": "other", "design_confidence": 0.3, "trial_ids": []},
+  {"doi": "10.1016/j.jval.2023.03.2260", "title": "SA44 Digital Enrollment and Communication Acceptance for Decentralized Clinical Trial Participation", "year": 2023, "venue": "Value in Health", "design": "other", "design_confidence": 0.3, "trial_ids": []},
+  {"doi": "10.2196/39910", "pmid": "36083626", "title": "Enrollment and Retention of Participants in Remote Digital Health Studies: Scoping Review and Framework Proposal", "year": 2022, "design": "systematic_review", "design_confidence": 0.78, "trial_ids": []},
+  {"doi": "10.1111/cts.70618", "pmid": "42251637", "pmcid": "PMC13242790", "title": "Pioneering a Hybrid Decentralized Clinical Trial in South Korea: Assessing Feasibility, Data Integrity, and Participant Perceptions", "year": 2026, "design": "rct", "design_confidence": 0.98, "trial_ids": [],
+   "excerpt": "Within a Phase 1 pharmacokinetic drug-drug interaction (DDI) study, we concurrently implemented an additional study arm incorporating decentralized elements to evaluate feasibility, data integrity, and participant perceptions compared to conventional on-site procedures. In this open-label, hybrid DCT, 20 healthy adults were randomized in a 1:1 ratio to either the DCT arm or the conventional arm."},
+  {"doi": "10.1017/cts.2025.69", "pmid": "40599176", "title": "Participant experiences in a decentralized clinical trial using digital health technologies: The ACTIV-6 study", "year": 2025, "design": "other", "design_confidence": 0.3, "trial_ids": []}
+ ]}

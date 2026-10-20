@@ -1,0 +1,178 @@
+{
+ "call": "regulatory-dh.search_safety_events",
+ "args": {
+  "manufacturer": "Dexcom",
+  "limit": 10
+ },
+ "called_on": "19 October 2026",
+ "note": "Trimmed: titles shortened to product name, model and software version; 10 rows returned, all kept. The 24 July 2025 Class I recall appears five times (one row per app line). A control character before 'App' in the source summary was removed. A product_code PHV call returned the first five of these rows and the same MAUDE count.",
+ "results": [
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 US Retail Sensor/Transmitter 1-pack, STP-AT-012, Software Version N/A",
+   "event_date": "2026-05-27",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "Certain lots of Dexcom G7 sensors originally designated as scrap and intended for destruction were stolen during the destruction process. [...] Lot 1725069002 were designated for destruction due to an increased risk of having no sensor readings available or experiencing sensor inaccuracy [...]",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 CGM watchOS App, SW13355, Versions 2.9.0 through 2.11.2",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in which a low-priority file I/O check blocks the higher-priority thread responsible for processing estimated glucose values (EGVs) and trend arrows. When the app is running in the background, EGV notifications may queue up and then \"replay\" sequentially when the user brings the app to the foreground, causing the Glucose Compass to flicker through previous EGVs. In more severe instances, the app may perceive signal loss and deploy signal loss mitigations. This delay in EGV and alert processing creates a risk that users may miss detection of a hypoglycemic or hyperglycemic event, or make treatment decisions based on outdated glucose information.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 CGM iOS App, SW12300, Versions 2.9.0 through 2.11.2",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in which a low-priority file I/O check blocks the higher-priority thread responsible for processing estimated glucose values (EGVs) and trend arrows. When the app is running in the background, EGV notifications may queue up and then \"replay\" sequentially when the user brings the app to the foreground, causing the Glucose Compass to flicker through previous EGVs. In more severe instances, the app may perceive signal loss and deploy signal loss mitigations. This delay in EGV and alert processing creates a risk that users may miss detection of a hypoglycemic or hyperglycemic event, or make treatment decisions based on outdated glucose information.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom ONE+ iOS CGM App, SW14244, versions 1.5.0 and 1.6.0",
+   "event_date": "2026-04-14",
+   "severity": "Class II",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in which a low-priority file I/O check blocks the higher-priority thread responsible for processing estimated glucose values (EGVs) and trend arrows. When the app is running in the background, EGV notifications may queue up and then \"replay\" sequentially when the user brings the app to the foreground, causing the Glucose Compass to flicker through previous EGVs. In more severe instances, the app may perceive signal loss and deploy signal loss mitigations. This delay in EGV and alert processing creates a risk that users may miss detection of a hypoglycemic or hyperglycemic event, or make treatment decisions based on outdated glucose information.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G6 and G6 Pro Android US CGM App, SW11678, version 1.15.0",
+   "event_date": "2025-08-28",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "A software defect in version v1.15.0 of the G6 Android app can cause the app to terminate unexpectedly, which may result in the user not receiving estimated glucose values, alarms, alerts or notifications. This could result in the missed detection of a hyperglycemic or hypoglycemic event, protentional resulting in severe hyperglycemia, diabetic ketoacidosis (DKA), or hyperosmolar hyperglycemic state (HHS).",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 CGM Android App, SW12299, version 2.8.0 and earlier",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected devices are the Dexcom G7 Continuous Glucose Monitoring System (CGM System) using iOS, watchOS and Android App software (versions 2.8.0 or earlier) and Dexcom ONE+ CGM System using iOS and Android App software (versions 1.4.0 or earlier), henceforth referred to as the App. The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App when the CGM experiences a hardware or firmware failure. Instead, the App ends the CGM sensor session, stops reporting glucose values and displays the Start Sensor screen or No active sensor message without alerting the user, which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom ONE+ Android CGM App, SW14245, versions 1.4.0 and earlier",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected devices are the Dexcom G7 Continuous Glucose Monitoring System (CGM System) using iOS, watchOS and Android App software (versions 2.8.0 or earlier) and Dexcom ONE+ CGM System using iOS and Android App software (versions 1.4.0 or earlier), henceforth referred to as the App. The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App when the CGM experiences a hardware or firmware failure. Instead, the App ends the CGM sensor session, stops reporting glucose values and displays the Start Sensor screen or No active sensor message without alerting the user, which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 CGM watchOS App, SW13355, versions 2.8.0 and earlier",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected devices are the Dexcom G7 Continuous Glucose Monitoring System (CGM System) using iOS, watchOS and Android App software (versions 2.8.0 or earlier) and Dexcom ONE+ CGM System using iOS and Android App software (versions 1.4.0 or earlier), henceforth referred to as the App. The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App when the CGM experiences a hardware or firmware failure. Instead, the App ends the CGM sensor session, stops reporting glucose values and displays the Start Sensor screen or No active sensor message without alerting the user, which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom ONE+ iOS CGM App, SW14244, versions 1.4.0 and earlier",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected devices are the Dexcom G7 Continuous Glucose Monitoring System (CGM System) using iOS, watchOS and Android App software (versions 2.8.0 or earlier) and Dexcom ONE+ CGM System using iOS and Android App software (versions 1.4.0 or earlier), henceforth referred to as the App. The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App when the CGM experiences a hardware or firmware failure. Instead, the App ends the CGM sensor session, stops reporting glucose values and displays the Start Sensor screen or No active sensor message without alerting the user, which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Dexcom G7 CGM iOS App, SW12300, version 2.8.0 and earlier",
+   "event_date": "2025-07-24",
+   "severity": "Class I",
+   "manufacturer": "Dexcom, Inc.",
+   "summary": "The affected devices are the Dexcom G7 Continuous Glucose Monitoring System (CGM System) using iOS, watchOS and Android App software (versions 2.8.0 or earlier) and Dexcom ONE+ CGM System using iOS and Android App software (versions 1.4.0 or earlier), henceforth referred to as the App. The affected App does not provide an expected \"Sensor Failed\" alert when the transmitter sends a \"transmitterFailed\" error message to the App when the CGM experiences a hardware or firmware failure. Instead, the App ends the CGM sensor session, stops reporting glucose values and displays the Start Sensor screen or No active sensor message without alerting the user, which can lead to missed detection of a hyperglycemic or hypoglycemic event and a delay in treatment.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:05:36.812764+00:00"
+  }
+ ],
+ "coverage": [
+  "US: FDA enforcement recalls whose product text mentions software, algorithm, application, firmware or app; MAUDE counts by year",
+  "UK: MHRA medical safety alerts matched by whole-phrase manufacturer name or software terms",
+  "CH: Swissmedic field safety corrective actions not loaded [GAP]"
+ ],
+ "gaps": [],
+ "maude_counts": [
+  {
+   "product_code": "PHV",
+   "total_reports": 2081,
+   "by_year": [
+    {
+     "year": 2017,
+     "count": 1
+    },
+    {
+     "year": 2018,
+     "count": 5
+    },
+    {
+     "year": 2019,
+     "count": 5
+    },
+    {
+     "year": 2020,
+     "count": 1
+    },
+    {
+     "year": 2021,
+     "count": 4
+    },
+    {
+     "year": 2022,
+     "count": 674
+    },
+    {
+     "year": 2023,
+     "count": 820
+    },
+    {
+     "year": 2024,
+     "count": 284
+    },
+    {
+     "year": 2025,
+     "count": 170
+    },
+    {
+     "year": 2026,
+     "count": 117
+    }
+   ],
+   "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events",
+   "source_url": "https://api.fda.gov/device/event.json",
+   "retrieved_at": "2026-10-13T00:07:48.848115+00:00"
+  }
+ ]
+}

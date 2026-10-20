@@ -1,0 +1,33 @@
+{
+  "skill_name": "payer-engagement-and-hta-submission",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1 evidence requirement map",
+      "prompt": "Our digital CBT-I app for insomnia with depression is class I. Our pragmatic RCT is DOI 10.1155/da/2171041. Is that enough for a permanent DiGA listing, and can we say it improves depressive symptoms?",
+      "expected_output": "Answer first. Calls get_record, classify_study, grade_evidence, qualify_source and check_claim. Maps the study against the DiGA study rules with row ids (DE10 to DE16, DE9): design shown, result not shown, German setting, registration, publication timing, use data and ICD codes as [GAP] because the record cannot show them. States CEBM level 2 as 'from design only'. Does not accept the depression claim as checked without a results passage, and says why (Verify matched words, not a finding). Names effect type as the regulatory owner's decision. Comparables via F51 labeled as route evidence, not a forecast. Short mode, uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2 submission readiness",
+      "prompt": "We want to file for PECAN in France next and then LPPR. What do we need to have ready, what does it cost, and how long does HAS take? Where do files usually go wrong?",
+      "expected_output": "PECAN checklist (Sesame templates, parallel ANS Convergence filing, ANSM opinion for class I, CE marking, presumed innovation with ongoing studies) with row ids. PECAN fee awaits a decree; LPPR listing fee EUR 3,220. Clocks: PECAN opinion 60 days from complete file, 30 days to supply missing information, then 6 months to file LPPR; LPPR 180 days, suspended while information is awaited. Failure patterns as context with period: 69 percent of 2025 LPP requests suspended for incompleteness, 2023 causes, organizational impact rarely evaluated; PECAN 2025 1 favorable of 5. Notes FR_LPPR has no rows in the library. Mentions free HAS pre-submission meetings. No odds for the person's file.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1 engagement plan and value narrative",
+      "prompt": "Help us plan who to talk to first for our DiGA, BfArM or the insurers, and draft the key value messages for the BfArM consultation.",
+      "expected_output": "Routes with cost and lead time: BfArM consultation EUR 250 to 5,000, meeting usually three to four months after the request, package three weeks before (10 to 15 questions, briefing document about 40 to 50 pages, 15-minute presentation), non-binding, no pre-assessment of data. Sequence by dependency, labeled proposed unless the person gives one; owners asked for. Insurer price negotiation pointed to the coding, pricing and contracting skill. Value messages only from claims checked in A1 (or runs the checks); unchecked claims excluded with the reason; DE8 endpoints excluded. Every message labeled a draft for the owner.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "We're about to negotiate our DiGA price with the GKV-Spitzenverband. What walk-away price should we set and what discount should we open with?",
+      "expected_output": "Declines to set a price, walk-away point or discount: price negotiation is not part of this skill and pricing positions stop for their accountable owner. Points to the coding, pricing and contracting skill (`coding-pricing-and-payer-contracting`, DH-03.01.2.1). Does not state any comparator price as the person's price. May offer A2 or B1 work instead.",
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+ "note": "ILLUSTRATIVE. Invented thresholds for testing scripts/signal_read.py; not a real product. Values are the invented person's, not benchmarks.",
+ "product": "RewardPath (illustrative contingency-management app)",
+ "set_on": "2026-03-16",
+ "set_before_launch": true,
+ "signals": [
+  {"id": "S1", "kind": "event_rate_per_1000", "category": "reward logic complaint", "alert_when": ">", "value": 2.0},
+  {"id": "S2", "kind": "event_count", "category": "use error", "alert_when": ">", "value": 5},
+  {"id": "S3", "kind": "event_count", "category": "adverse event", "alert_when": ">", "value": 0},
+  {"id": "S4", "kind": "measure", "measure": "negative_screen_share_weeks_9_12", "alert_when": "<", "value": 0.35}
+ ]
+}

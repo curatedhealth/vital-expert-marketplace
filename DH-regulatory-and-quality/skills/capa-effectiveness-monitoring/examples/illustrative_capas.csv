@@ -1,0 +1,4 @@
+capa_id,complaint_code,closed_date,window_days,owner
+CAPA-027,SYNC-FAIL,2026-07-15,120,Dana Weber
+CAPA-031,STALE-DATA,2026-08-31,90,Dana Weber
+CAPA-035,UI-UNITS,,,

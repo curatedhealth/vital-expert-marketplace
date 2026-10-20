@@ -1,0 +1,32 @@
+[
+  {
+    "call": "regulatory-dh.retrieve_guidance",
+    "arguments": {
+      "query": "WCAG accessibility",
+      "limit": 5
+    },
+    "response": {
+      "results": [],
+      "gaps": [
+        "[GAP]",
+        "no passage retrieved in this namespace"
+      ]
+    }
+  },
+  {
+    "call": "regulatory-dh.retrieve_guidance",
+    "arguments": {
+      "query": "human factors",
+      "limit": 5
+    },
+    "response_summary": "Five passages, all source_url \"[GAP]\" and retrieved_at null: two from an npj Digital Medicine 2025 perspective on harm and human factors, one from what reads as FDA off-the-shelf software guidance (\"What new human factors conditions are introduced with new OTS software component(s)?\"), two from a reference list. label_basis: \"lexical match on stored knowledge; not a register decision\"."
+  },
+  {
+    "call": "regulatory-dh.retrieve_guidance",
+    "arguments": {
+      "query": "human factors user interface change design system component",
+      "limit": 5
+    },
+    "response": "503, not counted"
+  }
+]

@@ -1,0 +1,57 @@
+{
+ "retrieved_on": "19 October 2026",
+ "find_job": {
+  "call": {
+   "query": "evidence table literature citation"
+  },
+  "result": {
+   "matches": []
+  },
+  "reading": "list_jobs holds evidence-table (available) but find_job with these words returned nothing."
+ },
+ "list_jobs_evidence_suite": [
+  {
+   "id": "evidence-table",
+   "status": "available",
+   "startable": true,
+   "youGet": "Graded studies, with retractions flagged.",
+   "coverage": "Published literature the literature suite can reach. Unpublished data is a gap.",
+   "tools": [
+    "literature.search_literature",
+    "literature.get_record",
+    "literature.find_trial",
+    "literature.grade_evidence",
+    "literature.check_retraction",
+    "literature.build_evidence_table",
+    "verify.extract_claims",
+    "verify.check_claim",
+    "verify.verify_text",
+    "verify.qualify_source",
+    "verify.check_currency",
+    "verify.build_citation",
+    "verify.build_record"
+   ]
+  },
+  {
+   "id": "value-dossier",
+   "status": "design_partners",
+   "startable": false,
+   "youGet": "A dossier skeleton, with every claim checked.",
+   "tools": []
+  }
+ ],
+ "list_experts_digital_regulatory_evidence": [
+  {
+   "slug": "real-world-evidence-director-digital",
+   "remit_excerpt": "Designs real-world evidence programmes ... and translation for regulators, payers and medical affairs."
+  },
+  {
+   "slug": "digital-health-evidence-regulatory-director",
+   "remit_excerpt": "plans evidence and regulatory strategy for digital health products ... claim architecture (wellness versus medical) ... post-market evidence"
+  },
+  {
+   "slug": "cybersecurity-architect-digital-health",
+   "remit_excerpt": "designs premarket cybersecurity architecture for SaMD ..."
+  }
+ ]
+}

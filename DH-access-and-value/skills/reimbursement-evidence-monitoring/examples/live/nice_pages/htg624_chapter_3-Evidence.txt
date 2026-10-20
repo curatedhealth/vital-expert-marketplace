@@ -1,0 +1,143 @@
+
+3 Evidence | Sleepio to treat insomnia and insomnia symptoms | Guidance | NICE
+
+        You are here:
+
+                    Home
+
+                        NICE Guidance
+
+                        Conditions and diseases
+
+                        Sleep and sleep conditions
+
+                            Sleepio to treat insomnia and insomnia symptoms
+
+HealthTech guidance
+
+Reference number:
+HTG624
+
+							Published:
+
+								20 May 2022
+
+Guidance
+
+Tools and resources
+
+Information for the public
+
+History
+
+    Download guidance (PDF)
+
+                                    Overview
+
+1 Recommendations
+
+2 The technology
+
+3 Evidence
+
+4 Committee discussion
+
+5 Committee members and NICE project team
+
+Update information
+
+On this page
+
+                                                        Clinical evidence
+
+                                                        Cost evidence
+
+3 Evidence
+
+NICE commissioned an external assessment centre (EAC) to review the evidence submitted by the company. This section summarises that review.
+Full details of all the evidence are in the project documents on the NICE website
+.
+
+Clinical evidence
+
+The clinical evidence comprises 28 studies, 12 of which are randomised controlled trials
+
+3.1
+
+The EAC assessed 25 full text publications, an unpublished study and 2 abstracts. Twelve of the studies were randomised controlled trials (including 6 secondary analyses of randomised controlled trials). Six were non-randomised studies and there was 1 abstract. Also, the company provided the EAC with 2 unpublished, real-world evidence studies. For full details of the clinical evidence, see section 3 of the assessment report. Find the
+assessment report in the supporting documents for Sleepio on the NICE website
+.
+
+The 12 randomised controlled trials are relevant to the decision problem and show that Sleepio reduces symptoms of insomnia
+
+3.2
+
+There is good quality evidence that Sleepio improves sleep in people with self-reported insomnia symptoms (according to DSM-5 [Diagnostic and Statistical Manual of Disorders 5], SCI [Sleep Condition Indicator] and ISI [Insomnia Severity Index] measures). The most robust evidence for Sleepio comprises 12 randomised controlled trials, 10 of which used intention-to-treat analyses to control for high drop-out rates. The studies are small relative to the potential reach of Sleepio but are adequately powered and well reported.
+
+The UK population is well represented in the evidence for Sleepio
+
+3.3
+
+The UK population is well represented in the evidence base for Sleepio, which includes 7 UK studies and 4 multinational studies that included UK populations. Four of the studies done in the UK were randomised controlled trials (Espie et al. 2012, Freeman et al. 2017, Denis et al. 2020 [pilot study], Kyle et al. 2020); all concluded that Sleepio was more effective in reducing insomnia symptoms than the comparator (standard care, waiting list, placebo or attention control).
+
+The evidence is heterogenous
+
+3.4
+
+The studies included in the assessment varied in design, population, outcome measures and comparators. Study participants included people with difficulty sleeping with or without medical and mental health comorbidities, and different durations of insomnia. The comparator differed between studies and often the description of standard care lacked clarity. It was unclear whether standard care included aspects of cognitive behavioural therapy for insomnia (CBT‑I), the hypnotic medication prescription, or both, and there was little information about what was offered as sleep hygiene education.
+
+There is limited evidence comparing Sleepio with face-to-face CBT-I or other forms of digital CBT-I
+
+3.5
+
+The company acknowledged that the lack of evidence comparing Sleepio with face-to-face CBT or digital CBT‑I was a limitation. It said that face‑to‑face CBT‑I for insomnia is not routinely available on the NHS and is not scalable to the UK NHS population. There is a meta-analysis (Soh et al. 2020) that indicated that digital CBT‑I is non-inferior to face‑to‑face CBT‑I. A network meta-analysis (Hasan et al. 2022) compared various forms of digital CBT‑I with face-to-face CBT‑I. The authors concluded that web-based CBT‑I with a virtual or real therapist offers better outcomes than other digital CBT‑I approaches (web-based CBT‑I without a therapist, telephone-based CBT‑I and mobile app-based CBT‑I). Sleepio includes a virtual therapist. The authors also reported that, although web-based CBT‑I with a therapist resulted in reduced insomnia symptoms when compared with educational therapy, face‑to‑face CBT‑I was superior to both these interventions. The authors said that the meta-analysis included relatively few studies that included face-to-face CBT‑I and that the follow-up effects of digital CBT‑I were unavailable. There are currently no studies that compare Sleepio with other digital CBT‑I technologies.
+
+Cost evidence
+
+The company used a single cohort spreadsheet model to compare the cost of Sleepio with treatment as usual and face-to-face CBT-I
+
+3.6
+
+The company submitted 12 economic studies relevant to the economic assessment. The EAC found 3 of them met the decision problem. The company's economic analysis modelled a population of adults with insomnia symptoms. The model compared Sleepio with 2 comparators: treatment as usual (which includes sleep hygiene and sleep medication) and face-to-face CBT‑I. The model assumes that treatment with Sleepio is clinically equivalent to both comparators and so includes only the resource impact and no clinical outcomes. The company's analysis in the initial submission is based on the population-based price (see
+section 2.10
+).
+
+3.7
+
+The cost impact and proportion of patients using Sleepio are based on data from Sampson et al. (2021). The key costs were:
+
+Sleepio at £45 per adult who starts session 1 of the programme. This price was proposed at consultation. The
+supporting documents for this guidance
+ describe the cost model results with the other prices mentioned in section 2.
+
+Sleep hygiene at £0.
+
+Face-to-face CBT-I at £492 (this was changed by the EAC to £542 to account for inflation) per adult.
+
+Primary care resource use per user in years 1, 2 and 3 at £49.52, £43.52 and £42.05 respectively.
+
+For full details of the cost evidence, see
+section 4 of the assessment report in the supporting documents
+.
+
+The EAC concluded that the statistical analysis in Sampson et al. (2021) is robust
+
+3.8
+
+The committee asked the EAC to review the statistical analysis described in Sampson et al. (2021) and explore if it was possible to link the NHS data with the data from Sleepio to better understand the outcomes associated with its use. Patient-level data was made available to the EAC, who replicated the multilevel generalised linear model described in the paper. It was not possible to link the NHS data to the data available from Sleepio users about usage and weekly sleep score. The EAC also investigated adding an individual patient level to the generalised linear model, the impact of seasonal adjustment, and relevant comorbidities. It found that the resource use saving results from the statistical model did not change significantly from those reported in the study (£6.64 compared with £5.53 per patient per year in the EAC model). It concluded that the Sampson et al. (2021) results are robust enough for use in the economic modelling for Sleepio.
+
+The EAC's updates to the cost model make Sleepio cost saving compared with treatment as usual
+
+3.9
+
+After consultation, the EAC ran the cost model with the new price proposed at consultation. The base case shows that after 1 year, compared with treatment as usual, Sleepio is cost saving by £4.52 per person. If the results of resource savings at 1 year are extrapolated to 3 years, the cost savings are £90.08 per person. The EAC noted that with this price, the results do not depend on the uptake of the technology.
+
+Next page
+
+4 Committee discussion
+
+Previous page
+
+2 The technology
+
+				Back to top

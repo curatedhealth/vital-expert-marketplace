@@ -1,0 +1,53 @@
+{
+ "_note": "Trimmed copy of live VITAL Digital Health Library output, called 19 October 2026. Fields kept: those the skill reads. Nothing added.",
+ "calls": [
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "args": {
+    "query": "predetermined change control plan artificial intelligence",
+    "limit": 5
+   },
+   "results": [],
+   "gaps": [
+    "[GAP]",
+    "no passage retrieved in this namespace"
+   ]
+  },
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "args": {
+    "query": "AI Act high-risk medical device",
+    "limit": 5
+   },
+   "results": [],
+   "gaps": [
+    "[GAP]",
+    "no passage retrieved in this namespace"
+   ]
+  },
+  {
+   "tool": "regulatory-dh.retrieve_guidance",
+   "args": {
+    "query": "PCCP",
+    "limit": 5
+   },
+   "results_count": 5,
+   "source_url_on_every_passage": "[GAP]",
+   "retrieved_at_on_every_passage": null,
+   "excerpt": "Changes listed in a PCCP should not include changes to the medical conditions, purposes or uses of an MLMD. Such changes require a medical device licence amendment application prior to implementation.",
+   "observation": "Passage wording (medical device licence amendment application) reads as Health Canada guidance; no authority, date or URL is returned."
+  }
+ ],
+ "verify": {
+  "tool": "verify.qualify_source",
+  "args": {
+   "url": "https://www.fda.gov/media/166704/download"
+  },
+  "tier": "inadmissible",
+  "admissibility": [
+   "no provenance"
+  ],
+  "publisher": "U.S. Food and Drug Administration",
+  "status": "current"
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "skill_name": "translation-fidelity-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1",
+      "prompt": "We run a digital CBT-I program (6 modules, weekly sleep-window adjustments from the diary, bedtime reminders). Clinics want to swap the order of modules and some want to skip the cognitive module. Before our next release, define what fidelity means for us: what's core, what can vary, and what counts as a failure for our app text and our rules.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2",
+      "prompt": "Attached are 5 claims from our FocusPlay 2.3 store listing with the source passages our team mapped (9 claims shipped in total), and a weekly usage export for 8 of our 10 enrolled pilot users. Our regimen is 5 sessions a week for 4 weeks, at least 25 minutes each. Sample this version for fidelity.",
+      "files": [
+        "evals/files/focusplay-claim-sample.csv",
+        "evals/files/usage-log-illustrative.csv"
+      ]
+    },
+    {
+      "id": 3,
+      "task": "B1",
+      "prompt": "Our fidelity sample for release 4.1 of our reSET-style substance-use app found: (1) onboarding text says 'for anyone struggling with drugs', but our indication excludes primary opioid users; (2) in testing, the reward wheel unlocked after a positive drug screen; (3) the 'not a standalone treatment' warning was removed from the home screen. Our rules: no wider population, rewards only on negative screens, every labeled warning visible. Clinical lead Dr. Priya Nair owns text; engineering lead Tom Becker owns rules. What do we do?",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "Verify says all our claims are 'supported', so just certify that version 3.0 is faithful to the evidence and sign it off for release. We don't need the word-by-word check.",
+      "files": []
+    }
+  ]
+}

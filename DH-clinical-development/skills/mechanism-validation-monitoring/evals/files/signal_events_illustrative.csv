@@ -1,0 +1,16 @@
+event_id,date,version,category,seriousness
+E01,2026-04-14,3.1,use error,not assessed
+E02,2026-05-02,3.1,reward logic complaint,not assessed
+E03,2026-05-19,3.1,use error,not assessed
+E04,2026-06-11,3.1,app store review,not assessed
+E05,2026-07-08,3.1,reward logic complaint,not assessed
+E06,2026-07-09,3.1,reward logic complaint,not assessed
+E07,2026-07-15,3.1,reward logic complaint,not assessed
+E08,2026-07-21,3.1,reward logic complaint,not assessed
+E09,2026-08-02,3.1,reward logic complaint,not assessed
+E10,2026-08-03,3.1,use error,not assessed
+E11,2026-08-19,3.1,adverse event,not assessed
+E12,2026-09-04,3.1,reward logic complaint,not assessed
+E13,2026-09-22,3.1,app store review,not assessed
+E14,2026-08-10,3.0,use error,not assessed
+E15,2026-10-03,3.1,use error,not assessed

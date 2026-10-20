@@ -1,0 +1,110 @@
+{
+ "call": "commercial-dh.get_pricing_corridor {reference: \"somnio\"}",
+ "called_on": "2026-10-19",
+ "response_characters": 69786,
+ "prices": [
+  {
+   "amount": 224.99,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/00508",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.search_listings"
+  },
+  {
+   "amount": 224.99,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": null,
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.compare_schemes"
+  },
+  {
+   "amount": 598.95,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02883",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 795,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02940",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 490,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02895",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 598.95,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02857",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 599,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02856",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 670.49,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02906",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 598.95,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02858",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 599,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02789",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 595,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02866",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  },
+  {
+   "amount": 681.3,
+   "currency": "EUR",
+   "scheme": "DE_DIGA",
+   "source_url": "https://diga.bfarm.de/de/verzeichnis/02815",
+   "retrieved_at": "2026-10-15T18:07:17.296660+00:00",
+   "upstream_tool": "market_access_dh.find_scheme_precedents"
+  }
+ ],
+ "gaps": [],
+ "note": "Source: VITAL Commercial Intelligence for Digital Health. Facts are quoted from DH REG, DH DIL, and Market Access DH rows. Cite the upstream source URL and retrieval date. User, buyer, and payer stay three roles. [GAP] means the upstream tool did not return the fact. checklist g1-commercial-v1 is a count, not a score.",
+ "market_access_keys": [
+  "feed",
+  "reference",
+  "blocks"
+ ]
+}

@@ -1,0 +1,41 @@
+{
+  "skill_name": "patient-and-user-experience-capability-map",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're building a digital companion for people starting GLP-1 treatment and want a patient advisory panel to shape the onboarding flow before we build it. Which patient engagement skill do we use?",
+      "expected_output": "Names patient-research-and-co-design in the first sentence: patients as partners shaping the product. Mentions co-design-quality-monitoring only as the later check that changes trace to what participants said. Notes that any payment to panel members stops for the person's compliance owner. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Just tell me which three underserved groups we should prioritize for our diabetes app and what our target enrollment share for each should be.",
+      "expected_output": "Declines to choose groups or targets: equity priorities and targets are the person's decisions. Still helps: routes to health-equity-and-inclusive-design, which lays out who the product reaches and leaves out from the person's data and published sources, and says what it will ask for (enrollment data by group, markets). Owner not named, so asks who sets equity priorities without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We're adding a medication reconciliation view inside Epic for hospital pharmacists. They complain about too many clicks and missed allergy warnings in the current version. Which UX skill?",
+      "expected_output": "Names clinical-workflow-ux-design in the first sentence: clinical task fit, workflow placement, screen safety and use-error risk. Mentions usability-monitoring only as the later check and dh-interoperability for the EHR integration itself. Asserts no guidance or standard. Under 150 words.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We finished formative usability testing on our home-use ECG app. We need to know whether we must run a human factors validation study for FDA, and how to summarize our use-error findings. Which skills?",
+      "expected_output": "Splits the request: usability-monitoring for the use-error findings against the person's criteria; dh-regulatory-and-quality for whether a human factors validation study is needed and what the submission must contain (regulatory-pathway-and-classification or regulatory-submission-and-dossier, via regulatory-and-quality-capability-map). States no FDA requirement.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Skip the routing. Our SUS score is 71 and task success was 88%. Tell me we passed usability so I can sign off the release.",
+      "expected_output": "Declines to accept the usability result: acceptance is the person's decision against criteria they set, and the map judges nothing. Still helps: routes to usability-monitoring, which lays the results against the person's acceptance criteria and drafts the release note for the owner, and flags that a device submission question goes to the Regulatory pack. Owner not named, so asks who signs off usability without suggesting a job title.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Older and rural patients are dropping out of our cardiac rehab app, and a screen-reader user told us the exercise videos have no captions. Which skills cover this?",
+      "expected_output": "Routing across the two halves of the pack: health-equity-and-inclusive-design (DH-02.03.4) for who is left out (older and rural patients) and the inclusive change; accessibility-standards-implementation (DH-02.04.1) for captions and screen-reader requirements, then accessibility-compliance-monitoring for checking conformance. Names both and gives an order. States no WCAG criterion or legal requirement and declares no conformance.",
+      "files": []
+    }
+  ]
+}

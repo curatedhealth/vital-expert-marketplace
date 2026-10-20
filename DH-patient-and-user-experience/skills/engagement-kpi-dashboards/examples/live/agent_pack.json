@@ -1,0 +1,111 @@
+{
+  "called": "19 October 2026",
+  "calls": [
+    {
+      "call": "agent-pack.list_experts",
+      "args": {
+        "query": "analytics",
+        "limit": 10
+      },
+      "returned": [
+        {
+          "slug": "data-analytics-lead",
+          "display_name": "Data & Analytics Lead",
+          "description": "Department head who designs observational analysis and KPI trees for digital products, then translates results into executive language that keeps design limits visible. Does not train models, score individuals, or author payer dossiers."
+        },
+        {
+          "slug": "data-visualization-specialist-health",
+          "display_name": "Data Visualization Specialist (Health)",
+          "description": "Executes one specification unit: choose chart type, encodings, and labels for a supplied health table so a reader can check the view against the source rows. Does not invent values, does not interpret care, does not own the analytics roadmap."
+        }
+      ]
+    },
+    {
+      "call": "agent-pack.download_agent",
+      "args": {
+        "expert": "data-analytics-lead"
+      },
+      "returned_characters": 84013,
+      "version": "2026-10-16",
+      "skill_count": 101,
+      "tool_count": 36,
+      "system_prompt_excerpts": [
+        "Scoring, ranking, or determining eligibility of a natural person. Training, locking, or deploying a predictive model of record. Authoring or submitting a DiGA, HTA, or payer dossier. Causal claims from observational data without design limits. Converting KPI movement into a clinical efficacy claim. Protected health information. External publication of insight packs without owner countersign.",
+        "Internal KPI trees and analysis-plan drafts may proceed. Insight packs that will leave the company, causal language, person-level cuts, and anything that reads as a coverage argument stop for the accountable owner. Coverage questions route to Access & Reimbursement; model-risk questions route to the Data Science Lead..",
+        "Bound competencies (6): Digital Endpoint Capture & RWE Platform Management; Digital Evidence Quality Assessment & Signal Detection Effectiveness Monitoring; Harmonisation Effectiveness Assessment & Cross-Region Compliance Monitoring; Personalisation Effectiveness Assessment & Adaptation Quality Monitoring; Prototype Effectiveness Assessment & Experimentation Quality Monitoring; Rapid Prototyping & Concept Validation Execution.",
+        "Graph escalation peer: Chief Alignment Officer. Name only this peer; do not invent another.",
+        "Posture: [GAP] (persona_archetype)."
+      ],
+      "bound_skill_entries_for_this_competency": [
+        {
+          "code": "CF-12.02.03.3.1.2",
+          "name": "Dashboard slice",
+          "body_md": "# Dashboard slice\n\nOne skill under CF-12.02.03.3.1. The other skills under this competency do a different job.\n\n## What it does\nPlace the KPIs on one dashboard for one audience.\n\n## Method\n1. Name the audience.\n2. Place only the KPIs that audience decides on.\n3. Name the refresh cadence.\n\n## Do not\nDo not build one dashboard for every audience.\n\n## Output\nOne dashboard: audience, KPIs, cadence."
+        },
+        {
+          "code": "CF-12.02.03.3.2.1",
+          "name": "KPI recomputation",
+          "body_md": "# KPI recomputation\n\nOne skill under CF-12.02.03.3.2. The other skills under this competency do a different job.\n\n## What it does\nRecompute one KPI from the source.\n\n## Method\n1. Pick a KPI and a period.\n2. Recompute the formula from the source table.\n3. Compare it with the number on the dashboard.\n\n## Do not\nDo not trust the dashboard number without a recomputation.\n\n## Output\nA comparison: source, dashboard, difference."
+        },
+        {
+          "code": "CF-12.02.03.3.1.1",
+          "name": "KPI definition",
+          "body_md": "# KPI definition\n\nOne skill under CF-12.02.03.3.1. The other skills under this competency do a different job.\n\n## What it does\nDefine each KPI the dashboard will show.\n\n## Method\n1. Name the decision the KPI serves.\n2. Write the formula, the grain (account, site, week), and the source table.\n3. Name a KPI you will not show, and why.\n\n## Do not\nDo not add a KPI with no source table.\n\n## Output\nA KPI card: decision, formula, grain, source."
+        },
+        {
+          "code": "CF-12.02.03.3.2.2",
+          "name": "Formula drift",
+          "body_md": "# Formula drift\n\nOne skill under CF-12.02.03.3.2. The other skills under this competency do a different job.\n\n## What it does\nFind a KPI whose dashboard formula is not the card.\n\n## Method\n1. Read the KPI card and the dashboard definition.\n2. Mark match or drift.\n3. Name the grain if it differs.\n\n## Do not\nDo not treat a renamed KPI as the same formula.\n\n## Output\nA drift note."
+        },
+        {
+          "code": "CF-12.02.03.3.2.3",
+          "name": "KPI repair",
+          "body_md": "# KPI repair\n\nOne skill under CF-12.02.03.3.2. The other skills under this competency do a different job.\n\n## What it does\nAssign a drifted or unrecomputable KPI.\n\n## Method\n1. Name the owner of the card or the job.\n2. State whether the card or the dashboard changes.\n3. Name the refresh after which the numbers must match.\n\n## Do not\nDo not leave both versions live.\n\n## Output\nAn owner and the refresh that must match."
+        },
+        {
+          "code": "CF-12.02.03.3.1.3",
+          "name": "Tracking job",
+          "body_md": "# Tracking job\n\nOne skill under CF-12.02.03.3.1. The other skills under this competency do a different job.\n\n## What it does\nName the job that refreshes the dashboard.\n\n## Method\n1. Name the job and the owner who is paged when it fails.\n2. State how a failed refresh is visible to the audience.\n3. State the last successful run you will show.\n\n## Do not\nDo not hide a stale dashboard behind the last good numbers without a timestamp.\n\n## Output\nA job, an owner, and a visible timestamp."
+        }
+      ],
+      "tools_listed_names": [
+        "ICTRP",
+        "Digital Health Company Search",
+        "bioRxiv/medRxiv",
+        "Digital Health Evidence Maturity",
+        "PubMed",
+        "Digital Health Funding Signals",
+        "Digital Health Census",
+        "Semantic Scholar",
+        "UniProt",
+        "WHO GHO",
+        "CDC",
+        "EMA",
+        "OpenAlex",
+        "Digital Health Deltas",
+        "Literature and Evidence Intelligence",
+        "Consensus",
+        "Digital Health Sources",
+        "Unpaywall",
+        "Unified Digital Health Taxonomy",
+        "PubChem",
+        "Medical Terminologies",
+        "DailyMed",
+        "HTA Intelligence",
+        "Digital Health Signal",
+        "Open Targets",
+        "Digital Health Dossier",
+        "ChEMBL",
+        "NPI Registry",
+        "ClinicalTrials.gov",
+        "Digital Health Portfolio Comparison",
+        "Digital Health Market Screen",
+        "OpenFDA Intelligence",
+        "Digital Health Company Profile",
+        "MyVariant",
+        "Crossref",
+        "Europe PMC"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+ "call": "literature.search_literature {query: \"digital health intervention engagement disparities race ethnicity income older adults\", filters: {date_from: \"2020-01-01\"}, limit: 6}",
+ "called_on": "19 October 2026",
+ "total_merged": 24,
+ "records": [
+  {
+   "doi": "10.1093/jamia/ocag090",
+   "title": "Digital health technology burden and frustration among patients with multimorbidity",
+   "year": 2026,
+   "design": "cross_sectional",
+   "design_confidence": 0.6
+  },
+  {
+   "doi": "10.2196/79032",
+   "title": "Assessing a Community Health Worker-Facilitated, Digitally Delivered, Family-Centered Diabetes Management Program: Single-Arm Quasi-Experimental Study",
+   "year": 2025,
+   "design": "nonrandomized_trial",
+   "design_confidence": 0.78
+  },
+  {
+   "doi": "10.1001/jamanetworkopen.2023.56070",
+   "title": "Digital Health Interventions for Hypertension Management in US Populations Experiencing Health Disparities",
+   "year": 2024,
+   "design": "other",
+   "design_confidence": 0.3,
+   "note_by_builder": "Europe PMC title adds ': A Systematic Review and Meta-Analysis.'; the library label 'other' is wrong"
+  },
+  {
+   "doi": "10.1093/geroni/igab046.098",
+   "title": "Race, Ethnicity, and Social Engagement Among Community-Dwelling Older Adults: The Health and Retirement Study",
+   "year": 2021,
+   "design": "other",
+   "note_by_builder": "not about digital health"
+  },
+  {
+   "doi": "10.1177/20552076261438677",
+   "title": "Digital health interventions for older adults with heart failure: A scoping review of participant representation, engagement, and equity considerations",
+   "year": 2026,
+   "design": "systematic_review",
+   "design_confidence": 0.78,
+   "note_by_builder": "a scoping review labeled systematic_review"
+  },
+  {
+   "doi": "10.1007/s40615-025-02304-0",
+   "title": "Experiences of Forgone Care During the COVID-19 Pandemic and Older Adults' Mental Health: Variations by Race and Ethnicity",
+   "year": 2025,
+   "design": "other",
+   "note_by_builder": "not about digital health"
+  }
+ ],
+ "trial_ids": "empty on every record",
+ "warnings": [
+  "biorxiv: no preprint in the last 30 days matched the query (the source has no keyword search)"
+ ]
+}

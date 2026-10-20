@@ -1,0 +1,94 @@
+{
+ "_note": "Trimmed copy of a live VITAL Digital Health Library response, 19 October 2026. Fields kept as returned; long lists shortened where marked.",
+ "call": {
+  "tool": "regulatory-dh.search_safety_events",
+  "arguments": {
+   "manufacturer": "Medtronic",
+   "since": "2025-01-01",
+   "limit": 5
+  }
+ },
+ "results": [
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Medtronic SynchroMed Flex Infusion Mode - A810 Clinician Programmer Software Application ...",
+   "event_date": "2026-04-08",
+   "severity": "Class II",
+   "manufacturer": "Medtronic Neuromodulation",
+   "summary": "Software issue:  When programming the SynchroMed Pump with the A810 CP App in Flex Infusion Mode, the infusion steps should automatically be arranged in consecutive order, from earliest to latest. However, in rare cases, the steps may be displayed out of order. If this occurs, the programmed Flex Infusion schedule will not be delivered at the intended time, if at all.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:06:47.447722+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "A71200 Vanta\" Clinician Programmer Application (CP App) version  2.0.2465 and 2.0.2683, Product number A71200. ...",
+   "event_date": "2025-12-03",
+   "severity": "Class II",
+   "manufacturer": "Medtronic Neuromodulation",
+   "summary": "Complaints received that Vanta A71200 CP App does not function as intended during use. There is a potential for prolonged or postponed surgical procedure.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:06:47.447722+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Restore Clinician Programmer Application (CP App), Model A71100 ...",
+   "event_date": "2025-11-20",
+   "severity": "Class II",
+   "manufacturer": "Medtronic Neuromodulation",
+   "summary": "Software issue where a Device Reset message displayed on the app was unable to be cleared. In rare cases, this resulted in an inability to resume therapy, and the patient experienced a recurrence of underlying pain symptoms. Resolution would require surgical replacement of the INS.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:07:02.637387+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "Stimulation RC Clinician Programmer Application, Model A71400, when used with the Inceptiv (Model 977119) and Intellis Pro (Model 977118) neurostimulators",
+   "event_date": "2025-03-04",
+   "severity": "Class II",
+   "manufacturer": "Medtronic Neuromodulation",
+   "summary": "There is a software issue that can permanently disable communication with an implantable neurostimulator (INS) when a specific intraoperative programming sequence is used.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:07:02.637387+00:00"
+  },
+  {
+   "source_type": "fda_recall",
+   "jurisdiction": "US",
+   "title": "A820 myPTM Software Application associated with Medtronic SynchroMed Pump and Infusion System.",
+   "event_date": "2025-01-09",
+   "severity": "Class II",
+   "manufacturer": "Medtronic Neuromodulation",
+   "summary": "Product complaints were received describing the A820 myPTM app taking longer than expected for patients to interact with their implantable pump.",
+   "source_url": "https://api.fda.gov/device/enforcement.json",
+   "retrieved_at": "2026-10-13T00:07:02.637387+00:00"
+  }
+ ],
+ "maude_counts": [
+  {
+   "product_code": "QIH",
+   "total_reports": 10,
+   "by_year": [
+    {
+     "year": 2024,
+     "count": 2
+    },
+    {
+     "year": 2025,
+     "count": 5
+    },
+    {
+     "year": 2026,
+     "count": 3
+    }
+   ],
+   "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events"
+  },
+  {
+   "product_code": "QQC",
+   "total_reports": 0,
+   "by_year": []
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "called_on": "19 October 2026",
+ "calls": [
+  {
+   "call": "regulatory-dh.retrieve_guidance {query: \"Section 1557 language access\", limit: 5}",
+   "results": [],
+   "gaps": [
+    "[GAP]",
+    "no passage retrieved in this namespace"
+   ]
+  },
+  {
+   "call": "regulatory-dh.retrieve_guidance {query: \"diversity action plan\", limit: 5}",
+   "results": [],
+   "gaps": [
+    "[GAP]",
+    "no passage retrieved in this namespace"
+   ]
+  }
+ ]
+}

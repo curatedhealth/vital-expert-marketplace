@@ -1,0 +1,6 @@
+claim_id,version,product_text,source_passage,source_ref,population_product,population_source
+c1,2.3,FocusPlay is a game-based therapy for children with ADHD.,"paediatric patients (aged 8-12 years, without disorder-related medications) with confirmed ADHD",PMID 33334505 abstract Methods,children with ADHD,"aged 8-12 years, without disorder-related medications, confirmed ADHD"
+c2,2.3,Clinically proven to improve attention in 4 weeks.,"this study provides evidence that AKL-T01 might be used to improve objectively measured inattention in paediatric patients with ADHD",PMID 33334505 abstract Interpretation,,
+c3,2.3,"Play 25 minutes a day, 5 days a week.","delivered through a video game-like interface via at-home play for 25 min per day, 5 days per week for 4 weeks",PMID 33334505 abstract Background,,
+c4,2.3,Not a replacement for medication.,[GAP],none held,,
+c5,2.3,Helps kids with hyperactivity and impulsivity.,"may not display benefits in typical behavioral symptoms, such as hyperactivity.",DEN200026 Indications for use (TM144),,

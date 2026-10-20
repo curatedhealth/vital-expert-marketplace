@@ -1,0 +1,4 @@
+{"date": "2026-10-19", "tool": "agent-pack.list_experts", "args": {"query": "adoption", "limit": 10},
+ "returned_slugs": ["digital-health-access-reimbursement-lead", "health-equity-access-lead", "behavior-change-designer", "digital-adoption-manager", "patient-solutions-director", "digital-adoption-lead"],
+ "digital-adoption-lead": "Department head who sequences ADKAR or Kotter work, designs onboarding, and sets activation metrics for EHR features, portals, telehealth, and remote monitoring. Drafts readiness reviews; does not own go-live or treat session time as efficacy.",
+ "digital-adoption-manager": "Executes onboarding, training, and go-live jobs for a named digital-health rollout at site or product grain. Produces training packs, go-live checklists, and adoption-metric reads as drafts for a named human."}

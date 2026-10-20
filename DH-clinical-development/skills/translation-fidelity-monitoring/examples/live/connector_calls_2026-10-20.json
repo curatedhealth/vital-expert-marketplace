@@ -1,0 +1,454 @@
+{
+  "note": "Trimmed outputs of live VITAL Digital Health Library calls made on 20 October 2026 for the pd4 build (evidence-to-intervention-translation and translation-fidelity-monitoring). Fields not shown were removed for length; values shown are as returned. Counted calls: 18 (list_jobs is free).",
+  "calls": [
+    {
+      "n": 1,
+      "call": "regulatory-dh.get_authorization",
+      "args": {
+        "reference": "DEN200026"
+      },
+      "returned": {
+        "product": "EndeavorRx",
+        "manufacturer": "Akili Interactive Labs, Inc.",
+        "pathway": "FDA_DE_NOVO",
+        "risk_class": "2",
+        "status": "DENG",
+        "decision_date": "2020-06-15",
+        "submission_date": "2020-04-16",
+        "product_code": "QFT",
+        "regulation_number": "882.5803",
+        "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN200026",
+        "retrieved_at": "2026-10-13T00:04:13.107965+00:00",
+        "source": "openfda"
+      },
+      "observed": "No indication text, no limitations and no special controls on the record; status is FDA's raw code DENG (register C3)."
+    },
+    {
+      "n": 2,
+      "call": "regulatory-dh.get_authorization",
+      "args": {
+        "reference": "DEN160018"
+      },
+      "returned": {
+        "product": "reSet",
+        "manufacturer": "Pear Therapeutics, Inc.",
+        "pathway": "FDA_DE_NOVO",
+        "risk_class": "2",
+        "status": "DENG",
+        "decision_date": "2017-09-14",
+        "submission_date": "2016-05-16",
+        "product_code": "PWE",
+        "regulation_number": "882.5801",
+        "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN160018"
+      },
+      "observed": "Dates match TM131 and TM141. Indication and limitations must come from the De Novo decision summary (TM rows), not the record."
+    },
+    {
+      "n": 3,
+      "call": "regulatory-dh.search_safety_events",
+      "args": {
+        "product_code": "QFT",
+        "jurisdiction": "US"
+      },
+      "returned": {
+        "results": [],
+        "maude_counts": [
+          {
+            "product_code": "QFT",
+            "total_reports": 2,
+            "by_year": [
+              {
+                "year": 2023,
+                "count": 2
+              }
+            ],
+            "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events"
+          }
+        ]
+      },
+      "observed": "No recall; two MAUDE reports in 2023, counts only, no report text."
+    },
+    {
+      "n": 4,
+      "call": "regulatory-dh.search_safety_events",
+      "args": {
+        "product_code": "PWE",
+        "jurisdiction": "US"
+      },
+      "returned": {
+        "results": [
+          {
+            "source_type": "fda_recall",
+            "title": "reSET-O Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.",
+            "event_date": "2021-06-07",
+            "severity": "Class II",
+            "manufacturer": "Pear Therapeutics, Inc.",
+            "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.",
+            "source_url": "https://api.fda.gov/device/enforcement.json"
+          },
+          {
+            "source_type": "fda_recall",
+            "title": "reSET Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.",
+            "event_date": "2021-06-07",
+            "severity": "Class II",
+            "manufacturer": "Pear Therapeutics, Inc.",
+            "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.",
+            "source_url": "https://api.fda.gov/device/enforcement.json"
+          }
+        ],
+        "maude_counts": [
+          {
+            "product_code": "PWE",
+            "total_reports": 2,
+            "by_year": [
+              {
+                "year": 2022,
+                "count": 1
+              },
+              {
+                "year": 2025,
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      "observed": "A recall whose summary describes a decision rule firing differently from its specification (reward access regardless of the drug screen result). source_url is the API endpoint, not the recall record (register C1 evidence)."
+    },
+    {
+      "n": 5,
+      "call": "literature.search_literature",
+      "args": {
+        "query": "video game based digital therapeutic ADHD children randomized controlled trial STARS-ADHD",
+        "limit": 6
+      },
+      "returned": {
+        "total_merged": 18,
+        "kept": [
+          {
+            "doi": "10.1016/s2589-7500(20)30017-0",
+            "pmid": "33334505",
+            "title": "A novel digital intervention for actively reducing severity of paediatric ADHD (STARS-ADHD): a randomised controlled trial",
+            "venue": "The Lancet Digital Health",
+            "year": 2020,
+            "design": "rct",
+            "design_confidence": 0.78,
+            "trial_ids": [],
+            "excerpt": ""
+          },
+          {
+            "doi": "10.1038/s41746-021-00429-0",
+            "pmid": "33772095",
+            "title": "Effectiveness of a digital therapeutic as adjunct to treatment with medication in pediatric ADHD",
+            "venue": "npj Digital Medicine",
+            "year": 2021,
+            "design": "other",
+            "design_confidence": 0.3,
+            "trial_ids": [],
+            "excerpt": ""
+          }
+        ],
+        "off_topic_or_not_primary": [
+          "10.2196/60937 (review)",
+          "10.1521/adhd.2020.28.6.11 (news item)",
+          "10.3390/children12030338 (narrative review)",
+          "10.33140/jar.05.01.06 (observational, no authors)"
+        ]
+      },
+      "observed": "trial_ids empty on the RCT (register N8); excerpts empty on the two primary studies; four of six results are reviews, news or off-question."
+    },
+    {
+      "n": 6,
+      "call": "literature.find_trial",
+      "args": {
+        "record": {
+          "doi": "10.1016/s2589-7500(20)30017-0",
+          "pmid": "33334505"
+        }
+      },
+      "returned": {
+        "nct_id": "NCT02674633",
+        "status": "COMPLETED",
+        "phases": [
+          "NA"
+        ],
+        "sponsor": "Akili Interactive Labs, Inc.",
+        "match_via": "pubmed_secondary_id",
+        "warnings": [
+          "2 registrations cite this paper as background only and were not linked"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "call": "literature.grade_evidence",
+      "args": {
+        "records": [
+          "STARS-ADHD (design rct 0.78)",
+          "STARS-Adjunct (design other 0.3)"
+        ],
+        "question_type": "treatment"
+      },
+      "returned": [
+        {
+          "doi": "10.1016/s2589-7500(20)30017-0",
+          "level": "2",
+          "rule": "rct for a treatment question -> level 2",
+          "provisional": false
+        },
+        {
+          "doi": "10.1038/s41746-021-00429-0",
+          "level": "[GAP]",
+          "rule": "other: design not established",
+          "provisional": true
+        }
+      ],
+      "observed": "Level comes from the design label only (register N8). It is a study-level label, not GRADE certainty for an outcome (ES-96)."
+    },
+    {
+      "n": 8,
+      "call": "literature.classify_study",
+      "args": {
+        "record": {
+          "doi": "10.1038/s41746-021-00429-0",
+          "title": "Effectiveness of a digital therapeutic as adjunct to treatment with medication in pediatric ADHD",
+          "abstract": "STARS-Adjunct was a multicenter, open-label effectiveness study of AKL-T01 ..."
+        }
+      },
+      "returned": {
+        "design": "other",
+        "confidence": 0.3,
+        "decided_by": [],
+        "rule": "no decisive metadata or text cue",
+        "underlying_design": null
+      },
+      "observed": "The abstract passed in says 'open-label effectiveness study'; the classifier did not use it (register N8)."
+    },
+    {
+      "n": 9,
+      "call": "verify.qualify_source",
+      "args": {
+        "doi": "10.1016/S2589-7500(20)30017-0",
+        "question": "Does the evidence support a product claim that the digital therapy improves attention in children with ADHD, and in which population?"
+      },
+      "returned": {
+        "tier": "gold",
+        "status": "current",
+        "source_score": {
+          "total": 39,
+          "axes": {
+            "authority": 15,
+            "recency": 5,
+            "relevance": 5,
+            "provenance": 10,
+            "currency": null
+          }
+        },
+        "literature_record": {
+          "pmid": "33334505",
+          "year": 2020,
+          "retraction_status": "none"
+        }
+      }
+    },
+    {
+      "n": 10,
+      "call": "verify.qualify_source",
+      "args": {
+        "url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN200026.pdf",
+        "question": "What indication and limitations did FDA grant for EndeavorRx?"
+      },
+      "returned": {
+        "tier": "inadmissible",
+        "admissibility": [
+          "no provenance"
+        ],
+        "publisher": "U.S. Food and Drug Administration",
+        "title": null,
+        "source_score": {
+          "total": 33,
+          "axes": {
+            "authority": 25,
+            "recency": 0,
+            "relevance": 5,
+            "provenance": 0
+          }
+        }
+      },
+      "observed": "The FDA De Novo decision summary cannot be used as a Verify source (register C1). Indication and limitation passages come from the TM rows, read from the same PDF."
+    },
+    {
+      "n": 11,
+      "call": "verify.check_claim",
+      "args": {
+        "claim": "AKL-T01 might be used to improve objectively measured inattention in paediatric patients with ADHD.",
+        "passage": "Although future research is needed for this digital intervention, this study provides evidence that AKL-T01 might be used to improve objectively measured inattention in paediatric patients with ADHD, while presenting minimal adverse events. (Abstract, Interpretation, PubMed 33334505)",
+        "source": "full qualify_source object"
+      },
+      "returned": {
+        "status": "supported",
+        "rationale": "Strong overlap (100%) with context"
+      }
+    },
+    {
+      "n": 12,
+      "call": "verify.check_claim",
+      "args": {
+        "claim": "AKL-T01 improves ADHD symptoms, including hyperactivity, in children and teenagers with ADHD.",
+        "passage": "same",
+        "source": "same"
+      },
+      "returned": {
+        "status": "unsupported",
+        "rationale": "Low overlap (33%) with context"
+      }
+    },
+    {
+      "n": 13,
+      "call": "verify.check_claim",
+      "args": {
+        "claim": "AKL-T01 does not improve objectively measured inattention in paediatric patients with ADHD.",
+        "passage": "same",
+        "source": "same"
+      },
+      "returned": {
+        "status": "supported",
+        "rationale": "Strong overlap (90%) with context"
+      },
+      "observed": "The negation of the source's conclusion returned supported (register N3)."
+    },
+    {
+      "n": 14,
+      "call": "verify.check_claim",
+      "args": {
+        "claim": "AKL-T01 improves objectively measured inattention in paediatric patients with ADHD.",
+        "passage": "same",
+        "source": "same"
+      },
+      "returned": {
+        "status": "supported",
+        "rationale": "Strong overlap (89%) with context"
+      },
+      "observed": "The hedge 'might be used to' was dropped (a stronger verb) and the claim still returned supported. A fidelity check cannot rest on check_claim (register N3)."
+    },
+    {
+      "n": 15,
+      "call": "verify.extract_claims",
+      "args": {
+        "text": "FocusPlay is a game-based therapy for children with ADHD. Clinically proven to improve attention in 4 weeks. Play 25 minutes a day, 5 days a week. Not a replacement for medication. Helps kids with hyperactivity and impulsivity."
+      },
+      "returned": {
+        "method": "sentence_splitter",
+        "claims": [
+          {
+            "claim_id": "c1",
+            "text": "FocusPlay is a game-based therapy for children with ADHD.",
+            "kind": "factual"
+          },
+          {
+            "claim_id": "c2",
+            "text": "Clinically proven to improve attention in 4 weeks.",
+            "kind": "numeric"
+          },
+          {
+            "claim_id": "c3",
+            "text": "Play 25 minutes a day, 5 days a week.",
+            "kind": "numeric"
+          },
+          {
+            "claim_id": "c4",
+            "text": "Not a replacement for medication.",
+            "kind": "factual"
+          },
+          {
+            "claim_id": "c5",
+            "text": "Helps kids with hyperactivity and impulsivity.",
+            "kind": "factual"
+          }
+        ]
+      },
+      "observed": "FocusPlay is an illustrative product text written for this build, not a real product. The splitter marks every sentence checkable, including a usage instruction (c3) and a caveat (c4)."
+    },
+    {
+      "n": 16,
+      "call": "agent-pack.list_experts",
+      "args": {
+        "query": "clinical"
+      },
+      "returned_selected": [
+        {
+          "slug": "clinical-validation-director",
+          "description": "Director who plans clinical-validation programmes for digital health products: endpoint and COA strategy, protocol robustness for software-generated evidence, fitness of remote-monitoring and decentralised capture, data integrity of digitally collected endpoints, and the clinical"
+        },
+        {
+          "slug": "clinical-content-product-manager",
+          "description": "Owns the clinical-content and algorithm-rules product: what the product may say, which rules may fire, and which evidence each unit rests on. Distinct from SaMD/DTx device requirements and release readiness, and from behavior-change mechanics design."
+        },
+        {
+          "slug": "behavior-change-designer",
+          "description": "Specifies a named evidence-linked mechanic, cues, loops, adaptive logic as design artefacts, for digital patient-support and digital-therapeutic programmes. Distinct from COM-B programme architecture (Behavioral Science Lead), device requirements, clinical-content product, and"
+        },
+        {
+          "slug": "clinical-algorithm-validator",
+          "description": "Validates the structure and completeness of a supplied clinical decision algorithm against its specification, flags underspecified or unsafe branches, and reports findings with severity and location. Advisory validation evidence; never a verification record."
+        }
+      ],
+      "observed": "Descriptions are truncated mid-sentence by the tool. The behavior-change-designer description contains an em dash in the original; it is rendered here with commas."
+    },
+    {
+      "n": 17,
+      "call": "find_job",
+      "args": {
+        "query": "evidence claim"
+      },
+      "returned": {
+        "matches": []
+      }
+    },
+    {
+      "n": 18,
+      "call": "find_job",
+      "args": {
+        "query": "fidelity intervention design"
+      },
+      "returned": {
+        "matches": []
+      }
+    },
+    {
+      "n": "free",
+      "call": "list_jobs",
+      "returned_selected": [
+        "evidence-table (available; literature.search_literature, get_record, find_trial, grade_evidence, check_retraction, build_evidence_table plus Verify)",
+        "claim-labels (available; commercial-dh.audit_claims: up to 20 claims labeled matches_record, exceeds_record, or no_authorization_on_file against the stored intended purpose)",
+        "post-market-watch (available; watch_register; not used, no watch calls)"
+      ],
+      "observed": "No job designs an intervention, maps claims to a mechanism or monitors translation fidelity."
+    }
+  ],
+  "passages_read_outside_the_connector": [
+    {
+      "source": "PubMed abstract, PMID 33334505 (efetch, 20 October 2026)",
+      "text": "AKL-T01 is an investigational digital therapeutic designed to target attention and cognitive control delivered through a video game-like interface via at-home play for 25 min per day, 5 days per week for 4 weeks.",
+      "locator": "Abstract, Background"
+    },
+    {
+      "source": "PubMed abstract, PMID 33334505",
+      "text": "Patient compliance was a mean of 83 (83%) of 100 expected sessions played (SD, 29·2 sessions).",
+      "locator": "Abstract, Findings"
+    },
+    {
+      "source": "PubMed abstract, PMID 33334505",
+      "text": "paediatric patients (aged 8-12 years, without disorder-related medications) with confirmed ADHD",
+      "locator": "Abstract, Methods"
+    },
+    {
+      "source": "PubMed abstract, PMID 33772095",
+      "text": "STARS-Adjunct was a multicenter, open-label effectiveness study of AKL-T01, an app and video-game-based treatment for inattention, as an adjunct to pharmacotherapy in 8-14-year-old children with attention-deficit/hyperactivity disorder (ADHD) on stimulant medication (n = 130) or not on any ADHD medication (n = 76).",
+      "locator": "Abstract"
+    }
+  ],
+  "tool_descriptions": {
+    "verify.extract_claims": "Split a text of at most 20,000 characters into claims with offsets. Call it before check_claim. It never decides whether a claim is supported."
+  }
+}

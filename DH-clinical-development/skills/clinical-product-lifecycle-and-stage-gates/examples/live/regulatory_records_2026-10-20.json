@@ -1,0 +1,87 @@
+{
+  "note": "Trimmed live outputs from the VITAL Digital Health Library connector, called on 20 October 2026 during the pd1 build. Fields copied as returned; nothing added.",
+  "calls": [
+    {
+      "call": "regulatory-dh.get_authorization",
+      "arguments": {"reference": "DEN200026"},
+      "results": [
+        {"product": "EndeavorRx", "manufacturer": "Akili Interactive Labs, Inc.", "jurisdiction": "US", "pathway": "FDA_DE_NOVO", "risk_class": "2", "status": "DENG", "decision_date": "2020-06-15", "submission_date": "2020-04-16", "product_code": "QFT", "regulation_number": "882.5803", "predicate_references": null, "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN200026", "retrieved_at": "2026-10-13T00:04:13.107965+00:00"}
+      ],
+      "coverage": ["US: 1226 authorizations loaded; dated software decisions; last load 2026-10-19; sources openfda, openfda_pma"]
+    },
+    {
+      "call": "regulatory-dh.search_devices",
+      "arguments": {"query": "Akili", "jurisdiction": "US"},
+      "results": [
+        {"product": "EndeavorOTC", "manufacturer": "Akili Interactive Labs, Inc.", "jurisdiction": "US", "pathway": "FDA_510K", "risk_class": "2", "status": "Substantially Equivalent", "decision_date": "2024-06-14", "submission_date": "2023-10-30", "product_code": "QFT", "regulation_number": "882.5803", "predicate_references": ["DEN200026"], "predicate_source": "record", "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K233496", "retrieved_at": "2026-10-13T00:04:39.947670+00:00"},
+        {"product": "EndeavorRx", "manufacturer": "Akili Interactive Labs, Inc.", "jurisdiction": "US", "pathway": "FDA_510K", "risk_class": "2", "status": "Substantially Equivalent", "decision_date": "2023-12-13", "submission_date": "2023-05-08", "product_code": "QFT", "regulation_number": "882.5803", "predicate_references": ["DEN200026"], "predicate_source": "record", "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K231337", "retrieved_at": "2026-10-13T00:04:31.677602+00:00"},
+        {"product": "EndeavorRx", "manufacturer": "Akili Interactive Labs, Inc.", "jurisdiction": "US", "pathway": "FDA_DE_NOVO", "risk_class": "2", "status": "DENG", "decision_date": "2020-06-15", "submission_date": "2020-04-16", "product_code": "QFT", "regulation_number": "882.5803", "predicate_references": null, "predicate_source": null, "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN200026", "retrieved_at": "2026-10-13T00:04:13.107965+00:00"}
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {"product": "EndeavorRx"},
+      "results": [],
+      "maude_counts": [{"product_code": "QFT", "total_reports": 2, "by_year": [{"year": 2023, "count": 2}], "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events", "source_url": "https://api.fda.gov/device/event.json", "retrieved_at": "2026-10-13T00:07:48.848115+00:00"}]
+    },
+    {
+      "call": "regulatory-dh.get_authorization",
+      "arguments": {"reference": "DEN160018"},
+      "results": [
+        {"product": "reSet", "manufacturer": "Pear Therapeutics, Inc.", "jurisdiction": "US", "pathway": "FDA_DE_NOVO", "risk_class": "2", "status": "DENG", "decision_date": "2017-09-14", "submission_date": "2016-05-16", "product_code": "PWE", "regulation_number": "882.5801", "predicate_references": null, "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN160018", "retrieved_at": "2026-10-13T00:04:13.107965+00:00"}
+      ]
+    },
+    {
+      "call": "regulatory-dh.find_predicates",
+      "arguments": {"product_code": "PWE"},
+      "results": [
+        {"reference": "K173681", "device": "reSET-O", "applicant": "Pear Therapeutics, Inc.", "pathway": "FDA_510K", "decision_date": "2018-12-10", "predicates": "[GAP]", "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K173681", "retrieved_at": "2026-10-13T00:04:19.182594+00:00"},
+        {"reference": "DEN160018", "device": "reSet", "applicant": "Pear Therapeutics, Inc.", "pathway": "FDA_DE_NOVO", "decision_date": "2017-09-14", "predicates": "[GAP]", "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN160018", "retrieved_at": "2026-10-13T00:04:13.107965+00:00"}
+      ]
+    },
+    {
+      "call": "regulatory-dh.search_safety_events",
+      "arguments": {"product_code": "PWE"},
+      "results": [
+        {"source_type": "fda_recall", "jurisdiction": "US", "title": "reSET-O Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.", "event_date": "2021-06-07", "severity": "Class II", "manufacturer": "Pear Therapeutics, Inc.", "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.", "source_url": "https://api.fda.gov/device/enforcement.json", "retrieved_at": "2026-10-16T10:42:19.841897+00:00"},
+        {"source_type": "fda_recall", "jurisdiction": "US", "title": "reSET Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.", "event_date": "2021-06-07", "severity": "Class II", "manufacturer": "Pear Therapeutics, Inc.", "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.", "source_url": "https://api.fda.gov/device/enforcement.json", "retrieved_at": "2026-10-16T10:42:19.841897+00:00"}
+      ],
+      "maude_counts": [{"product_code": "PWE", "total_reports": 2, "by_year": [{"year": 2022, "count": 1}, {"year": 2025, "count": 1}], "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events", "source_url": "https://api.fda.gov/device/event.json", "retrieved_at": "2026-10-13T00:07:48.848115+00:00"}]
+    },
+    {
+      "call": "regulatory-dh.retrieve_guidance",
+      "arguments": {"query": "design review at major decision points design transfer QMSR ISO 13485 7.3", "limit": 3},
+      "results": [],
+      "gaps": ["[GAP]", "no passage retrieved in this namespace"]
+    },
+    {
+      "call": "verify.qualify_source",
+      "arguments": {"doi": "10.1136/bmj.n2061", "question": "Should a digital therapeutic program move to the next development phase while key uncertainties remain unresolved?"},
+      "result": {"tier": "gold", "status": "current", "title": "A new framework for developing and evaluating complex interventions: update of Medical Research Council guidance", "literature_record": {"doi": "10.1136/bmj.n2061", "pmid": "34593508", "year": 2021, "retraction_status": "none"}, "source_score": {"total": 39, "axes": {"authority": 15, "recency": 5, "relevance": 5, "provenance": 10, "currency": null}}}
+    },
+    {
+      "call": "verify.check_claim (claim stated in the passage's direction)",
+      "arguments": {"claim": {"text": "Repeating a phase is preferable to automatic progression if uncertainties remain unresolved."}, "passage": {"text": "Repeating phases is preferable to automatic progression if uncertainties remain unresolved.", "locator": "Skivington 2021, PMC8482308, section on phases"}, "source": "full qualify_source object"},
+      "result": {"status": "unverifiable", "rationale": "scorer unavailable: no claim verdict", "citation": {"identifiers": {"doi": null, "pmid": null, "pmcid": null}, "authors": [], "year": null}}
+    },
+    {
+      "call": "verify.check_claim (claim stated in the opposite direction)",
+      "arguments": {"claim": {"text": "Automatic progression to the next phase is preferable even if uncertainties remain unresolved."}, "passage": "same passage", "source": "same object"},
+      "result": {"status": "unverifiable", "rationale": "scorer unavailable: no claim verdict"}
+    },
+    {
+      "call": "find_job",
+      "arguments": {"query": "product lifecycle stage gate"},
+      "result": {"matches": []}
+    },
+    {
+      "call": "agent-pack.list_experts",
+      "arguments": {"query": "product manager"},
+      "results": [
+        {"slug": "product-development-lead", "description": "Heads the regulated-product development programme: phase-gated plans, ISO 13485 design-control process, verification-and-validation strategy, and cross-functional sequencing of engineering, clinical, regulatory and commercial. Distinct from the Digital Health Product Manager, who"},
+        {"slug": "clinical-content-product-manager", "description": "Owns the clinical-content and algorithm-rules product: what the product may say, which rules may fire, and which evidence each unit rests on."},
+        {"slug": "digital-health-product-manager", "description": "Turns clinical and market intent into SaMD/DTx product requirements, sequences the roadmap against design-control and risk obligations, and assesses release readiness."}
+      ]
+    }
+  ]
+}

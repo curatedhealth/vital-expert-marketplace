@@ -1,0 +1,28 @@
+{
+ "call": "regulatory-dh.search_safety_events",
+ "called_on": "19 October 2026",
+ "arguments": {
+  "product": "decision support",
+  "limit": 10
+ },
+ "results": [],
+ "maude_counts": [
+  {
+   "product_code": "NVI",
+   "total_reports": 1,
+   "by_year": [
+    {
+     "year": 2019,
+     "count": 1
+    }
+   ]
+  },
+  {
+   "product_code": "PDT",
+   "total_reports": 0,
+   "by_year": []
+  }
+ ],
+ "gaps": [],
+ "observation": "No recalls, yet MAUDE counts for two product codes are attached with no reason given, and the gaps list is empty although no event came back (the 'use error' call returned a gap line)."
+}

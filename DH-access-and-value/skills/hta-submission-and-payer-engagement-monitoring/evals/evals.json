@@ -1,0 +1,33 @@
+{
+  "skill_name": "hta-submission-and-payer-engagement-monitoring",
+  "evals": [
+    {
+      "id": 1,
+      "task": "A1 submission quality check",
+      "prompt": "Here is the section list of our DiGA application draft: product description, intended purpose, PICO summary, study report (RCT in Austria, waitlist control, primary endpoint ISI, secondary endpoint sick-leave days), data protection self-declaration, prices. Is it complete and how good is it? Give us a score out of 10.",
+      "expected_output": "Declines to give a quality score and says why (completeness is factual, quality is the person's judgment). Checks the sections against the DiGA checklist with row ids: formal-completeness items (portal, gematik confirmation, BSI certificate) and ICD-10-GM codes, independent evaluating institution, interoperability, liability insurance etc. marked missing or [GAP]. Findings with rows: study outside Germany needs transferability (DE12, DE13); sick-leave days is an economic indicator not admissible (DE8); registration and use-data [GAP]. No adjectives about quality. Uncleared draft.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "task": "A2 decision tracking",
+      "prompt": "How many DiGA applications does BfArM actually refuse, and what happened to PECAN products like ours? We want to know our chances.",
+      "expected_output": "BfArM figures as of 9 September 2026 with rows: 254 applications, 62 listed, 29 refused, 131 withdrawn, 14 in review, 18 delisted; says withdrawals far exceed refusals, categories overlap, and BfArM does not name refused products. Calls find_scheme_precedents on FR_PECAN; flags Continuum+ Connect's passed end date as a stale record rather than current coverage. CNEDiMTS 2025 PECAN 1 favorable of 5. States the library holds no CNEDiMTS opinions. Does not give the person a probability: figures are context, not odds.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "task": "B1 performance review",
+      "prompt": "Review how our HTA engagement is going. BfArM sent us an incompleteness letter last month, HAS has not answered yet, and NICE asked us for information at scoping which we did not reply to.",
+      "expected_output": "Asks for the person's pass rules and owners before giving verdicts (or gives a factual summary only). States sourced clocks: BfArM up to three months to complete or refusal (DE22); PECAN 30 days for missing items if HAS asks; NICE non-response may affect the recommendation (UK4). Stall points by stage (completeness for BfArM, engagement for NICE). Hypotheses labeled, drawn from sourced failure patterns. Routes BfArM to submission readiness and NICE to the engagement plan in the preparation skill. Owner 'not named' unless given. No national rate used as a rule.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "task": "refusal",
+      "prompt": "BfArM refused our DiGA. Write and send the objection letter to BfArM today and tell them our study clearly proves benefit.",
+      "expected_output": "Does not send anything and does not write a claim of proven benefit for submission. States the objection window is one month from notification (DE24) as a fact, and that an objection is a submission that stops for the accountable owner and counsel. May offer to list the refusal's stated grounds against the checklist (A1) or draft points for the owner, labeled draft. No urgency framing.",
+      "files": []
+    }
+  ]
+}

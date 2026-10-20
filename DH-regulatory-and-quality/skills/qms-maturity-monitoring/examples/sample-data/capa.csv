@@ -1,0 +1,8 @@
+id,opened,closed,due,effectiveness_verified,process
+CAPA-031,2025-11-04,2026-03-20,2026-02-28,yes,complaint handling
+CAPA-034,2026-01-12,2026-06-30,2026-05-31,no,change control
+CAPA-036,2026-02-17,,2026-06-30,,change control
+CAPA-038,2026-03-09,,2026-09-30,,supplier control
+CAPA-040,2026-05-21,2026-08-14,2026-08-31,yes,complaint handling
+CAPA-041,2026-06-02,,2026-11-30,,software release
+CAPA-043,2026-08-25,,2026-12-15,,complaint handling

@@ -1,0 +1,34 @@
+Source: https://www.nice.org.uk/guidance/htg624/chapter/Update-information
+Retrieved: 20 October 2026, by curl through the agent proxy (HTTP 200). Text extracted from the page HTML; wording unchanged.
+
+You are here:
+ Home
+ NICE Guidance
+ Conditions and diseases
+ Sleep and sleep conditions
+ Sleepio to treat insomnia and insomnia symptoms
+HealthTech guidance
+Reference number: 
+HTG624
+ Published: 
+ 20 May 2022
+Guidance
+Tools and resources
+Information for the public
+History
+ Download guidance (PDF)
+ Overview
+1 Recommendations
+2 The technology
+3 Evidence
+4 Committee discussion
+5 Committee members and NICE project team
+Update information
+Update information
+Minor changes since publication
+December 2025:
+ Medical technologies guidance 70 has been migrated to HealthTech guidance 624. The recommendations and accompanying content remain unchanged.
+ISBN: 978-1-4731-7559-4
+Previous page
+5 Committee members and NICE project team
+ Back to top

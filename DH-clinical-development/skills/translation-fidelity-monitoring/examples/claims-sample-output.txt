@@ -1,0 +1,37 @@
+Fidelity sample: product text beside source passage. Differences are quoted for the person to mark;
+the script marks nothing as match or fail. Check_claim overlap is not used here (register N3).
+Sample coverage: 5 of 9 shipped claims (56 percent).
+
+c1 (version 2.3) source: PMID 33334505 abstract Methods
+  product: "FocusPlay is a game-based therapy for children with ADHD."
+  source:  "paediatric patients (aged 8-12 years, without disorder-related medications) with confirmed ADHD"
+  in source, not in product: paediatric, patients, aged, years, without, disorder-related, medications, confirmed
+  in product, not in source: focusplay, game-based, therapy, children
+  numbers: product only none; source only ['12', '8']
+  population: product "children with ADHD" vs source "aged 8-12 years, without disorder-related medications, confirmed ADHD"
+
+c2 (version 2.3) source: PMID 33334505 abstract Interpretation
+  product: "Clinically proven to improve attention in 4 weeks."
+  source:  "this study provides evidence that AKL-T01 might be used to improve objectively measured inattention in paediatric patients with ADHD"
+  in source, not in product: study, provides, evidence, akl-t01, might, used, objectively, measured, inattention, paediatric, patients, adhd
+  in product, not in source: clinically, proven, attention, weeks
+  numbers: product only ['4']; source only none
+
+c3 (version 2.3) source: PMID 33334505 abstract Background
+  product: "Play 25 minutes a day, 5 days a week."
+  source:  "delivered through a video game-like interface via at-home play for 25 min per day, 5 days per week for 4 weeks"
+  in source, not in product: delivered, through, video, game-like, interface, via, at-home, min, per, weeks
+  in product, not in source: minutes
+  numbers: product only none; source only ['4']
+
+c4 (version 2.3) source: none held
+  product: "Not a replacement for medication."
+  source passage: none. A claim with no source is a fail under the old DH-01.01.4.2.2 rule, if the person adopts it.
+
+c5 (version 2.3) source: DEN200026 Indications for use (TM144)
+  product: "Helps kids with hyperactivity and impulsivity."
+  source:  "may not display benefits in typical behavioral symptoms, such as hyperactivity."
+  in source, not in product: may, not, display, benefits, typical, behavioral, symptoms, such
+  in product, not in source: helps, kids, impulsivity
+
+Claims with no source passage: 1 of 5.

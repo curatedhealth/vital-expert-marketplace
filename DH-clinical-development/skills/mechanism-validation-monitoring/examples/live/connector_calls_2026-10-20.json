@@ -1,0 +1,64 @@
+{
+ "note": "Trimmed live outputs of the VITAL Digital Health Library connector, 20 October 2026 (UTC times as returned), shared by the pd2 pair (therapeutic-mechanism-and-intervention-design and mechanism-validation-monitoring). Counted calls: 18. list_jobs is free. Direct reads outside the connector are listed under direct_reads.",
+ "calls": [
+  {"call": "regulatory-dh.get_authorization", "args": {"reference": "DEN160018"},
+   "returned": {"product": "reSet", "manufacturer": "Pear Therapeutics, Inc.", "pathway": "FDA_DE_NOVO", "risk_class": "2", "status": "DENG", "decision_date": "2017-09-14", "submission_date": "2016-05-16", "product_code": "PWE", "regulation_number": "882.5801", "predicate_references": null, "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN160018", "retrieved_at": "2026-10-13T00:04:13.107965+00:00", "source": "openfda", "coverage": "US: 1226 authorizations loaded; last load 2026-10-19", "intended_use": "not returned"}},
+  {"call": "regulatory-dh.get_authorization", "args": {"reference": "DEN200026"},
+   "returned": {"product": "EndeavorRx", "manufacturer": "Akili Interactive Labs, Inc.", "pathway": "FDA_DE_NOVO", "risk_class": "2", "status": "DENG", "decision_date": "2020-06-15", "submission_date": "2020-04-16", "product_code": "QFT", "regulation_number": "882.5803", "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/denovo.cfm?id=DEN200026", "retrieved_at": "2026-10-13T00:04:13.107965+00:00", "intended_use": "not returned"}},
+  {"call": "list_jobs (free)", "args": {}, "returned": {"summary": "21 jobs in four suites; none covers mechanism design, intervention specification, mechanism validation or fidelity monitoring. Nearest: evidence-table (available) and predicate-chain (available)."}},
+  {"call": "find_job", "args": {"query": "therapeutic mechanism intervention design"}, "returned": {"matches": []}},
+  {"call": "regulatory-dh.search_safety_events", "args": {"product_code": "PWE", "limit": 10},
+   "returned": {"results": [
+     {"source_type": "fda_recall", "title": "reSET-O Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.", "event_date": "2021-06-07", "severity": "Class II", "manufacturer": "Pear Therapeutics, Inc.", "summary": "Due to a software issue, patients with a urine drug screen (UDS) received access to a contingency management wheel spin for potential rewards regardless of the UDS results.  Positive UDS results should not have resulted in access to a wheel spin.", "source_url": "https://api.fda.gov/device/enforcement.json", "retrieved_at": "2026-10-16T10:42:19.841897+00:00"},
+     {"source_type": "fda_recall", "title": "reSET Mobile App, iOS and Android, provides cognitive behavioral therapy, as part of substance abuse treatment.", "event_date": "2021-06-07", "severity": "Class II", "summary": "same text as above"}],
+    "maude_counts": [{"product_code": "PWE", "total_reports": 2, "by_year": [{"year": 2022, "count": 1}, {"year": 2025, "count": 1}], "basis": "MAUDE report counts by date received, openFDA device/event; counts are reports, not confirmed events"}]}},
+  {"call": "regulatory-dh.find_predicates", "args": {"product_code": "PWE"},
+   "returned": {"results": [
+     {"reference": "K173681", "device": "reSET-O", "pathway": "FDA_510K", "decision_date": "2018-12-10", "predicates": "[GAP]"},
+     {"reference": "DEN160018", "device": "reSet", "pathway": "FDA_DE_NOVO", "decision_date": "2017-09-14", "predicates": "[GAP]"}]}},
+  {"call": "agent-pack.list_experts", "args": {"query": "clinical validation", "limit": 10},
+   "returned": {"experts": [
+     {"slug": "clinical-informatics-lead", "description": "Department head who specifies how a digital health product reads and writes the care record, where decision support may sit, and how remote and decentralized capture stays integer. Does not configure a live EHR or sign a clinical evaluation."},
+     {"slug": "clinical-validation-director", "description": "Director who plans clinical-validation programmes for digital health products: endpoint and COA strategy, protocol robustness for software-generated evidence, fitness of remote-monitoring and decentralised capture, data integrity of digitally collected endpoints, and the clinical (truncated by the tool)"},
+     {"slug": "digital-clinical-trials-director"}, {"slug": "remote-monitoring-program-director"}]}},
+  {"call": "agent-pack.list_experts", "args": {"query": "behavio", "limit": 10},
+   "returned": {"experts": [
+     {"slug": "behavioral-science-lead", "description": "Department head who turns drop-off and non-adherence on a named digital product into a COM-B diagnosis, a cited BCT map, and a measurement plan using validated instruments. Drafts only; does not treat patients or run trials of record."},
+     {"slug": "behavior-change-designer", "description": "Specifies a named evidence-linked mechanic (cues, loops, adaptive logic as design artefacts) for digital patient-support and digital-therapeutic programmes. (tool text shortened; the original uses a dash)"},
+     {"slug": "digital-adoption-manager"},
+     {"slug": "clinical-content-product-manager", "description": "Owns the clinical-content and algorithm-rules product: what the product may say, which rules may fire, and which evidence each unit rests on."}]}},
+  {"call": "literature.search_literature", "args": {"query": "internet-delivered community reinforcement approach contingency management substance use disorder randomized trial Therapeutic Education System", "limit": 6, "filters": {"designs": ["rct"]}},
+   "returned": {"total_merged": 18, "records_shown": 5, "records": [
+     {"doi": "10.1176/appi.ajp.2014.13081055", "pmid": "24700332", "pmcid": "PMC4079279", "title": "Internet-delivered treatment for substance abuse: a multisite randomized controlled trial", "year": 2014, "design": "rct", "design_confidence": 0.98, "trial_ids": [], "excerpt": ""},
+     {"doi": "10.1016/j.drugalcdep.2016.01.021", "pmid": "26880594", "title": "Cost-effectiveness of an internet-delivered treatment for substance abuse: Data from a multisite randomized controlled trial", "year": 2016, "design": "rct", "design_confidence": 0.98, "trial_ids": []},
+     {"doi": "10.1016/j.addbeh.2016.09.012", "pmid": "27776269", "pmcid": "PMC5483182", "title": "Coping strategies as a mediator of internet-delivered psychosocial treatment: Secondary analysis from a NIDA CTN multisite effectiveness trial", "year": 2017, "design": "rct", "design_confidence": 0.95, "trial_ids": [], "excerpt": ""},
+     {"doi": "10.1080/14659891.2026.2741808", "title": "Effects of cognitive behavioral approach-based psychoeducation ... randomized controlled trial", "year": 2026, "design": "rct", "design_confidence": 0.78, "sources": ["crossref"], "note": "off topic (not digital)"},
+     {"doi": "10.1080/10826084.2023.2215311", "title": "Feasibility and Efficacy of a Brief Mindfulness-Based Smoking Intervention Delivered via the Internet: A Randomized Controlled Trial", "year": 2023, "design": "rct", "design_confidence": 0.78, "note": "off topic"}]}},
+  {"call": "literature.find_trial", "args": {"record": {"doi": "10.1176/appi.ajp.2014.13081055", "pmid": "24700332", "pmcid": "PMC4079279"}},
+   "returned": {"registrations": [], "warnings": ["4 registrations cite this paper as background only and were not linked", "no linked registration found"]}},
+  {"call": "literature.find_trial", "args": {"nct_id": "NCT01104805"},
+   "returned": {"registration": {"title": "NIDA-CTN-0044: Web-delivery of Evidence-Based, Psychosocial Treatment for Substance Use Disorders Using the Therapeutic Education System (TES)", "status": "COMPLETED", "phases": ["NA"], "sponsor": "New York State Psychiatric Institute", "match_via": "nct_id"},
+    "publications": ["10.1016/j.jsat.2021.108585 (Luderer 2022, engagement patterns)", "10.1016/j.drugalcdep.2016.01.021 (Murphy 2016)", "10.1016/j.addbeh.2015.02.002 (Cochran 2015)", "10.1080/08897077.2014.992565 (Mitchell 2015)", "10.1186/1940-0640-9-6 (Cochran 2014)"],
+    "not_listed": ["10.1176/appi.ajp.2014.13081055 (Campbell 2014, main results)", "10.1016/j.addbeh.2016.09.012 (Levesque 2017, mediation)"]}},
+  {"call": "literature.classify_study", "args": {"record": {"doi": "10.1016/j.addbeh.2016.09.012", "publication_type_raw": ["Journal Article", "Multicenter Study", "Randomized Controlled Trial", "openalex:article"]}},
+   "returned": {"design": "rct", "confidence": 0.95, "decided_by": ["publication_type_raw:randomized controlled trial"], "underlying_design": null, "note": "The paper is a secondary mediation analysis of an RCT; the label does not say so."}},
+  {"call": "literature.grade_evidence", "args": {"record": "Levesque 2017 as above", "question_type": "treatment"},
+   "returned": {"level": "2", "rule": "rct for a treatment question -> level 2", "provisional": false}},
+  {"call": "verify.qualify_source", "args": {"doi": "10.1016/j.addbeh.2016.09.012", "question": "Did coping strategies mediate the effect of the internet-delivered community reinforcement approach (TES) on abstinence?"},
+   "returned": {"tier": "gold", "status": "current", "source_score": {"total": 67, "axes": {"authority": 15, "recency": 5, "relevance": 30, "provenance": 10, "currency": null}}}},
+  {"call": "verify.qualify_source", "args": {"url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN160018.pdf", "question": "What did FDA require to mitigate the risk of ineffective treatment for reSET?"},
+   "returned": {"tier": "inadmissible", "admissibility": ["no provenance"], "publisher": "U.S. Food and Drug Administration", "title": null, "date": null, "source_score": {"total": 33, "axes": {"authority": 25, "recency": 0, "relevance": 5, "provenance": 0}}}},
+  {"call": "verify.check_claim", "args": {"claim": "In the CTN-0044 secondary analysis, coping strategies scores at week 12 were a partial mediator of the effect of TES on abstinence.", "passage": {"text": "The effect of TES intervention on abstinence was no longer significant after controlling for coping strategies scores at week 12. Our results support the importance of coping skills as a partial mediator of the effectiveness of an internet-version of the CRA combined with contingency management.", "locator": "PMID 27776269, abstract, Results and Conclusion"}, "source": "full qualify_source object"},
+   "returned": {"status": "partial", "rationale": "the passage does not state the figure", "citation": {"identifiers": {"doi": null, "pmid": null}, "authors": [], "year": null}}},
+  {"call": "verify.check_claim", "args": {"claim": "In the CTN-0044 secondary analysis, coping strategies did not mediate the effect of TES on abstinence, and the CRA lessons are proven to be the active ingredient.", "passage": "same passage", "source": "same"},
+   "returned": {"status": "partial", "rationale": "the passage does not state the figure"}},
+  {"call": "regulatory-dh.search_devices", "args": {"query": "fibromyalgia", "jurisdiction": "US", "limit": 5},
+   "returned": {"results": [], "gaps": ["no stored device matches 'fibromyalgia' in US; absence from the store is not evidence of absence from the market"]}},
+  {"call": "regulatory-dh.search_safety_events", "args": {"product_code": "QFT", "limit": 5},
+   "returned": {"results": [], "maude_counts": [{"product_code": "QFT", "total_reports": 2, "by_year": [{"year": 2023, "count": 2}]}]}}
+ ],
+ "direct_reads": [
+  {"read": "ClinicalTrials.gov API v2 /studies/NCT01104805, 20 October 2026", "file": "nct01104805.json", "facts": {"first_submitted": "2010-04-14", "start": "2010-04", "primary_completion": "2012-06 (actual)", "enrollment": "507 actual", "masking": "NONE", "primary_outcome": "Reduced Substance Use and Improved Treatment Retention (12-week Treatment Phase)", "secondary_outcomes": ["Effectiveness", "Sustained outcome", "Economic Analysis", "Coping Skills (12-week treatment phase, 3- and 6-months post treatment)"], "experimental_arm": "Participants randomized to this arm will replace approximately 2 hours of Standard Treatment with the Therapeutic Education System (TES) (comprised of a web-based version of the Community Reinforcement Approach and contingency management)."}},
+  {"read": "Europe PMC REST search, PubMed abstracts of PMID 27776269 and 24700332, 20 October 2026", "files": ["epmc_pmid27776269.json", "epmc_pmid24700332.json"]}
+ ]
+}

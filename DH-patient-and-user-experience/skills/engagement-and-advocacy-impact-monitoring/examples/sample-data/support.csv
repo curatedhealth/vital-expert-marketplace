@@ -1,0 +1,8 @@
+patient,date,item,retail_value_usd,cash_equivalent,recommended_by_hcp
+pt-a,2026-02-10,loaner tablet (12 weeks),310,no,yes
+pt-a,2026-06-01,loaner tablet (12 weeks),310,no,yes
+pt-b,2026-03-05,loaner tablet (12 weeks),310,no,yes
+pt-c,2026-04-12,gift card,50,yes,no
+pt-c,2026-04-12,loaner tablet (12 weeks),310,no,
+pt-d,2025-11-20,loaner tablet (12 weeks),310,no,yes
+pt-a,2026-08-15,data plan (1 month),40,no,yes

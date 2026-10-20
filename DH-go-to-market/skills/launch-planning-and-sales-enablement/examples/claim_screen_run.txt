@@ -1,0 +1,19 @@
+Claim screen (prompts for review, not findings)
+- S1 [approved]: Somryst delivers cognitive behavioral therapy for chronic insomnia to adults 22 and older
+    no risk word
+- S2 [proposed]: Somryst cures insomnia
+    cure ('cures', PC-EU-10, PC-UK-07, PC-UK-13 [INDUSTRY])
+- S3 [proposed]: Somryst treats depression
+    device-indicating verb ('treats', PC-UK-04, PC-US-63)
+- S4 [proposed]: Somryst is covered by Medicare
+    coverage or price statement ('covered by', PC-EU-07)
+
+Leave-behind: 4 sentences, 1 map to approved claims, 3 do not
+- [-] ILLUSTRATIVE TEXT written for testing the script; not a real company's material.
+    not an approved claim: review or remove
+- [S1] Somryst delivers cognitive behavioral therapy for chronic insomnia to adults 22 and older.
+    maps to approved claim
+- [-] Clinically proven to cure insomnia in six weeks.
+    not an approved claim: review or remove; cure (PC-EU-10, PC-UK-07, PC-UK-13 [INDUSTRY]); clinically proven (PC-UK-04, PC-UK-10 [INDUSTRY])
+- [-] Somryst is covered by Medicare, so it is free of charge for your patients.
+    not an approved claim: review or remove; coverage or price statement (PC-EU-07); coverage or price statement (PC-EU-07)

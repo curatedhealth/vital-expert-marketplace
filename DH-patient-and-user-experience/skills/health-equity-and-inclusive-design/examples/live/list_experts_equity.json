@@ -1,0 +1,22 @@
+{
+ "call": "agent-pack.list_experts {query: \"equity\", limit: 10}",
+ "called_on": "19 October 2026",
+ "returned": 3,
+ "experts": [
+  {
+   "slug": "health-equity-access-lead",
+   "display_name": "Health Equity & Digital Access Lead",
+   "department": "Digital Health Programs"
+  },
+  {
+   "slug": "digital-health-policy-advisor",
+   "display_name": "Digital Health Policy Advisor",
+   "department": "Digital Health Leadership"
+  },
+  {
+   "slug": "patient-solutions-director",
+   "display_name": "Patient Solutions Director",
+   "department": "Digital Health Programs"
+  }
+ ]
+}
