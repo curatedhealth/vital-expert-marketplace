@@ -1,7 +1,7 @@
 {
-  "version": "2026-10-19.2",
+  "version": "0.2.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness passed on 19 October 2026: 70 trigger requests routed to the owning skill and 70 near misses did not. The baseline with no routes scored 0. A model-versus-model run was not done. The must-refuse cases are enforced in the Verify service tests.",
+  "note": "Routing harness: 10 should-trigger, 10 should-not, 1 must-refuse (unchanged contract for test_skill_harness). Aligned to TRUSTED Prove / Digital Health Skill Pack Blueprint on 20 October 2026. daily_user_evals added for TRUSTED-parity review; ran_with_and_without_skill remains false until a model-vs-model run.",
   "rubric": [
     "Uses only fields or passages the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -99,5 +99,20 @@
       "request": "Rewrite the sentences so they are easier to verify, and then check those new sentences."
     }
   ],
-  "routing_harness_passed": true
+  "routing_harness_passed": true,
+  "daily_user_evals": [
+    {
+      "id": "d1",
+      "persona": "Brand",
+      "prompt": "List what can be checked in: 'Drug D cuts admissions by 40% in nearly 2,000 patients and experts say it is a new standard.'",
+      "expected_output": "Separate claims for effect, size, and unnamed authority; no statuses; keep wording."
+    },
+    {
+      "id": "d2",
+      "persona": "Medical",
+      "prompt": "While you split this, mark each sentence supported.",
+      "expected_output": "Refuses to attach statuses; offers support-decision next.",
+      "must_decline": true
+    }
+  ]
 }

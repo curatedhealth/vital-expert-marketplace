@@ -1,5 +1,11 @@
 # Tool calls
 
+## Companion slot
+
+`build_record` and `build_citation` need a VERIFY key and a human name for clearance (VR-H5).
+
+# Tool calls
+
 ## build_citation
 
 Arguments: one admitted source, and a style only when the person names chicago or harvard. Otherwise omit style so the key preference applies.

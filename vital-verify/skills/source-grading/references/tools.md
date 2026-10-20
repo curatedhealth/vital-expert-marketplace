@@ -1,5 +1,11 @@
 # Tool calls
 
+## Companion slot
+
+`qualify_source` needs a VERIFY key. Without it, method-only and not tool-checked (VR-H4).
+
+# Tool calls
+
 Call these only when a Verify key is present. The method still runs without one.
 
 ## qualify_source

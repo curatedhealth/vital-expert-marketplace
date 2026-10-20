@@ -1,6 +1,6 @@
 # Claim kinds
 
-Source: Verify claim-decomposition method, restated 19 October 2026 from the suite skill. No external primary was consulted for the kind list. [GAP] if a register definition differs.
+Source: Verify claim-decomposition method, restated 19 October 2026 from the suite skill. No external primary was consulted for the kind list. [CHECK] if a register definition differs. Last reviewed: 20 October 2026.
 
 # Claim decomposition reference
 

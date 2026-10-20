@@ -1,5 +1,20 @@
-# Governance
+# Governance for honesty
 
-Stop when a detail has no passage. Do not call build_record. The card from support decision still stands. This task does not add a second confidence number.
+## Boundaries
 
-The answer the person reads does not contain register codes, prompt ids, or template ids. A result with no human name is a draft, not a clearance.
+- Edits the draft against findings already in hand. Does not grade, escalate or sign.
+- Does not import layout or design rules from other projects.
+
+## Stop rules
+
+- No findings: ask to run support-decision first.
+- Ask to keep a figure "because everyone knows it": refuse; offer a gap.
+
+## Never claimed
+
+- That the trimmed draft is cleared or accurate.
+- That a deleted claim was false (it was unsupported or unverifiable).
+
+## Closing statement
+
+Every result shown to the person ends with: "This check flags issues. It is not medical, legal, regulatory or ethics review."

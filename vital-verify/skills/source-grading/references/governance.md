@@ -1,9 +1,21 @@
-# Governance
+# Governance for source grading
 
-Stop when the identifier cannot be resolved. Do not continue by inventing provenance. A date, title, publisher, or code supplied beside the identifier is ignored. The grade uses only the fields the connector resolved.
+## Boundaries
 
-Verify: this task does not call check_claim. The next task does, on a quoted passage.
+- Grades one source. Does not decide support, drop detail, escalate or sign.
+- Does not edit catalogue tier scripts or search past the identifier.
 
-Clearer: nobody signs a grade. If the person wants a record, that is record-method, and it stays a draft until they give a human name.
+## Stop rules
 
-Do not put register codes, prompt ids, or template ids in the answer. The tier words gold, silver, bronze, and inadmissible are the words the person sees.
+- No identifier: ask once.
+- Request to invent a date, title, publisher or code: refuse.
+- Request to mark a source "approved for use": refuse; point to company review (VR-H11).
+
+## Never claimed
+
+- That a source is good, bad, cleared or ready.
+- That a tier came from VERIFY when the tool did not run.
+
+## Closing statement
+
+Every result shown to the person ends with: "This check flags issues. It is not medical, legal, regulatory or ethics review."

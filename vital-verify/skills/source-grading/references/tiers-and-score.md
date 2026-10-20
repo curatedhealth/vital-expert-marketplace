@@ -42,3 +42,5 @@ The score is the page, not the claim. Weights: authority 25, recency 25, relevan
 | currency | 10 when the currency check is clear | — | 0 when retracted, superseded, or withdrawn | null when the value is `not_checked` |
 
 Relevance uses words of four or more characters. A short title can score 5 even when the page is the right one. Say that when you print the axes. Do not "correct" the number.
+
+Last reviewed: 20 October 2026. Status of tier thresholds: Confirmed against `mcps/verify/tiers.py` and `source_score.py` as of 19 October 2026; re-confirm after code changes `[CHECK]`.

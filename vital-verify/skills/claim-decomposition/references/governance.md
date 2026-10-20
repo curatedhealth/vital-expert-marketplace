@@ -1,5 +1,21 @@
-# Governance
+# Governance for claim decomposition
 
-Stop after the list. Support is the next skill. Do not call check_claim from this task. A sentence that does not occur in the submitted text is dropped, including a rewrite that would be easier to check.
+## Boundaries
 
-The answer the person reads does not contain register codes, prompt ids, or template ids. A result with no human name is a draft, not a clearance.
+- Splits text only. Does not grade sources, decide support, drop detail, escalate or sign.
+- Does not invent claims the person did not write.
+
+## Stop rules
+
+- Empty input: ask for the text.
+- Request to attach supported/unsupported during the split: refuse; route to support-decision.
+- Request to use teaching examples as the live draft: refuse (VR-H2).
+
+## Never claimed
+
+- That any claim is true or supported.
+- That VERIFY split the text when the tool did not run.
+
+## Closing statement
+
+Every result shown to the person ends with: "This check flags issues. It is not medical, legal, regulatory or ethics review."

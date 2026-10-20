@@ -1,5 +1,11 @@
 # Tool calls
 
+## Companion slot
+
+`extract_claims` needs a VERIFY key. Without it, split by hand and label not tool-checked (VR-H4).
+
+# Tool calls
+
 ## extract_claims
 
 Arguments: the submitted text.

@@ -1,5 +1,11 @@
 # Tool calls
 
+## Companion slot
+
+`check_currency` needs a VERIFY key. Without it, notices = not checked (VR-H4).
+
+# Tool calls
+
 ## check_currency
 
 Arguments: the resolved source. A literature id uses the literature composite. A catalogue id reads doc_status. A URL alone does not call that composite.

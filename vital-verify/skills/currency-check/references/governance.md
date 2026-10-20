@@ -1,5 +1,20 @@
-# Governance
+# Governance for currency check
 
-Stop when the lookup fails. Do not fill the notice from the publication year. A URL that was not checked has current set to false. Support decision runs after this task, not inside it.
+## Boundaries
 
-The answer the person reads does not contain register codes, prompt ids, or template ids. A result with no human name is a draft, not a clearance.
+- Currency only. Does not grade support or sign.
+- Does not invent a clean notice.
+
+## Stop rules
+
+- Bare URL: say not checked; do not proceed as clear.
+- Ask to "just say it's current": refuse (VR-H4).
+
+## Never claimed
+
+- That an unchecked URL is current.
+- That VERIFY ran when it did not.
+
+## Closing statement
+
+Every result shown to the person ends with: "This check flags issues. It is not medical, legal, regulatory or ethics review."

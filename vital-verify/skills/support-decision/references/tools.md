@@ -1,5 +1,9 @@
 # Tool calls
 
+## Companion slot
+
+These tools are available only when VERIFY is connected with a key. Without them, run the task by hand and label results not tool-checked (VR-H4).
+
 ## check_claim
 
 Arguments: claim text, source id, quoted passage.
