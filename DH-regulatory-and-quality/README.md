@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-regulatory-and-quality
+# Regulatory & Quality (DH)
 
 This pack replaces two packs: dh-regulatory-strategy (DH-03.03) and dh-quality (DH-03.02).
 

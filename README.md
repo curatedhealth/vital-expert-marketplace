@@ -15,13 +15,13 @@ Each Digital Health pack asks for the same `vlib_` key and uses `https://mcp.vit
 
 | Pack | Plugin id | Folds in |
 |---|---|---|
-| Regulatory and quality | `dh-regulatory-and-quality` | Regulatory Strategy, Quality |
-| Access and value | `dh-access-and-value` | Market Access, Health Economics |
-| Clinical development | `dh-clinical-development` | Clinical Product Development, Clinical Validation (plus DTx safety and engagement) |
-| Go to market | `dh-go-to-market` | Commercial, Customer Success |
-| Patient and user experience | `dh-patient-and-user-experience` | Patient Engagement, User Experience |
-| Strategy and portfolio | `dh-strategy-and-portfolio` | Diligence, Digital Health Strategy, Innovation, Cross-Functional Leadership (governance and portfolio) |
-| Technology | `dh-technology` | Data Science, Advanced Analytics, Decision Support, Analytics Product, Interoperability, Cybersecurity, Software Engineering, and DTx design (.1 and .4) |
+| Regulatory & Quality (DH) | `dh-regulatory-and-quality` | Regulatory Strategy, Quality |
+| Access & Value (DH) | `dh-access-and-value` | Market Access, Health Economics |
+| Clinical Development (DH) | `dh-clinical-development` | Clinical Product Development, Clinical Validation (plus DTx safety and engagement) |
+| Go-to-Market (DH) | `dh-go-to-market` | Commercial, Customer Success |
+| Patient & User Experience (DH) | `dh-patient-and-user-experience` | Patient Engagement, User Experience |
+| Strategy & Portfolio (DH) | `dh-strategy-and-portfolio` | Diligence, Digital Health Strategy, Innovation, Cross-Functional Leadership (governance and portfolio) |
+| Technology (DH) | `dh-technology` | Data Science, Advanced Analytics, Decision Support, Analytics Product, Interoperability, Cybersecurity, Software Engineering, and DTx design (.1 and .4) |
 
 Choose one heading, then one job. The job holds its tasks as sections. A missing fact stays a gap.
 

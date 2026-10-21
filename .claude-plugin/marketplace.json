@@ -24,37 +24,37 @@
     {
       "name": "dh-regulatory-and-quality",
       "source": "./DH-regulatory-and-quality",
-      "description": "DH Regulatory Strategy and Quality Management for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Regulatory & Quality (DH). Regulatory strategy and quality management for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-access-and-value",
       "source": "./DH-access-and-value",
-      "description": "DH Market Access and Health Economics for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Access & Value (DH). Market access and health economics for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-clinical-development",
       "source": "./DH-clinical-development",
-      "description": "DH Clinical Product Development and Clinical Validation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Clinical Development (DH). Clinical product development and clinical validation for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-go-to-market",
       "source": "./DH-go-to-market",
-      "description": "DH Commercial and Customer Success for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Go-to-Market (DH). Commercial and customer success for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-patient-and-user-experience",
       "source": "./DH-patient-and-user-experience",
-      "description": "DH Patient Engagement and User Experience for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+      "description": "Patient & User Experience (DH). Patient engagement and user experience for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-strategy-and-portfolio",
       "source": "./DH-strategy-and-portfolio",
-      "description": "Digital health strategy, horizon scanning, product portfolio prioritization, and company, market and investment diligence for life sciences and digital health teams."
+      "description": "Strategy & Portfolio (DH). Strategy and portfolio for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     },
     {
       "name": "dh-technology",
       "source": "./DH-technology",
-      "description": "Clinical machine learning, responsible AI, data quality and analytics, medical software delivery, interoperability, and cybersecurity and privacy for digital health products."
+      "description": "Technology (DH). Technology architecture, data, and engineering for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
     }
   ]
 }

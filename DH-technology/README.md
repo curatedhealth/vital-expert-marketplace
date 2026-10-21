@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-technology
+# Technology (DH)
 
 This pack replaces eight packs: `dh-data-science` (DH-01.04 Data Science & AI/ML), `dh-advanced-analytics` (DH-05.01 Advanced Analytics & Data Science), `dh-decision-support` (DH-05.02 Decision Support & Business Intelligence), `dh-analytics-product` (DH-05.03 Analytics Product Management & Enablement), `dh-interoperability` (DH-04.01 Clinical Integration & Interoperability), `dh-cybersecurity` (DH-04.02 Cybersecurity & Privacy), `dh-software-engineering` (DH-04.03 Software Engineering Excellence) and two headings of `dh-digital-therapeutic-design` (DH-01.06.1 Personalization Engine and DH-01.06.4 DTx Architecture; DH-01.06.2 and DH-01.06.3 live in `dh-clinical-development`).
 

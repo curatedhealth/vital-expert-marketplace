@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-access-and-value
+# Access & Value (DH)
 
 Replaces two packs: dh-market-access (DH-03.01) and dh-health-economics (DH-01.07).
 

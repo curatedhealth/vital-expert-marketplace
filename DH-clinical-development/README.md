@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-clinical-development
+# Clinical Development (DH)
 
 Replaces two packs: dh-clinical-product-development (DH-01.01) and dh-clinical-validation (DH-01.02); also routes the folded DH-01.06.2 Safety & Efficacy and DH-01.06.3 Engagement Mechanics headings.
 

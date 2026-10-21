@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-go-to-market
+# Go-to-Market (DH)
 
 This pack replaces two packs: `dh-commercial` (DH-02.01 Commercial & GTM Strategy) and `dh-customer-success` (DH-02.02 Customer Success & Implementation).
 

@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-patient-and-user-experience
+# Patient & User Experience (DH)
 
 This pack replaces two packs: dh-patient-engagement (DH-02.03) and dh-user-experience (DH-02.04).
 

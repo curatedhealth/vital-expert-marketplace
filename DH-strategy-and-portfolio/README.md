@@ -6,7 +6,7 @@ The connector is `https://mcp.vital.expert/api/mcp/library`. Do not add a second
 
 Choose one heading, then one job. The job holds its tasks as sections. Ask which one task, then follow that section. A missing fact stays a gap.
 
-# dh-strategy-and-portfolio
+# Strategy & Portfolio (DH)
 
 This pack replaces four packs: `dh-digital-health-strategy` (DH-01.05 Digital Health Strategy & Vision), `dh-innovation` (DH-01.08 Innovation & Emerging Technologies, except DH-01.08.3 partnerships, which route to `dh-go-to-market` channel-and-partner-design), `dh-cross-functional-leadership` (DH-01.03.3 Governance & Portfolio only; DH-01.03.1 stakeholder alignment, DH-01.03.2 talent and DH-01.03.4 matrix leadership were dropped) and `dh-diligence` (the DH-DIL diligence suite).
 
