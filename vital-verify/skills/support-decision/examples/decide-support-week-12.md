@@ -27,7 +27,7 @@ Status: `partial`. Rationale: `source tier bronze`. Do not report `supported`.
 
 Claim: any sentence.
 Source: `qualify_source` returned `inadmissible`, or the passage text is empty.
-Status: `unverifiable`. Reason: `No admissible source was available`. Omit the sentence. Do not replace it with a plausible date or number.
+Status: `not_checked`. Reason: `source not admitted`. Omit the sentence. Do not replace it with a plausible date or number. Point the caller to `verify_text` (paste) or `ingest_document` then `qualify_source`.
 
 ## Out of scope
 

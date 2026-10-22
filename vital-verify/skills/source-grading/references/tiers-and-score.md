@@ -23,11 +23,11 @@ Apply the first match.
 4. `gold` for literature or a URL with all six fields, a stable code, and an open status.
 5. `silver` for a peer-reviewed secondary source (a systematic review or a guideline) with all six fields and an open status.
 6. `silver` when exactly one field is missing, that field is the code or the date is year-only, and the source is not closed. Reason text: `primary source missing one field: <name>`.
-7. `bronze` for an ingested document, or when a publisher or authority and a date are present.
+7. `bronze` for an ingested document (including attested uploads; method `2026-10-22.1`), for a paste auto-ingest (`source_type=supplied`, label "supplied by you, provenance not checked"), or when a publisher or authority and a date are present. Caller-owned bronze passages (`ingested` / `supplied`) may still receive a full scorer verdict; external URL bronze remains at most `partial`.
 8. `bronze` for a URL that has a title, a publisher or authority, and an official URL, but is missing the date or the code. Reason text: `page title and publisher; the date or the code was not in the metadata`.
 9. Otherwise `inadmissible` with reason `no provenance`.
 
-`supported` requires gold or silver. A bronze passage yields at most `partial`, and the rationale is `source tier bronze`.
+`supported` requires gold, silver, or caller-owned bronze (`ingested` / `supplied`). External URL bronze yields at most `partial`, and the rationale is `source tier bronze`.
 
 ## Source score
 

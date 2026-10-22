@@ -7,7 +7,7 @@ Classify every miss before you write it. Never turn an absent row into a fact.
 | found | The connector returned the field or the passage states the detail | Quote it |
 | field missing | The source was read and one field is empty | Name the field. Leave it empty |
 | covered but absent | An admissible source was checked and does not state the detail | Say the passage does not state it |
-| not covered | No admissible source was available | Say no admissible source was available |
+| not covered | source not admitted | Say source not admitted (status not_checked); point to verify_text or ingest_document + qualify_source |
 
 Do not write "false" from an empty field. The four class names are the pack standard as of 19 October 2026.
 

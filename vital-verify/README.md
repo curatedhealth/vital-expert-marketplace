@@ -21,7 +21,23 @@ Verify does **not** auto-admit a loose URL list. That is intentional: it keeps f
 3. `build_citation` for the reference line (free, not counted).
 4. Use `my_usage` when you need remaining calls.
 
-`check_claim` with a passage alone → `unverifiable` by design.  
-`verify_text` with a naive URL blob and no prior qualify → findings stay `unverifiable`. Prefer the qualify → check_claim loop unless the caller already has admitted sources / document ids.
+**Pasted text:** call `verify_text` with `sources: [{ "text": "…", "locator": "…" }]`. Verify auto-ingests that text for your tenant (7-day retention, label "supplied by you, provenance not checked", tier bronze). Internal ingest/qualify are not billed separately — one `verify_text` is one counted call.
+
+`check_claim` with a passage alone → `not_checked` / reason `source not admitted` (it does not auto-ingest).  
+`verify_text` with no admitted source and no paste → findings stay `not_checked`; faithfulness is `null` when every claim is `not_checked`.
 
 Method skills still run when the key is absent; label the work **not tool-checked**.
+
+Method version: `2026-10-22.1`.
+
+## Publish to the buyer marketplace (operators)
+
+Skills in this pack are a git symlink to `mcps/verify/manifest/skills`. Do **not** copy this folder with `rsync -a`, `cp -R`, Finder Compress, or `git archive` of the plugin alone — those ship a broken link and buyers install with zero skills.
+
+Stage a materialised copy (no commit/push):
+
+```bash
+mcps/verify/scripts/sync-plugin-to-marketplace.sh --dest /path/to/vital-expert-marketplace
+```
+
+The script fails unless `vital-verify/skills` is a real directory with exactly seven `SKILL.md` files. Commit and push in the marketplace repo only after that gate passes.

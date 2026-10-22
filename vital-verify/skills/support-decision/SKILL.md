@@ -105,7 +105,7 @@ ids stay in the reference files (VR-H13).
 Skill-specific:
 
 - **Quote the passage.** Do not paraphrase it and then grade the paraphrase.
-- **Bronze yields at most partial.** The rationale says source tier bronze (see
+- **External bronze yields at most partial.** Caller-owned bronze (`ingested` / `supplied`) may take a full scorer verdict; the finding still carries `source_tier: bronze`. The rationale says source tier bronze for external bronze (see
   `references/statuses.md`). Report what VERIFY returned; do not upgrade it.
 - **Keep the person's words.** Check the sentence as written.
 

@@ -37,15 +37,19 @@ tool did not produce (VR-H4).
 ## Steps
 
 1. Confirm the tier from source grading. If it is inadmissible, or the passage is empty,
-   status is unverifiable and the reason is "No admissible source was available."
-2. If the tier is bronze, status is at most partial and the rationale is "source tier bronze."
-3. For gold or silver, call `check_claim` when a key is present. Otherwise apply the table
-   and mark the decision manual.
-4. If the scorer says supported on anything other than gold or silver, demote it to partial.
+   status is not_checked and the reason is "source not admitted".
+2. If the tier is bronze and the source is not caller-owned (`ingested` / `supplied`),
+   status is at most partial and the rationale is "source tier bronze." Caller-owned bronze
+   may take a full scorer verdict; the finding still carries `source_tier: bronze` so
+   escalation skills can see the tier.
+3. For gold, silver, or caller-owned bronze, call `check_claim` when a key is present.
+   Otherwise apply the table and mark the decision manual.
+4. If the scorer says supported on external (non-owned) bronze, demote it to partial.
 5. Map the result onto a gap class in the gap rules.
 6. Recheck every rewrite. Without VERIFY, label it "rewritten, not tool-checked".
 7. After the reference list, print one faithfulness line:
    (supported + 0.5 × partial) ÷ (supported + partial + unsupported + contradicted + unverifiable),
+   with not_checked and out_of_scope outside the denominator (null if every claim is not_checked),
    as a whole percent. Leave out_of_scope out of the denominator.
 
 ## Each result in plain words, and what to do
