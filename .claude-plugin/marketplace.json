@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, and navigator-ai-investment.",
+  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, and navigator-ai-investment, and vital-mlr-review.",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -15,6 +15,11 @@
       "name": "vital-verify",
       "source": "./vital-verify",
       "description": "Seven skills that check a draft against the pages and papers you supply. Tools run on the VITAL Verify connector."
+    },
+    {
+      "name": "vital-mlr-review",
+      "source": "./vital-mlr-review",
+      "description": "Multi-jurisdiction Medical\u2013Legal\u2013Regulatory board preparation. Host writes Medical, Legal, and Regulatory chairs; never approves. Tools on mcp.vital.expert/api/mcp/mlr-review (vmlr_). Claim checks stay on Verify."
     },
     {
       "name": "navigator-ai-investment",

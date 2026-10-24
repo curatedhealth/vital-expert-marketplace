@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "vital-mlr-review": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/mlr-review"
+    },
+    "vital-verify": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/verify"
+    }
+  }
+}
