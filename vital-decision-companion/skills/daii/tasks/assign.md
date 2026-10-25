@@ -27,9 +27,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Ask, one per turn: Who makes the final call (Decide)? Whose input is needed (Advise)? Who must be told the outcome (Inform)? Who carries it out (Implement)?
 2. Decide is one named person. Refuse the assistant, a model, a tool, or Decision Companion in any role, and refuse a role title alone (the committee, the team, leadership). Ask for the name.
-3. Call `decision_daii_plan` with `roles: {decide, advise, inform, implement}` holding only the names given. An unnamed role stays empty; say so.
-4. Ask the planning questions the Playbook attaches to DAI-I, one per turn, when relevant: Who has the expertise and should advise? Who will be affected and must be informed? Who has the authority to decide?
-5. After the person confirms, call `decision_run_stage` with `stage: implement` and the same roles, or hand over to implement-plan.
+3. Call `decision_daii_plan` with `roles: {decide, advise, inform, implement}` holding only the **names given as strings**. An unnamed role stays empty; say so. Do not send `{name, status}` objects.
+4. Read the response: advise / inform / implement entries may be strings or `{name, status}`. On `role_only_name`, ask for the person. If a returned entry has `status: "unverified_person"`, print `"<name> (unverified, role not person)"` and put it under Gaps.
+5. Ask the planning questions the Playbook attaches to DAI-I, one per turn, when relevant: Who has the expertise and should advise? Who will be affected and must be informed? Who has the authority to decide?
+6. After the person confirms, call `decision_run_stage` with `stage: implement` and the same roles (still as strings), or hand over to implement-plan.
 
 ## Output
 

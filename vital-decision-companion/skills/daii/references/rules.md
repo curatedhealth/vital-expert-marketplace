@@ -10,5 +10,6 @@ Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.
 - **R6.** The implement stage completes when roles.decide is non-empty. A complete stage is not a full plan; implement-plan adds owner, milestone, and review trigger.
 - **R7.** On `role_only_name`, ask for the person. Advise, Inform, and Implement may keep role entries only if the person insists — say they stay unverified. Refuse AI and product names as Decide.
 - **R8.** One Decide. If two names are given, ask which one holds the final call; the other advises.
+- **R9.** When reading roles from the connector, accept both a string and `{name, status}`. For `status: "unverified_person"`, speak `"<name> (unverified, role not person)"` and list under Gaps. Do not invent the object shape when sending — send display-name strings.
 
 Hard rules DC-H1 through DC-H8 in `SKILL.md` still apply.

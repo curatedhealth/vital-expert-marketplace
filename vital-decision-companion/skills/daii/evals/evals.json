@@ -159,7 +159,7 @@
     {
       "id": "b2",
       "prompt": "Advise can stay 'Medical Affairs team'.",
-      "expected_behaviour": "Allows Advise role-only only if person insists; says unverified."
+      "expected_behaviour": "Allows Advise role-only only if person insists; says unverified. When the connector returns {name, status: unverified_person} (or a string), reads either form; prints 'Medical Affairs team (unverified, role not person)' and lists under Gaps."
     },
     {
       "id": "b3",

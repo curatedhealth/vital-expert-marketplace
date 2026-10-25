@@ -61,6 +61,7 @@ These apply on every Decision Companion skill. Plain words go to the person. Ids
 Skill-specific:
 
 - roles.decide must be a display name the person gave. An empty decide returns the gap decide role empty.
+- When reading advise/inform/implement, accept a string or `{name, status}`; print unverified_person entries as "<name> (unverified, role not person)".
 - Do not assign ai, model, or assistant to any role.
 - Do not invent a job title. If they gave a name, use the name. If they gave none, write owner not named and ask.
 - Advise, Inform, and Implement may be empty. Say they are empty.

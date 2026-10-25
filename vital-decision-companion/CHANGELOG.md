@@ -37,6 +37,12 @@ Fixes from the blind re-grade on pack 0.3.2 (with 44/54 vs without 24/54) plus R
 - `validate.py` OK at 0.3.3; routing harness flags still **20/20**.
 - Blind re-grade of the six skills on 0.3.3 is for Claude (frame-decision b4 and record-dissent b3 target score 2).
 
+### Post-B6 edge walk (same pack, 25 October 2026)
+
+- B6 **PASS** on live edge session `f680b34a-165a-45c2-bc11-41b7d00b5809` (connector product_version 0.3.1, supabase). Transcript: `docs/decision-companion/SMOKE_v0.3_PLUGIN_0.3.3_2026-10-25.md`.
+- **Contract:** advise/inform/implement entries may be string or `{name, status: "unverified_person"}` — recorded in `CONTRACT_CHANGES.md`; daii (+ implement-plan) accept both when reading.
+- R1 scores still absent on edge; cells fallback remains required.
+
 ## 0.3.2 (2026-10-25)
 
 Fixes from the with/without-skill run on pack 0.3.1 (47/54 with vs 29/54 without). Report: `docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md`.
