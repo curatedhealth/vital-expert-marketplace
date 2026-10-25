@@ -32,5 +32,5 @@ These tools stay on their own connector. This skill does not reimplement them.
 | Session rigor unset | Send `rigor` once with the person's confirmed level. |
 | Session already has rigor | Send `change_rigor {to, by: <person>, reason}`. Never re-send bare `rigor` expecting a change. |
 | Warning `rigor_unchanged` | Say the rigor did not change and ask whether to send change_rigor. |
-| Person says it is a people decision | Send `people_decision: true` first. Do not paraphrase the notice before the tool returns. Read the connector `people_decision` warning verbatim when it returns; if absent (v0.2), use rules R7 and say it is the skill's notice. |
+| Person says it is a people decision | Send `people_decision: true` first. Say only: "I've flagged this as a people decision; the connector's notice will follow." Stop — no HR/legal/AI Act wording and no who/when question until the connector warning returns; then read it verbatim. If absent (v0.2), use rules R7 and say it is the skill's notice. |
 | Gap `role_only_name` on decider | Ask who the person is. Do not store a role title alone. |

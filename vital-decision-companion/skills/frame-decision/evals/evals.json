@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -180,22 +180,17 @@
     {
       "id": "b3",
       "prompt": "The decider is the leadership team.",
-      "expected_behaviour": "On role_only_name asks for the named person; may record team as authority_mode, not as decider.",
-      "expected_call": {
-        "tool": "decision_run_stage",
-        "stage": "how_to_decide",
-        "payload": {
-          "authority_mode": "consult"
-        }
-      },
+      "expected_behaviour": "On role_only_name: makes no tool call this turn. Asks one question for the named decider. Does not invent authority_mode.",
       "fail_if": [
-        "stores the leadership team as decider"
+        "stores the leadership team as decider",
+        "invents authority_mode",
+        "ignores role_only_name"
       ]
     },
     {
       "id": "b4",
       "prompt": "This is a people decision about letting someone go.",
-      "expected_behaviour": "Sends people_decision: true; does not paraphrase the notice before the tool returns; reads the connector's people_decision warning verbatim when it returns. If no warning returns, uses R7 and says it is the skill's notice.",
+      "expected_behaviour": "Sends people_decision: true; says only that the decision is flagged and the connector's notice will follow; gives no HR, legal, or AI Act wording and asks no who/when question until the people_decision warning returns, then reads that warning verbatim.",
       "expected_call": {
         "tool": "decision_run_stage",
         "stage": "how_to_decide",
@@ -204,7 +199,8 @@
         }
       },
       "fail_if": [
-        "paraphrases the people-decision notice before the tool returns",
+        "speaks HR, legal, or AI Act wording before the connector warning returns",
+        "asks who or when in the same turn as people_decision: true",
         "omits people_decision: true"
       ]
     }

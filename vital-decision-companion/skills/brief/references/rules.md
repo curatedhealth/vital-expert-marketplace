@@ -1,6 +1,6 @@
 # Rules for Brief
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** Call decision_build_brief with session_id.
 - **R2.** A complete stage is rendered from its stored payload. An incomplete stage is the line [GAP].

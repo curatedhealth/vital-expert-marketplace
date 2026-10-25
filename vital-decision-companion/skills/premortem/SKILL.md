@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (failure hypotheses)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "look wrong in six months"
     - "capture the failure hypothesis"

@@ -1,6 +1,6 @@
 # Rules for DAI-I
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** roles.decide must be a display name the person gave. An empty decide returns the gap decide role empty.
 - **R2.** Do not assign ai, model, assistant, a product name, or a tool to any role.

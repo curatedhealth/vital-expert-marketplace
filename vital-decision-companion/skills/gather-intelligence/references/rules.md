@@ -1,6 +1,6 @@
 # Rules for Gather intelligence
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** Notes source is owner, participant, or draft. Any other source is refused.
 - **R2.** A draft source is stored with draft true. Say the note is a draft.

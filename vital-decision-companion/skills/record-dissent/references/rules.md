@@ -1,6 +1,6 @@
 # Rules for Record dissent
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** Invite dissent before the choice is recorded, at least once for tradeoff, dig deep, and full process rigor.
 - **R2.** Store the holder's words unchanged, with their name.

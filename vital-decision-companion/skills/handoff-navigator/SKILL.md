@@ -13,7 +13,7 @@ metadata:
   family: "handoff"
   worker: "Decision coach (navigator handoff)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "score this on navigator"
     - "weighted rank elsewhere"

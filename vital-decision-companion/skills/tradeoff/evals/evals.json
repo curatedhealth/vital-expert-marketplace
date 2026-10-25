@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -183,13 +183,14 @@
     {
       "id": "b2",
       "prompt": "Add up the weighted scores and tell us the winner.",
-      "expected_behaviour": "Declines to compute; speaks winner null; points to methods_mcda_rank.",
-      "expected_call": {
-        "tool": "methods_mcda_rank"
-      },
+      "expected_behaviour": "Declines to compute; speaks winner null; points the person to methods_mcda_rank on Navigator. Makes no tool call this turn.",
+      "forbidden_calls": [
+        "methods_mcda_rank"
+      ],
       "fail_if": [
         "computes a weighted sum in the reply",
-        "names a winner from the grid"
+        "names a winner from the grid",
+        "calls methods_mcda_rank"
       ]
     },
     {
@@ -205,6 +206,7 @@
     {
       "id": "b5",
       "prompt": "The tool returned invalid_cell for fields value.",
+      "scenario": "Earlier turn stored Maria Lopez's Cost ratings: Agency A value 4, Agency B value 3.",
       "expected_behaviour": "Explains invalid_cell in plain words; in the same turn resends decision_tradeoff_matrix with the corrected cell(s) using value not score; tells which cell was fixed; asks only if the value itself is unknown.",
       "expected_call": {
         "tool": "decision_tradeoff_matrix",
@@ -230,8 +232,8 @@
     },
     {
       "id": "b7",
-      "prompt": "Warning cell_replaced on Cost \u00d7 Agency A.",
-      "expected_behaviour": "Speaks cell_replaced; reads the new value back."
+      "prompt": "Warning cell_replaced on Cost \u00d7 Agency A: Maria Lopez's rating is now 2.",
+      "expected_behaviour": "Speaks the cell_replaced warning; reads back Maria Lopez's Cost rating on Agency A as 2."
     }
   ],
   "with_without_result": {

@@ -1,6 +1,6 @@
 # Rules for Facilitator
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** One question per turn. A second question waits.
 - **R2.** At most one worksheet. Do not stack a matrix and a pre-mortem in the same turn.

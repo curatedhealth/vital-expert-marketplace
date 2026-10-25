@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.3.3 (2026-10-25)
+
+Fixes from the blind re-grade on pack 0.3.2 (with 44/54 vs without 24/54) plus Round 4 live practice findings that affect skill copy.
+
+### B1 Skill fixes
+
+- **frame-decision b4** — after `people_decision: true`, say only: "I've flagged this as a people decision; the connector's notice will follow." No HR/legal/AI Act wording and no who/when question until the connector warning returns (then read verbatim). R7 only if the connector is silent.
+- **record-dissent b3** — schema probe is its own turn: `decision_status {include_schemas: true}`, say "Checking whether this connector can store dissent on the decision", stop. Choose merge vs notes only after reading `make_decision.optional`.
+- **handoff-navigator** — if `mcda_rank_args` omit `alternatives[].scores` (live R1), fall back to `cells`; never invent scores.
+
+### B2 Eval fixes
+
+- make-decision b4 prompt carries prior read-back (Agency B / Maria Lopez).
+- tradeoff b7 prompt includes the new value 2; tradeoff b2 uses `forbidden_calls: ["methods_mcda_rank"]`.
+- handoff-navigator b3/b4: packet already in prompt; `forbidden_calls` for `methods_mcda_rank`.
+- frame-decision b3: no invented `authority_mode: "consult"`; no call; ask for named decider.
+- make-decision b5: `decision_status` moved to `allowed_calls`.
+
+### B3 Eval schema and lint
+
+- Behavioural cases may use `expected_call`, `allowed_calls`, and `forbidden_calls`.
+- `validate.py`: (a) warn when no-call language conflicts with `expected_call` (unless the named tool is the probe call); (b) literal `expected_call` values must appear in prompt or `scenario`; (c) "earlier"/"prior read-back" prompts need prior context.
+
+### B4 Staging smoke (B6)
+
+- Transcript: `docs/decision-companion/SMOKE_v0.3_PLUGIN_0.3.3_2026-10-25.md` (stage_order, role_only_name, cell_replaced by name, dissent merge, mcda_rank_args / cells fallback).
+
+### B5 Marketplace
+
+- Sync script commit subject reads version from `plugin.json` (no longer hard-coded 0.3.1).
+- Pack stamped **0.3.3**; sync to `curatedhealth/vital-expert-marketplace`.
+
+### Acceptance
+
+- `validate.py` OK at 0.3.3; routing harness flags still **20/20**.
+- Blind re-grade of the six skills on 0.3.3 is for Claude (frame-decision b4 and record-dissent b3 target score 2).
+
 ## 0.3.2 (2026-10-25)
 
 Fixes from the with/without-skill run on pack 0.3.1 (47/54 with vs 29/54 without). Report: `docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md`.

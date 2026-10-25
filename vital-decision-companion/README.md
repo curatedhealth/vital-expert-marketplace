@@ -14,7 +14,7 @@ Literature, trials, labels, and commercial reads stay on their own connectors (`
 
 ## Skills
 
-Twenty method skills (v0.3.2). Each one has tasks, references, a teaching example, an output asset, and evals: a routing harness, held-out requests, near misses, and behavioural cases. The file contract matches Verify. Scores stay on Ontology Navigator. Claim checks stay on Verify.
+Twenty method skills (v0.3.3). Each one has tasks, references, a teaching example, an output asset, and evals: a routing harness, held-out requests, near misses, and behavioural cases. The file contract matches Verify. Scores stay on Ontology Navigator. Claim checks stay on Verify.
 
 | Skill | Tool | Job |
 |---|---|---|

@@ -13,7 +13,7 @@ metadata:
   family: "how-to-decide"
   worker: "Decision coach (framing)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "frame this decision"
     - "how much rigor"
@@ -64,7 +64,7 @@ Skill-specific:
 - The connector completes how_to_decide only with statement, goal, and rigor. Send decider, deadline, core_issue, consequence, reversibility, criteria, and authority_mode when the person gave them.
 - Rigor is one of decide_quickly, tradeoff, dig_deep, full_process. Suggest it from the 2x2. The person confirms it.
 - Ask one framing question per turn. Stop when the next answer must come from a person.
-- A decision about hiring, promotion, performance, or termination of a named person gets the people-decision notice (references/rules.md R7) before anything else.
+- A decision about hiring, promotion, performance, or termination of a named person: send `people_decision: true`, say only that it is flagged and the connector notice will follow, then read the connector warning (or R7 if silent) — never invent HR/legal/AI Act wording ahead of the tool.
 - Criteria are named here, before any option is rated.
 
 Primary tool: `decision_run_stage`. Also named, and not copied: `decision_classify`, `decision_rigor_guide`.

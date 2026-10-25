@@ -13,7 +13,7 @@ metadata:
   family: "how-to-decide"
   worker: "Decision coach (type draft)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "what kind of decision"
     - "is this a quick call"

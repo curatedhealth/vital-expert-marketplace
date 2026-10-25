@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -168,7 +168,7 @@
     },
     {
       "id": "b4",
-      "prompt": "Yes, store it. Confidence 70.",
+      "prompt": "Earlier you read back: Agency B, decided by Maria Lopez. She says: Yes, store it. Confidence 70.",
       "expected_behaviour": "After the prior read-back, an explicit yes means call decision_run_stage make_decision now with chosen_option, authored_by, and confidence_pct: 70. Does not ask again. Never sends confidence.",
       "expected_call": {
         "tool": "decision_run_stage",
@@ -189,10 +189,12 @@
       "id": "b5",
       "prompt": "Tool returned stage_order with widen_options unmet.",
       "expected_behaviour": "Names unmet stages from stage_order; asks whether to complete them or skip {stage, by, reason}.",
-      "expected_call": {
-        "tool": "decision_status",
-        "session_id": true
-      },
+      "allowed_calls": [
+        {
+          "tool": "decision_status",
+          "session_id": true
+        }
+      ],
       "fail_if": [
         "ignores stage_order",
         "stores the choice without addressing unmet stages or skip"

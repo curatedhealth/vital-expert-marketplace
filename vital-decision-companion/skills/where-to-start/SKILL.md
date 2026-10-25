@@ -13,7 +13,7 @@ metadata:
   family: "session"
   worker: "Decision coach (session opener)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "open a session"
     - "where do we start"

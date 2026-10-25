@@ -13,7 +13,7 @@ metadata:
   family: "brief"
   worker: "Decision coach (readiness check)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "are we ready to decide"
     - "decision quality checklist"

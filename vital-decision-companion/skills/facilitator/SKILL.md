@@ -13,7 +13,7 @@ metadata:
   family: "voice"
   worker: "Decision coach (voice)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "one question only"
     - "don't pick for us"

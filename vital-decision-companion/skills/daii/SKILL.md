@@ -13,7 +13,7 @@ metadata:
   family: "implement"
   worker: "Decision coach (roles)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "who decides in the words of the room"
     - "who advises"

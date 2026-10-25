@@ -13,7 +13,7 @@ metadata:
   family: "widen-options"
   worker: "Decision coach (option list)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "we only have two options"
     - "add do nothing"

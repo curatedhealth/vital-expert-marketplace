@@ -13,7 +13,7 @@ metadata:
   family: "library"
   worker: "Decision coach (examples)"
   pack: vital-decision-companion
-  version: 0.3.2
+  version: 0.3.3
   route:
     - "show me uc01"
     - "walk uc02"

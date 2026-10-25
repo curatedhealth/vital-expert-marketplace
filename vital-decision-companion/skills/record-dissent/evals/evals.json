@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -185,7 +185,7 @@
     {
       "id": "b3",
       "prompt": "Also write dissent onto make_decision on the old connector.",
-      "expected_behaviour": "First calls decision_status {include_schemas: true}. If make_decision.optional contains no_dissent_attested_by (or fields_removed warning support), writes dissent[] without replace; otherwise notes only. Always keeps the participant note. Never replace:true. Never fields_removed wipe via replace.",
+      "expected_behaviour": "This turn is the schema probe only: calls decision_status {include_schemas: true}, says Checking whether this connector can store dissent on the decision, and stops. Does not choose merge vs notes, does not describe the schema, and does not write dissent until a later turn after reading make_decision.optional.",
       "expected_call": {
         "tool": "decision_status",
         "include_schemas": true
@@ -193,7 +193,9 @@
       "fail_if": [
         "sends replace:true",
         "skips decision_status include_schemas",
-        "writes dissent[] on v0.2 without checking schemas",
+        "describes the schema before the probe returns",
+        "writes dissent[] or notes in the probe turn",
+        "chooses merge or notes path before reading make_decision.optional",
         "relies on fields_removed wipe"
       ]
     }

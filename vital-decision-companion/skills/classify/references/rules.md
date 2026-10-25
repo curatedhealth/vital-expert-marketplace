@@ -1,6 +1,6 @@
 # Rules for Classify
 
-Pack: vital-decision-companion. Method version: 0.3.2. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
 
 - **R1.** decision_classify is a keyword draft. rationale says so. draft is true.
 - **R2.** Read decision_type and recommended_rigor back in one sentence. Ask the person to confirm.

@@ -26,8 +26,8 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Call `decision_handoff_navigator` with the session id. Stop if `rater_issues[]` is present or any cell has a null or role-only rater.
-2. Prefer `handoff.mcda_rank_args[]` when present: one `methods_mcda_rank` call per entry after any scale check the args still need.
-3. **Cells only (v0.2):** build the per-rater `methods_mcda_rank` argument objects from `handoff.cells` (see `references/tools.md`), **show them to the person**, and ask the one scale-mapping question (for example 1–5 → 0–4). Say this order explicitly: build and show args → ask mapping → call only after they answer. Make no `methods_mcda_rank` call until the person answers. Always read `scale_note`. Never rescale silently.
+2. Prefer `handoff.mcda_rank_args[]` when each entry has usable `alternatives[].scores`. One `methods_mcda_rank` call per entry after any scale check the args still need.
+3. **No scores on `mcda_rank_args` (or cells only):** if args omit `alternatives[].scores`, or only `handoff.cells` is present, build per-rater `methods_mcda_rank` argument objects from `handoff.cells` (see `references/tools.md`). **Never invent scores.** Show the built args, ask the one scale-mapping question (for example 1–5 → 0–4), and say this order: build and show args → ask mapping → call only after they answer. Make no `methods_mcda_rank` call until the person answers. Always read `scale_note`. Never rescale silently.
 4. Call the named tool on `vital-ontology-navigator` with a `vont_` key. If the key is absent, label the turn not tool-checked and stop.
 5. Read the result back as Navigator's output. Say that the ranking informs the choice and that the named person still decides.
 
