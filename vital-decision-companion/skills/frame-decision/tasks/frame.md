@@ -18,7 +18,7 @@
 
 | State | What to do |
 |---|---|
-| `vdec_` connected | Call `decision_run_stage` with the arguments in `references/tools.md`. |
+| `vdec_` connected | Required for complete are statement, goal, decider, and deadline. Call `decision_run_stage` with the arguments in `references/tools.md`. |
 | `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
@@ -29,7 +29,8 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. Then, one per turn, ask only what is still missing: What is the goal, and what would success look like? What is the core of the issue? Who makes the final decision, as a named person? What is the deadline? Which criteria will guide the choice? What values matter here? What is the ripple effect if we get it wrong?
 3. If the person frames a yes/no question (should we do X?), reframe it as: how might we achieve the goal? Tell them binary framing is the most common cause of failed decisions. Do not add options yourself; widen-options does that.
 4. Is now the right time? If the person says the decision should wait, store that answer and the date they name.
-5. When statement, goal, and rigor exist, call `decision_run_stage` with `stage: how_to_decide` and `payload: {statement, goal, rigor, decider, deadline, core_issue, criteria, values}`. Send only fields the person gave.
+5. When the person says this is a people decision (hiring, promotion, performance, termination of a named person), send `people_decision: true` on the how_to_decide payload **first**. Do not paraphrase the people-decision notice before the tool returns. When the connector's `people_decision` warning comes back, read its text **verbatim**. If no warning returns (v0.2), use the R7 wording and say it is the skill's notice, not the connector's.
+6. When statement, goal, decider, and deadline exist, call `decision_run_stage` with `stage: how_to_decide` and `payload: {statement, goal, decider, deadline, core_issue, criteria, values}` (plus `people_decision: true` when applicable). Send only fields the person gave. Set rigor in the size task (once, or via change_rigor).
 
 ## Output
 

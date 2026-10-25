@@ -27,10 +27,11 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Ask for the criteria before any rating. If ratings come first, stop and ask for the criteria.
 2. Ask for weights in the person's words, before rating. Offer swing weighting: imagine each criterion moving from worst to best; which swing matters most? Give it 100 and the others a share of it.
-3. Ask the person to declare the scale (for example 1 to 5, higher is better) and which criteria are costs (lower is better).
+3. Ask the person to declare the scale (for example 1 to 5, higher is better) and which criteria are costs (lower is better). Set each criterion's `direction` to `higher_better` or `lower_better`.
 4. In a group, ask raters to score privately before any discussion, then share.
-5. Call `decision_tradeoff_matrix` with `criteria: [{name, weight, direction}]` and `ratings: [{option, criterion, score, rater, authored_by}]`. Set rater and authored_by to the person's name on every rating, never empty: v0.1 accepts a rating with no author.
-6. Read back the stored grid. Speak winner null. Do not average, total, or rank.
+5. Call `decision_tradeoff_matrix` with `criteria: [{name, weight, direction}]` and `ratings: [{option, criterion, value, rater}]`. `rater` is always the person's name. Do not send `authored_by` on a cell. Do not send `score` — the field is `value`. Send `scale` only when the person declared a scale other than 1–5.
+6. Read back per-index gaps in plain words: `invalid_cell` (wrong fields), `rater_missing`, `role_only_name`, `cell_replaced`. On `invalid_cell` for fields including `value` (or when the refusal means `score` was sent): **in the same turn**, resend the corrected cells with `value` (not `score`), same option/criterion/rater/numbers. Tell the person which cell was fixed. Ask only if the value itself is unknown — do not ask for confirmation of numbers you already have.
+7. Read the stored grid. Say the grid has no winner. Do not average, total, or rank.
 
 ## Output
 

@@ -1,6 +1,6 @@
 ---
 name: daii
-description: "This skill should be used when the user asks to \"Who decides, in the words of the room?\", \"Who advises, and who only inputs?\", \"Who must be informed after the choice?\". Do not use it to assign a role to a model, to leave Decide empty, or to invent a job title."
+description: "This skill should be used when the user asks to \"Who decides in the words of the room?\", \"Who advises, and who only inputs?\", \"Who must be informed after the choice?\". Do not use it to assign a role to a model, to leave Decide empty, or to invent a job title."
 license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
@@ -13,9 +13,9 @@ metadata:
   family: "implement"
   worker: "Decision coach (roles)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
-    - "who decides"
+    - "who decides in the words of the room"
     - "who advises"
     - "who must be informed"
     - "four roles"

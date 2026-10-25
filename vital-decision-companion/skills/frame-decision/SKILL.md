@@ -1,6 +1,6 @@
 ---
 name: frame-decision
-description: "This skill should be used when the user asks to \"Help us frame this decision before we look at options.\", \"How much rigor does this deserve?\", \"Record the decider and the deadline so we can write it down.\". Do not use it to list options, score a matrix, record the choice, or write the brief."
+description: "This skill should be used when the user asks to \"Help us frame this decision before we look at options.\", \"How much rigor does this deserve?\", \"Who decides, by when, and what is the goal?\". Do not use it to list options, score a matrix, record the choice, or write the brief."
 license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
@@ -13,11 +13,11 @@ metadata:
   family: "how-to-decide"
   worker: "Decision coach (framing)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "frame this decision"
     - "how much rigor"
-    - "decider and the deadline"
+    - "who decides and by when"
     - "what is the goal"
     - "core of the issue"
     - "consequence and reversibility"

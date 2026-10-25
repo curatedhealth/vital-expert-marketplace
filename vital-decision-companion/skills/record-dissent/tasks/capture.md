@@ -5,10 +5,10 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (dissent). Does not choose the option and does not sign. |
-| Workflow | Invite one dissent, store it in the holder's words, stop. |
+| Workflow | Detect merge vs replace, invite dissent, store notes always (+ dissent[] when merge-safe), stop. |
 | Skill | DC-4.5 Record dissent |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
-| Tool | Decision Companion `decision_attach_notes`; see the companion slot |
+| Tool | Decision Companion `decision_status`, `decision_attach_notes`; optional `decision_run_stage` |
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
@@ -18,18 +18,20 @@
 
 | State | What to do |
 |---|---|
-| `vdec_` connected | Call `decision_attach_notes` with the arguments in `references/tools.md`. |
+| `vdec_` connected | Call tools as in `references/tools.md`. |
 | `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
 ## Steps
 
-1. Before the choice is recorded, invite dissent once: who sees it differently, and what would they say? Suggest the most junior voice speaks first, or that objections are written privately, so rank does not silence them.
-2. If the room agrees fast on a high-consequence decision, ask one person to argue the strongest case against the leading option. Say this is a role, not their view.
-3. For each dissent, ask for the holder's name and their words.
-4. Call `decision_attach_notes` with `stage: make_decision`, `source: participant`, and `notes: "Dissent — holder: <name>. <their words>"`.
-5. Read it back unchanged. Do not answer the objection on behalf of the room.
+1. First call `decision_status` with `include_schemas: true`. If `stage_schemas.make_decision.optional` contains `no_dissent_attested_by`, merge semantics are present (v0.3): you may write `dissent[] {holder, text}` without `replace`. Otherwise (v0.2) use notes only for the make_decision payload path.
+2. Before the choice is recorded, invite dissent once: who sees it differently, and what would they say? Suggest the most junior voice speaks first, or that objections are written privately, so rank does not silence them.
+3. If the room agrees fast on a high-consequence decision, ask one person to argue the strongest case against the leading option. Say this is a role, not their view.
+4. For each dissent, ask for the holder's name and their words.
+5. Always call `decision_attach_notes` with `stage: make_decision`, `source: participant`, and `notes: "Dissent — holder: <name>. <their words>"`. Keep this participant note on every connector version.
+6. On the merge path only, also call `decision_run_stage` with `stage: make_decision` and `payload: {dissent: [{holder, text}]}` **without** `replace`. Never send `replace: true`.
+7. Read it back unchanged. Do not answer the objection on behalf of the room.
 
 ## Output
 

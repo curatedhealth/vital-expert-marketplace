@@ -26,10 +26,11 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Ask the decider to state the choice in one sentence and give their name. If someone else speaks for them, ask who is the decider.
-2. If the name is missing, is a role only, or is the assistant, a model, or Decision Companion, do not store. Ask for a person's name.
+2. If the name is missing, is a role only, or is the assistant, a model, or Decision Companion, do not store. Ask for a person's name (`role_only_name`).
 3. Ask, one per turn when missing: What is the main reason? What are we saying no to? How confident are you, as a percentage?
 4. Read the choice, the reason, and the name back. Ask: is that the decision?
-5. On yes, call `decision_run_stage` with `stage: make_decision` and `payload: {chosen_option, authored_by, rationale, saying_no_to, confidence}`. Send only what the person said.
+5. After that read-back, an explicit yes ("yes", "yes, store it", "that is the decision") means call `decision_run_stage` **now** with `stage: make_decision` and `payload: {chosen_option, authored_by, rationale, confidence_pct, saying_no_to, trade_offs}` as already given. Do not ask again. The confidence field is `confidence_pct`, never `confidence`.
+6. On gap `stage_order`: name the unmet stages, then ask whether to complete them or record a skip with the person's name and reason (`skip: {stage, by, reason}`). On `unknown_option`: read the stored options back and ask which one.
 
 ## Output
 

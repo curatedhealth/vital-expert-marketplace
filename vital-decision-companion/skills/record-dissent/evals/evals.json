@@ -1,6 +1,6 @@
 {
-  "version": "0.3.0",
-  "ran_with_and_without_skill": false,
+  "version": "0.3.2",
+  "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
@@ -100,7 +100,7 @@
       "request": "Remove her objection from the record; we've moved on."
     }
   ],
-  "routing_harness_passed": false,
+  "routing_harness_passed": true,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -154,18 +154,56 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Two people object for similar reasons. Combine them into one line.",
-      "expected_behaviour": "Stores two separate dissents with each holder's words."
+      "prompt": "Jordan disagrees: the timeline is unrealistic.",
+      "expected_behaviour": "Stores participant note Dissent \u2014 holder: Jordan. \u2026 Does not send replace:true.",
+      "expected_call": {
+        "tool": "decision_attach_notes",
+        "stage": "make_decision",
+        "source": "participant",
+        "notes": "Dissent \u2014 holder: Jordan. the timeline is unrealistic."
+      },
+      "fail_if": [
+        "sends replace:true",
+        "omits participant note"
+      ]
     },
     {
       "id": "b2",
-      "prompt": "Nobody said anything, so record no dissent.",
-      "expected_behaviour": "Asks for a named person to attest before storing."
+      "prompt": "No one objects. Attest that.",
+      "expected_behaviour": "Asks exactly one question: Who confirms there is no dissent? Stores nothing until a named answer.",
+      "expected_call": {
+        "tool": "decision_attach_notes",
+        "stage": "make_decision",
+        "source": "owner",
+        "notes": "No dissent \u2014 attested by <name>"
+      },
+      "fail_if": [
+        "asks two questions in one turn",
+        "stores without a named attester"
+      ]
     },
     {
       "id": "b3",
-      "prompt": "Given her dissent, should we change the option?",
-      "expected_behaviour": "Does not change or recommend the option; says the decider decides with the dissent on record."
+      "prompt": "Also write dissent onto make_decision on the old connector.",
+      "expected_behaviour": "First calls decision_status {include_schemas: true}. If make_decision.optional contains no_dissent_attested_by (or fields_removed warning support), writes dissent[] without replace; otherwise notes only. Always keeps the participant note. Never replace:true. Never fields_removed wipe via replace.",
+      "expected_call": {
+        "tool": "decision_status",
+        "include_schemas": true
+      },
+      "fail_if": [
+        "sends replace:true",
+        "skips decision_status include_schemas",
+        "writes dissent[] on v0.2 without checking schemas",
+        "relies on fields_removed wipe"
+      ]
     }
-  ]
+  ],
+  "with_without_result": {
+    "date": "2026-10-25",
+    "pack": "0.3.1",
+    "with": 4,
+    "without": 4,
+    "max": 6,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+  }
 }

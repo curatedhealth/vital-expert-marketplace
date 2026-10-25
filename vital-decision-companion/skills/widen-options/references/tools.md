@@ -8,16 +8,16 @@
 
 Arguments: session_id, options: [{name, optional id, optional notes}].
 
-Returns: options with ids, warnings. The tool does not return a winner.
+Returns: options list and warnings (too few options, missing do-nothing, missing do-it-internally). Warnings also appear on `decision_run_stage` for widen_options.
 
-Pitfall: Sending a string instead of a list of objects raises empty names.
+## decision_run_stage (widen_options)
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
+Optional payload fields: options, vanishing_options_answer, opportunity_cost, outside_view.
 
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
+## Connector version
 
-## Also named
-
-- `decision_run_stage`
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Gap `too_few_options` | Say how many of 3 are present. Ask for another option. Do not invent one. |
+| Status shows widen incomplete with ≥3 options | Call `run_stage widen_options {options}` once (stage-flag stale). |
+| Widening answers given | Store via run_stage fields vanishing_options_answer, opportunity_cost, outside_view. |

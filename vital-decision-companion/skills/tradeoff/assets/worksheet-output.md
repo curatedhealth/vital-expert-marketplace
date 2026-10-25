@@ -12,7 +12,7 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Winner
 
-[from the tool or the person, else [GAP]]
+The grid has no winner. [from the tool: winner null; else say so. Do not invent a rank.]
 
 ## Shared tool
 

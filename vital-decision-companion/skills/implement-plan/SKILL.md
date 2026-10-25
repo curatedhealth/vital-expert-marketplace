@@ -13,7 +13,7 @@ metadata:
   family: "implement"
   worker: "Decision coach (implementation)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "implementation plan"
     - "next 48 hours"

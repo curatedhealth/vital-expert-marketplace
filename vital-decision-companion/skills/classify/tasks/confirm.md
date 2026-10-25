@@ -27,8 +27,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Read the draft type and rigor back in one sentence. Ask the person to confirm or correct it, and for their name.
 2. If the name is missing, do not store. Ask for the name.
-3. Call `decision_classify` with `statement`, `session_id`, `confirmed: true`, and `confirmed_by` set to that name.
-4. If the host does not expose `confirmed` and `confirmed_by` (the published v0.1 schema shows only statement and session_id), store the confirmed rigor through `decision_run_stage` on `how_to_decide` instead (see frame-decision), and say that the type itself stays a draft on the connector.
+3. Prefer `decision_classify` with `confirmed: true` and `confirmed_by` when the host schema has those fields.
+4. Otherwise use `decision_run_stage` on `how_to_decide` with `payload: {decision_type, type_confirmed_by}` (connector path that persists the type).
+5. If both are unavailable, store an owner note via `decision_attach_notes`: "Type confirmed: <type> by <name>". Tell the person the bias card stays unfiltered until the type can be stored on the session.
+6. Never claim the session type is set unless `decision_status.decision_type` shows it.
 
 ## Output
 

@@ -1,6 +1,6 @@
 {
-  "version": "0.3.0",
-  "ran_with_and_without_skill": false,
+  "version": "0.3.2",
+  "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
@@ -153,23 +153,61 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Our scores are 1 to 5; just rescale them.",
-      "expected_behaviour": "Says methods_mcda_rank takes 0 to 4; asks the person to choose the mapping; never rescales silently."
+      "prompt": "We rated 1\u20135. Call MCDA.",
+      "expected_behaviour": "Reads scale_note; asks person for 0\u20134 mapping; never rescales silently.",
+      "expected_call": {
+        "tool": "decision_handoff_navigator",
+        "session_id": true
+      },
+      "fail_if": [
+        "rescales silently",
+        "calls methods_mcda_rank without asking mapping"
+      ]
     },
     {
       "id": "b2",
-      "prompt": "No vont_ key. Compute the ranking here.",
-      "expected_behaviour": "Declines; says the shared rank is not connected."
+      "prompt": "Packet has mcda_rank_args for two raters.",
+      "expected_behaviour": "One methods_mcda_rank call per mcda_rank_args entry.",
+      "expected_call": {
+        "tool": "methods_mcda_rank"
+      },
+      "fail_if": [
+        "averages raters into one call",
+        "ignores mcda_rank_args"
+      ]
     },
     {
       "id": "b3",
-      "prompt": "The hand-off only carried the title.",
-      "expected_behaviour": "Builds the methods_mcda_rank call from the stored cells (v0.1 hand-off carries the title only)."
+      "prompt": "Packet has cells only.",
+      "expected_behaviour": "Builds per-rater args from handoff.cells, asks the scale-mapping question, makes no methods_mcda_rank call until the person answers. Says this order explicitly.",
+      "expected_call": {
+        "tool": "decision_handoff_navigator",
+        "session_id": true
+      },
+      "fail_if": [
+        "calls methods_mcda_rank before the person answers the scale mapping",
+        "does not show per-rater args built from cells"
+      ]
     },
     {
       "id": "b4",
-      "prompt": "Average the three raters' scores first.",
-      "expected_behaviour": "One call per rater, or decide_attach_scores per rater; does not average."
+      "prompt": "rater_issues lists a null rater.",
+      "expected_behaviour": "Stops; asks who rated (rater_missing / role_only_name).",
+      "expected_call": {
+        "tool": "decision_handoff_navigator",
+        "session_id": true
+      },
+      "fail_if": [
+        "calls methods_mcda_rank despite rater_issues"
+      ]
     }
-  ]
+  ],
+  "with_without_result": {
+    "date": "2026-10-25",
+    "pack": "0.3.1",
+    "with": 7,
+    "without": 2,
+    "max": 8,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+  }
 }

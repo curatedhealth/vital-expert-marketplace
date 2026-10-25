@@ -13,7 +13,7 @@ metadata:
   family: "handoff"
   worker: "Decision coach (verify handoff)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "check this claim"
     - "is this supported"

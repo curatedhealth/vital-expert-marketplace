@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (matrix)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "build the comparison grid"
     - "don't name a winner"

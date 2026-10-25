@@ -29,7 +29,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. In a group, ask each person to write their reasons alone before anyone speaks, then share one at a time, most junior first.
 3. For each failure, one per turn, ask: what early signal would show it is happening? What would we do to prevent or soften it? Who owns watching for it?
 4. Call `decision_premortem` with `hypotheses: [{failure, early_signal, mitigation, owner, raised_by}]` in the person's words. Leave a missing field as [GAP].
-5. Do not rank the list and do not turn it into a recommendation. Point to implement-plan to turn each failure into an if–then plan.
+5. Never send `recommendation`. Handle per-index refusals; if one bad item drops the whole batch, resend without it and tell the person. Do not rank the list and do not turn it into advice. Point to implement-plan to turn each failure into an if–then plan.
 
 ## Output
 

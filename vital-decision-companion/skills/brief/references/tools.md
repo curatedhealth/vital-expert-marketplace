@@ -14,10 +14,19 @@ Pitfall: Filling [GAP] from earlier chat messages that were never stored writes 
 
 A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
 
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
+Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
 
 ## Also named
 
-- none
+- `decision_status` (enrich omitted fields)
 
 These tools stay on their own connector. This skill does not reimplement them.
+
+## Connector version
+
+| Condition | What to do |
+|---|---|
+| Brief prints `None`, `null`, or `{}` | Render as `[GAP]` or add the field from `decision_status`, and say you did so. |
+| watermark SIMULATED | Keep it on every page; say practice. |
+| Stored field omitted from brief | Pull from `decision_status` and note the enrichment. |
+| Do not | Reintroduce compensations for raw JSON as if they were still the default. |

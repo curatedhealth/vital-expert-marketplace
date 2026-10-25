@@ -4,22 +4,18 @@
 
 `decision_run_stage` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
 
-## decision_run_stage
+## decision_run_stage (implement)
 
-Arguments: session_id, stage implement, payload.roles.decide (or a stored DAI-I decide). Optional, stored as given: owner, first_milestone, key_actions, communication_plan, review_date, review_trigger, dependencies, resources, success_metrics, if_then_plans.
+Arguments: session_id, stage implement. Required for complete: roles.decide (person). Optional: owner, first_milestone, review_date, review_trigger, communication_plan, key_actions, if_then_plans[] `{signal, owner, action}`, dependencies, resources, success_metrics.
 
-Returns: complete true when a decide name is present. Otherwise gaps: "implement required fields missing".
+Returns: complete when roles.decide is a named person. Warnings may include `optional_missing` for first_milestone and review_date — ask for them. Gap `role_only_name`: ask who the person is.
 
-Pitfall: The v0.1 connector completes implement on a decide name alone. A plan without an owner, milestone, and review trigger is still incomplete for the person; say which are missing.
+Pitfall: Completing on a decide name alone still leaves the plan thin for the person; ask for owner, milestone, and review trigger.
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
+## Connector version
 
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- `decision_daii_plan`
-- `decision_premortem`
-- `decision_status`
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Gap `role_only_name` | Ask for the person. Advise/Inform/Implement may keep role entries only if the person insists — say they stay unverified. |
+| Warning `optional_missing` (first_milestone, review_date) | Ask for those fields. |
+| if_then_plans | Send `[{signal, owner, action}]`. |

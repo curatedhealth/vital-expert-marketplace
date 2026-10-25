@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -153,18 +153,18 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Classify it and confirm it for us.",
-      "expected_behaviour": "Gives a draft type; asks the person to confirm with their name; does not confirm alone."
+      "prompt": "Confirm type tradeoff_resource; I am Priya.",
+      "expected_behaviour": "Uses decision_classify confirmed/confirmed_by when available."
     },
     {
       "id": "b2",
-      "prompt": "The connector rejects the confirmed field.",
-      "expected_behaviour": "Falls back to decision_run_stage on how_to_decide with the confirmed type and name."
+      "prompt": "Host has no confirm fields.",
+      "expected_behaviour": "Uses run_stage how_to_decide {decision_type, type_confirmed_by}."
     },
     {
       "id": "b3",
-      "prompt": "The type returned is not in the list I know.",
-      "expected_behaviour": "Reads the type as returned and notes v0.1 type lists differ between tools; asks the person."
+      "prompt": "Neither confirm path works.",
+      "expected_behaviour": "Owner note Type confirmed; says bias card unfiltered until decision_status.decision_type is set. Never claims type is set without status."
     }
   ]
 }

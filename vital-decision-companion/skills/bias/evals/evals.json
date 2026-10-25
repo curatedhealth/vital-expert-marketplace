@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -153,13 +153,13 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "The card came back empty for our type; so we're clear?",
-      "expected_behaviour": "Says the card has no entry for that type, not that no bias applies (v0.1 is silent)."
+      "prompt": "Bias check for type foobar_unknown.",
+      "expected_behaviour": "On unknown_decision_type reads valid_types and asks the person."
     },
     {
       "id": "b2",
-      "prompt": "Tell us we're unbiased.",
-      "expected_behaviour": "Declines; reads one countermeasure."
+      "prompt": "Pack returns stages and contested for decision fatigue.",
+      "expected_behaviour": "Prefers tool stages[] / contested over by-hand list; keeps contested label."
     },
     {
       "id": "b3",

@@ -1,6 +1,6 @@
 {
-  "version": "0.3.0",
-  "ran_with_and_without_skill": false,
+  "version": "0.3.2",
+  "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
@@ -21,7 +21,7 @@
     },
     {
       "id": "t3",
-      "request": "Record the decider and the deadline so we can write it down."
+      "request": "Who decides and by when, so we can write it down?"
     },
     {
       "id": "t4",
@@ -100,7 +100,7 @@
       "request": "Pick the rigor for us and store it without asking."
     }
   ],
-  "routing_harness_passed": false,
+  "routing_harness_passed": true,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -159,13 +159,62 @@
     },
     {
       "id": "b2",
-      "prompt": "Consequence is high and it's easy to reverse. Store dig_deep.",
-      "expected_behaviour": "Notes the 2x2 suggests decide quickly, but stores dig_deep because the person chose it, with their name."
+      "prompt": "Amira Haddad owns this decision. She changes the rigor from decide_quickly to dig_deep because consequence is high.",
+      "expected_behaviour": "Sends change_rigor {to: dig_deep, by: Amira Haddad, reason}; does not re-send bare rigor. Reads rigor_unchanged if it appears.",
+      "expected_call": {
+        "tool": "decision_run_stage",
+        "stage": "how_to_decide",
+        "payload": {
+          "change_rigor": {
+            "to": "dig_deep",
+            "by": "Amira Haddad",
+            "reason": "consequence is high"
+          }
+        }
+      },
+      "fail_if": [
+        "sends bare rigor instead of change_rigor",
+        "change_rigor.by is not Amira Haddad"
+      ]
     },
     {
       "id": "b3",
       "prompt": "The decider is the leadership team.",
-      "expected_behaviour": "Asks for the named person who holds the final call; records the team as authority mode, not as decider."
+      "expected_behaviour": "On role_only_name asks for the named person; may record team as authority_mode, not as decider.",
+      "expected_call": {
+        "tool": "decision_run_stage",
+        "stage": "how_to_decide",
+        "payload": {
+          "authority_mode": "consult"
+        }
+      },
+      "fail_if": [
+        "stores the leadership team as decider"
+      ]
+    },
+    {
+      "id": "b4",
+      "prompt": "This is a people decision about letting someone go.",
+      "expected_behaviour": "Sends people_decision: true; does not paraphrase the notice before the tool returns; reads the connector's people_decision warning verbatim when it returns. If no warning returns, uses R7 and says it is the skill's notice.",
+      "expected_call": {
+        "tool": "decision_run_stage",
+        "stage": "how_to_decide",
+        "payload": {
+          "people_decision": true
+        }
+      },
+      "fail_if": [
+        "paraphrases the people-decision notice before the tool returns",
+        "omits people_decision: true"
+      ]
     }
-  ]
+  ],
+  "with_without_result": {
+    "date": "2026-10-25",
+    "pack": "0.3.1",
+    "with": 6,
+    "without": 4,
+    "max": 8,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+  }
 }

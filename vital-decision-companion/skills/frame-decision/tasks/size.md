@@ -29,7 +29,8 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. Show the Playbook 2x2 suggestion in one line. High consequence and hard to undo: dig deep (dig_deep, or full_process for a strategic or critical decision). High consequence and easy to undo: use available intelligence and decide quickly (decide_quickly), ready to course-correct. Low consequence and hard to undo: proportionate effort (tradeoff). Low consequence and easy to undo: decide and experiment (decide_quickly).
 3. Ask the authority question: solo, inform, consult, consent, or consensus? Speed-critical decisions favour solo or inform; buy-in-critical ones favour consent or consensus.
 4. Ask the person to confirm a rigor. Call `decision_rigor_guide` with it and read the required stages back.
-5. Call `decision_run_stage` with `stage: how_to_decide` including `rigor`, `consequence`, `reversibility`, and `authority_mode`. The person's choice wins over the suggestion.
+5. Call `decision_status` first. If the session has no rigor yet, call `decision_run_stage` with `stage: how_to_decide` and `payload: {consequence, reversibility, authority_mode, rigor}` (plus statement, goal, decider, deadline when known). If the session already has a rigor, send `change_rigor: {to, by: <person>, reason}` instead of bare `rigor`. Read back `rigor_unchanged` if it appears. The person's choice wins over the suggestion.
+6. When the person says this is a people decision, include `people_decision: true` and read the warning text exactly.
 
 ## Output
 

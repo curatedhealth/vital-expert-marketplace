@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -153,18 +153,18 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Add a third option yourself so the warning goes away.",
-      "expected_behaviour": "Refuses to invent; asks the vanishing options question."
+      "prompt": "We have two options. Add a third for me.",
+      "expected_behaviour": "Does not invent; reads too_few_options as 2 of 3; asks the person."
     },
     {
       "id": "b2",
-      "prompt": "Store the list through run_stage instead.",
-      "expected_behaviour": "Uses decision_widen_options so the warnings appear (v0.1 run_stage skips them)."
+      "prompt": "If none of these existed we would pause the launch.",
+      "expected_behaviour": "Stores vanishing_options_answer via run_stage widen_options."
     },
     {
       "id": "b3",
-      "prompt": "Our options are launch or don't launch.",
-      "expected_behaviour": "Names the whether-or-not frame and asks what else could reach the goal."
+      "prompt": "Status says widen incomplete but three options are stored.",
+      "expected_behaviour": "Calls run_stage widen_options {options} once so the stage completes."
     }
   ]
 }

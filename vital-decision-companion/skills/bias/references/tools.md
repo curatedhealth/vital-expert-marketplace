@@ -8,16 +8,12 @@
 
 Arguments: optional decision_type, optional session_id.
 
-Returns: risks (id, name, types, countermeasure) and draft true.
+Returns: matched bias items (draft). May include stages[] and contested. On unknown_decision_type, returns valid_types — ask the person.
 
-Pitfall: Saying "no material bias" is a clearance the tool does not return.
+## Connector version
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- none
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Gap / code `unknown_decision_type` | Read valid_types; ask which type. |
+| Pack returns stages[] and contested | Prefer tool items; keep contested label. |
+| Empty card for a known type | Say the card has no entry for that type, not that no bias applies. |

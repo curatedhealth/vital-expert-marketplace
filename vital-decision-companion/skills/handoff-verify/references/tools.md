@@ -6,19 +6,14 @@
 
 ## decision_handoff_verify
 
-Arguments: session_id, claims list. Verify tools keep their own arguments.
+Arguments: session_id, claims. Prefer `claims[] {text, source_url, passage, raised_by}` when the person has them; plain strings otherwise.
 
-Returns: handoff.product verify, key_prefix vvfy_, next_tools qualify_source and check_claim, called_verify false.
+Returns: handoff packet with `steps[]`. Follow steps: `qualify_source`, then `check_claim`. On `source_missing`, ask for the source. Never say supported without a qualified source and a check_claim result.
 
-Pitfall: Writing "supported" because the note sounds right bypasses check_claim.
+## Connector version
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- `qualify_source`
-- `check_claim`
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Structured claims accepted | Send claims[] objects with text, source_url, passage, raised_by. |
+| Strings only | Send claim strings; still follow qualify then check. |
+| Gap `source_missing` | Ask for the source. Never say supported. |

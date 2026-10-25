@@ -8,7 +8,7 @@ Person asks for a vendor example. UC05. First beat: write the job the vendor mus
 
 ## Pattern 2
 
-Person asks for UC03. card is null. Say the v0.1 set is UC01, UC02, and UC05.
+Person asks for UC03. card is null. Say the connector set is UC01, UC02, and UC05.
 
 ## Pattern 3
 

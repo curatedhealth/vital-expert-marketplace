@@ -3,8 +3,6 @@
 
 # Cost criterion, no winner
 
-Criteria: cost. Rater Ada gives Agency A a 3.
+Criteria: cost (direction lower_better). Rater Ada gives Agency A value 3.
 
-The tool returns winner null and shared_tool methods_mcda_rank on vital-ontology-navigator. The coach does not announce a winner.
-
-Closing: This coaching draft is for the named person. It is not the decision, and it is not medical, legal, or regulatory clearance.
+The call uses ratings [{option, criterion, value, rater}]. The tool returns winner null and shared_tool methods_mcda_rank on vital-ontology-navigator. The coach does not announce a winner.

@@ -25,10 +25,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Ask only for what is missing, one field per turn: the review date in the person's words; the success signal (what observable result would show it worked); the expected outcome; how likely they think it is, as their own percentage; the two or three assumptions that must hold; and the name of the person recording it.
-2. Call `decision_run_stage` with `stage: learning_loop` and `payload: {review_date, success_signal, authored_by, expected_outcome, probability, key_assumptions}`. `review_date`, `success_signal`, and `authored_by` are required by the connector. Send the optional fields only when the person gave them.
+1. Ask only for what is missing, one field per turn: the review date in the person's words; the success signal (what observable result would show it worked); how likely they think it is, as their own percentage (store as probability 0–1); the two or three assumptions that must hold; and the name of the person recording it.
+2. Call `decision_run_stage` with `stage: learning_loop` and `payload: {review_date, success_signal, authored_by, probability, key_assumptions}`. Send `success_signal` only — never also `expected_outcome` (it is an alias and they collide). `review_date`, `success_signal`, and `authored_by` are required.
 3. If the result is `refused:` and `authored_by` is a person's name, say the connector rejected the author field and ask the person to confirm the name. Do not retry with another name and do not use the assistant.
-4. If the result says required fields missing, name the three required fields back to the person. The v0.1 connector does not name them.
+4. If the result says required fields missing, name the three required fields back to the person.
 5. Do not invent a KPI, a date, or a probability. A missing value stays `[GAP]`.
 
 ## Output

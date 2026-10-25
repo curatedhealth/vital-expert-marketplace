@@ -21,3 +21,11 @@ Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
 - `decision_run_stage`
 
 These tools stay on their own connector. This skill does not reimplement them.
+
+## Connector version
+
+| Condition | What to do |
+|---|---|
+| Gap `role_only_name` on Decide | Ask who the person is. |
+| Advise / Inform / Implement as role-only | Allowed only if the person insists; say unverified. |
+

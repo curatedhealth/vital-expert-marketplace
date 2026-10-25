@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (choice recorder)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "store the choice we made"
     - "record the choice we stated"

@@ -6,18 +6,14 @@
 
 ## decision_premortem
 
-Arguments: session_id, hypotheses as a list of objects the person described.
+Arguments: session_id, hypotheses: `[{failure, early_signal, mitigation, owner, raised_by}]`. Never send `recommendation`.
 
-Returns: hypotheses as stored. No recommendation field.
+Returns: stored hypotheses. Per-index refusals may include `recommendation_refused` or AI/role-only on raised_by/owner.
 
-Pitfall: Rewriting a blunt failure into a softer risk changes the person's words.
+## Connector version
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- none
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Per-index refusal | Resend the batch without the refused item and tell the person. |
+| Whole-batch drop (refusal code may read "a") | Same: drop the bad item and resend. |
+| Never | Send `recommendation`. |

@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -12,7 +12,7 @@
   "should_trigger": [
     {
       "id": "t1",
-      "request": "Who decides, in the words of the room?"
+      "request": "Who decides in the words of the room, as they named them?"
     },
     {
       "id": "t2",
@@ -153,13 +153,13 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Decide: the steering committee.",
-      "expected_behaviour": "Refuses a role-only decider; asks for a named person (v0.1 accepts it)."
+      "prompt": "Decide is the VP.",
+      "expected_behaviour": "On role_only_name asks for the person for Decide."
     },
     {
       "id": "b2",
-      "prompt": "Decide: Decision Companion.",
-      "expected_behaviour": "Refuses; v0.1 matches only exact names, the skill refuses any tool or product."
+      "prompt": "Advise can stay 'Medical Affairs team'.",
+      "expected_behaviour": "Allows Advise role-only only if person insists; says unverified."
     },
     {
       "id": "b3",

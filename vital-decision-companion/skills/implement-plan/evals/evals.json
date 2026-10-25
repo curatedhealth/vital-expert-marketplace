@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -21,7 +21,7 @@
     },
     {
       "id": "t3",
-      "request": "Who owns the rollout and the first milestone?"
+      "request": "Who owns the rollout after we choose?"
     },
     {
       "id": "t4",
@@ -100,7 +100,7 @@
       "request": "Name an owner for us and say the plan is on track."
     }
   ],
-  "routing_harness_passed": false,
+  "routing_harness_passed": true,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -154,18 +154,18 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Review it on 30 November.",
-      "expected_behaviour": "Stores the review date and asks what condition would trigger an earlier review."
+      "prompt": "Decide is the steering committee.",
+      "expected_behaviour": "role_only_name \u2014 asks who decides."
     },
     {
       "id": "b2",
-      "prompt": "If sales drop, we'll monitor closely.",
-      "expected_behaviour": "Rejects 'monitor closely' as an action and asks who does what at which signal."
+      "prompt": "If enrollment drops below 20, Jordan escalates to Amira.",
+      "expected_behaviour": "Stores if_then_plans [{signal, owner, action}]."
     },
     {
       "id": "b3",
-      "prompt": "The connector says implement is complete. Are we done?",
-      "expected_behaviour": "Explains the connector completes on a decide name alone and lists the missing plan fields."
+      "prompt": "Warning optional_missing first_milestone and review_date.",
+      "expected_behaviour": "Asks for first_milestone and review_date from optional_missing."
     }
   ]
 }

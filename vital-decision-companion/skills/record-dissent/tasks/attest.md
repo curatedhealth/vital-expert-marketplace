@@ -5,10 +5,10 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (dissent). Does not choose the option and does not sign. |
-| Workflow | Ask who attests, store the attestation, stop. |
+| Workflow | Ask who attests (one question), store the attestation, stop. |
 | Skill | DC-4.6 Record dissent |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
-| Tool | Decision Companion `decision_attach_notes`; see the companion slot |
+| Tool | Decision Companion `decision_attach_notes`; optional `decision_run_stage` |
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
@@ -25,9 +25,9 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Ask: has everyone who will implement or be affected had a chance to object? Who confirms there is no dissent?
-2. Silence is not attestation. Store only with a named person.
-3. Call `decision_attach_notes` with `stage: make_decision`, `source: owner`, `notes: "No dissent — attested by <name>"`.
+1. Ask exactly one question: **Who confirms there is no dissent?** Store nothing until there is a named answer. Silence is not attestation. Do not combine this with a second question in the same turn.
+2. With a named person, call `decision_attach_notes` with `stage: make_decision`, `source: owner`, `notes: "No dissent — attested by <name>"`.
+3. When merge semantics are available (see capture task), also `decision_run_stage` with `payload: {no_dissent_attested_by: <name>}` and **never** `replace: true`.
 
 ## Output
 

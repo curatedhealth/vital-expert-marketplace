@@ -13,7 +13,7 @@ metadata:
   family: "gather-intelligence"
   worker: "Decision coach (notes)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "what do we already know"
     - "what is still unknown"

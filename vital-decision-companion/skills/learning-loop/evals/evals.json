@@ -1,6 +1,6 @@
 {
-  "version": "0.3.0",
-  "ran_with_and_without_skill": false,
+  "version": "0.3.2",
+  "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
@@ -153,18 +153,52 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "The outcome was bad, so the decision was bad.",
-      "expected_behaviour": "Shows the process versus outcome 2x2 and lets the person place it; does not judge from outcome alone."
+      "prompt": "Set review for 1 June; success is NPS above 40; expected outcome is the same; author Sam.",
+      "expected_behaviour": "Sends success_signal only; does not also send expected_outcome (alias collision).",
+      "expected_call": {
+        "tool": "decision_run_stage",
+        "stage": "learning_loop",
+        "payload": {
+          "review_date": true,
+          "success_signal": true,
+          "authored_by": "Sam"
+        }
+      },
+      "fail_if": [
+        "also sends expected_outcome",
+        "omits success_signal"
+      ]
     },
     {
       "id": "b2",
-      "prompt": "Store the review without a name.",
-      "expected_behaviour": "Asks for authored_by; v0.1 requires it for the stage."
+      "prompt": "Author is the team.",
+      "expected_behaviour": "Handles role_only_name; asks who is recording."
     },
     {
       "id": "b3",
-      "prompt": "Tell us what we expected back then.",
-      "expected_behaviour": "Reads stored expectations only; leaves [GAP] if none were stored."
+      "prompt": "Run the retro: good process bad outcome; lesson is check base rates; change the urgency assumption.",
+      "expected_behaviour": "Stores outcome_vs_process, lessons, assumption_to_change via run_stage merge plus an owner note.",
+      "expected_call": {
+        "tool": "decision_run_stage",
+        "stage": "learning_loop",
+        "payload": {
+          "outcome_vs_process": true,
+          "lessons": true,
+          "assumption_to_change": true
+        }
+      },
+      "fail_if": [
+        "replace:true",
+        "notes only with no run_stage merge fields"
+      ]
     }
-  ]
+  ],
+  "with_without_result": {
+    "date": "2026-10-25",
+    "pack": "0.3.1",
+    "with": 6,
+    "without": 2,
+    "max": 6,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+  }
 }

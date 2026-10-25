@@ -13,7 +13,7 @@ metadata:
   family: "how-to-decide"
   worker: "Decision coach (process depth)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "how rigorous should this be"
     - "can we skip a stage"

@@ -29,8 +29,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. Ask, one per turn, only what is missing: Who is the single owner? What happens in the next 48 hours (first milestone)? What are the key actions? Who must be told, when, and how (communication plan)? What does the person need first (resources, dependencies)? When will we review progress? What would make us revisit the decision (review trigger)?
 3. A review trigger is a condition, not a date: for example a metric crossing a threshold the person names. If they give only a date, ask what condition would bring the review forward.
 4. If DAI-I decide is empty, run daii first.
-5. Call `decision_run_stage` with `stage: implement` and `payload: {roles: {decide, advise, inform, implement}, owner, first_milestone, key_actions, communication_plan, review_date, review_trigger}`. Send only what the person gave.
+5. Call `decision_run_stage` with `stage: implement` and `payload: {roles: {decide, advise, inform, implement}, owner, first_milestone, key_actions, communication_plan, review_date, review_trigger, if_then_plans: [{signal, owner, action}]}`. Send only what the person gave.
 
 ## Output
 
 Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+
+Read `optional_missing` warnings (first_milestone, review_date) and ask for them. On `role_only_name`, ask who the person is.

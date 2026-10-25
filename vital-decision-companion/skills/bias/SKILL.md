@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (bias card)"
   pack: vital-decision-companion
-  version: 0.3.0
+  version: 0.3.2
   route:
     - "which bias is in the room"
     - "confirmation bias card"

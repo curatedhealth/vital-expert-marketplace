@@ -6,18 +6,15 @@
 
 ## decision_classify
 
-Arguments: statement (required), optional session_id.
+Arguments: statement (required), optional session_id, optional confirmed, confirmed_by.
 
-Returns: decision_type, recommended_rigor, rationale, draft true, gaps, next_stage how_to_decide.
+Returns: draft type and rigor suggestion. Session decision_type is set only when confirm fields are accepted (or via run_stage with decision_type and type_confirmed_by).
 
-Pitfall: Storing rigor before the person confirms writes a draft over their process.
+## Connector version
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- `decision_run_stage`
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| Host has confirmed / confirmed_by | Call `decision_classify {confirmed:true, confirmed_by}`. |
+| Host lacks confirm fields but run_stage accepts decision_type | `run_stage how_to_decide {decision_type, type_confirmed_by}`. |
+| Neither path available | Owner note "Type confirmed: <type> by <name>". Say bias card is unfiltered. |
+| Claim type is set | Only when decision_status shows a non-null decision_type. |

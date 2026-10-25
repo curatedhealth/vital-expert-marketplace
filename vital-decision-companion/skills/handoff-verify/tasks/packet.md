@@ -31,3 +31,5 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Output
 
 Match `assets/worksheet-output.md`. Then the closing line.
+
+On `source_missing`, ask for the source. Never say supported.

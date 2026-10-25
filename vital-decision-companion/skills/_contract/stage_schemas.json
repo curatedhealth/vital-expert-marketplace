@@ -1,0 +1,240 @@
+{
+  "version": "0.3.1",
+  "product_version": "0.3.0",
+  "content_pack": "2026-10-26.1",
+  "source": "mcps/decision_companion/docs/stage_schemas_v0.3.0.json",
+  "generated_from_lane_a": true,
+  "stage_schemas": {
+    "how_to_decide": {
+      "required": [
+        "statement",
+        "goal",
+        "decider",
+        "deadline"
+      ],
+      "optional": [
+        "core_issue",
+        "consequence",
+        "reversibility",
+        "criteria",
+        "authority_mode",
+        "values",
+        "assumptions",
+        "metaphors",
+        "ripple_effects",
+        "rigor",
+        "change_rigor",
+        "decision_type",
+        "type_confirmed_by",
+        "people_decision",
+        "gaps"
+      ],
+      "aliases": {
+        "statement": [
+          "decision_statement",
+          "decision",
+          "question"
+        ],
+        "goal": [
+          "objective"
+        ],
+        "decider": [
+          "decide",
+          "who_decides"
+        ],
+        "deadline": [
+          "by_when"
+        ],
+        "core_issue": [
+          "core",
+          "core_of_issue"
+        ]
+      },
+      "notes": "Required: statement, goal, decider, deadline. Rigor is optional on first set; later changes need change_rigor. decision_type and type_confirmed_by confirm the session type."
+    },
+    "widen_options": {
+      "required": [],
+      "optional": [
+        "options",
+        "vanishing_options_answer",
+        "opportunity_cost",
+        "outside_view",
+        "gaps"
+      ],
+      "aliases": {},
+      "notes": "Complete when the session has \u22653 named options. Code too_few_options when fewer."
+    },
+    "gather_intelligence": {
+      "required": [
+        "knowns",
+        "unknowns",
+        "disconfirming_question"
+      ],
+      "optional": [
+        "sources",
+        "base_rate",
+        "what_must_be_true",
+        "who_else_in_room",
+        "intuition_note",
+        "gaps"
+      ],
+      "aliases": {},
+      "notes": "Required: knowns, unknowns, disconfirming_question."
+    },
+    "make_decision": {
+      "required": [
+        "chosen_option",
+        "authored_by"
+      ],
+      "optional": [
+        "rationale",
+        "confidence_pct",
+        "saying_no_to",
+        "trade_offs",
+        "tool_used",
+        "dissent",
+        "no_dissent_attested_by",
+        "gaps"
+      ],
+      "aliases": {
+        "chosen_option": [
+          "chosen_option_id"
+        ],
+        "authored_by": [
+          "decided_by",
+          "chosen_by",
+          "author"
+        ]
+      },
+      "notes": "chosen_option must exist in session options when options are present. authored_by must be a person (role-only is refused). dissent[] is {holder, text}; no_dissent_attested_by is a person field."
+    },
+    "implement": {
+      "required": [],
+      "optional": [
+        "roles",
+        "owner",
+        "first_milestone",
+        "review_date",
+        "review_trigger",
+        "communication_plan",
+        "key_actions",
+        "dependencies",
+        "resources",
+        "success_metrics",
+        "if_then_plans",
+        "gaps"
+      ],
+      "aliases": {},
+      "notes": "Complete when session.roles.decide is a named person. Shared with how_to_decide.decider and daii_plan."
+    },
+    "learning_loop": {
+      "required": [
+        "review_date",
+        "success_signal",
+        "authored_by"
+      ],
+      "optional": [
+        "probability",
+        "key_assumptions",
+        "what_happened",
+        "process_quality_note",
+        "outcome_vs_process",
+        "lessons",
+        "assumption_to_change",
+        "gaps",
+        "invented"
+      ],
+      "aliases": {
+        "success_signal": [
+          "expected_outcome"
+        ],
+        "authored_by": [
+          "decided_by",
+          "chosen_by",
+          "author"
+        ]
+      },
+      "notes": "review_date and success_signal (alias expected_outcome) plus authored_by person."
+    }
+  },
+  "scale_presets": {
+    "playbook_1_5": {
+      "min": 1,
+      "max": 5,
+      "name": "playbook_1_5"
+    },
+    "evidem_0_4": {
+      "min": 0,
+      "max": 4,
+      "name": "evidem_0_4"
+    },
+    "navigator_1_10": {
+      "min": 1,
+      "max": 10,
+      "name": "navigator_1_10"
+    }
+  },
+  "default_scale": {
+    "min": 1,
+    "max": 5,
+    "name": "playbook_1_5"
+  },
+  "matrix_cell": {
+    "required": [
+      "option",
+      "criterion",
+      "value",
+      "rater"
+    ],
+    "optional": []
+  },
+  "matrix_criterion": {
+    "required": [
+      "name"
+    ],
+    "optional": [
+      "weight",
+      "direction"
+    ]
+  },
+  "matrix_scale": {
+    "optional": [
+      "min",
+      "max",
+      "name"
+    ]
+  },
+  "classify_confirm": {
+    "optional": [
+      "confirmed",
+      "confirmed_by",
+      "statement",
+      "session_id"
+    ]
+  },
+  "codes": {
+    "refusals_and_gaps": [
+      "stage_order",
+      "role_only_name",
+      "rater_missing",
+      "too_few_options",
+      "recommendation_refused",
+      "unknown_option",
+      "people_decision",
+      "invalid_cell",
+      "unknown_decision_type",
+      "source_missing"
+    ],
+    "warnings": [
+      "fields_removed",
+      "cell_replaced",
+      "store_not_durable",
+      "stage_skipped",
+      "rigor_unchanged",
+      "optional_missing",
+      "alias_conflict",
+      "deprecated_alias",
+      "unknown_fields"
+    ]
+  }
+}

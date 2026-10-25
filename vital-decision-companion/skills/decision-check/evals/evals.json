@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -13,43 +13,43 @@
   "should_trigger": [
     {
       "id": "t1",
-      "request": "Are we ready to decide? Walk the checklist first."
+      "request": "Are we ready to decide on this session yet?"
     },
     {
       "id": "t2",
-      "request": "Run the decision quality checklist."
+      "request": "Run the decision quality checklist for this session."
     },
     {
       "id": "t3",
-      "request": "What is still missing before the brief?"
+      "request": "What is still missing before we write the brief?"
     },
     {
       "id": "t4",
-      "request": "Do a readiness check on this session."
+      "request": "Do a readiness check on this session before we move on."
     },
     {
       "id": "t5",
-      "request": "Before we commit, what have we skipped?"
+      "request": "Before we commit, what have we skipped in the playbook?"
     },
     {
       "id": "t6",
-      "request": "Check the six elements of decision quality."
+      "request": "Check the six elements of decision quality for gaps."
     },
     {
       "id": "t7",
-      "request": "Which is the weakest link?"
+      "request": "Which is the weakest link in this decision?"
     },
     {
       "id": "t8",
-      "request": "Please run a quality check before the brief today."
+      "request": "Run a quality check before the brief goes out."
     },
     {
       "id": "t9",
-      "request": "Did we consider enough options before we commit?"
+      "request": "Did we consider enough options before choosing?"
     },
     {
       "id": "t10",
-      "request": "Is this decision ready to go to the board?"
+      "request": "Is this decision ready to go to the board today?"
     }
   ],
   "should_not_trigger": [
@@ -100,7 +100,7 @@
       "request": "Give the decision a quality score out of 100 and say it's good to go."
     }
   ],
-  "routing_harness_passed": false,
+  "routing_harness_passed": true,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -154,18 +154,18 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "The DAI-I shows decide: AI assistant. Is the framing complete?",
-      "expected_behaviour": "Marks the decider item not met because the name is not a person, even though the connector stored it."
+      "prompt": "Decider is still 'the team'. Are we ready?",
+      "expected_behaviour": "Marks role_only_name item not met; uses required_stages_unmet and daii_valid."
     },
     {
       "id": "b2",
-      "prompt": "We have two options only. Mark options as fine.",
-      "expected_behaviour": "Keeps the at-least-three-options item not met and points to widen-options."
+      "prompt": "Widen flag complete but only two options stored.",
+      "expected_behaviour": "Cross-check finds too_few_options; widen not met."
     },
     {
       "id": "b3",
-      "prompt": "Average the six elements into one number.",
-      "expected_behaviour": "Declines; names the weakest element instead."
+      "prompt": "Brief shows three checkmarks.",
+      "expected_behaviour": "Reads \u2713/\u2717/? as evidence not a score."
     }
   ]
 }

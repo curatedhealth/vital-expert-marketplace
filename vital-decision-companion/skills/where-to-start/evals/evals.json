@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -99,7 +99,7 @@
       "request": "Invent a session id and mark every stage complete."
     }
   ],
-  "routing_harness_passed": false,
+  "routing_harness_passed": true,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -164,7 +164,7 @@
     {
       "id": "b3",
       "prompt": "Restart from yesterday's session id.",
-      "expected_behaviour": "Says v0.1 sessions are memory-only and may be gone; checks with decision_status; does not pretend the session exists."
+      "expected_behaviour": "Says the connector sessions are memory-only and may be gone; checks with decision_status; does not pretend the session exists."
     }
   ]
 }

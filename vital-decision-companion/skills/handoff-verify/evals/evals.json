@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -153,13 +153,13 @@
   "behavioural_evals": [
     {
       "id": "b1",
-      "prompt": "Skip qualify_source and just check the claim.",
-      "expected_behaviour": "Runs qualify_source first; check_claim without an admitted source returns unverifiable."
+      "prompt": "Check this claim with a URL and passage.",
+      "expected_behaviour": "Sends claims[] {text, source_url, passage, raised_by}; qualify_source then check_claim."
     },
     {
       "id": "b2",
-      "prompt": "Verify says supported, so the decision is right.",
-      "expected_behaviour": "Says a status is overlap with a passage, not proof the decision is right."
+      "prompt": "Tool returned source_missing.",
+      "expected_behaviour": "Asks for the source; never says supported."
     },
     {
       "id": "b3",

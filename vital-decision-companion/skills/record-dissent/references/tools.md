@@ -4,22 +4,27 @@
 
 `decision_attach_notes` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
 
+## decision_status (first)
+
+Arguments: session_id, `include_schemas: true`.
+
+Use the returned `stage_schemas.make_decision.optional`: if it contains `no_dissent_attested_by`, merge semantics are present (v0.3).
+
 ## decision_attach_notes
 
-Arguments: session_id, stage make_decision, notes ("Dissent — holder: <name>. <words>" or "No dissent — attested by <name>"), source participant or owner.
+Arguments: session_id, stage make_decision, notes (dissent or no-dissent template), source (`participant` | `owner`).
 
-Returns: stored_length and draft. The note is stored on the stage and is not a choice.
+This path always works. Always keep the participant/owner note.
 
-Pitfall: Writing dissent with source draft marks it as AI-drafted. Use participant for a holder's own words.
+## decision_run_stage (make_decision) — merge path only
 
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
+Optional: `dissent: [{holder, text}]` or `no_dissent_attested_by`. Never send `replace: true`.
 
-In the governed Navigator record, dissent is written with `decide_record_dissent` on `vital-ontology-navigator` with a `vont_` key and a person_name. Decision Companion does not call it.
+## Connector version
 
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-24.1`.
-
-## Also named
-
-- `decide_record_dissent`
-
-These tools stay on their own connector. This skill does not reimplement them.
+| Condition | What to do |
+|---|---|
+| First | `decision_status {include_schemas: true}`. |
+| `no_dissent_attested_by` in make_decision.optional | Merge path: notes + dissent[] / no_dissent_attested_by without replace. |
+| Field absent (v0.2) | Notes only. Do not call make_decision for dissent. |
+| Always | Never `replace: true`. |
