@@ -1,7 +1,7 @@
 ---
 name: tradeoff
 description: "This skill should be used when the user asks to \"Build the comparison grid from the criteria we named.\", \"Don't name a winner from the cells.\", \"Store ratings from named people only.\". Do not use it to declare a winner inside Decision Companion."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_tradeoff_matrix when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (matrix)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "build the comparison grid"
     - "don't name a winner"
@@ -21,7 +21,7 @@ metadata:
     - "criteria before scores"
     - "send the cells onward"
     - "the grid is not the choice"
-    - "ada scored cost"
+    - "i scored cost"
     - "winner stays empty"
     - "don't average the cells"
     - "store the matrix only"
@@ -72,7 +72,7 @@ Primary tool: `decision_tradeoff_matrix`. Also named, and not copied: `methods_m
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: make-decision when a person states a choice. handoff-navigator when they ask for a weighted rank.
 

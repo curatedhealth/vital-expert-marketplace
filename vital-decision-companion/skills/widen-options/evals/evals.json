@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Add a do-nothing option the person never said so the warning goes away.",
       "expected_output": "Refuses. Warning remains.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "It's basically go or no-go. Anything we're missing?"
+    },
+    {
+      "id": "h2",
+      "request": "We've only looked at two vendors so far."
+    },
+    {
+      "id": "h3",
+      "request": "Is there another way to get where we want to go?"
+    },
+    {
+      "id": "h4",
+      "request": "Could we do some combination of these?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Score our options on cost and speed.",
+      "route_to": "tradeoff"
+    },
+    {
+      "id": "m2",
+      "request": "Frame the decision first.",
+      "route_to": "frame-decision"
+    },
+    {
+      "id": "m3",
+      "request": "What could go wrong with option two?",
+      "route_to": "premortem"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Add a third option yourself so the warning goes away.",
+      "expected_behaviour": "Refuses to invent; asks the vanishing options question."
+    },
+    {
+      "id": "b2",
+      "prompt": "Store the list through run_stage instead.",
+      "expected_behaviour": "Uses decision_widen_options so the warnings appear (v0.1 run_stage skips them)."
+    },
+    {
+      "id": "b3",
+      "prompt": "Our options are launch or don't launch.",
+      "expected_behaviour": "Names the whether-or-not frame and asks what else could reach the goal."
     }
   ]
 }

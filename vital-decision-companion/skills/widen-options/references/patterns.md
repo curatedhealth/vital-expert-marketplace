@@ -2,14 +2,20 @@
 
 # Patterns for Widen options
 
+Sources for the method: the Playbook Widen Options stage (Part 7: and what else, vanishing options, opportunity cost, both-and); Nutt (1999, 2002) on whether-or-not decisions; Heath & Heath, Decisive (2013); Kahneman & Lovallo (1993) on the outside view.
+
 ## Pattern 1
 
-Two agencies named. Warning fewer than 3 and do-nothing missing. Ask what doing nothing looks like.
+Person lists: launch or do not launch. Name the whether-or-not frame and ask what else could reach the goal.
 
 ## Pattern 2
 
-Person says "do it internally." Add that name on the next call. Do not paraphrase it into a program.
+Person lists three vendors and no do-nothing. Ask what happens if they keep the current setup.
 
 ## Pattern 3
 
-Three names including do nothing and an internal team. Warnings clear. Stage can complete.
+Person cannot add an option. Ask: if all three vendors vanished tomorrow, what would you do?
+
+## Pattern 4
+
+Person names two options that could combine. Ask whether doing both is a real option.

@@ -1,6 +1,6 @@
 # Rules for Handoff to Verify
 
-Pack: vital-decision-companion. Method version: 0.2.0. Content pack: 2026-10-24.1.
+Pack: vital-decision-companion. Method version: 0.3.0. Content pack: 2026-10-24.1.
 
 - **R1.** Call decision_handoff_verify with session_id and the claims the person listed. called_verify is false.
 - **R2.** next_tools are qualify_source and check_claim. Call them on vital-verify, in that order.

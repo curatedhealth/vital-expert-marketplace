@@ -25,7 +25,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_brief`.
+1. Call `decision_build_brief`.
 2. Copy only stored fields. Leave gaps visible. Do not sign.
 
 ## Output

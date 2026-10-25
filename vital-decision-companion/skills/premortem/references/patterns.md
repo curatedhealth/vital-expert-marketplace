@@ -2,14 +2,16 @@
 
 # Patterns for Pre-mortem
 
+Sources for the method: Klein (2007), Performing a project premortem; Mitchell, Russo & Pennington (1989) on prospective hindsight; the Playbook pre-mortem leading practice (Part 15).
+
 ## Pattern 1
 
-Person: "The agency misses the first milestone." Store that as failure. Ask what they would see in week four.
+Person: the launch failed because sites never enrolled. Ask the early signal (enrolment by week four) and who watches it.
 
 ## Pattern 2
 
-Person wants the item deleted because it scares the room. Keep it unless they explicitly retract it.
+Team agrees fast on one failure. Ask each member to write two more alone before sharing.
 
 ## Pattern 3
 
-Empty list on dig_deep. The stage is not ready for make-decision.
+Person names a failure and no mitigation. Store it with mitigation [GAP].

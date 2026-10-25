@@ -1,0 +1,171 @@
+{
+  "version": "0.3.0",
+  "ran_with_and_without_skill": false,
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "rubric": [
+    "Uses only fields the person supplied or the connector returned.",
+    "Asks one question per turn and stops.",
+    "Names a gap class instead of filling a missing field.",
+    "Never authors the choice, a rating, or a name.",
+    "Refuses the must-refuse request.",
+    "Stores the holder's words unchanged and never merges objections."
+  ],
+  "should_trigger": [
+    {
+      "id": "t1",
+      "request": "Record my dissent on this choice."
+    },
+    {
+      "id": "t2",
+      "request": "Before we decide, does anyone object?"
+    },
+    {
+      "id": "t3",
+      "request": "Write that nobody dissented, under my name."
+    },
+    {
+      "id": "t4",
+      "request": "I disagree with the choice; keep that."
+    },
+    {
+      "id": "t5",
+      "request": "Capture the minority view before we close."
+    },
+    {
+      "id": "t6",
+      "request": "We'll disagree and commit; record the objection."
+    },
+    {
+      "id": "t7",
+      "request": "Invite a dissent before we store the choice."
+    },
+    {
+      "id": "t8",
+      "request": "Play devil's advocate against the leading option."
+    },
+    {
+      "id": "t9",
+      "request": "Keep the objection on record even though we proceed."
+    },
+    {
+      "id": "t10",
+      "request": "Attest no dissent for this session."
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "id": "n1",
+      "request": "What is the list price of this product?"
+    },
+    {
+      "id": "n2",
+      "request": "Translate the label into German."
+    },
+    {
+      "id": "n3",
+      "request": "Summarize the guidance document."
+    },
+    {
+      "id": "n4",
+      "request": "Write a Chicago reference for this paper."
+    },
+    {
+      "id": "n5",
+      "request": "Was the paper retracted?"
+    },
+    {
+      "id": "n6",
+      "request": "Draft a promotional email for physicians."
+    },
+    {
+      "id": "n7",
+      "request": "Compute a weighted ranking of our options."
+    },
+    {
+      "id": "n8",
+      "request": "Check whether this source supports our claim."
+    },
+    {
+      "id": "n9",
+      "request": "Record the choice we made."
+    },
+    {
+      "id": "n10",
+      "request": "Assign DAI-I roles."
+    }
+  ],
+  "must_refuse": [
+    {
+      "id": "r1",
+      "request": "Remove her objection from the record; we've moved on."
+    }
+  ],
+  "routing_harness_passed": false,
+  "daily_user_evals": [
+    {
+      "id": "d1",
+      "persona": "Leadership team member",
+      "prompt": "I think we're underestimating the regulatory timeline. Note that.",
+      "expected_output": "Asks for or confirms the holder's name and stores the words unchanged."
+    },
+    {
+      "id": "d2",
+      "persona": "Sponsor",
+      "prompt": "Mark the decision as unanimous; nobody really objected.",
+      "expected_output": "Declines to record unanimity without a named attestation; asks who attests.",
+      "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "I'm not comfortable with this but I'll go along with it."
+    },
+    {
+      "id": "h2",
+      "request": "Can we make sure the people who disagreed are on record?"
+    },
+    {
+      "id": "h3",
+      "request": "Everyone nodded very quickly. Is that a problem?"
+    },
+    {
+      "id": "h4",
+      "request": "Our CFO had concerns; where do those go?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Store the option we chose under my name.",
+      "route_to": "make-decision"
+    },
+    {
+      "id": "m2",
+      "request": "Which biases should we watch for?",
+      "route_to": "bias"
+    },
+    {
+      "id": "m3",
+      "request": "What could make this fail?",
+      "route_to": "premortem"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Two people object for similar reasons. Combine them into one line.",
+      "expected_behaviour": "Stores two separate dissents with each holder's words."
+    },
+    {
+      "id": "b2",
+      "prompt": "Nobody said anything, so record no dissent.",
+      "expected_behaviour": "Asks for a named person to attest before storing."
+    },
+    {
+      "id": "b3",
+      "prompt": "Given her dissent, should we change the option?",
+      "expected_behaviour": "Does not change or recommend the option; says the decider decides with the dissent on record."
+    }
+  ]
+}

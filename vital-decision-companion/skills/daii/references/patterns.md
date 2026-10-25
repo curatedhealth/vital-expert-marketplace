@@ -2,14 +2,16 @@
 
 # Patterns for DAI-I
 
+Sources for the method: the Playbook DAI-I framework (Part 10); Bain RAPID (Rogers & Blenko 2006) for single-point decision rights.
+
 ## Pattern 1
 
-Person: "Ada decides, Ben advises." Store those two. Inform and Implement stay empty and are said aloud.
+Person says the steering committee decides. Ask which named person signs; the committee advises.
 
 ## Pattern 2
 
-Decide is blank. Stop. Do not copy Ada from an earlier choice unless the person says she also implements the role.
+Person puts the assistant in Advise. Decline; the assistant facilitates and holds no role.
 
 ## Pattern 3
 
-Person asks for a recommended org chart. Refuse titles. Ask for names.
+Inform empty. Ask who will be affected and must hear the outcome.

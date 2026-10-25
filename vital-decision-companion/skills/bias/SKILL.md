@@ -1,7 +1,7 @@
 ---
 name: bias
 description: "This skill should be used when the user asks to \"Which bias is in the room, if we can name it?\", \"Read the confirmation bias card and the countermeasure.\", \"We are anchoring on the first number. What do we do?\". Do not use it to clear a bias, ignore a flagged risk, or pick the favorite option."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_bias_check when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (bias card)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "which bias is in the room"
     - "confirmation bias card"
@@ -40,6 +40,7 @@ Read the countermeasure and ask the person to do it. Refuse to declare the room 
 | Task | Use it when | Guide |
 |---|---|---|
 | Read the bias card | The person names a bias or asks which bias is in the room. | `tasks/read.md` |
+| By-hand bias prompts by stage | The tool card has no item for this stage or type. | `tasks/by-stage.md` |
 
 ## How deep to go
 
@@ -71,7 +72,7 @@ Primary tool: `decision_bias_check`. Also named, and not copied: none.
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: make-decision after the person has answered the countermeasure they choose to answer.
 
@@ -82,6 +83,7 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 | File | Role |
 |---|---|
 | `tasks/read.md` | Read the bias card |
+| `tasks/by-stage.md` | By-hand bias prompts by stage |
 | `references/tools.md` | Arguments and return fields |
 | `references/rules.md` | Skill rules |
 | `references/patterns.md` | Shapes, not facts |

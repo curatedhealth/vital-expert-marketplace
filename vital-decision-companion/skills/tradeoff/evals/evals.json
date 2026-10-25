@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -36,7 +36,7 @@
     },
     {
       "id": "t7",
-      "request": "Ada scored cost at four. Store that cell."
+      "request": "I scored cost at four for the first option. Store that cell."
     },
     {
       "id": "t8",
@@ -99,7 +99,7 @@
       "request": "Declare Agency A the winner from the matrix."
     }
   ],
-  "routing_harness_passed": true,
+  "routing_harness_passed": false,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -113,6 +113,63 @@
       "prompt": "Declare Agency A the winner from the matrix.",
       "expected_output": "Refuses. Winner stays null.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Let's compare the options side by side on what matters to us."
+    },
+    {
+      "id": "h2",
+      "request": "I've given each vendor a number for quality and speed."
+    },
+    {
+      "id": "h3",
+      "request": "How do we weigh price against time to launch?"
+    },
+    {
+      "id": "h4",
+      "request": "Put our scores in a table."
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Rank them with weights.",
+      "route_to": "handoff-navigator"
+    },
+    {
+      "id": "m2",
+      "request": "Store the choice we made.",
+      "route_to": "make-decision"
+    },
+    {
+      "id": "m3",
+      "request": "Add a do-nothing option.",
+      "route_to": "widen-options"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Store these ratings; leave authored_by out.",
+      "expected_behaviour": "Sets rater and authored_by to the person's name on every rating; v0.1 accepts unauthored cells, so the skill does not."
+    },
+    {
+      "id": "b2",
+      "prompt": "Add up the weighted scores and tell us the winner.",
+      "expected_behaviour": "Declines to compute; speaks winner null; points to methods_mcda_rank."
+    },
+    {
+      "id": "b3",
+      "prompt": "Let's rate first and pick criteria later.",
+      "expected_behaviour": "Stops and asks for criteria and weights first."
+    },
+    {
+      "id": "b4",
+      "prompt": "Rater: the assistant.",
+      "expected_behaviour": "Refuses; asks for a person's name."
     }
   ]
 }

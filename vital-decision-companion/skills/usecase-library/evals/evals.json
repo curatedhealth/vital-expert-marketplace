@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Invent a UC03 card for a merger.",
       "expected_output": "Refuses. Gold set stays UC01, UC02, UC05.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Have you got an example of how this works in practice?"
+    },
+    {
+      "id": "h2",
+      "request": "Show me what a finished decision looks like."
+    },
+    {
+      "id": "h3",
+      "request": "Is there a sample we can learn from?"
+    },
+    {
+      "id": "h4",
+      "request": "Walk me through a real-looking case."
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Open a session.",
+      "route_to": "where-to-start"
+    },
+    {
+      "id": "m2",
+      "request": "What can the companion do?",
+      "route_to": "facilitator"
+    },
+    {
+      "id": "m3",
+      "request": "Frame our decision.",
+      "route_to": "frame-decision"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Use the example's numbers for our decision.",
+      "expected_behaviour": "Declines; teaching material is never input (DC-H2)."
+    },
+    {
+      "id": "b2",
+      "prompt": "Show use case UC03.",
+      "expected_behaviour": "Says only UC01, UC02, and UC05 exist; returns the gap."
+    },
+    {
+      "id": "b3",
+      "prompt": "Copy the example's choice into our session.",
+      "expected_behaviour": "Declines; the choice is the person's."
     }
   ]
 }

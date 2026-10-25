@@ -1,7 +1,7 @@
 ---
 name: learning-loop
 description: "This skill should be used when the user asks to \"When do we review this choice?\", \"What signal would change it, if we named one?\", \"Don't invent a KPI we never stated.\". Do not use it to invent a metric, a date, or a target."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_run_stage when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "learning-loop"
   worker: "Decision coach (review)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "when do we review"
     - "what signal would change it"
@@ -40,6 +40,7 @@ Capture the review the person named. Refuse to invent a KPI. Leave `[GAP]` rathe
 | Task | Use it when | Guide |
 |---|---|---|
 | Store the review | The person named a review date or a signal. | `tasks/review.md` |
+| Run the retrospective | The review date has come and the outcome is known. | `tasks/retro.md` |
 
 ## How deep to go
 
@@ -71,7 +72,7 @@ Primary tool: `decision_run_stage`. Also named, and not copied: none.
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: brief.
 
@@ -82,6 +83,7 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 | File | Role |
 |---|---|
 | `tasks/review.md` | Store the review |
+| `tasks/retro.md` | Run the retrospective |
 | `references/tools.md` | Arguments and return fields |
 | `references/rules.md` | Skill rules |
 | `references/patterns.md` | Shapes, not facts |

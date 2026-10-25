@@ -1,7 +1,7 @@
 ---
 name: handoff-navigator
 description: "This skill should be used when the user asks to \"Score this on Navigator. Do not score it here.\", \"Put the weighted rank elsewhere, on Navigator.\", \"Hand the cells across to Ontology Navigator.\". Do not use it to recompute ODI, MCDA, a scenario, or a tornado inside Decision Companion."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_handoff_navigator when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "handoff"
   worker: "Decision coach (navigator handoff)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "score this on navigator"
     - "weighted rank elsewhere"
@@ -72,7 +72,7 @@ Primary tool: `decision_handoff_navigator`. Also named, and not copied: `decide_
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: make-decision once a person states a choice. The rank is an input, not the choice.
 

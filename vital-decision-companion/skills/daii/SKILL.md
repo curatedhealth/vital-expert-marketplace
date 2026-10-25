@@ -1,7 +1,7 @@
 ---
 name: daii
 description: "This skill should be used when the user asks to \"Who decides, in the words of the room?\", \"Who advises, and who only inputs?\", \"Who must be informed after the choice?\". Do not use it to assign a role to a model, to leave Decide empty, or to invent a job title."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_daii_plan when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "implement"
   worker: "Decision coach (roles)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "who decides"
     - "who advises"
@@ -71,7 +71,7 @@ Primary tool: `decision_daii_plan`. Also named, and not copied: `decision_run_st
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: learning-loop when the rigor requires it; otherwise brief.
 

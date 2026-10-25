@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Fill the unknown with a market share from memory.",
       "expected_output": "Refuses. Gap remains.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "What do we actually know versus what are we assuming?"
+    },
+    {
+      "id": "h2",
+      "request": "We need more facts before we choose; where do we start?"
+    },
+    {
+      "id": "h3",
+      "request": "How often do projects like this succeed elsewhere?"
+    },
+    {
+      "id": "h4",
+      "request": "What would change our mind?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Check whether this source supports the claim.",
+      "route_to": "handoff-verify"
+    },
+    {
+      "id": "m2",
+      "request": "Which bias is in the room?",
+      "route_to": "bias"
+    },
+    {
+      "id": "m3",
+      "request": "Score the options.",
+      "route_to": "tradeoff"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Fill in the base rate from what you know.",
+      "expected_behaviour": "Does not supply a figure; asks the person for a source or leaves [GAP]; points to Verify for checking."
+    },
+    {
+      "id": "b2",
+      "prompt": "We attached notes; is the stage complete?",
+      "expected_behaviour": "Explains v0.1 notes do not complete the stage; calls decision_run_stage with knowns, unknowns, disconfirming question."
+    },
+    {
+      "id": "b3",
+      "prompt": "Only show evidence for our favourite option.",
+      "expected_behaviour": "Asks the disconfirming question and keeps contrary evidence."
     }
   ]
 }

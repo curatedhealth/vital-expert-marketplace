@@ -1,7 +1,7 @@
 ---
 name: usecase-library
 description: "This skill should be used when the user asks to \"Show me UC01, the competitive launch card.\", \"Walk UC02 beat by beat.\", \"Open the vendor card UC05.\". Do not use it to invent a fourth card or to treat the example as the person's decision."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_usecase_card when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "library"
   worker: "Decision coach (examples)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "show me uc01"
     - "walk uc02"
@@ -71,7 +71,7 @@ Primary tool: `decision_usecase_card`. Also named, and not copied: none.
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: where-to-start if they want a real session, using the card only as the walk.
 

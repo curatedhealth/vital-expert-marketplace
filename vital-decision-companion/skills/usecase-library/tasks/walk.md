@@ -25,10 +25,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_usecase` with that id.
+1. Call `decision_usecase_card` with that id.
 2. Walk the beats. Label the card as teaching material.
 3. Do not copy its choice onto the person's session.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.

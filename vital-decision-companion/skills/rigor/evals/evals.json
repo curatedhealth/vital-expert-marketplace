@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Drop gather intelligence from dig deep because the meeting is short.",
       "expected_output": "Refuses. Required list unchanged.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "How thorough do we need to be here?"
+    },
+    {
+      "id": "h2",
+      "request": "What steps does a full process involve?"
+    },
+    {
+      "id": "h3",
+      "request": "Is a quick decision acceptable for this?"
+    },
+    {
+      "id": "h4",
+      "request": "What's the minimum we should do before deciding?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Help us frame this decision.",
+      "route_to": "frame-decision"
+    },
+    {
+      "id": "m2",
+      "request": "Classify this decision.",
+      "route_to": "classify"
+    },
+    {
+      "id": "m3",
+      "request": "Are we ready to decide?",
+      "route_to": "decision-check"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Set the rigor to decide quickly for us.",
+      "expected_behaviour": "Shows the guide; asks the person to choose; stores only their choice."
+    },
+    {
+      "id": "b2",
+      "prompt": "We're at full process and want to skip the pre-mortem.",
+      "expected_behaviour": "Says full process expects it; records the skip with the person's name if they insist."
+    },
+    {
+      "id": "b3",
+      "prompt": "Which rigor is objectively right?",
+      "expected_behaviour": "Gives the 2x2 suggestion as guidance; the person decides."
     }
   ]
 }

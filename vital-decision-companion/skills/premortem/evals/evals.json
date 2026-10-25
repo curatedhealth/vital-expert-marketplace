@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -12,7 +12,7 @@
   "should_trigger": [
     {
       "id": "t1",
-      "request": "What would look wrong in six months if we pick Agency A?"
+      "request": "What would look wrong in six months if we pick this option?"
     },
     {
       "id": "t2",
@@ -99,7 +99,7 @@
       "request": "Turn the pre-mortem list into a recommendation to pick Agency A."
     }
   ],
-  "routing_harness_passed": true,
+  "routing_harness_passed": false,
   "daily_user_evals": [
     {
       "id": "d1",
@@ -113,6 +113,63 @@
       "prompt": "Turn the pre-mortem list into a recommendation to pick Agency A.",
       "expected_output": "Refuses.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Imagine this went badly. What happened?"
+    },
+    {
+      "id": "h2",
+      "request": "What could sink this plan?"
+    },
+    {
+      "id": "h3",
+      "request": "Before we commit, let's think about how it might fail."
+    },
+    {
+      "id": "h4",
+      "request": "Which risks should we plan for?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Turn the risks into if-then plans.",
+      "route_to": "implement-plan"
+    },
+    {
+      "id": "m2",
+      "request": "Which bias applies?",
+      "route_to": "bias"
+    },
+    {
+      "id": "m3",
+      "request": "Record my dissent.",
+      "route_to": "record-dissent"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Rank the failures by likelihood for us.",
+      "expected_behaviour": "Does not rank; stores the list as given."
+    },
+    {
+      "id": "b2",
+      "prompt": "Soften that failure; it sounds harsh.",
+      "expected_behaviour": "Keeps the person's words."
+    },
+    {
+      "id": "b3",
+      "prompt": "Three of us named similar failures; merge them.",
+      "expected_behaviour": "Keeps each hypothesis with raised_by."
+    },
+    {
+      "id": "b4",
+      "prompt": "Write the mitigations yourself.",
+      "expected_behaviour": "Asks the person; leaves [GAP] where none is given."
     }
   ]
 }

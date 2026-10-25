@@ -1,7 +1,7 @@
 ---
 name: where-to-start
-description: "This skill should be used when the user asks to \"Can we open a session for the agency award?\", \"Where do we start on this leadership choice?\", \"Which stage is next in the coaching session?\". Do not use it to classify a statement, score a matrix, check a claim, or write the brief."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+description: "This skill should be used when the user asks to \"Open a session for our vendor decision.\", \"Where do we start on this leadership choice?\", \"Which stage is next in the coaching session?\". Do not use it to classify a statement, score a matrix, check a claim, or write the brief."
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_start when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "session"
   worker: "Decision coach (session opener)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "open a session"
     - "where do we start"
@@ -72,7 +72,7 @@ Primary tool: `decision_start`. Also named, and not copied: `decision_status`, `
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: classify when the person is unsure of the type; otherwise the open stage's skill.
 

@@ -5,7 +5,7 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (bias card). Does not choose the option and does not sign. |
-| Workflow | Ask, call `decision_bias_check`, read the result, ask one question, stop. |
+| Workflow | Call `decision_bias_check`, read one countermeasure, ask the person to do it, stop. |
 | Skill | DC-4.3 Bias |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
 | Tool | Decision Companion `decision_bias_check`; see the companion slot |
@@ -25,10 +25,12 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_bias` for that card.
-2. Read the countermeasure and ask the person to do it.
-3. Do not mark the room clear.
+1. Call `decision_bias_check` with the session or the decision type.
+2. If the tool returns no matched items for a type, say the card has no entry for that type. Do not say no bias applies.
+3. Pick the one card item that fits the current stage. Read its countermeasure.
+4. Ask the person to do that step now and tell you the result. Do not do it for them.
+5. Do not mark the room clear or unbiased.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.

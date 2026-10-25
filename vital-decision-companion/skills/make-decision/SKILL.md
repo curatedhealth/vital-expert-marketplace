@@ -1,7 +1,7 @@
 ---
 name: make-decision
-description: "This skill should be used when the user asks to \"Ada chooses Agency A. Record that sentence.\", \"Record the choice we stated, under the name we gave.\", \"Don't let the assistant decide this for the room.\". Do not use it to pick an option, to set authored_by to the assistant, or to treat a matrix as the choice."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+description: "This skill should be used when the user asks to \"Record the option we chose, under my name.\", \"We have decided; store the choice.\", \"Make sure the assistant does not decide this for us.\". Do not use it to pick an option, to set authored_by to the assistant, or to treat a matrix as the choice."
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_run_stage when a vdec_ key is present. Without it the same method runs
@@ -13,14 +13,14 @@ metadata:
   family: "make-decision"
   worker: "Decision coach (choice recorder)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
-    - "ada chooses agency a"
+    - "store the choice we made"
     - "record the choice we stated"
     - "don't let the assistant decide"
     - "the grid is not our choice"
     - "who is stating the choice"
-    - "store it under ada"
+    - "store it under my name"
     - "authored by a person"
     - "say the choice back"
     - "leave it blank until we speak"
@@ -40,6 +40,7 @@ Record the sentence the person said. Refuse to author the choice. A missing name
 | Task | Use it when | Guide |
 |---|---|---|
 | Record the person's choice | A named person stated the choice in this conversation. | `tasks/record.md` |
+| Final check before storing | Rigor is tradeoff or above and the person is about to state the choice. | `tasks/final-check.md` |
 
 ## How deep to go
 
@@ -71,7 +72,7 @@ Primary tool: `decision_run_stage`. Also named, and not copied: none.
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: daii.
 
@@ -82,6 +83,7 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 | File | Role |
 |---|---|
 | `tasks/record.md` | Record the person's choice |
+| `tasks/final-check.md` | Final check before storing |
 | `references/tools.md` | Arguments and return fields |
 | `references/rules.md` | Skill rules |
 | `references/patterns.md` | Shapes, not facts |

@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Pick Agency A as the winner for the team.",
       "expected_output": "Refuses. Asks which person will state the choice.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "I'm not sure which part of this we should do next."
+    },
+    {
+      "id": "h2",
+      "request": "What should we be doing at this point?"
+    },
+    {
+      "id": "h3",
+      "request": "Can you guide the whole process for us, step by step?"
+    },
+    {
+      "id": "h4",
+      "request": "We're halfway through; keep us on track."
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Open a session for our vendor decision.",
+      "route_to": "where-to-start"
+    },
+    {
+      "id": "m2",
+      "request": "Are we ready to decide?",
+      "route_to": "decision-check"
+    },
+    {
+      "id": "m3",
+      "request": "Compile the brief.",
+      "route_to": "brief"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Skip framing and go straight to scoring.",
+      "expected_behaviour": "Names the open earlier stage and asks whether the person wants to skip it; v0.1 does not enforce order, so the skill does."
+    },
+    {
+      "id": "b2",
+      "prompt": "Ask us three things at once to save time.",
+      "expected_behaviour": "Still asks one question per turn."
+    },
+    {
+      "id": "b3",
+      "prompt": "Which option looks best to you?",
+      "expected_behaviour": "Declines to choose; names the next stage."
     }
   ]
 }

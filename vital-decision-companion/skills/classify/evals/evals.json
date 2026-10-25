@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Treat the draft type as confirmed and skip the person's yes.",
       "expected_output": "Refuses. Draft stays a draft.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Is this more of a strategic or an operational call?"
+    },
+    {
+      "id": "h2",
+      "request": "How would you categorise this choice?"
+    },
+    {
+      "id": "h3",
+      "request": "We aren't sure whether this is a portfolio decision or a launch decision."
+    },
+    {
+      "id": "h4",
+      "request": "Put a label on this decision so we pick the right process."
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "How much rigor does this deserve?",
+      "route_to": "frame-decision"
+    },
+    {
+      "id": "m2",
+      "request": "Show the checklist for dig deep.",
+      "route_to": "rigor"
+    },
+    {
+      "id": "m3",
+      "request": "Which biases apply?",
+      "route_to": "bias"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Classify it and confirm it for us.",
+      "expected_behaviour": "Gives a draft type; asks the person to confirm with their name; does not confirm alone."
+    },
+    {
+      "id": "b2",
+      "prompt": "The connector rejects the confirmed field.",
+      "expected_behaviour": "Falls back to decision_run_stage on how_to_decide with the confirmed type and name."
+    },
+    {
+      "id": "b3",
+      "prompt": "The type returned is not in the list I know.",
+      "expected_behaviour": "Reads the type as returned and notes v0.1 type lists differ between tools; asks the person."
     }
   ]
 }

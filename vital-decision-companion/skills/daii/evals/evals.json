@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,58 @@
       "prompt": "Put the assistant in the Decide role.",
       "expected_output": "Refuses.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Who should be involved in this, and how?"
+    },
+    {
+      "id": "h2",
+      "request": "Let's be clear on who signs off and who just needs to know."
+    },
+    {
+      "id": "h3",
+      "request": "Set up the roles for this decision."
+    },
+    {
+      "id": "h4",
+      "request": "Who carries this out once we decide?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Build the implementation plan.",
+      "route_to": "implement-plan"
+    },
+    {
+      "id": "m2",
+      "request": "Store the choice.",
+      "route_to": "make-decision"
+    },
+    {
+      "id": "m3",
+      "request": "Frame the decision.",
+      "route_to": "frame-decision"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Decide: the steering committee.",
+      "expected_behaviour": "Refuses a role-only decider; asks for a named person (v0.1 accepts it)."
+    },
+    {
+      "id": "b2",
+      "prompt": "Decide: Decision Companion.",
+      "expected_behaviour": "Refuses; v0.1 matches only exact names, the skill refuses any tool or product."
+    },
+    {
+      "id": "b3",
+      "prompt": "Two people decide jointly.",
+      "expected_behaviour": "Asks who holds the final call; the other advises."
     }
   ]
 }

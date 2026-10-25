@@ -1,7 +1,7 @@
 ---
 name: brief
 description: "This skill should be used when the user asks to \"Compile what we stored into a draft brief.\", \"Don't sign the brief or add a signature block.\", \"The brief is still a draft until a person owns it.\". Do not use it to sign the brief, clear the decision, or fill a gap with prose."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_build_brief when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "record"
   worker: "Decision coach (drafter)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "compile what we stored"
     - "don't sign the brief"
@@ -71,7 +71,7 @@ Primary tool: `decision_build_brief`. Also named, and not copied: none.
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: The open stage, if the person wants to continue. Otherwise stop.
 

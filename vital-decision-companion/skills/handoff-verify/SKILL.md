@@ -1,7 +1,7 @@
 ---
 name: handoff-verify
 description: "This skill should be used when the user asks to \"Check this claim against the passage. Not here.\", \"Is this supported? Send it to Verify.\", \"Don't mark it supported in this skill.\". Do not use it to mark a claim supported, to grade a source, or to copy Verify's seven method skills."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_handoff_verify when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "handoff"
   worker: "Decision coach (verify handoff)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "check this claim"
     - "is this supported"
@@ -72,7 +72,7 @@ Primary tool: `decision_handoff_verify`. Also named, and not copied: `qualify_so
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: brief, with unsupported sentences left out.
 

@@ -1,6 +1,6 @@
 # Rules for Use-case library
 
-Pack: vital-decision-companion. Method version: 0.2.0. Content pack: 2026-10-24.1.
+Pack: vital-decision-companion. Method version: 0.3.0. Content pack: 2026-10-24.1.
 
 - **R1.** Gold ids are UC01, UC02, and UC05. Any other id returns card null and the gold set.
 - **R2.** Walk beats in order. One beat, then a question.

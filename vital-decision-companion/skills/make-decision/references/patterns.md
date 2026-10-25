@@ -2,14 +2,16 @@
 
 # Patterns for Make the decision
 
+Sources for the method: the Playbook Make the Decision stage (Part 9: confidence check, saying no to, final decision check); Tetlock & Gardner (2015) on stating probabilities; Annie Duke (2018) on decision records.
+
 ## Pattern 1
 
-Ada says "Agency A." Store chosen_option Agency A and authored_by Ada.
+Decider says: go with the second vendor, I'm 70 percent sure, we're saying no to building in-house. Read back all three, then store.
 
 ## Pattern 2
 
-The model is asked to choose. Refuse before the tool call.
+Someone says: the matrix says option two. Reply that the matrix has no winner and ask the decider what they choose.
 
 ## Pattern 3
 
-The matrix has scores and no spoken choice. Ask. Do not copy the highest score.
+Decider answers no to the would-we-explain-it-in-public check. Record the no and ask whether they still proceed.

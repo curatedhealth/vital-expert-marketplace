@@ -1,7 +1,7 @@
 ---
 name: classify
 description: "This skill should be used when the user asks to \"What kind of decision is a mid-year budget reallocation?\", \"Is this a quick call or a long process? Draft it and wait.\", \"Draft the decision type from what I just said.\". Do not use it to read the rigor checklist, widen options, or store a choice."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_classify when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "how-to-decide"
   worker: "Decision coach (type draft)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "what kind of decision"
     - "is this a quick call"
@@ -72,7 +72,7 @@ Primary tool: `decision_classify`. Also named, and not copied: `decision_run_sta
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: rigor after confirmation, to read the checklist for that level.
 

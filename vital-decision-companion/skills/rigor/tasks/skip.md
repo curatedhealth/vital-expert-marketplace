@@ -30,4 +30,4 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.

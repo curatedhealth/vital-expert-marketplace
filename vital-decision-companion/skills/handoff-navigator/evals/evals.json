@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,63 @@
       "prompt": "Compute the MCDA rank inside Decision Companion.",
       "expected_output": "Refuses.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Can we get a proper weighted ranking from our scores?"
+    },
+    {
+      "id": "h2",
+      "request": "Run the numbers through the Navigator."
+    },
+    {
+      "id": "h3",
+      "request": "Our scores are 1 to 5; can the ranking use them?"
+    },
+    {
+      "id": "h4",
+      "request": "Three of us scored separately; how do we rank that?"
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Store the matrix only.",
+      "route_to": "tradeoff"
+    },
+    {
+      "id": "m2",
+      "request": "Check the source.",
+      "route_to": "handoff-verify"
+    },
+    {
+      "id": "m3",
+      "request": "Store the choice.",
+      "route_to": "make-decision"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "Our scores are 1 to 5; just rescale them.",
+      "expected_behaviour": "Says methods_mcda_rank takes 0 to 4; asks the person to choose the mapping; never rescales silently."
+    },
+    {
+      "id": "b2",
+      "prompt": "No vont_ key. Compute the ranking here.",
+      "expected_behaviour": "Declines; says the shared rank is not connected."
+    },
+    {
+      "id": "b3",
+      "prompt": "The hand-off only carried the title.",
+      "expected_behaviour": "Builds the methods_mcda_rank call from the stored cells (v0.1 hand-off carries the title only)."
+    },
+    {
+      "id": "b4",
+      "prompt": "Average the three raters' scores first.",
+      "expected_behaviour": "One call per rater, or decide_attach_scores per rater; does not average."
     }
   ]
 }

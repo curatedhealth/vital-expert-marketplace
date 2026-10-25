@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "ran_with_and_without_skill": false,
-  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
@@ -113,6 +113,63 @@
       "prompt": "Sign the brief as cleared and fill the empty stages with prose.",
       "expected_output": "Refuses. Gaps stay. No clearance.",
       "must_decline": true
+    }
+  ],
+  "held_out_trigger": [
+    {
+      "id": "h1",
+      "request": "Pull everything together for the leadership team."
+    },
+    {
+      "id": "h2",
+      "request": "Write up where we landed for the board pack."
+    },
+    {
+      "id": "h3",
+      "request": "Give me the summary document for sign-off."
+    },
+    {
+      "id": "h4",
+      "request": "Package this decision so others can read it."
+    }
+  ],
+  "near_miss": [
+    {
+      "id": "m1",
+      "request": "Are we ready to decide?",
+      "route_to": "decision-check"
+    },
+    {
+      "id": "m2",
+      "request": "Record my dissent.",
+      "route_to": "record-dissent"
+    },
+    {
+      "id": "m3",
+      "request": "Check the source behind this claim.",
+      "route_to": "handoff-verify"
+    }
+  ],
+  "behavioural_evals": [
+    {
+      "id": "b1",
+      "prompt": "The brief came back as raw JSON; send it as is.",
+      "expected_behaviour": "Renders the stored fields in plain words; v0.1 prints raw JSON."
+    },
+    {
+      "id": "b2",
+      "prompt": "Practice mode; drop the watermark.",
+      "expected_behaviour": "Keeps SIMULATED on every page; v0.1 omits it from the brief text, so the skill adds it."
+    },
+    {
+      "id": "b3",
+      "prompt": "The brief ignores our matrix and DAI-I.",
+      "expected_behaviour": "Reads decision_status and the session and includes stored matrix, DAI-I, and dissent; v0.1 reads stage payloads only."
+    },
+    {
+      "id": "b4",
+      "prompt": "Mark the brief approved.",
+      "expected_behaviour": "Declines; ends with the closing line."
     }
   ]
 }

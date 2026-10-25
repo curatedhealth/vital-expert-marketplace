@@ -2,14 +2,20 @@
 
 # Patterns for Learning loop
 
+Sources for the method: the Playbook Learning Loop (Part 11: decision journal, decision learning review, team review); outcome bias (Baron & Hershey 1988); after-action review (US Army TC 25-20); double-loop learning (Argyris 1991).
+
 ## Pattern 1
 
-Person: "1 March 2027, and the first milestone is met." Store both.
+Person gives a review date and a success signal but no name. Ask whose name the plan is stored under. Store nothing until they answer.
 
 ## Pattern 2
 
-Person has a date and no signal. Leave success_signal as [GAP]. Stage stays incomplete.
+Person says they are 80% sure the outcome will happen. Store probability 0.8 as their figure. Do not adjust it.
 
 ## Pattern 3
 
-Person says "pick a sensible KPI." Refuse.
+At review the outcome was poor. Person says it was a bad call. Show the stored assumptions first, then ask whether the process was sound given what was known.
+
+## Pattern 4
+
+Person wants to skip the review. If rigor is full process, the learning loop is required. Say so and ask for a review date instead.

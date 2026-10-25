@@ -1,12 +1,12 @@
-# Task DC-5.1 Assign the four roles
+# Task DC-5.0 Assign the four roles
 
 ## Formula
 
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (roles). Does not choose the option and does not sign. |
-| Workflow | Ask, call `decision_daii_plan`, read the result, ask one question, stop. |
-| Skill | DC-5.1 DAI-I |
+| Workflow | Ask for the names, check them, call `decision_daii_plan`, ask one question, stop. |
+| Skill | DC-5.0 DAI-I |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
 | Tool | Decision Companion `decision_daii_plan`; see the companion slot |
 | Prompt | Use only fields the person supplied or the tool returned. |
@@ -25,9 +25,12 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_daii` with those names.
-2. Leave an unnamed role empty. Refuse a model in Decide.
+1. Ask, one per turn: Who makes the final call (Decide)? Whose input is needed (Advise)? Who must be told the outcome (Inform)? Who carries it out (Implement)?
+2. Decide is one named person. Refuse the assistant, a model, a tool, or Decision Companion in any role, and refuse a role title alone (the committee, the team, leadership). Ask for the name.
+3. Call `decision_daii_plan` with `roles: {decide, advise, inform, implement}` holding only the names given. An unnamed role stays empty; say so.
+4. Ask the planning questions the Playbook attaches to DAI-I, one per turn, when relevant: Who has the expertise and should advise? Who will be affected and must be informed? Who has the authority to decide?
+5. After the person confirms, call `decision_run_stage` with `stage: implement` and the same roles, or hand over to implement-plan.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.

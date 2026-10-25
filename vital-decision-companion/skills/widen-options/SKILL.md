@@ -1,7 +1,7 @@
 ---
 name: widen-options
 description: "This skill should be used when the user asks to \"We only have two options. What is the warning?\", \"Add do nothing to the list we already named.\", \"What about doing it internally, if we say so?\". Do not use it to add an option the person did not say, to rate the list, or to pick a winner."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_widen_options when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "widen-options"
   worker: "Decision coach (option list)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "we only have two options"
     - "add do nothing"
@@ -72,7 +72,7 @@ Primary tool: `decision_widen_options`. Also named, and not copied: `decision_ru
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: gather-intelligence when the rigor requires it; otherwise tradeoff or make-decision.
 

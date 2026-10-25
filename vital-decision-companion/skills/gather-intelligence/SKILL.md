@@ -1,7 +1,7 @@
 ---
 name: gather-intelligence
 description: "This skill should be used when the user asks to \"What do we already know about this award?\", \"What is still unknown, and leave it unknown?\", \"Don't fill the unknown from memory.\". Do not use it to fetch literature, invent a market fact, or call Navigator or Verify itself."
-license: "[CHECK] VITAL Decision Companion terms, to be set by the owner"
+license: "UNLICENSED. Proprietary to Vital.Expert; terms set by the owner."
 compatibility: >
   Runs on any assistant that loads Agent Skills. The Decision Companion connector
   adds decision_attach_notes when a vdec_ key is present. Without it the same method runs
@@ -13,7 +13,7 @@ metadata:
   family: "gather-intelligence"
   worker: "Decision coach (notes)"
   pack: vital-decision-companion
-  version: 0.2.0
+  version: 0.3.0
   route:
     - "what do we already know"
     - "what is still unknown"
@@ -72,7 +72,7 @@ Primary tool: `decision_attach_notes`. Also named, and not copied: `decision_run
 
 ## What to return
 
-The sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+The sections in `assets/worksheet-output.md`. The closing line follows `references/governance.md`.
 
 Next skill: handoff-verify or handoff-navigator when asked; otherwise premortem or tradeoff.
 

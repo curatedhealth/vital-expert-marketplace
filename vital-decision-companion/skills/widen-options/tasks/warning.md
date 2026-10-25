@@ -1,12 +1,12 @@
-# Task DC-2.1 Ask about a missing option
+# Task DC-2.2 Ask about a missing option
 
 ## Formula
 
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (option list). Does not choose the option and does not sign. |
-| Workflow | Ask, call `decision_widen_options`, read the result, ask one question, stop. |
-| Skill | DC-2.1 Widen options |
+| Workflow | Read the warning, ask the person for the missing option, store only what they say, stop. |
+| Skill | DC-2.2 Widen options |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
 | Tool | Decision Companion `decision_widen_options`; see the companion slot |
 | Prompt | Use only fields the person supplied or the tool returned. |
@@ -25,10 +25,12 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Read the warning aloud.
-2. Ask the person to name the missing option.
-3. Do not invent one to clear the warning.
+1. Read the warning aloud in plain words.
+2. If do nothing is missing, ask: what happens if we do nothing, and is that a real option? Store it only if the person says so.
+3. If only two options exist and they are opposites (yes or no), say this is a whether-or-not frame, which Nutt's studies of organisational decisions link to more failure, and ask: what else could we do?
+4. Ask the vanishing options question once: if every option on the list disappeared, what would you do?
+5. Do not invent an option to clear the warning. If the person says there is none, record that answer as a note.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
