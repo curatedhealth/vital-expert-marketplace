@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "vital-decision-companion": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/decision-companion",
+      "headers": {
+        "Authorization": "Bearer ${user_config.decision_key}"
+      }
+    },
+    "vital-ontology-navigator": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/ontology-navigator",
+      "headers": {
+        "Authorization": "Bearer ${user_config.navigator_key}"
+      }
+    },
+    "vital-verify": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/verify",
+      "headers": {
+        "Authorization": "Bearer ${user_config.verify_key}"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "vital-decision-companion",
+  "version": "0.2.0",
+  "description": "Coaches a leadership decision on its own connector, and calls Ontology Navigator and Verify tools when a score or a claim check is needed. It does not copy those tools.",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "UNLICENSED",
+  "skills": "./skills",
+  "userConfig": {
+    "decision_key": {
+      "type": "string",
+      "title": "VITAL Decision Companion key",
+      "description": "The vdec_ key. The host sends it only to the Decision Companion connector.",
+      "required": false,
+      "sensitive": true
+    },
+    "navigator_key": {
+      "type": "string",
+      "title": "VITAL Ontology Navigator key",
+      "description": "Optional vont_ key. Used only for decide_* and methods_* on the Navigator connector.",
+      "required": false,
+      "sensitive": true
+    },
+    "verify_key": {
+      "type": "string",
+      "title": "VITAL Verify key",
+      "description": "Optional vvfy_ key. Used only for qualify_source and check_claim on the Verify connector.",
+      "required": false,
+      "sensitive": true
+    }
+  }
+}

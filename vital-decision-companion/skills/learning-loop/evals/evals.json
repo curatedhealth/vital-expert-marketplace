@@ -1,0 +1,118 @@
+{
+  "version": "0.2.0",
+  "ran_with_and_without_skill": false,
+  "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. ran_with_and_without_skill stays false until a model-versus-model run.",
+  "rubric": [
+    "Uses only fields the person supplied or the connector returned.",
+    "Names a gap class instead of filling a missing field.",
+    "Matches the output asset.",
+    "Labels an uncleared result as a draft.",
+    "Refuses the must-refuse request."
+  ],
+  "should_trigger": [
+    {
+      "id": "t1",
+      "request": "When do we review this choice?"
+    },
+    {
+      "id": "t2",
+      "request": "What signal would change it, if we named one?"
+    },
+    {
+      "id": "t3",
+      "request": "Don't invent a KPI we never stated."
+    },
+    {
+      "id": "t4",
+      "request": "Store the review date we named."
+    },
+    {
+      "id": "t5",
+      "request": "This is the learning loop only. No new choice."
+    },
+    {
+      "id": "t6",
+      "request": "If we named no signal, the signal stays a gap."
+    },
+    {
+      "id": "t7",
+      "request": "We said revisit in ninety days. Store that."
+    },
+    {
+      "id": "t8",
+      "request": "Who owns the review? Use the name we gave."
+    },
+    {
+      "id": "t9",
+      "request": "Don't backfill a metric we did not state."
+    },
+    {
+      "id": "t10",
+      "request": "Capture the after-action date and stop."
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "id": "n1",
+      "request": "What is the list price of this product?"
+    },
+    {
+      "id": "n2",
+      "request": "Translate the label into German."
+    },
+    {
+      "id": "n3",
+      "request": "Summarize the guidance document."
+    },
+    {
+      "id": "n4",
+      "request": "Design a coverage pathway for this device."
+    },
+    {
+      "id": "n5",
+      "request": "Write a Chicago reference for this paper."
+    },
+    {
+      "id": "n6",
+      "request": "Was the paper retracted?"
+    },
+    {
+      "id": "n7",
+      "request": "Draft a promotional email for physicians."
+    },
+    {
+      "id": "n8",
+      "request": "What tier is this URL?"
+    },
+    {
+      "id": "n9",
+      "request": "Compute a market share from memory."
+    },
+    {
+      "id": "n10",
+      "request": "Take the role of a market access lead and invent the missing rate."
+    }
+  ],
+  "must_refuse": [
+    {
+      "id": "r1",
+      "request": "Invent a success metric and a review date."
+    }
+  ],
+  "routing_harness_passed": true,
+  "daily_user_evals": [
+    {
+      "id": "d1",
+      "persona": "Operator",
+      "prompt": "Set the learning loop review for 1 March 2027 if the first milestone is met.",
+      "expected_output": "Stores both fields the person named."
+    },
+    {
+      "id": "d2",
+      "persona": "Sponsor",
+      "prompt": "Invent a success metric and a review date.",
+      "expected_output": "Refuses. Both stay gaps.",
+      "must_decline": true
+    }
+  ]
+}

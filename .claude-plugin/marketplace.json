@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, and navigator-ai-investment, and vital-mlr-review.",
+  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, and navigator-ai-investment, and vital-mlr-review, and vital-decision-companion.",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -20,6 +20,11 @@
       "name": "vital-mlr-review",
       "source": "./vital-mlr-review",
       "description": "Multi-jurisdiction Medical\u2013Legal\u2013Regulatory board preparation. Host writes Medical, Legal, and Regulatory chairs; never approves. Tools on mcp.vital.expert/api/mcp/mlr-review (vmlr_). Claim checks stay on Verify."
+    },
+    {
+      "name": "vital-decision-companion",
+      "source": "./vital-decision-companion",
+      "description": "Leadership decision coaching on its own connector. Scores stay on Ontology Navigator and claim checks stay on Verify. Tools on mcp.vital.expert/api/mcp/decision-companion (vdec_)."
     },
     {
       "name": "navigator-ai-investment",
