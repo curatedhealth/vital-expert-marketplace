@@ -1,5 +1,54 @@
 # Changelog
 
+## 0.3.6 (2026-10-25, Lane B round 5)
+
+Connector contract round 5 (works on 0.3.1 today; uses 0.3.2 fields when present).
+
+- **R14 `message_for_person`:** DC-H8 and every `references/tools.md` Connector version block — say the person sentence when present; on 0.3.1 translate the code with the DC-H8 list; never print the code.
+- **R10 pre-mortem:** offer `remove_index` + `by` for coach-created wrong/blank rows; never remove without the person's say (`tasks/capture.md`, tools reference).
+- **R15 `decision_export`:** brief fills omitted stored data from export (0.3.2+) or `decision_status` (0.3.1) and says so in plain words; decision-check prefers the export over inferring from status.
+- **R13:** decision-check and implement-plan must not treat "implement complete" as progress while no choice is recorded.
+- **Evals:** frame-decision b5 (R14), premortem b5 (R10), brief b4 (R15).
+- **Lint d:** skill prose must not instruct printing `[GAP]`, a refusal code, or a tool name in a reply (storage markers and DC-H8 never-lists allowed). Brief R7 / tools table use "not given yet" for the person.
+- `validate.py` allows `decision_export`; `KNOWN_TOOL_ARGS` includes `remove_index` / `replace_index`.
+- Marketplace sync at 0.3.6 (single ship after 0.3.5 land).
+
+## 0.3.5 (2026-10-25)
+
+Hardening from the four-arm review (see dc-bench-protocol-v1.md §3).
+- DC-H8: list of words never said to the person (`[GAP]`, tool names, codes, stage ids, "skill", "not tool-checked") with plain equivalents.
+- `[GAP]` is now the stored marker only: SKILL.md headers, all 20 output assets and all gap-rules files say "not given yet" to the person.
+- DC-H12: vague dates (month, season, "Q1") are asked about before saving; a first-name-only person is saved as said, marked incomplete, and asked about once.
+- DC-H13 (new): say saved only after a tool result shows it; on a refusal, change the input or ask, never resend unchanged; with no connector, say nothing is saved.
+- DC-H14 (new): optional fields never block a read-back or a store.
+- make-decision record.md: read back as soon as the choice and decider are given.
+- learning-loop retro.md: what_happened / process_quality_note / outcome_vs_process mapping.
+- facilitator ask.md: with a passive person, name the next Playbook move and ask the starting question.
+- facilitator status.md: say "not given yet" instead of `[GAP]`.
+
+## 0.3.4 (2026-10-25)
+
+Fixes from the blind re-grade on 0.3.3 (with 47/54 vs without 25/54), applied and re-graded by Claude until every case scored 2. Final six-skill score 58/58 with skill vs 31/58 without. Report: `docs/decision-companion/WITH_WITHOUT_0.3.4_2026-10-25.md`.
+
+### Skills
+- **record-dissent** `tasks/capture.md`, `references/tools.md`: a stated dissent is stored as a participant note in the same turn, with no probe first. The schema probe runs only before writing `dissent[]` onto make_decision when the connector version is unknown. A person who names the old connector / v0.2 gets notes only and no probe.
+- **tradeoff** `tasks/grid.md`: end each turn with exactly one question.
+- **handoff-navigator** `tasks/call.md`:
+  - A null or role-only rater gets only "who gave those ratings?".
+  - `rater_issues` with only `cell_missing` names the missing cells and asks to rate them or leave them out.
+  - A mapping already chosen means one `methods_mcda_rank` call per rater this turn.
+  - With no mapping yet, show the args in full and ask the mapping question.
+  - One question per turn.
+
+### Evals
+- record-dissent b3: version unknown, so the probe is expected; new b4: old connector named, so notes only (`forbidden_calls`).
+- handoff-navigator b2: scenario with a chosen mapping and scores, expecting calls; new b5: no mapping yet (`forbidden_calls: methods_mcda_rank`).
+- `with_without_result` updated on the six run skills.
+
+### Scripts
+- `validate.py` reads `PLUGIN_VERSION` from `plugin.json` instead of a hard-coded string.
+- `build_plugin_skills.py` PLUGIN_VERSION 0.3.4.
+
 ## 0.3.3 (2026-10-25)
 
 Fixes from the blind re-grade on pack 0.3.2 (with 44/54 vs without 24/54) plus Round 4 live practice findings that affect skill copy.

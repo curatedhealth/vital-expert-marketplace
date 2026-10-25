@@ -4,11 +4,11 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Decide
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Advise
 
-[each entry: person name string, or "<name> (unverified, role not person)" when status is unverified_person; else [GAP]]
+[each entry: person name string, or "<name> (unverified, role not person)" when status is unverified_person; else: not given yet]
 
 ## Inform
 
@@ -20,7 +20,7 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Gaps
 
-[role_only_name and unverified role entries; else [GAP]]
+[role_only_name and unverified role entries; else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

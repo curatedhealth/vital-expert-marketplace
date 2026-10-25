@@ -27,6 +27,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Call `decision_build_brief`.
 2. Copy only stored fields. Leave gaps visible. Do not sign.
+3. When the brief omits stored data (for example a second rater's cells or note dissent on connector 0.3.1), call `decision_export` if available (0.3.2+), otherwise `decision_status`, fill the missing pieces, and say in plain words that you filled them from the stored record.
 
 ## Output
 

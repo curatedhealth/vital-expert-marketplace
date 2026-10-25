@@ -1,6 +1,6 @@
 # Rules for Implementation plan
 
-Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.6. Content pack: 2026-10-26.1
 
 - **R1.** Implementation waits for a recorded choice. The plan never chooses it.
 - **R2.** One named owner. A role title is a gap until the person names who.

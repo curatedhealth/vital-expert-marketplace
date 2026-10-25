@@ -4,19 +4,19 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Card
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Beat
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Gold set
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Not their decision
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

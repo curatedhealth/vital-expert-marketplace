@@ -1,5 +1,7 @@
 # Gap rules
 
+`[GAP]` is the marker stored in payloads and briefs. In replies to the person, say "not given yet" (or name what is missing) instead of `[GAP]`.
+
 Classify every miss before you write it. Never turn an absent field into a fact.
 
 | Class | Meaning here | How to word it |

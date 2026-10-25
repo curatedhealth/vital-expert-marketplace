@@ -26,6 +26,8 @@ These tools stay on their own connector. This skill does not reimplement them.
 
 | Condition | What to do |
 |---|---|
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Host accepts `scale` (v0.3) | Send `scale` only when the person declared a scale other than 1–5. |
 | Host schema lacks `scale` (v0.2) | Tell the person ratings must use 1–5. Do not invent a rescale. |
 | Gap `invalid_cell` / fields `['value']` | **Same turn:** resend corrected cells with `value` (not `score`). Tell which cell was fixed. Ask only if the value itself is unknown. |

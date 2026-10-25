@@ -1,6 +1,6 @@
 # Rules for Frame the decision
 
-Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.6. Content pack: 2026-10-26.1
 
 - **R1.** how_to_decide completes with statement, goal, decider, and deadline. Name missing fields when the connector reports them.
 - **R2.** Frame before solving: no option is listed and no rating is asked in this skill.

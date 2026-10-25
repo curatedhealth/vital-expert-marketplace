@@ -29,7 +29,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. Ask what actually happened, in the person's words. Then ask the after-action questions one per turn: what went well and why; what did not and why; what we would do differently.
 3. Ask the process-versus-outcome question: given what we knew then, was the decision process sound? Place the answer in one of four cells the person chooses: good process and good outcome (deserved success), good process and bad outcome (bad break), poor process and good outcome (dumb luck), poor process and bad outcome. Do not choose the cell for them.
 4. Ask the double-loop question: which assumption or decision rule should change for next time?
-5. Call `decision_run_stage` with `stage: learning_loop` (merge, no `replace`) and `payload: {outcome_vs_process, lessons, assumption_to_change, what_happened}` plus `authored_by`. Then call `decision_attach_notes` with `stage: learning_loop`, the person's words, and `source: owner`. If the words are your summary, use `source: draft` and say so.
+5. Call `decision_run_stage` with `stage: learning_loop` (merge, no `replace`) and `payload: {what_happened, process_quality_note, outcome_vs_process, lessons, assumption_to_change}` plus `authored_by`. Map the person's words exactly: what happened → `what_happened`; anything about how the decision was made (skipped a base-rate check, rushed, good debate) → `process_quality_note`; the cell they chose → `outcome_vs_process`. Keep process and outcome in separate fields. Then call `decision_attach_notes` with `stage: learning_loop`, the person's words, and `source: owner`. If the words are your summary, use `source: draft` and say so.
 
 ## Output
 

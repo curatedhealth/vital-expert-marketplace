@@ -1,6 +1,6 @@
 # Rules for Decision check
 
-Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.6. Content pack: 2026-10-26.1
 
 - **R1.** Framing: decision stated clearly; scope and constraints defined; deadline set; decider is a named person.
 - **R2.** Information: key facts from reliable sources; uncertainties named; stakeholder views collected; disconfirming evidence sought.

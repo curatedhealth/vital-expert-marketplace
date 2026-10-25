@@ -5,7 +5,7 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (dissent). Does not choose the option and does not sign. |
-| Workflow | Detect merge vs replace, invite dissent, store notes always (+ dissent[] when merge-safe), stop. |
+| Workflow | Store a stated dissent as a note at once; probe the connector only before writing dissent onto the choice; stop. |
 | Skill | DC-4.5 Record dissent |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
 | Tool | Decision Companion `decision_status`, `decision_attach_notes`; optional `decision_run_stage` |
@@ -25,14 +25,14 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. **Schema probe (its own turn).** Call `decision_status` with `include_schemas: true`. Say exactly: "Checking whether this connector can store dissent on the decision." Then **stop**. Do not describe the schema, do not choose merge vs notes, and do not invite dissent in this turn.
-2. **After the probe result.** Read `stage_schemas.make_decision.optional`. If it contains `no_dissent_attested_by`, merge semantics are present (v0.3): you may later write `dissent[] {holder, text}` without `replace`. Otherwise (v0.2) use notes only for the make_decision payload path. Never describe the schema before seeing this result.
-3. Before the choice is recorded, invite dissent once: who sees it differently, and what would they say? Suggest the most junior voice speaks first, or that objections are written privately, so rank does not silence them.
-4. If the room agrees fast on a high-consequence decision, ask one person to argue the strongest case against the leading option. Say this is a role, not their view.
-5. For each dissent, ask for the holder's name and their words.
-6. Always call `decision_attach_notes` with `stage: make_decision`, `source: participant`, and `notes: "Dissent — holder: <name>. <their words>"`. Keep this participant note on every connector version.
-7. On the merge path only, also call `decision_run_stage` with `stage: make_decision` and `payload: {dissent: [{holder, text}]}` **without** `replace`. Never send `replace: true`.
-8. Read it back unchanged. Do not answer the objection on behalf of the room.
+1. **A dissent is stated (holder and words given).** In this same turn, call `decision_attach_notes` with `stage: make_decision`, `source: participant`, `notes: "Dissent — holder: <name>. <their words>"`. This path works on every connector version, so never delay it for a probe. Read the stored line back unchanged. If the holder's name or words are missing, ask for that one thing and store nothing yet.
+2. **Writing dissent onto the choice as well (`dissent[]` on make_decision).** Only when the person asks for this, or a choice is being recorded:
+   - Connector version already known in this conversation (a probe result, or the person says "old connector" / v0.2 / v0.3): follow it. Old connector or v0.2 → notes only; say in one line that the old connector keeps dissent as a note, and do not call `decision_run_stage`. v0.3 → step 4.
+   - Version unknown → **probe turn**: call `decision_status` with `include_schemas: true`, say exactly "Checking whether this connector can store dissent on the decision.", and stop. Do not describe the schema, choose a path, or write anything in that turn.
+3. **After a probe result.** Read `stage_schemas.make_decision.optional`. If it contains `no_dissent_attested_by`, merge semantics are present (v0.3) → step 4. Otherwise notes only. Never describe the schema before seeing this result.
+4. **Merge path (v0.3).** Call `decision_run_stage` with `stage: make_decision` and `payload: {dissent: [{holder, text}]}` **without** `replace`. Keep the participant note from step 1. Never send `replace: true`.
+5. **Inviting dissent (no dissent stated yet).** Before the choice is recorded, invite dissent once: who sees it differently, and what would they say? Suggest the most junior voice speaks first, or private written objections, so rank does not silence them. If the room agreed fast on a high-consequence decision, ask one person to argue the strongest case against the leading option; say this is a role, not their view.
+6. Read back unchanged. Do not answer the objection on behalf of the room. One question per turn.
 
 ## Output
 

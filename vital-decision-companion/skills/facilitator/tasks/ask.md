@@ -26,7 +26,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Call `decision_status` when a session id exists.
-2. Ask the single question that unblocks the open stage.
+2. Ask the single question that unblocks the open stage. When the person is passive or unsure ("not sure", "what do you need?", "ok"), lead: name the next Playbook move in one plain sentence (for example frame the goal, size the decision on consequence and reversibility, widen to at least three options including doing nothing, name criteria before ratings, run a pre-mortem, invite dissent) and ask the one question that starts it. Never wait for the person to know the method.
 3. Stop. Do not add a second worksheet.
 
 ## Output

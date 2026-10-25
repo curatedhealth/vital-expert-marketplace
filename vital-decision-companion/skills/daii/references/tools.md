@@ -29,6 +29,8 @@ These tools stay on their own connector. This skill does not reimplement them.
 
 | Condition | What to do |
 |---|---|
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Gap `role_only_name` on Decide | Ask who the person is. Do not store a role title as decide. |
 | Gap `role_only_name` on Advise / Inform / Implement | Ask for a named person. If the person insists on the role title, keep it; read back `{name, status: "unverified_person"}` as unverified. |
 | Role entry is a string | Print the name as given. |

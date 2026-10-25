@@ -27,7 +27,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Call `decision_status`.
 2. Report only fields the tool returned.
-3. Leave a missing field as `[GAP]`.
+3. Leave a missing field as "not given yet" in the reply (`[GAP]` only inside stored payloads).
 
 ## Output
 

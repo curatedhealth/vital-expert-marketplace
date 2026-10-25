@@ -25,7 +25,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Check that a choice is recorded (`decision_status`). If not, say the plan waits for make-decision.
+1. Check that a choice is recorded (`decision_status` or `decision_export` when present). If not, say the plan waits for make-decision. Do not treat "implement complete" as progress while no choice is recorded (R13 / connector 0.3.1 behaviour).
 2. Ask, one per turn, only what is missing: Who is the single owner? What happens in the next 48 hours (first milestone)? What are the key actions? Who must be told, when, and how (communication plan)? What does the person need first (resources, dependencies)? When will we review progress? What would make us revisit the decision (review trigger)?
 3. A review trigger is a condition, not a date: for example a metric crossing a threshold the person names. If they give only a date, ask what condition would bring the review forward.
 4. If DAI-I decide is empty, run daii first.

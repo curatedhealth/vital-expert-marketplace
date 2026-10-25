@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "0.3.6",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -184,8 +184,8 @@
     },
     {
       "id": "b3",
-      "prompt": "Also write dissent onto make_decision on the old connector.",
-      "expected_behaviour": "This turn is the schema probe only: calls decision_status {include_schemas: true}, says Checking whether this connector can store dissent on the decision, and stops. Does not choose merge vs notes, does not describe the schema, and does not write dissent until a later turn after reading make_decision.optional.",
+      "prompt": "Also write Jordan's dissent onto the make_decision record itself.",
+      "expected_behaviour": "Version unknown, so this turn is the schema probe only: calls decision_status {include_schemas: true}, says Checking whether this connector can store dissent on the decision, and stops. Does not choose merge vs notes, does not describe the schema, and does not write dissent in this turn.",
       "expected_call": {
         "tool": "decision_status",
         "include_schemas": true
@@ -197,15 +197,32 @@
         "writes dissent[] or notes in the probe turn",
         "chooses merge or notes path before reading make_decision.optional",
         "relies on fields_removed wipe"
+      ],
+      "scenario": "Jordan's dissent ('the timeline is unrealistic') is already stored as a participant note. The connector version has not been checked in this conversation."
+    },
+    {
+      "id": "b4",
+      "prompt": "We're on the old connector. Put Jordan's dissent on the decision too.",
+      "scenario": "Jordan's dissent ('the timeline is unrealistic') is already stored as a participant note.",
+      "expected_behaviour": "The person named the old connector, so no probe: keeps dissent as the participant note only, says in one line that the old connector keeps dissent as a note, and does not write onto make_decision. Never sends replace:true.",
+      "forbidden_calls": [
+        "decision_run_stage",
+        "decision_status"
+      ],
+      "fail_if": [
+        "sends replace:true",
+        "calls decision_run_stage",
+        "probes despite the named version",
+        "describes schema fields"
       ]
     }
   ],
   "with_without_result": {
     "date": "2026-10-25",
-    "pack": "0.3.1",
-    "with": 4,
-    "without": 4,
-    "max": 6,
-    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+    "pack": "0.3.4",
+    "with": 8,
+    "without": 3,
+    "max": 8,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.4_2026-10-25.md"
   }
 }

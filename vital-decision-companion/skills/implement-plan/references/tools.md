@@ -16,6 +16,8 @@ Pitfall: Completing on a decide name alone still leaves the plan thin for the pe
 
 | Condition | What to do |
 |---|---|
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Gap `role_only_name` | Ask for the person. Advise/Inform/Implement may keep role entries only if the person insists — say they stay unverified. When reading roles, accept string or `{name, status: "unverified_person"}`. |
 | Warning `optional_missing` (first_milestone, review_date) | Ask for those fields. |
 | if_then_plans | Send `[{signal, owner, action}]`. |

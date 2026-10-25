@@ -4,11 +4,11 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Criteria
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Cells
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Winner
 
@@ -16,11 +16,11 @@ The grid has no winner. [from the tool: winner null; else say so. Do not invent 
 
 ## Shared tool
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Next
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

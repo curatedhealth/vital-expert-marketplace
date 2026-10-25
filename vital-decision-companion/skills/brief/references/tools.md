@@ -18,7 +18,8 @@ Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
 
 ## Also named
 
-- `decision_status` (enrich omitted fields)
+- `decision_export` (0.3.2+: canonical stored record; preferred fill-in)
+- `decision_status` (0.3.1 fallback when export is absent)
 
 These tools stay on their own connector. This skill does not reimplement them.
 
@@ -26,7 +27,9 @@ These tools stay on their own connector. This skill does not reimplement them.
 
 | Condition | What to do |
 |---|---|
-| Brief prints `None`, `null`, or `{}` | Render as `[GAP]` or add the field from `decision_status`, and say you did so. |
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
+| Brief prints `None`, `null`, or `{}` | Show "not given yet" to the person (keep `[GAP]` only as the stored marker), or fill from `decision_export` / `decision_status` and say you did so. |
 | watermark SIMULATED | Keep it on every page; say practice. |
-| Stored field omitted from brief | Pull from `decision_status` and note the enrichment. |
+| Stored field omitted from brief (e.g. second rater, note dissent on 0.3.1) | Fill from `decision_export` when present (0.3.2+), else `decision_status` (0.3.1). Say in plain words that you filled it from the stored record. |
 | Do not | Reintroduce compensations for raw JSON as if they were still the default. |

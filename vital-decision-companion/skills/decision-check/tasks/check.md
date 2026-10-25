@@ -25,7 +25,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_status` (and `decision_rigor_guide` for the session rigor). Prefer `required_stages_unmet`, `daii_valid`, and `complete_with_gaps` over trusting stage flags alone.
+1. When `decision_export` is available (0.3.2+), call it and read the stored record from the export. Otherwise call `decision_status` (0.3.1). Also call `decision_rigor_guide` for the session rigor. Prefer `required_stages_unmet`, `daii_valid`, and `complete_with_gaps` over trusting stage flags alone. Do not treat "implement complete" as progress when no choice is recorded (R13).
 2. Cross-check the widen stage against the stored options count. If the flag says complete with fewer than 3 options, mark widen not met (`too_few_options`). If the flag says incomplete with 3 or more options, treat widen as met for readiness and note the stale flag.
 3. Mark each checklist item in `references/rules.md` as met, not met, or not known. Role-only names are not met. Met needs a stored field or the person's own answer in this conversation.
 4. Ask about the single not-known item that matters most for this rigor. One question.

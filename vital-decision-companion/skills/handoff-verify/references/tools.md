@@ -14,6 +14,8 @@ Returns: handoff packet with `steps[]`. Follow steps: `qualify_source`, then `ch
 
 | Condition | What to do |
 |---|---|
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Structured claims accepted | Send claims[] objects with text, source_url, passage, raised_by. |
 | Strings only | Send claim strings; still follow qualify then check. |
 | Gap `source_missing` | Ask for the source. Never say supported. |

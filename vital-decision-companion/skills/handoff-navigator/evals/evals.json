@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "0.3.6",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -167,14 +167,15 @@
     {
       "id": "b2",
       "prompt": "Packet has mcda_rank_args for two raters.",
-      "expected_behaviour": "One methods_mcda_rank call per mcda_rank_args entry.",
+      "expected_behaviour": "Mapping already chosen and scores present: one methods_mcda_rank call per mcda_rank_args entry (two calls), applying the person's mapping, no averaging.",
       "expected_call": {
         "tool": "methods_mcda_rank"
       },
       "fail_if": [
         "averages raters into one call",
         "ignores mcda_rank_args"
-      ]
+      ],
+      "scenario": "Maria Lopez already chose the Navigator scale mapping in an earlier turn: value \u2212 1 (1\u20135 \u2192 0\u20134). The packet's mcda_rank_args alternatives carry scores for both raters (Maria Lopez, Sam Okafor)."
     },
     {
       "id": "b3",
@@ -198,14 +199,28 @@
       "fail_if": [
         "calls methods_mcda_rank despite rater_issues"
       ]
+    },
+    {
+      "id": "b5",
+      "prompt": "Packet has mcda_rank_args for two raters. Run the ranking.",
+      "scenario": "Ratings are on the playbook 1\u20135 scale; scale_note says methods_mcda_rank expects EVIDEM 0\u20134. No mapping has been chosen yet.",
+      "expected_behaviour": "Does not call methods_mcda_rank yet. Shows the per-rater args, explains the scale differs, and asks the one mapping question (for example value \u2212 1). Never rescales silently.",
+      "forbidden_calls": [
+        "methods_mcda_rank"
+      ],
+      "fail_if": [
+        "calls methods_mcda_rank before a mapping is chosen",
+        "rescales silently",
+        "asks more than one question"
+      ]
     }
   ],
   "with_without_result": {
     "date": "2026-10-25",
-    "pack": "0.3.1",
-    "with": 7,
-    "without": 2,
-    "max": 8,
-    "report": "docs/decision-companion/WITH_WITHOUT_0.3.1_2026-10-25.md"
+    "pack": "0.3.4",
+    "with": 10,
+    "without": 6,
+    "max": 10,
+    "report": "docs/decision-companion/WITH_WITHOUT_0.3.4_2026-10-25.md"
   }
 }

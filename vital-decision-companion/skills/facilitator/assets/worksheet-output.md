@@ -4,11 +4,11 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Question
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Stored this turn
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

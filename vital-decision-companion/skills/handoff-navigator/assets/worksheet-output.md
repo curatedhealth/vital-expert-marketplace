@@ -4,23 +4,23 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Packet
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Spoken layer
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Navigator tool
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Result
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Gaps
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing
 

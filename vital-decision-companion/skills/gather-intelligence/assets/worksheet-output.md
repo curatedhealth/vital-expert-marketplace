@@ -4,35 +4,35 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Knowns (with source)
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Unknowns
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## What has to be true
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Disconfirming question
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Note source
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Stage stored
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Handoff
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Gaps
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

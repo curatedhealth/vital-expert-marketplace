@@ -4,31 +4,31 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Review date
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Success signal
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Expected outcome and probability
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Key assumptions
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Recorded by
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## At review: what happened, process vs outcome, assumption to change
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Gaps
 
-[from the tool or the person, else [GAP]]
+[from the tool or the person, else: not given yet]
 
 ## Closing (brief, hand-off, or when asked if this is the decision)
 

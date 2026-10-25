@@ -23,6 +23,8 @@ Pitfall: Omitting authored_by refuses the call. Sending both success_signal and 
 
 | Condition | What to do |
 |---|---|
+| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
+| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Alias collision on expected_outcome | Send `success_signal` only. |
 | Gap `role_only_name` | Ask who is recording the review. |
 | Retro results | Merge via run_stage with outcome_vs_process, lessons, assumption_to_change; plus an owner note. |

@@ -1,6 +1,6 @@
 # Rules for Bias
 
-Pack: vital-decision-companion. Method version: 0.3.3. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.6. Content pack: 2026-10-26.1
 
 - **R1.** Pass decision_type or session_id. With a session and no type, the tool uses the stored type.
 - **R2.** Matched items are those whose types include the decision type. With no type, the full card returns when the connector allows it.

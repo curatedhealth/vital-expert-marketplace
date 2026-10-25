@@ -14,7 +14,7 @@
 ## Never claimed
 
 - That a session id existed before decision_start returned one.
-- That process memory is the durable table decision_companion_sessions.
+- That a session is durably stored when the tool result does not say `durable_connected: true`.
 
 ## Closing statement
 

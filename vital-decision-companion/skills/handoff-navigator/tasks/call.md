@@ -25,11 +25,12 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Steps
 
-1. Call `decision_handoff_navigator` with the session id. Stop if `rater_issues[]` is present or any cell has a null or role-only rater.
-2. Prefer `handoff.mcda_rank_args[]` when each entry has usable `alternatives[].scores`. One `methods_mcda_rank` call per entry after any scale check the args still need.
+1. Call `decision_handoff_navigator` with the session id (skip if the packet is already in this conversation). If any cell has a null or role-only rater, stop and ask only: who gave those ratings? Do not raise anything else in that turn (missing cells and the scale come later). If `rater_issues[]` lists only `cell_missing`, name the missing cells and ask once whether to rate them or leave those alternatives out of that rater's call; never fill a value.
+2. Prefer `handoff.mcda_rank_args[]` when each entry has usable `alternatives[].scores`. Scale check: if the ratings are already 0–4, or the person already chose a mapping earlier in this conversation, apply it and make one `methods_mcda_rank` call per entry this turn (never average raters). If no mapping has been chosen, show the args in full (one compact table per rater: alternatives × criteria with the stored values, unscaled, plus weights and which criteria are costs), ask the one mapping question, and call after the answer. A summary such as "two raters, three options" is not showing the args.
 3. **No scores on `mcda_rank_args` (or cells only):** if args omit `alternatives[].scores`, or only `handoff.cells` is present, build per-rater `methods_mcda_rank` argument objects from `handoff.cells` (see `references/tools.md`). **Never invent scores.** Show the built args, ask the one scale-mapping question (for example 1–5 → 0–4), and say this order: build and show args → ask mapping → call only after they answer. Make no `methods_mcda_rank` call until the person answers. Always read `scale_note`. Never rescale silently.
 4. Call the named tool on `vital-ontology-navigator` with a `vont_` key. If the key is absent, label the turn not tool-checked and stop.
 5. Read the result back as Navigator's output. Say that the ranking informs the choice and that the named person still decides.
+6. End every turn with exactly one question, the one that unblocks the next call. Keep other open points for later turns.
 
 ## Output
 
