@@ -26,8 +26,6 @@ Optional: `dissent: [{holder, text}]` or `no_dissent_attested_by`. Never send `r
 
 | Condition | What to do |
 |---|---|
-| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
-| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Dissent stated (holder + words) | `decision_attach_notes` participant note this turn. No probe first. |
 | Writing dissent[] onto the choice, version unknown | `decision_status {include_schemas: true}` + the checking line; stop. |
 | Person names the old connector / v0.2 | Notes only; no probe; one line saying so. |

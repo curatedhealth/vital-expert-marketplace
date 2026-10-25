@@ -26,8 +26,8 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Read the warning aloud in plain words.
-2. If do nothing is missing, ask: what happens if we do nothing, and is that a real option? Store it only if the person says so.
-3. If only two options exist and they are opposites (yes or no), say this is a whether-or-not frame, which Nutt's studies of organisational decisions link to more failure, and ask: what else could we do?
+2. If do nothing is missing, ask an open question: what happens if we do nothing for now? Never ask a yes/no question about adding an option. Store it only if the person names it.
+3. If only two options exist and they are opposites (yes or no), say in plain words that a yes-or-no frame often hides a better path, and ask: what else could we do?
 4. Ask the vanishing options question once: if every option on the list disappeared, what would you do?
 5. Do not invent an option to clear the warning. If the person says there is none, record that answer as a note.
 

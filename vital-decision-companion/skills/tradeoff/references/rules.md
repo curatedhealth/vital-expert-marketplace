@@ -1,6 +1,6 @@
 # Rules for Trade-off
 
-Pack: vital-decision-companion. Method version: 0.3.6. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.14. Content pack: 2026-10-26.1
 
 - **R1.** decision_tradeoff_matrix returns winner null. Speak that. Do not replace it.
 - **R2.** A cell with rater ai, model, assistant, or a product name is refused.

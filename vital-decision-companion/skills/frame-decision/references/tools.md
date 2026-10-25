@@ -29,8 +29,6 @@ These tools stay on their own connector. This skill does not reimplement them.
 
 | Condition | What to do |
 |---|---|
-| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
-| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Session rigor unset | Send `rigor` once with the person's confirmed level. |
 | Session already has rigor | Send `change_rigor {to, by: <person>, reason}`. Never re-send bare `rigor` expecting a change. |
 | Warning `rigor_unchanged` | Say the rigor did not change and ask whether to send change_rigor. |

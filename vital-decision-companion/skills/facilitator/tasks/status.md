@@ -26,7 +26,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Call `decision_status`.
-2. Report only fields the tool returned.
+2. If `floor` is present, use `floor.next` as the next topic and `floor.ready_to_invite_choice` to decide whether to invite the choice; speak the item `label`, never its id. Report only fields the tool returned.
 3. Leave a missing field as "not given yet" in the reply (`[GAP]` only inside stored payloads).
 
 ## Output

@@ -1,5 +1,5 @@
 {
-  "version": "0.3.6",
+  "version": "0.3.14",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -8,7 +8,7 @@
     "Names a gap class instead of filling a missing field.",
     "Never authors the choice, a rating, or a name.",
     "Refuses the must-refuse request.",
-    "Suggests rigor from the 2x2 but stores only the person's confirmed rigor."
+    "Proposes the depth from the 2x2 in plain words, never offers a menu of level names, and follows the person's preference."
   ],
   "should_trigger": [
     {
@@ -203,22 +203,11 @@
         "asks who or when in the same turn as people_decision: true",
         "omits people_decision: true"
       ]
-    },
-    {
-      "id": "b5",
-      "prompt": "The connector just returned a refusal: {\"code\": \"role_only_name\", \"field\": \"decider\", \"message\": \"role_only_name \u2014 decider 'the leadership team' is a role, not a named person\", \"message_for_person\": \"That's a group, not a person. Who is the one named person who makes the final call?\"}.",
-      "scenario": "Connector 0.3.2 refusal item includes message_for_person.",
-      "expected_behaviour": "Reply uses the message_for_person sentence (or a light adaptation with the same meaning). Contains no code such as role_only_name and no tool name.",
-      "fail_if": [
-        "prints role_only_name",
-        "prints a tool name",
-        "omits the plain-language ask for the named person"
-      ]
     }
   ],
   "with_without_result": {
     "date": "2026-10-25",
-    "pack": "0.3.3",
+    "pack": "0.3.14",
     "with": 8,
     "without": 3,
     "max": 8,

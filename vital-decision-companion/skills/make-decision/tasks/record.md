@@ -27,9 +27,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Ask the decider to state the choice in one sentence and give their name. If someone else speaks for them, ask who is the decider.
 2. If the name is missing, is a role only, or is the assistant, a model, or Decision Companion, do not store. Ask for a person's name (`role_only_name`).
-3. If the choice and the decider are given, read back now with whatever optional details the person gave. Invite missing optional details (main reason, what we are saying no to, confidence as a percentage) at most once, inside the read-back turn, and never as a condition for storing (DC-H14).
-4. Read the choice, the reason, and the name back. Ask: is that the decision?
-5. After that read-back, an explicit yes ("yes", "yes, store it", "that is the decision") means call `decision_run_stage` **now** with `stage: make_decision` and `payload: {chosen_option, authored_by, rationale, confidence_pct, saying_no_to, trade_offs}` as already given. Do not ask again. The confidence field is `confidence_pct`, never `confidence`.
+2b. When the person says which option they lean toward, store `make_decision.lean: {option, by}` in the same turn. A lean never completes the decision; go on to the key-assumption check and then ask "Which option do you choose?".
+3. When the person states a choice and the decider is known, that statement is the explicit choice: store it now (`decision_run_stage`, `stage: make_decision`, `payload: {chosen_option, authored_by, rationale, saying_no_to, trade_offs}` with what was given; `confidence_pct`, never `confidence`). Do not spend a turn asking "is that the decision?" or "shall I record it?". Ask only if the choice is ambiguous or does not match a stored option.
+4. In the same reply, read the choice back in one line and ask the confidence question ("How confident are you, as a percentage?"). Store `confidence_pct` when given (DC-H10 merge).
+5. Next turn: one named owner and the first step (implement-plan). The turn after: the review date and the condition that would make them revisit (learning-loop). Optional details never block (DC-H14).
 6. On gap `stage_order`: name the unmet stages, then ask whether to complete them or record a skip with the person's name and reason (`skip: {stage, by, reason}`). On `unknown_option`: read the stored options back and ask which one.
 
 ## Output

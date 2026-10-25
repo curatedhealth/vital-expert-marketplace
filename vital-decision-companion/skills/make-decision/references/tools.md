@@ -20,8 +20,6 @@ Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
 
 | Condition | What to do |
 |---|---|
-| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
-| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Gap `stage_order` | Name unmet stages. Ask: complete them now, or skip with `skip {stage, by: <person>, reason}`? |
 | Gap `unknown_option` | Call `decision_status`, read stored options, ask which name matches. |
 | Gap `role_only_name` | Ask who the person is. Do not store a role title. |

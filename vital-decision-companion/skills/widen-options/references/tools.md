@@ -18,8 +18,6 @@ Optional payload fields: options, vanishing_options_answer, opportunity_cost, ou
 
 | Condition | What to do |
 |---|---|
-| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
-| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | Gap `too_few_options` | Say how many of 3 are present. Ask for another option. Do not invent one. |
 | Status shows widen incomplete with ≥3 options | Call `run_stage widen_options {options}` once (stage-flag stale). |
 | Widening answers given | Store via run_stage fields vanishing_options_answer, opportunity_cost, outside_view. |

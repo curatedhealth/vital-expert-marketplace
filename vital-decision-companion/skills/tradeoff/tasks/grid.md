@@ -26,7 +26,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Ask for the criteria before any rating. If ratings come first, stop and ask for the criteria.
-2. Ask for weights in the person's words, before rating. Offer swing weighting: imagine each criterion moving from worst to best; which swing matters most? Give it 100 and the others a share of it.
+2. Ask for weights in the person's words, before rating. If the person will only rank, store `criteria: [{name, rank}]` and say a weighted ranking needs weights; never assume equal weights. On the warning `weights_missing`, say its `message_for_person`. Offer swing weighting: imagine each criterion moving from worst to best; which swing matters most? Give it 100 and the others a share of it.
 3. Ask the person to declare the scale (for example 1 to 5, higher is better) and which criteria are costs (lower is better). Set each criterion's `direction` to `higher_better` or `lower_better`.
 4. In a group, ask raters to score privately before any discussion, then share.
 5. Call `decision_tradeoff_matrix` with `criteria: [{name, weight, direction}]` and `ratings: [{option, criterion, value, rater}]`. `rater` is always the person's name. Do not send `authored_by` on a cell. Do not send `score` — the field is `value`. Send `scale` only when the person declared a scale other than 1–5.

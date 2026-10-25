@@ -1,6 +1,6 @@
 {
   "name": "vital-decision-companion",
-  "version": "0.3.6",
+  "version": "0.3.14",
   "description": "Coaches a leadership decision on its own connector, and calls Ontology Navigator and Verify tools when a score or a claim check is needed. It does not copy those tools.",
   "author": {
     "name": "Vital.Expert",

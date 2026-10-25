@@ -5,7 +5,7 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (framing). Does not choose the option and does not sign. |
-| Workflow | Ask the two sizing questions, show the 2x2 suggestion, wait for the person's rigor, store it, stop. |
+| Workflow | Ask the two sizing questions, propose a depth in plain words, store it unless the person objects, continue. |
 | Skill | DC-1.1 Frame the decision |
 | Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
 | Tool | Decision Companion `decision_run_stage` and `decision_rigor_guide` |
@@ -26,10 +26,10 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Ask: if this goes wrong, how high is the consequence? Then ask: how hard is it to undo, and at what cost?
-2. Show the Playbook 2x2 suggestion in one line. High consequence and hard to undo: dig deep (dig_deep, or full_process for a strategic or critical decision). High consequence and easy to undo: use available intelligence and decide quickly (decide_quickly), ready to course-correct. Low consequence and hard to undo: proportionate effort (tradeoff). Low consequence and easy to undo: decide and experiment (decide_quickly).
-3. Ask the authority question: solo, inform, consult, consent, or consensus? Speed-critical decisions favour solo or inform; buy-in-critical ones favour consent or consensus.
-4. Ask the person to confirm a rigor. Call `decision_rigor_guide` with it and read the required stages back.
-5. Call `decision_status` first. If the session has no rigor yet, call `decision_run_stage` with `stage: how_to_decide` and `payload: {consequence, reversibility, authority_mode, rigor}` (plus statement, goal, decider, deadline when known). If the session already has a rigor, send `change_rigor: {to, by: <person>, reason}` instead of bare `rigor`. Read back `rigor_unchanged` if it appears. The person's choice wins over the suggestion.
+2. Map the answers backstage (never say these ids to the person): high consequence and hard to undo → dig_deep (full_process for a strategic or critical decision); high consequence and easy to undo → decide_quickly, ready to course-correct; low consequence and hard to undo → tradeoff; low and easy → decide_quickly.
+3. Propose the depth in one plain sentence and keep going, for example: "Since this is costly and hard to undo, let's also weigh what matters and check what could go wrong before you choose." Do not offer a menu of levels. If the person wants it lighter or heavier, follow them.
+4. Ask the authority question only when it changes who must be heard (several people involved, buy-in needed); in plain words: "Will you decide alone, or do others need to agree?" Whatever the depth, the decision-quality floor (DC-H16) still applies.
+5. Call `decision_status` first. If the session has no rigor yet, call `decision_run_stage` with `stage: how_to_decide` and `payload: {consequence, reversibility, authority_mode, rigor}` (plus statement, goal, decider, deadline when known). If the session already has a rigor, send `change_rigor: {to, by: <person>, reason}` instead of bare `rigor`. On `rigor_unchanged`, fix it silently (DC-H11). The person's preference wins over the suggestion.
 6. When the person says this is a people decision, include `people_decision: true` and read the warning text exactly.
 
 ## Output

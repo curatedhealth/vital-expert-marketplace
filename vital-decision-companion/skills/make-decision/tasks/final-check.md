@@ -26,7 +26,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Steps
 
 1. Call `decision_status`. Note which stages are open.
-2. Ask only the items not already answered: Is the problem clearly defined? Did we consider at least three options? Was the information sufficient for this level of risk? Did we hear different perspectives, including dissent? Did we check the stored bias card? Would we be comfortable explaining this in public? Are we committed to implementing it? Is there a plan for the first steps? Do we know how we will learn whether it worked?
+2. Ask only the items not already answered, in plain words, one per turn, starting with the decision-quality floor (DC-H16) items still open: Is the problem clearly defined? Did we consider at least three options? Was the information sufficient for this level of risk? Did we hear different perspectives, including dissent? Did we check for a pull in our thinking, such as anchoring on a first number or money already spent? Would we be comfortable explaining this in public? Are we committed to implementing it? Is there a plan for the first steps? Do we know how we will learn whether it worked?
 3. A no is recorded, not argued away. The decider may proceed with the gap named.
 4. If dissent has not been invited, point to record-dissent before storing.
 5. Return to `tasks/record.md`.

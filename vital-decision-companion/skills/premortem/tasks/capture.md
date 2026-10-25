@@ -34,7 +34,3 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 ## Output
 
 Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
-
-## Wrong or blank rows (R10)
-
-If the coach created a wrong or blank hypothesis row, offer to remove it with `remove_index` (and `by` = the named person). Never remove a person's hypothesis without their say. `replace_index` plus a new hypothesis, also with `by`, replaces one row. On `unknown_fields`, drop the unknown key and resend or ask.

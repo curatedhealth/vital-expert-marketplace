@@ -13,7 +13,7 @@
 
 ## Never claimed
 
-- That the 2x2 suggestion is the confirmed rigor.
+- That the 2x2 suggestion overrides the person's stated preference.
 - That a role title is a named decider.
 
 ## Closing statement

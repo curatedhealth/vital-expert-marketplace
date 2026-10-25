@@ -1,17 +1,65 @@
 # Changelog
 
-## 0.3.6 (2026-10-25, Lane B round 5)
+## 0.3.14 (2026-10-26, built by Claude, not committed)
 
-Connector contract round 5 (works on 0.3.1 today; uses 0.3.2 fields when present).
+Wires the skills to connector 0.3.2 (round 6). Every new field is optional; with connector 0.3.1 the skills behave as 0.3.13.
+- DC-H18 (new): use `decision_status.floor` (`next`, `ready_to_invite_choice`, item labels); say `message_for_person` when present; save as you go so the record never lags; save the choice the moment it is stated; store the lean (`make_decision.lean`) and key-assumption checks (`gather_intelligence.key_assumptions`).
+- facilitator status.md: follows `floor.next`, speaks labels not ids.
+- brief compile.md: reads back `person_summary_markdown` (no watermark, no tool names).
+- tradeoff grid.md: rank-only criteria (`{name, rank}`), never equal weights; says `weights_missing` message.
+- gather-intelligence notes.md: stores key assumptions.
+- make-decision record.md: stores the lean; a lean never completes the decision.
 
-- **R14 `message_for_person`:** DC-H8 and every `references/tools.md` Connector version block — say the person sentence when present; on 0.3.1 translate the code with the DC-H8 list; never print the code.
-- **R10 pre-mortem:** offer `remove_index` + `by` for coach-created wrong/blank rows; never remove without the person's say (`tasks/capture.md`, tools reference).
-- **R15 `decision_export`:** brief fills omitted stored data from export (0.3.2+) or `decision_status` (0.3.1) and says so in plain words; decision-check prefers the export over inferring from status.
-- **R13:** decision-check and implement-plan must not treat "implement complete" as progress while no choice is recorded.
-- **Evals:** frame-decision b5 (R14), premortem b5 (R10), brief b4 (R15).
-- **Lint d:** skill prose must not instruct printing `[GAP]`, a refusal code, or a tool name in a reply (storage markers and DC-H8 never-lists allowed). Brief R7 / tools table use "not given yet" for the person.
-- `validate.py` allows `decision_export`; `KNOWN_TOOL_ARGS` includes `remove_index` / `replace_index`.
-- Marketplace sync at 0.3.6 (single ship after 0.3.5 land).
+Held-out benchmark (0.3.13, S13–S18, blind, two grader models): product vs plain +3.6 DQ (95% CI 2.9–4.3, 24/24 wins); product vs expert prompt +0.04 (−0.5 to +0.7, equivalent); guardrails 6.9 vs 6.3 of 8. Saved-record completeness about 11/16 checklist items; 0.3.14 targets that gap.
+
+## 0.3.13 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 7: D 0.3.12 level with the expert prompt (15.2 vs 15.0) but asked for the choice at reply 16–19, cutting off commitment items.
+- DC-H16 pace: count replies; frame/options/what matters by reply 10; closing sequence from reply 11–12; explicit choice by about reply 15; three replies reserved for read-back + confidence, owner + first step, review + revisit; nice-to-haves never push the choice past reply 16.
+
+## 0.3.12 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 6 (blind 3-way, two grader models): plain 11.8, expert prompt 15.25, D 0.3.11 15.4 (weakest link 1.9 vs 1.6; guardrails best; first place 6–6). Remaining gaps: base rate only volunteered, pre-mortem without an early sign, no explicit read-back, revisit condition and first step missing.
+- DC-H16: ask the base rate outright and hold it against the goal; a failure without a sign is followed by "what is the first thing you would notice?"; post-choice turns are read-back + confidence, owner + first step, review date + "what would make you look sooner?".
+
+## 0.3.11 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 5 (blind graded, two grader models): D 0.3.10 reached parity with the expert prompt (DQ 15.1 vs 14.9, 6–6 preferences) but lost on guardrails: steering in read-backs, invented content in the record (roles, computed nets, unstated reasons, "test run"), equal weights assumed, and review/revisit cut off by late closing.
+- DC-H17 (new): neutral mirror (no singling out, no "the numbers support"); clean record (only what was said or returned).
+- DC-H16: weights fallback by ranking, never assumed equal; anchor source check; start the closing sequence by about the twelfth exchange.
+
+## 0.3.10 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 4: D asked for the lean and then ran the pre-mortem and dissent after it, so post-choice items (owner, confidence, review) were cut off.
+- DC-H16 closing sequence: failure + early sign and dissent first; then lean → key-assumption check on the lean → explicit "Which option do you choose?".
+
+## 0.3.9 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 3: after the choice D 0.3.8 spent turns on "is that the decision?" and missed review (6/6), owner and confidence (3/6); decider/deadline sometimes never asked.
+- make-decision record.md: a stated choice is the explicit choice; store at once; read back and ask confidence in the same reply; then owner + first step; then review date + revisit condition.
+- DC-H16 (1): the frame includes who decides (one named person) and by when.
+
+## 0.3.8 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 2 on the semantic simulator (v3): D 0.3.7 drew out 83/102 facts vs the expert prompt's 92; misses concentrated on option ratings (4/6), the hidden fact that changes the answer (3/6) and the review date (5/6), and it invited the choice earlier.
+- DC-H16: after weights, the person rates each option (1–5); for the lead option ask "what has to be true for this to work, and has anyone checked it?"; the choice is invited only after ratings and that assumption check.
+- DC-H16: after the choice, the next three turns are confidence, owner + first step, review date + revisit condition, with the read-back folded in.
+
+## 0.3.7 (2026-10-25, built by Claude, not committed)
+
+Dev iteration 1 (sessions S7–S12, D vs expert prompt E): 0.3.6 invited the choice as soon as the person pushed, so adversarial and cooperative people chose early and poorly (6/6 poor choices, 55 vs 75 facts drawn out).
+- DC-H16 pacing: pressure is not readiness. Under pressure ask the one question most likely to change the answer (vanishing options, "what do you know that I don't"). Invite the choice only with ≥3 options including one the person generated, what matters said, and a failure or disconfirming condition asked, or when the record is requested. A spontaneous early choice gets one "before you lock it" question.
+- widen-options: open widening questions only, vanishing options first; no yes/no "should we add do nothing?"; no study citations in speech.
+
+## 0.3.6 (2026-10-25, built by Claude, not committed)
+
+Hardening from the decision-quality sample test (A plain vs E expert prompt vs D product, S4–S6; see dc-bench-sample-dq-report.md).
+- DC-H8: the plain equivalents no longer tell the coach to say "the companion", "Navigator's ranking" or "practice session"; graders flagged all three as jargon.
+- DC-H15 (new): keep the machinery backstage. Never offer depth levels, modes, stages or tools by name; propose the depth in plain words and carry on; tool steps are silent.
+- DC-H16 (new): decision-quality floor before the choice. Goal and stakes, three or more options, a disconfirming condition and base rate, weights before comparing, one failure with an early sign, and named dissent, one per turn. After the choice: confidence, owner, first step, revisit condition.
+- DC-H16 pacing (added after the dev re-run, untested): the floor is a checklist, not a sequence; ask an item at most twice; invite the choice once options and what matters exist, or when the person pushes; no cited studies or guessed pronouns.
+- frame-decision size.md: the 2x2 maps to rigor ids backstage; one plain-language proposal replaces the menu of levels; the authority question is asked only when it matters.
+- make-decision final-check.md: plain wording ("a pull in our thinking"), and the open floor items come first.
 
 ## 0.3.5 (2026-10-25)
 

@@ -32,8 +32,6 @@ Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
 
 | Condition | What to do |
 |---|---|
-| Refusal / gap / warning with `message_for_person` (0.3.2+) | Say that sentence (light adapt OK). Never print the code. |
-| Same item without `message_for_person` (0.3.1) | Translate the code with the DC-H8 list. Never print the code. |
 | `handoff.mcda_rank_args[]` with scores | One `methods_mcda_rank` call per entry (after any scale check). |
 | Args without scores, or only `handoff.cells` | Build from cells; show args; ask scale mapping; call only after the person answers. |
 | `rater_issues[]` or null/role-only rater | Stop and ask who rated. |

@@ -10,7 +10,7 @@ Person asks: should we launch the program? Reframe: what goal is the program for
 
 ## Pattern 2
 
-Person says the decision is easy to reverse but costly if wrong. 2x2 suggests decide quickly with available intelligence. Ask them to confirm before storing.
+Person says the decision is easy to reverse but costly if wrong. 2x2 suggests deciding quickly with what is known. Say so in plain words ("since it's easy to undo, let's decide with what we know and adjust") and continue unless they object.
 
 ## Pattern 3
 
