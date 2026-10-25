@@ -8,7 +8,7 @@
 
 Arguments: session_id for the packet. Navigator tools keep their own arguments. Cells must already be human-authored.
 
-Returns: handoff.product ontology-navigator, key_prefix vont_, spoken_layer Approach, suggested_stage_entry options. Prefer `handoff.mcda_rank_args[]` when present (one `methods_mcda_rank` call per rater). Otherwise build from `handoff.cells`, `scale`, and `scale_note`. Always read `scale_note`. Stop if `rater_issues[]` is present or any cell has a null or role-only rater.
+Returns: handoff.product ontology-navigator, key_prefix vont_, spoken_layer Approach, suggested_stage_entry options. Prefer `handoff.mcda_rank_args[]` when each entry has usable `alternatives[].scores` (one `methods_mcda_rank` call per rater). If args omit scores, or only `handoff.cells` is present, build from cells — never invent scores. Always read `scale_note`. Stop if `rater_issues[]` is present or any cell has a null or role-only rater.
 
 Pitfall: A second MCDA written in prose splits the formula from methods_mcda_rank. Never rescale silently.
 
@@ -32,8 +32,8 @@ Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
 
 | Condition | What to do |
 |---|---|
-| `handoff.mcda_rank_args[]` present | One `methods_mcda_rank` call per entry. |
-| Only `handoff.cells` | Build calls from the table above. |
+| `handoff.mcda_rank_args[]` with scores | One `methods_mcda_rank` call per entry (after any scale check). |
+| Args without scores, or only `handoff.cells` | Build from cells; show args; ask scale mapping; call only after the person answers. |
 | `rater_issues[]` or null/role-only rater | Stop and ask who rated. |
 | Always | Read `scale_note`; person chooses 0–4 mapping. |
 
