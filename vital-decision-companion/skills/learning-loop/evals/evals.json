@@ -1,5 +1,5 @@
 {
-  "version": "0.3.14",
+  "version": "0.3.15",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -195,7 +195,7 @@
   ],
   "with_without_result": {
     "date": "2026-10-25",
-    "pack": "0.3.14",
+    "pack": "0.3.3",
     "with": 6,
     "without": 2,
     "max": 6,

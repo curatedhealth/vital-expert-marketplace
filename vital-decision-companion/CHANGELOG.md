@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.15 (2026-10-26, built by Claude, not committed)
+
+From the six-arm test (skills +2.3 DQ on plain, +1.25 on expert prompt; connector ±0 on coaching with ~30k extra tokens and ~25% of calls returning warnings).
+- DC-H18: save quietly in as few calls as possible (target one per turn; `decision_status` only every few turns); never tell the person something was saved; check the conversation before following `floor.next` (no re-asking); pre-mortem, owner/first step and review saved in the turn given; repair warnings silently.
+- Never store `[GAP]` or "not given yet" as a value; missing fields are left out (headers, governance lines and status task updated).
+- facilitator and where-to-start: "Method lens" section folding in the expert-prompt principles (DQ, WRAP, biases, pre-mortem, roles), since expert prompt + skills scored best.
+
 ## 0.3.14 (2026-10-26, built by Claude, not committed)
 
 Wires the skills to connector 0.3.2 (round 6). Every new field is optional; with connector 0.3.1 the skills behave as 0.3.13.

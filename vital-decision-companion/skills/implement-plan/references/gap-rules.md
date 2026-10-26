@@ -1,6 +1,6 @@
 # Gap rules
 
-`[GAP]` is the marker stored in payloads and briefs. In replies to the person, say "not given yet" (or name what is missing) instead of `[GAP]`.
+A missing value is left out of the stored payload (never store `[GAP]` as a value); the connector reports it as a gap and the brief shows it as "not given yet". In replies to the person, say "not given yet" (or name what is missing).
 
 Classify every miss before you write it. Never turn an absent field into a fact.
 
@@ -8,7 +8,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 |---|---|---|
 | found | Implement stage stored | Confirm owner, milestone, review date and trigger |
 | field missing | Owner, milestone, review date, or trigger is empty | Ask for that field |
-| covered but absent | The person has no metric yet | Leave [GAP] and say so |
+| covered but absent | The person has no metric yet | Leave it out and say "not given yet" |
 | not covered | No vdec_ key | Write the plan by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.

@@ -12,7 +12,7 @@
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
-| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field stays `[GAP]`. |
+| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
 ## Companion
 
@@ -28,7 +28,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 1. Set the scene: imagine it is six months from now (or the horizon the person names) and this decision failed badly. What happened?
 2. In a group, ask each person to write their reasons alone before anyone speaks, then share one at a time, most junior first.
 3. For each failure, one per turn, ask: what early signal would show it is happening? What would we do to prevent or soften it? Who owns watching for it?
-4. Call `decision_premortem` with `hypotheses: [{failure, early_signal, mitigation, owner, raised_by}]` in the person's words. Leave a missing field as [GAP].
+4. Call `decision_premortem` with `hypotheses: [{failure, early_signal, mitigation, owner, raised_by}]` in the person's words. Leave a missing field out (never store [GAP]).
 5. Never send `recommendation`. Handle per-index refusals; if one bad item drops the whole batch, resend without it and tell the person. Do not rank the list and do not turn it into advice. Point to implement-plan to turn each failure into an if–then plan.
 
 ## Output

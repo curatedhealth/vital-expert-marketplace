@@ -26,7 +26,7 @@ These tools stay on their own connector. This skill does not reimplement them.
 
 | Condition | What to do |
 |---|---|
-| Brief prints `None`, `null`, or `{}` | Show "not given yet" to the person (keep `[GAP]` only as the stored marker), or fill from `decision_export` / `decision_status`, and say you did so. |
+| Brief prints `None`, `null`, or `{}` | Show "not given yet" or add the field from `decision_status`, and say you did so. |
 | watermark SIMULATED | Keep it on every page; say practice. |
 | Stored field omitted from brief | Pull from `decision_status` and note the enrichment. |
 | Do not | Reintroduce compensations for raw JSON as if they were still the default. |

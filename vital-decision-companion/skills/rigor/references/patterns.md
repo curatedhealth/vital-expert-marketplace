@@ -12,4 +12,4 @@ Person asks to skip the pre-mortem on dig_deep. The guide requires it. Refuse.
 
 ## Pattern 3
 
-full_process. Skippable is empty. Every stage is required or marked [GAP].
+full_process. Skippable is empty. Every stage is required or reported as not given yet.

@@ -1,6 +1,6 @@
 # Rules for Widen options
 
-Pack: vital-decision-companion. Method version: 0.3.14. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
 
 - **R1.** Pass options as a list of objects with name. Empty names are refused.
 - **R2.** Warnings, not errors: fewer than 3 options (`too_few_options` reads as "2 of 3 options"); do-nothing missing; do-it-internally missing. Warnings appear on both `decision_widen_options` and `run_stage`.

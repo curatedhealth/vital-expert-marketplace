@@ -1,13 +1,13 @@
 # Gap rules
 
-`[GAP]` is the marker stored in payloads and briefs. In replies to the person, say "not given yet" (or name what is missing) instead of `[GAP]`.
+A missing value is left out of the stored payload (never store `[GAP]` as a value); the connector reports it as a gap and the brief shows it as "not given yet". In replies to the person, say "not given yet" (or name what is missing).
 
 Classify every miss before you write it. Never turn an absent field into a fact.
 
 | Class | Meaning here | How to word it |
 |---|---|---|
 | found | Both fields were given | Store them |
-| field missing | Date or signal is absent | Write [GAP] |
+| field missing | Date or signal is absent | Leave the field out; say "not given yet" |
 | covered but absent | The person declined a metric | Leave the gap |
 | not covered | No vdec_ key | Write the two fields by hand and label not tool-checked |
 

@@ -6,7 +6,7 @@ Sources for the method: the Playbook Gather Intelligence stage (Part 8: six inte
 
 ## Pattern 1
 
-Person lists three knowns and says the rival share is unknown. Store both. Share stays [GAP]. Then store the stage with knowns and unknowns.
+Person lists three knowns and says the rival share is unknown. Store both. Share stays in the unknowns list. Then store the stage with knowns and unknowns.
 
 ## Pattern 2
 

@@ -1,6 +1,6 @@
 # Rules for Learning loop
 
-Pack: vital-decision-companion. Method version: 0.3.14. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
 
 - **R1.** The stage completes only when review_date, success_signal, and authored_by are all present.
 - **R2.** authored_by is the person recording the plan. Never ai, model, assistant, or a role title.

@@ -1,6 +1,6 @@
 # Gap rules
 
-`[GAP]` is the marker stored in payloads and briefs. In replies to the person, say "not given yet" (or name what is missing) instead of `[GAP]`.
+A missing value is left out of the stored payload (never store `[GAP]` as a value); the connector reports it as a gap and the brief shows it as "not given yet". In replies to the person, say "not given yet" (or name what is missing).
 
 Classify every miss before you write it. Never turn an absent field into a fact.
 

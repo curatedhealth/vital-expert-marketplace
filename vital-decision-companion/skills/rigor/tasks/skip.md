@@ -12,7 +12,7 @@
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
-| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field stays `[GAP]`. |
+| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
 ## Companion
 

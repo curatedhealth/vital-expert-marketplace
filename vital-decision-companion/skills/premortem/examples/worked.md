@@ -4,8 +4,8 @@
 # Milestone miss
 
 Failure: the agency misses the first milestone.
-Early signal: [GAP].
-Mitigation: [GAP].
+Early signal: not given yet (field left out).
+Mitigation: not given yet (field left out).
 
 The coach asks for the early signal and does not recommend an agency.
 

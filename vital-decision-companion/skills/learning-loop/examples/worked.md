@@ -5,6 +5,6 @@
 
 Person: "Look again on 1 March 2027."
 
-Review date is stored only together with a signal. The signal is [GAP]. The coach asks what they would see. No KPI is invented.
+Review date is stored only together with a signal. The signal is not given yet. The coach asks what they would see. No KPI is invented.
 
 Closing: This coaching draft is for the named person. It is not the decision, and it is not medical, legal, or regulatory clearance.

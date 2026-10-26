@@ -6,6 +6,6 @@
 Known: the rival announced a list-price change on 1 September 2026.
 Unknown: share in the target segment.
 
-The coach stores both with source owner. The share stays [GAP]. No literature call.
+The coach stores both with source owner. The share stays in the unknowns list. No literature call.
 
 Closing: This coaching draft is for the named person. It is not the decision, and it is not medical, legal, or regulatory clearance.

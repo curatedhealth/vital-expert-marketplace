@@ -12,7 +12,7 @@
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
-| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field stays `[GAP]`. |
+| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
 ## Companion
 
@@ -29,7 +29,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 2. Call `decision_run_stage` with `stage: learning_loop` and `payload: {review_date, success_signal, authored_by, probability, key_assumptions}`. Send `success_signal` only — never also `expected_outcome` (it is an alias and they collide). `review_date`, `success_signal`, and `authored_by` are required.
 3. If the result is `refused:` and `authored_by` is a person's name, say the connector rejected the author field and ask the person to confirm the name. Do not retry with another name and do not use the assistant.
 4. If the result says required fields missing, name the three required fields back to the person.
-5. Do not invent a KPI, a date, or a probability. A missing value stays `[GAP]`.
+5. Do not invent a KPI, a date, or a probability. A missing value is left out and shown as "not given yet".
 
 ## Output
 

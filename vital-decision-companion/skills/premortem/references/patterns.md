@@ -14,4 +14,4 @@ Team agrees fast on one failure. Ask each member to write two more alone before 
 
 ## Pattern 3
 
-Person names a failure and no mitigation. Store it with mitigation [GAP].
+Person names a failure and no mitigation. Store it without a mitigation field.

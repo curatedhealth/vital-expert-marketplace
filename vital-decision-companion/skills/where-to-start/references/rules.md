@@ -1,6 +1,6 @@
 # Rules for Where to start
 
-Pack: vital-decision-companion. Method version: 0.3.14. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
 
 - **R1.** Intents are quick, tradeoff, deep, full, and classify_first. An unknown intent is refused.
 - **R2.** Without an intent, decision_start returns opened false and the template menu. Ask which intent.

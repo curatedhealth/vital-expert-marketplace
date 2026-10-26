@@ -12,7 +12,7 @@
 | Prompt | Use only fields the person supplied or the tool returned. |
 | Template | `assets/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
-| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field stays `[GAP]`. |
+| Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
 ## Companion
 
@@ -27,7 +27,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 1. Call `decision_status`.
 2. If `floor` is present, use `floor.next` as the next topic and `floor.ready_to_invite_choice` to decide whether to invite the choice; speak the item `label`, never its id. Report only fields the tool returned.
-3. Leave a missing field as "not given yet" in the reply (`[GAP]` only inside stored payloads).
+3. Leave a missing field as "not given yet" in the reply (never store `[GAP]`; leave the field out).
 
 ## Output
 
