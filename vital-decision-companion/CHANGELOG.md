@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.16 (2026-10-26, built by Claude, not committed)
+
+Division of labour: the assistant brings the data; the connector scores, assesses, structures and records. Diagnosis: 91% of connector calls were writes, decision-support reads <1%, Navigator never called, because the skills forbade totals and rankings.
+- DC-H19 (new): never compute by hand; with a complete grid save cells → `decision_handoff_navigator` → Navigator `methods_mcda_rank` (1–5 → 0–4 by subtracting 1, stated, no extra question) + one robustness re-run (heaviest weight −10 points); show "what your own weights and ratings compute to" (scores, top-two gap, robustness) and ask whether it matches judgement; numeric options use `methods_scenario` / `methods_risk_tornado`. Without the connector: no computation, the person weighs the grid.
+- DC-H17: computed scores only from the connector, shown neutrally; conflicts between lean and computed order are asked about.
+- DC-H16 closing sequence: computed view before the lean.
+- tradeoff grid.md step 7 and handoff-navigator call.md rewritten accordingly (no scale-mapping detour).
+
 ## 0.3.15 (2026-10-26, built by Claude, not committed)
 
 From the six-arm test (skills +2.3 DQ on plain, +1.25 on expert prompt; connector ±0 on coaching with ~30k extra tokens and ~25% of calls returning warnings).

@@ -1,6 +1,6 @@
 # Rules for Pre-mortem
 
-Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.16. Content pack: 2026-10-26.1
 
 - **R1.** Ask for failure, early signal, mitigation, and owner. Leave a missing field out (never store [GAP]).
 - **R2.** Store the list with decision_premortem. Do not rank the hypotheses.

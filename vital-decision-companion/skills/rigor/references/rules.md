@@ -1,6 +1,6 @@
 # Rules for Rigor
 
-Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.16. Content pack: 2026-10-26.1
 
 - **R1.** Levels are decide_quickly, tradeoff, dig_deep, and full_process. Any other value is an unknown rigor error.
 - **R2.** Read required, skippable, and checklist from the tool. Do not invent a fifth level.

@@ -1,6 +1,6 @@
 # Rules for Handoff to Navigator
 
-Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.16. Content pack: 2026-10-26.1
 
 - **R1.** Call decision_handoff_navigator first. called_navigator is false. This connector does not call Navigator over HTTP.
 - **R2.** Speak Approach. suggested_stage_entry is options. compile_key is 4_options.

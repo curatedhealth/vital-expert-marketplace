@@ -31,7 +31,7 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 4. In a group, ask raters to score privately before any discussion, then share.
 5. Call `decision_tradeoff_matrix` with `criteria: [{name, weight, direction}]` and `ratings: [{option, criterion, value, rater}]`. `rater` is always the person's name. Do not send `authored_by` on a cell. Do not send `score` — the field is `value`. Send `scale` only when the person declared a scale other than 1–5.
 6. Read back per-index gaps in plain words: `invalid_cell` (wrong fields), `rater_missing`, `role_only_name`, `cell_replaced`. On `invalid_cell` for fields including `value` (or when the refusal means `score` was sent): **in the same turn**, resend the corrected cells with `value` (not `score`), same option/criterion/rater/numbers. Tell the person which cell was fixed. Ask only if the value itself is unknown — do not ask for confirmation of numbers you already have.
-7. Read the stored grid. Say the grid has no winner. Do not average, total, or rank.
+7. Do not average, total or rank by hand. With the connector and a complete grid, go straight to the computed view (DC-H19): `decision_handoff_navigator` → `methods_mcda_rank`, plus one robustness re-run; show it as the person's own inputs computed, and ask whether it matches their judgement. Without the connector, read the grid back and ask the person to weigh it.
 8. End the turn with exactly one question. If several things are open (a direction check, the next rating, a missing rater), ask the one that blocks the next store and keep the rest for later turns.
 
 ## Output

@@ -1,6 +1,6 @@
 # Rules for Make the decision
 
-Pack: vital-decision-companion. Method version: 0.3.15. Content pack: 2026-10-26.1
+Pack: vital-decision-companion. Method version: 0.3.16. Content pack: 2026-10-26.1
 
 - **R1.** Payload keys choice, chosen_option, decision, or winner with authored_by ai, model, or assistant are refused.
 - **R2.** The stage completes only when chosen_option and authored_by are present and the author was not refused.
