@@ -24,7 +24,7 @@
     {
       "name": "vital-decision-companion",
       "source": "./vital-decision-companion",
-      "description": "Leadership decision coaching on its own connector. Scores stay on Ontology Navigator and claim checks stay on Verify. Tools on mcp.vital.expert/api/mcp/decision-companion (vdec_)."
+      "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied."
     },
     {
       "name": "navigator-ai-investment",
