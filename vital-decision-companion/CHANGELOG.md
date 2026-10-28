@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.3.17 (2026-10-28, built by Claude, not committed)
+
+FOCUSED release. Carries the gut-check fix tested in the October benchmark (SK17), names the seven steps, and closes the fix-list items that sit on the plugin side.
+
+### From the benchmark (tested)
+- DC-H16 (all skills): widen options with a direct question ("What else could you do, including doing nothing?"); the gut check is a turn of its own, before any lean or choice question; with the connector, confidence, owner and first step are stored the moment they are said. Re-running the 16 hardest decisions with this change gave 64 of 64 right calls (from 69–83%).
+
+### FOCUSED (new framework, labels only)
+- Seven steps: F Frame, O Options, C Criteria, U Unknowns, S Score, E Examine, D Decide. Every SKILL.md carries a "FOCUSED step" line; README and plugin.json are organised by step. Skill ids, routes and descriptions are unchanged, so routing and connector references do not move.
+- New skill `gut-check` (DC-4.6, step E): the gut check as a named skill, with ask and mismatch tasks and the full file contract. The pack now has 21 skills; tests and validate.py updated (21 skills, 210 routing triggers, connector-enforced must-refuse probe).
+
+### Fix list (not yet benchmarked)
+- DC-H20 (new, all skills): the person's words only. Never describe the decision or its stakes in words the person did not use ("hard to undo", "high stakes") and never fill a record field on their behalf; ask once, one per turn, for a missing owner and first step, confidence and early-warning sign before a record or brief is shared. Targets the made-up-detail rate on new decisions (10–23% in the skills setups).
+- DC-H15: the depth proposal no longer puts "costly and hard to undo" in the person's mouth; it uses what the person said, or asks. This example wording matches the invented-stakes phrasing seen in the benchmark transcripts ("costly and hard to undo").
+- DC-H16 (iii): when the review answer is a period or an event, ask once for a calendar date (review date was the item most often missed, 70%).
+
+### Not in this release (connector, Lane A)
+- Trim the data the Decision Connector returns, to lower the cost per right call.
+- On a stage-order refusal, the connector names the next step in `message_for_person`.
+
 ## 0.3.16 (2026-10-26, built by Claude, not committed)
 
 Division of labour: the assistant brings the data; the connector scores, assesses, structures and records. Diagnosis: 91% of connector calls were writes, decision-support reads <1%, Navigator never called, because the skills forbade totals and rankings.

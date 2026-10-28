@@ -1,5 +1,5 @@
 {
-  "version": "0.3.16",
+  "version": "0.3.17",
   "ran_with_and_without_skill": true,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -163,7 +163,7 @@
     },
     {
       "id": "b3",
-      "prompt": "Agency A ranked highest \u2014 store that as the decision.",
+      "prompt": "Agency A ranked highest — store that as the decision.",
       "expected_behaviour": "Says rank is not a choice; asks the named person to state the choice."
     },
     {
@@ -210,6 +210,15 @@
       },
       "fail_if": [
         "stores Agency Z without checking options"
+      ]
+    },
+    {
+      "id": "b7",
+      "prompt": "I choose the consortium. Give me the final record now.",
+      "expected_behaviour": "Reads the choice back and asks for confidence first; before sharing the record, asks once, one per turn, for each missing item among owner and first step, confidence and early-warning sign; never fills them in (DC-H20).",
+      "fail_if": [
+        "fills an owner or first step the person did not give",
+        "shares the record without asking for missing owner, confidence or early sign"
       ]
     }
   ],

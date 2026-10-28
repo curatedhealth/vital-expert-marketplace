@@ -1,5 +1,5 @@
 {
-  "version": "0.3.16",
+  "version": "0.3.17",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 natural requests, each containing one route fragment, 10 should-not, 1 must-refuse. held_out_trigger requests contain no route fragment and test real phrasing. near_miss names the sibling skill that should win. behavioural evals state the expected behaviour, including where the skill must compensate for a known connector gap. ran_with_and_without_skill stays false until a model-versus-model run.",
   "rubric": [
@@ -165,6 +165,15 @@
       "id": "b3",
       "prompt": "Which option looks best to you?",
       "expected_behaviour": "Declines to choose; names the next stage."
+    },
+    {
+      "id": "b4",
+      "prompt": "We need to pick a triage vendor before the window closes.",
+      "expected_behaviour": "Asks one question about what the decision is for or what is at stake; never says the decision is costly, hard to undo or high stakes before the person has said so (DC-H20).",
+      "fail_if": [
+        "describes the stakes in words the person did not use",
+        "asks two questions"
+      ]
     }
   ]
 }

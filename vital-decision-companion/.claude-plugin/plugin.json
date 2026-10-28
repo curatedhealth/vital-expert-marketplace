@@ -1,7 +1,7 @@
 {
   "name": "vital-decision-companion",
-  "version": "0.3.16",
-  "description": "Coaches a leadership decision on its own connector, and calls Ontology Navigator and Verify tools when a score or a claim check is needed. It does not copy those tools.",
+  "version": "0.3.17",
+  "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
