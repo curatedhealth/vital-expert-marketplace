@@ -7,10 +7,10 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Sort statements into claims and non-claims, attach a supplied source to each claim, gap the rest |
 | Skill | TR-5.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R5, R6), `references/failure-modes.md` / `references/knowledge.md` (S1–S8) |
+| Knowledge | `references/rules.md` (R1, R2, R5, R6), `references/patterns.md` (S1–S8) |
 | Tool | `scripts/find_source_cues.py` where code can run. Companion slot: none at launch; VERIFY `check_claim` through `claim-assessment` tests a claim against its passage after drafting |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/source-note.md` |
+| Template | `assets/check-line.md`, `assets/source-note.md` |
 | Input | The draft or request, the supplied sources, the audience from intake |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H7, TR-H11 |
 
@@ -67,7 +67,7 @@ the payer channel, because payers now cover 70% of prescriptions" carries a figu
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -77,13 +77,3 @@ See `templates/check-line.md`.
 - Whether a comparative or superlative claim is allowed at all in this market is
   `claims-and-label`. This task asks only what would source it.
 - An absent source does not make a claim false. It makes it unsourced here.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

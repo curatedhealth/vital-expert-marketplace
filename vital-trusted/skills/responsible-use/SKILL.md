@@ -1,15 +1,19 @@
 ---
 name: responsible-use
 description: "Help people in pharma, biotech, medtech and digital health use AI-drafted work responsibly once it exists: who must read it before it is used, whether AI help should be disclosed and how to say it plainly, whose name it goes out under, and whether its language respects the people it describes. For replies to doctors, patient materials, payer dossiers, publications, KOL articles, campaigns, posts and everyday emails. Use it when someone says \"send this without review\", \"no need to check it\", \"should I say AI helped\", \"do we have to disclose AI\", \"write it for Dr X to sign\", \"ghostwrite this\", \"can I put my name on this\", \"is this wording OK for patients\", or when work about to leave the company calls people \"sufferers\", \"addicts\" or \"non-compliant\". One line when the stakes are low. Not for what may be pasted into the tool (responsible-inputs), recording how work was made (work-record), funding or interest disclosures (honest-framing), or reading level (fit-for-reader).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. A future AI-policy companion could read the company's AI use and publication policies; until one exists, the skill asks. Optional script for a wording scan where code can run.\n"
 metadata:
+  framework_code: "TR-6.2"
+  framework_path: "TRUSTED > Build > Ethical > Responsible use"
+  family: "build"
+  letter: "Ethical"
+  worker: "Responsible AI lead who also knows the business"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Responsible use
 
 A draft can be correct, permitted and balanced and still go wrong in how it is used: a
@@ -56,7 +60,7 @@ context card when `trusted-intake` has made one.
   line where something matters, for example "Worth a read by the finance lead before it
   goes to the board, since the figures were drafted here."
 - **Leaving the company** (doctor, patient, payer, regulator, agency, journal, public):
-  run every task that applies, give the note in `templates/use-note.md`, name who reads it
+  run every task that applies, give the note in `assets/use-note.md`, name who reads it
   next, and point to the internal process the work goes through (TR-H11).
 
 If it is unclear who will read it, ask once: "Who will read this?"
@@ -112,30 +116,12 @@ the person and say the answer comes from their policy (TR-H4). Details in
 
 - **Low stakes:** the work itself, with at most one line.
 - **Leaving the company:** the work with any language repairs made, then the note in
-  `templates/use-note.md`: who reads it next, the disclosure question or the suggested
+  `assets/use-note.md`: who reads it next, the disclosure question or the suggested
   wording, authorship points, and language changes.
 - **A request to send without review or present ghostwriting as someone's own:** a
   short redirect in the same note, with the practical route offered.
-- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
   append them to a reply the person reads directly.
-
-## Output cards
-
-Shared catalog: `../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Send without review; draft presented as reviewed | `finding-card.md` (human gate missing) | `use-note.md` review section |
-| AI listed as author; ghostwriting as own work | `finding-card.md` (AI role overclaimed) | `use-note.md` authorship section |
-| Disclosure question for journal, payer, or public | `gap-list.md` (policy answer open) | `use-note.md` disclosure section |
-| Stigmatizing or erasing language | `finding-card.md` | `use-note.md` language section |
-| Full outbound pack | `gap-list.md` | `use-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / responsible-use: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -145,14 +131,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/ai-use-disclosure.md` | Where disclosure is expected and how to word it | That task runs |
 | `tasks/authorship-integrity.md` | AI not an author; no ghostwriting presented as own work | That task runs |
 | `tasks/equity-and-inclusion.md` | People-first, non-stigmatizing language; groups and evidence gaps | That task runs |
+| `references/rules.md` | Primary rules with dates, scope and status | Explaining why a point matters |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and the wording scan | Before scanning or handing off |
 | `scripts/scan_language.py` | Lists phrases to look at for stigmatizing wording | Patient or population material |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/use-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/doctor-reply-no-review.md`, `examples/kol-article.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including ones to redirect | Testing |

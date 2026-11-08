@@ -1,15 +1,19 @@
 ---
 name: responsible-inputs
 description: "Help people in pharma, biotech, medtech and digital health think before material goes into an AI assistant: unpublished study data, clinical study reports, pricing and contracts, strategy and forecasts, client or partner confidential material, personal or patient details, information that could move a share price, and other people's copyrighted or licensed work (full articles, paid reports, guidelines, agency work). It recognizes what the material is, asks whether the company's AI use policy allows this tool for it, and offers safer routes. Use it when someone asks \"can I paste this into ChatGPT\", \"is it OK to upload this\", \"summarize this confidential report\", \"rewrite this article for our newsletter\", or pastes material that looks confidential, personal or copyrighted. Stays silent or to one line when the material is public. Not for patient data in a finished output (market-rules-and-data), how much review or AI disclosure a piece needs (responsible-use), or recording how work was made (work-record).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. A future AI-policy companion could read the company's policy and approved-tool list; until one exists, the skill asks. Optional script for a pattern scan where code can run.\n"
 metadata:
+  framework_code: "TR-6.1"
+  framework_path: "TRUSTED > Build > Ethical > Responsible inputs"
+  family: "build"
+  letter: "Ethical"
+  worker: "Responsible AI lead who also knows the business"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Responsible inputs
 
 Most problems with AI in a life-sciences company start before anything is written: an
@@ -51,7 +55,7 @@ Depth follows the material and who will read the result (TR-H12):
   result): one or two lines: what it looks like, the policy question, one safer route.
 - **High stakes** (patient or personal details, a full clinical study report, client
   confidential material, information that could move a share price, a full copyrighted
-  work going outside the company): the full note in `templates/input-note.md`, and point to
+  work going outside the company): the full note in `assets/input-note.md`, and point to
   the internal process that decides.
 
 If it is unclear what the material is or where the result will go, ask one question.
@@ -72,7 +76,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
   practical option: a company-approved tool, the minimum extract needed, identifiers
   removed, or the already-public version.
 - **Removing names is not the same as anonymous.** Say what was removed; never call the
-  result anonymous or de-identified (`references/method-standards.md` and `references/knowledge.md` I2, I6).
+  result anonymous or de-identified (`references/rules.md` I2, I6).
 - **Do not repeat what should not travel.** When personal or patient details are already
   in the conversation, do not quote them back and keep them out of the output.
 - **No legal judgments (TR-H6, TR-H11).** Whether something is inside
@@ -91,31 +95,13 @@ this skill (TR-H4). Details in `references/tools.md`.
 ## What to return
 
 - **Public material:** the work itself, with no note about inputs.
-- **Before material is pasted:** the short or full note from `templates/input-note.md`,
+- **Before material is pasted:** the short or full note from `assets/input-note.md`,
   then wait or proceed on the safer route the person picks.
 - **Material already in the conversation:** the already-shared variant of the note, then
   the work done without carrying the sensitive details forward, or a pause if the
   material needs the policy answer first.
-- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
   append check lines to a reply the person reads directly.
-
-## Output cards
-
-Never invent patient-level rows, trial arms, or identifiers to fill a summary. Shared
-catalog: `../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Confidential, unpublished, client or commercially sensitive material | `gap-list.md` (what not to paste; who owns policy) | `input-note.md` |
-| Personal or patient-level identifiers (PII, PHI) | `finding-card.md` per risk (do not quote back) | `input-note.md` confidentiality section |
-| Copyrighted or licensed full work for reproduction | `gap-list.md` | `input-note.md` IP section |
-| Public or own non-sensitive work | — (no input note) | — |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / responsible-inputs: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -123,14 +109,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 |---|---|---|
 | `tasks/input-confidentiality.md` | Guard, repair and check for what goes into the tool | That task runs |
 | `tasks/intellectual-property.md` | Guard, repair and check for other people's work | That task runs |
+| `references/rules.md` | Primary rules by jurisdiction, with dates and status | Explaining why a question matters |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and the pattern-scan script | Before scanning or handing off |
 | `scripts/scan_inputs.py` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/input-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/csr-into-chatgpt.md`, `examples/article-for-newsletter.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one that must stay light | Testing |

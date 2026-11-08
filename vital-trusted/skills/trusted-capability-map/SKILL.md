@@ -1,15 +1,19 @@
 ---
 name: trusted-capability-map
 description: "The map and rulebook of VITAL TRUSTED, foundational habits for anyone in pharma, biotech, medtech or digital health who uses an AI assistant for daily work: general management, brand, market access, medical and other teams. Use it whenever someone asks \"what can TRUSTED do\", \"which TRUSTED skill do I need\", \"set up TRUSTED\", \"turn off Ethical\", \"what does the U mean\", \"how do I connect VERIFY\", \"is this OK to send\", or starts everyday work on this assistant (an email, meeting notes, a brief, a board update, a slide deck, key messages, a payer or doctor reply) and the standard should apply. It explains the seven letters (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible), holds the hard rules every TRUSTED skill cites, lets the person choose active letters, routes to the right skill, and explains companions such as VERIFY. Not for running checks (use trusted-check or the letter skills). It supports internal SOPs and review processes and never replaces them.\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector is optional; without it every method still runs and tool-only checks are marked [GAP].\n"
 metadata:
+  framework_code: "TR-0.1"
+  framework_path: "TRUSTED > Core > Capability map"
+  family: "core"
+  letter: "all"
+  worker: "Experienced cross-functional colleague"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF02"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.2.0"
 ---
+
 # VITAL TRUSTED: capability map and rulebook
 
 TRUSTED gives people across a life-sciences company good habits for working with an AI
@@ -109,41 +113,22 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 ## Rules that hold for every task
 
 - Speak in plain business language. Name a letter by its word, not its code.
-- Gaps use the classes in `references/knowledge.md`, so every skill words them the same
+- Gaps use the classes in `references/gap-rules.md`, so every skill words them the same
   way.
 - Never claim what `references/governance.md` lists as never claimed, in any copy.
-- When routing, describe the next step plainly (`templates/route-answer.md`). Skill names
+- When routing, describe the next step plainly (`assets/route-answer.md`). Skill names
   and gap syntax stay out of what the person reads unless they ask for them.
-
-
-## Output cards (required)
-
-Use shared cards under `../../templates/` so results are scannable:
-
-- Route answers may use skill `templates/route-answer.md`
-- When explaining Prove, show the shared card set in `../../templates/README.md`
-
-Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
 | File | What it holds | Read it when |
 |---|---|---|
-| `references/governance.md` | Never-claim list, closing statement, sign-off | Before anything leaves the conversation |
-| `tasks/*.md` | The three task guides | That task runs |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
 | `references/standard.md` | The seven letters in full, boundaries, skill index and routing cues | Explaining or routing |
-
-## Missions and autonomy (CF02)
-
-Routing missions, autonomy bounds, and offline vs live Prove paths are in
-`references/missions.md`. Prefer that table when explaining what TRUSTED can do or
-when VERIFY is optional.
+| `references/hard-rules.md` | Each hard rule with why, a failing example and a fix | A rule is questioned or applied |
+| `references/gap-rules.md` | Gap classes and wording | Writing any gap |
+| `references/governance.md` | Never-claim list, closing statement, sign-off | Before anything leaves the conversation |
+| `references/tools.md` | Companions, the VERIFY tool list, slot behavior | Companion questions |
+| `tasks/*.md` | The three task guides | That task runs |
+| `assets/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |
+| `examples/route-medical-information.md` | A worked routing case | Shaping a routing answer |
+| `evals/evals.json` | Test requests, including one the skill must decline | Testing |

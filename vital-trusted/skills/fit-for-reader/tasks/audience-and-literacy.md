@@ -7,16 +7,16 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Name the reader and what they must decide or do, fill the reader card, then hold every passage to that reader's vocabulary and depth |
 | Skill | TR-1.2.1 |
-| Knowledge | `references/readers.md`, `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5), `references/failure-modes.md` / `references/knowledge.md` (A1–A8, L1–L9) |
+| Knowledge | `references/readers.md`, `references/rules.md` (R1, R2, R4, R5), `references/patterns.md` (A1–A8, L1–L9) |
 | Tool | `scripts/plain_language_scan.py` for patient or lay text where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
-| Template | `templates/reader-card.md`, `templates/repair-note.md`, `templates/check-line.md` |
+| Template | `assets/reader-card.md`, `assets/repair-note.md`, `assets/check-line.md` |
 | Input | The request, the context card, the supplied material, any existing draft |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H6, TR-H7, TR-H11 |
 
 ## The reader card
 
-Before drafting or repairing for a named reader, fill `templates/reader-card.md` from the
+Before drafting or repairing for a named reader, fill `assets/reader-card.md` from the
 context card, the request and `references/readers.md`. It takes four lines: who reads
 it, what they must decide or do, the words they use, and how deep to go. If the reader
 is not known and it changes the draft, ask once. Do not show the card to the person
@@ -42,7 +42,7 @@ unless they ask; it steers the writing.
 ### Patient and lay readers
 
 Patient-facing material is always at full depth (TR-H12). Apply these as good practice
-everywhere and, for EU package leaflets, as the guideline cited in `references/method-standards.md` / `references/knowledge.md`
+everywhere and, for EU package leaflets, as the guideline cited in `references/rules.md`
 R1.
 
 5. **Plain words.** Give the everyday word first and the medical term after it, in
@@ -84,12 +84,12 @@ R1.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
 - Rewriting into plain words is not a user test or a readability assessment. Never say
-  the text "meets" a readability standard or would pass user testing (`references/method-standards.md` / `references/knowledge.md`
+  the text "meets" a readability standard or would pass user testing (`references/rules.md`
   R4).
 - No readability score or grade level is given. The skill does not compute one, and a
   score would read as a verdict (TR-H3).
@@ -100,13 +100,3 @@ See `templates/check-line.md`.
   is a legal determination (TR-H6). Flag for the legal or investor relations function.
 - Regulator correspondence: fit the words and structure; the content and commitments
   belong to the regulatory function and its process (TR-H11).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

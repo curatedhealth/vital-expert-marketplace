@@ -7,10 +7,10 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Extract the study's design facts from the source, then hold the draft to them |
 | Skill | TR-5.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3–R6), `references/failure-modes.md` / `references/knowledge.md` (M1–M9) |
+| Knowledge | `references/rules.md` (R3–R6), `references/patterns.md` (M1–M9) |
 | Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/repair-note.md`, the study card below |
+| Template | `assets/check-line.md`, `assets/repair-note.md`, the study card below |
 | Input | The draft and the supplied study material |
 | Governance | TR-H1, TR-H3, TR-H7 |
 
@@ -66,7 +66,7 @@ Follow-up: <duration>
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -74,13 +74,3 @@ See `templates/check-line.md`.
   `source-assessment`.
 - Do not decide whether a surrogate is acceptable for a regulatory or payer purpose. Say
   what the endpoint is; the reviewer decides what it is worth.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

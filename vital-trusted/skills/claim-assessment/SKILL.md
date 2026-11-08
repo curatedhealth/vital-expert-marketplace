@@ -1,15 +1,19 @@
 ---
 name: claim-assessment
 description: "Fact-check finished life-sciences work sentence by sentence against the passages the person supplied: break the text into checkable claims, pair each with the exact words it rests on, and decide support with the VERIFY companion (extract_claims, check_claim, verify_text), or by hand, labeled \"not tool-checked\", when VERIFY is not connected. For general management, brand, market access and medical teams checking value stories, key messages, board updates, replies to doctors, slide text or summaries of papers. Use it when someone says \"fact-check this\", \"is this supported by the paper\", \"check this against the registry summary\", \"what does partial mean\" or \"does the source back this up\". Explains each result in plain words and what to do: keep, rewrite to match, remove, or ask. Not for drafting without inventing (grounded-statements), judging whether a source is good enough (source-assessment), the confidence percentage and card (confidence-scoring), or citations and the record (citation-and-record).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector adds extract_claims, check_claim and verify_text. Without it the same method runs by hand and every result is labeled \"not tool-checked\"; VERIFY status words are never used for a manual result.\n"
 metadata:
+  framework_code: "TR-8.1"
+  framework_path: "TRUSTED > Prove > True > Claim assessment"
+  family: "prove"
+  letter: "True"
+  worker: "Evidence lead"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Claim assessment
 
 A value story or a reply to a doctor can read well and still rest on sentences that the
@@ -91,24 +95,13 @@ passage — connect VERIFY]`.
 
 ## What to return
 
-- To the person: the result in the format of `templates/support-result.md`, sized to the
+- To the person: the result in the format of `assets/support-result.md`, sized to the
   stakes, with the revised text where anything changed.
-- When only Part A ran: the claim list in `templates/claim-list.md`.
-- To `trusted-check` only: one line in `templates/check-line.md`. Never append it to a
+- When only Part A ran: the claim list in `assets/claim-list.md`.
+- To `trusted-check` only: one line in `assets/check-line.md`. Never append it to a
   direct reply.
 - Status counts go to `confidence-scoring` for the confidence figure. This skill does not
   compute it.
-
-## Output cards (required)
-
-Render results people can scan in under a minute:
-
-1. **Claim cards** — one per atomic claim using plugin `../../templates/claim-card.md` (or skill `templates/support-result.md`).
-2. **Evidence table** — `../../templates/evidence-table.md` when there are three or more claims.
-3. **Gap list** — `../../templates/gap-list.md` for open items only.
-4. **Check-line stamp** — always close with `../../templates/check-line-stamp.md` (offline vs live).
-
-Do not bury statuses in prose alone. Prefer the ASCII card or Markdown table over paragraphs.
 
 ## Files in this skill
 
@@ -116,16 +109,12 @@ Do not bury statuses in prose alone. Prefer the ASCII card or Markdown table ove
 |---|---|---|
 | `tasks/break-into-claims.md` | Part A: what one claim is, priority, pairing with passages | Every fact-check |
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
-| `scripts/split_claims.py` | Manual sentence split | Offline |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
-| `references/without-verify.md` | Offline path without a key | No vvfy_ key |
-| `references/statuses.md` | Status vocabulary | Deciding support |
-| `references/without-verify.md` | Offline path | No key |
+| `references/rules.md` | Primary rules and the VERIFY contract, with dates and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Both tasks |
+| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
+| `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
+| `references/tools.md` | VERIFY arguments, returns, pitfalls; the manual script | Before calling a tool |
+| `scripts/split_claims.py` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
+| `assets/claim-list.md`, `assets/support-result.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/value-story-registry.md` | Worked case: value story against a registry summary | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

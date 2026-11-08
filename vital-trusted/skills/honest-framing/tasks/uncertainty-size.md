@@ -7,10 +7,10 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | Fill the result card from the material, set the certainty the result can carry, then hold every result sentence to it, in both directions |
 | Skill | TR-3.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R4, R5, R7, R10), `references/failure-modes.md` / `references/knowledge.md` (UC1–UC9, OH1–OH5) |
+| Knowledge | `references/rules.md` (R4, R5, R7, R10), `references/patterns.md` (UC1–UC9, OH1–OH5) |
 | Tool | `scripts/find_framing_cues.py` where code can run. No companion yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/framing-note.md` |
+| Template | `assets/check-line.md`, `assets/framing-note.md` |
 | Input | The draft, the supplied study material, the context card (reader, use, stakes) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H12, TR-H13 |
 
@@ -91,7 +91,7 @@ it never becomes a label in the draft.
 
 ## Check line
 
-See `templates/check-line.md` (uncertainty line).
+See `assets/check-line.md` (uncertainty line).
 
 ## Boundaries
 
@@ -105,13 +105,3 @@ See `templates/check-line.md` (uncertainty line).
   task only keeps "proves superiority" from saying more than one trial can.
 - No judgment of whether a difference is clinically meaningful, and no clinical advice
   (TR-H6).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

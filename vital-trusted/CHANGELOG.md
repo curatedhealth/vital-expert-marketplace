@@ -1,8 +1,12 @@
 # Changelog
 
+## 0.3.1 — 8 November 2026
+
+**Released** (owner-authorized). Proprietary LICENSE: Crossroads Catalyst GmbH — Vital Expert (`LicenseRef-CrossroadsCatalyst-Proprietary`). Pre-live depth audit: unique failure-modes + known-answer fixtures; marketplace restage for Claude Cowork. Cowork retest kickoff (Standard+TRUSTED / Expert+TRUSTED only): `docs/claude-project/kickoff-prompts/COWORK_TRUSTED_STANDARD_AND_EXPERT_RETEST_2026-11-08.md`.
+
 ## 0.3.0 — 8 November 2026
 
-**Gaps closure (same day, late):** path hygiene (`assets/`→`templates/`, Files tables); Prove/Core `good-sourced-draft` floor + Core WC-* http rows; `stamp_check_line.py --letter-lines`; scenario-specific `poor-invented-certainty`; VERIFY gate PASS; restaged on `curatedhealth/vital-expert-marketplace` (see digest adopt map for tip SHA). Pilot unchanged — see `mcps/trusted/TRUSTED_PILOT_OWNER_HITL_2026-11-08.md`.
+**Gaps closure (same day, late):** path hygiene (`assets/`→`templates/`, Files tables); Prove/Core `good-sourced-draft` floor + Core WC-* http rows; `stamp_check_line.py --letter-lines`; scenario-specific `poor-invented-certainty`; VERIFY gate PASS; restaged on `curatedhealth/vital-expert-marketplace` (see digest adopt map for tip SHA).
 
 World-class content pass (same day evening): shared `templates/` cards; Prove/Core/Build deepen with IFPMA/ABPI/FDA/RAGAS citations; rendered card examples; digest `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 

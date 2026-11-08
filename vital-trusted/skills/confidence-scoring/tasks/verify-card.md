@@ -10,10 +10,10 @@ status, the open items, one recommendation.
 | Worker | Evidence lead |
 | Workflow | Count by status, list the open items with the statement each concerns, choose one recommendation, size the card to the stakes, close |
 | Skill | TR-8.3.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C3, C4, C6), `references/failure-modes.md` / `references/knowledge.md` (P3–P10) |
+| Knowledge | `references/rules.md` (C3, C4, C6), `references/patterns.md` (P3–P10) |
 | Tool | `scripts/faithfulness.py` (counts and a default recommendation). Companion slot: reads `claim-assessment` findings; calls none |
 | Prompt | This guide |
-| Template | `templates/verify-card.md`, `templates/check-line.md` |
+| Template | `assets/verify-card.md`, `assets/check-line.md` |
 | Input | The counts and confidence line from TR-8.3.1, the findings with their statements and deciding passages, who will read the work |
 | Governance | TR-H3, TR-H5, TR-H10, TR-H11, TR-H13 |
 
@@ -51,7 +51,7 @@ If VERIFY did not run, there is no Verify card. Offer a reading summary instead,
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -59,13 +59,3 @@ See `templates/check-line.md`.
   confidence label.
 - No evidence table unless the person asks for it; then `citation-and-record` builds it.
 - No clinical meaning of an open item (TR-H6); name it and route it.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

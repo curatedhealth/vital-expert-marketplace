@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Recognize whose work it is and what the request does with it, prefer summary over reproduction, point to licensing |
 | Skill | TR-6.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I9, I10, I12), `references/failure-modes.md` / `references/knowledge.md` (P1–P7) |
+| Knowledge | `references/rules.md` (I9, I10, I12), `references/patterns.md` (P1–P7) |
 | Tool | `scripts/scan_inputs.py` (copyright and license markers) where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `templates/input-note.md`, `templates/check-line.md` |
+| Template | `assets/input-note.md`, `assets/check-line.md` |
 | Input | The request, the material, where the result will go, any license terms the person supplies |
 | Governance | TR-H1, TR-H3, TR-H7, TR-H11, `references/governance.md` |
 
@@ -58,7 +58,7 @@
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -67,13 +67,3 @@ See `templates/check-line.md`.
 - Authorship and AI disclosure on the result is `responsible-use`.
 - Licensing, fair use and contract interpretation belong to the company's legal or
   licensing function. This task flags and asks.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

@@ -7,10 +7,10 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | List every figure, match it to its source, check arithmetic and expression |
 | Skill | TR-5.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R3), `references/failure-modes.md` / `references/knowledge.md` (N1–N8, B1–B6) |
+| Knowledge | `references/rules.md` (R1–R3), `references/patterns.md` (N1–N8, B1–B6) |
 | Tool | `scripts/extract_numbers.py`, `scripts/risk_metrics.py` where code can run. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/repair-note.md` |
+| Template | `assets/check-line.md`, `assets/repair-note.md` |
 | Input | The draft and the supplied material (papers, reports, sales or finance data, notes) |
 | Governance | TR-H1, TR-H3, TR-H7 |
 
@@ -28,7 +28,7 @@
 3. **For comparative binary outcomes, give both absolute and relative effects** where
    the material provides the arm rates, with the comparator's rate. If only a relative
    figure is supplied, state it as relative and mark the absolute as a gap
-   (`references/method-standards.md` / `references/knowledge.md` R1, R2).
+   (`references/rules.md` R1, R2).
 4. **Say percentage points for differences between percentages.** 20% to 10% is a 10
    percentage point reduction and a 50% relative reduction.
 5. **Keep precision honest.** Do not add decimals the source does not have, and do not
@@ -54,7 +54,7 @@
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -62,13 +62,3 @@ See `templates/check-line.md`.
   adjusted hazard ratio) from raw counts and present yours as a correction. Raw and
   adjusted figures differ for legitimate reasons. Flag a mismatch and ask.
 - Do not judge whether an effect is clinically meaningful; that is the reviewer's call.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

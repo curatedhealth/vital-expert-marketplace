@@ -1,15 +1,19 @@
 ---
 name: confidence-scoring
 description: "Turn VERIFY's claim checks into the confidence line and the short Verify card that a reviewer reads: the faithfulness percent (how much of the text is backed by the passages supplied), each source's score, counts by status, the open items and one recommendation, with plain words on what the number means and what it does not. For general management, brand, market access and medical teams checking a board update, value story, payer deck, reply to a doctor or paper summary after VERIFY has run. Use it when someone asks \"how confident can we be\", \"what's the faithfulness score\", \"give me the Verify card\", \"what does 80% mean\", \"is 85% good enough to send\", or \"score this draft\". Not for checking claims against passages (claim-assessment), grading a source (source-assessment), building citations or the record (citation-and-record), or drafting without inventing (grounded-statements).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no tool itself. The confidence figure needs statuses returned by the VERIFY connector through claim-assessment; without VERIFY it reports counts only and gives no figure. scripts/faithfulness.py runs where the host can execute Python 3.\n"
 metadata:
+  framework_code: "TR-8.3"
+  framework_path: "TRUSTED > Prove > True > Confidence scoring"
+  family: "prove"
+  letter: "True"
+  worker: "Evidence lead"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Confidence scoring
 
 After VERIFY has checked each statement in a draft against the passages supplied, a
@@ -59,7 +63,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **The formula is fixed.** (supported + 0.5 × partial) ÷ (supported + partial +
   unsupported + contradicted + unverifiable), as a whole percent. Statements that are
   not factual (out of scope) are counted on the card and left out of the percent. Show
-  the arithmetic. Details in `references/method-standards.md` and `references/knowledge.md`.
+  the arithmetic. Details in `references/rules.md`.
 - **No threshold, no verdict (TR-H3).** No percent means pass, fail, safe, good enough
   or ready to send. Never write "high confidence means safe to send". The open items
   and a named person decide (TR-H5).
@@ -85,22 +89,11 @@ and say what VERIFY would add (`references/tools.md`).
 ## What to return
 
 - Directly to the person: the source score lines under each reference, then the
-  confidence line, then the card, in the formats of `templates/confidence-line.md` and
-  `templates/verify-card.md`, sized to the stakes. A standalone card ends with the closing
+  confidence line, then the card, in the formats of `assets/confidence-line.md` and
+  `assets/verify-card.md`, sized to the stakes. A standalone card ends with the closing
   statement.
-- To `trusted-check` only: one line in the format of `templates/check-line.md`. Never
+- To `trusted-check` only: one line in the format of `assets/check-line.md`. Never
   append check lines to a reply the person reads directly.
-
-
-## Output cards (required)
-
-Use shared cards under `../../templates/` so results are scannable:
-
-- **Confidence card** — `../../templates/confidence-card.md`
-- Keep faithfulness % separate from any source score
-- Cite RAGAS-style meaning: overlap with passages, not world-truth
-
-Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -108,16 +101,13 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/faithfulness-and-source-scores.md` | Steps for the percent and the score lines, and what each means | That task runs |
 | `tasks/verify-card.md` | Steps for counts, open items and the one recommendation | That task runs |
+| `references/rules.md` | The formula, status meanings and score axes, with source and status | Computing or explaining |
+| `references/patterns.md` | Common misuses of the number, with before and after | Before writing the line or card |
+| `references/gap-rules.md` | Gap classes as they apply here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | What VERIFY returns that this skill reads; the script | Before computing |
 | `scripts/faithfulness.py` | Percent and card counts from counts or a JSON list of statuses | Any computation |
 | `scripts/test_faithfulness.py` | Tests for the script | After changing the script |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
-| `references/without-verify.md` | Offline path without a key | No vvfy_ key |
+| `assets/confidence-line.md`, `assets/verify-card.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/payer-value-story.md` | A worked case on a payer value story | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including ones to decline or redirect | Testing |

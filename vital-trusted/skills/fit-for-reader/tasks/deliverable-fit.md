@@ -7,10 +7,10 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Fix the format, length and structure that were asked for, fit the content into it, and say what did not fit |
 | Skill | TR-1.2.2 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (D1–D8), `references/readers.md` |
+| Knowledge | `references/patterns.md` (D1–D8), `references/readers.md` |
 | Tool | None. Companion slot: none (no companion planned) |
 | Prompt | This guide |
-| Template | `templates/repair-note.md`, `templates/check-line.md`, the format table below |
+| Template | `assets/repair-note.md`, `assets/check-line.md`, the format table below |
 | Input | The request (format, length, limit), the context card's deliverable line, the material, any existing draft |
 | Governance | TR-H1, TR-H3, TR-H7, TR-H9 |
 
@@ -63,7 +63,7 @@ replaces them.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -74,13 +74,3 @@ See `templates/check-line.md`.
 - A required statement that a market or process adds to a format (for example a
   prescribing information line on promotional material) is `market-rules-and-data`.
   This task never drops one to save space; it flags the space problem.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

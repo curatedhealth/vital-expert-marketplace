@@ -1,15 +1,19 @@
 ---
 name: fit-for-reader
 description: "Make everyday life-sciences work fit the person who will read it: the right words, depth and \"what do I need to decide\" for a board, headquarters, the sales force, a doctor, nurse, pharmacist, payer, patient, regulator or investor; plain words and short sentences for patients, without scaring or falsely reassuring; the format, length and structure that were asked for (one-pager, email, slide, memo, reply), not an essay in their place; and translations that keep the meaning, medical terms, numbers and units exactly. Use it when someone says \"make this patient-friendly\", \"rewrite this for the payer\", \"keep it to one page\", \"turn this into an email\", \"translate this into German\", \"is this too technical\", or a draft answers a patient in clinician language. Not for vague or filler content (substance-and-usefulness), invented facts or numbers (grounded-statements), the route to a doctor or pharmacist in patient material (patient-safety), or voice and brand style, which it leaves alone.\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional scripts for a plain-language scan and a number and unit comparison of an original and its translation, where code can run.\n"
 metadata:
+  framework_code: "TR-1.2"
+  framework_path: "TRUSTED > Build > Tangible > Fit for reader"
+  family: "build"
+  letter: "Tangible"
+  worker: "Medical writer who has written for every audience"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Fit for the reader
 
 A finding can be correct and still be useless to the person holding it: a patient
@@ -113,32 +117,11 @@ in full on any host. Two scripts help where code can run. Details in
 - **When drafting:** the text in the reader's words and the format asked for, gaps
   inline, then a short note only if something is missing or needs the person.
 - **When fixing:** the revised text, then a note in the format of
-  `templates/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
-- **When translating:** the translation, then `templates/translation-note.md`: terms left
+  `assets/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
+- **When translating:** the translation, then `assets/translation-note.md`: terms left
   for a qualified translator or approved wording, and any number or unit question.
-- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
   appended to a reply the person reads directly.
-
-## Output cards
-
-Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
-`../../templates/README.md`), then fill skill-local templates. Do not merge faithfulness
-or source scores into audience or format counts.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Reader, decision focus, depth wrong for audience | — | `reader-card.md` |
-| Meaning, format or length gaps after repair | `finding-card.md` (one row per gap) | — |
-| Open items (approved wording, user test, missing PI link) | `gap-list.md` | Inside `repair-note.md` |
-| Translation: terms, numbers or units | — | `translation-note.md` |
-| Operator pack (audience + deliverable + translation) | `verify-brief.md` optional | `repair-note.md` or `translation-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / fit-for-reader: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
-those lines to the person's reply.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -147,16 +130,15 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/audience-and-literacy.md` | Guard, repair and check for reader level and patient wording | That task runs |
 | `tasks/deliverable-fit.md` | Guard, repair and check for format, length and structure | That task runs |
 | `tasks/translation-fidelity.md` | Guard, repair and check for translations | That task runs |
+| `references/readers.md` | The ten readers: what each decides, vocabulary, depth, watch-outs | Any audience work |
+| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | Gap classes in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and the scripts | Before scanning or comparing |
 | `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
 | `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/reader-card.md`, `assets/repair-note.md`, `assets/translation-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/patient-letter-clinician-language.md`, `examples/payer-and-internal-same-finding.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one the skill must redirect | Testing |

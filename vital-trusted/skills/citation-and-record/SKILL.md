@@ -1,15 +1,19 @@
 ---
 name: citation-and-record
 description: "Build the reference list and the formal record for finished life-sciences work, with the VERIFY companion: one citation per source from the source's own details, and a record that names the person who cleared it or says plainly that it is an uncleared draft. Open items, contradictions and policy questions are handed to the right internal process instead of being cleared. For teams finishing a literature summary, a value story, a doctor reply, an advisory board pre-read or a board paper. Use it when someone says \"build the references\", \"format the citations\", \"make the reference list\", \"build the record\", \"file this check\", \"who signed this off\", \"put my manager as the clearer\", \"show me the evidence table\" or \"what do I do with the contradicted claims\". Not for the everyday record of how a draft was made (work-record), testing claims against passages (claim-assessment), judging a source (source-assessment) or the confidence figure and VERIFY card (confidence-scoring).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. With the VERIFY connector it builds citations and the record with VERIFY tools; building the record needs a VERIFY key with write access. Without VERIFY it writes plain reference lines and a plain record note, both marked \"not tool-built\".\n"
 metadata:
+  framework_code: "TR-8.4"
+  framework_path: "TRUSTED > Prove > True and Defensible > Citation and record"
+  family: "prove"
+  letter: "True and Defensible"
+  worker: "Quality and compliance lead"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Citation and record
 
 When finished work is about to leave the team, two questions follow it: where does each
@@ -90,24 +94,13 @@ marked "not tool-built".
 
 - **References:** the reference lines, one per source, with no caption before them,
   then a short plain note only if a detail is missing or a style could not be applied
-  (`templates/reference-list.md`).
-- **Record:** the record note (`templates/record-note.md`), first line "Uncleared draft"
+  (`assets/reference-list.md`).
+- **Record:** the record note (`assets/record-note.md`), first line "Uncleared draft"
   unless a named person cleared it, then the open items handed on
-  (`templates/open-items.md`).
+  (`assets/open-items.md`).
 - **Evidence table:** only when asked.
-- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
   append it to a reply the person reads directly.
-
-
-## Output cards (required)
-
-Use shared cards under `../../templates/` so results are scannable:
-
-- **Verify brief** — `../../templates/verify-brief.md`
-- **Evidence table** + **gap list** + **reference list** (Chicago/Harvard — no statuses in bibliography)
-- Skill `templates/` for open-items / record-note
-
-Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -115,15 +108,12 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/build-citations.md` | Steps, tool call and fallback for references | That task runs |
 | `tasks/build-record.md` | Steps, tool call, clearer rules and handing on open items | That task runs |
+| `references/rules.md` | Primary sources behind the rules, dated, with status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Building or repairing a record |
+| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
+| `references/tools.md` | VERIFY arguments, returns, pitfalls; scripts | Before any call |
 | `scripts/plain_reference.py` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
-| `references/without-verify.md` | Offline path without a key | No vvfy_ key |
+| `assets/*.md` | Reference list, record note, open items, check line | Building the answer |
+| `examples/advisory-board-pre-read.md` | A worked case: three sources, one missing year, two contradicted claims | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

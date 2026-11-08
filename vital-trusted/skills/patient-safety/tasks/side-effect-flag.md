@@ -7,10 +7,10 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Read every input for what happened to a person on a product; quote it; flag it in plain words to the safety reporting procedure; never judge it |
 | Skill | TR-4.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S0 to S9), `references/failure-modes.md` / `references/knowledge.md` (P1 to P10) |
+| Knowledge | `references/rules.md` (S0 to S9), `references/patterns.md` (P1 to P10) |
 | Tool | `scripts/scan_safety_mentions.py` as a backstop where code can run. Companion slot: safety routing (none yet) |
 | Prompt | This guide |
-| Template | `templates/safety-flag.md`, `templates/check-line.md` |
+| Template | `assets/safety-flag.md`, `assets/check-line.md` |
 | Input | Everything the person supplied, not only the draft: emails, notes, transcripts, posts, comments, complaints, call logs, attachments |
 | Governance | TR-H6, TR-H11, TR-H3, TR-H7, `references/governance.md` |
 
@@ -56,7 +56,7 @@ whether anything needs to happen." Do not decide it.
 3. **Name the kind in plain words** from the table above. One mention can be two kinds
    (a pregnancy and a rash). Do not call anything serious, mild, expected, unexpected,
    related or unrelated.
-4. **Write the flag** in the format of `templates/safety-flag.md`:
+4. **Write the flag** in the format of `assets/safety-flag.md`:
    - what was mentioned, quoted, and where;
    - "Pass this to your safety reporting procedure as soon as you can, in the time it
      sets." If asked why the hurry, one line: safety rules usually count the time from
@@ -89,7 +89,7 @@ Someone else, or another assistant, may already have written the reply or summar
 3. **Fix:** write the missing flag first; remove each judgment and replace it with the
    event as reported, quoted; remove patient-specific advice; replace any deadline with
    "in the time your safety reporting procedure sets".
-4. **Note each change** in `templates/repair-note.md`. A removed judgment is always named in
+4. **Note each change** in `assets/repair-note.md`. A removed judgment is always named in
    the note, so the person knows why it went.
 
 ## Inputs that need extra care
@@ -113,7 +113,7 @@ Someone else, or another assistant, may already have written the reply or summar
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 

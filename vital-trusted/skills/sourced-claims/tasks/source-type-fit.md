@@ -11,16 +11,16 @@ study quality); that is `source-assessment` with VERIFY.
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Name each source's type, name each claim's kind, match them against the reader's bar |
 | Skill | TR-5.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R2, R5, R7, R8, R9, R10), `references/failure-modes.md` / `references/knowledge.md` (T1–T7) |
+| Knowledge | `references/rules.md` (R2, R5, R7, R8, R9, R10), `references/patterns.md` (T1–T7) |
 | Tool | None. Companion slot: VERIFY `qualify_source` and `check_currency` through `source-assessment` |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/source-note.md` |
+| Template | `assets/check-line.md`, `assets/source-note.md` |
 | Input | The draft, the supplied sources, the audience and use from intake |
 | Governance | TR-H1, TR-H3, TR-H7, TR-H8, TR-H11 |
 
 ## What each kind of source can and cannot carry
 
-Good practice, built on the rules in `references/method-standards.md` / `references/knowledge.md`. Where a rule is marked
+Good practice, built on the rules in `references/rules.md`. Where a rule is marked
 `[CHECK]` there, the row is practice, not a requirement.
 
 | Source type | Can carry | Cannot carry on its own | Watch for |
@@ -73,7 +73,7 @@ Good practice, built on the rules in `references/method-standards.md` / `referen
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -82,13 +82,3 @@ See `templates/check-line.md`.
   is `source-assessment`. Say "not graded with a tool" when VERIFY has not run.
 - Whether data on file may be used in a given market, and how it is provided on request,
   is for the company's promotional or medical review process (TR-H11).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

@@ -1,15 +1,19 @@
 ---
 name: trusted-intake
 description: "Works out the context of a piece of life-sciences work before an AI assistant drafts it, asking only what is missing and would change the answer. Reads the request first: who will read it, which market or country, whether the product is approved or investigational, scientific exchange or promotion, what is being asked for, what material was supplied, how much is at stake, and whether an internal review process applies. Also notices what the person is about to put into the assistant (confidential, unpublished, client or patient data) and asks what their company AI use policy says, without deciding whether a tool is approved. Use it when someone starts a board update, a doctor email, key messages, a payer follow-up or a brief, or says \"can I paste this\", \"here's our client deck\", \"draft this for me\". Usually 0 to 3 plain questions, never a form. Not for choosing letters (trusted-capability-map), checking a finished draft (trusted-check) or judging confidential inputs in depth (responsible-inputs).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. The context card lives in the conversation; hosts that do not keep it between conversations need it again next time.\n"
 metadata:
+  framework_code: "TR-0.2"
+  framework_path: "TRUSTED > Core > Intake"
+  family: "core"
+  letter: "all"
+  worker: "Experienced cross-functional colleague"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Intake: the context before the draft
 
 The same sentence can be fine for a colleague and wrong for a doctor, allowed in one
@@ -89,24 +93,14 @@ the card records the policy as the person states it, never as checked (TR-H4).
 
 ## What to return
 
-- **To the person:** either the questions (`templates/intake-questions.md`), or one line on
+- **To the person:** either the questions (`assets/intake-questions.md`), or one line on
   what was assumed and then the work. At leadership stakes and above, a short "Working
-  from" block in plain words (`templates/context-card.md`, person view).
-- **To other skills:** the context card (`templates/context-card.md`), kept in the
+  from" block in plain words (`assets/context-card.md`, person view).
+- **To other skills:** the context card (`assets/context-card.md`), kept in the
   conversation and updated when an answer arrives. Other skills read it; they do not ask
   again what it already holds.
-- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
   appended to a reply the person reads.
-
-
-## Output cards (required)
-
-Use shared cards under `../../templates/` so results are scannable:
-
-- **Context card** — skill `templates/context-card.md` as the header for every downstream card
-- Stamp intake complete / gaps with check-line-stamp
-
-Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -114,13 +108,13 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/work-context.md` | Reading the request, choosing questions, setting stakes and the internal process | Any new deliverable |
 | `tasks/data-and-policy-context.md` | Input sensitivity and the AI use policy question | Something is pasted, attached or mentioned |
+| `references/rules.md` | Primary sources for why market, use, product status and data change the answer | Explaining why a question matters |
+| `references/patterns.md` | Intake failures with before and after | Choosing and wording questions |
+| `references/gap-rules.md` | Gap classes as intake uses them | Writing an unknown field |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before the card or questions go out |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `references/tools.md` | Companion slot per task | Companion questions |
+| `assets/context-card.md` | The card other skills read, and the person view | Building the card |
+| `assets/intake-questions.md` | How the questions look to the person | Asking |
+| `assets/check-line.md` | The line for `trusted-check` | Returning to the check |
+| `examples/doctor-email-no-market.md`, `examples/board-update-no-questions.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one the skill must redirect | Testing |

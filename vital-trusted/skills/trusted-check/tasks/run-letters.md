@@ -10,7 +10,7 @@
 | Knowledge | `references/letter-lines.md`, `trusted-capability-map/references/standard.md`, each Build skill's own references |
 | Tool | None. Companion slot: none for this task; empty slots of future companions are listed as "not checked" |
 | Prompt | This guide |
-| Template | `templates/check-line.md` (lines collected here, shown only in the summary) |
+| Template | `assets/check-line.md` (lines collected here, shown only in the summary) |
 | Input | The finished draft, the supplied material, the active letters, intake context (reader, market, use) |
 | Governance | TR-H3, TR-H4, TR-H6, TR-H7, TR-H11, TR-H12, `references/governance.md` |
 
@@ -24,9 +24,9 @@
 
    | Reader | Depth | Summary |
    |---|---|---|
-   | Colleagues, internal and informal | Light | `templates/check-output-light.md` |
-   | Leadership, board, other teams, HQ | Short | `templates/check-output-short.md` |
-   | Anyone outside the company: agency, doctor, payer, patient, regulator, partner, investor, public | Full | `templates/check-output-full.md` |
+   | Colleagues, internal and informal | Light | `assets/check-output-light.md` |
+   | Leadership, board, other teams, HQ | Short | `assets/check-output-short.md` |
+   | Anyone outside the company: agency, doctor, payer, patient, regulator, partner, investor, public | Full | `assets/check-output-full.md` |
 
    Read the reader from the draft and the request (the greeting, the "to" line, the
    words "for the board", "for the agency"). If it cannot be read and the depth would
@@ -96,13 +96,3 @@
 - Do not change the active letters or the depth the stakes call for to make the summary
   shorter.
 - Do not judge whether an event is reportable or related to the product (TR-H6).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

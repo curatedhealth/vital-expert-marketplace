@@ -10,7 +10,7 @@
 | Knowledge | `references/tools.md` |
 | Tool | None called. Detects whether VERIFY tools are present |
 | Prompt | This guide |
-| Template | `templates/companion-answer.md` |
+| Template | `assets/companion-answer.md` |
 | Input | The person's question; the assistant's current tool list |
 | Governance | TR-H4, `references/governance.md` |
 
@@ -33,13 +33,3 @@
 
 - Never describe a VERIFY result that no tool returned (TR-H4).
 - No prices or plan details unless `references/tools.md` states them.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

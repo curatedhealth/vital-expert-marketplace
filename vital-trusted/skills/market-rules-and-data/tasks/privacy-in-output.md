@@ -7,10 +7,10 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Find details that could point to a person, keep them out of the output, remove, generalize or aggregate, say what was done without calling the result anonymous, point to the privacy function |
 | Skill | TR-2.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (P1 to P7), `references/failure-modes.md` / `references/knowledge.md` (D1 to D9) |
+| Knowledge | `references/rules.md` (P1 to P7), `references/patterns.md` (D1 to D9) |
 | Tool | `scripts/scan_output.py --data` where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `templates/privacy-note.md`, `templates/check-line.md` |
+| Template | `assets/privacy-note.md`, `assets/check-line.md` |
 | Input | The draft, the material it was written from, the context card (reader, market, stakes) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H11, `references/governance.md` |
 
@@ -73,7 +73,7 @@ details arrived in the material.
 
 ## Check line
 
-See `templates/check-line.md`. The line counts items; it never quotes them.
+See `assets/check-line.md`. The line counts items; it never quotes them.
 
 ## Boundaries
 
@@ -84,13 +84,3 @@ See `templates/check-line.md`. The line counts items; it never quotes them.
   the text de-identified, and it is not the EU or Swiss test (P2, P4).
 - Runs at every depth, including a quick internal email, because a copy of the output
   travels further than the person intends.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

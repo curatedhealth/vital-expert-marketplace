@@ -10,10 +10,10 @@ AI did.
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Inventory materials, assistant and connectors, and AI actions; label where each entry comes from; size the note to the stakes |
 | Skill | TR-7.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4), `references/failure-modes.md` / `references/knowledge.md` (P1–P6) |
+| Knowledge | `references/rules.md` (R1, R2, R4), `references/patterns.md` (P1–P6) |
 | Tool | None. Companion slot: VERIFY `build_record` through `citation-and-record`, only with a named clearer |
 | Prompt | This guide |
-| Template | `templates/record-note.md`, `templates/check-line.md` |
+| Template | `assets/record-note.md`, `assets/check-line.md` |
 | Input | The deliverable, the conversation so far, what the person says about earlier steps |
 | Governance | TR-H1, TR-H4, TR-H5, TR-H12, TR-H13 |
 
@@ -88,7 +88,7 @@ the record itself; refer to the material by its name ("the case notes").
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -97,13 +97,3 @@ See `templates/check-line.md`.
 - The record lists materials at the level of the work. Citing each claim is
   sourced-claims.
 - The record is not the company's document control or approval record. It supports it.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

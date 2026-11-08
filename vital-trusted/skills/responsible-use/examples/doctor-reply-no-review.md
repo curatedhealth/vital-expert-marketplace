@@ -52,6 +52,6 @@ Ethical · human review: stakes leaving the company, reviewer not named, 1 reque
 
 ## Behind the reply (reference only, not shown to the person)
 
-Patterns avoided: O1, O2, O4, T1 in `references/failure-modes.md` / `references/knowledge.md`. Hard rules: TR-H5, TR-H11,
+Patterns avoided: O1, O2, O4, T1 in `references/patterns.md`. Hard rules: TR-H5, TR-H11,
 TR-H12. Rule that explains the direction: U3 (a human reviews and is responsible for
 AI-assisted material).

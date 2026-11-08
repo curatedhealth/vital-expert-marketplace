@@ -1,15 +1,19 @@
 ---
 name: balanced-evidence
 description: "Make sure daily life-sciences work shows the evidence in proportion: risks, side effects, discontinuations and limitations shown with the benefits, with comparable weight and in the same piece, and studies, endpoints, subgroups and time points chosen fairly. For brand, market access, medical and general management teams writing slide decks, key messages, value stories, payer slides, literature summaries, replies to doctors or board updates on a trial readout. Use it when someone says \"keep it positive\", \"leave the safety for the PI\", \"just the highlights\", \"only use the good trial\", \"is this balanced\", \"add the safety\", \"fair balance\", \"we only need the week 12 result\", or \"get this ready for review\". It finds what was left out, puts it back or states the scope, and never hides a risk on request. Not for checking each statement against its source (grounded-statements), how numbers, uncertainty and charts are framed (honest-framing), or whether a claim is allowed by the label (claims-and-label).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet for this skill. scripts/balance_cues.py runs where the host can execute Python 3; otherwise the same steps are done by hand.\n"
 metadata:
+  framework_code: "TR-3.1"
+  framework_path: "TRUSTED > Build > Unbiased > Balanced evidence"
+  family: "build"
+  letter: "Unbiased"
+  worker: "Medical reviewer"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Balanced evidence
 
 A slide can be right in every line and still mislead, because of what it leaves out: the
@@ -98,31 +102,11 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 - When drafting: the draft with risks, limitations and scope stated inline, and gaps
   where material is missing, then a short note only if something was left out or needs
   the person.
-- When fixing: the fixed text, then a note in the format of `templates/balance-note.md`,
+- When fixing: the fixed text, then a note in the format of `assets/balance-note.md`,
   sized to the stakes. For high stakes, include the evidence inventory
-  (`templates/evidence-inventory.md`).
-- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
+  (`assets/evidence-inventory.md`).
+- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
   Never append check lines to a reply the person reads directly.
-
-## Output cards
-
-Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
-`../../templates/README.md`), then fill skill-local templates. Do not merge faithfulness
-or source scores into balance counts.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Each benefit without paired risk or limitation nearby | `finding-card.md` (one row per gap) | — |
-| Open items the person must supply | `gap-list.md` | Inside `balance-note.md` |
-| Full claim-by-omission board (leaving the company) | `evidence-table.md` optional | `evidence-inventory.md` required in the note |
-| Operator pack (multiple omissions + gaps) | `verify-brief.md` optional | `balance-note.md` (full or short) |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / balanced-evidence: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
-those lines to the person's reply.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -130,14 +114,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 |---|---|---|
 | `tasks/fair-balance.md` | Benefits with their risks, discontinuations and limitations; reassuring words | That task runs |
 | `tasks/selective-reporting.md` | Fair choice of studies, endpoints, subgroups and time points | That task runs |
+| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` | Output formats | Building the answer |
+| `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

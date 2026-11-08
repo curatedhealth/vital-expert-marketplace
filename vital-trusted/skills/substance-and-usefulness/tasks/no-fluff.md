@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Find filler, buzzwords, padding, repetition and throat-clearing; cut or replace with what the sentence was trying to say |
 | Skill | TR-1.1.2 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (L1–L7) |
+| Knowledge | `references/patterns.md` (L1–L7) |
 | Tool | `scripts/scan_fluff.py` where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/repair-note.md` |
+| Template | `assets/check-line.md`, `assets/repair-note.md` |
 | Input | The draft, the context card |
 | Governance | TR-H1, TR-H3, TR-H9 |
 
@@ -65,7 +65,7 @@ Ask: if this word were removed, would the reader lose information? If yes, keep 
 
 ## Check line
 
-Counts feed the substance line in `templates/check-line.md`: passages of filler or
+Counts feed the substance line in `assets/check-line.md`: passages of filler or
 repetition.
 
 ## Boundaries
@@ -76,13 +76,3 @@ repetition.
   email is a tone choice, not fluff, unless it displaces the content.
 - Superlatives such as "best-in-class" or "leading" are also claims. Cut them here if
   they carry no meaning, and leave the claim question to True and Rule-compliant.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

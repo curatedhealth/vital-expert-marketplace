@@ -1,15 +1,19 @@
 ---
 name: claims-and-label
 description: "Keep what an AI assistant drafts for life-sciences work inside the approved label or a device's intended purpose, on the right side of the line between scientific exchange and promotion, and fair in any comparison with a competitor. For brand, medical, market access and digital health teams writing key messages, sales-force materials, agency briefs, replies to doctors, MSL answers, app or website copy and competitor slides. Use it when someone says \"is this on-label\", \"can we say this\", \"say we're better than\", \"faster\", \"first\", \"only\", \"a doctor asked about an unapproved use\", \"is this promotional\" or \"get this ready for promotional review\". It asks for the label when it was not supplied, flags what goes beyond it, rewrites or marks the rest, and points to the company's review process. Not for market rules or required statements (market-rules-and-data), fair balance (balanced-evidence), dosing and safety wording (patient-safety), or which source a claim needs (sourced-claims).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed; the person supplies the label or intended-purpose statement. No companion exists yet for this skill. When VERIFY is connected, the sources behind a comparison can go to claim-assessment for tool checking.\n"
 metadata:
+  framework_code: "TR-2.1"
+  framework_path: "TRUSTED > Build > Rule-compliant > Claims and label"
+  family: "build"
+  letter: "Rule-compliant"
+  worker: "Regulatory and promotional reviewer who helps drafts through review"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.1.1"
 ---
+
 # Claims and label
 
 A key message can be correct, sourced and balanced and still say something the product
@@ -50,12 +54,12 @@ and asks for any that are missing and would change the answer (TR-H7):
 1. **The label or intended purpose**, for the market the piece is for: the summary of
    product characteristics, prescribing information, patient leaflet, or a device's
    intended-purpose statement. If it was not supplied, ask for it
-   (`templates/label-request.md`). Do not work from memory of what the product is for.
+   (`assets/label-request.md`). Do not work from memory of what the product is for.
 2. **The reader:** doctor or other health professional, payer, patient, public, or
    internal.
 3. **The use, as the person states it:** promotional, scientific exchange, a reply to
    an unsolicited question, disease information, or internal only.
-4. **The market**, when the piece leaves the company. Rules differ (`references/method-standards.md` and `references/knowledge.md`).
+4. **The market**, when the piece leaves the company. Rules differ (`references/rules.md`).
 
 If the person wants to proceed without the label, draft with every product statement
 marked as a gap and say so in one line.
@@ -124,30 +128,12 @@ indication is approved there. A future label-source companion would fill those s
 
 - When drafting: the draft with gaps inline, then a short note only if something was
   kept out or needs the person.
-- When fixing: the fixed text, then a note in the format of `templates/claims-note.md`,
+- When fixing: the fixed text, then a note in the format of `assets/claims-note.md`,
   sized to the stakes.
 - For a reply to an unsolicited question: the reply in the shape of
-  `templates/unsolicited-reply.md`.
-- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
+  `assets/unsolicited-reply.md`.
+- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
   Never append check lines to a reply the person reads directly.
-
-## Output cards
-
-Each beyond-label or promotional line gets its own card; no batch "compliant" verdict.
-Shared catalog: `../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Statement beyond supplied label | `claim-card.md` or `finding-card.md` | `claims-note.md` |
-| Label not supplied before external work | `gap-list.md` | `label-request.md` |
-| Unsolicited medical question reply | — | `unsolicited-reply.md` shape |
-| Comparisons without direct study | `finding-card.md` | `claims-note.md` comparisons section |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / claims-and-label: not tool-checked (offline tools) · …`).
-`trusted-check` letter lines use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -156,14 +142,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/label-and-intended-use.md` | Guard, repair and check against the label or intended purpose | That task runs |
 | `tasks/promotional-boundary.md` | Scientific exchange, promotion, replies to unsolicited questions, audience | That task runs |
 | `tasks/comparative-claims.md` | Comparisons, superlatives, "first" and "only", disparagement | That task runs |
+| `references/rules.md` | Primary rules with dates, scope and status, by jurisdiction | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/check-line.md`, `assets/claims-note.md`, `assets/label-request.md`, `assets/unsolicited-reply.md` | Output formats | Building the answer |
+| `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

@@ -9,10 +9,10 @@ Absorbs the record method and the escalation method of the earlier vital-verify 
 | Worker | Quality and compliance lead. Prepares the record for the person who clears it. Does not clear |
 | Workflow | Gather what was checked, list open items, get a decision and a named clearer from the person, hand on what cannot be cleared, then write the record or label it an uncleared draft |
 | Skill | TR-8.4.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4), `references/failure-modes.md` / `references/knowledge.md` (C6–C12), `references/governance.md`, `references/tools.md` |
+| Knowledge | `references/rules.md` (R3, R4), `references/patterns.md` (C6–C12), `references/governance.md`, `references/tools.md` |
 | Tool | VERIFY `build_record`, only after a named person has given a decision for every open item. VERIFY `build_evidence_table`, only when the person asks for the table |
 | Prompt | This guide |
-| Template | `templates/record-note.md`, `templates/open-items.md` |
+| Template | `assets/record-note.md`, `assets/open-items.md` |
 | Input | The finished text; the claims and their results from `claim-assessment`; the sources and their results from `source-assessment`; the reference lines from TR-8.4.1; the person's decisions and the clearer's name and role as the person states them |
 | Governance | TR-H3, TR-H4, TR-H5, TR-H11, TR-H13; `references/governance.md` |
 
@@ -31,7 +31,7 @@ Absorbs the record method and the escalation method of the earlier vital-verify 
      usually from the Ethical skills.
    Supported claims are not open, but they are not cleared either. Support is not
    clearance.
-3. **Prepare each open item for the person** (`templates/open-items.md`): the claim as
+3. **Prepare each open item for the person** (`assets/open-items.md`): the claim as
    written and where it sits; the result in plain words; the passage quoted, or "no
    passage was available"; one question the person can answer without rerunning
    anything; and who would normally decide it, as a kind of internal process. Do not
@@ -85,7 +85,7 @@ Absorbs the record method and the escalation method of the earlier vital-verify 
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -97,13 +97,3 @@ See `templates/check-line.md`.
 - Deciding whether a claim is supported is `claim-assessment`. This task does not
   change a result while writing the record.
 - The confidence figure and the VERIFY card are `confidence-scoring`.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

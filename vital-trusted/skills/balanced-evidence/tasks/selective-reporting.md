@@ -7,10 +7,10 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Inventory everything the material reports, mark what the draft uses, restore what changes the picture, and state the scope of the rest |
 | Skill | TR-3.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R9, R10), `references/failure-modes.md` / `references/knowledge.md` (SR1–SR8) |
+| Knowledge | `references/rules.md` (R3, R4, R7, R9, R10), `references/patterns.md` (SR1–SR8) |
 | Tool | `scripts/balance_cues.py --source material.txt` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
+| Template | `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` |
 | Input | The draft or request and all supplied material: every study, results table, abstract or registry extract |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -27,7 +27,7 @@
 
 ## Guard (while drafting)
 
-1. **Fill the evidence inventory first** (`templates/evidence-inventory.md`) from the
+1. **Fill the evidence inventory first** (`assets/evidence-inventory.md`) from the
    supplied material only: every study, its primary endpoint and result, its
    pre-specified time point, key secondary endpoints, subgroups, harms and
    discontinuations. Leave a field as a gap rather than inferring it.
@@ -68,7 +68,7 @@
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -82,13 +82,3 @@ See `templates/check-line.md`.
   `honest-framing` and the reviewer.
 - Finding studies not supplied is a literature search, outside this skill. Ask the person
   or their literature or medical information team.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

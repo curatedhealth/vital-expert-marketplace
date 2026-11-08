@@ -1,15 +1,19 @@
 ---
 name: market-rules-and-data
 description: "Check that what an AI assistant writes fits the market it is going to and does not expose people. Covers which country's rules apply (US wording in an EU or Swiss piece, an approval stated for the wrong country, material for doctors that could reach the public); the statements a market usually expects on promotional or external material (prescribing information or where to find it, safety information, side-effect reporting statement, audience statement, date of preparation, job code); and patient or personal details that would appear in the output (names, small numbers, case stories). For emails to doctors, payer follow-ups, decks, posts and leaflets. Use it when someone says \"this is for Germany\", \"can we use the US deck in Switzerland\", \"what goes at the bottom\", \"add the job code\", \"take the patient out\" or \"is this anonymous\". Not for label or comparative claims (claims-and-label), what goes into the assistant (responsible-inputs), or benefit and risk balance (balanced-evidence).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. Optional script for a cue scan of required statements and personal details where code can run.\n"
 metadata:
+  framework_code: "TR-2.2"
+  framework_path: "TRUSTED > Build > Rule-compliant > Market rules and data"
+  family: "build"
+  letter: "Rule-compliant"
+  worker: "Regulatory and promotional reviewer with a privacy background"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Market rules and data
 
 The same email can be fine in one country and wrong in the next: "FDA-approved" means
@@ -63,7 +67,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **Ask the market, do not assume it (TR-H7).** When the market is unknown and the work
   leaves the company, ask before drafting. Never apply one country's rules to another.
 - **Rules from primary sources, with their scope (TR-H8).** Use only the rules in
-  `references/method-standards.md` and `references/knowledge.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
+  `references/rules.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
   described as usual practice, never as a requirement.
 - **Never invent a statement, code or date (TR-H1, TR-H2).** Job codes, dates of
   preparation, prescribing information text, reporting addresses and approval status
@@ -95,34 +99,14 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 
 - When drafting: the draft with market-specific statements as visible placeholders
   where the person must supply them, personal details left out, then the short or full
-  note in `templates/market-note.md`.
+  note in `assets/market-note.md`.
 - When fixing: the fixed text, then the note, sized to the stakes, with the list of
-  expected statements in `templates/statements-list.md` when the material leaves the
+  expected statements in `assets/statements-list.md` when the material leaves the
   company.
 - When personal details were in the material: the privacy line from
-  `templates/privacy-note.md`, without repeating them.
-- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
+  `assets/privacy-note.md`, without repeating them.
+- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
   Never append check lines to a reply the person reads directly.
-
-## Output cards
-
-Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
-`../../templates/README.md`), then fill skill-local templates. **Name the jurisdiction**
-in every market note and statements list (country or region the rules apply to).
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Wrong market wording or audience reach | `finding-card.md` optional | `market-note.md` |
-| Missing job code, PI link, reporting line, date | `gap-list.md` | `statements-list.md` inside the note |
-| Personal details removed or generalized | — | `privacy-note.md` (no repeated identifiers) |
-| Leaving the company | `verify-brief.md` optional | `market-note.md` + `statements-list.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / market-rules-and-data: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
-those lines to the person's reply.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -131,14 +115,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/jurisdiction.md` | Guard, repair and check for market fit and audience reach | That task runs |
 | `tasks/required-statements.md` | Guard, repair and check for statements a market expects | That task runs |
 | `tasks/privacy-in-output.md` | Guard, repair and check for personal details in the output | That task runs |
+| `references/rules.md` | Primary rules by jurisdiction, with dates, scope and status | Before naming any market rule |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and the cue-scan script | Before scanning or handing off |
 | `scripts/scan_output.py` | Cue scan for expected statements and personal details | Checking a draft where code can run |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/market-note.md`, `assets/statements-list.md`, `assets/privacy-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/payer-follow-up-patient.md`, `examples/eu-deck-us-wording.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

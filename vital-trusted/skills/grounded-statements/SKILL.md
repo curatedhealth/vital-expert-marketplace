@@ -1,15 +1,19 @@
 ---
 name: grounded-statements
 description: "Make sure everything an AI assistant writes for daily life-sciences work is grounded in what was actually supplied: no invented facts, figures, names, dates, quotes or sources; numbers that add up and are expressed honestly (percent vs percentage points, before-and-after figures, not only a percentage drop); studies described as they were. For general management, brand, market access and medical teams writing board updates, business reviews, key messages, value stories, meeting notes, emails, slide decks, replies to doctors or summaries of papers. Use it when drafting from notes, data or papers, and when someone says \"don't make anything up\", \"check the numbers\", \"make it stronger\", \"is this right\", \"summarize these papers\" or \"fix this before it goes out\". Not for testing a claim against its source with tools (claim-assessment), judging whether a source is good enough (source-assessment), or deciding which claims need a reference (sourced-claims).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, finished text can go to claim-assessment for tool checking.\n"
 metadata:
+  framework_code: "TR-5.1"
+  framework_path: "TRUSTED > Build > True > Grounded statements"
+  family: "build"
+  letter: "True"
+  worker: "Experienced colleague with an evidence background"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.2.0"
 ---
+
 # Grounded statements
 
 When an assistant writes a board update, a value story or a reply to a doctor, the
@@ -84,31 +88,11 @@ tool-checked" (TR-H4).
 
 - When drafting: the draft with gaps inline, then a short note only if something was
   left out or needs the person.
-- When fixing: the fixed text, then a note in the format of `templates/repair-note.md`,
+- When fixing: the fixed text, then a note in the format of `assets/repair-note.md`,
   sized to the stakes.
-- To `trusted-check` only: one line in the format of `templates/check-line.md`. Never
+- To `trusted-check` only: one line in the format of `assets/check-line.md`. Never
   append check lines to a reply the person reads directly; they are for the TRUSTED
   summary.
-
-## Output cards
-
-Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
-`../../templates/README.md`), then fill skill-local templates. **Never invent a figure,
-name or study to close a gap** — use `gap-list.md` instead.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| One invented or unsupported factual sentence | `claim-card.md` or `finding-card.md` | — |
-| Number or method mismatch vs supplied material | `finding-card.md` | — |
-| Items the person must supply before the sentence can stand | `gap-list.md` | Inside `repair-note.md` |
-| Full repair pack | `evidence-table.md` optional | `repair-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / grounded-statements: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
-those lines to the person's reply.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -117,15 +101,13 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/no-fabrication.md` | Guard, repair and check for invented content | That task runs |
 | `tasks/number-consistency.md` | Guard, repair and check for figures | That task runs |
 | `tasks/method-description.md` | Guard, repair and check for describing studies | That task runs |
+| `references/patterns.md` | Common failures with before and after, business and scientific | Guard and repair steps |
+| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
+| `references/gap-rules.md` | How to word gaps | Writing any gap |
 | `references/governance.md` | Boundaries and when to stop and ask | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and scripts | Before computing or handing off |
 | `scripts/risk_metrics.py` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
 | `scripts/extract_numbers.py` | Every number in a text with its context | Checking figures |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/check-line.md`, `assets/repair-note.md` | Output formats | Building the answer |
+| `examples/board-update.md`, `examples/repair-trial-summary.md` | Worked cases, one business, one scientific | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including ones the skill must decline | Testing |

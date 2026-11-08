@@ -1,11 +1,3 @@
-# Tools
-
-See plugin [`connectors.md`](../../../connectors.md).
-
-Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
-
-## Prior notes
-
 # Tools and companion slot
 
 ## Companion slot
@@ -82,4 +74,12 @@ Pitfalls:
   not"); read every close match.
 - "Not found" means not found in the supplied text, not that the label lacks it, unless
   the complete label was supplied.
-- It splits sentences simpl
+- It splits sentences simply; tables pasted as text may split oddly. Check table cells by
+  hand.
+- An exact part of a longer label sentence counts as word for word and is marked "part
+  of a longer label sentence". Check that the part quoted did not drop a condition.
+
+### `scripts/test_scripts.py`
+
+Tests both scripts on invented fixtures (a doctor's email, a market research extract, two
+leaflets, a label and a draft). Run `python scripts/test_scripts.py` after any change.

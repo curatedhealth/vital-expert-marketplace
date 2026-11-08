@@ -11,10 +11,10 @@ device or app, as the person supplied it for the market the work is for.
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Get the label, list its boundary, compare each product statement, rewrite inside it or mark the gap |
 | Skill | TR-2.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4 to R8, R25 to R27), `references/failure-modes.md` / `references/knowledge.md` (L1–L8) |
+| Knowledge | `references/rules.md` (R1, R2, R4 to R8, R25 to R27), `references/patterns.md` (L1–L8) |
 | Tool | None. Companion slot: a future label-source companion (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `templates/label-request.md`, `templates/claims-note.md`, `templates/check-line.md` |
+| Template | `assets/label-request.md`, `assets/claims-note.md`, `assets/check-line.md` |
 | Input | The request, the draft, the supplied label or intended-purpose statement, the context card (market, reader, product status) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -31,7 +31,7 @@ the label's own words.
 | Where | Market and label version or date | Market, and the conformity or clearance status as the person states it |
 | What it does not do | Contraindications, limits of use stated in the label | Functions it does not have; whether it diagnoses, monitors or only records; whether a clinician must confirm |
 
-If the label was not supplied, ask for it (`templates/label-request.md`). If the person
+If the label was not supplied, ask for it (`assets/label-request.md`). If the person
 says the product is not approved in this market, or is investigational, it is not
 promoted there at all (R1, R5, R6, R7, R8); route to the promotional boundary task.
 
@@ -88,7 +88,7 @@ that market's label. If two labels were supplied and they differ, mark the diffe
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -103,13 +103,3 @@ See `templates/check-line.md`.
   Work from the intended purpose the person supplies; if there is none, ask (TR-H6,
   TR-H7).
 - No clinical advice on any use, inside or outside the label (TR-H6).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

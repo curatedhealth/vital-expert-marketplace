@@ -1,15 +1,19 @@
 ---
 name: honest-framing
 description: "Keep evidence at its real size in daily life-sciences work: certainty that matches the data (no \"proves\", \"dramatic\", \"breakthrough\" or \"clearly\" beyond it, and no blanket hedging that buries a clear result), with intervals, small samples, short follow-up and limitations in plain words; numbers and charts that look as large as they are (no cropped axes, relative benefits beside absolute harms, cumulative shown as per-period, mismatched comparators, oversized pictograms); and sponsors, funding, authors' ties and company data named, never passed off as independent. For decks, key messages, value stories, chart captions, paper summaries and replies to doctors. Use it when someone says \"make the result pop\", \"is this overselling\", \"tone it down\", \"is this chart fair\", \"can I say it proves\" or \"do I need to say who funded it\". Not for checking the figures themselves (grounded-statements), missing risks or left-out studies (balanced-evidence), or whether a comparative claim is allowed (claims-and-label).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and no companion exists yet for this skill. Two optional scripts run where the host executes Python; the arithmetic for relative and absolute effects is reused from grounded-statements.\n"
 metadata:
+  framework_code: "TR-3.2"
+  framework_path: "TRUSTED > Build > Unbiased > Honest framing"
+  family: "build"
+  letter: "Unbiased"
+  worker: "Medical reviewer with a statistics background"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Honest framing
 
 A slide can carry only correct figures and still mislead: "proves" on a single trial, a
@@ -55,7 +59,7 @@ stakes). Depth follows who will read the work (TR-H12):
   and point to the internal process the work goes through next (TR-H11).
 
 If it is unclear who will read it, ask once. The market matters only for which public
-rules explain a change (`references/method-standards.md` and `references/knowledge.md`); the habits apply everywhere.
+rules explain a change (`references/rules.md`); the habits apply everywhere.
 
 ## Rules that hold for every task
 
@@ -96,31 +100,13 @@ is described as tool-checked (TR-H4).
 
 - When drafting: the draft framed at the right size, with gaps inline, then a short note
   only if something was left out or needs the person.
-- When fixing: the fixed text, then a note in the format of `templates/framing-note.md`,
+- When fixing: the fixed text, then a note in the format of `assets/framing-note.md`,
   sized to the stakes. For each chart that changed or needs changing, a plain
-  description in the format of `templates/chart-description.md`.
-- For a disclosure that was missing: wording in the format of `templates/disclosure-line.md`
+  description in the format of `assets/chart-description.md`.
+- For a disclosure that was missing: wording in the format of `assets/disclosure-line.md`
   built only from what the material states.
-- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
+- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
   Never append check lines to a reply the person reads directly.
-
-## Output cards
-
-Frame repairs as separate cards so overclaim and over-hedge stay visible. Shared catalog:
-`../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| One certainty word or chart distortion fixed | `finding-card.md` | Entry in `framing-note.md` |
-| Sponsor, funder or tie disclosed | `source-card.md` (role = sponsor, not graded as evidence) | `disclosure-line.md` |
-| Chart still misleading after repair | — | `chart-description.md` (plain version) |
-| Missing interval, N, or funder | `gap-list.md` | Inside `framing-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / honest-framing: not tool-checked (offline tools) · …`).
-`trusted-check` letter lines use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -129,16 +115,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/uncertainty-size.md` | Guard, repair and check for certainty words, intervals, limitations and hedging | That task runs |
 | `tasks/numbers-and-charts.md` | Guard, repair and check for framing of figures and charts | That task runs |
 | `tasks/conflict-disclosure.md` | Guard, repair and check for sponsors, funding and ties | That task runs |
+| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a change was made |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries with neighbor skills, stop rules, never-claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and scripts | Before computing |
 | `scripts/chart_scale.py` | How much a truncated axis or scaled pictogram enlarges a difference; cumulative into per-period | A chart or pictogram is involved |
 | `scripts/find_framing_cues.py` | Lists certainty, hedging, minimizing and independence words for review | Repairing a longer draft |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/check-line.md`, `assets/framing-note.md`, `assets/chart-description.md`, `assets/disclosure-line.md` | Output formats | Building the answer |
+| `examples/deck-proves-superiority.md`, `examples/overhedged-summary.md` | Worked cases: a sales deck that overclaims, a summary that over-hedges | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

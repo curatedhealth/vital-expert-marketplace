@@ -1,15 +1,19 @@
 ---
 name: patient-safety
 description: "Keep everyday life-sciences work from causing harm: dose, contraindications, warnings, interactions and special populations (pregnancy, children, elderly, kidney or liver problems) quoted word for word from the supplied label, never from memory; patient material with no advice, false reassurance or scare framing, and always a route to a doctor, nurse or pharmacist; and any possible side effect, pregnancy exposure, overdose, misuse, quality problem or lack of effect in an email, notes, a social post or a market research transcript flagged in plain words to the company's safety reporting procedure. Use it for replies to doctors, patient leaflets, dosing tables, social media replies and call notes, or when someone says \"fill in the dosing\", \"is this OK for patients\", \"a doctor mentioned a reaction\", \"someone commented about a side effect\". Not for label or promotional boundaries (claims-and-label), benefit-risk balance (balanced-evidence), or invented figures in general (grounded-statements).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. Two scripts run where the host can execute Python 3; the method runs by hand without them. No label-source or safety-routing companion exists yet.\n"
 metadata:
+  framework_code: "TR-4.1"
+  framework_path: "TRUSTED > Build > Safe > Patient safety"
+  family: "build"
+  letter: "Safe"
+  worker: "Drug safety physician who supports colleagues"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Patient safety
 
 A reply to a doctor, a patient leaflet or a social media answer can be correct and
@@ -94,31 +98,13 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 ## What to return
 
 - **When Part B finds something:** the safety flag first, in the format of
-  `templates/safety-flag.md`, then the work.
+  `assets/safety-flag.md`, then the work.
 - **When drafting with safety content:** the draft with label quotes and gaps inline,
-  and, where asked, the table in `templates/label-statements.md`.
-- **When fixing:** the fixed text, then a note in the format of `templates/repair-note.md`,
+  and, where asked, the table in `assets/label-statements.md`.
+- **When fixing:** the fixed text, then a note in the format of `assets/repair-note.md`,
   sized to the stakes.
-- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
   append them to a reply the person reads directly.
-
-## Output cards
-
-Part B output comes first, in its own card, before any draft. Shared catalog:
-`../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Possible safety report in input | — | `safety-flag.md` (always first when Part B runs) |
-| Dose or warning not matching label | `finding-card.md` | Row in `label-statements.md` |
-| Patient wording: advice or false comfort | `finding-card.md` | `repair-note.md` |
-| No label supplied for a dose question | `gap-list.md` | Ask inline; do not paraphrase |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / patient-safety: not tool-checked (offline tools) · …`).
-`trusted-check` letter lines use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -127,16 +113,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/clinical-safety-statements.md` | Guard, repair and check for safety statements against the label | Part A, statements |
 | `tasks/patient-safety-language.md` | Guard, repair and check for patient-facing wording | Part A, patient material |
 | `tasks/side-effect-flag.md` | How to spot and flag a possible safety report | Part B, every time |
+| `references/rules.md` | Primary sources, dates, scope and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
+| `references/tools.md` | Companion slots and the two scripts | Before computing or handing off |
 | `scripts/scan_safety_mentions.py` | Finds words that may signal a safety report, or patient-wording problems | A backstop while reading inputs or patient drafts |
 | `scripts/label_match.py` | Compares safety sentences in a draft with the supplied label text | Checking statements against the label |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/*.md` | Safety flag, label table, repair note, check line | Building the answer |
+| `examples/doctor-email-side-effect.md`, `examples/social-comment-reply.md` | Worked cases from everyday work | Shaping the answer |
+| `evals/evals.json` | Test requests, including one the skill must decline | Testing |

@@ -12,10 +12,10 @@ questions, and points to the review process that decides.
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Record the stated use and reader, read for promotional signals, shape the piece to its use, route to the deciding process |
 | Skill | TR-2.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R10 to R16, R20), `references/failure-modes.md` / `references/knowledge.md` (P1–P8) |
+| Knowledge | `references/rules.md` (R3, R10 to R16, R20), `references/patterns.md` (P1–P8) |
 | Tool | None. Companion slot: a future MLR-preparation companion (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `templates/unsolicited-reply.md`, `templates/claims-note.md`, `templates/check-line.md` |
+| Template | `assets/unsolicited-reply.md`, `assets/claims-note.md`, `assets/check-line.md` |
 | Input | The request, the draft, the question being answered (for a reply), the context card (reader, use, market) |
 | Governance | TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -68,8 +68,8 @@ doctor's own question, including one about a use outside the label:
 8. **Route:** the reply goes through the medical information procedure, or the medical
    review process, before it is sent (TR-H11).
 
-Format: `templates/unsolicited-reply.md`. US practice for unsolicited replies is
-`[CHECK]` in `references/method-standards.md` / `references/knowledge.md`; apply the steps above as good practice there.
+Format: `assets/unsolicited-reply.md`. US practice for unsolicited replies is
+`[CHECK]` in `references/rules.md`; apply the steps above as good practice there.
 
 ## Guard (while drafting)
 
@@ -97,7 +97,7 @@ Format: `templates/unsolicited-reply.md`. US practice for unsolicited replies is
 
 ## Check line
 
-See `templates/check-line.md`. Use the first form when the piece is meant as scientific
+See `assets/check-line.md`. Use the first form when the piece is meant as scientific
 exchange or a reply; the second when it is promotional or the use is not stated.
 
 ## Boundaries
@@ -110,13 +110,3 @@ exchange or a reply; the second when it is promotional or the use is not stated.
   procedure (`patient-safety`); this task makes no causality or reportability judgment
   (TR-H6).
 - This task never decides that a piece is or is not promotional (TR-H3, TR-H6).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

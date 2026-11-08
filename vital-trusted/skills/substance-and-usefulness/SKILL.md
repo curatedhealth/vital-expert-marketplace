@@ -1,15 +1,19 @@
 ---
 name: substance-and-usefulness
 description: "Make everyday life-sciences work useful to the person who reads it: specific rather than generic, free of filler and buzzwords, with the \"so what\" drawn for this reader, a decision, recommendation or next step where the work needs one, and a structure that follows the content instead of an invented framework. For general management, brand, market access and medical teams writing board updates, business reviews, competitor summaries, briefs, meeting notes, emails and slide decks. Use it when someone says \"too generic\", \"so what\", \"cut the fluff\", \"make it more concrete\", \"tighten this\", \"what should the board do with this\", \"make it actionable\", or the draft says \"leverage synergies across the landscape\". It never adds a figure, name or date that was not supplied; it asks or leaves a visible gap. Not for audience level, format or translation (fit-for-reader), invented or unsupported facts (grounded-statements), or voice and brand style, which it leaves alone.\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional script for a filler and repetition scan where code can run.\n"
 metadata:
+  framework_code: "TR-1.1"
+  framework_path: "TRUSTED > Build > Tangible > Substance and usefulness"
+  family: "build"
+  letter: "Tangible"
+  worker: "Senior editor and engagement lead"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Substance and usefulness
 
 A draft can be correct, permitted and balanced and still leave its reader with nothing
@@ -110,28 +114,10 @@ host. Details in `references/tools.md`.
 - **When drafting:** the draft with gaps inline, then a short note only if something is
   missing or needs the person's decision.
 - **When fixing:** the revised text, then a note in the format of
-  `templates/repair-note.md`, sized to the stakes. Every cut of the person's own content is
+  `assets/repair-note.md`, sized to the stakes. Every cut of the person's own content is
   listed, never silent.
-- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
   append check lines to a reply the person reads directly.
-
-## Output cards
-
-Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
-`../../templates/README.md`), then fill skill-local templates.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Fluff, vague line or missing "so what" | `finding-card.md` (one row per issue) | — |
-| Missing owner, date, figure or decision the person must supply | `gap-list.md` | Inside `repair-note.md` |
-| Full pass on a leadership or external brief | `verify-brief.md` optional | `repair-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / substance-and-usefulness: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
-those lines to the person's reply.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -142,14 +128,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/so-what.md` | Guard, repair and check for the implication | That task runs |
 | `tasks/actionability.md` | Guard, repair and check for decision, next step and owner | That task runs |
 | `tasks/structure-integrity.md` | Guard, repair and check for frameworks and headings | That task runs |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/rules.md` | Sources behind the rules, with dates and status | Explaining why a rule exists |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and the scan script | Before scanning |
 | `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/repair-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |

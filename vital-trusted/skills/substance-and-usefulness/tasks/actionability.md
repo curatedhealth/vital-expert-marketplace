@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Decide whether the work calls for a decision, recommendation, next step or owner; check each is present and specific; propose from the material or ask |
 | Skill | TR-1.1.4 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (A1–A5) |
+| Knowledge | `references/patterns.md` (A1–A5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/repair-note.md` |
+| Template | `assets/check-line.md`, `assets/repair-note.md` |
 | Input | The draft, the supplied material, the context card (reader, deliverable, stakes) |
 | Governance | TR-H1, TR-H2, TR-H5, TR-H7 |
 
@@ -63,7 +63,7 @@ ask once.
 
 ## Check line
 
-Feeds the next step line in `templates/check-line.md`: decision or recommendation present,
+Feeds the next step line in `assets/check-line.md`: decision or recommendation present,
 missing or not needed; owner named, missing or not needed.
 
 ## Boundaries
@@ -74,13 +74,3 @@ missing or not needed; owner named, missing or not needed.
   proposed here (TR-H6); the next step is "raise with <the function>".
 - A recommendation in external material may be a claim; it goes through the internal
   review process with the rest of the work (TR-H11).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

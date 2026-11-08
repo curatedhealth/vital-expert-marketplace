@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find whose name the work goes out under and what that name claims; keep AI off the byline; turn ghostwriting into acknowledged support the named person makes their own |
 | Skill | TR-6.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U1–U5), `references/failure-modes.md` / `references/knowledge.md` (A1–A6) |
+| Knowledge | `references/rules.md` (U1–U5), `references/patterns.md` (A1–A6) |
 | Tool | None. Companion slot: future publications or AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `templates/use-note.md` (authorship part), `templates/check-line.md` |
+| Template | `assets/use-note.md` (authorship part), `assets/check-line.md` |
 | Input | The work, the named author or signer, who actually drafted it, the venue, the company's role and funding as stated |
 | Governance | TR-H1, TR-H3, TR-H5, TR-H11, `references/governance.md` |
 
@@ -61,7 +61,7 @@
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -71,13 +71,3 @@ See `templates/check-line.md`.
 - Whether the content is promotional when an expert speaks for the company is
   `claims-and-label`.
 - Copyright in other people's text is `responsible-inputs`.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

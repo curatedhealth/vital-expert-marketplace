@@ -1,15 +1,19 @@
 ---
 name: sourced-claims
 description: "Make sure every claim in daily life-sciences work that needs a source has one, of the right kind, cited so a reviewer can find it, and that claims with no source are shown as gaps rather than dressed up. For brand, market access, medical and general management teams writing slide decks, key messages, value stories, payer slides, competitor summaries, board updates or replies to doctors. Use it when someone says \"add references\", \"does this need a source\", \"is a press release good enough for this\", \"can I cite data on file\", \"studies show\", \"experts agree\", \"per the guidance\", \"what's the latest\", or \"get this ready for review\". It decides which statements need a source, which kind of source can carry each claim for its audience, and what a usable citation looks like. It never invents or recalls a reference. Not for checking that statements match the material supplied (grounded-statements), grading a specific source with tools (source-assessment), or testing a claim against its passage (claim-assessment).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, sources can go to source-assessment for grading and to citation-and-record for formatted citations.\n"
 metadata:
+  framework_code: "TR-5.2"
+  framework_path: "TRUSTED > Build > True > Sourced claims"
+  family: "build"
+  letter: "True"
+  worker: "Experienced colleague with an evidence background"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Sourced claims
 
 A slide that says "studies show" or "the leading treatment" asks the reader to trust a
@@ -90,31 +94,10 @@ it (`citation-and-record`). Until then, say "source not graded with a tool" (TR-
 
 - When drafting: the draft with sources shown in short form and gaps inline, then a short
   note only if something is missing or needs the person.
-- When fixing: the fixed text, then a note in the format of `templates/source-note.md`,
-  sized to the stakes. For references, use `templates/reference-list.md`.
-- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
+- When fixing: the fixed text, then a note in the format of `assets/source-note.md`,
+  sized to the stakes. For references, use `assets/reference-list.md`.
+- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
   Never append check lines to a reply the person reads directly.
-
-## Output cards
-
-A citation names a document the person supplied; it does not prove the claim is true in
-the world. Shared catalog: `../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| Each claim that needs a source | `claim-card.md` (claim · passage · action) | Rows inside `source-note.md` |
-| Each source graded or named for the reader | `source-card.md` | `reference-list.md` |
-| Vague attribution ("studies show", undated "current") | `finding-card.md` | — |
-| Claims with no supplied source | `gap-list.md` | Inside `source-note.md` |
-| Leaving the company, many claims at once | `evidence-table.md` or `verify-brief.md` optional | `source-note.md` + `reference-list.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / sourced-claims: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` use `templates/check-line.md` only; never paste those
-into the person's reply. When VERIFY is connected, `source-card` scores are attribution
-to a passage, not world-truth.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -123,14 +106,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/every-claim-sourced.md` | Which statements need a source; guard, repair, check | That task runs |
 | `tasks/source-type-fit.md` | What each kind of source can and cannot carry, by audience | That task runs |
 | `tasks/specific-citations.md` | What a findable citation contains; "add references" requests | That task runs |
+| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot and script | Before handing off or scanning |
 | `scripts/find_source_cues.py` | Lists vague attributions, superlatives, undated "current" and weak citations in a text | Repairing a longer draft |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/check-line.md`, `assets/source-note.md`, `assets/reference-list.md` | Output formats | Building the answer |
+| `examples/brand-deck.md`, `examples/add-references.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

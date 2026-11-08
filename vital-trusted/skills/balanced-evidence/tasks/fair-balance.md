@@ -7,10 +7,10 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Pair every benefit with the risks, discontinuations and limitations the material gives for it; keep them in the same piece with comparable weight; replace reassurance with data |
 | Skill | TR-3.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R7, R8, R10), `references/failure-modes.md` / `references/knowledge.md` (FB1–FB8) |
+| Knowledge | `references/rules.md` (R1, R2, R4, R5, R7, R8, R10), `references/patterns.md` (FB1–FB8) |
 | Tool | `scripts/balance_cues.py` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
+| Template | `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` |
 | Input | The draft or request, the supplied material (label, study, results tables, registry data), the reader, market and use from intake |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11, TR-H12 |
 
@@ -37,7 +37,7 @@ events, and the authors' stated limitations.
 
 1. **List the benefit statements the draft will make** and, beside each, the risks,
    discontinuations and limitations the material gives for the same product and use.
-   Use the evidence inventory (`templates/evidence-inventory.md`) for anything leaving the
+   Use the evidence inventory (`assets/evidence-inventory.md`) for anything leaving the
    company.
 2. **If the material holds no safety or limitation data**, do not draft a benefits-only
    piece. Ask for the label or results, or leave a visible gap where the risks will go:
@@ -84,7 +84,7 @@ principal investigator, the piece still carries its own balance.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -98,13 +98,3 @@ See `templates/check-line.md`.
   `patient-safety` and your safety reporting procedure.
 - Whether the piece meets a code or regulation is for your promotional or medical review
   process. This task says what was added and what is open.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

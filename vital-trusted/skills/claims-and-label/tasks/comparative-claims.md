@@ -10,10 +10,10 @@ like with like, says exactly what was compared, and does not disparage a competi
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Find every comparison and absolute claim, find the data each rests on, test it against the five questions, rewrite or mark the gap |
 | Skill | TR-2.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R17 to R24), `references/failure-modes.md` / `references/knowledge.md` (C1–C8) |
+| Knowledge | `references/rules.md` (R17 to R24), `references/patterns.md` (C1–C8) |
 | Tool | None. Companion slot: VERIFY `check_claim` through `claim-assessment`, to test the comparison against its passage |
 | Prompt | This guide |
-| Template | `templates/claims-note.md`, `templates/check-line.md` |
+| Template | `assets/claims-note.md`, `assets/check-line.md` |
 | Input | The request, the draft, the supplied studies or data, the label, the context card (reader, market) |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H8, TR-H11 |
 
@@ -88,7 +88,7 @@ request implied it.
 
 ## Check line
 
-See `templates/check-line.md`. Disparaging language and unscoped absolutes go in the notes
+See `assets/check-line.md`. Disparaging language and unscoped absolutes go in the notes
 under the comparisons line.
 
 ## Boundaries
@@ -100,13 +100,3 @@ under the comparisons line.
 - Whether benefits and risks are shown in proportion is `balanced-evidence`.
 - Whether a comparison may be used at all in a market is decided by the review process
   (TR-H11). This task never calls a comparison fair, valid or permitted (TR-H3).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

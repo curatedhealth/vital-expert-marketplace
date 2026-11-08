@@ -7,10 +7,10 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Find each safety statement in the supplied label; quote it word for word with its section, market and date; keep its conditions; gap the rest |
 | Skill | TR-4.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10 to S12), `references/failure-modes.md` / `references/knowledge.md` (C1 to C10) |
+| Knowledge | `references/rules.md` (S10 to S12), `references/patterns.md` (C1 to C10) |
 | Tool | `scripts/label_match.py` where code can run. Companion slot: label source (none yet) |
 | Prompt | This guide |
-| Template | `templates/label-statements.md`, `templates/repair-note.md`, `templates/check-line.md` |
+| Template | `assets/label-statements.md`, `assets/repair-note.md`, `assets/check-line.md` |
 | Input | The draft or request, the supplied label (SmPC, prescribing information, package leaflet, instructions for use) and the market from intake |
 | Governance | TR-H1, TR-H6, TR-H7, TR-H8, TR-H11 |
 
@@ -45,7 +45,7 @@ Any sentence, table cell, bullet or chart label about:
    "Please paste or attach the current approved label for <market> so I can quote it."
    If the person wants to go on, give the structure with every safety cell as
    `[GAP: not supplied — <what> — from section <n> of the approved label]`.
-2. **Find the section first** (`references/method-standards.md` / `references/knowledge.md` S11 for EU, S12 for US) and quote
+2. **Find the section first** (`references/rules.md` S11 for EU, S12 for US) and quote
    the statement word for word, in quotation marks or as a table cell marked as label
    text, with the section number.
 3. **Keep every condition.** Population, cut-off, timing, route, formulation, "in
@@ -76,11 +76,11 @@ Any sentence, table cell, bullet or chart label about:
    if supplied; otherwise keep the label wording and mark the passage for your medical
    review. Replace statements not in the label with a gap. Never delete a warning
    silently.
-4. **Note each change** in `templates/repair-note.md`, in plain words.
+4. **Note each change** in `assets/repair-note.md`, in plain words.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -91,13 +91,3 @@ See `templates/check-line.md`.
 - Do not judge whether benefits and risks are shown in proportion; that is
   `balanced-evidence`.
 - A match to the label is not a statement that the content is safe or approved (TR-H3).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

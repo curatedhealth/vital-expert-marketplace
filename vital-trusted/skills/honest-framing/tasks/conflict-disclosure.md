@@ -7,10 +7,10 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | List every interest the material shows, check the draft carries each where the result is used, and remove any "independent" or neutral label the material does not support |
 | Skill | TR-3.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R8, R9), `references/failure-modes.md` / `references/knowledge.md` (IN1–IN7) |
+| Knowledge | `references/rules.md` (R8, R9), `references/patterns.md` (IN1–IN7) |
 | Tool | `scripts/find_framing_cues.py` (independence and sponsor words). No companion yet |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/disclosure-line.md`, `templates/framing-note.md` |
+| Template | `assets/check-line.md`, `assets/disclosure-line.md`, `assets/framing-note.md` |
 | Input | The draft, the supplied sources (funding statement, author disclosures, sponsor role, methods), the context card |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H11 |
 
@@ -51,7 +51,7 @@ carries that disclosure to its reader.
 5. **Disclose the writer's side when it matters.** When company material describes a
    competitor's study or the company's own, it is the company speaking; do not present
    it as a neutral overview. The company's own process decides the exact declaration.
-6. **Build the disclosure line from the material only** (`templates/disclosure-line.md`).
+6. **Build the disclosure line from the material only** (`assets/disclosure-line.md`).
    Missing pieces become gaps; never fill a funder, role or author tie from memory.
 
 ## Repair (existing draft)
@@ -71,7 +71,7 @@ carries that disclosure to its reader.
 
 ## Check line
 
-See `templates/check-line.md` (interests line).
+See `assets/check-line.md` (interests line).
 
 ## Boundaries
 
@@ -84,13 +84,3 @@ See `templates/check-line.md` (interests line).
 - Grading the source itself (peer review, funding, fit) is `source-assessment`. Which
   claims need a reference is `sourced-claims`. How AI use is disclosed is
   `responsible-use`.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

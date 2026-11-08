@@ -9,10 +9,10 @@ Absorbs the citation part of the earlier vital-verify record method.
 | Worker | Quality and compliance lead |
 | Workflow | List the sources, build one reference per source from its own details, name any missing detail, paste the lines with no caption |
 | Skill | TR-8.4.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2), `references/failure-modes.md` / `references/knowledge.md` (C1–C5), `references/tools.md` |
+| Knowledge | `references/rules.md` (R1, R2), `references/patterns.md` (C1–C5), `references/tools.md` |
 | Tool | VERIFY `build_citation`, once per source. Without VERIFY: `scripts/plain_reference.py` or the same steps by hand |
 | Prompt | This guide |
-| Template | `templates/reference-list.md` |
+| Template | `assets/reference-list.md` |
 | Input | The finished text, the sources it cites with whatever details the person supplied, any source records returned by `source-assessment`, the style the person named (if any) |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H13 |
 
@@ -63,7 +63,7 @@ Absorbs the citation part of the earlier vital-verify record method.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -74,13 +74,3 @@ See `templates/check-line.md`.
   when that ran (`confidence-scoring`). This task does not compute or invent them.
   [CHECK: whether scores are printed by this skill or by confidence-scoring, to be
   settled with the owner.]
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

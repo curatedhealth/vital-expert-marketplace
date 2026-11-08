@@ -87,9 +87,9 @@ not judge whether any side effect matters clinically.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns FB3, FB5, FB6 in `references/failure-modes.md` / `references/knowledge.md`. Rule R10 (FDA payor communications,
+Patterns FB3, FB5, FB6 in `references/patterns.md`. Rule R10 (FDA payor communications,
 limitations explicit) is US-only and was not cited for a Swiss payer; the Swiss sources
-are `[CHECK]` in `references/method-standards.md` / `references/knowledge.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
+are `[CHECK]` in `references/rules.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
 reporting and informs the practice only.
 
 ## Check line returned to trusted-check

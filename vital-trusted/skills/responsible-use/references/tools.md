@@ -1,11 +1,3 @@
-# Tools
-
-See plugin [`connectors.md`](../../../connectors.md).
-
-Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
-
-## Prior notes
-
 # Tools and companion slot
 
 ## Companion slot
@@ -33,7 +25,7 @@ evidence-gap sentence states a fact from a source ("the trial included 9% of peo
 ### `scripts/scan_language.py`
 
 Lists phrases that may stigmatize, blame or define people by a condition, with the line,
-context, a suggestion and the rule id the term comes from in `references/method-standards.md` / `references/knowledge.md`.
+context, a suggestion and the rule id the term comes from in `references/rules.md`.
 Terms tagged CHECK are good practice not yet confirmed against a primary document.
 
 ```

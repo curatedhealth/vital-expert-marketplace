@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Compare the structure with the content and the brief; remove invented frameworks; make headings say what the section says |
 | Skill | TR-1.1.5 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (K1–K6) |
+| Knowledge | `references/patterns.md` (K1–K6) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `templates/check-line.md`, `templates/repair-note.md` |
+| Template | `assets/check-line.md`, `assets/repair-note.md` |
 | Input | The draft, the brief or request, the supplied material, the context card |
 | Governance | TR-H1, TR-H2, TR-H9 |
 
@@ -66,7 +66,7 @@ place an item by the assistant's own judgment and present it as analysis.
 
 ## Check line
 
-Feeds the structure line in `templates/check-line.md`: headings that do not match their
+Feeds the structure line in `assets/check-line.md`: headings that do not match their
 content, frameworks or groupings the content does not support, points out of order.
 
 ## Boundaries
@@ -78,13 +78,3 @@ content, frameworks or groupings the content does not support, points out of ord
 - A framework the company uses as standard (for example a mandated business review
   template) is the person's choice; do not remove it. Check only that each section
   holds what its heading says.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

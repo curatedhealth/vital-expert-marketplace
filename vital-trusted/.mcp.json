@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "trusted-prove": {
+    "vital-verify": {
       "type": "http",
       "url": "https://mcp.vital.expert/api/mcp/verify",
       "headers": {

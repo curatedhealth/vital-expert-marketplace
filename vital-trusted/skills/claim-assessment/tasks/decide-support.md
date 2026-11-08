@@ -9,10 +9,10 @@ Absorbs the support-decision method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Confirm each source was admitted, check each claim against its quoted passage, read each result in plain words, act on it, recheck any rewrite |
 | Skill | TR-8.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R6), `references/failure-modes.md` / `references/knowledge.md` (C5–C12, C15) |
+| Knowledge | `references/rules.md` (R1–R6), `references/patterns.md` (C5–C12, C15) |
 | Tool | VERIFY `check_claim` (one claim, one passage) or `verify_text` (first pass on supplied text with named sources) |
 | Prompt | This guide |
-| Template | `templates/support-result.md`, `templates/check-line.md` |
+| Template | `assets/support-result.md`, `assets/check-line.md` |
 | Input | The claim list from Part A, the quoted passages, the sources as admitted by `source-assessment` |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H5, TR-H11 |
 
@@ -102,7 +102,7 @@ Never produce the labels anyway (`references/governance.md`).
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -111,13 +111,3 @@ See `templates/check-line.md`.
 - It does not judge clinical meaning, fair balance or whether a claim is permitted. Flag
   and route (`balanced-evidence`, `claims-and-label`).
 - It never says the work is accurate, correct, verified or ready.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

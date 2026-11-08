@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Recognize the kind of material, ask the policy question, offer a safer route, keep sensitive details out of the output |
 | Skill | TR-6.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1–I8, I11), `references/failure-modes.md` / `references/knowledge.md` (C1–C9) |
+| Knowledge | `references/rules.md` (I1–I8, I11), `references/patterns.md` (C1–C9) |
 | Tool | `scripts/scan_inputs.py` where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `templates/input-note.md`, `templates/check-line.md` |
+| Template | `assets/input-note.md`, `assets/check-line.md` |
 | Input | The request, the material or its description, the tool named, where the result will go, any policy the person quotes |
 | Governance | TR-H3, TR-H4, TR-H5, TR-H7, TR-H11, `references/governance.md` |
 
@@ -73,7 +73,7 @@ point is to say it out loud before it goes in.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -82,13 +82,3 @@ See `templates/check-line.md`.
 - Whether the tool is approved, the data anonymous, the information inside information,
   or a transfer abroad permitted: the company's policy and its owners decide.
 - How much human review and disclosure the result needs: `responsible-use`.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Read who the work is for, set the review the stakes need, name who reads it next, never send or call it reviewed |
 | Skill | TR-6.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U3, U6, U7), `references/failure-modes.md` / `references/knowledge.md` (O1–O6, T1) |
+| Knowledge | `references/rules.md` (U0, U3, U6, U7), `references/patterns.md` (O1–O6, T1) |
 | Tool | None. Companion slot: future AI-policy or MLR-preparation companion (none yet) |
 | Prompt | This guide |
-| Template | `templates/use-note.md` (review part), `templates/check-line.md` |
+| Template | `assets/use-note.md` (review part), `assets/check-line.md` |
 | Input | The draft, who it is for (context card `Reader`, `Stakes`, `Next process`), what the person says about review |
 | Governance | TR-H3, TR-H5, TR-H11, TR-H12, `references/governance.md` |
 
@@ -61,7 +61,7 @@ and congress material, press and social posts, agency briefs that carry claims.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -70,13 +70,3 @@ See `templates/check-line.md`.
 - Recording who reviewed is `work-record`. Honest status ("draft", "approved by…") is
   `work-record` too; this task never writes a status above draft.
 - The assistant comparing a draft with a source is not a review (O2).
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

@@ -1,23 +1,23 @@
 {
   "name": "vital-trusted",
   "displayName": "VITAL TRUSTED",
-  "version": "0.3.0",
-  "release_state": "Pilot",
+  "version": "0.3.1",
+  "release_state": "Released",
   "tier": "Standard",
   "domain": "platform",
   "capability_code": "TRUSTED",
   "depends_on": [
     "vital-core-atoms"
   ],
-  "generated_by": "hand-upgrade-hybrid-2026-11-08",
-  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Offline-first: Prove skills run without a key and label results not tool-checked; optional TRUSTED Prove live MCP (same endpoint mcp.vital.expert/api/mcp/verify, server id trusted-prove) adds live source admission when a vvfy_ key is present. The vital-verify plugin is retired — this pack is the sole buyer surface. Human oversight required for healthcare use.",
+  "generated_by": "owner-release-2026-11-08",
+  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Offline-first: Prove skills run without a key and label results not tool-checked; optional TRUSTED Prove live MCP (same endpoint mcp.vital.expert/api/mcp/verify, server id trusted-prove) adds live source admission when a vvfy_ key is present. The vital-verify plugin is retired — this pack is the sole buyer surface. Human oversight required for healthcare use. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
-    "name": "Vital.Expert",
+    "name": "Crossroads Catalyst GmbH — Vital Expert",
     "url": "https://vital.expert"
   },
   "homepage": "https://vital.expert",
   "repository": "https://github.com/curatedhealth/vital-expert-main",
-  "license": "UNLICENSED",
+  "license": "LicenseRef-CrossroadsCatalyst-Proprietary",
   "keywords": [
     "life sciences",
     "pharma",
@@ -25,7 +25,8 @@
     "market access",
     "brand",
     "responsible AI",
-    "evidence"
+    "evidence",
+    "TRUSTED"
   ],
   "skills": "./skills",
   "userConfig": {

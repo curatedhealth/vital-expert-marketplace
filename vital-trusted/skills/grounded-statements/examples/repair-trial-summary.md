@@ -64,7 +64,7 @@ sources with a tool.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns: F2, N1, M2, F5, M8 in `references/failure-modes.md` / `references/knowledge.md`. Rule R1 (CONSORT 2025,
+Patterns: F2, N1, M2, F5, M8 in `references/patterns.md`. Rule R1 (CONSORT 2025,
 absolute and relative effects) supports change 2; R3 supports change 3.
 
 ## Script used

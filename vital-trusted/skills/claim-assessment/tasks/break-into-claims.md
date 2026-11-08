@@ -9,10 +9,10 @@ Absorbs the claim-decomposition method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Take the text as submitted, split it into claims, rank them, pair each with its quoted passage, then stop before deciding support |
 | Skill | TR-8.1.1 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (C1–C4, C8, C11, C13, C14), `references/method-standards.md` / `references/knowledge.md` (R1–R5) |
+| Knowledge | `references/patterns.md` (C1–C4, C8, C11, C13, C14), `references/rules.md` (R1–R5) |
 | Tool | VERIFY `extract_claims`; without it, `scripts/split_claims.py` or a split by hand |
 | Prompt | This guide |
-| Template | `templates/claim-list.md` |
+| Template | `assets/claim-list.md` |
 | Input | The finished text exactly as submitted, and the supplied material (paper, registry summary, label, report, notes) |
 | Governance | TR-H1, TR-H4, TR-H7, TR-H12 |
 
@@ -79,7 +79,7 @@ Rank before pairing, so a short check covers the right sentences (TR-H12).
    - If the supplied material says nothing about the claim, record "no passage found".
      Do not stretch a nearby sentence to fit.
    - If two supplied passages disagree, pair both and flag it for the person.
-6. **Stop.** Return the claim list (`templates/claim-list.md`) or go straight to Part B. Part
+6. **Stop.** Return the claim list (`assets/claim-list.md`) or go straight to Part B. Part
    A never gives a support result.
 
 ## Checks before handing to Part B
@@ -103,13 +103,3 @@ Rank before pairing, so a short check covers the right sentences (TR-H12).
 - Part A does not decide support, grade the source or count the result.
 - Do not drop a claim because it is hard to check. A hard claim is a priority claim.
 - Do not add a claim the text does not make, even one the person "meant".
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

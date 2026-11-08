@@ -9,10 +9,10 @@ Make visible what was assumed, what is still a gap, and who needs to decide what
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Collect assumptions, gaps and pending decisions from the work; give each an owner as the person names it; size the list to the stakes |
 | Skill | TR-7.1.2 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (A1–A5), `references/knowledge.md` |
+| Knowledge | `references/patterns.md` (A1–A5), `references/gap-rules.md` |
 | Tool | None. Companion slot: VERIFY `build_record` findings, through `citation-and-record` |
 | Prompt | This guide |
-| Template | `templates/record-note.md` (sections "Assumed" and "Open"), `templates/check-line.md` |
+| Template | `assets/record-note.md` (sections "Assumed" and "Open"), `assets/check-line.md` |
 | Input | The deliverable with its gaps, the conversation, the person's statements on who decides |
 | Governance | TR-H1, TR-H5, TR-H7, TR-H12 |
 
@@ -58,7 +58,7 @@ says it is an estimate and whose.
 
 ## Check line
 
-See `templates/check-line.md`.
+See `assets/check-line.md`.
 
 ## Boundaries
 
@@ -67,13 +67,3 @@ See `templates/check-line.md`.
   Say what was chosen; the reviewer decides what it is worth.
 - Gaps about facts and figures are found by grounded-statements and sourced-claims; this
   task collects them into one list with owners.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

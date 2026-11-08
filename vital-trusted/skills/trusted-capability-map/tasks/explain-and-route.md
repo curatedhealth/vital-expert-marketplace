@@ -10,7 +10,7 @@
 | Knowledge | `references/standard.md` (letters, boundaries, skill index) |
 | Tool | None. Companion slot: none needed |
 | Prompt | This guide |
-| Template | `templates/route-answer.md` |
+| Template | `assets/route-answer.md` |
 | Input | The person's question or request, and any draft they attached |
 | Governance | TR-H3, TR-H9, `references/governance.md` |
 
@@ -40,7 +40,7 @@
    request clearly spans two letters, and say which comes first.
 6. **Check the active letters.** If the skill belongs to a letter the person turned off,
    say so and ask whether to turn it back on.
-7. **Answer with `templates/route-answer.md`.**
+7. **Answer with `assets/route-answer.md`.**
 
 ## Checks before answering
 
@@ -53,13 +53,3 @@
 - Do not start the work of the routed skill here.
 - Do not explain rules beyond what `references/standard.md` and
   `references/hard-rules.md` say.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

@@ -1,15 +1,19 @@
 ---
 name: work-record
 description: "Keep a short, honest record of how a piece of daily life-sciences work was made, and keep its status honest. For general management, brand, market access and medical teams whose board updates, analyses, briefs, payer decks, replies to doctors or summaries were made with an AI assistant. It notes which materials the work was built from, which assistant and connectors were involved and what the AI did (drafted, summarized, translated, checked); makes assumptions, gaps and pending decisions visible with who decides; and keeps work a draft unless a named person cleared it. Use it when someone says \"HQ asked how this was made\", \"add a note on sources\", \"what did we assume\", \"list the open points\", \"mark this as final\", \"say it was approved\", or when work is about to leave the company. Light for internal notes, fuller for anything external. Not for deciding whether AI use must be disclosed (responsible-use), adding references to claims (sourced-claims), or a formal record with VERIFY (citation-and-record).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected and a named person clears the work, the formal record can be built through citation-and-record.\n"
 metadata:
+  framework_code: "TR-7.1"
+  framework_path: "TRUSTED > Build > Defensible > Work record"
+  family: "build"
+  letter: "Defensible"
+  worker: "Quality and compliance lead, practical not bureaucratic"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # Work record
 
 When a manager at headquarters asks "how was this analysis made?", or a reviewer asks
@@ -100,30 +104,12 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 ## What to return
 
 - **Record note:** after the deliverable, never inside it, in the format of
-  `templates/record-note.md`, sized to the stakes. Where it goes in the final document (an
+  `assets/record-note.md`, sized to the stakes. Where it goes in the final document (an
   appendix slide, a footnote, an email line) is the person's choice.
-- **Status:** the status line from `templates/status-line.md`, only where a status is
+- **Status:** the status line from `assets/status-line.md`, only where a status is
   needed or asked for.
-- **To trusted-check only:** one line in the format of `templates/check-line.md`. Never
+- **To trusted-check only:** one line in the format of `assets/check-line.md`. Never
   append it to a reply the person reads directly.
-
-## Output cards
-
-Defensible letter shape: who did what, when, on what material, and what stays open.
-Shared catalog: `../../templates/README.md`.
-
-| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
-|---|---|---|
-| How the piece was made (sources, tools, AI verbs) | — | `record-note.md` |
-| Assumptions, gaps, pending decisions and owners | `gap-list.md` | Open sections in `record-note.md` |
-| Draft vs reviewed vs cleared | — | `status-line.md` |
-| HQ or audit request | `verify-brief.md` optional | Full `record-note.md` |
-
-End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
-(offline default: `TRUSTED / work-record: not tool-checked (offline tools) · …`).
-Letter lines for `trusted-check` use `templates/check-line.md` only.
-
-Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -132,14 +118,12 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/record-of-making.md` | Sources, tools and AI used | That task runs |
 | `tasks/assumptions-and-open-items.md` | Assumptions, gaps, pending decisions and owners | That task runs |
 | `tasks/honest-status.md` | Draft, reviewed, cleared, final, and when each may be written | That task runs |
+| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
+| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
+| `references/gap-rules.md` | How to word gaps in a record | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
 | `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
+| `assets/record-note.md`, `assets/status-line.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
+| `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |

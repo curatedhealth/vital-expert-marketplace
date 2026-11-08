@@ -10,7 +10,7 @@
 | Knowledge | `references/tools.md`, `references/letter-lines.md` (Prove lines) |
 | Tool | VERIFY, through `source-assessment`, `claim-assessment`, `confidence-scoring` and `citation-and-record`. This skill calls no VERIFY tool itself |
 | Prompt | This guide |
-| Template | Prove lines in `references/letter-lines.md`; their place in `templates/check-output-full.md` |
+| Template | Prove lines in `references/letter-lines.md`; their place in `assets/check-output-full.md` |
 | Input | The finished draft, the True items found in TR-0.3.1, the sources the person supplied, the reader and purpose, the reviewer's name if given |
 | Governance | TR-H4, TR-H5, `references/governance.md` |
 
@@ -89,13 +89,3 @@ Never write a status, a percentage, a citation or a record that VERIFY did not r
   not chosen to share to VERIFY. Only the deliverable and the sources they supplied.
 - Do not choose a citation style for the person; the Prove skill uses their stated
   preference or the connector's default.
-
-## Execution card
-
-- Input: prior task output or intake pack
-- Atom: (none unless named)
-- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
-- Template: files under `templates/`
-- Output: this task's deliverable only
-- Check: required fields present; no invented figures; check-line stamped
-- Human: gates in governance.md if this task surfaces a release decision

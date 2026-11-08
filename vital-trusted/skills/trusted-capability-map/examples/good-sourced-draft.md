@@ -48,7 +48,7 @@ Hard rules still run when a letter is off by choice.
 
 This example is a teaching fixture for known-answer evals. Names (Velostra, NORLA, Example Pharma) are fictional. Prefer shared cards under `../../templates/` when rendering scannable packs. Stamp lines match `templates/check-line-stamp.md`.
 
-Accessed teaching date: 8 November 2026. Pilot release_state — not Released.
+Accessed teaching date: 8 November 2026. release_state: Released (owner-authorized 8 November 2026). Still requires named human clearance per piece.
 ## Checklist echo
 - [x] Rendered card(s) present
 - [x] Stamp present

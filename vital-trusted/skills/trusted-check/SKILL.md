@@ -1,15 +1,19 @@
 ---
 name: trusted-check
 description: "Final read of a finished draft against VITAL TRUSTED before it goes anywhere: an email, meeting notes, a board update, a brief, key messages, a value story, a deck, a reply to a doctor or a paper summary. Runs every letter the person has turned on, at a depth set by who will read it, and writes a plain TRUSTED summary: what to fix, what is missing, what a person must decide, what could not be checked, and which internal process the work goes to next. Hands factual claims to the VERIFY companion when it is connected. Use it when someone says \"check this\", \"run TRUSTED on this\", \"is this OK to send\", \"is this ready for review\", \"give it a last look\" or \"what's wrong with this draft\". It never says a draft passes or is ready to send. Not for drafting or fixing (use the letter skills such as grounded-statements), for explaining or setting up TRUSTED (trusted-capability-map), or for gathering context (trusted-intake).\n"
-license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
+license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, factual claims go to the Prove skills for checking against supplied sources; without it, the summary names what VERIFY would check.\n"
 metadata:
+  framework_code: "TR-0.3"
+  framework_path: "TRUSTED > Core > Check"
+  family: "core"
+  letter: "all"
+  worker: "Experienced cross-functional colleague acting as a final reader"
   pack: "vital-trusted"
-  version: "0.3.0"
-  level: "CF04"
-  release_state: "Pilot"
-  agent: "trusted-steward"
+  release_state: "Released"
+  version: "0.3.1"
 ---
+
 # TRUSTED check
 
 A finished draft can read well and still let its reader down: a figure nobody supplied,
@@ -42,12 +46,12 @@ land in the summary.
 Depth follows who will read the work (TR-H12). The person does not have to ask.
 
 - **Internal and quick** (a team email, notes for colleagues): only what would mislead a
-  colleague. Light summary of a few lines (`templates/check-output-light.md`).
+  colleague. Light summary of a few lines (`assets/check-output-light.md`).
 - **Leadership or cross-team** (board update, business review, internal brief): every
-  active letter, short notes. Short summary (`templates/check-output-short.md`).
+  active letter, short notes. Short summary (`assets/check-output-short.md`).
 - **Leaving the company** (agency, doctor, payer, patient, regulator, partner, public):
   every active letter in full, the full summary, and the internal process it goes to
-  next (`templates/check-output-full.md`).
+  next (`assets/check-output-full.md`).
 
 If it is unclear who will read it, ask once: "Who will read this?"
 
@@ -89,18 +93,6 @@ It is not medical, legal, regulatory or ethics review." (TR-H10)
 If the person asks for fixes, route to the letter skill's repair step. Do not rewrite the
 draft inside the check.
 
-
-## Output cards (required)
-
-Use shared cards under `../../templates/` so results are scannable:
-
-- Aggregate letter check-lines into a TRUSTED summary (`templates/check-output-*.md`)
-- Point open True items at Prove cards (`../../templates/claim-card.md`, `confidence-card.md`)
-- Stamp with `../../templates/check-line-stamp.md`
-- Emit letter lines via CLI: `python tools/stamp_check_line.py --letter-lines --mode offline --letter 'T|…|flag|…'` (repeat `--letter`; `--mode verify` → Stamp tool-checked)
-
-Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
-
 ## Files in this skill
 
 | File | What it holds | Read it when |
@@ -108,15 +100,14 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 | `tasks/run-letters.md` | Depth, which letters run, collecting lines | Every check |
 | `tasks/write-summary.md` | Turning lines into the plain summary | Every check |
 | `tasks/prove-handoff.md` | What goes to VERIFY, in what order, what comes back | VERIFY is connected |
-| `references/governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
-| `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
-| `references/method.md` | Method entrypoint | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
-| `references/failure-modes.md` | Common failures | Guard and repair |
-| `references/tools.md` | Offline and live tools | Before calling a tool |
-| `templates/` | Skill-local output formats | Building the answer |
-| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
-| `examples/` | Good and poor worked cases | Shaping the answer |
-| `evals/evals.json` | Functional evals | Testing |
 | `references/letter-lines.md` | The line grammar, where each skill's line shapes live, and who prints what under the references | Reading a line, or writing a new skill |
+| `references/rules.md` | What this skill applies and where it comes from | A rule is questioned |
+| `references/patterns.md` | How a final check goes wrong, with before and after | Writing the summary |
+| `references/gap-rules.md` | Gap classes as they appear in a summary | Writing open items |
+| `references/governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
+| `references/tools.md` | Companion slot per task, VERIFY chain, script | Hand-off, script use |
+| `assets/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
+| `assets/check-line.md` | The line contract this skill accepts | Reading lines |
+| `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
+| `examples/*.md` | Worked cases: agency email, team email, board update | Shaping the answer |
+| `evals/evals.json` | Test requests, including one it must not approve | Testing |
