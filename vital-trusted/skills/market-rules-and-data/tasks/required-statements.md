@@ -7,10 +7,10 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Establish market, reader, use and channel; build the list of statements usually expected; mark each present, missing or for the company's system; never write one from memory |
 | Skill | TR-2.2.2 |
-| Knowledge | `references/rules.md` (M1 to M19), `references/patterns.md` (S1 to S8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M19), `references/failure-modes.md` / `references/knowledge.md` (S1 to S8) |
 | Tool | `scripts/scan_output.py --statements` where code can run. Companion slot: future MLR preparation companion with market templates and job codes (none yet) |
 | Prompt | This guide |
-| Template | `assets/statements-list.md`, `assets/market-note.md`, `assets/check-line.md` |
+| Template | `templates/statements-list.md`, `templates/market-note.md`, `templates/check-line.md` |
 | Input | The draft, the context card, the supplied label for the market, any template or element list the person supplies |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H7, TR-H8, TR-H11, `references/governance.md` |
 
@@ -27,7 +27,7 @@ it as the list and do not add to it from the rules below. Their list governs (M0
 
 ## The elements usually expected
 
-Build the list from `references/rules.md` for the market only. Common elements:
+Build the list from `references/method-standards.md` / `references/knowledge.md` for the market only. Common elements:
 
 | Element | UK (ABPI 2024) | EU (Directive, EFPIA) | Switzerland (AWV) | US |
 |---|---|---|---|---|
@@ -75,11 +75,11 @@ only the company-system elements (job code, date), and point to the review proce
    placeholder and say so.
 4. **Never complete a job code, date or PI from a pattern** ("the other codes look like
    ZL-UK-0123, so this one is ZL-UK-0124"). It belongs to the company's system.
-5. **Return the list** with `assets/statements-list.md`.
+5. **Return the list** with `templates/statements-list.md`.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

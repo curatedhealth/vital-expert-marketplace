@@ -94,12 +94,12 @@ marked "not tool-built".
 
 - **References:** the reference lines, one per source, with no caption before them,
   then a short plain note only if a detail is missing or a style could not be applied
-  (`assets/reference-list.md`).
-- **Record:** the record note (`assets/record-note.md`), first line "Uncleared draft"
+  (`templates/reference-list.md`).
+- **Record:** the record note (`templates/record-note.md`), first line "Uncleared draft"
   unless a named person cleared it, then the open items handed on
-  (`assets/open-items.md`).
+  (`templates/open-items.md`).
 - **Evidence table:** only when asked.
-- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
   append it to a reply the person reads directly.
 
 ## Files in this skill
@@ -108,12 +108,9 @@ marked "not tool-built".
 |---|---|---|
 | `tasks/build-citations.md` | Steps, tool call and fallback for references | That task runs |
 | `tasks/build-record.md` | Steps, tool call, clearer rules and handing on open items | That task runs |
-| `references/rules.md` | Primary sources behind the rules, dated, with status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Building or repairing a record |
-| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; scripts | Before any call |
 | `scripts/plain_reference.py` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
-| `assets/*.md` | Reference list, record note, open items, check line | Building the answer |
+| `templates/*.md` | Reference list, record note, open items, check line | Building the answer |
 | `examples/advisory-board-pre-read.md` | A worked case: three sources, one missing year, two contradicted claims | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

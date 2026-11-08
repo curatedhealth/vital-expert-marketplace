@@ -9,10 +9,10 @@ Absorbs the currency-check method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Place the evidence (design), count the studies behind the claim, check retraction, correction and supersession, date it, then say what it can carry |
 | Skill | TR-8.2.2 |
-| Knowledge | `references/rules.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/patterns.md` (S5, S6, S9–S12, S16) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/failure-modes.md` / `references/knowledge.md` (S5, S6, S9–S12, S16) |
 | Tool | VERIFY `check_currency`. `scripts/identify_source_id.py` where code runs |
 | Prompt | This guide |
-| Template | `assets/source-card.md` (strength and currency rows), `assets/verify-block.md`, `assets/check-line.md` |
+| Template | `templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |
 | Input | The qualified source from TR-8.2.1, the claim it is meant to support, who will read it |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H6, TR-H8; stop rules in `references/governance.md` |
 
@@ -32,7 +32,7 @@ Name the design as the source names it. Do not upgrade it.
 | Model (economic, budget impact, simulation, forecast) | What follows if its inputs and assumptions hold | Results depend on inputs; it is not an observation |
 | Market research, survey | What these respondents said | Who was asked and how many limits who it speaks for |
 
-This order follows the logic of GRADE and the Oxford CEBM levels (`references/rules.md`
+This order follows the logic of GRADE and the Oxford CEBM levels (`references/method-standards.md` / `references/knowledge.md`
 R1, R2): randomized evidence starts higher than observational evidence; case series and
 expert opinion sit lowest; and a level can move down for risk of bias, inconsistency,
 indirectness, imprecision or publication bias. Do not assign a GRADE certainty rating
@@ -59,7 +59,7 @@ the check. A URL alone returns "not checked"; say exactly that. "Not checked" is
 "clear".
 
 Without VERIFY: ask whether the person has checked the journal page and a retraction
-database (`references/rules.md` R6), and write "retraction and correction status not
+database (`references/method-standards.md` / `references/knowledge.md` R6), and write "retraction and correction status not
 checked". Never say a paper "has not been retracted" without a check.
 
 What the notices mean for the person:
@@ -114,7 +114,7 @@ and currency is "not checked" unless the person supplies a dated check. Label th
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

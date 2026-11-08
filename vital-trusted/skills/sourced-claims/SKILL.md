@@ -94,9 +94,9 @@ it (`citation-and-record`). Until then, say "source not graded with a tool" (TR-
 
 - When drafting: the draft with sources shown in short form and gaps inline, then a short
   note only if something is missing or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/source-note.md`,
-  sized to the stakes. For references, use `assets/reference-list.md`.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+- When fixing: the fixed text, then a note in the format of `templates/source-note.md`,
+  sized to the stakes. For references, use `templates/reference-list.md`.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -106,12 +106,9 @@ it (`citation-and-record`). Until then, say "source not graded with a tool" (TR-
 | `tasks/every-claim-sourced.md` | Which statements need a source; guard, repair, check | That task runs |
 | `tasks/source-type-fit.md` | What each kind of source can and cannot carry, by audience | That task runs |
 | `tasks/specific-citations.md` | What a findable citation contains; "add references" requests | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before handing off or scanning |
 | `scripts/find_source_cues.py` | Lists vague attributions, superlatives, undated "current" and weak citations in a text | Repairing a longer draft |
-| `assets/check-line.md`, `assets/source-note.md`, `assets/reference-list.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/source-note.md`, `templates/reference-list.md` | Output formats | Building the answer |
 | `examples/brand-deck.md`, `examples/add-references.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

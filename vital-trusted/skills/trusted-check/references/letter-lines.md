@@ -5,7 +5,7 @@ so the summary can be assembled the same way whichever skills ran. Lines go to
 `trusted-check` only. They are never appended to a reply the person reads directly.
 
 This file holds the grammar every line follows. The exact counts for each skill live in
-that skill's own `assets/check-line.md`, which is the source of truth: `trusted-check`
+that skill's own `templates/check-line.md`, which is the source of truth: `trusted-check`
 reads the line shapes there, so the two can never drift apart. A skill that changes its
 counts changes its own `check-line.md`; nothing here needs editing.
 
@@ -43,31 +43,31 @@ All skills may add up to three notes per line, including `grounded-statements`.
 
 ## Build skills
 
-Read each skill's `assets/check-line.md` for its exact lines.
+Read each skill's `templates/check-line.md` for its exact lines.
 
 | Letter | Skill | Line shapes |
 |---|---|---|
-| Tangible | `substance-and-usefulness` | `substance-and-usefulness/assets/check-line.md` |
-| Tangible | `fit-for-reader` | `fit-for-reader/assets/check-line.md` |
-| Rule-compliant | `claims-and-label` | `claims-and-label/assets/check-line.md` |
-| Rule-compliant | `market-rules-and-data` | `market-rules-and-data/assets/check-line.md` |
-| Unbiased | `balanced-evidence` | `balanced-evidence/assets/check-line.md` |
-| Unbiased | `honest-framing` | `honest-framing/assets/check-line.md` |
-| Safe | `patient-safety` | `patient-safety/assets/check-line.md` |
-| True | `grounded-statements` | `grounded-statements/assets/check-line.md` |
-| True | `sourced-claims` | `sourced-claims/assets/check-line.md` |
-| Ethical | `responsible-inputs` | `responsible-inputs/assets/check-line.md` |
-| Ethical | `responsible-use` | `responsible-use/assets/check-line.md` |
-| Defensible | `work-record` | `work-record/assets/check-line.md` |
+| Tangible | `substance-and-usefulness` | `substance-and-usefulness/templates/check-line.md` |
+| Tangible | `fit-for-reader` | `fit-for-reader/templates/check-line.md` |
+| Rule-compliant | `claims-and-label` | `claims-and-label/templates/check-line.md` |
+| Rule-compliant | `market-rules-and-data` | `market-rules-and-data/templates/check-line.md` |
+| Unbiased | `balanced-evidence` | `balanced-evidence/templates/check-line.md` |
+| Unbiased | `honest-framing` | `honest-framing/templates/check-line.md` |
+| Safe | `patient-safety` | `patient-safety/templates/check-line.md` |
+| True | `grounded-statements` | `grounded-statements/templates/check-line.md` |
+| True | `sourced-claims` | `sourced-claims/templates/check-line.md` |
+| Ethical | `responsible-inputs` | `responsible-inputs/templates/check-line.md` |
+| Ethical | `responsible-use` | `responsible-use/templates/check-line.md` |
+| Defensible | `work-record` | `work-record/templates/check-line.md` |
 
 ## Prove skills (when VERIFY is connected, or by hand marked "not tool-checked")
 
 | Skill | What its lines carry | Line shapes |
 |---|---|---|
-| `claim-assessment` | Support for each claim against its passage | `claim-assessment/assets/check-line.md` |
-| `source-assessment` | What each source can carry, its score and currency | `source-assessment/assets/check-line.md` |
-| `confidence-scoring` | The faithfulness line and the VERIFY card | `confidence-scoring/assets/check-line.md` |
-| `citation-and-record` | Reference lines and the record, with a named clearer or "uncleared draft" | `citation-and-record/assets/check-line.md` |
+| `claim-assessment` | Support for each claim against its passage | `claim-assessment/templates/check-line.md` |
+| `source-assessment` | What each source can carry, its score and currency | `source-assessment/templates/check-line.md` |
+| `confidence-scoring` | The faithfulness line and the VERIFY card | `confidence-scoring/templates/check-line.md` |
+| `citation-and-record` | Reference lines and the record, with a named clearer or "uncleared draft" | `citation-and-record/templates/check-line.md` |
 
 ## Who prints what under the reference list
 

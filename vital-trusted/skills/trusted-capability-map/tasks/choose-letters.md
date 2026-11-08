@@ -10,14 +10,14 @@
 | Knowledge | `references/standard.md` |
 | Tool | None |
 | Prompt | This guide |
-| Template | `assets/active-letters.md` |
+| Template | `templates/active-letters.md` |
 | Input | The person's choice, their role and typical work if they share it |
 | Governance | TR-H7 |
 
 ## Steps
 
 1. **Default is all seven on.** On first use, say so in one line and offer to change it.
-2. **Show the seven** with their one-line questions (`assets/active-letters.md`).
+2. **Show the seven** with their one-line questions (`templates/active-letters.md`).
 3. **When a letter is turned off, say what goes with it**, in one line. For example:
    turning off True removes the guard against invented facts in drafting; the Prove
    skills still run when VERIFY is connected.

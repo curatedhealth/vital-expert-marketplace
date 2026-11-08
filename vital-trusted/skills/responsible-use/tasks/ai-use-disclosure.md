@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find who could expect disclosure (policy, venue, law, audience), ask what applies, draft plain wording from what actually happened |
 | Skill | TR-6.2.2 |
-| Knowledge | `references/rules.md` (U0, U2, U3, U6, U7, U8), `references/patterns.md` (D1–D6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U2, U3, U6, U7, U8), `references/failure-modes.md` / `references/knowledge.md` (D1–D6) |
 | Tool | None. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/use-note.md` (disclosure part), `assets/check-line.md` |
+| Template | `templates/use-note.md` (disclosure part), `templates/check-line.md` |
 | Input | The work, who receives it, the venue, the context card `AI use policy` line, the facts of what the AI did (from `work-record` or the person) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11, `references/governance.md` |
 
@@ -72,7 +72,7 @@ reviewed and edited the content and is responsible for it.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

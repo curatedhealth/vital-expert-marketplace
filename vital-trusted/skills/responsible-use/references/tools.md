@@ -25,7 +25,7 @@ evidence-gap sentence states a fact from a source ("the trial included 9% of peo
 ### `scripts/scan_language.py`
 
 Lists phrases that may stigmatize, blame or define people by a condition, with the line,
-context, a suggestion and the rule id the term comes from in `references/rules.md`.
+context, a suggestion and the rule id the term comes from in `references/method-standards.md` / `references/knowledge.md`.
 Terms tagged CHECK are good practice not yet confirmed against a primary document.
 
 ```

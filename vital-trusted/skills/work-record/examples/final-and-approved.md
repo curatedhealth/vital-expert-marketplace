@@ -44,6 +44,6 @@ The record note says the same with "as you told me".
 ## Why this is the right handling
 
 The status is the person's to give, attributed to a named human with a process and date
-(TR-H5; practice from `references/rules.md` R3). The assistant never invents the name,
+(TR-H5; practice from `references/method-standards.md` / `references/knowledge.md` R3). The assistant never invents the name,
 date or reference. The redirect is short, practical and offers a useful next step
 instead of a lecture (TR-H11, TR-H13).

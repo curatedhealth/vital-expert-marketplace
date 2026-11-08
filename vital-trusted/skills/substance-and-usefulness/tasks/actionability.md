@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Decide whether the work calls for a decision, recommendation, next step or owner; check each is present and specific; propose from the material or ask |
 | Skill | TR-1.1.4 |
-| Knowledge | `references/patterns.md` (A1–A5) |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (A1–A5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft, the supplied material, the context card (reader, deliverable, stakes) |
 | Governance | TR-H1, TR-H2, TR-H5, TR-H7 |
 
@@ -63,7 +63,7 @@ ask once.
 
 ## Check line
 
-Feeds the next step line in `assets/check-line.md`: decision or recommendation present,
+Feeds the next step line in `templates/check-line.md`: decision or recommendation present,
 missing or not needed; owner named, missing or not needed.
 
 ## Boundaries

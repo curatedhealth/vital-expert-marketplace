@@ -7,10 +7,10 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Read the piece as the patient would; remove advice, false reassurance and scare framing; make sure there is always a route to a doctor, nurse or pharmacist |
 | Skill | TR-4.1.2 |
-| Knowledge | `references/rules.md` (S10, S13 to S15), `references/patterns.md` (L1 to L9) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10, S13 to S15), `references/failure-modes.md` / `references/knowledge.md` (L1 to L9) |
 | Tool | `scripts/scan_safety_mentions.py --patient` where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/repair-note.md`, `assets/check-line.md` |
+| Template | `templates/repair-note.md`, `templates/check-line.md` |
 | Input | The patient-facing draft (leaflet, web page, app text, social reply, support program script, email to a patient), the supplied patient leaflet or label, the market |
 | Governance | TR-H6, TR-H1, TR-H11, TR-H13 |
 
@@ -56,7 +56,7 @@ letter. When unsure whether the public will see it, ask once.
    leaflet (send to `tasks/clinical-safety-statements.md`).
 3. **Fix:** remove or replace advice with "ask your doctor or pharmacist"; replace
    reassurance with the leaflet's wording; calm the framing; add the route line.
-4. **Note each change** in `assets/repair-note.md`. Patient material always goes to the
+4. **Note each change** in `templates/repair-note.md`. Patient material always goes to the
    company's patient material review and promotional review process next (TR-H11).
 
 ## Replies to the public about a side effect
@@ -76,7 +76,7 @@ an email), Part B runs first (`tasks/side-effect-flag.md`). The reply:
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

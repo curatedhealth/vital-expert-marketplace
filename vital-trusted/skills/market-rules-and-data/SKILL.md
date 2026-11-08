@@ -67,7 +67,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **Ask the market, do not assume it (TR-H7).** When the market is unknown and the work
   leaves the company, ask before drafting. Never apply one country's rules to another.
 - **Rules from primary sources, with their scope (TR-H8).** Use only the rules in
-  `references/rules.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
+  `references/method-standards.md` / `references/knowledge.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
   described as usual practice, never as a requirement.
 - **Never invent a statement, code or date (TR-H1, TR-H2).** Job codes, dates of
   preparation, prescribing information text, reporting addresses and approval status
@@ -99,13 +99,13 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 
 - When drafting: the draft with market-specific statements as visible placeholders
   where the person must supply them, personal details left out, then the short or full
-  note in `assets/market-note.md`.
+  note in `templates/market-note.md`.
 - When fixing: the fixed text, then the note, sized to the stakes, with the list of
-  expected statements in `assets/statements-list.md` when the material leaves the
+  expected statements in `templates/statements-list.md` when the material leaves the
   company.
 - When personal details were in the material: the privacy line from
-  `assets/privacy-note.md`, without repeating them.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  `templates/privacy-note.md`, without repeating them.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -115,12 +115,9 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 | `tasks/jurisdiction.md` | Guard, repair and check for market fit and audience reach | That task runs |
 | `tasks/required-statements.md` | Guard, repair and check for statements a market expects | That task runs |
 | `tasks/privacy-in-output.md` | Guard, repair and check for personal details in the output | That task runs |
-| `references/rules.md` | Primary rules by jurisdiction, with dates, scope and status | Before naming any market rule |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the cue-scan script | Before scanning or handing off |
 | `scripts/scan_output.py` | Cue scan for expected statements and personal details | Checking a draft where code can run |
-| `assets/market-note.md`, `assets/statements-list.md`, `assets/privacy-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/market-note.md`, `templates/statements-list.md`, `templates/privacy-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-follow-up-patient.md`, `examples/eu-deck-us-wording.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

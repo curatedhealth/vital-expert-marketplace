@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find whose name the work goes out under and what that name claims; keep AI off the byline; turn ghostwriting into acknowledged support the named person makes their own |
 | Skill | TR-6.2.3 |
-| Knowledge | `references/rules.md` (U1–U5), `references/patterns.md` (A1–A6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U1–U5), `references/failure-modes.md` / `references/knowledge.md` (A1–A6) |
 | Tool | None. Companion slot: future publications or AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/use-note.md` (authorship part), `assets/check-line.md` |
+| Template | `templates/use-note.md` (authorship part), `templates/check-line.md` |
 | Input | The work, the named author or signer, who actually drafted it, the venue, the company's role and funding as stated |
 | Governance | TR-H1, TR-H3, TR-H5, TR-H11, `references/governance.md` |
 
@@ -61,7 +61,7 @@
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

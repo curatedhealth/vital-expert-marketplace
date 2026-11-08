@@ -10,7 +10,7 @@
 | Knowledge | `references/tools.md`, `references/letter-lines.md` (Prove lines) |
 | Tool | VERIFY, through `source-assessment`, `claim-assessment`, `confidence-scoring` and `citation-and-record`. This skill calls no VERIFY tool itself |
 | Prompt | This guide |
-| Template | Prove lines in `references/letter-lines.md`; their place in `assets/check-output-full.md` |
+| Template | Prove lines in `references/letter-lines.md`; their place in `templates/check-output-full.md` |
 | Input | The finished draft, the True items found in TR-0.3.1, the sources the person supplied, the reader and purpose, the reviewer's name if given |
 | Governance | TR-H4, TR-H5, `references/governance.md` |
 

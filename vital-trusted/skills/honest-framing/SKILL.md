@@ -59,7 +59,7 @@ stakes). Depth follows who will read the work (TR-H12):
   and point to the internal process the work goes through next (TR-H11).
 
 If it is unclear who will read it, ask once. The market matters only for which public
-rules explain a change (`references/rules.md`); the habits apply everywhere.
+rules explain a change (`references/method-standards.md` / `references/knowledge.md`); the habits apply everywhere.
 
 ## Rules that hold for every task
 
@@ -100,12 +100,12 @@ is described as tool-checked (TR-H4).
 
 - When drafting: the draft framed at the right size, with gaps inline, then a short note
   only if something was left out or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/framing-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/framing-note.md`,
   sized to the stakes. For each chart that changed or needs changing, a plain
-  description in the format of `assets/chart-description.md`.
-- For a disclosure that was missing: wording in the format of `assets/disclosure-line.md`
+  description in the format of `templates/chart-description.md`.
+- For a disclosure that was missing: wording in the format of `templates/disclosure-line.md`
   built only from what the material states.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -115,14 +115,11 @@ is described as tool-checked (TR-H4).
 | `tasks/uncertainty-size.md` | Guard, repair and check for certainty words, intervals, limitations and hedging | That task runs |
 | `tasks/numbers-and-charts.md` | Guard, repair and check for framing of figures and charts | That task runs |
 | `tasks/conflict-disclosure.md` | Guard, repair and check for sponsors, funding and ties | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a change was made |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries with neighbor skills, stop rules, never-claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and scripts | Before computing |
 | `scripts/chart_scale.py` | How much a truncated axis or scaled pictogram enlarges a difference; cumulative into per-period | A chart or pictogram is involved |
 | `scripts/find_framing_cues.py` | Lists certainty, hedging, minimizing and independence words for review | Repairing a longer draft |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/check-line.md`, `assets/framing-note.md`, `assets/chart-description.md`, `assets/disclosure-line.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md`, `templates/disclosure-line.md` | Output formats | Building the answer |
 | `examples/deck-proves-superiority.md`, `examples/overhedged-summary.md` | Worked cases: a sales deck that overclaims, a summary that over-hedges | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

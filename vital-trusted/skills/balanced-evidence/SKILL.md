@@ -102,10 +102,10 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 - When drafting: the draft with risks, limitations and scope stated inline, and gaps
   where material is missing, then a short note only if something was left out or needs
   the person.
-- When fixing: the fixed text, then a note in the format of `assets/balance-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/balance-note.md`,
   sized to the stakes. For high stakes, include the evidence inventory
-  (`assets/evidence-inventory.md`).
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  (`templates/evidence-inventory.md`).
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -114,12 +114,9 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 |---|---|---|
 | `tasks/fair-balance.md` | Benefits with their risks, discontinuations and limitations; reassuring words | That task runs |
 | `tasks/selective-reporting.md` | Fair choice of studies, endpoints, subgroups and time points | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
-| `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

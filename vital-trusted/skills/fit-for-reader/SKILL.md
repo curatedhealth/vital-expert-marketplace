@@ -117,10 +117,10 @@ in full on any host. Two scripts help where code can run. Details in
 - **When drafting:** the text in the reader's words and the format asked for, gaps
   inline, then a short note only if something is missing or needs the person.
 - **When fixing:** the revised text, then a note in the format of
-  `assets/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
-- **When translating:** the translation, then `assets/translation-note.md`: terms left
+  `templates/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
+- **When translating:** the translation, then `templates/translation-note.md`: terms left
   for a qualified translator or approved wording, and any number or unit question.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   appended to a reply the person reads directly.
 
 ## Files in this skill
@@ -131,14 +131,11 @@ in full on any host. Two scripts help where code can run. Details in
 | `tasks/deliverable-fit.md` | Guard, repair and check for format, length and structure | That task runs |
 | `tasks/translation-fidelity.md` | Guard, repair and check for translations | That task runs |
 | `references/readers.md` | The ten readers: what each decides, vocabulary, depth, watch-outs | Any audience work |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | Gap classes in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scripts | Before scanning or comparing |
 | `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
 | `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/reader-card.md`, `assets/repair-note.md`, `assets/translation-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/reader-card.md`, `templates/repair-note.md`, `templates/translation-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/patient-letter-clinician-language.md`, `examples/payer-and-internal-same-finding.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must redirect | Testing |

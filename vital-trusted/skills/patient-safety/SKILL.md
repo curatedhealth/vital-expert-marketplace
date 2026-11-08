@@ -98,12 +98,12 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 ## What to return
 
 - **When Part B finds something:** the safety flag first, in the format of
-  `assets/safety-flag.md`, then the work.
+  `templates/safety-flag.md`, then the work.
 - **When drafting with safety content:** the draft with label quotes and gaps inline,
-  and, where asked, the table in `assets/label-statements.md`.
-- **When fixing:** the fixed text, then a note in the format of `assets/repair-note.md`,
+  and, where asked, the table in `templates/label-statements.md`.
+- **When fixing:** the fixed text, then a note in the format of `templates/repair-note.md`,
   sized to the stakes.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   append them to a reply the person reads directly.
 
 ## Files in this skill
@@ -113,14 +113,11 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 | `tasks/clinical-safety-statements.md` | Guard, repair and check for safety statements against the label | Part A, statements |
 | `tasks/patient-safety-language.md` | Guard, repair and check for patient-facing wording | Part A, patient material |
 | `tasks/side-effect-flag.md` | How to spot and flag a possible safety report | Part B, every time |
-| `references/rules.md` | Primary sources, dates, scope and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
 | `references/tools.md` | Companion slots and the two scripts | Before computing or handing off |
 | `scripts/scan_safety_mentions.py` | Finds words that may signal a safety report, or patient-wording problems | A backstop while reading inputs or patient drafts |
 | `scripts/label_match.py` | Compares safety sentences in a draft with the supplied label text | Checking statements against the label |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/*.md` | Safety flag, label table, repair note, check line | Building the answer |
+| `templates/*.md` | Safety flag, label table, repair note, check line | Building the answer |
 | `examples/doctor-email-side-effect.md`, `examples/social-comment-reply.md` | Worked cases from everyday work | Shaping the answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |

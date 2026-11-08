@@ -114,9 +114,9 @@ host. Details in `references/tools.md`.
 - **When drafting:** the draft with gaps inline, then a short note only if something is
   missing or needs the person's decision.
 - **When fixing:** the revised text, then a note in the format of
-  `assets/repair-note.md`, sized to the stakes. Every cut of the person's own content is
+  `templates/repair-note.md`, sized to the stakes. Every cut of the person's own content is
   listed, never silent.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -128,12 +128,9 @@ host. Details in `references/tools.md`.
 | `tasks/so-what.md` | Guard, repair and check for the implication | That task runs |
 | `tasks/actionability.md` | Guard, repair and check for decision, next step and owner | That task runs |
 | `tasks/structure-integrity.md` | Guard, repair and check for frameworks and headings | That task runs |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/rules.md` | Sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scan script | Before scanning |
 | `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
-| `assets/repair-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |

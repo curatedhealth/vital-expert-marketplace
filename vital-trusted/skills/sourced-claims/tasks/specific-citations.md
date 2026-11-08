@@ -7,10 +7,10 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Build each citation from the supplied source only; mark missing fields; never fill from memory |
 | Skill | TR-5.2.3 |
-| Knowledge | `references/rules.md` (R3, R4, R7, R10), `references/patterns.md` (C1–C7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R10), `references/failure-modes.md` / `references/knowledge.md` (C1–C7) |
 | Tool | `scripts/find_source_cues.py` flags vague citations. Companion slot: VERIFY `build_citation` through `citation-and-record` |
 | Prompt | This guide |
-| Template | `assets/reference-list.md`, `assets/check-line.md` |
+| Template | `templates/reference-list.md`, `templates/check-line.md` |
 | Input | The draft, the supplied sources (documents, links, exports) |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H11 |
 
@@ -72,7 +72,7 @@ This request is common and is where invented references are most likely.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

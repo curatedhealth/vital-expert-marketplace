@@ -10,7 +10,7 @@
 | Knowledge | `references/tools.md` |
 | Tool | None called. Detects whether VERIFY tools are present |
 | Prompt | This guide |
-| Template | `assets/companion-answer.md` |
+| Template | `templates/companion-answer.md` |
 | Input | The person's question; the assistant's current tool list |
 | Governance | TR-H4, `references/governance.md` |
 

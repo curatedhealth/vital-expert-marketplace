@@ -54,12 +54,12 @@ and asks for any that are missing and would change the answer (TR-H7):
 1. **The label or intended purpose**, for the market the piece is for: the summary of
    product characteristics, prescribing information, patient leaflet, or a device's
    intended-purpose statement. If it was not supplied, ask for it
-   (`assets/label-request.md`). Do not work from memory of what the product is for.
+   (`templates/label-request.md`). Do not work from memory of what the product is for.
 2. **The reader:** doctor or other health professional, payer, patient, public, or
    internal.
 3. **The use, as the person states it:** promotional, scientific exchange, a reply to
    an unsolicited question, disease information, or internal only.
-4. **The market**, when the piece leaves the company. Rules differ (`references/rules.md`).
+4. **The market**, when the piece leaves the company. Rules differ (`references/method-standards.md` / `references/knowledge.md`).
 
 If the person wants to proceed without the label, draft with every product statement
 marked as a gap and say so in one line.
@@ -128,11 +128,11 @@ indication is approved there. A future label-source companion would fill those s
 
 - When drafting: the draft with gaps inline, then a short note only if something was
   kept out or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/claims-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/claims-note.md`,
   sized to the stakes.
 - For a reply to an unsolicited question: the reply in the shape of
-  `assets/unsolicited-reply.md`.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  `templates/unsolicited-reply.md`.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -142,12 +142,9 @@ indication is approved there. A future label-source companion would fill those s
 | `tasks/label-and-intended-use.md` | Guard, repair and check against the label or intended purpose | That task runs |
 | `tasks/promotional-boundary.md` | Scientific exchange, promotion, replies to unsolicited questions, audience | That task runs |
 | `tasks/comparative-claims.md` | Comparisons, superlatives, "first" and "only", disparagement | That task runs |
-| `references/rules.md` | Primary rules with dates, scope and status, by jurisdiction | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
-| `assets/check-line.md`, `assets/claims-note.md`, `assets/label-request.md`, `assets/unsolicited-reply.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |
 | `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

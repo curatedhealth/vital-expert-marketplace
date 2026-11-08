@@ -7,10 +7,10 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | List every figure and chart, check how each is framed against the material, describe what a plain version shows, then fix or mark |
 | Skill | TR-3.2.2 |
-| Knowledge | `references/rules.md` (R1–R4, R5, R6), `references/patterns.md` (NF1–NF7, CH1–CH8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R4, R5, R6), `references/failure-modes.md` / `references/knowledge.md` (NF1–NF7, CH1–CH8) |
 | Tool | `scripts/chart_scale.py`; `../grounded-statements/scripts/risk_metrics.py` for relative and absolute effects. No companion yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/framing-note.md`, `assets/chart-description.md` |
+| Template | `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md` |
 | Input | The draft (text, chart, chart description or slide), the supplied data behind it, the context card |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H13 |
 
@@ -57,7 +57,7 @@ framing differs from another figure in the same piece (below, step 3).
    - an icon array that shows both the people affected and the people studied.
 8. **Describe what a plain version shows.** When a chart is changed or must be
    changed, write one or two plain sentences on what the same data look like with a
-   zero baseline, the full period and both arms (`assets/chart-description.md`). This
+   zero baseline, the full period and both arms (`templates/chart-description.md`). This
    is a description, not a redraw; the person or their agency redraws it.
 
 ## Repair (existing draft)
@@ -81,7 +81,7 @@ framing differs from another figure in the same piece (below, step 3).
 
 ## Check line
 
-See `assets/check-line.md` (framing line).
+See `templates/check-line.md` (framing line).
 
 ## Boundaries
 

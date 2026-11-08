@@ -1,7 +1,7 @@
 # The readers
 
 Working profiles for the ten readers daily users write for most. They are a starting
-point drawn from practice, not rules (`references/rules.md` holds the rules). The person's
+point drawn from practice, not rules (`references/method-standards.md` / `references/knowledge.md` holds the rules). The person's
 own description of their reader always replaces them (TR-H7). What each reader "needs to
 decide" is the question the work should answer first.
 

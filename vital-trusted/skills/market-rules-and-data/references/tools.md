@@ -31,7 +31,7 @@ cat draft.txt | python scripts/scan_output.py - --data --small-count 10
 ```
 
 `--statements` lists, for the market given (UK, EU, CH, US or unknown), the elements
-usually expected from `references/rules.md`, and for each the lines where a cue word was
+usually expected from `references/method-standards.md` / `references/knowledge.md`, and for each the lines where a cue word was
 found or "no cue found". `--data` lists formats that can point to a person (a title
 followed by a name, dates, ages, record-like numbers, email addresses, phone numbers)
 and small counts next to words like "patients" or "cases", masked.

@@ -10,10 +10,10 @@ Draft unless a named person cleared it. Never "approved", "final", "validated" o
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Find every status word in the work; trace each to a named person and a stated event; keep draft where none; write the status line |
 | Skill | TR-7.1.3 |
-| Knowledge | `references/rules.md` (R3, R1), `references/patterns.md` (S1–S7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R1), `references/failure-modes.md` / `references/knowledge.md` (S1–S7) |
 | Tool | `scripts/status_words.py` where code can run. Companion slot: VERIFY `build_record` through `citation-and-record`, which needs a named clearer |
 | Prompt | This guide |
-| Template | `assets/status-line.md`, `assets/check-line.md` |
+| Template | `templates/status-line.md`, `templates/check-line.md` |
 | Input | The deliverable, the person's request, what the person says about review and approval |
 | Governance | TR-H3, TR-H5, TR-H11 |
 
@@ -30,7 +30,7 @@ Draft unless a named person cleared it. Never "approved", "final", "validated" o
 A status is the person's statement about an event, attributed to them. The assistant
 never is the source of a status above "Draft". This follows the practice that a
 signature carries a name, a date and its meaning (review, approval, responsibility,
-authorship), so a reader knows who stands behind what (`references/rules.md` R3).
+authorship), so a reader knows who stands behind what (`references/method-standards.md` / `references/knowledge.md` R3).
 
 ## Guard (while drafting)
 
@@ -71,7 +71,7 @@ authorship), so a reader knows who stands behind what (`references/rules.md` R3)
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

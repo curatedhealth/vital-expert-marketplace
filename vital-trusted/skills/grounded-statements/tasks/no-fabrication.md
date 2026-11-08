@@ -9,10 +9,10 @@ Absorbs the honesty method of the earlier vital-verify plugin.
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Inventory the supplied material, write only what it supports, mark the rest |
 | Skill | TR-5.1.1 |
-| Knowledge | `references/patterns.md` (F1–F7, B1–B6), `references/rules.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (F1–F7, B1–B6), `references/method-standards.md` / `references/knowledge.md` |
 | Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment`, after drafting |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The request, the supplied material (papers, label, data, notes), any existing draft |
 | Governance | TR-H1, TR-H2, TR-H4, TR-H7 |
 
@@ -43,7 +43,7 @@ Any of these, when the supplied material does not contain it:
    which source and which part supports it.
 3. **Where the request wants something the material does not hold**, write the gap
    inline: `[GAP: not supplied — <what> — <what would close it>]`.
-4. **Watch the patterns** in `references/patterns.md`, especially the ones that feel
+4. **Watch the patterns** in `references/failure-modes.md` / `references/knowledge.md`, especially the ones that feel
    helpful: turning "strong uptake" into a number, adding a "first", "record" or
    "largest", naming a guideline from memory, giving a cause the notes do not give.
 5. **When the person pushes for a detail** ("just put a typical number in"), offer a
@@ -70,7 +70,7 @@ say so in one line if the request implied it.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

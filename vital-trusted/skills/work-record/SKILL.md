@@ -104,11 +104,11 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 ## What to return
 
 - **Record note:** after the deliverable, never inside it, in the format of
-  `assets/record-note.md`, sized to the stakes. Where it goes in the final document (an
+  `templates/record-note.md`, sized to the stakes. Where it goes in the final document (an
   appendix slide, a footnote, an email line) is the person's choice.
-- **Status:** the status line from `assets/status-line.md`, only where a status is
+- **Status:** the status line from `templates/status-line.md`, only where a status is
   needed or asked for.
-- **To trusted-check only:** one line in the format of `assets/check-line.md`. Never
+- **To trusted-check only:** one line in the format of `templates/check-line.md`. Never
   append it to a reply the person reads directly.
 
 ## Files in this skill
@@ -118,12 +118,9 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 | `tasks/record-of-making.md` | Sources, tools and AI used | That task runs |
 | `tasks/assumptions-and-open-items.md` | Assumptions, gaps, pending decisions and owners | That task runs |
 | `tasks/honest-status.md` | Draft, reviewed, cleared, final, and when each may be written | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in a record | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
 | `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
-| `assets/record-note.md`, `assets/status-line.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |

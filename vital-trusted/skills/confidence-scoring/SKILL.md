@@ -63,7 +63,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **The formula is fixed.** (supported + 0.5 × partial) ÷ (supported + partial +
   unsupported + contradicted + unverifiable), as a whole percent. Statements that are
   not factual (out of scope) are counted on the card and left out of the percent. Show
-  the arithmetic. Details in `references/rules.md`.
+  the arithmetic. Details in `references/method-standards.md` / `references/knowledge.md`.
 - **No threshold, no verdict (TR-H3).** No percent means pass, fail, safe, good enough
   or ready to send. Never write "high confidence means safe to send". The open items
   and a named person decide (TR-H5).
@@ -89,10 +89,10 @@ and say what VERIFY would add (`references/tools.md`).
 ## What to return
 
 - Directly to the person: the source score lines under each reference, then the
-  confidence line, then the card, in the formats of `assets/confidence-line.md` and
-  `assets/verify-card.md`, sized to the stakes. A standalone card ends with the closing
+  confidence line, then the card, in the formats of `templates/confidence-line.md` and
+  `templates/verify-card.md`, sized to the stakes. A standalone card ends with the closing
   statement.
-- To `trusted-check` only: one line in the format of `assets/check-line.md`. Never
+- To `trusted-check` only: one line in the format of `templates/check-line.md`. Never
   append check lines to a reply the person reads directly.
 
 ## Files in this skill
@@ -101,13 +101,10 @@ and say what VERIFY would add (`references/tools.md`).
 |---|---|---|
 | `tasks/faithfulness-and-source-scores.md` | Steps for the percent and the score lines, and what each means | That task runs |
 | `tasks/verify-card.md` | Steps for counts, open items and the one recommendation | That task runs |
-| `references/rules.md` | The formula, status meanings and score axes, with source and status | Computing or explaining |
-| `references/patterns.md` | Common misuses of the number, with before and after | Before writing the line or card |
-| `references/gap-rules.md` | Gap classes as they apply here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | What VERIFY returns that this skill reads; the script | Before computing |
 | `scripts/faithfulness.py` | Percent and card counts from counts or a JSON list of statuses | Any computation |
 | `scripts/test_faithfulness.py` | Tests for the script | After changing the script |
-| `assets/confidence-line.md`, `assets/verify-card.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/confidence-line.md`, `templates/verify-card.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md` | A worked case on a payer value story | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones to decline or redirect | Testing |

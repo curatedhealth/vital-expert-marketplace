@@ -95,10 +95,10 @@ passage — connect VERIFY]`.
 
 ## What to return
 
-- To the person: the result in the format of `assets/support-result.md`, sized to the
+- To the person: the result in the format of `templates/support-result.md`, sized to the
   stakes, with the revised text where anything changed.
-- When only Part A ran: the claim list in `assets/claim-list.md`.
-- To `trusted-check` only: one line in `assets/check-line.md`. Never append it to a
+- When only Part A ran: the claim list in `templates/claim-list.md`.
+- To `trusted-check` only: one line in `templates/check-line.md`. Never append it to a
   direct reply.
 - Status counts go to `confidence-scoring` for the confidence figure. This skill does not
   compute it.
@@ -109,12 +109,9 @@ passage — connect VERIFY]`.
 |---|---|---|
 | `tasks/break-into-claims.md` | Part A: what one claim is, priority, pairing with passages | Every fact-check |
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
-| `references/rules.md` | Primary rules and the VERIFY contract, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Both tasks |
-| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; the manual script | Before calling a tool |
 | `scripts/split_claims.py` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
-| `assets/claim-list.md`, `assets/support-result.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/claim-list.md`, `templates/support-result.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/value-story-registry.md` | Worked case: value story against a registry summary | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

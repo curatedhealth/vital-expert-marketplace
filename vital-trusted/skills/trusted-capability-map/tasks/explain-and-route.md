@@ -10,7 +10,7 @@
 | Knowledge | `references/standard.md` (letters, boundaries, skill index) |
 | Tool | None. Companion slot: none needed |
 | Prompt | This guide |
-| Template | `assets/route-answer.md` |
+| Template | `templates/route-answer.md` |
 | Input | The person's question or request, and any draft they attached |
 | Governance | TR-H3, TR-H9, `references/governance.md` |
 
@@ -40,7 +40,7 @@
    request clearly spans two letters, and say which comes first.
 6. **Check the active letters.** If the skill belongs to a letter the person turned off,
    say so and ask whether to turn it back on.
-7. **Answer with `assets/route-answer.md`.**
+7. **Answer with `templates/route-answer.md`.**
 
 ## Checks before answering
 

@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Recognize whose work it is and what the request does with it, prefer summary over reproduction, point to licensing |
 | Skill | TR-6.1.2 |
-| Knowledge | `references/rules.md` (I9, I10, I12), `references/patterns.md` (P1–P7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I9, I10, I12), `references/failure-modes.md` / `references/knowledge.md` (P1–P7) |
 | Tool | `scripts/scan_inputs.py` (copyright and license markers) where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/input-note.md`, `assets/check-line.md` |
+| Template | `templates/input-note.md`, `templates/check-line.md` |
 | Input | The request, the material, where the result will go, any license terms the person supplies |
 | Governance | TR-H1, TR-H3, TR-H7, TR-H11, `references/governance.md` |
 
@@ -58,7 +58,7 @@
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

@@ -6,7 +6,7 @@
 |---|---|---|---|
 | Record of making | Write a formal record of the text, its sources, claims and findings, cleared by a named person, with exports | VERIFY `build_record`, through `citation-and-record` | The plain record note runs fully; it says "not a formal record" only if the person asked for one |
 | Assumptions and open items | Carry open findings into the formal record | VERIFY `build_record` (`findings`), through `citation-and-record` | Open items listed in the record note |
-| Honest status | Refuse a record with no human clearer | VERIFY `build_record` (`clearances`) | Status line from `assets/status-line.md`; "uncleared draft" when no name is given |
+| Honest status | Refuse a record with no human clearer | VERIFY `build_record` (`clearances`) | Status line from `templates/status-line.md`; "uncleared draft" when no name is given |
 
 A future MLR preparation companion (concept candidate, not a commitment) could fill the
 record and status slots by preparing material for the company's own review. No such

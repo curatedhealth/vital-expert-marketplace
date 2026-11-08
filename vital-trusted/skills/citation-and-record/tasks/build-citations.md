@@ -9,10 +9,10 @@ Absorbs the citation part of the earlier vital-verify record method.
 | Worker | Quality and compliance lead |
 | Workflow | List the sources, build one reference per source from its own details, name any missing detail, paste the lines with no caption |
 | Skill | TR-8.4.1 |
-| Knowledge | `references/rules.md` (R1, R2), `references/patterns.md` (C1–C5), `references/tools.md` |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2), `references/failure-modes.md` / `references/knowledge.md` (C1–C5), `references/tools.md` |
 | Tool | VERIFY `build_citation`, once per source. Without VERIFY: `scripts/plain_reference.py` or the same steps by hand |
 | Prompt | This guide |
-| Template | `assets/reference-list.md` |
+| Template | `templates/reference-list.md` |
 | Input | The finished text, the sources it cites with whatever details the person supplied, any source records returned by `source-assessment`, the style the person named (if any) |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H13 |
 
@@ -63,7 +63,7 @@ Absorbs the citation part of the earlier vital-verify record method.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

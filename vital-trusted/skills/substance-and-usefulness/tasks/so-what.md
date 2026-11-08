@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Name the reader's job, find sections that list facts with no implication, draw the implication from the material or ask |
 | Skill | TR-1.1.3 |
-| Knowledge | `references/patterns.md` (W1–W5) |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (W1–W5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft, the supplied material, the context card (reader, deliverable, stakes) |
 | Governance | TR-H1, TR-H2, TR-H5, TR-H6, TR-H7 |
 
@@ -48,7 +48,7 @@ work out the implication alone.
    job. If no implication follows from what is there, say so in the note rather than
    writing one.
 3. **Check the new sentence does not add a fact, cause or forecast** the material does
-   not hold (`references/patterns.md` W3, W4). If True is active, it is passed to
+   not hold (`references/failure-modes.md` / `references/knowledge.md` W3, W4). If True is active, it is passed to
    `grounded-statements` like any new sentence.
 4. **Move the "so what" to the top** of its section when the reader skims (board papers,
    slide headlines, email openings).
@@ -66,7 +66,7 @@ function that decides.
 
 ## Check line
 
-Counts feed the substance line in `assets/check-line.md`: sections with no "so what".
+Counts feed the substance line in `templates/check-line.md`: sections with no "so what".
 
 ## Boundaries
 

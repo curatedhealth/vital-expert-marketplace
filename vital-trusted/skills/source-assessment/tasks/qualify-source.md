@@ -9,10 +9,10 @@ Absorbs the source-grading method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Identify the source, name its kind, establish peer review, authors and funders, judge fit for the question and the reader, then hand over |
 | Skill | TR-8.2.1 |
-| Knowledge | `references/source-types.md`, `references/rules.md` (R3, R4, R7, R8), `references/patterns.md` (S1–S8, S13–S15) |
+| Knowledge | `references/source-types.md`, `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R8), `references/failure-modes.md` / `references/knowledge.md` (S1–S8, S13–S15) |
 | Tool | VERIFY `qualify_source`; `ingest_document` for a supplied PDF or internal document. `scripts/identify_source_id.py`, `scripts/print_source_score.py` where code runs |
 | Prompt | This guide |
-| Template | `assets/source-card.md`, `assets/verify-block.md`, `assets/check-line.md` |
+| Template | `templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` |
 | Input | The source (identifier, link, file or pasted text), the question it should answer, who will read the work, the claim it supports if known |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H7, TR-H11; stop rules in `references/governance.md` |
 
@@ -54,7 +54,7 @@ Never build an identifier from a title, and never complete a partial DOI from me
 - If the tool returns inadmissible, say so with the reason it gives. Where the reason
   is a failed fetch, say the fetch failed. Do not fill the missing title, publisher or
   date yourself, and do not grade the source by hand as if the tool had passed it.
-- Print the tool block (`assets/verify-block.md`): the reference, the source score
+- Print the tool block (`templates/verify-block.md`): the reference, the source score
   total and only the axes that have numbers. Where code runs, `scripts/print_source_score.py`
   does this from the tool's JSON.
 
@@ -117,7 +117,7 @@ acceptability (TR-H11).
 
 ### 7. Build the card and hand over
 
-Fill `assets/source-card.md` from steps 3 to 6. Then:
+Fill `templates/source-card.md` from steps 3 to 6. Then:
 
 - If the person wants to know how strong or current the evidence is, run
   `tasks/evidence-strength-and-currency.md`.
@@ -134,7 +134,7 @@ or supply the document]`. Never print a tier or a score.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

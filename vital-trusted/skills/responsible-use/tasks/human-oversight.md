@@ -7,10 +7,10 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Read who the work is for, set the review the stakes need, name who reads it next, never send or call it reviewed |
 | Skill | TR-6.2.1 |
-| Knowledge | `references/rules.md` (U0, U3, U6, U7), `references/patterns.md` (O1–O6, T1) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U3, U6, U7), `references/failure-modes.md` / `references/knowledge.md` (O1–O6, T1) |
 | Tool | None. Companion slot: future AI-policy or MLR-preparation companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/use-note.md` (review part), `assets/check-line.md` |
+| Template | `templates/use-note.md` (review part), `templates/check-line.md` |
 | Input | The draft, who it is for (context card `Reader`, `Stakes`, `Next process`), what the person says about review |
 | Governance | TR-H3, TR-H5, TR-H11, TR-H12, `references/governance.md` |
 
@@ -61,7 +61,7 @@ and congress material, press and social posts, agency briefs that carry claims.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

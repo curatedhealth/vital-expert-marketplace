@@ -20,13 +20,13 @@ Recorded from the VERIFY connector tool schemas. Anything beyond them is `[CHECK
 | `check_claim` | Arguments `claim` (object, required), `passage` (object: text and locator, quoted not paraphrased), `source` (object). "Returns a status and the deciding passage." "Never judges whether the claim is true." | The status counted here | `[CHECK]` the field name holding the status and its exact values |
 | `verify_text` | Arguments `text` (required), `sources`, `document_ids`. "One counted call. At most 60 findings." | Findings counted here; a text over 60 findings is split upstream, and counts from the parts are added | `[CHECK]` finding shape and status field |
 | `extract_claims` | Splits text of at most 20,000 characters into claims with offsets; "never decides whether a claim is supported". | Not used | — |
-| `qualify_source` | Returns "a source with a tier and a source_score"; `question` is passed "so relevance is scored". | The score total and its axes, printed under each reference | `[CHECK]` axis names and null behavior (`references/rules.md` C7) |
+| `qualify_source` | Returns "a source with a tier and a source_score"; `question` is passed "so relevance is scored". | The score total and its axes, printed under each reference | `[CHECK]` axis names and null behavior (`references/method-standards.md` / `references/knowledge.md` C7) |
 | `check_currency` | Reports retracted, corrected, superseded or withdrawn; "a URL alone returns notices ["not checked"]". | Whether the currency axis was filled | `[CHECK]` how the result enters `source_score` |
 | `build_citation` | Returns one formatted citation line. | The reference line the score sits under | — |
 | `build_record`, `build_evidence_table` | Record needs a named clearer; table only on request. | Not used here | — |
 
 Known limit from the connector instruction: a status is word overlap with the passage,
-not truth (`references/rules.md` C5).
+not truth (`references/method-standards.md` / `references/knowledge.md` C5).
 
 ## Script
 
@@ -50,7 +50,7 @@ Output: the confidence line with the arithmetic, the six counts in plain words, 
 number of open items and one default recommendation. With `--source method`, or when
 the denominator is zero, it prints "No confidence figure" and the reason.
 
-Rounding: half up (`references/rules.md` C2, `[CHECK]`).
+Rounding: half up (`references/method-standards.md` / `references/knowledge.md` C2, `[CHECK]`).
 
 Tests: `python3 scripts/test_faithfulness.py` (16 cases: out-of-scope exclusion,
 half-up rounding, zero denominator, method-only, JSON shapes, rejected input,

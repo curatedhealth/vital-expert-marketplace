@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Find each generic statement, ask what it would say if it were specific, fill from the material or ask |
 | Skill | TR-1.1.1 |
-| Knowledge | `references/patterns.md` (V1–V6, P1–P3), `references/rules.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (V1–V6, P1–P3), `references/method-standards.md` / `references/knowledge.md` |
 | Tool | `scripts/scan_fluff.py` (vague-word prompts) where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The request, the draft, the supplied material, the context card from `trusted-intake` |
 | Governance | TR-H1, TR-H2, TR-H7, TR-H9 |
 
@@ -42,7 +42,7 @@ what this reader needs to act.
 3. **Where the material does not hold the specific and the reader needs it**, write the
    gap where the specific would go: `[GAP: not supplied — owner for the access plan —
    name the person or function]`.
-4. **Do not reach for a plausible specific** (`references/patterns.md` P1–P3). A
+4. **Do not reach for a plausible specific** (`references/failure-modes.md` / `references/knowledge.md` P1–P3). A
    typical-looking number, a likely date or an obvious-seeming owner is invented content.
 5. **Group the questions.** When several specifics are missing, ask for them in one
    short list rather than one at a time.
@@ -71,7 +71,7 @@ existing text (a named group already mentioned elsewhere, a date already in the 
 
 ## Check line
 
-Counts feed the substance line in `assets/check-line.md`: statements too vague to act
+Counts feed the substance line in `templates/check-line.md`: statements too vague to act
 on.
 
 ## Boundaries

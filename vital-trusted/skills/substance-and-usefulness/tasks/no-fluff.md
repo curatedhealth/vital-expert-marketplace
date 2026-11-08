@@ -7,10 +7,10 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Find filler, buzzwords, padding, repetition and throat-clearing; cut or replace with what the sentence was trying to say |
 | Skill | TR-1.1.2 |
-| Knowledge | `references/patterns.md` (L1–L7) |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (L1–L7) |
 | Tool | `scripts/scan_fluff.py` where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft, the context card |
 | Governance | TR-H1, TR-H3, TR-H9 |
 
@@ -65,7 +65,7 @@ Ask: if this word were removed, would the reader lose information? If yes, keep 
 
 ## Check line
 
-Counts feed the substance line in `assets/check-line.md`: passages of filler or
+Counts feed the substance line in `templates/check-line.md`: passages of filler or
 repetition.
 
 ## Boundaries

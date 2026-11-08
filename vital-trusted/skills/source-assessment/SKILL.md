@@ -47,7 +47,7 @@ Depth follows who will read the work (TR-H12):
 - **Internal and quick** (a team email, a note to a colleague): one line per source
   (what it is, its date, the one thing it cannot carry).
 - **Leadership or cross-team** (board update, business review, competitor summary): a
-  short source card per source (`assets/source-card.md`, short form).
+  short source card per source (`../../templates/source-card.md`, short form).
 - **Leaving the company** (payer, doctor, patient, agency, public): the full source card
   for every source, both tasks, currency checked or marked "not checked", and a pointer
   to the review process the work goes through next (TR-H11).
@@ -72,7 +72,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **Ask for what changes the answer (TR-H7).** The question the source is meant to
   answer and who will read it. Without them, fit cannot be judged.
 - **Method from primary documents (TR-H8).** Evidence levels and peer review rules come
-  from `references/rules.md`; anything not confirmed there is described as good
+  from `references/method-standards.md` / `references/knowledge.md`; anything not confirmed there is described as good
   practice, never as a requirement.
 - **Plain language (TR-H13).** No rule ids, tier codes or gap syntax in what the person
   reads unless they ask. VERIFY's tier and score are shown with their plain meaning.
@@ -101,10 +101,10 @@ Currency without a tool: ask for the date and mark currency "not checked".
 
 ## What to return
 
-- To the person: one source card per source (`assets/source-card.md`), sized to the
+- To the person: one source card per source (`../../templates/source-card.md`), sized to the
   stakes, with "What it can carry" and "What it cannot carry" always present.
-- When VERIFY ran: the tool block in the card (`assets/verify-block.md`).
-- To `trusted-check` only: the lines in `assets/check-line.md`. Never append them to a
+- When VERIFY ran: the tool block in the card (`templates/verify-block.md`).
+- To `trusted-check` only: the lines in `templates/check-line.md`. Never append them to a
   direct reply.
 - On a check output for a reviewer, the closing statement from
   `references/governance.md`. Not on a quick answer.
@@ -116,12 +116,9 @@ Currency without a tool: ask for the date and mark currency "not checked".
 | `tasks/qualify-source.md` | Kind, peer review, authors and funders, fit; VERIFY qualify and ingest | That task runs |
 | `tasks/evidence-strength-and-currency.md` | Where the evidence sits, one study or many, retraction, superseded, date; VERIFY currency | That task runs |
 | `references/source-types.md` | Each kind of source: what it is, peer review, what it can and cannot carry | Naming a source and its reach |
-| `references/rules.md` | Primary documents behind the method (GRADE, Oxford CEBM, ICMJE, COPE, Crossref), with status | Explaining why |
-| `references/patterns.md` | Common failures with before and after | Every run |
-| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed, closing statement | Before output leaves |
 | `references/tools.md` | VERIFY calls: exact arguments, what comes back, pitfalls | Before any tool call |
-| `assets/source-card.md`, `assets/verify-block.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `../../templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `scripts/identify_source_id.py` | Says which VERIFY argument an identifier belongs in (doi, pmid, pmcid, url) | Before a VERIFY call |
 | `scripts/print_source_score.py` | Prints a VERIFY source score as the total plus numeric axes, nulls left out | After qualify_source |
 | `examples/*.md` | Worked cases: a preprint in a payer deck, a competitor press release | Shaping the answer |
