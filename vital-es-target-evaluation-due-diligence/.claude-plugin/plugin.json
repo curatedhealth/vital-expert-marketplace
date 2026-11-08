@@ -1,7 +1,7 @@
 {
   "name": "vital-es-target-evaluation-due-diligence",
   "version": "0.1.1-live-test",
-  "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + integrated report. Standard KA Pass on 2026-11-08-standard-ka-v9 (D-v2-2 signed). Cowork operator-ready (marketplace channel). Full F→A→B still deferred (SEC). ASC/FC defaults stay disabled. Not Studio Marketplace Done.",
+  "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + integrated report. Standard KA Pass on 2026-11-08-standard-ka-v9 (D-v2-2 signed). Cowork operator-ready; operator E2E offline path green. Full/ASC/FC Accepted Deferred (not enabled). Not Studio Marketplace Done.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -9,7 +9,7 @@
   "license": "Proprietary",
   "release_state": "Draft",
   "tier": "Full",
-  "tier_proof_status": "cowork_operator_ready_standard_ka_pass_v9_full_pending_freeze_not_studio_marketplace_done",
+  "tier_proof_status": "cowork_operator_ready_e2e_green_standard_ka_pass_v9_full_asc_fc_accepted_deferred_not_studio_marketplace_done",
   "capability_code": "CF-01.02.06",
   "domain": "enterprise_strategy_portfolio",
   "depends_on": [
