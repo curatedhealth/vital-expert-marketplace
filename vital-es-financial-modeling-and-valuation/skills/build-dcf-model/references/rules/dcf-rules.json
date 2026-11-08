@@ -1,0 +1,12 @@
+{
+ "_comment": "Rules of skill build-dcf-model. A rule computes only if its status is VERIFIED-REOPENED or ENGINEERING RULE; a [CHECK] rule is disabled and the script prints [CHECK].",
+ "rules": [
+  {"id": "FV-RATE-SUPPLIED", "kind": "input", "status": "VERIFIED-REOPENED", "passage": "In developing a discount rate, the valuer must document the method used and provide evidence for the derivation of the discount rate.", "passage_ids": ["VP-V-030"]},
+  {"id": "FV-RATE-CONSISTENT", "kind": "input", "status": "VERIFIED-REOPENED", "passage": "The capitalisation or discount rate applied must be consistent with the type of income or cash flow used.", "passage_ids": ["VP-V-032"]},
+  {"id": "FV-TERMINAL-RATE", "kind": "arithmetic", "status": "VERIFIED-REOPENED", "passage": "The terminal value is then discounted back to the valuation date, normally using the same discount rate as applied to the forecast cash flow.", "passage_ids": ["VP-V-033"]},
+  {"id": "FV-TERMINAL-SHARE", "kind": "threshold", "status": "[CHECK]", "passage": "no registered threshold for a terminal-value share", "passage_ids": []},
+  {"id": "FV-CASHFLOW-ARITHMETIC", "kind": "arithmetic", "status": "ENGINEERING RULE", "reason": "operating cash flow = net revenue x (1 - cogs% - opex%) - fixed costs, less tax on the positive part, capex and working capital; no loss carry-forward", "gap": "no standard prescribes this cash-flow construction for a development-stage asset; WIPO describes sales growing from a low base, peaking and declining (VP-V-009)", "context_passage_ids": ["VP-V-009", "VP-V-010"], "passage_ids": []},
+  {"id": "FV-UNRISKED", "kind": "boundary", "status": "ENGINEERING RULE", "reason": "owner ruling V4 places risk adjustment in calculate-risk-adjusted-npv; this skill rejects probability keys (E_RISK)", "gap": "none: a house boundary", "passage_ids": []},
+  {"id": "FV-ADOPTION-HUMAN", "kind": "boundary", "status": "ENGINEERING RULE", "reason": "owner ruling V5: the adopted valuation and the discount-rate choice are human only", "gap": "none: an owner ruling", "context_passage_ids": ["VP-V-006"], "passage_ids": []}
+ ]
+}

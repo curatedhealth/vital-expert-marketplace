@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-es-target-evaluation-due-diligence (CF-01.02.06 live-test), vital-mlr-review, and vital-decision-companion. The vital-verify plugin was retired 8 November 2026.",
+  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-es-target-evaluation-due-diligence (CF-01.02.06 live-test), vital-mlr-review, and vital-decision-companion. The vital-verify plugin was retired 8 November 2026, vital-es-financial-modeling-and-valuation (CF-01.02.02 live-test).",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -30,6 +30,11 @@
       "name": "vital-es-target-evaluation-due-diligence",
       "source": "./vital-es-target-evaluation-due-diligence",
       "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + integrated report. Standard KA Pass (v9); Draft 0.1.1-live-test for Cowork. Not Marketplace Done. Optional vont_/verify keys; offline script-first."
+    },
+    {
+      "name": "vital-es-financial-modeling-and-valuation",
+      "source": "./vital-es-financial-modeling-and-valuation",
+      "description": "Financial Modeling & Valuation (CF-01.02.02). Nine skills + valuation summary. Standard KA Pass (v2); Draft 0.1.1-live-test for Cowork. Not Marketplace Done. Ranges only \u2014 no fairness/recommend. Optional vont_/verify keys; offline script-first."
     },
     {
       "name": "navigator-ai-investment",

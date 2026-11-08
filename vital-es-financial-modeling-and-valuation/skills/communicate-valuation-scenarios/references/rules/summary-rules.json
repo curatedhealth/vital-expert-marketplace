@@ -1,0 +1,43 @@
+{
+ "_comment": "Rules of skill communicate-valuation-scenarios. A rule computes only if its status is VERIFIED-REOPENED or ENGINEERING RULE; a [CHECK] rule is disabled and the script prints [CHECK].",
+ "rules": [
+  {
+   "id": "FV-NO-FAIRNESS-VIEW",
+   "kind": "boundary",
+   "status": "VERIFIED-REOPENED",
+   "passage": "A fairness opinion is issued by a member with required disclosures of role, compensation and verification, under written procedures; Item 1015 requires a summary of procedures, findings and bases of an outside report.",
+   "passage_ids": [
+    "VP-V-040",
+    "VP-V-041",
+    "VP-V-042",
+    "VP-V-043",
+    "VP-V-050",
+    "VP-V-051"
+   ]
+  },
+  {
+   "id": "FV-POINTER-EVERY-LINE",
+   "kind": "format",
+   "status": "ENGINEERING RULE",
+   "reason": "every line points to a register row so a reader can audit it; same rule as the integrated report of the due diligence plugin",
+   "gap": "none: a house rule",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-REFUSAL-PATTERNS",
+   "kind": "lists",
+   "status": "ENGINEERING RULE",
+   "reason": "recommendation, fairness / solvency and single-value phrase patterns are the plugin's own lists",
+   "gap": "lists are not exhaustive; a person reviews every line",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-ADOPTION-HUMAN",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "owner ruling V5: the adopted valuation, the choice of rate and any fairness or solvency view are human only",
+   "gap": "none: an owner ruling",
+   "passage_ids": []
+  }
+ ]
+}

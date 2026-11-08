@@ -1,0 +1,128 @@
+{
+ "register": "verbatim-passages",
+ "built": "2026-11-07",
+ "method": "extracted by scripts/due_diligence/verbatim/build_register.py (spec V_spec.json); whitespace collapsed to single spaces is the only change; ids VP-V-nnn",
+ "skill": "build-dcf-model",
+ "passages": [
+  {
+   "id": "VP-V-006",
+   "source_id": "wipo_income",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 3: The income approach (web publication; official WIPO text; a guide, not a standard)",
+   "section": "Discount rate",
+   "page": null,
+   "text": "Determining the appropriate discount rate to reflect project risk is a challenging task.",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/3-the-income-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "3856c3515203732ffa07326f647a5037e317f0d99933112922ec79fffbdb6c07"
+  },
+  {
+   "id": "VP-V-009",
+   "source_id": "wipo_income",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 3: The income approach (web publication; official WIPO text; a guide, not a standard)",
+   "section": "Cash flow forecasting",
+   "page": null,
+   "text": "Here, we must consider product sale evolution where product sales grow from a low base, peak over time and eventually depreciate as market capitalization is lost due to product obsolescence, competition, and other factors.",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/3-the-income-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "3856c3515203732ffa07326f647a5037e317f0d99933112922ec79fffbdb6c07"
+  },
+  {
+   "id": "VP-V-010",
+   "source_id": "wipo_income",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 3: The income approach (web publication; official WIPO text; a guide, not a standard)",
+   "section": "Cash flow forecasting",
+   "page": null,
+   "text": "Post-market cash flows span the IP’s useful remaining lifetime, which is typically the period up to patent expiry or peak sales.",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/3-the-income-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "3856c3515203732ffa07326f647a5037e317f0d99933112922ec79fffbdb6c07"
+  },
+  {
+   "id": "VP-V-013",
+   "source_id": "wipo_income",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 3: The income approach (web publication; official WIPO text; a guide, not a standard)",
+   "section": "Discount rate",
+   "page": null,
+   "text": "The discount rate applied is a single value, which combines several factors including: Time value of money – The concept that money today is worth more than money tomorrow. Cost of capital – The rate of return a company must earn before generating value. Probability of success",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/3-the-income-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "3856c3515203732ffa07326f647a5037e317f0d99933112922ec79fffbdb6c07"
+  },
+  {
+   "id": "VP-V-030",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 103 Valuation Approaches, income approach, discount rate",
+   "page": 62,
+   "text": "In developing a discount rate, the valuer must: (a) document the method used for developing the discount rate and support its use, (b) provide evidence for the derivation of the discount rate, including the identification of the significant inputs and support for their derivation or source.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "must",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  },
+  {
+   "id": "VP-V-031",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 103, income approach, discount rate",
+   "page": 62,
+   "text": "Specifically, the valuer must evaluate whether the risk underlying the forecast cash flow assumptions are captured in the discount rate.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "must",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  },
+  {
+   "id": "VP-V-032",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 103, income approach",
+   "page": 84,
+   "text": "The capitalisation or discount rate applied must be consistent with the type of income or cash flow used.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "must",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  },
+  {
+   "id": "VP-V-033",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 103, income approach, terminal value",
+   "page": 59,
+   "text": "The terminal value is then discounted back to the valuation date, normally using the same discount rate as applied to the forecast cash flow.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  },
+  {
+   "id": "VP-V-040",
+   "source_id": "finra5150",
+   "source_title": "FINRA. Rule 5150 Fairness Opinions (rulebook page)",
+   "section": "Rule 5150(a) Disclosures",
+   "page": null,
+   "text": "If at the time a fairness opinion is issued to the board of directors of a company the member issuing the fairness opinion knows or has reason to know that the fairness opinion will be provided or described to the company's public shareholders, the member must disclose in the fairness opinion:",
+   "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/5150",
+   "access_date": "2026-11-07",
+   "cue": "must",
+   "source_text_sha256": "76ffb6b0be69475fc849b274a77a159073cb7f8fb17a77f20a7da1fc0c6288d5"
+  },
+  {
+   "id": "VP-V-050",
+   "source_id": "cfr1015",
+   "source_title": "17 CFR 229.1015 (Item 1015 of Regulation M-A): Reports, opinions, appraisals and negotiations (eCFR; scope: Rule 13e-3 transactions and the cross-referenced proxy items)",
+   "section": "Item 1015(a)",
+   "page": null,
+   "text": "(a) Report, opinion or appraisal. State whether or not the subject company or affiliate has received any report, opinion (other than an opinion of counsel) or appraisal from an outside party that is materially related to the Rule 13e-3 transaction, including, but not limited to: Any report, opinion or appraisal relating to the consideration or the fairness of the consideration",
+   "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-17?part=229&section=229.1015",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "3ed13a173e9cd1f89c08a9a1928516c424fb6a85b953a1249f2b7814e625a846"
+  }
+ ]
+}

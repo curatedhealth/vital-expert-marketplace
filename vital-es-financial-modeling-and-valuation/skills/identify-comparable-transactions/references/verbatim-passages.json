@@ -1,0 +1,56 @@
+{
+ "register": "verbatim-passages",
+ "built": "2026-11-07",
+ "method": "extracted by scripts/due_diligence/verbatim/build_register.py (spec V_spec.json); whitespace collapsed to single spaces is the only change; ids VP-V-nnn",
+ "skill": "identify-comparable-transactions",
+ "passages": [
+  {
+   "id": "VP-V-020",
+   "source_id": "wipo_market",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 2: The market approach (web publication; a guide, not a standard)",
+   "section": "Market approach, summary",
+   "page": null,
+   "text": "Its strength lies in grounding valuations in real world data, but its usefulness is constrained by the scarcity of publicly available or truly comparable deals, especially for early stage assets.",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/2-the-market-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "5f7034f44f08eb077d0c335c1410dd74ca9c8d469526696548e692445f07e07a"
+  },
+  {
+   "id": "VP-V-021",
+   "source_id": "wipo_market",
+   "source_title": "WIPO. Intellectual Property Valuation in Biotechnology and Pharmaceuticals, chapter 2: The market approach (web publication; a guide, not a standard)",
+   "section": "Comparing deals",
+   "page": null,
+   "text": "Comparing recent relevant deals is essential because it provides real-world transactional data that reflects the value of similar assets.",
+   "url": "https://www.wipo.int/web-publications/intellectual-property-valuation-in-biotechnology-and-pharmaceuticals/en/2-the-market-approach.html",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "5f7034f44f08eb077d0c335c1410dd74ca9c8d469526696548e692445f07e07a"
+  },
+  {
+   "id": "VP-V-034",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 210 Intangible Assets, market approach",
+   "page": 100,
+   "text": "The guideline transactions method is generally the only market approach method that can be applied to intangible assets.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "none",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  },
+  {
+   "id": "VP-V-035",
+   "source_id": "ivs2025",
+   "source_title": "IVSC. International Valuation Standards effective 31 January 2025, RED-LINE EDITION (copy hosted by ICAEW; each registered passage also appears word for word in the January 2022 edition, so it is unchanged text)",
+   "section": "IVS 103, market approach",
+   "page": 48,
+   "text": "When comparable market information does not relate to the exact or substantially the same asset, the valuer must perform a comparative analysis of qualitative and quantitative similarities and differences between the comparable assets and the subject asset.",
+   "url": "https://icaew.com/-/media/corporate/files/technical/corporate-finance/valuation/ivs-effective-31-january-2025-redline-edition.ashx",
+   "access_date": "2026-11-07",
+   "cue": "must",
+   "source_text_sha256": "7b8ed5398c4148cebb7a584f3532d8664fdceaf5149c5c7ac24c3e49e13c8e09"
+  }
+ ]
+}

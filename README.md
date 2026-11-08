@@ -28,4 +28,9 @@ Former one-core Digital Health packs are not listed here; they are superseded by
 
 ## Navigator
 
+## Enterprise Strategy (live-test)
+
+- **Target Evaluation & Due Diligence** (`vital-es-target-evaluation-due-diligence`). CF-01.02.06. Draft `0.1.1-live-test`. Standard KA Pass; not Marketplace Done.
+- **Financial Modeling & Valuation** (`vital-es-financial-modeling-and-valuation`). CF-01.02.02. Draft `0.1.1-live-test`. Standard KA Pass; ranges only — no fairness opinion or recommended price; not Marketplace Done.
+
 - **Navigator AI investment** (`navigator-ai-investment`). Facilitated AI investment decisions on the VITAL Ontology Navigator. Uses the Ontology Navigator connector already on the account. No key is in this pack. Do not add a second connector.

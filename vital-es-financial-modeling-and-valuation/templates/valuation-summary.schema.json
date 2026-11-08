@@ -1,0 +1,18 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Valuation summary",
+ "type": "object",
+ "required": ["asset", "answer", "workstreams", "lines", "conflicts", "gaps", "decisions", "adopted_valuation", "recommended_valuation", "status"],
+ "properties": {
+  "asset": {"type": "string"},
+  "answer": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
+  "workstreams": {"type": "array", "items": {"type": "object", "required": ["skill", "status", "basis"], "properties": {"status": {"enum": ["green", "yellow", "red"]}}}},
+  "lines": {"type": "array", "items": {"type": "object", "required": ["text", "pointer"]}},
+  "conflicts": {"type": "array", "items": {"type": "object", "required": ["rule", "side_a", "side_b", "reconciled"], "properties": {"reconciled": {"const": false}}}},
+  "gaps": {"type": "array"},
+  "decisions": {"type": "array"},
+  "adopted_valuation": {"const": "HUMAN ONLY"},
+  "recommended_valuation": {"type": "null"},
+  "status": {"enum": ["UNSIGNED", "SIGNED"]}
+ }
+}

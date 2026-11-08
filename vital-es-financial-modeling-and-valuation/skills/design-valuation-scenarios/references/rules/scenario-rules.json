@@ -1,0 +1,38 @@
+{
+ "_comment": "Rules of skill design-valuation-scenarios. A rule computes only if its status is VERIFIED-REOPENED or ENGINEERING RULE; a [CHECK] rule is disabled and the script prints [CHECK].",
+ "rules": [
+  {
+   "id": "FV-SCENARIO-PAIRING",
+   "kind": "pairing",
+   "status": "ENGINEERING RULE",
+   "reason": "low = adverse end of every driver, high = favorable end; directions are stated per driver",
+   "gap": "no source prescribes a pairing; ranges are not confidence intervals",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-SCENARIO-NEED",
+   "kind": "context",
+   "status": "VERIFIED-REOPENED",
+   "passage": "Relying solely on one scenario may limit the assessment to a single set of outcomes.",
+   "passage_ids": [
+    "VP-V-011"
+   ]
+  },
+  {
+   "id": "FV-NO-INVENTED-PROBABILITY",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "weights are the team's; none is invented; no expected value is computed by this skill",
+   "gap": "none: a house boundary",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-ADOPTION-HUMAN",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "owner ruling V5: the adopted valuation, the choice of rate and any fairness or solvency view are human only",
+   "gap": "none: an owner ruling",
+   "passage_ids": []
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "_comment": "Rules of skill identify-comparable-transactions. A rule computes only if its status is VERIFIED-REOPENED or ENGINEERING RULE; a [CHECK] rule is disabled and the script prints [CHECK].",
+ "rules": [
+  {
+   "id": "FV-CRITERIA-TEAM",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "the team states the criteria; no default set is shipped",
+   "gap": "none: a house boundary",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-SOURCE-DATED",
+   "kind": "format",
+   "status": "ENGINEERING RULE",
+   "reason": "every deal carries a source reference and date so a reader can audit it; nothing from memory",
+   "gap": "none: a house rule",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-MARKET-APPROACH",
+   "kind": "context",
+   "status": "VERIFIED-REOPENED",
+   "passage": "The guideline transactions method is generally the only market approach method that can be applied to intangible assets.",
+   "passage_ids": [
+    "VP-V-034",
+    "VP-V-035",
+    "VP-V-020",
+    "VP-V-021"
+   ]
+  },
+  {
+   "id": "FV-SELECTION-FLAG",
+   "kind": "flag",
+   "status": "ENGINEERING RULE",
+   "reason": "completed deals only can bias a range; the flag is raised when no terminated or withdrawn deal is present",
+   "gap": "no source quantifies the bias",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-GAP-ALLOWANCE",
+   "kind": "threshold",
+   "status": "ENGINEERING RULE",
+   "reason": "the maximum gaps a deal may carry is the team's input",
+   "gap": "no source prescribes it",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-ADOPTION-HUMAN",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "owner ruling V5: the adopted valuation, the choice of rate and any fairness or solvency view are human only",
+   "gap": "none: an owner ruling",
+   "passage_ids": []
+  }
+ ]
+}

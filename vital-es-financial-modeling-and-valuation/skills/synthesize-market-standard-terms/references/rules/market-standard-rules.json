@@ -1,0 +1,50 @@
+{
+ "_comment": "Rules of skill synthesize-market-standard-terms. A rule computes only if its status is VERIFIED-REOPENED or ENGINEERING RULE; a [CHECK] rule is disabled and the script prints [CHECK].",
+ "rules": [
+  {
+   "id": "FV-NO-MERGE",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "the valuation range and the benchmark range answer different questions; they are shown side by side, with merged false",
+   "gap": "no source prescribes how to reconcile them; none is attempted",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-THIN-DATA",
+   "kind": "flag",
+   "status": "ENGINEERING RULE",
+   "reason": "a range from few deals is flagged and its dispersion shown",
+   "gap": "no source gives a cut-off; the team's minimum n is used",
+   "passage_ids": []
+  },
+  {
+   "id": "FV-NO-MARKET-STANDARD",
+   "kind": "boundary",
+   "status": "VERIFIED-REOPENED",
+   "passage": "A fairness opinion carries required disclosures of the member issuing it; a filer summarizes procedures, findings and bases and states who determined the consideration.",
+   "passage_ids": [
+    "VP-V-040",
+    "VP-V-051",
+    "VP-V-052"
+   ]
+  },
+  {
+   "id": "FV-COMPARATIVE-ANALYSIS",
+   "kind": "context",
+   "status": "VERIFIED-REOPENED",
+   "passage": "When comparable market information does not relate to the exact or substantially the same asset, the valuer must perform a comparative analysis of qualitative and quantitative similarities and differences.",
+   "passage_ids": [
+    "VP-V-035",
+    "VP-V-020"
+   ]
+  },
+  {
+   "id": "FV-ADOPTION-HUMAN",
+   "kind": "boundary",
+   "status": "ENGINEERING RULE",
+   "reason": "owner ruling V5: the adopted valuation, the choice of rate and any fairness or solvency view are human only",
+   "gap": "none: an owner ruling",
+   "passage_ids": []
+  }
+ ]
+}
