@@ -1,6 +1,6 @@
 # Value waterfall — only if baseline is present
 
-If baseline is missing, **withhold** this chart and use an options matrix instead.
+If baseline is missing, withhold this chart and use an options matrix instead.
 
 | Field | Value |
 |---|---|
@@ -19,7 +19,7 @@ If baseline is missing, **withhold** this chart and use an options matrix instea
 | 2 | | | | | |
 | n | Ending position | | | | |
 
-Title must not claim “savings realized” unless class M/V with source.
+Title must not claim savings realized unless class M/V with source.
 
 ## Layout — visual
 
@@ -28,16 +28,14 @@ Title must not claim “savings realized” unless class M/V with source.
 flowchart TB
   B[Baseline — sourced] --> S1[Step 1 — sourced or GAP]
   S1 --> S2[Step 2 — sourced or GAP]
-  S2 --> E[Ending position — computed only from sourced steps]
+  S2 --> E[Ending position]
 ```
 
-ASCII waterfall (replace figures from table; leave blank if GAP):
-
 ```
-Baseline     ████████████  ____
-+ Step 1     ██            ____
-− Step 2       ████        ____
-Ending       ██████████    ____
+Baseline     ############  ____
++ Step 1     ##            ____
+- Step 2       ####        ____
+Ending       ##########    ____
 ```
 
 Script flags: baseline_required + not baseline_present → gap (withhold).

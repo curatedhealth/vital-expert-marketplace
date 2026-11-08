@@ -1,6 +1,6 @@
 # Delivery dependency view
 
-No invented dates. List Verify / steward siblings explicitly when they gate circulation.
+No invented dates. List Verify / steward siblings when they gate circulation.
 
 | Field | Value |
 |---|---|

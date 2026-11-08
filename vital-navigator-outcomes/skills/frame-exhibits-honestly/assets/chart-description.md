@@ -18,6 +18,6 @@
 | | | | |
 
 ## Render rule
-Use the linked exhibit template’s mermaid/ASCII block. Values come only from this series table. Prefer withhold over cropped axes or causal titles.
+Use the linked exhibit template mermaid/ASCII block. Values come only from this series table. Prefer withhold over cropped axes or causal titles.
 
 Script: `python3 scripts/chart_scale.py exhibit.json --json`

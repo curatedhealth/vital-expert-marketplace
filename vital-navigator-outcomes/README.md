@@ -3,7 +3,7 @@
 ### Curator steward skills (Draft additive — 8 November 2026)
 Added Curator side-channel skills on this pack home: `pull-evidence`, `classify-incoming`, `file-and-process`, `steward-decide`, `enrich-record`. `.mcp.json` now includes `vital-ontology-curator` (`vcur_`). **Not** a Marketplace republish / Done claim for Curator skills — owner must authorize publish separately. Paraphrase-only chrome; no Lane A quote redistribution.
 
-### 0.3.0-live-test (8 November 2026)
+### 0.3.1-live-test (8 November 2026)
 Marketplace v1 live-test close: C1–C5 owner Pass; C6 Gate H Pass-with-exceptions (WR-032 closed; VP-ON-C6 Option A internal pack); eng_enforcement_green; C7 facilitation eng-bound (independent grade deferred). Claude buyer id `vital-navigator-outcomes` (legacy `navigator-ai-investment`). Listing chrome paraphrase-only. Production frontend smoke: `/navigator` + ontology explorer.
 
 ### 0.2.1 (7 November 2026)
@@ -13,7 +13,7 @@ Remaining uplift W0–W6: live smoke offline path, KA suite, substrate CF-01.06.
 
 Investment decisions and measurement — from value-at-stake to value realized. Peer use-case-family plugin to Launch Navigator. GenAI is the first worked vertical, not the brand.
 
-**Status:** Marketplace v1 live-test (`0.3.0-live-test`). Anatomy upgrade from marketplace pack `navigator-ai-investment` (legacy alias retained until buyer install smoke retires it). Expert review **Pass** (Hicham Naim, 7 November 2026). Capability code **pinned CF-01.06.01**. Non-claims: C7 KA not independently graded; host OAuth/SSRF parallel; Lane A quotes not redistributed in buyer chrome.
+**Status:** Marketplace v1 live-test (`0.3.1-live-test`). Anatomy upgrade from marketplace pack `navigator-ai-investment` (legacy alias retained until buyer install smoke retires it). Expert review **Pass** (Hicham Naim, 7 November 2026). Capability code **pinned CF-01.06.01**. Non-claims: C7 KA not independently graded; host OAuth/SSRF parallel; Lane A quotes not redistributed in buyer chrome.
 
 ## Tier
 Standard (authoring standard): known-answer / smoke fixtures; practitioner review still due.

@@ -15,6 +15,10 @@ Evidence classes: M measured · V document · O owner ruling · H design. `[CHEC
 
 If the session is a launch gate, **stop** and hand off to Launch Navigator. Do not dual-write both vocabularies.
 
+## Client eight sections vs these 10 parts
+
+Live close and the playbook speak in **eight sections + annex** (`close-the-decision/templates/decision-record.md`). This file is the shared substrate (10 parts). The board pack maps them: see `compile-board-pack/templates/board-report.md` § “How to read this pack”. Never show part numbers to the client reader.
+
 ## The 10 parts (required)
 
 1. **Identity** — decision id, type (investment / measurement / portfolio), version; supersedes prior version by link, never overwrite.

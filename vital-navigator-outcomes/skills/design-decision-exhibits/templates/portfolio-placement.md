@@ -15,20 +15,20 @@ Team labels only. Not a Launch Pass/Hold gate.
 |---|---|---|---|---|---|
 | | | | | | |
 
-Baselines (do nothing / do it internally) are **reference lines**, not placed.
+Baselines are reference lines, not placed.
 
-## Layout — visual (2×2 grid as text + mermaid)
+## Layout — visual (2x2)
 
 ```
-                        Value uncertainty →
+                        Value uncertainty -->
                    Low                      High
-              ┌────────────────────┬────────────────────┐
- Capability   │  Scale / keep      │  Pilot / learn     │
- readiness ↑  │                    │                    │
-              ├────────────────────┼────────────────────┤
-              │  Fix / staff       │  Stop or rethink   │
-              │                    │                    │
-              └────────────────────┴────────────────────┘
+              +--------------------+--------------------+
+ Capability   |  Scale / keep      |  Pilot / learn     |
+ readiness ^  |                    |                    |
+              +--------------------+--------------------+
+              |  Fix / staff       |  Stop or rethink   |
+              |                    |                    |
+              +--------------------+--------------------+
 ```
 
 ```mermaid
@@ -43,4 +43,4 @@ quadrantChart
   quadrant-4 Fix / staff
 ```
 
-Plot points only after humans assign coordinates. If Pass/Conditional/Hold is requested, **stop** and hand off to Launch Navigator.
+If Pass/Conditional/Hold is requested, stop and hand off to Launch Navigator.
