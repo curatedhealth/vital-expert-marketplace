@@ -142,12 +142,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/so-what.md` | Guard, repair and check for the implication | That task runs |
 | `tasks/actionability.md` | Guard, repair and check for decision, next step and owner | That task runs |
 | `tasks/structure-integrity.md` | Guard, repair and check for frameworks and headings | That task runs |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/rules.md` | Sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and the scan script | Before scanning |
 | `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
-| `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

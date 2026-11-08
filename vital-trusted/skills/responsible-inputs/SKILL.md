@@ -72,7 +72,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
   practical option: a company-approved tool, the minimum extract needed, identifiers
   removed, or the already-public version.
 - **Removing names is not the same as anonymous.** Say what was removed; never call the
-  result anonymous or de-identified (`references/rules.md` I2, I6).
+  result anonymous or de-identified (`references/method-standards.md` and `references/knowledge.md` I2, I6).
 - **Do not repeat what should not travel.** When personal or patient details are already
   in the conversation, do not quote them back and keep them out of the output.
 - **No legal judgments (TR-H6, TR-H11).** Whether something is inside
@@ -123,12 +123,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 |---|---|---|
 | `tasks/input-confidentiality.md` | Guard, repair and check for what goes into the tool | That task runs |
 | `tasks/intellectual-property.md` | Guard, repair and check for other people's work | That task runs |
-| `references/rules.md` | Primary rules by jurisdiction, with dates and status | Explaining why a question matters |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and the pattern-scan script | Before scanning or handing off |
 | `scripts/scan_inputs.py` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
-| `templates/input-note.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/csr-into-chatgpt.md`, `examples/article-for-newsletter.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one that must stay light | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

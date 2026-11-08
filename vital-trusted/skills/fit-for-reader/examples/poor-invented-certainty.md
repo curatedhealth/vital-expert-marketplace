@@ -61,14 +61,16 @@ goes through your market access or promotional review process before the meeting
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns A3, A4 in `references/patterns.md`. Association wording and absolute figures
+Patterns A3, A4 in `references/failure-modes.md` / `references/knowledge.md`. Association wording and absolute figures
 come from `grounded-statements` (its patterns M5, N1). Whether the payer material is
 promotional is for the company's process (TR-H11).
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Sends the same dense technical paragraph to a payer and to an internal ops list.
+- Invents what the reader "already knows".
+- Drops fair-balance elements because "the reader is sophisticated".
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Match depth and wording to the named reader; ask if reader unknown; keep required balance.

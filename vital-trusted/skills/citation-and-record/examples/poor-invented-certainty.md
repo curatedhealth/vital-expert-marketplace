@@ -161,10 +161,13 @@ for one.
   (TR-H13).
 - The internal review process is named as the next step, not replaced (TR-H11).
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Invents a named clearer / "approved" line the person did not give.
+- Puts Chicago bibliography text inside claim-support cells.
+- Drops open gaps while stamping the record complete.
+- Cites press as if it substantiated the claim.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Uncleared draft until named clearer; brief spine; refs separate from support; gaps listed.

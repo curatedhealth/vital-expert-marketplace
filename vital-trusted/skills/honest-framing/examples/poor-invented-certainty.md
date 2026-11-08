@@ -66,10 +66,13 @@ Unbiased · framing: 1 figure or chart framed to look larger or smaller than it 
 Unbiased · interests: 2 interests in the material, 2 not disclosed where the result is used, 0 sources labeled independent or neutral without support in the material (not tool-checked)
 ```
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Hedges a clear primary result into mush while overstating a tiny exploratory subgroup.
+- Hides sponsor interest next to the result.
+- Softens AE rates into "some patients may possibly" without numbers.
+- Frames charts to exaggerate difference without both absolute rates.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Match certainty to the data; disclose interests; restore rates/CIs; repair framing notes — no invented caution or hype.

@@ -5,7 +5,7 @@
 Invented case for teaching. "Brelvia" is a fictional product; the registry, figures,
 findings and source scores are made up. No VERIFY tool was called for this example: the
 findings below show the shape the card is built from, not a real run. Source score axis
-names follow `references/rules.md` C7, which is `[CHECK]`.
+names follow `references/method-standards.md` / `references/knowledge.md` C7, which is `[CHECK]`.
 
 ## Request
 
@@ -90,12 +90,15 @@ the statement it concerns, the next internal process named in plain words, no th
 and no send decision. The currency axis is absent because no currency check ran; it is
 left out, not shown as 0. The total (86) is not the sum of the axes shown (77): the
 connector is described as rescaling the remaining weights to 100 when an axis is empty
-(`references/rules.md` C7, `[CHECK]`). Print the total as returned; never recompute it.
+(`references/method-standards.md` / `references/knowledge.md` C7, `[CHECK]`). Print the total as returned; never recompute it.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Treats faithfulness % as probability the claim is true in the world.
+- Invents counts that claim-assessment never returned.
+- Includes out_of_scope in the denominator or drops partial half-credit.
+- Prints "high confidence — clear to send" from the percentage alone.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Arithmetic from real statuses only; label offline; gaps block clearance; % ≠ truth verdict.

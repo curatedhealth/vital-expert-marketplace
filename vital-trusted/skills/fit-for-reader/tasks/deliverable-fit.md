@@ -7,7 +7,7 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Fix the format, length and structure that were asked for, fit the content into it, and say what did not fit |
 | Skill | TR-1.2.2 |
-| Knowledge | `references/patterns.md` (D1–D8), `references/readers.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (D1–D8), `references/readers.md` |
 | Tool | None. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/repair-note.md`, `templates/check-line.md`, the format table below |

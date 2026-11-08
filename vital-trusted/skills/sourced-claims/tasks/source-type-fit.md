@@ -11,7 +11,7 @@ study quality); that is `source-assessment` with VERIFY.
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Name each source's type, name each claim's kind, match them against the reader's bar |
 | Skill | TR-5.2.2 |
-| Knowledge | `references/rules.md` (R2, R5, R7, R8, R9, R10), `references/patterns.md` (T1–T7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R2, R5, R7, R8, R9, R10), `references/failure-modes.md` / `references/knowledge.md` (T1–T7) |
 | Tool | None. Companion slot: VERIFY `qualify_source` and `check_currency` through `source-assessment` |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/source-note.md` |
@@ -20,7 +20,7 @@ study quality); that is `source-assessment` with VERIFY.
 
 ## What each kind of source can and cannot carry
 
-Good practice, built on the rules in `references/rules.md`. Where a rule is marked
+Good practice, built on the rules in `references/method-standards.md` / `references/knowledge.md`. Where a rule is marked
 `[CHECK]` there, the row is practice, not a requirement.
 
 | Source type | Can carry | Cannot carry on its own | Watch for |

@@ -114,10 +114,13 @@ people, quotes stay only from a quoted passage). The persistence figure is not d
 as 86% from the 14% discontinuation: the summary does not say persistence, and a derived
 figure would need the person's decision.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Keeps causal "cuts" / "trial" wording the passage does not support.
+- Inflates registry N or invents a KOL quote not in the supplied text.
+- Reports "supported" without a quoted passage locator.
+- Skips rewrite actions so the deck stays overstated.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Atomic claims, quoted passages, plain statuses, rewrite actions, offline/not tool-checked label, gaps left open.

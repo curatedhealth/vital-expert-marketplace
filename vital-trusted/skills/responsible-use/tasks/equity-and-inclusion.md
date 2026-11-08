@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Read how people are described; repair stigmatizing, blaming or erasing language; name evidence gaps for groups only from the supplied material |
 | Skill | TR-6.2.4 |
-| Knowledge | `references/rules.md` (U9–U13), `references/patterns.md` (E1–E8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U9–U13), `references/failure-modes.md` / `references/knowledge.md` (E1–E8) |
 | Tool | `scripts/scan_language.py` where code can run. Companion slot: future language companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (language part), `templates/check-line.md` |

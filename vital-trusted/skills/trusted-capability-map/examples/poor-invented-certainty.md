@@ -1,48 +1,31 @@
 # Poor example: invented certainty
 
-# Worked example: routing a medical information request
+# Scenario: medical-information ask routed as "just draft the reply"
 
 Invented case for teaching. No real product or person.
 
 ## Request
 
-"A doctor emailed asking whether our product can be used in patients with moderate
-kidney impairment. Can you draft the reply? I've attached the label."
+"A doctor emailed asking whether our product can be used in moderate kidney impairment.
+Draft the reply from the label I attached."
 
-## Routing answer (as the person sees it)
+## Poor invented reply (what must not happen)
 
-You need a reply to a doctor's question about using the product in patients with
-moderate kidney problems, drafted from the label you attached.
-
-What I'd do first: confirm which country the doctor is in and that the question came
-from them unprompted, because both change what the reply may say.
-Then: take every dosing statement word for word from the label, and say nothing beyond
-what it covers for kidney impairment.
-And: if the label does not address moderate impairment, the reply says so plainly rather
-than implying the product can be used.
-
-After that it goes through your medical information procedure before it is sent.
-
-Want me to start on the draft?
-
-## Behind the answer (reference only)
-
-Routed to `trusted-intake`, then `patient-safety` (Safe), then `claims-and-label`
-(Rule-compliant). True applies throughout through TR-H1.
-
-## Why this routing
-
-- Safe comes first because a wrong dosing statement is the highest-harm failure here.
-- Rule-compliant comes second because the risk of implying an unapproved use is real
-  but is checked once the safety content is grounded.
-- True runs in both through the hard rules (TR-H1): nothing is stated that is not in
-  the label.
-- No verdict is given on whether the reply can be sent (TR-H3, TR-H5).
-
+```
+Route: skip intake. You can send this draft to the doctor now — Safe and Rule-compliant
+are fine. Dosing: 50 mg daily in moderate impairment (standard).
+```
 
 ## Why it fails
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+- Invents a dosing figure not shown as quoted from the attached label.
+- Skips `trusted-intake` (country, unsolicited question, use) which changes what may be said.
+- Declares Safe / Rule-compliant "fine" without running those skills (TR-H4).
+- Implies the draft may be sent — replaces the company's medical-information process (TR-H11).
+
+## What the skill must do instead
+
+- Route: intake → patient-safety → claims-and-label; True hard rules throughout.
+- Quote label wording only; if moderate impairment is absent, say so as a gap.
+- Point at shared `../../templates/` for cards; no invented clearance.
+- Stamp capability-map route only — not a send-ready verdict.

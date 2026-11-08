@@ -147,15 +147,16 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/audience-and-literacy.md` | Guard, repair and check for reader level and patient wording | That task runs |
 | `tasks/deliverable-fit.md` | Guard, repair and check for format, length and structure | That task runs |
 | `tasks/translation-fidelity.md` | Guard, repair and check for translations | That task runs |
-| `references/readers.md` | The ten readers: what each decides, vocabulary, depth, watch-outs | Any audience work |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | Gap classes in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and the scripts | Before scanning or comparing |
 | `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
 | `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `templates/reader-card.md`, `templates/repair-note.md`, `templates/translation-note.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/patient-letter-clinician-language.md`, `examples/payer-and-internal-same-finding.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one the skill must redirect | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

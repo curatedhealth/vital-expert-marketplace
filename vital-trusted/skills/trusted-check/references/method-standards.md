@@ -16,3 +16,11 @@
 | V3 | Confidence (faithfulness) percent = (supported + 0.5 × partial) ÷ (supported + partial + unsupported + contradicted + unverifiable), whole percent, out_of_scope excluded | VERIFY server instructions | Read 20 October 2026. Computed by `confidence-scoring`, not here. `[CHECK]` |
 
 Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.
+
+| WC-IFPMA-4.2 | Promo accurate, balanced, fair, complete; no distortion/exaggeration/omission | IFPMA Code of Practice Art. 4.2 | VERIFIED (digest 8 Nov 2026) | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+| WC-IFPMA-4.3 | Claims substantiable via labeling or scientific evidence; evidence to HCPs on request | IFPMA Art. 4.3 | VERIFIED (digest 8 Nov 2026) | same PDF |
+| WC-ABPI-6.1 | Claims accurate, balanced, fair, objective; relative risk with absolute risk | ABPI Code 2024 Cl. 6.1 | VERIFIED (digest 8 Nov 2026) | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
+| WC-ABPI-6.2 | Every claim/comparison capable of substantiation; provide on request | ABPI Cl. 6.2 | VERIFIED (digest 8 Nov 2026) | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+| WC-FDA-BadAd | Common failures: omit risk, overstate benefit, unsupported claims | FDA Bad Ad Program | VERIFIED (digest 8 Nov 2026) | https://www.fda.gov/drugs/prescription-drug-advertising-and-promotional-labeling/bad-ad-program |
+
+Rows WC-* accessed 8 November 2026 via WORLD_CLASS_PRACTICES_DIGEST.

@@ -7,7 +7,7 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Extract the study's design facts from the source, then hold the draft to them |
 | Skill | TR-5.1.3 |
-| Knowledge | `references/rules.md` (R3–R6), `references/patterns.md` (M1–M9) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3–R6), `references/failure-modes.md` / `references/knowledge.md` (M1–M9) |
 | Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md`, the study card below |

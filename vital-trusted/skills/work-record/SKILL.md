@@ -132,12 +132,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/record-of-making.md` | Sources, tools and AI used | That task runs |
 | `tasks/assumptions-and-open-items.md` | Assumptions, gaps, pending decisions and owners | That task runs |
 | `tasks/honest-status.md` | Draft, reviewed, cleared, final, and when each may be written | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in a record | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
 | `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
-| `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

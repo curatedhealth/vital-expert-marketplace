@@ -152,7 +152,7 @@ After: ask "Which country?" before the first product sentence. (TR-H7)
 
 **J7 The remembered rule.** "In Switzerland you must include the full SmPC." stated from
 memory.
-After: use only the rules read in `references/rules.md`; otherwise "your review process
+After: use only the rules read in `references/method-standards.md` / `references/knowledge.md`; otherwise "your review process
 will confirm what this market expects". (TR-H8)
 
 **J8 US consumer conventions as a rule abroad.** "Regulations require absolute figures

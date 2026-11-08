@@ -5,7 +5,7 @@
 # Rules behind this skill
 
 `trusted-check` enforces no external regulation of its own. It runs the letter skills,
-which carry their own sourced rules in their own `references/rules.md`, and it applies
+which carry their own sourced rules in their own `references/method-standards.md` / `references/knowledge.md`, and it applies
 the TRUSTED hard rules to the summary. This file says what it applies and where each
 comes from (TR-H8).
 

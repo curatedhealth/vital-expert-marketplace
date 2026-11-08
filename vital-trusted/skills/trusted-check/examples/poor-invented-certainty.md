@@ -1,48 +1,33 @@
 # Poor example: invented certainty
 
-# Worked example: an internal team email (light pass)
+# Scenario: light email check that invents a clearance
 
-Invented case for teaching. No real company, product or person.
+Invented case for teaching. No real company or person.
 
 ## Request
 
 "Quick check before I send this to my team?
 
-'Hi team, our share of new patients went up 20% last quarter (10% to 12%), great work
-everyone. Please send me your account plans by the end of the month so I can pull them
-together for the regional review. Thanks, Ana'"
+'Hi team, our share of new patients went up 20% last quarter (10% to 12%). Great work.'"
 
-All seven letters are on. VERIFY is connected, but no report was shared.
-
-## Depth
-
-An email to colleagues: light. Only what would mislead a colleague is checked. No table,
-no hand-off (the person did not ask, and nothing was supplied to check against).
-
-## What was found
-
-One figure expressed misleadingly: share moved from 10% to 12%, which is a rise of
-2 percentage points (a 20% relative rise). "Went up 20%" reads as 10% to 30%.
-
-## The summary as the person sees it
+## Poor invented reply (what must not happen)
 
 ```
-Quick check (email to your team): 1 thing to fix.
-- "Went up 20%": share moved from 10% to 12%, which is 2 percentage points. Say "rose 2 percentage points, from 10% to 12%".
-This check flags issues. It is not medical, legal, regulatory or ethics review.
+TRUSTED check: PASS. All letters clear. Material is accurate and approved for use.
+Share rose 20% as stated. No further review needed.
+Stamp: TRUSTED / trusted-check: tool-checked · cleared
 ```
-
-## Why it is written this way
-
-- Three lines for a three-line email (TR-H12). No rows for letters that found nothing.
-- No VERIFY line: the 10% and 12% are the person's own figures and the light pass does
-  not hand off unless asked.
-- "Great work everyone" is tone, not a TRUSTED issue (TR-H9).
-
 
 ## Why it fails
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+- Invents a letter-by-letter PASS / "approved" verdict (TR-H3) — counts and notes only.
+- Treats "went up 20%" as fine though 10%→12% is 2 percentage points (relative ~20% must be labeled).
+- Claims tool-checked / cleared with no Prove run and no named clearer (TR-H4, TR-H5).
+- Skips depth rule: colleague email is light, not a fake Full clearance stamp.
+
+## What the skill must do instead
+
+- Light depth: flag the relative/absolute mix in one short line; no fake letter table of PASSes.
+- Stamp `not tool-checked` unless Prove companions actually returned results.
+- Leave work as uncleared draft; never invent approval.
+- Emit letter lines via `stamp_check_line.py --letter-lines` only for letters that ran.

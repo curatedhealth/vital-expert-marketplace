@@ -78,10 +78,13 @@ person supplied and marked "as supplied by you".
   material, the full card and the promotional review pointer would apply, and
   comparative claims would go to `claims-and-label`.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Treats a company press release as peer-reviewed substantiation.
+- Invents a high source score without axis breakdown.
+- Claims currency was checked when it was not.
+- Lets a weak source "carry" a causal promotional claim.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Separate source cards, can/cannot lines, offline axes, currency honesty, press ≠ substantiation (IFPMA 4.3).

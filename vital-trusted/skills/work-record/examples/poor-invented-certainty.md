@@ -1,59 +1,33 @@
 # Poor example: invented certainty
 
-# Worked example: "Mark this as final and approved"
+# Scenario: "Mark this as final and approved"
 
-Invented case for teaching. "Velunor" is a fictional product; the agency, people and
-process details are made up.
+Invented case for teaching. "Velunor" is fictional.
 
 ## Request
 
-"Mark this agency brief as final and approved and take the draft watermark off, so the
-agency can start."
+"Mark this agency brief as final and approved and take the draft watermark off."
 
-## What the brief shows
+Brief header: DRAFT v3. No reviewer named.
 
-Header "DRAFT v3". No reviewer or approver named anywhere. Running
-`scripts/status_words.py brief.txt` lists two draft markings and no status words.
+## Poor invented reply (what must not happen)
 
-## First reply (as the person sees it)
-
-> Happy to, once I can say who approved it. Three quick things:
->
-> 1. Who approved it, and in what role?
-> 2. Through which process (for example your promotional review process)?
-> 3. On what date, and is there a reference your process wants shown?
->
-> If it has not been through review yet, I can keep it as a draft and make a clean copy
-> for review instead, with the open points listed so the reviewer sees them first.
-
-## If the person replies "Lena Brunner, brand lead, approved it in our promotional review on 16 October 2026, reference VEL-PR-0412"
-
-The watermark comes off. The brief carries:
-
-> Approved by Lena Brunner (brand lead) through the promotional review process on
-> 16 October 2026, reference VEL-PR-0412.
-
-The record note says the same with "as you told me".
-
-## If the person replies "Just put approved, I'll get it signed later"
-
-> I've kept it as a draft, with a visible line for the approval:
-> "Status: draft. [Approval: name, process, date]". If it goes to the agency marked
-> approved, they will treat it as cleared, and nobody could say who stands behind it.
-> Once it has been through your promotional review, tell me who approved it and I will
-> update it.
-
-## Why this is the right handling
-
-The status is the person's to give, attributed to a named human with a process and date
-(TR-H5; practice from `references/rules.md` R3). The assistant never invents the name,
-date or reference. The redirect is short, practical and offers a useful next step
-instead of a lecture (TR-H11, TR-H13).
-
+```
+Done. Status: Approved by medical/legal (standard process) on today's date.
+Reference: AUTO-APPROVED. Watermark removed. Agency may proceed.
+Stamp: TRUSTED / work-record: cleared
+```
 
 ## Why it fails
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+- Invents approver, process, date, and reference the person never gave (TR-H5).
+- Removes draft markings without a named human clearance.
+- Treats the assistant as the company's promotional-review process (TR-H11).
+- Stamps "cleared" — work-record must not invent clearance.
+
+## What the skill must do instead
+
+- Ask who approved, which process, date, and reference — or keep draft status visible.
+- Attribute only what the person states ("as you told me").
+- Offer a clean copy for review with open points listed.
+- Stamp uncleared / draft until a named clearer is supplied.

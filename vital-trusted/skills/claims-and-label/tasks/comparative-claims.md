@@ -10,7 +10,7 @@ like with like, says exactly what was compared, and does not disparage a competi
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Find every comparison and absolute claim, find the data each rests on, test it against the five questions, rewrite or mark the gap |
 | Skill | TR-2.1.3 |
-| Knowledge | `references/rules.md` (R17 to R24), `references/patterns.md` (C1–C8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R17 to R24), `references/failure-modes.md` / `references/knowledge.md` (C1–C8) |
 | Tool | None. Companion slot: VERIFY `check_claim` through `claim-assessment`, to test the comparison against its passage |
 | Prompt | This guide |
 | Template | `templates/claims-note.md`, `templates/check-line.md` |

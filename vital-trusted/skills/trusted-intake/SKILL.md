@@ -114,13 +114,13 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/work-context.md` | Reading the request, choosing questions, setting stakes and the internal process | Any new deliverable |
 | `tasks/data-and-policy-context.md` | Input sensitivity and the AI use policy question | Something is pasted, attached or mentioned |
-| `references/rules.md` | Primary sources for why market, use, product status and data change the answer | Explaining why a question matters |
-| `references/patterns.md` | Intake failures with before and after | Choosing and wording questions |
-| `references/gap-rules.md` | Gap classes as intake uses them | Writing an unknown field |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before the card or questions go out |
-| `references/tools.md` | Companion slot per task | Companion questions |
-| `templates/context-card.md` | The card other skills read, and the person view | Building the card |
-| `templates/intake-questions.md` | How the questions look to the person | Asking |
-| `templates/check-line.md` | The line for `trusted-check` | Returning to the check |
-| `examples/doctor-email-no-market.md`, `examples/board-update-no-questions.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including one the skill must redirect | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

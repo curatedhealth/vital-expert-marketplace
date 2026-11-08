@@ -55,7 +55,7 @@ stakes). Depth follows who will read the work (TR-H12):
   and point to the internal process the work goes through next (TR-H11).
 
 If it is unclear who will read it, ask once. The market matters only for which public
-rules explain a change (`references/rules.md`); the habits apply everywhere.
+rules explain a change (`references/method-standards.md` and `references/knowledge.md`); the habits apply everywhere.
 
 ## Rules that hold for every task
 
@@ -129,14 +129,16 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/uncertainty-size.md` | Guard, repair and check for certainty words, intervals, limitations and hedging | That task runs |
 | `tasks/numbers-and-charts.md` | Guard, repair and check for framing of figures and charts | That task runs |
 | `tasks/conflict-disclosure.md` | Guard, repair and check for sponsors, funding and ties | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a change was made |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries with neighbor skills, stop rules, never-claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and scripts | Before computing |
 | `scripts/chart_scale.py` | How much a truncated axis or scaled pictogram enlarges a difference; cumulative into per-period | A chart or pictogram is involved |
 | `scripts/find_framing_cues.py` | Lists certainty, hedging, minimizing and independence words for review | Repairing a longer draft |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md`, `templates/disclosure-line.md` | Output formats | Building the answer |
-| `examples/deck-proves-superiority.md`, `examples/overhedged-summary.md` | Worked cases: a sales deck that overclaims, a summary that over-hedges | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

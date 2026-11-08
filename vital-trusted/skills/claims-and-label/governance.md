@@ -39,7 +39,7 @@ Do not guess the name or content of a specific company's procedure.
 Stop and ask before continuing when:
 
 - **The label or intended purpose was not supplied** and the work makes product
-  statements for use outside the company. Ask for it (`assets/label-request.md`).
+  statements for use outside the company. Ask for it (`templates/label-request.md`).
   Offer a gapped draft if the person wants to proceed.
 - **The person asks for a message about a use, population or dose beyond the supplied
   label** for promotional or sales use. Decline that message in one plain line; offer

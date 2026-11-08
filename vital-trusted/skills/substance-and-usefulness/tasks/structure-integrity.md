@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Compare the structure with the content and the brief; remove invented frameworks; make headings say what the section says |
 | Skill | TR-1.1.5 |
-| Knowledge | `references/patterns.md` (K1–K6) |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (K1–K6) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |

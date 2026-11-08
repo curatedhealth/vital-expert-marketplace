@@ -117,13 +117,15 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/no-fabrication.md` | Guard, repair and check for invented content | That task runs |
 | `tasks/number-consistency.md` | Guard, repair and check for figures | That task runs |
 | `tasks/method-description.md` | Guard, repair and check for describing studies | That task runs |
-| `references/patterns.md` | Common failures with before and after, business and scientific | Guard and repair steps |
-| `references/rules.md` | Primary sources behind the rules, with dates and status | Explaining why a rule exists |
-| `references/gap-rules.md` | How to word gaps | Writing any gap |
 | `references/governance.md` | Boundaries and when to stop and ask | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and scripts | Before computing or handing off |
 | `scripts/risk_metrics.py` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
 | `scripts/extract_numbers.py` | Every number in a text with its context | Checking figures |
-| `templates/check-line.md`, `templates/repair-note.md` | Output formats | Building the answer |
-| `examples/board-update.md`, `examples/repair-trial-summary.md` | Worked cases, one business, one scientific | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including ones the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

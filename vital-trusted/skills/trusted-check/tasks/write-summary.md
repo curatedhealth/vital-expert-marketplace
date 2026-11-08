@@ -7,10 +7,10 @@
 | Worker | Experienced cross-functional colleague acting as a final reader |
 | Workflow | Turn the collected lines into plain notes per letter, list what is open for a person, what could not be checked, the next internal process, and close |
 | Skill | TR-0.3.2 |
-| Knowledge | `references/patterns.md`, `references/gap-rules.md`, `references/governance.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md`, `references/knowledge.md`, `references/governance.md` |
 | Tool | `scripts/scan_verdicts.py` where code can run. Companion slot: none |
 | Prompt | This guide |
-| Template | `assets/check-output-light.md`, `assets/check-output-short.md`, `assets/check-output-full.md` |
+| Template | `templates/check-output-light.md`, `templates/check-output-short.md`, `templates/check-output-full.md` |
 | Input | The lines from TR-0.3.1, any lines from TR-0.3.3, the depth, the reader, the active letters |
 | Governance | TR-H3, TR-H4, TR-H5, TR-H10, TR-H11, TR-H13 |
 
@@ -35,7 +35,7 @@ After the deliverable, never inside it. The deliverable stays as the person wrot
      reviewer can see it was not checked.
 
 3. **If VERIFY ran,** put its counts and the confidence line under True, and the record
-   status under Defensible, in the plain wording of `assets/check-output-full.md`. Say what
+   status under Defensible, in the plain wording of `templates/check-output-full.md`. Say what
    the percentage means in the same sentence: support from the sources supplied, not
    truth in the world. Never show a VERIFY figure that the Prove skills did not return.
 
@@ -68,13 +68,13 @@ After the deliverable, never inside it. The deliverable stays as the person wrot
 
 10. **Scan before showing.** Where code can run, save the summary and run
     `python scripts/scan_verdicts.py summary.txt`. Fix every hit it reports. Where code
-    cannot run, read the summary once for the words in `references/patterns.md` P1.
+    cannot run, read the summary once for the words in `references/failure-modes.md` / `references/knowledge.md` P1.
 
 ## Light version
 
 A few lines: the depth in a word, what to fix (if anything), letters off by choice in one
 line, the closing statement. No per-letter table when nothing was found. See
-`assets/check-output-light.md`.
+`templates/check-output-light.md`.
 
 ## When the person asks for the detail
 

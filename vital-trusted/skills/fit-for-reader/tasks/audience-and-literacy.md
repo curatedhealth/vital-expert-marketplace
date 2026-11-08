@@ -7,7 +7,7 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Name the reader and what they must decide or do, fill the reader card, then hold every passage to that reader's vocabulary and depth |
 | Skill | TR-1.2.1 |
-| Knowledge | `references/readers.md`, `references/rules.md` (R1, R2, R4, R5), `references/patterns.md` (A1–A8, L1–L9) |
+| Knowledge | `references/readers.md`, `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5), `references/failure-modes.md` / `references/knowledge.md` (A1–A8, L1–L9) |
 | Tool | `scripts/plain_language_scan.py` for patient or lay text where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/reader-card.md`, `templates/repair-note.md`, `templates/check-line.md` |
@@ -42,7 +42,7 @@ unless they ask; it steers the writing.
 ### Patient and lay readers
 
 Patient-facing material is always at full depth (TR-H12). Apply these as good practice
-everywhere and, for EU package leaflets, as the guideline cited in `references/rules.md`
+everywhere and, for EU package leaflets, as the guideline cited in `references/method-standards.md` / `references/knowledge.md`
 R1.
 
 5. **Plain words.** Give the everyday word first and the medical term after it, in
@@ -89,7 +89,7 @@ See `templates/check-line.md`.
 ## Boundaries
 
 - Rewriting into plain words is not a user test or a readability assessment. Never say
-  the text "meets" a readability standard or would pass user testing (`references/rules.md`
+  the text "meets" a readability standard or would pass user testing (`references/method-standards.md` / `references/knowledge.md`
   R4).
 - No readability score or grade level is given. The skill does not compute one, and a
   score would read as a verdict (TR-H3).

@@ -7,10 +7,10 @@
 | Worker | Experienced cross-functional colleague |
 | Workflow | Notice what is going into the assistant, name its kind in plain words, ask what the company AI use policy says, record the answer as stated, never decide |
 | Skill | TR-0.2.2 |
-| Knowledge | `references/rules.md` (I7, I8), `references/patterns.md` (C8, C9, C11, C13) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I7, I8), `references/failure-modes.md` / `references/knowledge.md` (C8, C9, C11, C13) |
 | Tool | None. Companion slot: a future AI policy companion (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/context-card.md` (inputs and policy lines), `assets/intake-questions.md` |
+| Template | `templates/context-card.md` (inputs and policy lines), `templates/intake-questions.md` |
 | Input | What the person says they will paste or attach, what they already pasted, any statement about their company policy |
 | Governance | TR-H3, TR-H6, TR-H11, TR-H13, `references/governance.md` |
 
@@ -68,7 +68,7 @@ Name the kind in plain words. More than one can apply.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

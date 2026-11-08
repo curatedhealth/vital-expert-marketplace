@@ -10,10 +10,10 @@ status, the open items, one recommendation.
 | Worker | Evidence lead |
 | Workflow | Count by status, list the open items with the statement each concerns, choose one recommendation, size the card to the stakes, close |
 | Skill | TR-8.3.2 |
-| Knowledge | `references/rules.md` (C3, C4, C6), `references/patterns.md` (P3–P10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C3, C4, C6), `references/failure-modes.md` / `references/knowledge.md` (P3–P10) |
 | Tool | `scripts/faithfulness.py` (counts and a default recommendation). Companion slot: reads `claim-assessment` findings; calls none |
 | Prompt | This guide |
-| Template | `assets/verify-card.md`, `assets/check-line.md` |
+| Template | `templates/verify-card.md`, `templates/check-line.md` |
 | Input | The counts and confidence line from TR-8.3.1, the findings with their statements and deciding passages, who will read the work |
 | Governance | TR-H3, TR-H5, TR-H10, TR-H11, TR-H13 |
 
@@ -51,7 +51,7 @@ If VERIFY did not run, there is no Verify card. Offer a reading summary instead,
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

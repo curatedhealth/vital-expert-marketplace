@@ -82,7 +82,7 @@ tool.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L2, C1 and C2 in `references/patterns.md`. Rules: EU R2 (Directive Art.
+Patterns L2, C1 and C2 in `references/failure-modes.md` / `references/knowledge.md`. Rules: EU R2 (Directive Art.
 87(2)), EFPIA R6 (1.01, 1.02) and R21 (3.05) through the German national code
 `[CHECK: German code not read]`. Message 4 is the label's dose wording; whether dosing
 is stated safely is `patient-safety`. The week-2 itch result is a secondary measure;
@@ -98,10 +98,12 @@ Rule-compliant · comparisons: 1 comparative or superiority claims, 1 without a 
   - "faster than Kelandro" rests on two separate placebo-controlled trials; not written
 ```
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Invents off-label permission because sales "needs a stronger message".
+- Quotes marketing language as if it were SmPC text.
+- Skips asking for the label when external claims are in play.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Demand labeling on hand; quote label; flag off-label; no invented indication.

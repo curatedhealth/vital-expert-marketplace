@@ -75,7 +75,7 @@ I did not write any reference from memory. I did not check any source with a too
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns S4, S1, S2, S5 and C4 in `references/patterns.md`. Whether a comparative claim
+Patterns S4, S1, S2, S5 and C4 in `references/failure-modes.md` / `references/knowledge.md`. Whether a comparative claim
 is permitted at all is for `claims-and-label`; this skill only names what would source
 it.
 
@@ -86,10 +86,12 @@ True · sources: 5 claims that need a source, 2 with a source you supplied, 0 wi
 True · citations: 1 reference looked at, 0 missing details a reviewer needs, 1 guidance or "current" statement with no title or date (not built with a tool)
 ```
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Leaves "studies show" / "leading treatment" without a named source.
+- Invents a citation to look sourced.
+- Treats brand adjectives as evidenced claims.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Every claim needs a source or a gap; strip unsourced superlatives; no fake citations.

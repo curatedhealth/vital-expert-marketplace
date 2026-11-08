@@ -7,7 +7,7 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | List every interest the material shows, check the draft carries each where the result is used, and remove any "independent" or neutral label the material does not support |
 | Skill | TR-3.2.3 |
-| Knowledge | `references/rules.md` (R8, R9), `references/patterns.md` (IN1–IN7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R8, R9), `references/failure-modes.md` / `references/knowledge.md` (IN1–IN7) |
 | Tool | `scripts/find_framing_cues.py` (independence and sponsor words). No companion yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/disclosure-line.md`, `templates/framing-note.md` |

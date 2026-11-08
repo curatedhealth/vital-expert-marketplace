@@ -91,10 +91,10 @@ passage — connect VERIFY]`.
 
 ## What to return
 
-- To the person: the result in the format of `assets/support-result.md`, sized to the
+- To the person: the result in the format of `templates/support-result.md`, sized to the
   stakes, with the revised text where anything changed.
-- When only Part A ran: the claim list in `assets/claim-list.md`.
-- To `trusted-check` only: one line in `assets/check-line.md`. Never append it to a
+- When only Part A ran: the claim list in `templates/claim-list.md`.
+- To `trusted-check` only: one line in `templates/check-line.md`. Never append it to a
   direct reply.
 - Status counts go to `confidence-scoring` for the confidence figure. This skill does not
   compute it.
@@ -116,15 +116,16 @@ Do not bury statuses in prose alone. Prefer the ASCII card or Markdown table ove
 |---|---|---|
 | `tasks/break-into-claims.md` | Part A: what one claim is, priority, pairing with passages | Every fact-check |
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
-| `references/method.md` | Method entry | Every run |
-| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
-| `references/knowledge.md` | Migrated rules / patterns | Both tasks |
-| `references/failure-modes.md` | Common failures | Both tasks |
-| `references/statuses.md` | Status vocabulary | Deciding support |
-| `references/tools.md` | Offline + live tools | Before calling a tool |
-| `references/without-verify.md` | Offline path | No key |
 | `scripts/split_claims.py` | Manual sentence split | Offline |
-| `templates/` | Skill-local claim-list / support-result / check-line | Building the answer |
-| `../../templates/` | Shared claim / evidence / gap / stamp cards | Prefer for packs |
-| `examples/` | Worked cases including card renders | Shaping the answer |
-| `evals/evals.json` | Daily-user tests | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |
+| `references/without-verify.md` | Offline path without a key | No vvfy_ key |
+| `references/statuses.md` | Status vocabulary | Deciding support |
+| `references/without-verify.md` | Offline path | No key |

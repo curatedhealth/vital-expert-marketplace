@@ -7,10 +7,10 @@
 | Worker | Experienced cross-functional colleague |
 | Workflow | Read the request, fill the card from what is there, find the fields that are missing and matter, ask at most three, state the rest as assumptions, set stakes and the internal process |
 | Skill | TR-0.2.1 |
-| Knowledge | `references/rules.md` (I1 to I6), `references/patterns.md` (C1 to C13) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1 to I6), `references/failure-modes.md` / `references/knowledge.md` (C1 to C13) |
 | Tool | None. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/context-card.md`, `assets/intake-questions.md`, `assets/check-line.md` |
+| Template | `templates/context-card.md`, `templates/intake-questions.md`, `templates/check-line.md` |
 | Input | The request, any attached or pasted material, earlier turns, any card already in the conversation |
 | Governance | TR-H1, TR-H7, TR-H11, TR-H12, TR-H13, `references/governance.md` |
 
@@ -62,7 +62,7 @@ for an answer) or **unknown** (does not change this answer, left open).
    they ask this themselves?"). That counts as one question.
 6. **Match the cap to the stakes.** Internal and quick: none, unless the data question
    applies. Leadership: at most one. Leaving the company: up to three.
-7. **Write the questions** with `assets/intake-questions.md`. Each question is one line,
+7. **Write the questions** with `templates/intake-questions.md`. Each question is one line,
    with a short reason in plain words, and offers likely answers where that saves typing.
 8. **State the assumptions** for every other gap in one line each, choosing the careful
    option (`references/governance.md`, careful defaults).
@@ -76,7 +76,7 @@ for an answer) or **unknown** (does not change this answer, left open).
     - Leadership or internal: proceed on stated assumptions; the person can correct them.
     - The person says "just draft it": proceed, keep the assumptions visible, and keep
       unknown product statements as gaps.
-11. **Write the card** (`assets/context-card.md`) and keep it in the conversation for
+11. **Write the card** (`templates/context-card.md`) and keep it in the conversation for
     other skills.
 
 ## If the request already carries enough
@@ -87,7 +87,7 @@ Ask nothing. Write one line saying what you took as given, then do the work:
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

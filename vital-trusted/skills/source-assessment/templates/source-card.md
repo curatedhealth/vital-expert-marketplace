@@ -24,7 +24,7 @@ What it cannot carry: <what it should not be used to say>
 To use it: <what would close the gap, e.g. "the published article", "the event rates", "the 2026 version">
 Next step: this goes through your <kind of review process> before it is used.
 
-<"Not tool-checked." or the VERIFY block from assets/verify-block.md>
+<"Not tool-checked." or the VERIFY block from templates/verify-block.md>
 ```
 
 ## Short card (board, leadership, internal brief)

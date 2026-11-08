@@ -59,7 +59,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **The formula is fixed.** (supported + 0.5 × partial) ÷ (supported + partial +
   unsupported + contradicted + unverifiable), as a whole percent. Statements that are
   not factual (out of scope) are counted on the card and left out of the percent. Show
-  the arithmetic. Details in `references/rules.md`.
+  the arithmetic. Details in `references/method-standards.md` and `references/knowledge.md`.
 - **No threshold, no verdict (TR-H3).** No percent means pass, fail, safe, good enough
   or ready to send. Never write "high confidence means safe to send". The open items
   and a named person decide (TR-H5).
@@ -108,13 +108,16 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/faithfulness-and-source-scores.md` | Steps for the percent and the score lines, and what each means | That task runs |
 | `tasks/verify-card.md` | Steps for counts, open items and the one recommendation | That task runs |
-| `references/rules.md` | The formula, status meanings and score axes, with source and status | Computing or explaining |
-| `references/patterns.md` | Common misuses of the number, with before and after | Before writing the line or card |
-| `references/gap-rules.md` | Gap classes as they apply here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
-| `references/tools.md` | What VERIFY returns that this skill reads; the script | Before computing |
 | `scripts/faithfulness.py` | Percent and card counts from counts or a JSON list of statuses | Any computation |
 | `scripts/test_faithfulness.py` | Tests for the script | After changing the script |
-| `templates/confidence-line.md`, `templates/verify-card.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/payer-value-story.md` | A worked case on a payer value story | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including ones to decline or redirect | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |
+| `references/without-verify.md` | Offline path without a key | No vvfy_ key |

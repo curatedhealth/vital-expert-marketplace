@@ -104,10 +104,12 @@ Safe · possible side effects: 1 mentioned in the draft or the material, to pass
   - doctor's email, last paragraph: rash after starting treatment
 ```
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Invents dosing or AE management advice not in the label/material.
+- Softens a mentioned side effect into "usually fine".
+- Clears a doctor-facing reply without safety gaps flagged.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Quote safety text; gap missing management; never invent clinical advice; route to human MI process.

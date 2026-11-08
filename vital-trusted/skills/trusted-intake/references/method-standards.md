@@ -12,3 +12,11 @@
 | I8 | Providers and deployers of AI systems are to take measures to ensure a sufficient level of AI literacy of their staff. Companies are building AI use policies partly for this reason, which is why intake asks what the person's policy says rather than assuming there is none. | Regulation (EU) 2024/1689 (AI Act), Article 4 | EU | `[CHECK]`: wording and application date not read in the Official Journal. Described as context only. |
 
 Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.
+
+| WC-IFPMA-4.2 | Intake must capture market/use so balance and completeness rules can apply | IFPMA Art. 4.2 | VERIFIED (digest 8 Nov 2026) | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+| WC-IFPMA-4.3 | Ask whether approved labeling / scientific evidence is on hand before external claims | IFPMA Art. 4.3 | VERIFIED (digest 8 Nov 2026) | same PDF |
+| WC-ABPI-6.1 | Capture whether relative claims will be shown with absolute risk | ABPI Cl. 6.1 | VERIFIED (digest 8 Nov 2026) | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
+| WC-ABPI-6.2 | Capture substantiation path (label vs study) and request timing expectations | ABPI Cl. 6.2 | VERIFIED (digest 8 Nov 2026) | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+| WC-FDA-FairBal | US materials: ask whether benefit and risk are presented with fair balance | FDA promotional labeling / fair balance framing | PARTIAL — confirm primary page before Released | https://www.fda.gov/drugs/prescription-drug-advertising-and-promotional-labeling/bad-ad-program |
+
+Rows WC-* accessed 8 November 2026 via WORLD_CLASS_PRACTICES_DIGEST.

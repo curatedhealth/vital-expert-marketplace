@@ -7,7 +7,7 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Inventory everything the material reports, mark what the draft uses, restore what changes the picture, and state the scope of the rest |
 | Skill | TR-3.1.2 |
-| Knowledge | `references/rules.md` (R3, R4, R7, R9, R10), `references/patterns.md` (SR1–SR8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R9, R10), `references/failure-modes.md` / `references/knowledge.md` (SR1–SR8) |
 | Tool | `scripts/balance_cues.py --source material.txt` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |

@@ -7,7 +7,7 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Find each safety statement in the supplied label; quote it word for word with its section, market and date; keep its conditions; gap the rest |
 | Skill | TR-4.1.1 |
-| Knowledge | `references/rules.md` (S10 to S12), `references/patterns.md` (C1 to C10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10 to S12), `references/failure-modes.md` / `references/knowledge.md` (C1 to C10) |
 | Tool | `scripts/label_match.py` where code can run. Companion slot: label source (none yet) |
 | Prompt | This guide |
 | Template | `templates/label-statements.md`, `templates/repair-note.md`, `templates/check-line.md` |
@@ -45,7 +45,7 @@ Any sentence, table cell, bullet or chart label about:
    "Please paste or attach the current approved label for <market> so I can quote it."
    If the person wants to go on, give the structure with every safety cell as
    `[GAP: not supplied — <what> — from section <n> of the approved label]`.
-2. **Find the section first** (`references/rules.md` S11 for EU, S12 for US) and quote
+2. **Find the section first** (`references/method-standards.md` / `references/knowledge.md` S11 for EU, S12 for US) and quote
    the statement word for word, in quotation marks or as a table cell marked as label
    text, with the section number.
 3. **Keep every condition.** Population, cut-off, timing, route, formulation, "in

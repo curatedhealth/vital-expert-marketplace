@@ -9,10 +9,10 @@ Absorbs the support-decision method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Confirm each source was admitted, check each claim against its quoted passage, read each result in plain words, act on it, recheck any rewrite |
 | Skill | TR-8.1.2 |
-| Knowledge | `references/rules.md` (R1–R6), `references/patterns.md` (C5–C12, C15) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R6), `references/failure-modes.md` / `references/knowledge.md` (C5–C12, C15) |
 | Tool | VERIFY `check_claim` (one claim, one passage) or `verify_text` (first pass on supplied text with named sources) |
 | Prompt | This guide |
-| Template | `assets/support-result.md`, `assets/check-line.md` |
+| Template | `templates/support-result.md`, `templates/check-line.md` |
 | Input | The claim list from Part A, the quoted passages, the sources as admitted by `source-assessment` |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H5, TR-H11 |
 
@@ -102,7 +102,7 @@ Never produce the labels anyway (`references/governance.md`).
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

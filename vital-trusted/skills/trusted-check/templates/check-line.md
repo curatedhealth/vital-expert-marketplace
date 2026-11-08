@@ -1,7 +1,7 @@
 # Line contract: what trusted-check accepts
 
 `trusted-check` is the only skill that receives check lines. It does not return a check
-line of its own; its output is the TRUSTED summary (`assets/check-output-*.md`).
+line of its own; its output is the TRUSTED summary (`templates/check-output-*.md`).
 
 Every Build and Prove skill returns lines in this shape. The full contract, with the
 expected line for every skill, including those not yet written, is in

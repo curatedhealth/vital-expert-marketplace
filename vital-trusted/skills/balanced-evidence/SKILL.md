@@ -130,12 +130,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 |---|---|---|
 | `tasks/fair-balance.md` | Benefits with their risks, discontinuations and limitations; reassuring words | That task runs |
 | `tasks/selective-reporting.md` | Fair choice of studies, endpoints, subgroups and time points | That task runs |
-| `references/rules.md` | Primary sources behind the rules, with dates, scope and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
-| `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |
-| `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

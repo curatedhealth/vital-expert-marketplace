@@ -66,7 +66,7 @@ sources with a tool.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns: F2, N1, M2, F5, M8 in `references/patterns.md`. Rule R1 (CONSORT 2025,
+Patterns: F2, N1, M2, F5, M8 in `references/failure-modes.md` / `references/knowledge.md`. Rule R1 (CONSORT 2025,
 absolute and relative effects) supports change 2; R3 supports change 3.
 
 ## Script used
@@ -79,10 +79,12 @@ Derived: risk difference −3.0 percentage points; relative risk 0.667 (crude, f
 rates). The abstract's hazard ratio of 0.66 is a time-to-event estimate and is reported
 as given, not replaced by the crude figure.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Adds trial details, p-values, or endpoints not in the supplied abstract.
+- Turns exploratory wording into primary-endpoint certainty.
+- Fills `[GAP]` with model memory.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Only what the material supports; gaps stay gaps; repair note cites the source lines.

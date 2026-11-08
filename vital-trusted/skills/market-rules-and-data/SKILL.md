@@ -63,7 +63,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
 - **Ask the market, do not assume it (TR-H7).** When the market is unknown and the work
   leaves the company, ask before drafting. Never apply one country's rules to another.
 - **Rules from primary sources, with their scope (TR-H8).** Use only the rules in
-  `references/rules.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
+  `references/method-standards.md` and `references/knowledge.md`, each for its own jurisdiction. A rule marked `[CHECK]` is
   described as usual practice, never as a requirement.
 - **Never invent a statement, code or date (TR-H1, TR-H2).** Job codes, dates of
   preparation, prescribing information text, reporting addresses and approval status
@@ -131,12 +131,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/jurisdiction.md` | Guard, repair and check for market fit and audience reach | That task runs |
 | `tasks/required-statements.md` | Guard, repair and check for statements a market expects | That task runs |
 | `tasks/privacy-in-output.md` | Guard, repair and check for personal details in the output | That task runs |
-| `references/rules.md` | Primary rules by jurisdiction, with dates, scope and status | Before naming any market rule |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and the cue-scan script | Before scanning or handing off |
 | `scripts/scan_output.py` | Cue scan for expected statements and personal details | Checking a draft where code can run |
-| `templates/market-note.md`, `templates/statements-list.md`, `templates/privacy-note.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/payer-follow-up-patient.md`, `examples/eu-deck-us-wording.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

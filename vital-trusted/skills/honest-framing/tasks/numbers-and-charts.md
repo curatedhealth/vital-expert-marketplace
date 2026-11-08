@@ -7,7 +7,7 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | List every figure and chart, check how each is framed against the material, describe what a plain version shows, then fix or mark |
 | Skill | TR-3.2.2 |
-| Knowledge | `references/rules.md` (R1–R4, R5, R6), `references/patterns.md` (NF1–NF7, CH1–CH8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R4, R5, R6), `references/failure-modes.md` / `references/knowledge.md` (NF1–NF7, CH1–CH8) |
 | Tool | `scripts/chart_scale.py`; `../grounded-statements/scripts/risk_metrics.py` for relative and absolute effects. No companion yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md` |

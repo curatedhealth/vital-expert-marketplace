@@ -145,12 +145,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/ai-use-disclosure.md` | Where disclosure is expected and how to word it | That task runs |
 | `tasks/authorship-integrity.md` | AI not an author; no ghostwriting presented as own work | That task runs |
 | `tasks/equity-and-inclusion.md` | People-first, non-stigmatizing language; groups and evidence gaps | That task runs |
-| `references/rules.md` | Primary rules with dates, scope and status | Explaining why a point matters |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and the wording scan | Before scanning or handing off |
 | `scripts/scan_language.py` | Lists phrases to look at for stigmatizing wording | Patient or population material |
-| `templates/use-note.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `examples/doctor-reply-no-review.md`, `examples/kol-article.md` | Worked cases | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including ones to redirect | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

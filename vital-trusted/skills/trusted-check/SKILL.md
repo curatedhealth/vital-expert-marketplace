@@ -97,6 +97,7 @@ Use shared cards under `../../templates/` so results are scannable:
 - Aggregate letter check-lines into a TRUSTED summary (`templates/check-output-*.md`)
 - Point open True items at Prove cards (`../../templates/claim-card.md`, `confidence-card.md`)
 - Stamp with `../../templates/check-line-stamp.md`
+- Emit letter lines via CLI: `python tools/stamp_check_line.py --letter-lines --mode offline --letter 'T|…|flag|…'` (repeat `--letter`; `--mode verify` → Stamp tool-checked)
 
 Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
@@ -107,14 +108,15 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 | `tasks/run-letters.md` | Depth, which letters run, collecting lines | Every check |
 | `tasks/write-summary.md` | Turning lines into the plain summary | Every check |
 | `tasks/prove-handoff.md` | What goes to VERIFY, in what order, what comes back | VERIFY is connected |
-| `references/letter-lines.md` | The line grammar, where each skill's line shapes live, and who prints what under the references | Reading a line, or writing a new skill |
-| `references/rules.md` | What this skill applies and where it comes from | A rule is questioned |
-| `references/patterns.md` | How a final check goes wrong, with before and after | Writing the summary |
-| `references/gap-rules.md` | Gap classes as they appear in a summary | Writing open items |
 | `references/governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
-| `references/tools.md` | Companion slot per task, VERIFY chain, script | Hand-off, script use |
-| `templates/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
-| `templates/check-line.md` | The line contract this skill accepts | Reading lines |
 | `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
-| `examples/*.md` | Worked cases: agency email, team email, board update | Shaping the answer |
-| `evals/evals.json` | Test requests, including one it must not approve | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |
+| `references/letter-lines.md` | The line grammar, where each skill's line shapes live, and who prints what under the references | Reading a line, or writing a new skill |

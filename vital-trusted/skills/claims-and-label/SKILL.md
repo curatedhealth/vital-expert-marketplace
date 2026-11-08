@@ -55,7 +55,7 @@ and asks for any that are missing and would change the answer (TR-H7):
    internal.
 3. **The use, as the person states it:** promotional, scientific exchange, a reply to
    an unsolicited question, disease information, or internal only.
-4. **The market**, when the piece leaves the company. Rules differ (`references/rules.md`).
+4. **The market**, when the piece leaves the company. Rules differ (`references/method-standards.md` and `references/knowledge.md`).
 
 If the person wants to proceed without the label, draft with every product statement
 marked as a gap and say so in one line.
@@ -156,12 +156,14 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/label-and-intended-use.md` | Guard, repair and check against the label or intended purpose | That task runs |
 | `tasks/promotional-boundary.md` | Scientific exchange, promotion, replies to unsolicited questions, audience | That task runs |
 | `tasks/comparative-claims.md` | Comparisons, superlatives, "first" and "only", disparagement | That task runs |
-| `references/rules.md` | Primary rules with dates, scope and status, by jurisdiction | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
-| `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
-| `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |
-| `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
-| `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

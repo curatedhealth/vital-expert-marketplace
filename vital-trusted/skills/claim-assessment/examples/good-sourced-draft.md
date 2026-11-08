@@ -36,3 +36,31 @@ TRUSTED / claim-assessment: not tool-checked (offline tools) · 1 claim · 0 fou
 ```
 
 **Why it works:** Atomic claim, quoted passage, plain-language status, explicit rewrite action, offline label, no invented certainty. Substantiation for external use remains a human/MLR step (IFPMA 4.3).
+
+## Claim card #2 (causal verb)
+
+```text
+┌─ Claim #2 ─────────────────────────────────────────
+│ Claim:     Velostra cuts heart failure admissions …
+│ Status:    Unsupported — passage does not use causal “cuts”
+│ Passage:   reports adjusted hazard ratio / rates only
+│ Locator:   same registry summary
+│ Action:    Replace with association wording
+│ Label:     not tool-checked
+└────────────────────────────────────────────────────
+```
+
+## Stamp (full)
+
+```text
+TRUSTED / claim-assessment: not tool-checked (offline tools) · 2 claims · 0 found · 1 partly · 1 unsupported · gaps open
+```
+
+
+## Why statuses are not verdicts
+
+“Partly found” and “Unsupported” are word-overlap labels against the supplied passage. They are not regulatory clearance and not a statement that the claim is false in the world.
+
+## Method note
+
+This example is a teaching fixture for known-answer evals. Names (Velostra, NORLA, Example Pharma) are fictional. Prefer shared cards under `../../templates/` when rendering scannable packs. Stamp lines match `templates/check-line-stamp.md`.

@@ -48,7 +48,7 @@ Stop and ask before continuing when:
   the person intends to use it without a qualified translator or the company's review.
   Translate as a draft and say who settles it; do not present it as ready.
 - The request is to translate a validated questionnaire or other instrument. Point to
-  the instrument owner's process (`references/rules.md` R9).
+  the instrument owner's process (`references/method-standards.md` / `references/knowledge.md` R9).
 
 ## Never claimed
 

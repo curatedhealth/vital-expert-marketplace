@@ -3,7 +3,7 @@
 Invented case for teaching. "Brelvia" is a fictional product; the registry, figures,
 findings and source scores are made up. No VERIFY tool was called for this example: the
 findings below show the shape the card is built from, not a real run. Source score axis
-names follow `references/rules.md` C7, which is `[CHECK]`.
+names follow `references/method-standards.md` / `references/knowledge.md` C7, which is `[CHECK]`.
 
 ## Request
 
@@ -88,4 +88,4 @@ the statement it concerns, the next internal process named in plain words, no th
 and no send decision. The currency axis is absent because no currency check ran; it is
 left out, not shown as 0. The total (86) is not the sum of the axes shown (77): the
 connector is described as rescaling the remaining weights to 100 when an axis is empty
-(`references/rules.md` C7, `[CHECK]`). Print the total as returned; never recompute it.
+(`references/method-standards.md` / `references/knowledge.md` C7, `[CHECK]`). Print the total as returned; never recompute it.

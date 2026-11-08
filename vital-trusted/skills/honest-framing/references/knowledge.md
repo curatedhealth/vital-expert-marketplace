@@ -71,7 +71,7 @@ on. All examples are invented for teaching; no real product, trial or person. Pr
 names used here ("Velostra", "Corvane", "KELNA-1", "drug D") are fictional.
 
 Pattern ids are for this file only. In what the person reads, describe the problem in
-plain words (TR-H13). Rules R1 to R10 are in `references/rules.md`; where a rule is
+plain words (TR-H13). Rules R1 to R10 are in `references/method-standards.md` / `references/knowledge.md`; where a rule is
 outside its scope for the piece, it is good practice, not a requirement.
 
 ## Contents

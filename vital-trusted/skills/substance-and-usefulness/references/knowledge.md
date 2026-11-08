@@ -48,7 +48,7 @@ fictional.
 - Pairing traps P1–P3 (Tangible pushing into invention)
 
 Pattern ids are for this file only. In what the person reads, describe the problem in
-plain words (TR-H13). U-ids refer to `references/rules.md`.
+plain words (TR-H13). U-ids refer to `references/method-standards.md` / `references/knowledge.md`.
 
 ## Vague statements
 

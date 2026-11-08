@@ -89,9 +89,9 @@ not judge whether any side effect matters clinically.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns FB3, FB5, FB6 in `references/patterns.md`. Rule R10 (FDA payor communications,
+Patterns FB3, FB5, FB6 in `references/failure-modes.md` / `references/knowledge.md`. Rule R10 (FDA payor communications,
 limitations explicit) is US-only and was not cited for a Swiss payer; the Swiss sources
-are `[CHECK]` in `references/rules.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
+are `[CHECK]` in `references/method-standards.md` / `references/knowledge.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
 reporting and informs the practice only.
 
 ## Check line returned to trusted-check
@@ -106,10 +106,12 @@ Unbiased · selective reporting: 0 studies, endpoints or time points in the mate
 
 The check line counts the draft as received, before the repair.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Leaves discontinuations / harms out of a value story that stresses benefits.
+- Cherry-picks one arm without the comparator rates.
+- Invents "balanced" as a rubber stamp without checking omitted harms.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Surface omitted harms/discontinuations as gaps; restore fair balance; no invented completeness.

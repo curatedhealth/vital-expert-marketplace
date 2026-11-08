@@ -16,7 +16,7 @@ from format_citation import format_chicago, format_citation  # noqa: E402
 from passage_support import decide  # noqa: E402
 from render_report import generate_report  # noqa: E402
 from score_source_offline import score_source  # noqa: E402
-from stamp_check_line import stamp  # noqa: E402
+from stamp_check_line import letter_summary, stamp  # noqa: E402
 
 
 class ToolsSuiteTests(unittest.TestCase):
@@ -76,6 +76,23 @@ class ToolsSuiteTests(unittest.TestCase):
         out = stamp(mode="offline", skill="claim-assessment")
         self.assertIn("not tool-checked", out["check_line"])
         self.assertEqual(out["skill"], "claim-assessment")
+        live = stamp(mode="verify", skill="claim-assessment")
+        self.assertIn("Prove live MCP", live["check_line"])
+
+    def test_stamp_letter_summary(self):
+        letters = [
+            {"code": "T", "aspect": "grounded/sourced", "status": "flag", "note": "causal verb"},
+            {"code": "R", "aspect": "claims/label", "status": "flag", "note": ""},
+            {"code": "D", "aspect": "work-record", "status": "gap", "note": "uncleared draft"},
+        ]
+        out = letter_summary(letters=letters, mode="offline")
+        text = out["text"]
+        self.assertIn("T · grounded/sourced: flag · causal verb", text)
+        self.assertIn("R · claims/label: flag", text)
+        self.assertIn("D · work-record: gap · uncleared draft", text)
+        self.assertTrue(text.strip().endswith("Stamp: TRUSTED / trusted-check: not tool-checked"))
+        live = letter_summary(letters=letters, mode="verify")
+        self.assertIn("Stamp: TRUSTED / trusted-check: tool-checked", live["text"])
 
     def test_render_report_evidence_table(self):
         findings = [

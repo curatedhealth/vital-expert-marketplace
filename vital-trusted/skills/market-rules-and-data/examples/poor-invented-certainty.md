@@ -87,10 +87,12 @@ reportability judgment), TR-H1 (the model question left as a gap). Neighbors: th
 input side of the same notes is `responsible-inputs`; the hospital stay is
 `patient-safety`.
 
+## Why it fails (anti-pattern to avoid)
 
-## Why it fails
+- Invents a market rule citation for a jurisdiction not confirmed.
+- Pastes patient-identifiable notes into a payer follow-up.
+- Marks `[CHECK]` rules as verified.
 
-- States figures or certainty not present in supplied material.
-- Omits `[GAP]` / `[CHECK]` where required.
-- Treats model wording as a source.
-- Skips human gate before external use.
+## What the skill must do instead
+
+Confirm jurisdiction; keep patient data out; leave `[CHECK]` rules unchecked until confirmed.

@@ -9,10 +9,10 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
 | Worker | Evidence lead |
 | Workflow | Collect the statuses VERIFY returned, confirm where they came from, count, compute, print the score lines and the confidence line, say what they mean |
 | Skill | TR-8.3.1 |
-| Knowledge | `references/rules.md` (C1–C7), `references/patterns.md` (P1–P10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C1–C7), `references/failure-modes.md` / `references/knowledge.md` (P1–P10) |
 | Tool | `scripts/faithfulness.py` where code can run. Companion slot: reads results of VERIFY `check_claim` / `verify_text` (via `claim-assessment`) and `qualify_source` / `check_currency` (via `source-assessment`); calls none |
 | Prompt | This guide |
-| Template | `assets/confidence-line.md`, `assets/check-line.md` |
+| Template | `templates/confidence-line.md`, `templates/check-line.md` |
 | Input | The findings from `claim-assessment` (one status per statement), the qualified sources from `source-assessment`, the reference list from `citation-and-record`, who will read the work |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H5, TR-H13 |
 
@@ -21,7 +21,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
 1. **Confirm the statuses came from VERIFY.** Each status must have been returned in
    this conversation by `check_claim` or `verify_text`. If any were decided by reading
    (a "manual" decision, a Build skill's "not found in the material", the person's own
-   tally), keep them apart. Do not mix them into the count (`references/patterns.md` P2).
+   tally), keep them apart. Do not mix them into the count (`references/failure-modes.md` / `references/knowledge.md` P2).
 2. **If no status came from VERIFY**, give no confidence figure. Say so in one line,
    offer the counts from reading labeled "not tool-checked", and say what VERIFY would
    add (`references/tools.md`). Stop here for the percent.
@@ -45,7 +45,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
    to the question, how complete its details, whether it was checked for retraction),
    not the statement.
 7. **Print the confidence line** immediately under the reference list, in the format of
-   `assets/confidence-line.md`, with the arithmetic.
+   `templates/confidence-line.md`, with the arithmetic.
 8. **Say what it means, in plain words**, once per answer:
    - It means: of the factual statements checked, this share is backed by the passages
      supplied, with partly backed statements counting half.
@@ -53,7 +53,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
      good, that the evidence is balanced, or that the work is allowed or ready to send.
    - The check compares words in the statement with words in the passage. A weaker or
      reworded sentence can still come back backed, so the open items and a human read
-     still matter (`references/rules.md` C5).
+     still matter (`references/method-standards.md` / `references/knowledge.md` C5).
 9. **Hand on** to the card (`tasks/verify-card.md`).
 
 ## Questions people ask
@@ -71,7 +71,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

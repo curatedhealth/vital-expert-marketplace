@@ -2,7 +2,7 @@
 
 Follows the fixed text. Plain language, no rule codes (TR-H13). Size it to the stakes
 (TR-H12): for internal notes, one or two lines; for anything leaving the company, the
-full note. If Part B found something, the safety flag (`assets/safety-flag.md`) comes
+full note. If Part B found something, the safety flag (`templates/safety-flag.md`) comes
 before the fixed text, not inside this note.
 
 ## Full note

@@ -10,7 +10,7 @@ AI did.
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Inventory materials, assistant and connectors, and AI actions; label where each entry comes from; size the note to the stakes |
 | Skill | TR-7.1.1 |
-| Knowledge | `references/rules.md` (R1, R2, R4), `references/patterns.md` (P1–P6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4), `references/failure-modes.md` / `references/knowledge.md` (P1–P6) |
 | Tool | None. Companion slot: VERIFY `build_record` through `citation-and-record`, only with a named clearer |
 | Prompt | This guide |
 | Template | `templates/record-note.md`, `templates/check-line.md` |

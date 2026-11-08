@@ -127,14 +127,16 @@ Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 | `tasks/clinical-safety-statements.md` | Guard, repair and check for safety statements against the label | Part A, statements |
 | `tasks/patient-safety-language.md` | Guard, repair and check for patient-facing wording | Part A, patient material |
 | `tasks/side-effect-flag.md` | How to spot and flag a possible safety report | Part B, every time |
-| `references/rules.md` | Primary sources, dates, scope and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Guard and repair steps |
-| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
-| `references/tools.md` | Companion slots and the two scripts | Before computing or handing off |
 | `scripts/scan_safety_mentions.py` | Finds words that may signal a safety report, or patient-wording problems | A backstop while reading inputs or patient drafts |
 | `scripts/label_match.py` | Compares safety sentences in a draft with the supplied label text | Checking statements against the label |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `templates/*.md` | Safety flag, label table, repair note, check line | Building the answer |
-| `examples/doctor-email-side-effect.md`, `examples/social-comment-reply.md` | Worked cases from everyday work | Shaping the answer |
-| `evals/evals.json` | Test requests, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |

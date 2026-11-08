@@ -9,7 +9,7 @@ Make visible what was assumed, what is still a gap, and who needs to decide what
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Collect assumptions, gaps and pending decisions from the work; give each an owner as the person names it; size the list to the stakes |
 | Skill | TR-7.1.2 |
-| Knowledge | `references/patterns.md` (A1–A5), `references/gap-rules.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (A1–A5), `references/knowledge.md` |
 | Tool | None. Companion slot: VERIFY `build_record` findings, through `citation-and-record` |
 | Prompt | This guide |
 | Template | `templates/record-note.md` (sections "Assumed" and "Open"), `templates/check-line.md` |

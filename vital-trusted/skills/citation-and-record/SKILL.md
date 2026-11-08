@@ -115,12 +115,15 @@ Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables ove
 |---|---|---|
 | `tasks/build-citations.md` | Steps, tool call and fallback for references | That task runs |
 | `tasks/build-record.md` | Steps, tool call, clearer rules and handing on open items | That task runs |
-| `references/rules.md` | Primary sources behind the rules, dated, with status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Building or repairing a record |
-| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
-| `references/tools.md` | VERIFY arguments, returns, pitfalls; scripts | Before any call |
 | `scripts/plain_reference.py` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
-| `templates/*.md` | Reference list, record note, open items, check line | Building the answer |
-| `examples/advisory-board-pre-read.md` | A worked case: three sources, one missing year, two contradicted claims | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/method.md` | Method entrypoint | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules and patterns | Guard and repair |
+| `references/failure-modes.md` | Common failures | Guard and repair |
+| `references/tools.md` | Offline and live tools | Before calling a tool |
+| `templates/` | Skill-local output formats | Building the answer |
+| `../../templates/` | Shared claim/source/confidence/evidence/gap/stamp cards | Prefer for scannable packs |
+| `examples/` | Good and poor worked cases | Shaping the answer |
+| `evals/evals.json` | Functional evals | Testing |
+| `references/without-verify.md` | Offline path without a key | No vvfy_ key |

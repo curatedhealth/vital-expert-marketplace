@@ -117,7 +117,7 @@ person. "Brevanzo", "Kelandro", "Ventrelo Rhythm" and the trial names are fictio
 Use them for the shape of a fix only; never carry a name, trial or figure from this
 file into an answer.
 
-Rule ids refer to `references/rules.md`. Where a rule is `[CHECK]` or out of scope for
+Rule ids refer to `references/method-standards.md` / `references/knowledge.md`. Where a rule is `[CHECK]` or out of scope for
 the market, the pattern is good practice, not a cited requirement.
 
 ## Contents
