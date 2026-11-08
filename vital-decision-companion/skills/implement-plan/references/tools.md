@@ -1,21 +1,24 @@
-# Tool calls
+# Tools - implement-plan
 
-## Companion slot
+## Default (no MCP)
 
-`decision_run_stage` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_run_stage (implement)
-
-Arguments: session_id, stage implement. Required for complete: roles.decide (person). Optional: owner, first_milestone, review_date, review_trigger, communication_plan, key_actions, if_then_plans[] `{signal, owner, action}`, dependencies, resources, success_metrics.
-
-Returns: complete when roles.decide is a named person. Warnings may include `optional_missing` for first_milestone and review_date — ask for them. Gap `role_only_name`: ask who the person is.
-
-Pitfall: Completing on a decide name alone still leaves the plan thin for the person; ask for owner, milestone, and review trigger.
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Gap `role_only_name` | Ask for the person. Advise/Inform/Implement may keep role entries only if the person insists — say they stay unverified. When reading roles, accept string or `{name, status: "unverified_person"}`. |
-| Warning `optional_missing` (first_milestone, review_date) | Ask for those fields. |
-| if_then_plans | Send `[{signal, owner, action}]`. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill implement-plan` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

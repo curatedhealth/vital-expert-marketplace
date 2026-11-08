@@ -1,36 +1,24 @@
-# Tool calls
+# Tools - frame-decision
 
-## Companion slot
+## Default (no MCP)
 
-`decision_run_stage` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_run_stage (how_to_decide)
-
-Arguments: session_id, stage how_to_decide. Required for complete: payload.statement, payload.goal, payload.decider, payload.deadline. Optional: core_issue, consequence, reversibility, authority_mode, criteria, values, assumptions, decision_type, type_confirmed_by, people_decision.
-
-Rigor: send `rigor` (decide_quickly | tradeoff | dig_deep | full_process) only on the first set. If the session already has a rigor, send `change_rigor: {to, by, reason}` with `by` as the person's name. Read back warning `rigor_unchanged` when it appears.
-
-Returns: complete true when statement, goal, decider, and deadline are present. Gaps name missing fields when the connector supports it. Warning `people_decision` when that flag is set — read the warning text exactly.
-
-Pitfall: Sending rigor again without change_rigor leaves the session rigor unchanged (warning `rigor_unchanged`).
-
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
-
-## Also named
-
-- `decision_classify`
-- `decision_rigor_guide`
-
-These tools stay on their own connector. This skill does not reimplement them.
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Session rigor unset | Send `rigor` once with the person's confirmed level. |
-| Session already has rigor | Send `change_rigor {to, by: <person>, reason}`. Never re-send bare `rigor` expecting a change. |
-| Warning `rigor_unchanged` | Say the rigor did not change and ask whether to send change_rigor. |
-| Person says it is a people decision | Send `people_decision: true` first. Say only: "I've flagged this as a people decision; the connector's notice will follow." Stop — no HR/legal/AI Act wording and no who/when question until the connector warning returns; then read it verbatim. If absent (v0.2), use rules R7 and say it is the skill's notice. |
-| Gap `role_only_name` on decider | Ask who the person is. Do not store a role title alone. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill frame-decision` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

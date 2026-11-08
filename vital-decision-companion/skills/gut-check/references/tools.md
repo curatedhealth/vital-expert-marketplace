@@ -1,17 +1,24 @@
-# Tool calls
+# Tools - gut-check
 
-## Companion slot
+## Default (no MCP)
 
-`decision_status` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
+| Action | CLI (from plugin `tools/`) |
+|---|---|
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill gut-check` |
 
-## decision_status
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
 
-Arguments: session_id. Use it to confirm the grid is complete and to read the last computed view and robustness result before the gut check. Do not call it more than once every few turns (DC-H18).
+## Optional MCP (keys present + person asked)
 
-## decision_run_stage (make_decision) — lean only
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
 
-Optional: `lean: {option, by}` when the person states which option they lean toward. Never send `chosen_option` from this skill. Never send `replace: true`.
-
-## Computed view
-
-The computed view comes from Navigator `methods_mcda_rank`, reached through the trade-off and hand-off skills (DC-H19). This skill reads it; it never computes or re-orders options itself.
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

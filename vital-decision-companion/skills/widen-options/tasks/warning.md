@@ -7,10 +7,10 @@
 | Worker | Decision coach (option list). Does not choose the option and does not sign. |
 | Workflow | Read the warning, ask the person for the missing option, store only what they say, stop. |
 | Skill | DC-2.2 Widen options |
-| Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
+| Knowledge | `references/knowledge.md`, `references/knowledge.md`, `references/failure-modes.md` |
 | Tool | Decision Companion `decision_widen_options`; see the companion slot |
 | Prompt | Use only fields the person supplied or the tool returned. |
-| Template | `assets/worksheet-output.md` |
+| Template | `templates/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
 | Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
@@ -33,4 +33,4 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `assets/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.

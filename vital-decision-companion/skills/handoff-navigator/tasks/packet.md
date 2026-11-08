@@ -7,10 +7,10 @@
 | Worker | Decision coach (navigator handoff). Does not choose the option and does not sign. |
 | Workflow | Ask, call `decision_handoff_navigator`, read the result, ask one question, stop. |
 | Skill | DC-9.1 Handoff to Navigator |
-| Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
+| Knowledge | `references/knowledge.md`, `references/knowledge.md`, `references/failure-modes.md` |
 | Tool | Decision Companion `decision_handoff_navigator`; see the companion slot |
 | Prompt | Use only fields the person supplied or the tool returned. |
-| Template | `assets/worksheet-output.md` |
+| Template | `templates/worksheet-output.md` |
 | Input | The person's words and, when a session exists, `session_id`. |
 | Governance | DC-H1, DC-H3, DC-H4, DC-H5. A missing field is left out of the payload and shown as "not given yet". |
 
@@ -31,4 +31,4 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `templates/worksheet-output.md`. Then the closing line.

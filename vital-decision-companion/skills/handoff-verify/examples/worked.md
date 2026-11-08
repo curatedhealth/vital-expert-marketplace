@@ -1,4 +1,4 @@
-> **Teaching material — never input.** The names, dates, and figures below are
+> **Teaching material, never input.** The names, dates, and figures below are
 > invented for shape only (DC-H2). Do not copy them into a live answer.
 
 # One sentence, no passage

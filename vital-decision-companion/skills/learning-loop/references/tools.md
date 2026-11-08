@@ -1,28 +1,24 @@
-# Tool calls
+# Tools - learning-loop
 
-## Companion slot
+## Default (no MCP)
 
-`decision_run_stage` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_run_stage (learning_loop)
-
-Arguments: session_id, stage learning_loop. Required: payload.review_date, payload.success_signal, payload.authored_by. Optional: probability (0–1), key_assumptions, what_happened, outcome_vs_process, lessons, assumption_to_change.
-
-Do not send `expected_outcome` together with `success_signal` — `expected_outcome` is an alias of `success_signal` and they collide.
-
-Returns: complete true only when review_date, success_signal, and authored_by are present. Otherwise gaps name the missing fields, or `refused:` when authored_by is missing or an AI value.
-
-Pitfall: Omitting authored_by refuses the call. Sending both success_signal and expected_outcome collides.
-
-## Also named
-
-- `decision_attach_notes` (retro narrative)
-- `decision_status`
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Alias collision on expected_outcome | Send `success_signal` only. |
-| Gap `role_only_name` | Ask who is recording the review. |
-| Retro results | Merge via run_stage with outcome_vs_process, lessons, assumption_to_change; plus an owner note. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill learning-loop` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

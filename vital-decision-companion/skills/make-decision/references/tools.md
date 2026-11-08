@@ -1,26 +1,24 @@
-# Tool calls
+# Tools - make-decision
 
-## Companion slot
+## Default (no MCP)
 
-`decision_run_stage` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_run_stage (make_decision)
-
-Arguments: session_id, stage make_decision, payload `{chosen_option, authored_by}` required. Optional: rationale, confidence_pct, saying_no_to, trade_offs. Do not send `confidence` (wrong name). Leave dissent to record-dissent.
-
-Returns: complete when chosen_option and authored_by are present. Gaps may include `stage_order`, `unknown_option`, `role_only_name`.
-
-Pitfall: Sending confidence instead of confidence_pct drops the number. Sending replace:true wipes prior merge fields.
-
-A call the skill must refuse returns `gaps` whose text starts with `refused:`. The rejected field is not stored.
-
-Schema source: `mcps/decision_companion/tools.py`, content pack `2026-10-26.1`.
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Gap `stage_order` | Name unmet stages. Ask: complete them now, or skip with `skip {stage, by: <person>, reason}`? |
-| Gap `unknown_option` | Call `decision_status`, read stored options, ask which name matches. |
-| Gap `role_only_name` | Ask who the person is. Do not store a role title. |
-| Field `confidence_pct` | Always this name. Never `confidence`. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill make-decision` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

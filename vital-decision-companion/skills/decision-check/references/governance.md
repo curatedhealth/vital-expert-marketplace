@@ -3,7 +3,7 @@
 ## Boundaries
 
 - This skill does one job: check readiness before the choice or the brief. Sibling skills named in the plugin README own the other jobs.
-- Ontology scores stay on Ontology Navigator. Claim checks stay on Verify.
+- Sealed ontology scores stay on Ontology Navigator. Adding up the person's own weights and ratings is `decision_score`. Claim checks stay on Verify.
 - Company SOPs and a named decision owner come before this draft.
 
 ## Stop rules

@@ -1,32 +1,43 @@
 {
   "name": "vital-decision-companion",
-  "version": "0.3.17",
-  "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied.",
+  "version": "0.5.3",
+  "description": "FOCUSED decision coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Runs offline with a local session file and pack tools for worksheets, score with \u00b110 robustness, and brief. Person decides at every step; skills never name a winner. Optional vdec_ key enables Decision Companion cloud sync or usage only. Optional vont_ / vvfy_ for Navigator sealed scores and Verify claim checks. Human oversight required. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
-    "name": "Vital.Expert",
+    "name": "Crossroads Catalyst GmbH - Vital Expert",
     "url": "https://vital.expert"
   },
-  "license": "UNLICENSED",
+  "homepage": "https://vital.expert",
+  "repository": "https://github.com/curatedhealth/vital-expert-main",
+  "license": "LicenseRef-CrossroadsCatalyst-Proprietary",
+  "keywords": [
+    "decision quality",
+    "FOCUSED",
+    "coaching",
+    "life sciences",
+    "pharma",
+    "tradeoff",
+    "offline-first"
+  ],
   "skills": "./skills",
   "userConfig": {
     "decision_key": {
       "type": "string",
-      "title": "VITAL Decision Companion key",
-      "description": "The vdec_ key. The host sends it only to the Decision Companion connector.",
+      "title": "VITAL Decision Companion key (optional)",
+      "description": "Optional vdec_ key for cloud sync, export, or usage only. Not required for FOCUSED coaching, local score, or brief.",
       "required": false,
       "sensitive": true
     },
     "navigator_key": {
       "type": "string",
-      "title": "VITAL Ontology Navigator key",
-      "description": "Optional vont_ key. Used only for decide_* and methods_* on the Navigator connector.",
+      "title": "VITAL Ontology Navigator key (optional)",
+      "description": "Optional vont_ key for sealed decide_* / methods_* handoffs. Not required for local score.",
       "required": false,
       "sensitive": true
     },
     "verify_key": {
       "type": "string",
-      "title": "VITAL Verify key",
-      "description": "Optional vvfy_ key. Used only for qualify_source and check_claim on the Verify connector.",
+      "title": "VITAL Verify key (optional)",
+      "description": "Optional vvfy_ key for qualify_source / check_claim handoffs.",
       "required": false,
       "sensitive": true
     }

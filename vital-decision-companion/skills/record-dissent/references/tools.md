@@ -1,34 +1,24 @@
-# Tool calls
+# Tools - record-dissent
 
-## Companion slot
+## Default (no MCP)
 
-`decision_attach_notes` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_status (schema probe — own turn, only when needed)
-
-Arguments: session_id, `include_schemas: true`.
-
-Use it only before writing `dissent[]` onto make_decision when the connector version is not yet known. Never probe instead of storing a stated dissent as a note. Say "Checking whether this connector can store dissent on the decision" and **stop**. Do not narrate `optional` fields until the tool has returned.
-
-On the next turn, use `stage_schemas.make_decision.optional`: if it contains `no_dissent_attested_by`, merge semantics are present (v0.3).
-
-## decision_attach_notes
-
-Arguments: session_id, stage make_decision, notes (dissent or no-dissent template), source (`participant` | `owner`).
-
-This path always works. Always keep the participant/owner note.
-
-## decision_run_stage (make_decision) — merge path only
-
-Optional: `dissent: [{holder, text}]` or `no_dissent_attested_by`. Never send `replace: true`. Only when v0.3 is known (probe result, or the person said so).
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Dissent stated (holder + words) | `decision_attach_notes` participant note this turn. No probe first. |
-| Writing dissent[] onto the choice, version unknown | `decision_status {include_schemas: true}` + the checking line; stop. |
-| Person names the old connector / v0.2 | Notes only; no probe; one line saying so. |
-| After probe: `no_dissent_attested_by` in make_decision.optional | Merge path: notes + dissent[] / no_dissent_attested_by without replace. |
-| After probe: field absent (v0.2) | Notes only. Do not call make_decision for dissent. |
-| Always | Never `replace: true`. Never describe the schema before the probe result. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill record-dissent` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

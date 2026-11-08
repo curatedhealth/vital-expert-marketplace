@@ -1,19 +1,24 @@
-# Tool calls
+# Tools - handoff-verify
 
-## Companion slot
+## Default (no MCP)
 
-`decision_handoff_verify` is available when Decision Companion is connected with a `vdec_` key. Without it, run the task by hand and label the turn not tool-checked (DC-H4).
-
-## decision_handoff_verify
-
-Arguments: session_id, claims. Prefer `claims[] {text, source_url, passage, raised_by}` when the person has them; plain strings otherwise.
-
-Returns: handoff packet with `steps[]`. Follow steps: `qualify_source`, then `check_claim`. On `source_missing`, ask for the source. Never say supported without a qualified source and a check_claim result.
-
-## Connector version
-
-| Condition | What to do |
+| Action | CLI (from plugin `tools/`) |
 |---|---|
-| Structured claims accepted | Send claims[] objects with text, source_url, passage, raised_by. |
-| Strings only | Send claim strings; still follow qualify then check. |
-| Gap `source_missing` | Ask for the source. Never say supported. |
+| Start / load session | `session_init.py`, session JSON path |
+| Patch stage fields | `session_patch_stage.py` |
+| Options / matrix | `session_set_options.py`, `session_set_matrix.py` |
+| Score ±10 | `score_tradeoff_offline.py` |
+| Worksheet / brief | `render_worksheet.py`, `render_brief.py` |
+| Gaps | `structural_decision_checks.py` |
+| Handoff packet only | `format_handoff_packet.py --target navigator|verify` |
+| Stamp | `stamp_focused_line.py --mode local --skill handoff-verify` |
+
+Say whether the model should **run** or **read** each CLI. Handle CLI errors without inventing data.
+
+## Optional MCP (keys present + person asked)
+
+- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
+- Navigator sealed tools with `vont_` after packet
+- Verify claim tools with `vvfy_` after packet
+
+Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

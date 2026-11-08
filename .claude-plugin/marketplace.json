@@ -12,11 +12,6 @@
       "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). Offline-first; optional TRUSTED Prove live MCP via vvfy_ key (https://mcp.vital.expert/api/mcp/verify, server id trusted-prove). The vital-verify plugin is retired \u2014 install this pack only."
     },
     {
-      "name": "vital-decision-companion",
-      "source": "./vital-decision-companion",
-      "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied."
-    },
-    {
       "name": "vital-navigator-outcomes",
       "source": "./vital-navigator-outcomes",
       "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement \u2014 from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools on vont_; optional Curator steward skills (pull/classify/process/decide/enrich) on vcur_. Marketplace v0.3.1-live-test."
@@ -80,6 +75,11 @@
       "name": "vital-mlr-review",
       "source": "./vital-mlr-review",
       "description": "READY / MLR board preparation (Released 0.4.1 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
+    },
+    {
+      "name": "vital-decision-companion",
+      "source": "./vital-decision-companion",
+      "description": "Leadership decision coaching on its own connector. It adds up the person's own weights and ratings; sealed scores stay on Ontology Navigator and claim checks stay on Verify. Tools on mcp.vital.expert/api/mcp/decision-companion (vdec_)."
     }
   ]
 }

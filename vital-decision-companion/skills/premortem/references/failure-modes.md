@@ -1,0 +1,34 @@
+# Failure modes - premortem
+
+## Legacy gap rules (migrated)
+
+# Gap rules
+
+A missing value is left out of the stored payload (never store `[GAP]` as a value); the connector reports it as a gap and the brief shows it as "not given yet". In replies to the person, say "not given yet" (or name what is missing).
+
+Classify every miss before you write it. Never turn an absent field into a fact.
+
+| Class | Meaning here | How to word it |
+|---|---|---|
+| found | The tool stored the hypotheses | Read them back |
+| field missing | Early signal or mitigation is absent | Leave it out and ask once |
+| covered but absent | The person has no failure in mind | Say the list is empty |
+| not covered | No vdec_ key | Write the list by hand and label not tool-checked |
+
+Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
+
+- found: quote the tool field.
+- field missing: name the field and leave it empty.
+- covered but absent: the tool ran and the value is intentionally empty. Say so.
+- not covered: the connector or the key is missing. Label the turn not tool-checked.
+
+## Library
+
+| ID | Mode | Detection question |
+|---|---|---|
+| FM-premorte-01 | Invented certainty | Did any field appear that the person did not supply? |
+| FM-premorte-02 | Winner language | Did the skill recommend or rank as advice? |
+| FM-premorte-03 | advice disguised as premortem | Is the anti-pattern 'advice disguised as premortem' present? |
+| FM-premorte-04 | MCP assumed | Did the skill require a key for ordinary coaching? |
+
+Screen every package against every mode before closing the turn.

@@ -1,4 +1,77 @@
+## 0.5.3 — 8 November 2026 (Released)
+
+- Owner yes ("release and ship to production"): flip `vital.extensions.json` `release_state` Pilot → **Released**; sync buyer tip `vital-decision-companion` on `curatedhealth/vital-expert-marketplace`.
+- Not claimed as October right-call closed: coach arms smoke only (Haiku+Opus 16×6); grader-with-keys still open. Stay honest on quality vs packaging Released.
+
+### 0.5.3 — earlier same day (Pilot, validate + dist + Step 7 partial)
+
+- `plugin.json` trimmed to Claude CLI-valid keys; VITAL fields in `.claude-plugin/vital.extensions.json`. `claude plugin validate` **passes** (M).
+- `packaging/build_dist.py`: `dist/claude`, `dist/agent-plugins` (Agent Plugins 1.0.0 `$schema`), `dist/perplexity` zip. Perplexity connectors noted as blocked until OAuth.
+- Evals extracted to `mcps/decision_companion-evals/` (private-repo-ready). Plugin install tree stays eval-free.
+- Step 7: static routing gate 210/21/63 OK; live Haiku refuse 90–95%; Opus sample n=5 route 100% refuse 80%. Sealed coach arms Haiku+Opus complete (smoke); full right-call grader still deferred.
+- Host uninstall proof checklist + Cowork retest pointer at 0.5.3. Active CI workflow landed.
+
+## 0.5.2 — 8 November 2026 (Pilot, packaging / SSOT)
+
+Measured packaging lane against Cowork F1–F9 (no Released flip):
+
+- Shared rules SSOT: `mcps/decision_companion/src/shared/rules-core.md` + `rules-full.md` with `packaging/build_shared.py` inject/copy and `--check` drift gate.
+- Removed broken `evals/evals.json` links from skill Files tables; evals stay in monorepo `evals/` only.
+- `metadata.version` quoted strings; `scripts/validate.py` accepts string `route` (semicolon phrases) and reads evals from the monorepo path; contract path `contract/stage_schemas.json`.
+- Packaging tools: `lint_skills.py`, `check_package.py`, `check_tokens.py` (writes `reports/tokens.csv`).
+- OAuth: `docs/SPEC_OAUTH_CONNECTORS.md` (spec only). README listing gaps filled without inventing unmeasured privacy URLs.
+- Removed accidental `tools/mcps/` nest.
+
+Not claimed: October regression re-run, Claude CLI validate green (same extension-key reject as Released TRUSTED), portal Validate, Perplexity/OpenAI dist load.
+
+## 0.5.1 — 8 November 2026 (Pilot, skill rename wave)
+
+Breaking skill id renames (folder `name` must match; reinstall plugin after sync):
+
+| Old | New |
+|---|---|
+| `bias` | `bias-card` |
+| `brief` | `decision-brief` |
+| `classify` | `classify-type` |
+| `rigor` | `rigor-checklist` |
+| `tradeoff` | `tradeoff-score` |
+| `facilitator` | `decision-facilitator` |
+| `daii` | `assign-daii` |
+
+OAuth for live MCP remains platform work (Bearer `userConfig` keys still documented as interim for optional connectors). Stay Pilot.
+
+## 0.5.0 — 8 November 2026 (Pilot, Cowork feedback batch)
+
+- Progressive disclosure: DC-H1–H20 full text moved to `references/hard-rules.md`; SKILL.md keeps short core (token cut)
+- Skill `description` rewritten as what-it-does + when-to-use; `metadata.route` flattened to one string
+- Skill frontmatter license aligned to Crossroads Catalyst GmbH proprietary ref
+- Evals removed from buyer install tree → monorepo `mcps/decision_companion/evals/`
+- `skills/_contract/` moved to plugin `contract/stage_schemas.json`
+- Empty `.mcp.json` retained (P2); still Pilot — no Released / no marketplace push in this batch
+
+## 0.5.0 — 8 November 2026 (Pilot)
+
+- P2 standalone: local session + offline tools replace Decision MCP for coaching/score/brief
+- Empty default .mcp.json; connectors.md for opt-in vdec_/vont_/vvfy_
+- Shared templates/ + CF04 kit upgrade; no hooks/agents/commands
+- LICENSE Crossroads Catalyst GmbH; release_state Pilot
+
 # Changelog
+
+## 0.4.0 (2026-10-29)
+
+The Decision Connector adds up the person's own weights and ratings itself (connector 0.4.0, tool `decision_score`). Skills call it instead of Navigator.
+
+- DC-H19 (rewritten): never compute by hand. With a complete grid, save the cells with `decision_tradeoff_matrix` (send `weights_by`, the person who set the weights), then call `decision_score`. Show each option's total, the gap between the top two, and whether the top-ranked option holds when any one priority moves by 10 points, with the smallest shift that changes the order. Label it the person's own inputs added up; ask whether it matches their judgement. No 1-5 to 0-4 conversion step. Without the connector: no computation, the person weighs the grid.
+- `tradeoff-score`: grid step 5 sends `weights_by`; step 7 calls `decision_score`; rules R4 and the hand-off task point to it.
+- `make-decision`: totals never fill `chosen_option`; the choice stays in the person's words.
+- `handoff-navigator`: now optional. Use it only when the person asks for a sealed or governed score on Ontology Navigator. The heaviest-weight re-run is removed from it.
+- `gut-check`: the computed view comes from `decision_score`.
+- Governance reference in every skill: sealed scores stay on Navigator; adding up the person's inputs is `decision_score`.
+- `decision-brief` references: reworded two lines that told the coach to print a placeholder (lint d).
+- Skill count stays 21. Skill ids, routes and triggers are unchanged.
+- Wording pass (29 October 2026), from the read of the imported 0.3.17 skills: the step S question is now "How do your options compare on your own weights, and does the top-ranked option still come first if one priority moves by up to 10 points?" in the README, `tradeoff-score` and `handoff-navigator`; no skill calls an option "the winner", "the best" or "the leading option"; the shared rules DC-H4, DC-H8, DC-H16 and DC-H17 no longer name Navigator as the scorer or single out a "lead option"; the `tradeoff-score` skill (SKILL.md, grid and handoff tasks, rules, gap rules, governance, output template) has one scoring story, `decision_score`, with a "Your inputs, added up" section; `handoff-navigator` is described as an optional extra; `gather-intelligence` and `gut-check` point to `decision_score`; `decision-check` no longer says "means ready"; dissent notes are stored as "Dissent, holder: <name>" (no em dash); American spelling; content pack references updated. New guard tests in `tests/test_plugin_040_wording.py`.
+- Not benchmarked: the October results were measured with skills 0.3.16, Connector 0.3.3 and Ontology Navigator. This release has been checked for parity of the arithmetic only.
 
 ## 0.3.17 (2026-10-28, built by Claude, not committed)
 
@@ -194,7 +267,7 @@ Fixes from the with/without-skill run on pack 0.3.1 (47/54 with vs 29/54 without
 
 ### B3 With/without flags
 
-- Six skills (`tradeoff`, `make-decision`, `frame-decision`, `learning-loop`, `record-dissent`, `handoff-navigator`): `ran_with_and_without_skill: true` + `with_without_result` pointing at the report. Other 14 remain false.
+- Six skills (`tradeoff-score`, `make-decision`, `frame-decision`, `learning-loop`, `record-dissent`, `handoff-navigator`): `ran_with_and_without_skill: true` + `with_without_result` pointing at the report. Other 14 remain false.
 
 ### B4 Lint
 
