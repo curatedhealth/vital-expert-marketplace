@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 — 8 November 2026
+
+**Released** (owner Hicham). Fix release only: restore dropped `references/gap-rules.md` for all 19 skills from October build `978a0bda` (unchanged substance) and restore October pointers; retarget `references/governance.md` → skill-root `governance.md` (44 files); fix `source-assessment` `source-card` pointers to shared `../../templates/source-card.md`; add `scripts/check_vital_trusted_pointers.py` path gate. No evals/examples/method content edits beyond pointer fixes. Patterns/rules remain in `references/knowledge.md` (Migrated sections).
+
 ## 0.3.1 — 8 November 2026
 
 **Released** (owner-authorized). Proprietary LICENSE: Crossroads Catalyst GmbH — Vital Expert (`LicenseRef-CrossroadsCatalyst-Proprietary`). Pre-live depth audit: unique failure-modes + known-answer fixtures; marketplace restage for Claude Cowork. Cowork retest kickoff (Standard+TRUSTED / Expert+TRUSTED only): `docs/claude-project/kickoff-prompts/COWORK_TRUSTED_STANDARD_AND_EXPERT_RETEST_2026-11-08.md`.

@@ -5,7 +5,7 @@ for daily work: general management, brand, market access, medical and other team
 TRUSTED supports the company's own SOPs and review processes. It never replaces them.
 
 **Product of Crossroads Catalyst GmbH (Vital Expert).**  
-**Status:** version **0.3.1** · `release_state: Released` (owner-authorized 8 November 2026).  
+**Status:** version **0.3.2** · `release_state: Released` (owner-authorized 8 November 2026).  
 **License:** Proprietary — see `LICENSE` (`LicenseRef-CrossroadsCatalyst-Proprietary`).
 
 Outputs remain uncleared drafts until a named human clears them under your process.
