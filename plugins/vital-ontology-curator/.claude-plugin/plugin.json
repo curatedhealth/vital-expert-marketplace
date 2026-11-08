@@ -1,0 +1,30 @@
+{
+  "name": "vital-ontology-curator",
+  "version": "0.1.0-enrichment",
+  "description": "Ontology Curator: identify, collect, curate, and store VP-anchored real-life datapoints that enrich the master ontology without overwriting catalogue fields. Uses a vcur_ key.",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "Proprietary",
+  "skills": "./skills",
+  "keywords": [
+    "curator",
+    "ontology",
+    "enrichment",
+    "evidence",
+    "APQC",
+    "ODI",
+    "vital",
+    "vcur_"
+  ],
+  "userConfig": {
+    "curator_key": {
+      "type": "string",
+      "title": "Ontology Curator key",
+      "description": "The vcur_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

@@ -70,6 +70,11 @@
       "name": "dh-technology",
       "source": "./DH-technology",
       "description": "Technology (DH). Technology architecture, data, and engineering for digital health. The person starts one job, or downloads one expert. Tools run on the Digital Health Library."
+    },
+    {
+      "name": "vital-ontology-curator",
+      "source": "./plugins/vital-ontology-curator",
+      "description": "Ontology Curator enrichment \u2014 VP-anchored tips across ontology families (vcur_)."
     }
   ]
 }
