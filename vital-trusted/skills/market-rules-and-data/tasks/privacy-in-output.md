@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (P1 to P7), `references/patterns.md` (D1 to D9) |
 | Tool | `scripts/scan_output.py --data` where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/privacy-note.md`, `assets/check-line.md` |
+| Template | `templates/privacy-note.md`, `templates/check-line.md` |
 | Input | The draft, the material it was written from, the context card (reader, market, stakes) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H11, `references/governance.md` |
 
@@ -73,7 +73,7 @@ details arrived in the material.
 
 ## Check line
 
-See `assets/check-line.md`. The line counts items; it never quotes them.
+See `templates/check-line.md`. The line counts items; it never quotes them.
 
 ## Boundaries
 

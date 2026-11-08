@@ -84,11 +84,31 @@ tool-checked" (TR-H4).
 
 - When drafting: the draft with gaps inline, then a short note only if something was
   left out or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/repair-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/repair-note.md`,
   sized to the stakes.
-- To `trusted-check` only: one line in the format of `assets/check-line.md`. Never
+- To `trusted-check` only: one line in the format of `templates/check-line.md`. Never
   append check lines to a reply the person reads directly; they are for the TRUSTED
   summary.
+
+## Output cards
+
+Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
+`../../templates/README.md`), then fill skill-local templates. **Never invent a figure,
+name or study to close a gap** — use `gap-list.md` instead.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| One invented or unsupported factual sentence | `claim-card.md` or `finding-card.md` | — |
+| Number or method mismatch vs supplied material | `finding-card.md` | — |
+| Items the person must supply before the sentence can stand | `gap-list.md` | Inside `repair-note.md` |
+| Full repair pack | `evidence-table.md` optional | `repair-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / grounded-statements: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
+those lines to the person's reply.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -104,6 +124,6 @@ tool-checked" (TR-H4).
 | `references/tools.md` | Companion slot and scripts | Before computing or handing off |
 | `scripts/risk_metrics.py` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
 | `scripts/extract_numbers.py` | Every number in a text with its context | Checking figures |
-| `assets/check-line.md`, `assets/repair-note.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/repair-note.md` | Output formats | Building the answer |
 | `examples/board-update.md`, `examples/repair-trial-summary.md` | Worked cases, one business, one scientific | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones the skill must decline | Testing |

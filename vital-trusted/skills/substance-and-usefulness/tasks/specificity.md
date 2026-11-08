@@ -10,7 +10,7 @@
 | Knowledge | `references/patterns.md` (V1–V6, P1–P3), `references/rules.md` |
 | Tool | `scripts/scan_fluff.py` (vague-word prompts) where code can run. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The request, the draft, the supplied material, the context card from `trusted-intake` |
 | Governance | TR-H1, TR-H2, TR-H7, TR-H9 |
 
@@ -71,7 +71,7 @@ existing text (a named group already mentioned elsewhere, a date already in the 
 
 ## Check line
 
-Counts feed the substance line in `assets/check-line.md`: statements too vague to act
+Counts feed the substance line in `templates/check-line.md`: statements too vague to act
 on.
 
 ## Boundaries

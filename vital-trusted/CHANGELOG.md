@@ -4,6 +4,8 @@
 
 World-class content pass (same day evening): shared `templates/` cards; Prove/Core/Build deepen with IFPMA/ABPI/FDA/RAGAS citations; rendered card examples; digest `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
+**Build wave 2:** fit-for-reader, substance-and-usefulness, market-rules-and-data, grounded-statements, sourced-claims, responsible-inputs, responsible-use, work-record — Output cards + WC-* standards + full card examples (all 12 Build skills now on the card pattern).
+
 
 
 Pilot gate passed 8 November 2026 (Hybrid B + Standard). Offline tools suite green; 19 CF04/CF02 kits complete; VERIFY method superseded into Prove.

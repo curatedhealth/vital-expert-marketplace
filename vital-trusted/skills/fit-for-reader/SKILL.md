@@ -113,11 +113,32 @@ in full on any host. Two scripts help where code can run. Details in
 - **When drafting:** the text in the reader's words and the format asked for, gaps
   inline, then a short note only if something is missing or needs the person.
 - **When fixing:** the revised text, then a note in the format of
-  `assets/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
-- **When translating:** the translation, then `assets/translation-note.md`: terms left
+  `templates/repair-note.md`, sized to the stakes. Every cut is listed, never silent.
+- **When translating:** the translation, then `templates/translation-note.md`: terms left
   for a qualified translator or approved wording, and any number or unit question.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   appended to a reply the person reads directly.
+
+## Output cards
+
+Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
+`../../templates/README.md`), then fill skill-local templates. Do not merge faithfulness
+or source scores into audience or format counts.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Reader, decision focus, depth wrong for audience | — | `reader-card.md` |
+| Meaning, format or length gaps after repair | `finding-card.md` (one row per gap) | — |
+| Open items (approved wording, user test, missing PI link) | `gap-list.md` | Inside `repair-note.md` |
+| Translation: terms, numbers or units | — | `translation-note.md` |
+| Operator pack (audience + deliverable + translation) | `verify-brief.md` optional | `repair-note.md` or `translation-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / fit-for-reader: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
+those lines to the person's reply.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -135,6 +156,6 @@ in full on any host. Two scripts help where code can run. Details in
 | `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
 | `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/reader-card.md`, `assets/repair-note.md`, `assets/translation-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/reader-card.md`, `templates/repair-note.md`, `templates/translation-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/patient-letter-clinician-language.md`, `examples/payer-and-internal-same-finding.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must redirect | Testing |

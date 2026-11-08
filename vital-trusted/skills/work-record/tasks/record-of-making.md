@@ -13,7 +13,7 @@ AI did.
 | Knowledge | `references/rules.md` (R1, R2, R4), `references/patterns.md` (P1–P6) |
 | Tool | None. Companion slot: VERIFY `build_record` through `citation-and-record`, only with a named clearer |
 | Prompt | This guide |
-| Template | `assets/record-note.md`, `assets/check-line.md` |
+| Template | `templates/record-note.md`, `templates/check-line.md` |
 | Input | The deliverable, the conversation so far, what the person says about earlier steps |
 | Governance | TR-H1, TR-H4, TR-H5, TR-H12, TR-H13 |
 
@@ -88,7 +88,7 @@ the record itself; refer to the material by its name ("the case notes").
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

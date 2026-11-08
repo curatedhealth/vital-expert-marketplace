@@ -15,4 +15,9 @@
 | Intended source | Would support | Status |
 | EFPIA Code of Practice (current edition), provisions on substantiation and references | EU baseline equivalent of R1 to R7 | `[CHECK]` |
 
+| WC-SC-1 | Promotion should be capable of substantiation by approved labeling or scientific evidence; evidence made available on request to health professionals. | IFPMA Code of Practice 2019, Art. 4.3; accessed 8 November 2026 | International IFPMA member baseline; every claim needs a named source or gap | PARTIAL | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+| WC-SC-2 | Every claim, comparison or implication must be capable of substantiation; provide on request (timelines per Cl. 18.2 where applicable). | ABPI Code of Practice 2024, Cl. 6.2; accessed 8 November 2026 | UK promotional material; findable citations | VERIFIED | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+| WC-SC-3 | Citations point at supplied document spans; attribution to a passage, not open-web truth or model recall. | Anthropic, Build with Claude — Citations; accessed 8 November 2026 | Any work citing assistant-retrieved spans | PARTIAL | https://platform.claude.com/docs/en/build-with-claude/citations |
+| WC-SC-4 | Give direct references to original research where possible; cite published articles rather than abstracts where possible; label preprints; verify references against bibliographic sources or originals. | ICMJE Recommendations, section IV.A References; accessed 8 November 2026 | Reference lists for external or journal-bound work | PARTIAL | https://www.icmje.org/icmje-recommendations/ |
+
 Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.

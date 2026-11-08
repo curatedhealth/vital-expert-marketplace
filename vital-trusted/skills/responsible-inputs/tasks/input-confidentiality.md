@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (I1–I8, I11), `references/patterns.md` (C1–C9) |
 | Tool | `scripts/scan_inputs.py` where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/input-note.md`, `assets/check-line.md` |
+| Template | `templates/input-note.md`, `templates/check-line.md` |
 | Input | The request, the material or its description, the tool named, where the result will go, any policy the person quotes |
 | Governance | TR-H3, TR-H4, TR-H5, TR-H7, TR-H11, `references/governance.md` |
 
@@ -73,7 +73,7 @@ point is to say it out loud before it goes in.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

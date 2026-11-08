@@ -12,7 +12,7 @@ Make visible what was assumed, what is still a gap, and who needs to decide what
 | Knowledge | `references/patterns.md` (A1–A5), `references/gap-rules.md` |
 | Tool | None. Companion slot: VERIFY `build_record` findings, through `citation-and-record` |
 | Prompt | This guide |
-| Template | `assets/record-note.md` (sections "Assumed" and "Open"), `assets/check-line.md` |
+| Template | `templates/record-note.md` (sections "Assumed" and "Open"), `templates/check-line.md` |
 | Input | The deliverable with its gaps, the conversation, the person's statements on who decides |
 | Governance | TR-H1, TR-H5, TR-H7, TR-H12 |
 
@@ -58,7 +58,7 @@ says it is an estimate and whose.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

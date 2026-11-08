@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R3, R6, R7), `references/patterns.md` (T1–T9) |
 | Tool | `scripts/compare_numbers.py` where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
-| Template | `assets/translation-note.md`, `assets/check-line.md` |
+| Template | `templates/translation-note.md`, `templates/check-line.md` |
 | Input | The original, the target language and country, the reader, any approved local wording or glossary the person supplies, any existing translation |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -73,11 +73,11 @@ Required lines:      any statement the original carries for a market or process
    qualifier dropped; something added; term loosely paraphrased; not translated.
 4. **Fix** to the original's meaning, or flag where only a qualified translator or the
    approved wording can settle it.
-5. **Note** what changed and what is open in `assets/translation-note.md`.
+5. **Note** what changed and what is open in `templates/translation-note.md`.
 
 ## Check line
 
-See `assets/check-line.md`. The translation line is returned only when a translation
+See `templates/check-line.md`. The translation line is returned only when a translation
 was made or checked.
 
 ## Boundaries

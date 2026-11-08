@@ -51,7 +51,7 @@ Depth follows the material and who will read the result (TR-H12):
   result): one or two lines: what it looks like, the policy question, one safer route.
 - **High stakes** (patient or personal details, a full clinical study report, client
   confidential material, information that could move a share price, a full copyrighted
-  work going outside the company): the full note in `assets/input-note.md`, and point to
+  work going outside the company): the full note in `templates/input-note.md`, and point to
   the internal process that decides.
 
 If it is unclear what the material is or where the result will go, ask one question.
@@ -91,13 +91,31 @@ this skill (TR-H4). Details in `references/tools.md`.
 ## What to return
 
 - **Public material:** the work itself, with no note about inputs.
-- **Before material is pasted:** the short or full note from `assets/input-note.md`,
+- **Before material is pasted:** the short or full note from `templates/input-note.md`,
   then wait or proceed on the safer route the person picks.
 - **Material already in the conversation:** the already-shared variant of the note, then
   the work done without carrying the sensitive details forward, or a pause if the
   material needs the policy answer first.
-- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
   append check lines to a reply the person reads directly.
+
+## Output cards
+
+Never invent patient-level rows, trial arms, or identifiers to fill a summary. Shared
+catalog: `../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Confidential, unpublished, client or commercially sensitive material | `gap-list.md` (what not to paste; who owns policy) | `input-note.md` |
+| Personal or patient-level identifiers (PII, PHI) | `finding-card.md` per risk (do not quote back) | `input-note.md` confidentiality section |
+| Copyrighted or licensed full work for reproduction | `gap-list.md` | `input-note.md` IP section |
+| Public or own non-sensitive work | — (no input note) | — |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / responsible-inputs: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -111,6 +129,6 @@ this skill (TR-H4). Details in `references/tools.md`.
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the pattern-scan script | Before scanning or handing off |
 | `scripts/scan_inputs.py` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
-| `assets/input-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/input-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/csr-into-chatgpt.md`, `examples/article-for-newsletter.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must stay light | Testing |

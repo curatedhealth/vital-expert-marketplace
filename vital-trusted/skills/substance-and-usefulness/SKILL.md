@@ -110,10 +110,28 @@ host. Details in `references/tools.md`.
 - **When drafting:** the draft with gaps inline, then a short note only if something is
   missing or needs the person's decision.
 - **When fixing:** the revised text, then a note in the format of
-  `assets/repair-note.md`, sized to the stakes. Every cut of the person's own content is
+  `templates/repair-note.md`, sized to the stakes. Every cut of the person's own content is
   listed, never silent.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   append check lines to a reply the person reads directly.
+
+## Output cards
+
+Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
+`../../templates/README.md`), then fill skill-local templates.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Fluff, vague line or missing "so what" | `finding-card.md` (one row per issue) | — |
+| Missing owner, date, figure or decision the person must supply | `gap-list.md` | Inside `repair-note.md` |
+| Full pass on a leadership or external brief | `verify-brief.md` optional | `repair-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / substance-and-usefulness: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
+those lines to the person's reply.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -130,6 +148,6 @@ host. Details in `references/tools.md`.
 | `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scan script | Before scanning |
 | `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
-| `assets/repair-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |

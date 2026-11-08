@@ -12,7 +12,7 @@ Absorbs the honesty method of the earlier vital-verify plugin.
 | Knowledge | `references/patterns.md` (F1–F7, B1–B6), `references/rules.md` |
 | Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment`, after drafting |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The request, the supplied material (papers, label, data, notes), any existing draft |
 | Governance | TR-H1, TR-H2, TR-H4, TR-H7 |
 
@@ -70,7 +70,7 @@ say so in one line if the request implied it.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

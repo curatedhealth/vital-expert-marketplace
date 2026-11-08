@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (M1 to M19), `references/patterns.md` (S1 to S8) |
 | Tool | `scripts/scan_output.py --statements` where code can run. Companion slot: future MLR preparation companion with market templates and job codes (none yet) |
 | Prompt | This guide |
-| Template | `assets/statements-list.md`, `assets/market-note.md`, `assets/check-line.md` |
+| Template | `templates/statements-list.md`, `templates/market-note.md`, `templates/check-line.md` |
 | Input | The draft, the context card, the supplied label for the market, any template or element list the person supplies |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H7, TR-H8, TR-H11, `references/governance.md` |
 
@@ -75,11 +75,11 @@ only the company-system elements (job code, date), and point to the review proce
    placeholder and say so.
 4. **Never complete a job code, date or PI from a pattern** ("the other codes look like
    ZL-UK-0123, so this one is ZL-UK-0124"). It belongs to the company's system.
-5. **Return the list** with `assets/statements-list.md`.
+5. **Return the list** with `templates/statements-list.md`.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

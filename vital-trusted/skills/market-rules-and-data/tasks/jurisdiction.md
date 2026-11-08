@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (M1 to M12), `references/patterns.md` (J1 to J8) |
 | Tool | None. Companion slot: future MLR preparation companion with market templates (none yet) |
 | Prompt | This guide |
-| Template | `assets/market-note.md`, `assets/check-line.md` |
+| Template | `templates/market-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the context card (reader, market, product status, use), any supplied label |
 | Governance | TR-H1, TR-H3, TR-H7, TR-H8, TR-H11, `references/governance.md` |
 
@@ -67,7 +67,7 @@ which markets it will actually be used in, and whether each affiliate adapts it.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

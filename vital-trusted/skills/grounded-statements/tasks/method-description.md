@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R3–R6), `references/patterns.md` (M1–M9) |
 | Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md`, the study card below |
+| Template | `templates/check-line.md`, `templates/repair-note.md`, the study card below |
 | Input | The draft and the supplied study material |
 | Governance | TR-H1, TR-H3, TR-H7 |
 
@@ -66,7 +66,7 @@ Follow-up: <duration>
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

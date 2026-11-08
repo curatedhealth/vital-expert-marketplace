@@ -56,7 +56,7 @@ context card when `trusted-intake` has made one.
   line where something matters, for example "Worth a read by the finance lead before it
   goes to the board, since the figures were drafted here."
 - **Leaving the company** (doctor, patient, payer, regulator, agency, journal, public):
-  run every task that applies, give the note in `assets/use-note.md`, name who reads it
+  run every task that applies, give the note in `templates/use-note.md`, name who reads it
   next, and point to the internal process the work goes through (TR-H11).
 
 If it is unclear who will read it, ask once: "Who will read this?"
@@ -112,12 +112,30 @@ the person and say the answer comes from their policy (TR-H4). Details in
 
 - **Low stakes:** the work itself, with at most one line.
 - **Leaving the company:** the work with any language repairs made, then the note in
-  `assets/use-note.md`: who reads it next, the disclosure question or the suggested
+  `templates/use-note.md`: who reads it next, the disclosure question or the suggested
   wording, authorship points, and language changes.
 - **A request to send without review or present ghostwriting as someone's own:** a
   short redirect in the same note, with the practical route offered.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   append them to a reply the person reads directly.
+
+## Output cards
+
+Shared catalog: `../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Send without review; draft presented as reviewed | `finding-card.md` (human gate missing) | `use-note.md` review section |
+| AI listed as author; ghostwriting as own work | `finding-card.md` (AI role overclaimed) | `use-note.md` authorship section |
+| Disclosure question for journal, payer, or public | `gap-list.md` (policy answer open) | `use-note.md` disclosure section |
+| Stigmatizing or erasing language | `finding-card.md` | `use-note.md` language section |
+| Full outbound pack | `gap-list.md` | `use-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / responsible-use: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -133,6 +151,6 @@ the person and say the answer comes from their policy (TR-H4). Details in
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the wording scan | Before scanning or handing off |
 | `scripts/scan_language.py` | Lists phrases to look at for stigmatizing wording | Patient or population material |
-| `assets/use-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/use-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/doctor-reply-no-review.md`, `examples/kol-article.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including ones to redirect | Testing |

@@ -24,14 +24,14 @@ Changed for the market
    doctor nothing about use in Germany; I've left the German status for your label.">
 
 Statements usually expected here, and where they stand
-<the list from assets/statements-list.md>
+<the list from templates/statements-list.md>
 
 Who might also read it
 <Only if relevant, e.g. "This is a public post about a prescription medicine; where it
 can appear is a question for your promotional review process.">
 
 People
-<Only if relevant: the privacy line from assets/privacy-note.md.>
+<Only if relevant: the privacy line from templates/privacy-note.md.>
 
 Next step: this goes through your <promotional review process> for <market> before it
 is used. The list above is what is usually expected; that process holds the full list.

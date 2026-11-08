@@ -10,7 +10,7 @@
 | Knowledge | `references/patterns.md` (K1–K6) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft, the brief or request, the supplied material, the context card |
 | Governance | TR-H1, TR-H2, TR-H9 |
 
@@ -66,7 +66,7 @@ place an item by the assistant's own judgment and present it as analysis.
 
 ## Check line
 
-Feeds the structure line in `assets/check-line.md`: headings that do not match their
+Feeds the structure line in `templates/check-line.md`: headings that do not match their
 content, frameworks or groupings the content does not support, points out of order.
 
 ## Boundaries

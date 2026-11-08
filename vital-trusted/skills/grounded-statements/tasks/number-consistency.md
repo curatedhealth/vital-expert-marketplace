@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R1–R3), `references/patterns.md` (N1–N8, B1–B6) |
 | Tool | `scripts/extract_numbers.py`, `scripts/risk_metrics.py` where code can run. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft and the supplied material (papers, reports, sales or finance data, notes) |
 | Governance | TR-H1, TR-H3, TR-H7 |
 
@@ -54,7 +54,7 @@
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (U9–U13), `references/patterns.md` (E1–E8) |
 | Tool | `scripts/scan_language.py` where code can run. Companion slot: future language companion (none yet) |
 | Prompt | This guide |
-| Template | `assets/use-note.md` (language part), `assets/check-line.md` |
+| Template | `templates/use-note.md` (language part), `templates/check-line.md` |
 | Input | The draft, who it describes and who reads it, any community or company language guide the person supplies, the source material for evidence statements |
 | Governance | TR-H1, TR-H3, TR-H9, TR-H12, `references/governance.md` |
 
@@ -53,7 +53,7 @@
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

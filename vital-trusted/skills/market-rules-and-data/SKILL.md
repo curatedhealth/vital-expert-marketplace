@@ -95,14 +95,34 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 
 - When drafting: the draft with market-specific statements as visible placeholders
   where the person must supply them, personal details left out, then the short or full
-  note in `assets/market-note.md`.
+  note in `templates/market-note.md`.
 - When fixing: the fixed text, then the note, sized to the stakes, with the list of
-  expected statements in `assets/statements-list.md` when the material leaves the
+  expected statements in `templates/statements-list.md` when the material leaves the
   company.
 - When personal details were in the material: the privacy line from
-  `assets/privacy-note.md`, without repeating them.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  `templates/privacy-note.md`, without repeating them.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
+
+## Output cards
+
+Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
+`../../templates/README.md`), then fill skill-local templates. **Name the jurisdiction**
+in every market note and statements list (country or region the rules apply to).
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Wrong market wording or audience reach | `finding-card.md` optional | `market-note.md` |
+| Missing job code, PI link, reporting line, date | `gap-list.md` | `statements-list.md` inside the note |
+| Personal details removed or generalized | — | `privacy-note.md` (no repeated identifiers) |
+| Leaving the company | `verify-brief.md` optional | `market-note.md` + `statements-list.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / market-rules-and-data: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
+those lines to the person's reply.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -117,6 +137,6 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 | `references/governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the cue-scan script | Before scanning or handing off |
 | `scripts/scan_output.py` | Cue scan for expected statements and personal details | Checking a draft where code can run |
-| `assets/market-note.md`, `assets/statements-list.md`, `assets/privacy-note.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/market-note.md`, `templates/statements-list.md`, `templates/privacy-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-follow-up-patient.md`, `examples/eu-deck-us-wording.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

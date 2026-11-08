@@ -100,12 +100,30 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 ## What to return
 
 - **Record note:** after the deliverable, never inside it, in the format of
-  `assets/record-note.md`, sized to the stakes. Where it goes in the final document (an
+  `templates/record-note.md`, sized to the stakes. Where it goes in the final document (an
   appendix slide, a footnote, an email line) is the person's choice.
-- **Status:** the status line from `assets/status-line.md`, only where a status is
+- **Status:** the status line from `templates/status-line.md`, only where a status is
   needed or asked for.
-- **To trusted-check only:** one line in the format of `assets/check-line.md`. Never
+- **To trusted-check only:** one line in the format of `templates/check-line.md`. Never
   append it to a reply the person reads directly.
+
+## Output cards
+
+Defensible letter shape: who did what, when, on what material, and what stays open.
+Shared catalog: `../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| How the piece was made (sources, tools, AI verbs) | — | `record-note.md` |
+| Assumptions, gaps, pending decisions and owners | `gap-list.md` | Open sections in `record-note.md` |
+| Draft vs reviewed vs cleared | — | `status-line.md` |
+| HQ or audit request | `verify-brief.md` optional | Full `record-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / work-record: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -120,6 +138,6 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
 | `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
-| `assets/record-note.md`, `assets/status-line.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |

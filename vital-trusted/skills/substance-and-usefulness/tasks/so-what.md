@@ -10,7 +10,7 @@
 | Knowledge | `references/patterns.md` (W1–W5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/repair-note.md` |
+| Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The draft, the supplied material, the context card (reader, deliverable, stakes) |
 | Governance | TR-H1, TR-H2, TR-H5, TR-H6, TR-H7 |
 
@@ -66,7 +66,7 @@ function that decides.
 
 ## Check line
 
-Counts feed the substance line in `assets/check-line.md`: sections with no "so what".
+Counts feed the substance line in `templates/check-line.md`: sections with no "so what".
 
 ## Boundaries
 

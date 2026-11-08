@@ -10,13 +10,13 @@
 | Knowledge | `references/readers.md`, `references/rules.md` (R1, R2, R4, R5), `references/patterns.md` (A1–A8, L1–L9) |
 | Tool | `scripts/plain_language_scan.py` for patient or lay text where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
-| Template | `assets/reader-card.md`, `assets/repair-note.md`, `assets/check-line.md` |
+| Template | `templates/reader-card.md`, `templates/repair-note.md`, `templates/check-line.md` |
 | Input | The request, the context card, the supplied material, any existing draft |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H6, TR-H7, TR-H11 |
 
 ## The reader card
 
-Before drafting or repairing for a named reader, fill `assets/reader-card.md` from the
+Before drafting or repairing for a named reader, fill `templates/reader-card.md` from the
 context card, the request and `references/readers.md`. It takes four lines: who reads
 it, what they must decide or do, the words they use, and how deep to go. If the reader
 is not known and it changes the draft, ask once. Do not show the card to the person
@@ -84,7 +84,7 @@ R1.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 
