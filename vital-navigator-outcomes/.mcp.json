@@ -6,6 +6,13 @@
       "headers": {
         "Authorization": "Bearer ${user_config.navigator_key}"
       }
+    },
+    "vital-ontology-curator": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/ontology-curator",
+      "headers": {
+        "Authorization": "Bearer ${user_config.curator_key}"
+      }
     }
   }
 }

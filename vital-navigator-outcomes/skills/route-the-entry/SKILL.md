@@ -7,7 +7,7 @@ compatibility: >
   Offline on team-entered data. Connectors optional; without them label not tool-checked or [GAP].
 metadata:
   level: CF04
-  register_code: "[CHECK] pending capability register lane"
+  register_code: "CF-01.06.01.1.2.1"
   verb: route
   capability: "[CHECK] Outcome Navigation (Enterprise Strategy & Portfolio)"
   mission: "0 Entry"
@@ -29,11 +29,13 @@ metadata:
 - Not covered stated when relevant (Launch CF-04.01.09, deal thesis, MLR chairs).
 
 ## Entry paths
-| Path | Signal | Typical next |
-|---|---|---|
-| Top-down | Leader / portfolio / program question | frame-the-decision |
-| Middle-out | Function capability / outcome question | diagnose-value-leaks or discover-outcomes |
-| Bottom-up | Team trial / tool / local investment | design-the-trial or size-value-at-stake |
+| Path | Signal | First next (enforced) | Then (shape-typical) |
+|---|---|---|---|
+| Top-down | Leader / portfolio / program question — where to place a bet | frame-the-decision | discover-outcomes → prioritize-outcomes → size → options |
+| Middle-out | Work already running — too much activity, unclear value | frame-the-decision → size-value-at-stake before options | diagnose-value-leaks / discover-outcomes / review-the-portfolio |
+| Bottom-up | Something underperforms — shortfall, objection, capacity bind | frame-the-decision → size-value-at-stake before options | diagnose-value-leaks / rebuild-baselines / design-the-trial |
+
+Middle-out and bottom-up never jump straight to compare-options, place-the-portfolio, or design-the-trial: `routing_check.py` and `references/method.md` require frame then size first. Shape changes *which layers you walk*, not whether you frame.
 
 ## Sibling handoffs (stop — do not absorb)
 | Topic | Route to |

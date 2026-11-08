@@ -41,11 +41,15 @@ Pitfall: tool docs may say `result_hash`; code returns `trace.inputs_hash` — d
 
 ---
 
-## Ontology Curator (via Navigator)
+## Ontology Curator (`vcur_` / Ontology_Curator)
+
+Second MCP server in `.mcp.json` (`vital-ontology-curator`). Key prefix `vcur_`. Steward skills: `pull-evidence`, `classify-incoming`, `file-and-process`, `steward-decide`, `enrich-record` (Draft; not a separate Marketplace Done claim).
 
 | Use for | Never for | Without it |
 |---|---|---|
-| evidence figures with `{record_id, version, grade}` from the store | inventing when empty; minting steward ids | `[GAP]`; `handoff-evidence-steward` proposal only |
+| evidence figures with `{record_id, version, grade}` from the store (`curator_evidence_*`) | inventing when empty; minting steward ids; API-key typed human decide (C11) | `[GAP]`; `handoff-evidence-steward` / `pull-evidence` offline |
+| capture / process → proposal queue (`curator_capture_lead`, `curator_process_lead`) | auto-approve; Verify on quote-check path | leave leads unfiled; say connector failed once |
+| named `curator_decide` (owner session only) | build-lane impersonation of a person | stop at proposal-in-queue |
 
 ---
 

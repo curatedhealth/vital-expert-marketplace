@@ -1,7 +1,7 @@
 {
   "name": "vital-navigator-outcomes",
-  "version": "0.3.0-live-test",
-  "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools run on the Ontology Navigator connector (vont_ key).",
+  "version": "0.3.1-live-test",
+  "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools run on the Ontology Navigator connector (vont_ key). Optional Ontology Curator steward skills use a vcur_ key.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -22,6 +22,13 @@
       "title": "Ontology Navigator key",
       "description": "The vont_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
       "required": true,
+      "sensitive": true
+    },
+    "curator_key": {
+      "type": "string",
+      "title": "Ontology Curator key",
+      "description": "Optional vcur_ key for Curator steward skills (pull/classify/process/decide). Omit for Navigator-only use.",
+      "required": false,
       "sensitive": true
     }
   }

@@ -8,7 +8,7 @@ compatibility: >
   Verify and Curator add cited live data when present; otherwise label not tool-checked or [GAP].
 metadata:
   level: CF04
-  register_code: "[CHECK] pending capability register lane"
+  register_code: "CF-01.06.01.5.1.1"
   verb: compile
   capability: "[CHECK] Outcome Navigation (Enterprise Strategy & Portfolio)"
   mission: "6 Communication & Exhibits"

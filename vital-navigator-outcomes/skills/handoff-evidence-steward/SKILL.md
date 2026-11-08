@@ -7,7 +7,7 @@ compatibility: >
   Offline on team-entered data. Connectors optional; without them label not tool-checked or [GAP].
 metadata:
   level: CF04
-  register_code: "[CHECK] pending capability register lane"
+  register_code: "CF-01.06.01.5.8.1"
   verb: handoff
   capability: "[CHECK] Outcome Navigation (Enterprise Strategy & Portfolio)"
   mission: "6 Decision Governance"

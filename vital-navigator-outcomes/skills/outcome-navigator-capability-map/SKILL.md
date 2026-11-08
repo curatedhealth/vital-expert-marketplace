@@ -6,7 +6,7 @@ description: >
   and routing to Launch, DD, Valuation and READY. Not for doing the work itself.
 metadata:
   level: CF02 map
-  register_code: "CF-01.06.01"
+  register_code: "CF-01.06.01.1.1.1"
   version: "0.2.2"
   release_state: Draft
 ---

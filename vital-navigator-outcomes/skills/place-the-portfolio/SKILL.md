@@ -9,7 +9,7 @@ compatibility: >
   labeled not tool-checked or [GAP].
 metadata:
   level: CF04
-  register_code: "[CHECK] pending capability register lane"
+  register_code: "CF-01.06.01.3.3.1"
   verb: place
   capability: "[CHECK] Outcome Navigation (Enterprise Strategy & Portfolio)"
   mission: "3 Intelligence Core"

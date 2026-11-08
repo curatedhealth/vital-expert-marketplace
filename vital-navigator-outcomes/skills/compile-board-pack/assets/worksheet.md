@@ -9,7 +9,7 @@ Check script: `scripts/board_pack_check.py`. Field names in the right-hand colum
 | Prompt | Answer | Class (M/V/H/O) | Source id / date or [GAP] | JSON field |
 |---|---|---|---|---|
 | Pack owner, named | | | | `owner` |
-| Are all eight record parts present? (yes / list gaps) | | | | `record_parts_complete` |
+| Are the eight client sections (or mapped 10 parts) complete? (yes / list gaps) | | | | `record_parts_complete` |
 | Close vocabulary the owner chose, if any | | | | `close_vocabulary` |
 
 ## Integrity revisions (PACK-03)

@@ -1,5 +1,8 @@
 ## Changelog
 
+### Curator steward skills (Draft additive — 8 November 2026)
+Added Curator side-channel skills on this pack home: `pull-evidence`, `classify-incoming`, `file-and-process`, `steward-decide`, `enrich-record`. `.mcp.json` now includes `vital-ontology-curator` (`vcur_`). **Not** a Marketplace republish / Done claim for Curator skills — owner must authorize publish separately. Paraphrase-only chrome; no Lane A quote redistribution.
+
 ### 0.3.0-live-test (8 November 2026)
 Marketplace v1 live-test close: C1–C5 owner Pass; C6 Gate H Pass-with-exceptions (WR-032 closed; VP-ON-C6 Option A internal pack); eng_enforcement_green; C7 facilitation eng-bound (independent grade deferred). Claude buyer id `vital-navigator-outcomes` (legacy `navigator-ai-investment`). Listing chrome paraphrase-only. Production frontend smoke: `/navigator` + ontology explorer.
 
