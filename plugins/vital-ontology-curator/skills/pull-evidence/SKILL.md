@@ -1,42 +1,45 @@
 ---
 name: pull-evidence
 description: >
-  Read approved Curator evidence for a value driver or measure via curator_evidence_for_driver /
-  curator_evidence_get. Cite {record_id, version, grade} only. Empty store → [GAP], never invent tips.
-  Not for Verify claim checks (handoff-verify) and not for writing into Curator.
-license: Proprietary. VITAL Outcome Navigator pack license.
-compatibility: Requires vcur_ Ontology Curator connector for live tips; offline → label not tool-checked / [GAP].
+  Pull approved (and optionally under_review) Curator tips for a subject via
+  curator_evidence_for_driver / curator_evidence_get. Empty store = [GAP], never invent.
+license: Proprietary. VITAL Ontology Curator pack license.
+compatibility: curator:read.
 metadata:
   level: CF04
   register_code: "CF-01.06.01.curator.pull"
   verb: pull
-  capability: "[CHECK] Outcome Navigation — Curator steward side channel"
-  mission: "Curator evidence read"
-  agent: outcome-navigator-agent
-  atoms: []
-  requires: []
-  feeds: [size-value-at-stake, ground-the-numbers]
-  tools: [curator_evidence_for_driver, curator_evidence_get]
-  version: "0.1.0"
-  release_state: Draft
-  pack: "vital-navigator-outcomes"
+  capability: "[CHECK] Ontology enrichment — evidence read"
+  mission: "Subject-scoped tip pull"
+  agent: ontology-curator-agent
+  tools: [curator_evidence_for_driver, curator_evidence_get, curator_enrichment_metrics]
+  version: "0.2.0"
+  release_state: Pilot
+  pack: "vital-ontology-curator"
   depth: curator-steward
 ---
-# Pull evidence (Curator)
+# Pull evidence
 
-## What competent output looks like
-- Figures only from approved / stale / gap_marked Curator tips.
-- Every figure carries `{record_id, version, grade}`.
-- Empty result is `[GAP]` — never a fabricated tip or secondary paraphrase presented as measured.
+## Competent output
+- For non-VD subjects: pass `subject_family` + `subject_code` (legacy `vd_code` alone misses PH/JT/CF tips).
+- Cite `{record_id, version, grade}` only. Pending ≠ measured.
+- Evidence pull report template filled when packing a brief.
 
 ## Steps
-| # | Step | Tool | Autonomy |
-|---|---|---|---|
-| 1 | Confirm workspace_id + subject (vd_code) | none | agent alone |
-| 2 | Call curator_evidence_for_driver | Curator read | agent alone |
-| 3 | Optionally curator_evidence_get for one record | Curator read | agent alone |
-| 4 | Present range / grades; mark [GAP] where missing | none | agent alone |
+| # | Step | Autonomy |
+|---|---|---|
+| 1 | Resolve subject_family + subject_code (or vd_code for VD lane) | agent alone |
+| 2 | `curator_evidence_for_driver` | agent alone |
+| 3 | Optional `curator_evidence_get` for history | agent alone |
+| 4 | If count=0 → report **[GAP]** | agent alone |
+| 5 | Never invent figures | agent alone |
+
+## Failure modes
+| Failure | What you do |
+| --- | --- |
+| Only `vd_code` for a PH tip | Retry with subject_family=ph + subject_code |
+| Empty result | [GAP] — do not backfill from memory |
+| Under_review returned in wrong band | Keep labeled pending, not M |
 
 ## Hard rules
-- Navigator tools stay readers (tools 16–17). Do not call decide / capture / process from this skill.
-- Do not redistribute Lane A verbatim quotes into buyer chrome; paraphrase or cite tip ids only.
+- Navigator/Curator readers only — no decide/capture from this skill.

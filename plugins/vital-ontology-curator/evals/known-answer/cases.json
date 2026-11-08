@@ -1,0 +1,40 @@
+{
+  "suite": "KA_ENRICHMENT_W1",
+  "version": "0.1.1",
+  "cases": [
+    {
+      "id": "KA-CUR-VP-01",
+      "expect": { "error": "missing_vp_code" }
+    },
+    {
+      "id": "KA-CUR-PRIV-01",
+      "expect": { "lead_error": "non_public_source_refused" }
+    },
+    {
+      "id": "KA-CUR-ODI-01",
+      "input": { "importance": 8, "satisfaction": 4 },
+      "expect": { "opportunity": 12 }
+    },
+    {
+      "id": "KA-CUR-APQC-01",
+      "expect": {
+        "eligible": false,
+        "reason_prefix": "apqc_scope_incomplete"
+      }
+    },
+    {
+      "id": "KA-CUR-READ-01",
+      "expect": {
+        "vd_code_count": 0,
+        "subject_pair_count": 1
+      }
+    },
+    {
+      "id": "KA-CUR-COV-01",
+      "expect": {
+        "coverage_denominator": "declared_watch_scope_pack",
+        "coverage_ratio_present_when_pack_nonempty": true
+      }
+    }
+  ]
+}

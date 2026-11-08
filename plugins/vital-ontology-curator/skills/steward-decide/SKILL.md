@@ -1,39 +1,47 @@
 ---
 name: steward-decide
 description: >
-  Named-human Curator decide on open proposals (approve / reject / edit). v1 allowlist: Hicham only.
-  API/build keys must not type a human name (C11); use a user-bound key. Records dissent.
-license: Proprietary. VITAL Outcome Navigator pack license.
-compatibility: Requires curator:write and a human session. Never use service-key impersonation.
+  Named-human curator_decide on open proposals (approve / reject / edit / retire / stale).
+  person_name must be a real human (R1/C11). Fast-track only under owner-stamped rule.
+license: Proprietary. VITAL Ontology Curator pack license.
+compatibility: curator:write; proposal_id required.
 metadata:
   level: CF04
   register_code: "CF-01.06.01.curator.decide"
   verb: decide
-  capability: "[CHECK] Outcome Navigation — Curator steward side channel"
-  mission: "Curator named decide"
-  agent: outcome-navigator-agent
-  tools: [curator_review_queue, curator_quote_check, curator_decide, curator_retire]
-  version: "0.1.0"
-  release_state: Draft
-  pack: "vital-navigator-outcomes"
+  capability: "[CHECK] Ontology enrichment — named decide"
+  mission: "HITL tip lifecycle"
+  agent: ontology-curator-agent
+  tools: [curator_review_queue, curator_decide, curator_fast_track_evaluate, curator_fast_track_sample]
+  version: "0.2.0"
+  release_state: Pilot
+  pack: "vital-ontology-curator"
   depth: curator-steward
 ---
-# Steward decide (Curator)
+# Steward decide
 
-## What competent output looks like
-- One ledger row per record; `decided_by` is a real person who acted in-session.
-- Rejects inventing reviewers (no “Amine”-style test names).
-- Live checks by build agents stop at proposal; this skill is for the owner.
+## Competent output
+- Open proposal → decided with `decided_by` = named human; tip tip-state advanced.
+- Steward ruling template (`templates/steward-ruling.md`) filled when rejecting/editing.
+- APQC incomplete / ODI mismatch never fast-tracked (code-enforced); named approve still allowed with reason.
 
 ## Steps
 | # | Step | Autonomy |
 |---|---|---|
-| 1 | Open review queue; read quote_check status | agent alone |
-| 2 | Present proposal + reason options | agent alone |
-| 3 | Owner types decision + own name | **human only** |
-| 4 | Call curator_decide with that name | human-authorized |
+| 1 | `curator_review_queue` — pick proposal / tip | agent alone |
+| 2 | Check grain + scope cards (APQC/ODI) | agent alone |
+| 3 | If fast-track eligible + rule active → evaluate (optional) | agent alone |
+| 4 | Else `curator_decide` with person_name + reason | human name required |
+| 5 | Confirm tip tip-state + proposal status | agent alone |
 
-## Hard rules (C11 / R1)
-- `person_name` must be a named human. Refuse tool/model labels.
-- API/build keys: do not type a human name; prefer refuse or `stamp_key_holder` (not for owner sessions).
-- v1 steward allowlist: **Hicham Naim** only until owner expands.
+## Failure modes
+| Failure | What you do |
+| --- | --- |
+| Missing `proposal_id` | Create proposal wrapping under_review tip first |
+| `person_name` is a model/tool | Refuse — C11 |
+| Fast-track `apqc_scope_incomplete` | Leave on named queue or complete scope then re-eval |
+| Sample selected | Owner sample pass/fail via `curator_fast_track_sample` |
+
+## Hard rules
+- Named human only. No auto-approve without owner-stamped rule.
+- Catalogue projection still withheld — decide tips only.

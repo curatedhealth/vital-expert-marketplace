@@ -1,5 +1,5 @@
 {
   "name": "vital-ontology-curator",
-  "version": "0.1.0-enrichment",
-  "description": "Ontology Curator enrichment pack — VP-anchored tips across ontology families."
+  "version": "0.1.2-enrichment",
+  "description": "Ontology Curator enrichment pack — VP-anchored tips; APQC/ODI scope-hardened; declared scope-pack coverage_ratio Pilot."
 }

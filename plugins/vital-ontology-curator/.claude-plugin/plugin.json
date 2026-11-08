@@ -1,7 +1,7 @@
 {
   "name": "vital-ontology-curator",
-  "version": "0.1.0-enrichment",
-  "description": "Ontology Curator: identify, collect, curate, and store VP-anchored real-life datapoints that enrich the master ontology without overwriting catalogue fields. Uses a vcur_ key.",
+  "version": "0.1.2-enrichment",
+  "description": "Ontology Curator: identify, collect, curate, and store VP-anchored real-life datapoints that enrich the master ontology without overwriting catalogue fields. APQC/ODI + declared scope-pack coverage Pilot. Uses a vcur_ key.",
   "author": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"

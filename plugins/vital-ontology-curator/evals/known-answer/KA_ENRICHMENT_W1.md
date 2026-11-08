@@ -18,4 +18,9 @@ Expect: opportunity=12 (`I + max(I-S,0)`).
 ## KA-CUR-APQC-01 — missing scope → queue not approve
 
 Input: APQC tip without formula/unit/normalization_basis.  
-Expect: steward leaves on named queue; no fast-track.
+Expect: `evaluate_record_eligibility` → `eligible=false`, reason `apqc_scope_incomplete:…`; fast-track `applied=false`. Named decide may still approve.
+
+## KA-CUR-READ-01 — polymorphic evidence read
+
+Input: approved tip `subject_family=ph`, empty `vd_code`.  
+Expect: `curator_evidence_for_driver(vd_code=PH-…)` count 0; `subject_family+subject_code` count 1.

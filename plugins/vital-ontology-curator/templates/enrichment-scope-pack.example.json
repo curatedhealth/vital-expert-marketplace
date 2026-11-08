@@ -1,0 +1,69 @@
+{
+  "description": "Declared enrichment scope pack — upsert via curator_watch_list. Each row with required_vp_code enters coverage_ratio denominator. Not a live ontology catalogue dump.",
+  "workspace_id": "a8c4e2f1-9b70-4d3e-8a15-6f2c0d91e447",
+  "items": [
+    {
+      "subject_family": "ph",
+      "subject_code": "PH-03.08.03.02",
+      "subject_canonical_id": "PH-03.08.03.02",
+      "required_vp_code": "VP-PH-CYCLE-TIME",
+      "measure_kind": "process_performance",
+      "priority": 10,
+      "note": "[scope_pack] Lane A APQC pilot"
+    },
+    {
+      "subject_family": "jt",
+      "subject_code": "JT-ODI-PRIOR-AUTH",
+      "subject_canonical_id": "JT-ODI-PRIOR-AUTH",
+      "required_vp_code": "VP-JT-ODI-OPPORTUNITY",
+      "measure_kind": "odi_opportunity",
+      "priority": 20,
+      "note": "[scope_pack] Lane C ODI pilot"
+    },
+    {
+      "subject_family": "vd",
+      "subject_code": "VD-03.04.01.05",
+      "subject_canonical_id": "VD-03.04.01.05",
+      "required_vp_code": "VP-VD-GENAI-CYCLE",
+      "measure_kind": "value_estimate",
+      "priority": 30,
+      "note": "[scope_pack] Lane B VD multi-VP densify"
+    },
+    {
+      "subject_family": "cf",
+      "subject_code": "CF-01.06.01",
+      "subject_canonical_id": "CF-01.06.01",
+      "required_vp_code": "VP-CF-MATURITY",
+      "measure_kind": "capability_maturity",
+      "priority": 40,
+      "note": "[scope_pack] Lane D CF maturity"
+    },
+    {
+      "subject_family": "de",
+      "subject_code": "DE-FUNCTION-MA",
+      "subject_canonical_id": "DE-FUNCTION-MA",
+      "required_vp_code": "VP-DE-MATURITY",
+      "measure_kind": "function_maturity",
+      "priority": 40,
+      "note": "[scope_pack] Lane D DE maturity"
+    },
+    {
+      "subject_family": "product",
+      "subject_code": "PRODUCT-ILLUSTRATIVE-A",
+      "subject_canonical_id": "PRODUCT-ILLUSTRATIVE-A",
+      "required_vp_code": "VP-PRODUCT-VOLUME",
+      "measure_kind": "value_estimate",
+      "priority": 50,
+      "note": "[scope_pack] Lane E product"
+    },
+    {
+      "subject_family": "competitor",
+      "subject_code": "COMPETITOR-ILLUSTRATIVE-B",
+      "subject_canonical_id": "COMPETITOR-ILLUSTRATIVE-B",
+      "required_vp_code": "VP-COMPETITOR-SHARE",
+      "measure_kind": "value_estimate",
+      "priority": 50,
+      "note": "[scope_pack] Lane E competitor"
+    }
+  ]
+}
