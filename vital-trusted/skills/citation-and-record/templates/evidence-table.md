@@ -1,3 +1,6 @@
-# Evidence Table
+# See shared template
 
-Fill via `tools/render_report.py --template evidence-table`.
+Canonical layout: `../../templates/evidence-table.md`.
+
+Machine: `python ../../tools/render_report.py --template evidence-table`.
+

@@ -50,7 +50,7 @@ and asks for any that are missing and would change the answer (TR-H7):
 1. **The label or intended purpose**, for the market the piece is for: the summary of
    product characteristics, prescribing information, patient leaflet, or a device's
    intended-purpose statement. If it was not supplied, ask for it
-   (`assets/label-request.md`). Do not work from memory of what the product is for.
+   (`templates/label-request.md`). Do not work from memory of what the product is for.
 2. **The reader:** doctor or other health professional, payer, patient, public, or
    internal.
 3. **The use, as the person states it:** promotional, scientific exchange, a reply to
@@ -124,12 +124,30 @@ indication is approved there. A future label-source companion would fill those s
 
 - When drafting: the draft with gaps inline, then a short note only if something was
   kept out or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/claims-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/claims-note.md`,
   sized to the stakes.
 - For a reply to an unsolicited question: the reply in the shape of
-  `assets/unsolicited-reply.md`.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  `templates/unsolicited-reply.md`.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
+
+## Output cards
+
+Each beyond-label or promotional line gets its own card; no batch "compliant" verdict.
+Shared catalog: `../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Statement beyond supplied label | `claim-card.md` or `finding-card.md` | `claims-note.md` |
+| Label not supplied before external work | `gap-list.md` | `label-request.md` |
+| Unsolicited medical question reply | — | `unsolicited-reply.md` shape |
+| Comparisons without direct study | `finding-card.md` | `claims-note.md` comparisons section |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / claims-and-label: not tool-checked (offline tools) · …`).
+`trusted-check` letter lines use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -144,6 +162,6 @@ indication is approved there. A future label-source companion would fill those s
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
-| `assets/check-line.md`, `assets/claims-note.md`, `assets/label-request.md`, `assets/unsolicited-reply.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |
 | `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

@@ -1,3 +1,6 @@
-# Gap List
+# See shared template
 
-Fill via `tools/render_report.py --template gap-list`.
+Canonical layout: `../../templates/gap-list.md`.
+
+Machine: `python ../../tools/render_report.py --template gap-list`.
+

@@ -1,9 +1,17 @@
-# Good example: sourced draft
+# Good example: confidence card (offline counts)
 
-A short draft that only uses figures present in the supplied passage, marks missing items `[GAP]`, and ends with a check-line and open items for a named reviewer.
+Statuses from a manual check (not tool-checked): supported 2, partial 1, unsupported 1, contradicted 0, unverifiable 0, out_of_scope 1.
 
-## Why it works
+```text
+┌─ Confidence ───────────────────────────────────────
+│ Faithfulness:  no figure — not tool-checked (method counts only)
+│ Counts:        supported 2 · partial 1 · unsupported 1 · contradicted 0 · unverifiable 0 · out_of_scope 1 · not_checked 0
+│ Formula:       would be (2+0.5×1)/(2+1+1+0+0)=62.5% → 63% IF these were tool-returned
+│ Source scores: listed on source cards — not averaged here
+│ What this is:  passage overlap, not world-truth (RAGAS-style)
+│ What to do:    rewrite the unsupported claim; keep out_of_scope out of %
+│ Label:         not tool-checked
+└────────────────────────────────────────────────────
+```
 
-- Every number appears in the passage.
-- Audience and market are stated or marked not yet set.
-- Human review is named; no clearance pretended.
+Stamp: `TRUSTED / confidence-scoring: not tool-checked (offline tools) · counts only · no %`

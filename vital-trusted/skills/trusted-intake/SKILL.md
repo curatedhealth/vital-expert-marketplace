@@ -89,14 +89,24 @@ the card records the policy as the person states it, never as checked (TR-H4).
 
 ## What to return
 
-- **To the person:** either the questions (`assets/intake-questions.md`), or one line on
+- **To the person:** either the questions (`templates/intake-questions.md`), or one line on
   what was assumed and then the work. At leadership stakes and above, a short "Working
-  from" block in plain words (`assets/context-card.md`, person view).
-- **To other skills:** the context card (`assets/context-card.md`), kept in the
+  from" block in plain words (`templates/context-card.md`, person view).
+- **To other skills:** the context card (`templates/context-card.md`), kept in the
   conversation and updated when an answer arrives. Other skills read it; they do not ask
   again what it already holds.
-- **To `trusted-check` only:** one line in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** one line in the format of `templates/check-line.md`. Never
   appended to a reply the person reads.
+
+
+## Output cards (required)
+
+Use shared cards under `../../templates/` so results are scannable:
+
+- **Context card** — skill `templates/context-card.md` as the header for every downstream card
+- Stamp intake complete / gaps with check-line-stamp
+
+Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -109,8 +119,8 @@ the card records the policy as the person states it, never as checked (TR-H4).
 | `references/gap-rules.md` | Gap classes as intake uses them | Writing an unknown field |
 | `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before the card or questions go out |
 | `references/tools.md` | Companion slot per task | Companion questions |
-| `assets/context-card.md` | The card other skills read, and the person view | Building the card |
-| `assets/intake-questions.md` | How the questions look to the person | Asking |
-| `assets/check-line.md` | The line for `trusted-check` | Returning to the check |
+| `templates/context-card.md` | The card other skills read, and the person view | Building the card |
+| `templates/intake-questions.md` | How the questions look to the person | Asking |
+| `templates/check-line.md` | The line for `trusted-check` | Returning to the check |
 | `examples/doctor-email-no-market.md`, `examples/board-update-no-questions.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must redirect | Testing |

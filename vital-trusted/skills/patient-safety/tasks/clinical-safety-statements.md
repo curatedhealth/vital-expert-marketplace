@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (S10 to S12), `references/patterns.md` (C1 to C10) |
 | Tool | `scripts/label_match.py` where code can run. Companion slot: label source (none yet) |
 | Prompt | This guide |
-| Template | `assets/label-statements.md`, `assets/repair-note.md`, `assets/check-line.md` |
+| Template | `templates/label-statements.md`, `templates/repair-note.md`, `templates/check-line.md` |
 | Input | The draft or request, the supplied label (SmPC, prescribing information, package leaflet, instructions for use) and the market from intake |
 | Governance | TR-H1, TR-H6, TR-H7, TR-H8, TR-H11 |
 
@@ -76,11 +76,11 @@ Any sentence, table cell, bullet or chart label about:
    if supplied; otherwise keep the label wording and mark the passage for your medical
    review. Replace statements not in the label with a gap. Never delete a warning
    silently.
-4. **Note each change** in `assets/repair-note.md`, in plain words.
+4. **Note each change** in `templates/repair-note.md`, in plain words.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

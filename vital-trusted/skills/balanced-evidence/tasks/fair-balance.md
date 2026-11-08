@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R1, R2, R4, R5, R7, R8, R10), `references/patterns.md` (FB1–FB8) |
 | Tool | `scripts/balance_cues.py` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` |
+| Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
 | Input | The draft or request, the supplied material (label, study, results tables, registry data), the reader, market and use from intake |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11, TR-H12 |
 
@@ -37,7 +37,7 @@ events, and the authors' stated limitations.
 
 1. **List the benefit statements the draft will make** and, beside each, the risks,
    discontinuations and limitations the material gives for the same product and use.
-   Use the evidence inventory (`assets/evidence-inventory.md`) for anything leaving the
+   Use the evidence inventory (`templates/evidence-inventory.md`) for anything leaving the
    company.
 2. **If the material holds no safety or limitation data**, do not draft a benefits-only
    piece. Ask for the label or results, or leave a visible gap where the risks will go:
@@ -84,7 +84,7 @@ principal investigator, the piece still carries its own balance.
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

@@ -90,6 +90,7 @@ In Cowork, add the marketplace and install **vital-trusted** only. Paste a `vvfy
 | Why this agent | `references/why-this-agent.md` | Rationale (anatomy R10) |
 | Connectors | `connectors.md` | Offline tools + live Prove MCP use / never / cite |
 | Offline tools | `tools/` | Deterministic Prove helpers |
+| Shared output cards | `templates/` | Claim / source / confidence / evidence / gap / stamp cards |
 | Capability map | `skills/trusted-capability-map/` | Missions and routing |
 | Job skills | `skills/*/` | Full CF04 kits |
 

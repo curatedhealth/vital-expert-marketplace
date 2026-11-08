@@ -112,8 +112,18 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 - Gaps use the classes in `references/gap-rules.md`, so every skill words them the same
   way.
 - Never claim what `references/governance.md` lists as never claimed, in any copy.
-- When routing, describe the next step plainly (`assets/route-answer.md`). Skill names
+- When routing, describe the next step plainly (`templates/route-answer.md`). Skill names
   and gap syntax stay out of what the person reads unless they ask for them.
+
+
+## Output cards (required)
+
+Use shared cards under `../../templates/` so results are scannable:
+
+- Route answers may use skill `templates/route-answer.md`
+- When explaining Prove, show the shared card set in `../../templates/README.md`
+
+Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -125,7 +135,7 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 | `references/governance.md` | Never-claim list, closing statement, sign-off | Before anything leaves the conversation |
 | `references/tools.md` | Companions, the VERIFY tool list, slot behavior | Companion questions |
 | `tasks/*.md` | The three task guides | That task runs |
-| `assets/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |
+| `templates/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |
 | `examples/route-medical-information.md` | A worked routing case | Shaping a routing answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |
 

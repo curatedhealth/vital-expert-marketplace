@@ -42,12 +42,12 @@ land in the summary.
 Depth follows who will read the work (TR-H12). The person does not have to ask.
 
 - **Internal and quick** (a team email, notes for colleagues): only what would mislead a
-  colleague. Light summary of a few lines (`assets/check-output-light.md`).
+  colleague. Light summary of a few lines (`templates/check-output-light.md`).
 - **Leadership or cross-team** (board update, business review, internal brief): every
-  active letter, short notes. Short summary (`assets/check-output-short.md`).
+  active letter, short notes. Short summary (`templates/check-output-short.md`).
 - **Leaving the company** (agency, doctor, payer, patient, regulator, partner, public):
   every active letter in full, the full summary, and the internal process it goes to
-  next (`assets/check-output-full.md`).
+  next (`templates/check-output-full.md`).
 
 If it is unclear who will read it, ask once: "Who will read this?"
 
@@ -89,6 +89,17 @@ It is not medical, legal, regulatory or ethics review." (TR-H10)
 If the person asks for fixes, route to the letter skill's repair step. Do not rewrite the
 draft inside the check.
 
+
+## Output cards (required)
+
+Use shared cards under `../../templates/` so results are scannable:
+
+- Aggregate letter check-lines into a TRUSTED summary (`templates/check-output-*.md`)
+- Point open True items at Prove cards (`../../templates/claim-card.md`, `confidence-card.md`)
+- Stamp with `../../templates/check-line-stamp.md`
+
+Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
+
 ## Files in this skill
 
 | File | What it holds | Read it when |
@@ -102,8 +113,8 @@ draft inside the check.
 | `references/gap-rules.md` | Gap classes as they appear in a summary | Writing open items |
 | `references/governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
 | `references/tools.md` | Companion slot per task, VERIFY chain, script | Hand-off, script use |
-| `assets/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
-| `assets/check-line.md` | The line contract this skill accepts | Reading lines |
+| `templates/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
+| `templates/check-line.md` | The line contract this skill accepts | Reading lines |
 | `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
 | `examples/*.md` | Worked cases: agency email, team email, board update | Shaping the answer |
 | `evals/evals.json` | Test requests, including one it must not approve | Testing |

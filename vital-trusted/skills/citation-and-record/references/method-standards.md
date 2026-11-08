@@ -8,3 +8,6 @@
 | R4 | A signed electronic record shows the signer's printed name, the date and time of signing, and the meaning of the signature (such as review, approval, responsibility or authorship), and these appear in any human-readable form of the record. | 21 CFR 11.50 Signature manifestations (eCFR, Title 21 up to date as of 15 October 2026). | US records that fall under Part 11. Everyday TRUSTED work is usually outside it. Applied here only as good practice: a clearance names the person, the role, the date and what the clearance means. | Confirmed from eCFR on 20 October 2026. |
 
 Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.
+
+| CR7 | Citations attribute to supplied spans; they are not a verdict of world-truth (Claude Citations pattern; TRUSTED same). | Anthropic Citations docs | VERIFIED — accessed 8 November 2026 | https://platform.claude.com/docs/en/build-with-claude/citations |
+| CR8 | Every claim/comparison must be capable of substantiation; keep the work record so a named human can clear. | ABPI Code 2024 Cl. 6.2 | VERIFIED — accessed 8 November 2026 | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |

@@ -1,9 +1,15 @@
-# Good example: sourced draft
+# Good example: context card filled
 
-A short draft that only uses figures present in the supplied passage, marks missing items `[GAP]`, and ends with a check-line and open items for a named reviewer.
+```text
+Audience: payer committee
+Market: Germany
+Product status: approved
+Use: external deck (will need MLR)
+Deliverable: 8-slide value story
+Sources: NORLA registry summary (supplied)
+Sensitivity: no patient-level data
+AI policy: company tools only — stated by user
+Gaps: none for intake
+```
 
-## Why it works
-
-- Every number appears in the passage.
-- Audience and market are stated or marked not yet set.
-- Human review is named; no clearance pretended.
+Stamp: `TRUSTED / trusted-intake: context complete · external use → MLR later`

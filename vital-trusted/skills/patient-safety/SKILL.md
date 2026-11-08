@@ -94,13 +94,31 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 ## What to return
 
 - **When Part B finds something:** the safety flag first, in the format of
-  `assets/safety-flag.md`, then the work.
+  `templates/safety-flag.md`, then the work.
 - **When drafting with safety content:** the draft with label quotes and gaps inline,
-  and, where asked, the table in `assets/label-statements.md`.
-- **When fixing:** the fixed text, then a note in the format of `assets/repair-note.md`,
+  and, where asked, the table in `templates/label-statements.md`.
+- **When fixing:** the fixed text, then a note in the format of `templates/repair-note.md`,
   sized to the stakes.
-- **To `trusted-check` only:** lines in the format of `assets/check-line.md`. Never
+- **To `trusted-check` only:** lines in the format of `templates/check-line.md`. Never
   append them to a reply the person reads directly.
+
+## Output cards
+
+Part B output comes first, in its own card, before any draft. Shared catalog:
+`../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Possible safety report in input | — | `safety-flag.md` (always first when Part B runs) |
+| Dose or warning not matching label | `finding-card.md` | Row in `label-statements.md` |
+| Patient wording: advice or false comfort | `finding-card.md` | `repair-note.md` |
+| No label supplied for a dose question | `gap-list.md` | Ask inline; do not paraphrase |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / patient-safety: not tool-checked (offline tools) · …`).
+`trusted-check` letter lines use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -117,6 +135,6 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 | `scripts/scan_safety_mentions.py` | Finds words that may signal a safety report, or patient-wording problems | A backstop while reading inputs or patient drafts |
 | `scripts/label_match.py` | Compares safety sentences in a draft with the supplied label text | Checking statements against the label |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/*.md` | Safety flag, label table, repair note, check line | Building the answer |
+| `templates/*.md` | Safety flag, label table, repair note, check line | Building the answer |
 | `examples/doctor-email-side-effect.md`, `examples/social-comment-reply.md` | Worked cases from everyday work | Shaping the answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |

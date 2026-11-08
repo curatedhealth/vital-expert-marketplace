@@ -14,7 +14,7 @@ device or app, as the person supplied it for the market the work is for.
 | Knowledge | `references/rules.md` (R1, R2, R4 to R8, R25 to R27), `references/patterns.md` (L1–L8) |
 | Tool | None. Companion slot: a future label-source companion (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/label-request.md`, `assets/claims-note.md`, `assets/check-line.md` |
+| Template | `templates/label-request.md`, `templates/claims-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the supplied label or intended-purpose statement, the context card (market, reader, product status) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -31,7 +31,7 @@ the label's own words.
 | Where | Market and label version or date | Market, and the conformity or clearance status as the person states it |
 | What it does not do | Contraindications, limits of use stated in the label | Functions it does not have; whether it diagnoses, monitors or only records; whether a clinician must confirm |
 
-If the label was not supplied, ask for it (`assets/label-request.md`). If the person
+If the label was not supplied, ask for it (`templates/label-request.md`). If the person
 says the product is not approved in this market, or is investigational, it is not
 promoted there at all (R1, R5, R6, R7, R8); route to the promotional boundary task.
 
@@ -88,7 +88,7 @@ that market's label. If two labels were supplied and they differ, mark the diffe
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

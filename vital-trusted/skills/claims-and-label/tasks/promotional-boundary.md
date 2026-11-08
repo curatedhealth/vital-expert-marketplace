@@ -15,7 +15,7 @@ questions, and points to the review process that decides.
 | Knowledge | `references/rules.md` (R3, R10 to R16, R20), `references/patterns.md` (P1–P8) |
 | Tool | None. Companion slot: a future MLR-preparation companion (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/unsolicited-reply.md`, `assets/claims-note.md`, `assets/check-line.md` |
+| Template | `templates/unsolicited-reply.md`, `templates/claims-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the question being answered (for a reply), the context card (reader, use, market) |
 | Governance | TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -68,7 +68,7 @@ doctor's own question, including one about a use outside the label:
 8. **Route:** the reply goes through the medical information procedure, or the medical
    review process, before it is sent (TR-H11).
 
-Format: `assets/unsolicited-reply.md`. US practice for unsolicited replies is
+Format: `templates/unsolicited-reply.md`. US practice for unsolicited replies is
 `[CHECK]` in `references/rules.md`; apply the steps above as good practice there.
 
 ## Guard (while drafting)
@@ -97,7 +97,7 @@ Format: `assets/unsolicited-reply.md`. US practice for unsolicited replies is
 
 ## Check line
 
-See `assets/check-line.md`. Use the first form when the piece is meant as scientific
+See `templates/check-line.md`. Use the first form when the piece is meant as scientific
 exchange or a reply; the second when it is promotional or the use is not stated.
 
 ## Boundaries

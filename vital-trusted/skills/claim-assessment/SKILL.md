@@ -99,18 +99,32 @@ passage — connect VERIFY]`.
 - Status counts go to `confidence-scoring` for the confidence figure. This skill does not
   compute it.
 
+## Output cards (required)
+
+Render results people can scan in under a minute:
+
+1. **Claim cards** — one per atomic claim using plugin `../../templates/claim-card.md` (or skill `templates/support-result.md`).
+2. **Evidence table** — `../../templates/evidence-table.md` when there are three or more claims.
+3. **Gap list** — `../../templates/gap-list.md` for open items only.
+4. **Check-line stamp** — always close with `../../templates/check-line-stamp.md` (offline vs live).
+
+Do not bury statuses in prose alone. Prefer the ASCII card or Markdown table over paragraphs.
+
 ## Files in this skill
 
 | File | What it holds | Read it when |
 |---|---|---|
 | `tasks/break-into-claims.md` | Part A: what one claim is, priority, pairing with passages | Every fact-check |
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
-| `references/rules.md` | Primary rules and the VERIFY contract, with dates and status | Explaining why a rule exists |
-| `references/patterns.md` | Common failures with before and after | Both tasks |
-| `references/gap-rules.md` | Gap classes as used here | Writing any gap |
-| `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
-| `references/tools.md` | VERIFY arguments, returns, pitfalls; the manual script | Before calling a tool |
-| `scripts/split_claims.py` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
-| `assets/claim-list.md`, `assets/support-result.md`, `assets/check-line.md` | Output formats | Building the answer |
-| `examples/value-story-registry.md` | Worked case: value story against a registry summary | Shaping the answer |
-| `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/method.md` | Method entry | Every run |
+| `references/method-standards.md` | Q1 standards with citations | Explaining why a rule exists |
+| `references/knowledge.md` | Migrated rules / patterns | Both tasks |
+| `references/failure-modes.md` | Common failures | Both tasks |
+| `references/statuses.md` | Status vocabulary | Deciding support |
+| `references/tools.md` | Offline + live tools | Before calling a tool |
+| `references/without-verify.md` | Offline path | No key |
+| `scripts/split_claims.py` | Manual sentence split | Offline |
+| `templates/` | Skill-local claim-list / support-result / check-line | Building the answer |
+| `../../templates/` | Shared claim / evidence / gap / stamp cards | Prefer for packs |
+| `examples/` | Worked cases including card renders | Shaping the answer |
+| `evals/evals.json` | Daily-user tests | Testing |

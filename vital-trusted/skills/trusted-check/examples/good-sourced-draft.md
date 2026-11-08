@@ -1,9 +1,15 @@
-# Good example: sourced draft
+# Good example: TRUSTED summary with cards pointed
 
-A short draft that only uses figures present in the supplied passage, marks missing items `[GAP]`, and ends with a check-line and open items for a named reviewer.
+**Draft:** board update with one unverified forecast figure.
 
-## Why it works
+| Letter | Result | Note |
+|---|---|---|
+| T | flag | Useful but one action missing |
+| R | pass | Internal only |
+| U | pass | — |
+| S | pass | No patient instruction |
+| T (True) | flag | Forecast figure not in supplied material → open Prove claim card |
+| E | pass | — |
+| D | flag | No work-record stamp yet |
 
-- Every number appears in the passage.
-- Audience and market are stated or marked not yet set.
-- Human review is named; no clearance pretended.
+Open True item → run claim-assessment cards. Stamp: `TRUSTED / trusted-check: not tool-checked · True flag · hand to Prove`

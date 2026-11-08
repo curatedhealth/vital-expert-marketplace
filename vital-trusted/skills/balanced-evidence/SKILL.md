@@ -98,11 +98,31 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 - When drafting: the draft with risks, limitations and scope stated inline, and gaps
   where material is missing, then a short note only if something was left out or needs
   the person.
-- When fixing: the fixed text, then a note in the format of `assets/balance-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/balance-note.md`,
   sized to the stakes. For high stakes, include the evidence inventory
-  (`assets/evidence-inventory.md`).
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+  (`templates/evidence-inventory.md`).
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
+
+## Output cards
+
+Every repair bundle must be scannable in one pass. Use shared cards first (catalog:
+`../../templates/README.md`), then fill skill-local templates. Do not merge faithfulness
+or source scores into balance counts.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| Each benefit without paired risk or limitation nearby | `finding-card.md` (one row per gap) | — |
+| Open items the person must supply | `gap-list.md` | Inside `balance-note.md` |
+| Full claim-by-omission board (leaving the company) | `evidence-table.md` optional | `evidence-inventory.md` required in the note |
+| Operator pack (multiple omissions + gaps) | `verify-brief.md` optional | `balance-note.md` (full or short) |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / balanced-evidence: not tool-checked (offline tools) · …`).
+Letter lines for `trusted-check` still use `templates/check-line.md` only; never append
+those lines to the person's reply.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -116,6 +136,6 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 | `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
-| `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

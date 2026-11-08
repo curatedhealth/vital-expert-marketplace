@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R3, R4, R7, R9, R10), `references/patterns.md` (SR1–SR8) |
 | Tool | `scripts/balance_cues.py --source material.txt` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/balance-note.md`, `assets/evidence-inventory.md` |
+| Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
 | Input | The draft or request and all supplied material: every study, results table, abstract or registry extract |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11 |
 
@@ -27,7 +27,7 @@
 
 ## Guard (while drafting)
 
-1. **Fill the evidence inventory first** (`assets/evidence-inventory.md`) from the
+1. **Fill the evidence inventory first** (`templates/evidence-inventory.md`) from the
    supplied material only: every study, its primary endpoint and result, its
    pre-specified time point, key secondary endpoints, subgroups, harms and
    discontinuations. Leave a field as a gap rather than inferring it.
@@ -68,7 +68,7 @@
 
 ## Check line
 
-See `assets/check-line.md`.
+See `templates/check-line.md`.
 
 ## Boundaries
 

@@ -11,3 +11,6 @@
 | C7 | Source score axes are authority, recency, relevance, provenance and currency (weights 25, 25, 30, 10, 10); null axes are dropped and the rest rescaled to 100; relevance is null when no question was passed; currency is null until a currency check runs. | vital-verify `source-grading` skill, `references/tiers-and-score.md`, 19 October 2026. The `qualify_source` schema says only that it returns "a tier and a source_score". | `[CHECK]`: axis names, weights and null behavior to be confirmed against a real `qualify_source` return. Print what comes back; do not recompute. |
 
 Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.
+
+| C8 | Faithfulness = supported atomic claims / total claims against context (RAGAS). TRUSTED uses (S+0.5P)/(S+P+U+C+V); exclude out_of_scope and not_checked. | RAGAS Faithfulness docs | VERIFIED — accessed 8 November 2026 | https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/ |
+| C9 | Relative risk without absolute risk can mislead on clinical impact. | ABPI Code 2024 Cl. 6.1 guidance | VERIFIED — accessed 8 November 2026 | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |

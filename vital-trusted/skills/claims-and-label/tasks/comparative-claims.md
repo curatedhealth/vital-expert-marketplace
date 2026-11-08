@@ -13,7 +13,7 @@ like with like, says exactly what was compared, and does not disparage a competi
 | Knowledge | `references/rules.md` (R17 to R24), `references/patterns.md` (C1–C8) |
 | Tool | None. Companion slot: VERIFY `check_claim` through `claim-assessment`, to test the comparison against its passage |
 | Prompt | This guide |
-| Template | `assets/claims-note.md`, `assets/check-line.md` |
+| Template | `templates/claims-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the supplied studies or data, the label, the context card (reader, market) |
 | Governance | TR-H1, TR-H2, TR-H3, TR-H8, TR-H11 |
 
@@ -88,7 +88,7 @@ request implied it.
 
 ## Check line
 
-See `assets/check-line.md`. Disparaging language and unscoped absolutes go in the notes
+See `templates/check-line.md`. Disparaging language and unscoped absolutes go in the notes
 under the comparisons line.
 
 ## Boundaries

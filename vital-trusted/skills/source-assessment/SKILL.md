@@ -43,7 +43,7 @@ Depth follows who will read the work (TR-H12):
 - **Internal and quick** (a team email, a note to a colleague): one line per source
   (what it is, its date, the one thing it cannot carry).
 - **Leadership or cross-team** (board update, business review, competitor summary): a
-  short source card per source (`assets/source-card.md`, short form).
+  short source card per source (`templates/source-card.md`, short form).
 - **Leaving the company** (payer, doctor, patient, agency, public): the full source card
   for every source, both tasks, currency checked or marked "not checked", and a pointer
   to the review process the work goes through next (TR-H11).
@@ -97,13 +97,24 @@ Currency without a tool: ask for the date and mark currency "not checked".
 
 ## What to return
 
-- To the person: one source card per source (`assets/source-card.md`), sized to the
+- To the person: one source card per source (`templates/source-card.md`), sized to the
   stakes, with "What it can carry" and "What it cannot carry" always present.
-- When VERIFY ran: the tool block in the card (`assets/verify-block.md`).
-- To `trusted-check` only: the lines in `assets/check-line.md`. Never append them to a
+- When VERIFY ran: the tool block in the card (`templates/verify-block.md`).
+- To `trusted-check` only: the lines in `templates/check-line.md`. Never append them to a
   direct reply.
 - On a check output for a reviewer, the closing statement from
   `references/governance.md`. Not on a quick answer.
+
+
+## Output cards (required)
+
+Use shared cards under `../../templates/` so results are scannable:
+
+- **Source card** — `../../templates/source-card.md` (and skill `templates/source-card.md`)
+- **Currency** — say "not checked" until live `check_currency` or a human notice
+- Optional **verify brief** when bundling with claim-assessment
+
+Always close with `../../templates/check-line-stamp.md`. Prefer cards/tables over long prose.
 
 ## Files in this skill
 
@@ -117,7 +128,7 @@ Currency without a tool: ask for the date and mark currency "not checked".
 | `references/gap-rules.md` | Gap classes as used here | Writing any gap |
 | `references/governance.md` | Boundaries, stop rules, never-claimed, closing statement | Before output leaves |
 | `references/tools.md` | VERIFY calls: exact arguments, what comes back, pitfalls | Before any tool call |
-| `assets/source-card.md`, `assets/verify-block.md`, `assets/check-line.md` | Output formats | Building the answer |
+| `templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `scripts/identify_source_id.py` | Says which VERIFY argument an identifier belongs in (doi, pmid, pmcid, url) | Before a VERIFY call |
 | `scripts/print_source_score.py` | Prints a VERIFY source score as the total plus numeric axes, nulls left out | After qualify_source |
 | `examples/*.md` | Worked cases: a preprint in a payer deck, a competitor press release | Shaping the answer |

@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R4, R5, R7, R10), `references/patterns.md` (UC1–UC9, OH1–OH5) |
 | Tool | `scripts/find_framing_cues.py` where code can run. No companion yet (`references/tools.md`) |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/framing-note.md` |
+| Template | `templates/check-line.md`, `templates/framing-note.md` |
 | Input | The draft, the supplied study material, the context card (reader, use, stakes) |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H12, TR-H13 |
 
@@ -91,7 +91,7 @@ it never becomes a label in the draft.
 
 ## Check line
 
-See `assets/check-line.md` (uncertainty line).
+See `templates/check-line.md` (uncertainty line).
 
 ## Boundaries
 

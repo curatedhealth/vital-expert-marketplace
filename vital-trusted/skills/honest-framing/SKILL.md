@@ -96,13 +96,31 @@ is described as tool-checked (TR-H4).
 
 - When drafting: the draft framed at the right size, with gaps inline, then a short note
   only if something was left out or needs the person.
-- When fixing: the fixed text, then a note in the format of `assets/framing-note.md`,
+- When fixing: the fixed text, then a note in the format of `templates/framing-note.md`,
   sized to the stakes. For each chart that changed or needs changing, a plain
-  description in the format of `assets/chart-description.md`.
-- For a disclosure that was missing: wording in the format of `assets/disclosure-line.md`
+  description in the format of `templates/chart-description.md`.
+- For a disclosure that was missing: wording in the format of `templates/disclosure-line.md`
   built only from what the material states.
-- To `trusted-check` only: one line per task in the format of `assets/check-line.md`.
+- To `trusted-check` only: one line per task in the format of `templates/check-line.md`.
   Never append check lines to a reply the person reads directly.
+
+## Output cards
+
+Frame repairs as separate cards so overclaim and over-hedge stay visible. Shared catalog:
+`../../templates/README.md`.
+
+| When | Shared (`../../templates/`) | Skill-local (`templates/`) |
+|---|---|---|
+| One certainty word or chart distortion fixed | `finding-card.md` | Entry in `framing-note.md` |
+| Sponsor, funder or tie disclosed | `source-card.md` (role = sponsor, not graded as evidence) | `disclosure-line.md` |
+| Chart still misleading after repair | — | `chart-description.md` (plain version) |
+| Missing interval, N, or funder | `gap-list.md` | Inside `framing-note.md` |
+
+End every bundle with a check-line stamp per `../../templates/check-line-stamp.md`
+(offline default: `TRUSTED / honest-framing: not tool-checked (offline tools) · …`).
+`trusted-check` letter lines use `templates/check-line.md` only.
+
+Digest: `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 ## Files in this skill
 
@@ -119,6 +137,6 @@ is described as tool-checked (TR-H4).
 | `scripts/chart_scale.py` | How much a truncated axis or scaled pictogram enlarges a difference; cumulative into per-period | A chart or pictogram is involved |
 | `scripts/find_framing_cues.py` | Lists certainty, hedging, minimizing and independence words for review | Repairing a longer draft |
 | `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
-| `assets/check-line.md`, `assets/framing-note.md`, `assets/chart-description.md`, `assets/disclosure-line.md` | Output formats | Building the answer |
+| `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md`, `templates/disclosure-line.md` | Output formats | Building the answer |
 | `examples/deck-proves-superiority.md`, `examples/overhedged-summary.md` | Worked cases: a sales deck that overclaims, a summary that over-hedges | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

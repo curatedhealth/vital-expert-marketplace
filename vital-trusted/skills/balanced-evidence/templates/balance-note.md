@@ -39,7 +39,7 @@ process, e.g. promotional review> before it is used.
 I worked only from the material you gave me. I did not look for other studies, and I did
 not judge whether any side effect matters clinically.
 
-<Evidence inventory, for anything leaving the company: assets/evidence-inventory.md>
+<Evidence inventory, for anything leaving the company: templates/evidence-inventory.md>
 ```
 
 ## Short note (internal, low stakes)

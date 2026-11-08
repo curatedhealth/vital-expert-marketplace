@@ -10,7 +10,7 @@
 | Knowledge | `references/rules.md` (R8, R9), `references/patterns.md` (IN1–IN7) |
 | Tool | `scripts/find_framing_cues.py` (independence and sponsor words). No companion yet |
 | Prompt | This guide |
-| Template | `assets/check-line.md`, `assets/disclosure-line.md`, `assets/framing-note.md` |
+| Template | `templates/check-line.md`, `templates/disclosure-line.md`, `templates/framing-note.md` |
 | Input | The draft, the supplied sources (funding statement, author disclosures, sponsor role, methods), the context card |
 | Governance | TR-H1, TR-H3, TR-H6, TR-H11 |
 
@@ -51,7 +51,7 @@ carries that disclosure to its reader.
 5. **Disclose the writer's side when it matters.** When company material describes a
    competitor's study or the company's own, it is the company speaking; do not present
    it as a neutral overview. The company's own process decides the exact declaration.
-6. **Build the disclosure line from the material only** (`assets/disclosure-line.md`).
+6. **Build the disclosure line from the material only** (`templates/disclosure-line.md`).
    Missing pieces become gaps; never fill a funder, role or author tie from memory.
 
 ## Repair (existing draft)
@@ -71,7 +71,7 @@ carries that disclosure to its reader.
 
 ## Check line
 
-See `assets/check-line.md` (interests line).
+See `templates/check-line.md` (interests line).
 
 ## Boundaries
 
