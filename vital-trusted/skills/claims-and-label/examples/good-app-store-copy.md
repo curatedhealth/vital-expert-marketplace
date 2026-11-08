@@ -81,7 +81,7 @@ the device's certification, and nothing here was checked with a tool.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L7, P5 in `references/failure-modes.md` / `references/knowledge.md`. Rules: MDR R25 (Article 7 (a), (b), (d))
+Patterns L7, P5 in `references/knowledge.md`. Rules: MDR R25 (Article 7 (a), (b), (d))
 and R26 (Article 2(12)). Whether the app is a medical device, and what its
 certification covers, is not decided here (TR-H6); the person's statement is recorded
 as stated. The symptom line touches patient safety wording: `patient-safety`.

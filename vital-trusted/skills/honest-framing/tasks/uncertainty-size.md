@@ -7,7 +7,7 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | Fill the result card from the material, set the certainty the result can carry, then hold every result sentence to it, in both directions |
 | Skill | TR-3.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R4, R5, R7, R10), `references/failure-modes.md` / `references/knowledge.md` (UC1–UC9, OH1–OH5) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R4, R5, R7, R10), `references/knowledge.md` (UC1–UC9, OH1–OH5) |
 | Tool | `scripts/find_framing_cues.py` where code can run. No companion yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/framing-note.md` |

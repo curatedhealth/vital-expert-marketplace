@@ -82,7 +82,7 @@ tool.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L2, C1 and C2 in `references/failure-modes.md` / `references/knowledge.md`. Rules: EU R2 (Directive Art.
+Patterns L2, C1 and C2 in `references/knowledge.md`. Rules: EU R2 (Directive Art.
 87(2)), EFPIA R6 (1.01, 1.02) and R21 (3.05) through the German national code
 `[CHECK: German code not read]`. Message 4 is the label's dose wording; whether dosing
 is stated safely is `patient-safety`. The week-2 itch result is a secondary measure;

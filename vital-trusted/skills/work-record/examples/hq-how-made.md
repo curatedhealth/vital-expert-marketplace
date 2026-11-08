@@ -48,6 +48,6 @@ the way to earn it (TR-H5, TR-H3).
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns P2, P5, A1 and S1 in `references/failure-modes.md` / `references/knowledge.md`. Rule R1 (MHRA data integrity
+Patterns P2, P5, A1 and S1 in `references/knowledge.md`. Rule R1 (MHRA data integrity
 guidance, attribution) supports the "as you told me" attributions as practice; the
 analysis itself is not a GxP record.

@@ -9,7 +9,7 @@ Absorbs the currency-check method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Place the evidence (design), count the studies behind the claim, check retraction, correction and supersession, date it, then say what it can carry |
 | Skill | TR-8.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/failure-modes.md` / `references/knowledge.md` (S5, S6, S9–S12, S16) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/knowledge.md` (S5, S6, S9–S12, S16) |
 | Tool | VERIFY `check_currency`. `scripts/identify_source_id.py` where code runs |
 | Prompt | This guide |
 | Template | `../../templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |

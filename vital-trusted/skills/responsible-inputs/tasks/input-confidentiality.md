@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Recognize the kind of material, ask the policy question, offer a safer route, keep sensitive details out of the output |
 | Skill | TR-6.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1–I8, I11), `references/failure-modes.md` / `references/knowledge.md` (C1–C9) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1–I8, I11), `references/knowledge.md` (C1–C9) |
 | Tool | `scripts/scan_inputs.py` where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/input-note.md`, `templates/check-line.md` |

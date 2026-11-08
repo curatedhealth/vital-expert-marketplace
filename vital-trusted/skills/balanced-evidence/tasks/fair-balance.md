@@ -7,7 +7,7 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Pair every benefit with the risks, discontinuations and limitations the material gives for it; keep them in the same piece with comparable weight; replace reassurance with data |
 | Skill | TR-3.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R7, R8, R10), `references/failure-modes.md` / `references/knowledge.md` (FB1–FB8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R7, R8, R10), `references/knowledge.md` (FB1–FB8) |
 | Tool | `scripts/balance_cues.py` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |

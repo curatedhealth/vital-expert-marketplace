@@ -11,7 +11,7 @@ device or app, as the person supplied it for the market the work is for.
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Get the label, list its boundary, compare each product statement, rewrite inside it or mark the gap |
 | Skill | TR-2.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4 to R8, R25 to R27), `references/failure-modes.md` / `references/knowledge.md` (L1–L8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4 to R8, R25 to R27), `references/knowledge.md` (L1–L8) |
 | Tool | None. Companion slot: a future label-source companion (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/label-request.md`, `templates/claims-note.md`, `templates/check-line.md` |

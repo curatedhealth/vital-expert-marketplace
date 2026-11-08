@@ -5,7 +5,7 @@
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
 | Run the active letters | Each letter skill's own slot (label source, MLR preparation, safety routing, AI policy) would let that letter check instead of ask | No companion yet for any Build letter | Each letter runs as method; checks that need a missing companion read "not checked" in the summary |
-| Write the summary | None needed | `scripts/scan_verdicts.py` where code can run | Read the summary once for the words in `references/failure-modes.md` / `references/knowledge.md` P1 |
+| Write the summary | None needed | `scripts/scan_verdicts.py` where code can run | Read the summary once for the words in `references/knowledge.md` P1 |
 | Hand off to Prove | Check factual claims against supplied sources, qualify sources and their currency, compute confidence, build citations and a record | VERIFY, through the four Prove skills | Name what VERIFY would check; never simulate (TR-H4) |
 
 ## "Could not be checked" lines for empty slots
@@ -52,7 +52,7 @@ cross-check start from the same list. Anything beyond the schema is `[CHECK]`.
 
 ### `scripts/scan_verdicts.py`
 
-Scans a summary for verdict words and phrases (`references/failure-modes.md` / `references/knowledge.md` P1, P2, P3) and
+Scans a summary for verdict words and phrases (`references/knowledge.md` P1, P2, P3) and
 for leaked codes (P8): rule ids, framework codes, skill names, raw gap syntax. Letter
 words such as "Safe" and "True" at the start of a row are allowed.
 

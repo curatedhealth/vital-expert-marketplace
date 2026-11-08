@@ -10,7 +10,7 @@ status, the open items, one recommendation.
 | Worker | Evidence lead |
 | Workflow | Count by status, list the open items with the statement each concerns, choose one recommendation, size the card to the stakes, close |
 | Skill | TR-8.3.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C3, C4, C6), `references/failure-modes.md` / `references/knowledge.md` (P3–P10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C3, C4, C6), `references/knowledge.md` (P3–P10) |
 | Tool | `scripts/faithfulness.py` (counts and a default recommendation). Companion slot: reads `claim-assessment` findings; calls none |
 | Prompt | This guide |
 | Template | `templates/verify-card.md`, `templates/check-line.md` |

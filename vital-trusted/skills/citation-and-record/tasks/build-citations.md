@@ -9,7 +9,7 @@ Absorbs the citation part of the earlier vital-verify record method.
 | Worker | Quality and compliance lead |
 | Workflow | List the sources, build one reference per source from its own details, name any missing detail, paste the lines with no caption |
 | Skill | TR-8.4.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2), `references/failure-modes.md` / `references/knowledge.md` (C1–C5), `references/tools.md` |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2), `references/knowledge.md` (C1–C5), `references/tools.md` |
 | Tool | VERIFY `build_citation`, once per source. Without VERIFY: `scripts/plain_reference.py` or the same steps by hand |
 | Prompt | This guide |
 | Template | `templates/reference-list.md` |

@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find who could expect disclosure (policy, venue, law, audience), ask what applies, draft plain wording from what actually happened |
 | Skill | TR-6.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U2, U3, U6, U7, U8), `references/failure-modes.md` / `references/knowledge.md` (D1–D6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U2, U3, U6, U7, U8), `references/knowledge.md` (D1–D6) |
 | Tool | None. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (disclosure part), `templates/check-line.md` |

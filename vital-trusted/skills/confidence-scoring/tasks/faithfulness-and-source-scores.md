@@ -9,7 +9,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
 | Worker | Evidence lead |
 | Workflow | Collect the statuses VERIFY returned, confirm where they came from, count, compute, print the score lines and the confidence line, say what they mean |
 | Skill | TR-8.3.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C1–C7), `references/failure-modes.md` / `references/knowledge.md` (P1–P10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (C1–C7), `references/knowledge.md` (P1–P10) |
 | Tool | `scripts/faithfulness.py` where code can run. Companion slot: reads results of VERIFY `check_claim` / `verify_text` (via `claim-assessment`) and `qualify_source` / `check_currency` (via `source-assessment`); calls none |
 | Prompt | This guide |
 | Template | `templates/confidence-line.md`, `templates/check-line.md` |
@@ -21,7 +21,7 @@ New in TRUSTED. Restates the confidence line from the VERIFY connector instructi
 1. **Confirm the statuses came from VERIFY.** Each status must have been returned in
    this conversation by `check_claim` or `verify_text`. If any were decided by reading
    (a "manual" decision, a Build skill's "not found in the material", the person's own
-   tally), keep them apart. Do not mix them into the count (`references/failure-modes.md` / `references/knowledge.md` P2).
+   tally), keep them apart. Do not mix them into the count (`references/knowledge.md` P2).
 2. **If no status came from VERIFY**, give no confidence figure. Say so in one line,
    offer the counts from reading labeled "not tool-checked", and say what VERIFY would
    add (`references/tools.md`). Stop here for the percent.

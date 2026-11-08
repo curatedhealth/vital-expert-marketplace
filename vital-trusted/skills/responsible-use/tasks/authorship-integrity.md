@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find whose name the work goes out under and what that name claims; keep AI off the byline; turn ghostwriting into acknowledged support the named person makes their own |
 | Skill | TR-6.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U1–U5), `references/failure-modes.md` / `references/knowledge.md` (A1–A6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U1–U5), `references/knowledge.md` (A1–A6) |
 | Tool | None. Companion slot: future publications or AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (authorship part), `templates/check-line.md` |

@@ -7,7 +7,7 @@
 | Worker | Experienced cross-functional colleague |
 | Workflow | Notice what is going into the assistant, name its kind in plain words, ask what the company AI use policy says, record the answer as stated, never decide |
 | Skill | TR-0.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I7, I8), `references/failure-modes.md` / `references/knowledge.md` (C8, C9, C11, C13) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I7, I8), `references/knowledge.md` (C8, C9, C11, C13) |
 | Tool | None. Companion slot: a future AI policy companion (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/context-card.md` (inputs and policy lines), `templates/intake-questions.md` |

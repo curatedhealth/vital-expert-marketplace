@@ -7,7 +7,7 @@
 | Worker | Experienced cross-functional colleague |
 | Workflow | Read the request, fill the card from what is there, find the fields that are missing and matter, ask at most three, state the rest as assumptions, set stakes and the internal process |
 | Skill | TR-0.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1 to I6), `references/failure-modes.md` / `references/knowledge.md` (C1 to C13) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I1 to I6), `references/knowledge.md` (C1 to C13) |
 | Tool | None. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/context-card.md`, `templates/intake-questions.md`, `templates/check-line.md` |

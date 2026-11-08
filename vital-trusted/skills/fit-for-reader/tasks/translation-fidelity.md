@@ -7,7 +7,7 @@
 | Worker | Medical writer who has written for every audience, working with qualified translators |
 | Workflow | List what must survive unchanged, translate or read the translation against it, compare numbers and units, flag terms that need a qualified translator or approved wording |
 | Skill | TR-1.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R6, R7), `references/failure-modes.md` / `references/knowledge.md` (T1–T9) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R6, R7), `references/knowledge.md` (T1–T9) |
 | Tool | `scripts/compare_numbers.py` where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/translation-note.md`, `templates/check-line.md` |

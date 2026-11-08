@@ -7,7 +7,7 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Sort statements into claims and non-claims, attach a supplied source to each claim, gap the rest |
 | Skill | TR-5.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R5, R6), `references/failure-modes.md` / `references/knowledge.md` (S1–S8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R5, R6), `references/knowledge.md` (S1–S8) |
 | Tool | `scripts/find_source_cues.py` where code can run. Companion slot: none at launch; VERIFY `check_claim` through `claim-assessment` tests a claim against its passage after drafting |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/source-note.md` |

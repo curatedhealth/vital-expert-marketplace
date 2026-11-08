@@ -159,3 +159,14 @@ After: leave the field as a gap until it comes from the document. (TR-H1)
 
 **C7 References added to order.** "Add references to these claims" answered with a list of plausible references when none were supplied.
 After: decline in one plain sentence, list the claims that need sources and the kind each needs, and gap them in the text. (TR-H1, TR-H4)
+
+# Failure modes
+
+| Id | Failure mode | Detection question | Documented for | Source | Status |
+|---|---|---|---|---|---|
+| FM-SC-01 | Studies show without source | Does "studies show" lack a named source? | Sourcing | IFPMA 4.3 | PARTIAL |
+| FM-SC-02 | Fake citation | Was a reference invented to look sourced? | Integrity | TRUSTED sourced-claims | VERIFIED practice |
+| FM-SC-03 | Superlative without support | Is "leading/best" kept without passage support? | Claims | ABPI 6.1 | PARTIAL |
+| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
+
+Skill-specific rows for `sourced-claims`. Shared FM-08 is universal Prove honesty.

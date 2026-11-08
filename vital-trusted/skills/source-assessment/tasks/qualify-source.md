@@ -9,7 +9,7 @@ Absorbs the source-grading method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Identify the source, name its kind, establish peer review, authors and funders, judge fit for the question and the reader, then hand over |
 | Skill | TR-8.2.1 |
-| Knowledge | `references/source-types.md`, `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R8), `references/failure-modes.md` / `references/knowledge.md` (S1–S8, S13–S15) |
+| Knowledge | `references/source-types.md`, `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R8), `references/knowledge.md` (S1–S8, S13–S15) |
 | Tool | VERIFY `qualify_source`; `ingest_document` for a supplied PDF or internal document. `scripts/identify_source_id.py`, `scripts/print_source_score.py` where code runs |
 | Prompt | This guide |
 | Template | `../../templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` |

@@ -10,7 +10,7 @@ Draft unless a named person cleared it. Never "approved", "final", "validated" o
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Find every status word in the work; trace each to a named person and a stated event; keep draft where none; write the status line |
 | Skill | TR-7.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R1), `references/failure-modes.md` / `references/knowledge.md` (S1–S7) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R1), `references/knowledge.md` (S1–S7) |
 | Tool | `scripts/status_words.py` where code can run. Companion slot: VERIFY `build_record` through `citation-and-record`, which needs a named clearer |
 | Prompt | This guide |
 | Template | `templates/status-line.md`, `templates/check-line.md` |

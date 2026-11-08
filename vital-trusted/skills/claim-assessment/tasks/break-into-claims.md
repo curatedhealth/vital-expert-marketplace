@@ -9,7 +9,7 @@ Absorbs the claim-decomposition method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Take the text as submitted, split it into claims, rank them, pair each with its quoted passage, then stop before deciding support |
 | Skill | TR-8.1.1 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (C1–C4, C8, C11, C13, C14), `references/method-standards.md` / `references/knowledge.md` (R1–R5) |
+| Knowledge | `references/knowledge.md` (C1–C4, C8, C11, C13, C14), `references/method-standards.md` / `references/knowledge.md` (R1–R5) |
 | Tool | VERIFY `extract_claims`; without it, `scripts/split_claims.py` or a split by hand |
 | Prompt | This guide |
 | Template | `templates/claim-list.md` |

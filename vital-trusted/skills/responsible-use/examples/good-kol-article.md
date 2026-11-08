@@ -56,6 +56,6 @@ Ethical · disclosure and authorship: AI use disclosure not present, expected by
 
 ## Behind the reply (reference only, not shown to the person)
 
-Patterns avoided: A1, D1, T1 in `references/failure-modes.md` / `references/knowledge.md`. Rules that explain the
+Patterns avoided: A1, D1, T1 in `references/knowledge.md`. Rules that explain the
 reasons: U1 to U4 (ICMJE), U5 (GPP 2022, `[CHECK]`). Funding disclosure itself is
 `honest-framing`.

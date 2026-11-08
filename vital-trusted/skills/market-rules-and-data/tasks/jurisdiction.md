@@ -7,7 +7,7 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Establish the market and the reader, find wording, approvals and rules from another market, check who else could read it, ask what is missing |
 | Skill | TR-2.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M12), `references/failure-modes.md` / `references/knowledge.md` (J1 to J8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M12), `references/knowledge.md` (J1 to J8) |
 | Tool | None. Companion slot: future MLR preparation companion with market templates (none yet) |
 | Prompt | This guide |
 | Template | `templates/market-note.md`, `templates/check-line.md` |

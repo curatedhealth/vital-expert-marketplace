@@ -7,7 +7,7 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Find each safety statement in the supplied label; quote it word for word with its section, market and date; keep its conditions; gap the rest |
 | Skill | TR-4.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10 to S12), `references/failure-modes.md` / `references/knowledge.md` (C1 to C10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10 to S12), `references/knowledge.md` (C1 to C10) |
 | Tool | `scripts/label_match.py` where code can run. Companion slot: label source (none yet) |
 | Prompt | This guide |
 | Template | `templates/label-statements.md`, `templates/repair-note.md`, `templates/check-line.md` |

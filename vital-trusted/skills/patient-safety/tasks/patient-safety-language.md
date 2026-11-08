@@ -7,7 +7,7 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Read the piece as the patient would; remove advice, false reassurance and scare framing; make sure there is always a route to a doctor, nurse or pharmacist |
 | Skill | TR-4.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10, S13 to S15), `references/failure-modes.md` / `references/knowledge.md` (L1 to L9) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10, S13 to S15), `references/knowledge.md` (L1 to L9) |
 | Tool | `scripts/scan_safety_mentions.py --patient` where code can run. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/repair-note.md`, `templates/check-line.md` |

@@ -7,7 +7,7 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Establish market, reader, use and channel; build the list of statements usually expected; mark each present, missing or for the company's system; never write one from memory |
 | Skill | TR-2.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M19), `references/failure-modes.md` / `references/knowledge.md` (S1 to S8) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M19), `references/knowledge.md` (S1 to S8) |
 | Tool | `scripts/scan_output.py --statements` where code can run. Companion slot: future MLR preparation companion with market templates and job codes (none yet) |
 | Prompt | This guide |
 | Template | `templates/statements-list.md`, `templates/market-note.md`, `templates/check-line.md` |

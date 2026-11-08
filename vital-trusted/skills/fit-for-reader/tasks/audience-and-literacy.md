@@ -7,7 +7,7 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Name the reader and what they must decide or do, fill the reader card, then hold every passage to that reader's vocabulary and depth |
 | Skill | TR-1.2.1 |
-| Knowledge | `references/readers.md`, `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5), `references/failure-modes.md` / `references/knowledge.md` (A1–A8, L1–L9) |
+| Knowledge | `references/readers.md`, `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5), `references/knowledge.md` (A1–A8, L1–L9) |
 | Tool | `scripts/plain_language_scan.py` for patient or lay text where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/reader-card.md`, `templates/repair-note.md`, `templates/check-line.md` |

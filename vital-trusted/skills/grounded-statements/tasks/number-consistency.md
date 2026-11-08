@@ -7,7 +7,7 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | List every figure, match it to its source, check arithmetic and expression |
 | Skill | TR-5.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R3), `references/failure-modes.md` / `references/knowledge.md` (N1–N8, B1–B6) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R3), `references/knowledge.md` (N1–N8, B1–B6) |
 | Tool | `scripts/extract_numbers.py`, `scripts/risk_metrics.py` where code can run. Companion slot: VERIFY `check_claim` via `claim-assessment` |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |

@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Decide whether the work calls for a decision, recommendation, next step or owner; check each is present and specific; propose from the material or ask |
 | Skill | TR-1.1.4 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md` (A1–A5) |
+| Knowledge | `references/knowledge.md` (A1–A5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |

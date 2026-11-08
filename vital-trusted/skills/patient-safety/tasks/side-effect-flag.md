@@ -7,7 +7,7 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Read every input for what happened to a person on a product; quote it; flag it in plain words to the safety reporting procedure; never judge it |
 | Skill | TR-4.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S0 to S9), `references/failure-modes.md` / `references/knowledge.md` (P1 to P10) |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S0 to S9), `references/knowledge.md` (P1 to P10) |
 | Tool | `scripts/scan_safety_mentions.py` as a backstop where code can run. Companion slot: safety routing (none yet) |
 | Prompt | This guide |
 | Template | `templates/safety-flag.md`, `templates/check-line.md` |

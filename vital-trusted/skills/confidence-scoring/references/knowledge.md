@@ -95,3 +95,14 @@ After: "No confidence figure: nothing factual was checked." (C1)
 **P10 Comparing drafts without the counts.** "Version 2 is better: 85% against 70%."
 Why: the two drafts may have had different statements checked.
 After: show both counts side by side and say what changed.
+
+# Failure modes
+
+| Id | Failure mode | Detection question | Documented for | Source | Status |
+|---|---|---|---|---|---|
+| FM-CS-01 | Faithfulness as truth % | Was faithfulness treated as probability the claim is true? | Meaning | RAGAS / VERIFY | VERIFIED |
+| FM-CS-02 | Invented counts | Were statuses invented that claim-assessment did not return? | Provenance | TR-H4 | VERIFIED practice |
+| FM-CS-03 | Clearance from % alone | Was high % used to clear a pack? | Clearance | TR-H5 | VERIFIED practice |
+| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
+
+Skill-specific rows for `confidence-scoring`. Shared FM-08 is universal Prove honesty.
