@@ -1,9 +1,0 @@
-{
-  "$comment": "VITAL product metadata; not Claude CLI plugin.json schema.",
-  "displayName": "VITAL FOCUSED - Decision Companion",
-  "release_state": "Released",
-  "tier": "Standard",
-  "domain": "platform",
-  "capability_code": "FOCUSED",
-  "version": "0.5.3"
-}

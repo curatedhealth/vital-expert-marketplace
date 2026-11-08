@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-es-target-evaluation-due-diligence (CF-01.02.06 live-test), vital-mlr-review, and vital-decision-companion. The vital-verify plugin was retired 8 November 2026, vital-es-financial-modeling-and-valuation (CF-01.02.02 live-test).",
+  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-es-target-evaluation-due-diligence (CF-01.02.06 live-test), vital-mlr-review. The vital-verify plugin was retired 8 November 2026, vital-es-financial-modeling-and-valuation (CF-01.02.02 live-test), and FOCUSED (vital-focused).",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -77,9 +77,9 @@
       "description": "READY / MLR board preparation (Released 0.4.1 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
     },
     {
-      "name": "vital-decision-companion",
-      "source": "./vital-decision-companion",
-      "description": "Leadership decision coaching on its own connector. It adds up the person's own weights and ratings; sealed scores stay on Ontology Navigator and claim checks stay on Verify. Tools on mcp.vital.expert/api/mcp/decision-companion (vdec_)."
+      "name": "vital-focused",
+      "source": "./vital-focused",
+      "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Offline-first local session; person decides; skills never name a winner. Optional vdec_/vont_/vvfy_ for Decision / Navigator / Verify special services."
     }
   ]
 }
