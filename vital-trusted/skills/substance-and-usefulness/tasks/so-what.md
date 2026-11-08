@@ -75,3 +75,13 @@ Counts feed the substance line in `assets/check-line.md`: sections with no "so w
   the material does not hold is True (`grounded-statements`).
 - In promotional or external material, a new implication can become a claim. Keep it
   within the material and point to the review process (TR-H11).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

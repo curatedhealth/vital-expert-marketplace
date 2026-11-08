@@ -98,3 +98,13 @@ See `assets/check-line.md`.
   `patient-safety` and your safety reporting procedure.
 - Whether the piece meets a code or regulation is for your promotional or medical review
   process. This task says what was added and what is open.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

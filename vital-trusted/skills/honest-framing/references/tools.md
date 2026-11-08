@@ -1,3 +1,11 @@
+# Tools
+
+See plugin [`connectors.md`](../../../connectors.md).
+
+Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
+
+## Prior notes
+
 # Tools and companion slot
 
 ## Companion slot
@@ -72,15 +80,3 @@ script in `grounded-statements` by its path. Do not copy it into this skill.
 
 ```
 python ../grounded-statements/scripts/risk_metrics.py --treat-rate 0.01 --ctrl-rate 0.02
-```
-
-Use it here to set benefit and harm in the same format (pattern NF1), not to correct a
-figure; correcting figures is `grounded-statements`.
-
-### Tests
-
-```
-python scripts/test_scripts.py
-```
-
-Runs both scripts on fixed inputs and checks the outputs.

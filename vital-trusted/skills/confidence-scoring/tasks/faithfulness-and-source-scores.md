@@ -80,3 +80,13 @@ See `assets/check-line.md`.
   (`source-assessment` owns the grade).
 - Do not compare a percent across two drafts as "better" or "worse" without saying the
   statements checked differ.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

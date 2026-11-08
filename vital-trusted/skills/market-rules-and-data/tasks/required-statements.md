@@ -89,3 +89,13 @@ See `assets/check-line.md`.
 - Whether fair balance holds in the body is `balanced-evidence`.
 - The list is "usually expected for this kind of material in this market". It is never
   the complete list and never a finding that the material has everything it needs.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

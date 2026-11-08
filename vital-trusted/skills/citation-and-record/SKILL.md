@@ -4,15 +4,12 @@ description: "Build the reference list and the formal record for finished life-s
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. With the VERIFY connector it builds citations and the record with VERIFY tools; building the record needs a VERIFY key with write access. Without VERIFY it writes plain reference lines and a plain record note, both marked \"not tool-built\".\n"
 metadata:
-  framework_code: "TR-8.4"
-  framework_path: "TRUSTED > Prove > True and Defensible > Citation and record"
-  family: "prove"
-  letter: "True and Defensible"
-  worker: "Quality and compliance lead"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Citation and record
 
 When finished work is about to leave the team, two questions follow it: where does each

@@ -59,3 +59,13 @@ See `assets/check-line.md`.
   confidence label.
 - No evidence table unless the person asks for it; then `citation-and-record` builds it.
 - No clinical meaning of an open item (TR-H6); name it and route it.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

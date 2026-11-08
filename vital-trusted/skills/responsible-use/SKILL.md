@@ -4,15 +4,12 @@ description: "Help people in pharma, biotech, medtech and digital health use AI-
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. A future AI-policy companion could read the company's AI use and publication policies; until one exists, the skill asks. Optional script for a wording scan where code can run.\n"
 metadata:
-  framework_code: "TR-6.2"
-  framework_path: "TRUSTED > Build > Ethical > Responsible use"
-  family: "build"
-  letter: "Ethical"
-  worker: "Responsible AI lead who also knows the business"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Responsible use
 
 A draft can be correct, permitted and balanced and still go wrong in how it is used: a

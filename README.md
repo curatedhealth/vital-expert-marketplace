@@ -6,8 +6,7 @@ If you previously added `curatedhealth/vital-expert-plugins`, remove that market
 
 ## Foundational (no library key)
 
-- **VITAL TRUSTED** (`vital-trusted`). Nineteen skills for daily life-sciences work against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). No connector required. Prove skills use VITAL Verify when that connector is installed.
-- **VITAL Verify** (`vital-verify`). Connector plus check skills. Paste a `vvfy_` key when you have one. URL `https://mcp.vital.expert/api/mcp/verify`.
+- **VITAL TRUSTED** (`vital-trusted`). Nineteen skills for daily life-sciences work against TRUSTED (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible). Offline-first. Optional: paste a `vvfy_` key into this pack for TRUSTED Prove live tools (`https://mcp.vital.expert/api/mcp/verify`). **Install this pack only** — the former `vital-verify` plugin was retired on 8 November 2026.
 
 ## Digital Health (seven packs)
 

@@ -4,15 +4,12 @@ description: "Make everyday life-sciences work fit the person who will read it: 
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional scripts for a plain-language scan and a number and unit comparison of an original and its translation, where code can run.\n"
 metadata:
-  framework_code: "TR-1.2"
-  framework_path: "TRUSTED > Build > Tangible > Fit for reader"
-  family: "build"
-  letter: "Tangible"
-  worker: "Medical writer who has written for every audience"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Fit for the reader
 
 A finding can be correct and still be useless to the person holding it: a patient

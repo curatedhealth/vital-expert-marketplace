@@ -79,3 +79,13 @@ See `assets/check-line.md`.
   `trusted-intake`.
 - No market's rules are stated from memory. If the market is not in `references/rules.md`,
   say the rules were not read here and point to the review process.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

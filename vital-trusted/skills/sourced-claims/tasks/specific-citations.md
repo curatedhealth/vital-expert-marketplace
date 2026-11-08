@@ -81,3 +81,13 @@ See `assets/check-line.md`.
 - A complete citation is not a verified one. Whether the source exists as cited, and
   whether it says what the claim says, is `citation-and-record` and `claim-assessment`
   with VERIFY. Without VERIFY, say "citation not built or checked with a tool".
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

@@ -4,15 +4,12 @@ description: "Make sure everything an AI assistant writes for daily life-science
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, finished text can go to claim-assessment for tool checking.\n"
 metadata:
-  framework_code: "TR-5.1"
-  framework_path: "TRUSTED > Build > True > Grounded statements"
-  family: "build"
-  letter: "True"
-  worker: "Experienced colleague with an evidence background"
   pack: "vital-trusted"
-  version: "0.2.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Grounded statements
 
 When an assistant writes a board update, a value story or a reply to a doctor, the

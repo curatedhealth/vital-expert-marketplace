@@ -100,3 +100,13 @@ under the comparisons line.
 - Whether benefits and risks are shown in proportion is `balanced-evidence`.
 - Whether a comparison may be used at all in a market is decided by the review process
   (TR-H11). This task never calls a comparison fair, valid or permitted (TR-H3).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

@@ -62,3 +62,13 @@ See `assets/check-line.md`.
   adjusted hazard ratio) from raw counts and present yours as a correction. Raw and
   adjusted figures differ for legitimate reasons. Flag a mismatch and ask.
 - Do not judge whether an effect is clinically meaningful; that is the reviewer's call.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

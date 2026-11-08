@@ -87,3 +87,13 @@ for reviewers". That is the only place skill names and line formats may appear.
 - Do not soften a count because the person is in a hurry.
 - Do not add advice beyond what the letter checks found. The summary reports; repair is
   a separate step the person can ask for.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

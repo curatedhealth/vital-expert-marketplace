@@ -110,3 +110,13 @@ exchange or a reply; the second when it is promotional or the use is not stated.
   procedure (`patient-safety`); this task makes no causality or reportability judgment
   (TR-H6).
 - This task never decides that a piece is or is not promotional (TR-H3, TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

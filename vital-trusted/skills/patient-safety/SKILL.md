@@ -4,15 +4,12 @@ description: "Keep everyday life-sciences work from causing harm: dose, contrain
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. Two scripts run where the host can execute Python 3; the method runs by hand without them. No label-source or safety-routing companion exists yet.\n"
 metadata:
-  framework_code: "TR-4.1"
-  framework_path: "TRUSTED > Build > Safe > Patient safety"
-  family: "build"
-  letter: "Safe"
-  worker: "Drug safety physician who supports colleagues"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Patient safety
 
 A reply to a doctor, a patient leaflet or a social media answer can be correct and

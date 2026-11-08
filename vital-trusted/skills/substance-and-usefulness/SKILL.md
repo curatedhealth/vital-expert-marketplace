@@ -4,15 +4,12 @@ description: "Make everyday life-sciences work useful to the person who reads it
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none planned. Optional script for a filler and repetition scan where code can run.\n"
 metadata:
-  framework_code: "TR-1.1"
-  framework_path: "TRUSTED > Build > Tangible > Substance and usefulness"
-  family: "build"
-  letter: "Tangible"
-  worker: "Senior editor and engagement lead"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Substance and usefulness
 
 A draft can be correct, permitted and balanced and still leave its reader with nothing

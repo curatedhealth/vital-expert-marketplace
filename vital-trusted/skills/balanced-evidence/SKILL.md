@@ -4,15 +4,12 @@ description: "Make sure daily life-sciences work shows the evidence in proportio
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet for this skill. scripts/balance_cues.py runs where the host can execute Python 3; otherwise the same steps are done by hand.\n"
 metadata:
-  framework_code: "TR-3.1"
-  framework_path: "TRUSTED > Build > Unbiased > Balanced evidence"
-  family: "build"
-  letter: "Unbiased"
-  worker: "Medical reviewer"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Balanced evidence
 
 A slide can be right in every line and still mislead, because of what it leaves out: the

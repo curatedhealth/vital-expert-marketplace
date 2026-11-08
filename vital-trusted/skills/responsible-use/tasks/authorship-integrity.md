@@ -71,3 +71,13 @@ See `assets/check-line.md`.
 - Whether the content is promotional when an expert speaks for the company is
   `claims-and-label`.
 - Copyright in other people's text is `responsible-inputs`.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

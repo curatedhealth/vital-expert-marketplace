@@ -103,3 +103,13 @@ Rank before pairing, so a short check covers the right sentences (TR-H12).
 - Part A does not decide support, grade the source or count the result.
 - Do not drop a claim because it is hard to check. A hard claim is a priority claim.
 - Do not add a claim the text does not make, even one the person "meant".
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

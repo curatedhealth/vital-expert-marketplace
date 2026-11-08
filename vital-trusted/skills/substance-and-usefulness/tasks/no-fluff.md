@@ -76,3 +76,13 @@ repetition.
   email is a tone choice, not fluff, unless it displaces the content.
 - Superlatives such as "best-in-class" or "leading" are also claims. Cut them here if
   they carry no meaning, and leave the claim question to True and Rule-compliant.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

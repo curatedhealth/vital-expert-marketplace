@@ -74,3 +74,13 @@ See `assets/check-line.md`.
   `source-assessment`.
 - Do not decide whether a surrogate is acceptable for a regulatory or payer purpose. Say
   what the endpoint is; the reviewer decides what it is worth.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

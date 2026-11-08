@@ -96,3 +96,13 @@
 - Do not change the active letters or the depth the stakes call for to make the summary
   shorter.
 - Do not judge whether an event is reportable or related to the product (TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

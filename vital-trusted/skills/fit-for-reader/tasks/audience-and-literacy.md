@@ -100,3 +100,13 @@ See `assets/check-line.md`.
   is a legal determination (TR-H6). Flag for the legal or investor relations function.
 - Regulator correspondence: fit the words and structure; the content and commitments
   belong to the regulatory function and its process (TR-H11).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

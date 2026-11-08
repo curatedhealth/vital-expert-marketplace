@@ -64,3 +64,13 @@ See `assets/check-line.md`.
 - Whether an evidence statement matches its source can go to `claim-assessment` when
   VERIFY is connected.
 - This is not a style guide (TR-H9). Voice, tone and brand style stay with the person.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

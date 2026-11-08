@@ -84,3 +84,13 @@ See `assets/check-line.md` (interests line).
 - Grading the source itself (peer review, funding, fit) is `source-assessment`. Which
   claims need a reference is `sourced-claims`. How AI use is disclosed is
   `responsible-use`.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

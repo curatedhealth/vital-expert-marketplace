@@ -81,3 +81,13 @@ on.
 - Whether the specific is pitched at the reader's level is `fit-for-reader`.
 - A generic statement is not a style problem. Leave a vague but harmless phrase alone
   when the reader does not need the specific (TR-H9).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

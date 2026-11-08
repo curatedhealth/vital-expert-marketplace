@@ -95,3 +95,13 @@ See `assets/check-line.md` (framing line).
 - Visual style, brand colors and typography are not judged (TR-H9), except where they
   change the apparent size of a result (a harm in pale small type beside a benefit in
   bold).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

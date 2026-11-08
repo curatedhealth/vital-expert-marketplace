@@ -4,15 +4,12 @@ description: "Keep evidence at its real size in daily life-sciences work: certai
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and no companion exists yet for this skill. Two optional scripts run where the host executes Python; the arithmetic for relative and absolute effects is reused from grounded-statements.\n"
 metadata:
-  framework_code: "TR-3.2"
-  framework_path: "TRUSTED > Build > Unbiased > Honest framing"
-  family: "build"
-  letter: "Unbiased"
-  worker: "Medical reviewer with a statistics background"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Honest framing
 
 A slide can carry only correct figures and still mislead: "proves" on a single trial, a

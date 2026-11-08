@@ -82,3 +82,13 @@ See `assets/check-line.md`.
   is `source-assessment`. Say "not graded with a tool" when VERIFY has not run.
 - Whether data on file may be used in a given market, and how it is provided on request,
   is for the company's promotional or medical review process (TR-H11).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

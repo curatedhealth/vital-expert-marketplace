@@ -85,3 +85,13 @@ See `assets/check-line.md`.
 - Whether patient material may be published at all is `claims-and-label` and
   `market-rules-and-data`, then the company's review.
 - Never tell a patient what to do about their own treatment (TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

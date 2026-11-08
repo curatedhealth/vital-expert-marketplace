@@ -70,3 +70,13 @@ See `assets/check-line.md`.
 - Recording who reviewed is `work-record`. Honest status ("draft", "approved by…") is
   `work-record` too; this task never writes a status above draft.
 - The assistant comparing a draft with a source is not a review (O2).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

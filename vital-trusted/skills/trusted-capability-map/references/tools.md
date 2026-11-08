@@ -1,3 +1,11 @@
+# Tools
+
+See plugin [`connectors.md`](../../../connectors.md).
+
+Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
+
+## Prior notes
+
 # Companions
 
 A companion is an MCP connector that gives TRUSTED skills real tools. The plugin is free
@@ -20,14 +28,11 @@ and Claude, as connector tools; on other hosts, as the host shows MCP tools). Do
 assume a connector exists because the person mentions it. If unsure, say which tool
 would be used and ask whether it is connected.
 
-## VERIFY (live)
+## TRUSTED Prove live tools (optional)
 
-VERIFY checks sentences against passages the person or the tools supplied, qualifies
-sources, checks currency, builds citations and builds a record cleared by a named human.
+Live tools check sentences against passages the person or the tools supplied, qualify
+sources, check currency, build citations and build a record cleared by a named human.
 A support status is overlap with a supplied passage, not a verdict on truth in the world.
-
-Tool names as listed by the VERIFY connector. [CHECK: argument and return contracts to
-be confirmed against the connector schema before the Prove skills are finalized.]
 
 | Tool | Used by |
 |---|---|
@@ -41,12 +46,10 @@ be confirmed against the connector schema before the Prove skills are finalized.
 | `build_record` | `citation-and-record` |
 | `build_evidence_table` | `citation-and-record`, only when the person asks for a table |
 
-How to connect VERIFY: this pack already declares the connector at
-`https://mcp.vital.expert/api/mcp/verify` (server id `vital-verify`). In Cowork, paste the
-`vvfy_` key from the VITAL purchase when the pack asks for it. Tools appear in the
-assistant tool list when the key is accepted. Do not add a second MCP entry for the same
-URL. The standalone `vital-verify` pack uses the same connector; installing both does not
-create a second product host.
+How to connect: this pack declares MCP server id `trusted-prove` at
+`https://mcp.vital.expert/api/mcp/verify`. Paste the `vvfy_` key when the pack asks.
+Do not add a second MCP entry for the same URL. Do **not** install the retired
+`vital-verify` plugin.
 
 ## Future companions
 

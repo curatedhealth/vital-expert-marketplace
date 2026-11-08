@@ -125,3 +125,13 @@ See `assets/check-line.md`.
   or HTA body. Say what it is; the person's market access or HEOR colleagues decide.
 - Do not give clinical advice or say which treatment a guideline makes "right" for a
   patient (TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

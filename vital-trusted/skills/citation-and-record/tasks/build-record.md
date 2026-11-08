@@ -97,3 +97,13 @@ See `assets/check-line.md`.
 - Deciding whether a claim is supported is `claim-assessment`. This task does not
   change a result while writing the record.
 - The confidence figure and the VERIFY card are `confidence-scoring`.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

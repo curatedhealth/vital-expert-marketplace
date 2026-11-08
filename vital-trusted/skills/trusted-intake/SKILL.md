@@ -4,15 +4,12 @@ description: "Works out the context of a piece of life-sciences work before an A
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. The context card lives in the conversation; hosts that do not keep it between conversations need it again next time.\n"
 metadata:
-  framework_code: "TR-0.2"
-  framework_path: "TRUSTED > Core > Intake"
-  family: "core"
-  letter: "all"
-  worker: "Experienced cross-functional colleague"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Intake: the context before the draft
 
 The same sentence can be fine for a colleague and wrong for a doctor, allowed in one

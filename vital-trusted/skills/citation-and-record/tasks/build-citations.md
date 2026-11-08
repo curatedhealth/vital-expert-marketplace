@@ -74,3 +74,13 @@ See `assets/check-line.md`.
   when that ran (`confidence-scoring`). This task does not compute or invent them.
   [CHECK: whether scores are printed by this skill or by confidence-scoring, to be
   settled with the owner.]
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

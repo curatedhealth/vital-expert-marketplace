@@ -4,15 +4,12 @@ description: "Keep a short, honest record of how a piece of daily life-sciences 
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected and a named person clears the work, the formal record can be built through citation-and-record.\n"
 metadata:
-  framework_code: "TR-7.1"
-  framework_path: "TRUSTED > Build > Defensible > Work record"
-  family: "build"
-  letter: "Defensible"
-  worker: "Quality and compliance lead, practical not bureaucratic"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Work record
 
 When a manager at headquarters asks "how was this analysis made?", or a reviewer asks

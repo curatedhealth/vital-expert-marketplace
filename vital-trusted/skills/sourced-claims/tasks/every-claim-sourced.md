@@ -77,3 +77,13 @@ See `assets/check-line.md`.
 - Whether a comparative or superlative claim is allowed at all in this market is
   `claims-and-label`. This task asks only what would source it.
 - An absent source does not make a claim false. It makes it unsourced here.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

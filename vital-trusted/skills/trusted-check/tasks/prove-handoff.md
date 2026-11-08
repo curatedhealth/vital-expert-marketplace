@@ -89,3 +89,13 @@ Never write a status, a percentage, a citation or a record that VERIFY did not r
   not chosen to share to VERIFY. Only the deliverable and the sources they supplied.
 - Do not choose a citation style for the person; the Prove skill uses their stated
   preference or the connector's default.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

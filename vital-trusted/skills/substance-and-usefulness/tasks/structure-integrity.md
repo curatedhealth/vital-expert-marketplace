@@ -78,3 +78,13 @@ content, frameworks or groupings the content does not support, points out of ord
 - A framework the company uses as standard (for example a mandated business review
   template) is the person's choice; do not remove it. Check only that each section
   holds what its heading says.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

@@ -84,3 +84,13 @@ See `assets/check-line.md`. The line counts items; it never quotes them.
   the text de-identified, and it is not the EU or Swiss test (P2, P4).
 - Runs at every depth, including a quick internal email, because a copy of the output
   travels further than the person intends.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

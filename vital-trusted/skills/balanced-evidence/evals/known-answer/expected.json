@@ -1,0 +1,16 @@
+{
+  "must_flag": [
+    "most effective",
+    "all patients",
+    "cuts symptoms in half"
+  ],
+  "must_include_labels": [
+    "[GAP]",
+    "not tool-checked",
+    "open"
+  ],
+  "must_not": [
+    "cleared for external use",
+    "tool-checked via VITAL Verify"
+  ]
+}

@@ -67,3 +67,13 @@ See `assets/check-line.md`.
   Say what was chosen; the reviewer decides what it is worth.
 - Gaps about facts and figures are found by grounded-statements and sourced-claims; this
   task collects them into one list with owners.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

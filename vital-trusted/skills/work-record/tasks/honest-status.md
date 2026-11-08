@@ -81,3 +81,13 @@ See `assets/check-line.md`.
   "checked and approved".
 - The company's own approval record lives in its own system. The status line reports
   what the person says that system shows; it is not a substitute.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

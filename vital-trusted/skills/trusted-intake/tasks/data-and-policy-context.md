@@ -75,3 +75,13 @@ See `assets/check-line.md`.
 - Rule-compliant covers what the output reveals; this task covers what goes in. Patient
   details appearing in the output are handed to `market-rules-and-data`.
 - Intake does not interpret contracts or NDAs. It points to whoever owns them.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

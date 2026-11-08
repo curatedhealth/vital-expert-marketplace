@@ -103,3 +103,13 @@ See `assets/check-line.md`.
   Work from the intended purpose the person supplies; if there is none, ask (TR-H6,
   TR-H7).
 - No clinical advice on any use, inside or outside the label (TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

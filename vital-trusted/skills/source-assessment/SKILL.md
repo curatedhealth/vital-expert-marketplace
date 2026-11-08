@@ -4,15 +4,12 @@ description: "Say what a source can carry and what it cannot, before it goes in 
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The method runs without a connector and is marked \"not tool-checked\". With the VERIFY connector, qualify_source, ingest_document and check_currency add tool results.\n"
 metadata:
-  framework_code: "TR-8.2"
-  framework_path: "TRUSTED > Prove > True > Source assessment"
-  family: "prove"
-  letter: "True"
-  worker: "Evidence lead"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Source assessment
 
 A board slide cites a competitor's press release as if it were a trial. A payer deck

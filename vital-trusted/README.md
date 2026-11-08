@@ -1,13 +1,46 @@
 # VITAL TRUSTED
 
-Nineteen skills for people across a life-sciences company who use an AI assistant
-for daily work: general management, brand, market access, medical and other teams.
-TRUSTED supports the company's own SOPs and review processes. It never replaces them.
+Nineteen skills for people across a life-sciences company who use an AI assistant for daily work: general management, brand, market access, medical and other teams. TRUSTED supports the company's own SOPs and review processes. It never replaces them.
 
-Status: version 0.2.2 on `curatedhealth/vital-expert-marketplace`. Not yet reviewed by
-medical, legal or regulatory reviewers. Rules the skills could not trace to a dated
-primary document are marked `[CHECK]` inside the skill files and are described, not
-enforced. License terms are still to be set (`UNLICENSED` in plugin metadata).
+## Status
+
+**Status:** Pilot → Pilot after VERIFY gates (version 0.3.0). Hybrid B + Standard upgrade, 8 November 2026. Not yet signed by a medical, legal or regulatory practitioner for customer Released. License terms are still to be set (`UNLICENSED` in plugin metadata; see LICENSE).
+
+## Tier
+
+**Tier:** Standard. Authored functional evals and known-answer cases ship with each skill. Full public back-tests are out of scope for this release.
+
+## Known-answer status
+
+Each skill carries authored `evals/known-answer/` cases with fixtures and expected behaviours. Functional `evals/evals.json` holds at least three cases per skill. Sealed suite material lives outside the install tree under `mcps/trusted/eval-kit/`.
+
+## [CHECK] means
+
+- **[CHECK]:** a rule, period or fact not traced to a registered passage that was quote-checked against a saved copy of its source, or a team-set default.
+- **[GAP]:** a fact or source missing; never filled.
+
+## Depends on
+
+- `vital-core-atoms` (CF05 atoms bound where task cards name them).
+- Optional: TRUSTED Prove live tools (MCP server id `trusted-prove`, URL `https://mcp.vital.expert/api/mcp/verify`) when a `vvfy_` key is pasted. Offline Prove path does not require it. The separate `vital-verify` plugin is **retired** — do not install it.
+
+## Healthcare oversight (directory disclosure)
+
+TRUSTED is high-risk healthcare-adjacent software. Outputs are decision support for trained life-sciences professionals. A named human must review claim-bearing work through the company's SOPs before anything leaves the team. The pack does not clear promotional, medical or regulatory materials.
+
+## Offline-first Prove
+
+Without a `vvfy_` key, Prove skills run with the plugin `tools/` suite and label every result **not tool-checked**. With a key pasted into this pack, they may call live Prove tools (fetch, admission, currency); citations still require human review.
+
+## Not covered
+
+| Work | Owner |
+|---|---|
+| Live URL/DOI fetch, retraction lookup, tenant document ingest, usage metering | TRUSTED Prove live MCP (optional key in this pack) |
+| Medical, legal or regulatory sign-off | Named human reviewers |
+| Company SOP text and approved labels | The customer's own systems |
+| Extra agents, slash commands, automations | Deferred to factory re-cut |
+| Separate `vital-verify` skill pack | **Retired** 8 November 2026 |
 
 ## The standard
 
@@ -45,34 +78,21 @@ enforced. License terms are still to be set (`UNLICENSED` in plugin metadata).
 | TR-8.3 | confidence-scoring | Prove | True |
 | TR-8.4 | citation-and-record | Prove | True and Defensible |
 
-Build skills make the work good by design. Prove skills carry the method behind the
-VITAL Verify tools: fact checking, source quality, confidence, citation and record.
-
 ## Installing
 
-In Cowork, add the marketplace `curatedhealth/vital-expert-marketplace` and install
-**vital-trusted**. In other assistants that load Agent Skills, add the folders under
-`skills/`. To try it, ask "what can TRUSTED do?" or start an everyday task such as a
-board update.
+In Cowork, add the marketplace and install **vital-trusted** only. Paste a `vvfy_` key into this pack only if you want live Prove tools. Do **not** install `vital-verify` (retired). Ask "what can TRUSTED do?" or start an everyday task such as a board update.
 
-## VITAL Verify
+## What is in this plugin
 
-The connector is `https://mcp.vital.expert/api/mcp/verify` — the same host as the
-`vital-verify` pack. Paste a `vvfy_` key when Cowork asks (optional). Do not add a
-second Verify connector by hand, and do not install `vital-verify` only to get tools if
-this pack is already installed.
+| Part | Path | Role |
+|---|---|---|
+| Steward agent | `agents/trusted-steward-agent.md` | Map-first owner; evidence rules; human gates |
+| Why this agent | `references/why-this-agent.md` | Rationale (anatomy R10) |
+| Connectors | `connectors.md` | Offline tools + live Prove MCP use / never / cite |
+| Offline tools | `tools/` | Deterministic Prove helpers |
+| Capability map | `skills/trusted-capability-map/` | Missions and routing |
+| Job skills | `skills/*/` | Full CF04 kits |
 
-Without a key, Prove skills still run by hand, label output "not tool-checked", and give
-no confidence figure. With the key, they call the VERIFY tools on that host.
+## Claims rule
 
-## Choosing letters
-
-All seven letters are on by default. Ask "turn off Ethical" or "use only True and
-Safe" to change this for a conversation.
-
-## Inside each skill
-
-`SKILL.md` (instructions), `tasks/` (one guide per task), `references/` (rules,
-patterns, gap rules, governance, tools), `assets/` (output formats), `examples/`,
-`evals/evals.json` (test requests) and `scripts/` (small helpers with their own tests).
-`evals/suite-evals.json` at the plugin root holds cross-skill daily-user requests.
+No sentence states a rule, rate, period or number without a registered passage id, `[CHECK]` or `[GAP]`. Offline tool results are local and labeled not tool-checked; they are not a verdict that a sentence is true in the world.

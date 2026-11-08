@@ -4,15 +4,12 @@ description: "Check that what an AI assistant writes fits the market it is going
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet. Optional script for a cue scan of required statements and personal details where code can run.\n"
 metadata:
-  framework_code: "TR-2.2"
-  framework_path: "TRUSTED > Build > Rule-compliant > Market rules and data"
-  family: "build"
-  letter: "Rule-compliant"
-  worker: "Regulatory and promotional reviewer with a privacy background"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Market rules and data
 
 The same email can be fine in one country and wrong in the next: "FDA-approved" means

@@ -1,3 +1,11 @@
+# Tools
+
+See plugin [`connectors.md`](../../../connectors.md).
+
+Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
+
+## Prior notes
+
 # Tools and companion slot
 
 ## Companion slot per task
@@ -36,36 +44,4 @@ cross-check start from the same list. Anything beyond the schema is `[CHECK]`.
 | 2 | `claim-assessment` | `check_claim` | `claim` (object, required), `passage` (quoted text and locator), `source` | A status and the deciding passage | Call after the source is admitted. Shape of the `claim`, `passage` and `source` objects: `[CHECK]` |
 | 2 alt | `claim-assessment` | `verify_text` | `text` (required), `sources` or `document_ids` | Findings, at most 60 | One counted call; does not clear a record. When to prefer it over `check_claim`: `claim-assessment` decides |
 | 3 | `confidence-scoring` | none | Results of steps 1 and 2 | Confidence line and the VERIFY card | Formula in `references/rules.md` V3 `[CHECK]` |
-| 4 | `citation-and-record` | `build_citation` | `source`, `record` (for a paper), `passage`; `style` chicago or harvard, or omit for the key preference | One formatted citation line | Free. Does not check the claim. Paste the line as given |
-| 4 | `citation-and-record` | `build_record` | `clearances` (required), `claims`, `findings`, `sources`, `text` | The record and its exports | Requires `verify:write`. Refuses a missing or non-human `cleared_by.name` |
-| on request | `citation-and-record` | `build_evidence_table` | `findings` | A Markdown table | Only when the person asks for the table |
-
-`[CHECK]` items for the owner's cross-check:
-
-- Status vocabulary returned by `check_claim` and `verify_text` (taken from the server
-  instructions, not the schema).
-- Which calls are counted against the key, beyond `verify_text`.
-- Object shapes for `claim`, `passage`, `source`, `clearances`, `findings`.
-- Whether `verify_text` requires sources already admitted by `qualify_source`.
-
-## Script
-
-### `scripts/scan_verdicts.py`
-
-Scans a summary for verdict words and phrases (`references/patterns.md` P1, P2, P3) and
-for leaked codes (P8): rule ids, framework codes, skill names, raw gap syntax. Letter
-words such as "Safe" and "True" at the start of a row are allowed.
-
-```
-python scripts/scan_verdicts.py summary.txt
-python scripts/scan_verdicts.py summary.txt --json
-python scripts/test_scan_verdicts.py
-```
-
-Exit code 0 when nothing is found, 1 when there are hits. Each hit gives the line
-number, the words found and why. It also reports a missing or altered closing statement.
-
-Pitfalls:
-
-- It finds words, not meaning. A clean scan is not a clean summary; read it once.
-- It allows "Safe" and "True" only as row labels. "Safe to send" is a hit.
+| 4 | `citation-and-record` | `build_citation` | `source`, `record` (for a paper), `passage`; `style` chicago or harvard, or omit for the key preference | One formatted citation line | Free. Does not check the claim. Paste

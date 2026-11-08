@@ -98,3 +98,13 @@ See `assets/check-line.md`.
   supplied label says.
 - No style questions (TR-H9). Tone, length and format are asked only when the request is
   silent and the deliverable cannot be drafted without them.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

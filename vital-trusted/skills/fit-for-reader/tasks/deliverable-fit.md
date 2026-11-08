@@ -74,3 +74,13 @@ See `assets/check-line.md`.
 - A required statement that a market or process adds to a format (for example a
   prescribing information line on promotional material) is `market-rules-and-data`.
   This task never drops one to save space; it flags the space problem.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

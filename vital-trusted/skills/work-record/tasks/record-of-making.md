@@ -97,3 +97,13 @@ See `assets/check-line.md`.
 - The record lists materials at the level of the work. Citing each claim is
   sourced-claims.
 - The record is not the company's document control or approval record. It supports it.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

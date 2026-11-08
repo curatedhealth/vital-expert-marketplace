@@ -4,15 +4,12 @@ description: "Turn VERIFY's claim checks into the confidence line and the short 
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no tool itself. The confidence figure needs statuses returned by the VERIFY connector through claim-assessment; without VERIFY it reports counts only and gives no figure. scripts/faithfulness.py runs where the host can execute Python 3.\n"
 metadata:
-  framework_code: "TR-8.3"
-  framework_path: "TRUSTED > Prove > True > Confidence scoring"
-  family: "prove"
-  letter: "True"
-  worker: "Evidence lead"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Confidence scoring
 
 After VERIFY has checked each statement in a draft against the passages supplied, a

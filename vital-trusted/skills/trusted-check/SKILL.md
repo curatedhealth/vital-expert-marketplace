@@ -4,15 +4,12 @@ description: "Final read of a finished draft against VITAL TRUSTED before it goe
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, factual claims go to the Prove skills for checking against supplied sources; without it, the summary names what VERIFY would check.\n"
 metadata:
-  framework_code: "TR-0.3"
-  framework_path: "TRUSTED > Core > Check"
-  family: "core"
-  letter: "all"
-  worker: "Experienced cross-functional colleague acting as a final reader"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # TRUSTED check
 
 A finished draft can read well and still let its reader down: a figure nobody supplied,

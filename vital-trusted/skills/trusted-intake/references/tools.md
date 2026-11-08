@@ -1,3 +1,11 @@
+# Tools
+
+See plugin [`connectors.md`](../../../connectors.md).
+
+Most Build skills are method-only. Optional Verify may be used when a Prove handoff needs passage checks. Offline scripts under this skill's `scripts/` remain valid; shared Prove helpers live in plugin `tools/`.
+
+## Prior notes
+
 # Companion slot
 
 No companion exists for intake today. The method runs fully on what the person says and

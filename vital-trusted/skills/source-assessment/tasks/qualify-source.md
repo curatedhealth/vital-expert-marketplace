@@ -145,3 +145,13 @@ See `assets/check-line.md`.
   market; flag it for the promotional or medical review process.
 - Do not search for a better source and present it as found unless a tool or the person
   supplied it. Suggest where one might be looked for, plainly, as a suggestion.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

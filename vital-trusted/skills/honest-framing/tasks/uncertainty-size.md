@@ -105,3 +105,13 @@ See `assets/check-line.md` (uncertainty line).
   task only keeps "proves superiority" from saying more than one trial can.
 - No judgment of whether a difference is clinically meaningful, and no clinical advice
   (TR-H6).
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

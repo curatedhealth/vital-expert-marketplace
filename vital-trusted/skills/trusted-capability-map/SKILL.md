@@ -4,15 +4,12 @@ description: "The map and rulebook of VITAL TRUSTED, foundational habits for any
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector is optional; without it every method still runs and tool-only checks are marked [GAP].\n"
 metadata:
-  framework_code: "TR-0.1"
-  framework_path: "TRUSTED > Core > Capability map"
-  family: "core"
-  letter: "all"
-  worker: "Experienced cross-functional colleague"
   pack: "vital-trusted"
-  version: "0.2.0"
+  version: "0.3.0"
+  level: "CF02"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # VITAL TRUSTED: capability map and rulebook
 
 TRUSTED gives people across a life-sciences company good habits for working with an AI
@@ -131,3 +128,10 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 | `assets/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |
 | `examples/route-medical-information.md` | A worked routing case | Shaping a routing answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |
+
+
+## Missions and autonomy (CF02)
+
+Routing missions, autonomy bounds, and offline vs live Prove paths are in
+`references/missions.md`. Prefer that table when explaining what TRUSTED can do or
+when VERIFY is optional.

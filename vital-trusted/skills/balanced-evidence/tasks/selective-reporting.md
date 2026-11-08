@@ -82,3 +82,13 @@ See `assets/check-line.md`.
   `honest-framing` and the reviewer.
 - Finding studies not supplied is a literature search, outside this skill. Ask the person
   or their literature or medical information team.
+
+## Execution card
+
+- Input: prior task output or intake pack
+- Atom: (none unless named)
+- Tool: skill scripts and/or plugin `tools/` as listed in references/tools.md
+- Template: files under `templates/`
+- Output: this task's deliverable only
+- Check: required fields present; no invented figures; check-line stamped
+- Human: gates in governance.md if this task surfaces a release decision

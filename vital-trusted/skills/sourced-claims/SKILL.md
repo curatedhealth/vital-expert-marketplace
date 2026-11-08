@@ -4,15 +4,12 @@ description: "Make sure every claim in daily life-sciences work that needs a sou
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed. When VERIFY is connected, sources can go to source-assessment for grading and to citation-and-record for formatted citations.\n"
 metadata:
-  framework_code: "TR-5.2"
-  framework_path: "TRUSTED > Build > True > Sourced claims"
-  family: "build"
-  letter: "True"
-  worker: "Experienced colleague with an evidence background"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Sourced claims
 
 A slide that says "studies show" or "the leading treatment" asks the reader to trust a

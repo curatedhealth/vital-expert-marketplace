@@ -4,15 +4,12 @@ description: "Fact-check finished life-sciences work sentence by sentence agains
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector adds extract_claims, check_claim and verify_text. Without it the same method runs by hand and every result is labeled \"not tool-checked\"; VERIFY status words are never used for a manual result.\n"
 metadata:
-  framework_code: "TR-8.1"
-  framework_path: "TRUSTED > Prove > True > Claim assessment"
-  family: "prove"
-  letter: "True"
-  worker: "Evidence lead"
   pack: "vital-trusted"
-  version: "0.1.0"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Claim assessment
 
 A value story or a reply to a doctor can read well and still rest on sentences that the

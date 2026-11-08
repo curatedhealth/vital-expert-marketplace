@@ -4,15 +4,12 @@ description: "Keep what an AI assistant drafts for life-sciences work inside the
 license: "[CHECK] VITAL TRUSTED free license terms, to be set by the owner"
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed; the person supplies the label or intended-purpose statement. No companion exists yet for this skill. When VERIFY is connected, the sources behind a comparison can go to claim-assessment for tool checking.\n"
 metadata:
-  framework_code: "TR-2.1"
-  framework_path: "TRUSTED > Build > Rule-compliant > Claims and label"
-  family: "build"
-  letter: "Rule-compliant"
-  worker: "Regulatory and promotional reviewer who helps drafts through review"
   pack: "vital-trusted"
-  version: "0.1.1"
+  version: "0.3.0"
+  level: "CF04"
+  release_state: "Pilot"
+  agent: "trusted-steward"
 ---
-
 # Claims and label
 
 A key message can be correct, sourced and balanced and still say something the product
