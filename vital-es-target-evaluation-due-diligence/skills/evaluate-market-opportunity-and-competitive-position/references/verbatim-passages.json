@@ -218,7 +218,7 @@
    "access_date": "2026-11-08",
    "cue": "none",
    "source_text_sha256": null,
-   "note": "Dual-read from opened PDF text extract 8 November 2026. Diligence use: do not treat unanchored/cross-trial MAIC/STC as counted differentiation without the TSD conditions."
+   "note": "Dual-read from opened PDF text extract 8 November 2026; reconfirmed same day via Sheffield TSD 18 landing. Diligence use: do not treat unanchored/cross-trial MAIC/STC as counted differentiation without the TSD conditions."
   },
   {
    "id": "VP-G-071",
@@ -230,7 +230,84 @@
    "url": "https://sheffield.ac.uk/media/34216/download",
    "access_date": "2026-11-08",
    "cue": "none",
-   "source_text_sha256": null
+   "source_text_sha256": null,
+   "note": "Reconfirmed 8 November 2026 via Sheffield TSD 18 landing page + PDF text extract (direct media URL may 403 to scripts)."
+  },
+  {
+   "id": "VP-G-080",
+   "source_id": "ispor_itc_part1",
+   "source_title": "Jansen JP et al. Interpreting Indirect Treatment Comparisons and Network Meta-Analysis for Health-Care Decision Making: Report of the ISPOR Task Force on Indirect Treatment Comparisons Good Research Practices: Part 1. Value Health 2011;14:417-428 (free ISPOR PDF)",
+   "section": "Multiple treatment comparisons and evidence networks",
+   "page": 418,
+   "text": "Of key importance in an ITC is not to \"break randomization\" [5,10,14]. For example, if A, B, and C are interventions for rheumatoid arthritis patients, it is incorrect to simply compare the observed fraction of responders on drug B in the AB trials to the observed fraction of responders on drug C in the AC trials.",
+   "url": "https://www.ispor.org/docs/default-source/resources/outcomes-research-guidelines-index/interpreting-indirect-treatment-comparison-and-network-meta-analysis-studies-for-decision-making.pdf",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "58509ffe3039e8b109e87b37cedcf99d84e5814e32d59fa4b6aade3fb0d10b6a",
+   "note": "Whitespace-collapsed hash of passage text. G10 dual-read from free ISPOR PDF (not journal login)."
+  },
+  {
+   "id": "VP-G-081",
+   "source_id": "ispor_itc_part1",
+   "source_title": "Jansen JP et al. Interpreting Indirect Treatment Comparisons and Network Meta-Analysis for Health-Care Decision Making: Report of the ISPOR Task Force on Indirect Treatment Comparisons Good Research Practices: Part 1. Value Health 2011;14:417-428 (free ISPOR PDF)",
+   "section": "Multiple treatment comparisons and evidence networks",
+   "page": 418,
+   "text": "Using data only from the treatment arms of interest to draw comparisons, omitting the data from the control or placebo arms, is called a \"naïve indirect comparison,\" results in bias, and should be avoided [8].",
+   "url": "https://www.ispor.org/docs/default-source/resources/outcomes-research-guidelines-index/interpreting-indirect-treatment-comparison-and-network-meta-analysis-studies-for-decision-making.pdf",
+   "access_date": "2026-11-08",
+   "cue": "should",
+   "source_text_sha256": "033e0f613f783f63a56fef1b2b4c47a6122423791608952b8fde5104b0c0853c"
+  },
+  {
+   "id": "VP-G-082",
+   "source_id": "ispor_itc_part1",
+   "source_title": "Jansen JP et al. Interpreting Indirect Treatment Comparisons and Network Meta-Analysis for Health-Care Decision Making: Report of the ISPOR Task Force on Indirect Treatment Comparisons Good Research Practices: Part 1. Value Health 2011;14:417-428 (free ISPOR PDF)",
+   "section": "Analysis",
+   "page": 419,
+   "text": "Whatever the method of analysis, the pooling of individual study results and indirect comparisons should be based on relative effect measures (e.g., OR, difference in change from baseline, hazards ratio) to preserve randomization.",
+   "url": "https://www.ispor.org/docs/default-source/resources/outcomes-research-guidelines-index/interpreting-indirect-treatment-comparison-and-network-meta-analysis-studies-for-decision-making.pdf",
+   "access_date": "2026-11-08",
+   "cue": "should",
+   "source_text_sha256": "ed7c61f7559248f7f273f2a4151cbfe9a38e1d4e4f72eaab6a8bb873fb719c0a"
+  },
+  {
+   "id": "VP-G-085",
+   "source_id": "ispor_bia_ii",
+   "source_title": "Sullivan SD et al. Principles of Good Practice for Budget Impact Analysis II (Value Health 2014;17:5-14; ISPOR good-practice summary page)",
+   "section": "Results — key elements",
+   "page": null,
+   "text": "The key elements of a BIA include estimating the size of the eligible population, the current mix of treatments and the expected mix after the introduction of the new intervention, the cost of the treatment mixes, and any changes expected in condition-related costs.",
+   "url": "https://www.ispor.org/heor-resources/good-practices/article/principles-of-good-practice-for-budget-impact-analysis-ii",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "bae84081eb13c2b503ad19c58f500a69515876ad36fb742585f0bd594cbb3db0",
+   "note": "G11 dual-read from free ISPOR HTML (same text family as VP-R-050). Does not enable FC-* defaults."
+  },
+  {
+   "id": "VP-G-086",
+   "source_id": "ispor_bia_ii",
+   "source_title": "Sullivan SD et al. Principles of Good Practice for Budget Impact Analysis II (Value Health 2014;17:5-14; ISPOR good-practice summary page)",
+   "section": "Results — design recommendations",
+   "page": null,
+   "text": "The Task Force recommends that the design of a BIA for a new health care intervention should take into account relevant features of the health care system, possible access restrictions, the anticipated uptake of the new intervention, and the use and effects of the current and new interventions.",
+   "url": "https://www.ispor.org/heor-resources/good-practices/article/principles-of-good-practice-for-budget-impact-analysis-ii",
+   "access_date": "2026-11-08",
+   "cue": "should",
+   "source_text_sha256": "ce7c1eb131e400bf2c41e9722e383beac7f98b3147cf7886b66fe72df2993995",
+   "note": "Anticipated uptake is a named BIA design input — never a plugin default (FC-UPTAKE-DEFAULT stays [CHECK])."
+  },
+  {
+   "id": "VP-G-090",
+   "source_id": "cdc_hus_sources",
+   "source_title": "CDC National Center for Health Statistics. Health, United States — Sources and Definitions (last reviewed 30 October 2024)",
+   "section": "Sources and Definitions landing",
+   "page": null,
+   "text": "This page provides detailed information about the data sources, methods, and terms used in Health, United States. Data Source entries include descriptions of each data source used in Health, United States. They also include external references with more information about each source. Method entries provide information about the statistical methods used in Health, United States. Definition entries explain terms used in Health, United States.",
+   "url": "https://www.cdc.gov/nchs/hus/sources-definitions.htm",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Whitespace-collapsed dual-read from CDC HTML. Context for naming source/method/definition on population rows; not a sizing formula."
   }
  ],
  "skill": "evaluate-market-opportunity-and-competitive-position"

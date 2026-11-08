@@ -24,7 +24,7 @@
     {
       "name": "vital-es-target-evaluation-due-diligence",
       "source": "./vital-es-target-evaluation-due-diligence",
-      "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + integrated report. Standard KA Pass (v9); Draft 0.1.1-live-test for Cowork. Not Marketplace Done. Optional vont_/verify keys; offline script-first."
+      "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + ON↔DD use-case packs. Standard KA Pass (v9); Draft 0.1.2-on-dd-e2e for Cowork. Not Marketplace Done. Optional vont_/verify keys; offline script-first."
     },
     {
       "name": "vital-es-financial-modeling-and-valuation",

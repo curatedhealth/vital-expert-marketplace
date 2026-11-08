@@ -6,37 +6,43 @@
   {
    "id": "VP-E-001",
    "source_id": "i303",
-   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303), Cornell LII copy (the eCFR page returned no text to a script); amendments since the page date not checked",
+   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303); dual-read Cornell LII + eCFR authoritative HTML (2026-11-08 refresh); amendments since page date not checked beyond the opened text",
    "section": "(b)(1)",
    "page": null,
    "text": "Analyze the registrant's ability to generate and obtain adequate amounts of cash to meet its requirements and its plans for cash in the short-term (i.e., the next 12 months from the most recent fiscal period end required to be presented) and separately in the long-term (i.e., beyond the next 12 months). The discussion should analyze material cash requirements from known contractual and other obligations.",
    "url": "https://www.law.cornell.edu/cfr/text/17/229.303",
-   "access_date": "2026-11-07",
+   "access_date": "2026-11-08",
    "cue": "none",
+   "verification": "Re-opened Cornell LII and eCFR HTML 2026-11-08; short-term/long-term 12-month wording confirmed identical on both hosts",
+   "alt_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.300/section-229.303",
    "source_text_sha256": "0d29b0e3e15cea004c0572652be3428077caa9b8bf97cdba645e256648995387"
   },
   {
    "id": "VP-E-002",
    "source_id": "i303",
-   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303), Cornell LII copy (the eCFR page returned no text to a script); amendments since the page date not checked",
+   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303); dual-read Cornell LII + eCFR authoritative HTML (2026-11-08 refresh); amendments since page date not checked beyond the opened text",
    "section": "(b)(1)",
    "page": null,
    "text": "The discussion should analyze material cash requirements from known contractual and other obligations. Such disclosures must specify the type of obligation and the relevant time period for the related cash requirements.",
    "url": "https://www.law.cornell.edu/cfr/text/17/229.303",
-   "access_date": "2026-11-07",
+   "access_date": "2026-11-08",
    "cue": "none",
+   "verification": "Re-opened Cornell LII and eCFR HTML 2026-11-08; obligation type/period wording confirmed",
+   "alt_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.300/section-229.303",
    "source_text_sha256": "0d29b0e3e15cea004c0572652be3428077caa9b8bf97cdba645e256648995387"
   },
   {
    "id": "VP-E-003",
    "source_id": "i303",
-   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303), Cornell LII copy (the eCFR page returned no text to a script); amendments since the page date not checked",
+   "source_title": "SEC. Regulation S-K, 17 CFR 229.303 (Item 303); dual-read Cornell LII + eCFR authoritative HTML (2026-11-08 refresh); amendments since page date not checked beyond the opened text",
    "section": "(b)(1)(i)",
    "page": null,
    "text": "(i) Liquidity. Identify any known trends or any known demands, commitments, events or uncertainties that will result in or that are reasonably likely to result in the registrant's liquidity increasing or decreasing in any material way. If a material deficiency is identified, indicate the course of action that the registrant has taken or proposes to take to remedy the deficiency.",
    "url": "https://www.law.cornell.edu/cfr/text/17/229.303",
-   "access_date": "2026-11-07",
+   "access_date": "2026-11-08",
    "cue": "none",
+   "verification": "Re-opened Cornell LII and eCFR HTML 2026-11-08; liquidity trends/remedy wording confirmed",
+   "alt_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-229/subpart-229.300/section-229.303",
    "source_text_sha256": "0d29b0e3e15cea004c0572652be3428077caa9b8bf97cdba645e256648995387"
   },
   {
@@ -264,8 +270,8 @@
    "text": "Continuation of an entity as a going concern is assumed in financial reporting in the absence of significant information to the contrary.",
    "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2415",
    "cue": "none",
-   "verification": "opened in the browser pane (scripted access returned HTTP 403); exact string confirmed present in the page text by an in-page includes() check (whitespace collapsed)",
-   "access_date": "2026-11-07",
+   "verification": "Re-opened PCAOB standards HTML 2026-11-08; exact string confirmed present (whitespace collapsed). Prior 2026-11-07 browser pane confirmation retained.",
+   "access_date": "2026-11-08",
    "source_text_sha256": null
   },
   {
@@ -277,8 +283,8 @@
    "text": "The auditor has a responsibility to evaluate whether there is substantial doubt about the entity's ability to continue as a going concern for a reasonable period of time, not to exceed one year beyond the date of the financial statements being audited (hereinafter referred to as a reasonable period of time).",
    "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2415",
    "cue": "none",
-   "verification": "opened in the browser pane (scripted access returned HTTP 403); exact string confirmed present in the page text by an in-page includes() check (whitespace collapsed)",
-   "access_date": "2026-11-07",
+   "verification": "Re-opened PCAOB standards HTML 2026-11-08; one-year-beyond-financial-statement-date horizon confirmed. Prior 2026-11-07 browser pane confirmation retained.",
+   "access_date": "2026-11-08",
    "source_text_sha256": null
   },
   {
@@ -318,7 +324,50 @@
    "access_date": "2026-11-08",
    "cue": "none",
    "source_text_sha256": null,
-   "note": "Warrant for HUMAN ONLY QoE/net-debt conclusions in this skill — not a QoE method standard and not an attest independence rule for BD deal leads."
+   "note": "Warrant for HUMAN ONLY QoE/net-debt conclusions in this skill — not a QoE method standard and not an attest independence rule for BD deal leads.",
+   "verification": "AICPA CS 100 PDF re-opened 2026-11-08; consulting-vs-attest wording confirmed. Access date refreshed."
+  },
+  {
+   "id": "VP-E-080",
+   "source_id": "sec_33_9144",
+   "source_title": "SEC Release 33-9144 / 34-62934 / FR-83, Commission Guidance on Presentation of Liquidity and Capital Resources Disclosures in MD&A (17 September 2010)",
+   "section": "II.A Liquidity Disclosure — Item 303 liquidity trends",
+   "page": 4,
+   "text": "In the context of liquidity, Item 303(a)(1) of Regulation S-K requires disclosure of known trends or any known demands, commitments, events or uncertainties that will result in, or that are reasonably likely to result in, the registrant's liquidity increasing or decreasing in any material way.",
+   "url": "https://www.sec.gov/files/rules/interp/2010/33-9144.pdf",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "verification": "SEC.gov PDF opened and dual-read 2026-11-08 (scripted urllib returned HTTP 403; text extract via fetch lane). Interpretive guidance reinforces Item 303; does not replace E1 statute text.",
+   "source_text_sha256": null,
+   "extracted_text_sha256": "9f958993f7b15842dba3fee3c9cd328f782cfbf6a022e030cf40ba01f791e435"
+  },
+  {
+   "id": "VP-E-081",
+   "source_id": "sec_33_9144",
+   "source_title": "SEC Release 33-9144 / 34-62934 / FR-83, Commission Guidance on Presentation of Liquidity and Capital Resources Disclosures in MD&A (17 September 2010)",
+   "section": "II.A Liquidity Disclosure — intra-period borrowings",
+   "page": 4,
+   "text": "depending on the registrant's circumstances, if borrowings during the reporting period are materially different than the period-end amounts recorded in the financial statements, disclosure about the intra-period variations is required under current rules to facilitate investor understanding of the registrant's liquidity position.",
+   "url": "https://www.sec.gov/files/rules/interp/2010/33-9144.pdf",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "verification": "SEC.gov PDF opened and dual-read 2026-11-08. Flags period-end vs intra-period liquidity mismatch as an MD&A disclosure demand — not a QoE or net-debt computation.",
+   "source_text_sha256": null,
+   "extracted_text_sha256": "9f958993f7b15842dba3fee3c9cd328f782cfbf6a022e030cf40ba01f791e435"
+  },
+  {
+   "id": "VP-E-082",
+   "source_id": "sec_33_9144",
+   "source_title": "SEC Release 33-9144 / 34-62934 / FR-83, Commission Guidance on Presentation of Liquidity and Capital Resources Disclosures in MD&A (17 September 2010)",
+   "section": "II.C Contractual Obligations Table Disclosures",
+   "page": 9,
+   "text": "the contractual obligations tabular disclosure should be prepared with the goal of presenting a meaningful snapshot of cash requirements arising from contractual payment obligations.",
+   "url": "https://www.sec.gov/files/rules/interp/2010/33-9144.pdf",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "verification": "SEC.gov PDF opened and dual-read 2026-11-08. Supports reading filed contractual-obligation tables as liquidity context; does not invent net-debt arithmetic.",
+   "source_text_sha256": null,
+   "extracted_text_sha256": "9f958993f7b15842dba3fee3c9cd328f782cfbf6a022e030cf40ba01f791e435"
   }
  ],
  "skill": "analyze-financial-statements-and-tax"

@@ -1,5 +1,5 @@
 {
- "_comment": "Rules of skill G. A rule applies only if VERIFIED-REOPENED. There is no published standard for market sizing or competitive positioning; the arithmetic of the addressable population and the checks on sources, dates and differentiation are engineering rules of this skill. Grounding lane (7 November 2026; G9 updated 8 November 2026): every enabled rule carries passage_ids. Cha (VP-G-060) and the two registry studies are context. NICE DSU TSD 18 dual-read as VP-G-070/071 (G9 VERIFIED). FDA draft TPP guidance body text still not re-opened.",
+ "_comment": "Rules of skill G. A rule applies only if VERIFIED-REOPENED. There is no published standard for market sizing or competitive positioning; the arithmetic of the addressable population and the checks on sources, dates and differentiation are engineering rules of this skill. Grounding lane (7 November 2026; G9/G10/G11/G14 updated 8 November 2026): every enabled rule carries passage_ids. Cha (VP-G-060) and the two registry studies are context. NICE DSU TSD 18 dual-read as VP-G-070/071 (G9 VERIFIED). ISPOR ITC free PDF as VP-G-080..082 (G10 VERIFIED). ISPOR BIA II free HTML as VP-G-085/086 (G11 VERIFIED; uptake context only — FC-* stay [CHECK]). CDC HUS Sources/Definitions as VP-G-090 (G14). FDA draft TPP guidance body text still not re-opened.",
  "rules": [
   {
    "id": "ORPHAN-US-200K",

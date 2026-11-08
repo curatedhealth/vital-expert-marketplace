@@ -4,7 +4,7 @@ CF02 plugin for capability CF-01.02.06 Target Evaluation & Due Diligence, domain
 Strategy & Portfolio (id 49d2d80e-d9ac-44c3-8dbd-162041276806).
 
 **Status block (8 November 2026 — hybrid honesty)**
-- State: Draft **0.1.1-live-test**. Nine skills are fully kitted; **Cowork operator-ready** (Claude marketplace channel). Not Studio Marketplace Done; not `app.vital.expert` prod.
+- State: Draft **0.1.2-on-dd-e2e**. Nine skills fully kitted; ON↔DD use-case packs + return loop; **Cowork operator-ready**; E2E B1–B8 green (8 November 2026). Not Studio Marketplace Done.
 - Tier design (owner ruling 7 November 2026): Full proof scoped to chain F → A → B; Standard KA for C, D, E, G, R, H (+ integrated report).
 - Proof status: **Standard KA Pass** on ceremony `2026-11-08-standard-ka-v9` (D-v2-2 signed; scorecard in `diligence/smoke-archive/`). **Full F→A→B deferred** (Option C — SEC packs absent). ASC/FC defaults stay disabled. Substrate binding `20261107110000` applied 8 November 2026 after MA `20261107100000`. Do not read “tier: Full” in plugin.json as Full Done.
 - Owner closeout: `diligence/OWNER_PRODUCT_CLOSEOUT_2026-11-08.md`. Pre-live audit: `diligence/PRE_LIVE_TEST_AUDIT_2026-11-08.md`. Cowork handover: `diligence/HANDOVER_COWORK_DD_LIVE_TEST_2026-11-08.md`.

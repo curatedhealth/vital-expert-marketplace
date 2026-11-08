@@ -80,13 +80,27 @@
    "id": "VP-CM-040",
    "source_id": "icmje_ai",
    "source_title": "ICMJE Recommendations — AI use by authors",
-   "section": "Artificial Intelligence (AI)–Assisted Technology",
+   "section": "A. Use of AI by Authors",
    "page": null,
    "text": "Chatbots (such as ChatGPT) and other AI-assisted tools should not be listed as authors because they cannot be responsible for the accuracy, integrity, and originality of the work, and these responsibilities are required for authorship. Therefore, humans are responsible for any submitted material that included the use of AI-assisted technologies.",
    "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html",
    "access_date": "2026-11-08",
    "cue": "none",
-   "source_text_sha256": null
+   "source_text_sha256": null,
+   "note": "Parent dual-read HTML reopen 8 November 2026 (world-class absorb)."
+  },
+  {
+   "id": "VP-CM-041",
+   "source_id": "icmje_ai",
+   "source_title": "ICMJE Recommendations — AI use by authors",
+   "section": "A. Use of AI by Authors (disclosure)",
+   "page": null,
+   "text": "Authors who use such technology should describe, in both the cover letter and the submitted work in the appropriate section if applicable, how they used it. Authors should carefully review and edit the AI-generated content as the output can be incorrect, incomplete, or biased.",
+   "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Whitespace-collapsed from disclosure + review sentences; PRACTITIONER analog for optional pack AI-use note."
   },
   {
    "id": "VP-CM-050",
@@ -138,6 +152,85 @@
    "cue": "none",
    "source_text_sha256": null,
    "note": "Anti-misuse: diligence packs are not issuer filings; do not claim Rule 175 safe harbor."
+  },
+  {
+   "id": "VP-CM-080",
+   "source_id": "who_doi_experts",
+   "source_title": "WHO — Declaration of Interests for WHO Experts",
+   "section": "Preamble — potential conflict definition",
+   "page": 1,
+   "text": "All experts serving in an advisory role must disclose any circumstances that could represent a potential conflict of interest (i.e., any interest that may affect, or may reasonably be perceived to affect, the expert's objectivity and independence).",
+   "url": "https://cdn.who.int/media/docs/default-source/hsi-tag/declaration-of-interests.pdf?sfvrsn=838de0fc_2",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "PRACTITIONER analog for pack COI disclosure only — not a WHO appointment, not a clearance, not attest independence."
+  },
+  {
+   "id": "VP-CM-081",
+   "source_id": "who_doi_experts",
+   "source_title": "WHO — Declaration of Interests for WHO Experts",
+   "section": "Preamble — Yes answers do not auto-disqualify",
+   "page": 1,
+   "text": "Answering \"Yes\" to a question on this form does not automatically disqualify you or limit your participation in a WHO activity. Your answers will be reviewed by the Secretariat to determine whether you have a conflict of interest relevant to the subject at hand.",
+   "url": "https://cdn.who.int/media/docs/default-source/hsi-tag/declaration-of-interests.pdf?sfvrsn=838de0fc_2",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Anti-misuse: disclosure ≠ invented clearance or AI-issued independence finding."
+  },
+  {
+   "id": "VP-CM-090",
+   "source_id": "cope_coi_discussion",
+   "source_title": "COPE — Handling conflicts of interest (discussion document)",
+   "section": "Key points — definition",
+   "page": null,
+   "text": "A conflict of interest can be defined as anything that interferes with, or could reasonably be perceived as interfering with, the full and objective presentation, peer review, decision making, or publication of research papers submitted to a journal.",
+   "url": "https://publicationethics.org/guidance/discussion-document/handling-conflicts-interest",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "PRACTITIONER facilitation analog; last reviewed 1 December 2015; document notes under review. Not a journal-ethics engagement."
+  },
+  {
+   "id": "VP-CM-091",
+   "source_id": "cope_coi_discussion",
+   "source_title": "COPE — Handling conflicts of interest (discussion document)",
+   "section": "Practical issues — separate declaration step",
+   "page": null,
+   "text": "Declarations of competing interests should ideally be a separate step in the submission or review process, with clear explanations and examples.",
+   "url": "https://publicationethics.org/guidance/discussion-document/handling-conflicts-interest",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Supports optional dedicated COI note / intake step on the integrated pack."
+  },
+  {
+   "source_id": "who_doi_guidelines",
+   "source_title": "Guidelines for Declaration of Interests (WHO Experts) — EMRO-hosted WHO PDF",
+   "page": null,
+   "url": "https://www.emro.who.int/images/stories/polio/doi-guidelines.pdf?ua=",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "bc5a86fab0219cf392d37153dbe23b4c138a14f6040b2a4449fbee18757c9ad7",
+   "id": "VP-CM-092",
+   "section": "I. Meaning of Conflict of Interest ¶2",
+   "text": "In the context of these Guidelines, the term \"conflict of interest\" means any interest declared by an expert that may affect or reasonably be perceived to (1) affect the expert’s objectivity and independence in providing advice to WHO, and/or (2) create an unfair competitive advantage for the expert or persons or institutions with whom the expert has financial or business interests (such as adult children or siblings, close professional colleagues, administrative unit or department).",
+   "note": "Analog for pack COI disclosure practice — does not convert DD into WHO expert appointment process."
+  },
+  {
+   "source_id": "who_doi_guidelines",
+   "source_title": "Guidelines for Declaration of Interests (WHO Experts) — EMRO-hosted WHO PDF",
+   "page": null,
+   "url": "https://www.emro.who.int/images/stories/polio/doi-guidelines.pdf?ua=",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "bc5a86fab0219cf392d37153dbe23b4c138a14f6040b2a4449fbee18757c9ad7",
+   "id": "VP-CM-093",
+   "section": "II. Decline to complete DOI",
+   "text": "If an expert declines to complete a DOI Form, or if he/she refuses to disclose a potentially significant conflict to other meeting participants or in the report or work produced, the expert must not be permitted to participate in the activity.",
+   "note": "Hard stop pattern: undisclosed significant conflict → no participation."
   }
- ]
+ ],
+ "built": "2026-11-08"
 }

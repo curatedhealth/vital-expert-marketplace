@@ -27,7 +27,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | constant or list | EU data and market protection (8y, 10y, 11y) | VERIFIED-REOPENED | VP-C-070 to VP-C-073; unit tests |
 | constant or list | EU orphan (10y, 12y with PIP, 6y) | VERIFIED-REOPENED | VP-C-080, VP-C-081, VP-C-065; unit tests |
 | constant or list | EU SPC (duration, 5-year maximum, +6m pediatric, 6-month filing) | VERIFIED-REOPENED | VP-C-060 to VP-C-064; unit tests (original OJ text; the consolidated text was not opened) |
-| constant or list | US-NCE1-4Y (disabled) | ENGINEERING RULE | rule disabled; gap stated: the closing condition of 355(j)(5)(F)(ii) was not registered (S19); no rule is applied |
+| constant or list | US-NCE1-4Y (disabled) | ENGINEERING RULE | primary dual-read closed (S19 / VP-C-189); rule stays disabled for automatic date arithmetic until 7.5y stay interaction is modeled; no four-year end date invented |
 | constant or list | date conventions (whole days, calendar months, testing half rounded down) | ENGINEERING RULE | the statutes do not fix these conventions; each output marks them CONVENTION; gap stated: counsel confirms to the day |
 | constant or list | claim-type list and FTO-phrase patterns | ENGINEERING RULE | closed claim types and phrase patterns that detect an FTO assertion; the opinion is human only (VP-C-101 says an FTO report is a legal opinion) |
 | constant or list | REQUIRED row fields | ENGINEERING RULE | fixed by the register template (house format) |

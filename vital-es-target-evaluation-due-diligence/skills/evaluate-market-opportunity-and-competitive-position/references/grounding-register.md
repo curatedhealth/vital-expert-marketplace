@@ -9,7 +9,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | step | step 3 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 4 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 5 | ENGINEERING RULE | pipeline step; the registry cross-check is VP-G-050, VP-G-051, VP-G-052; the dated-source requirement is the plugin's; gap stated: no open competitive-intelligence practice source (G13) |
-| step | step 6 | ENGINEERING RULE | differentiation step; cross-trial exclusion rests on VP-G-040 + NICE DSU TSD 18 VP-G-070/071 (G9 VERIFIED); the TPP is read as the seller supplies it (draft, VP-G-030, VP-G-031) |
+| step | step 6 | ENGINEERING RULE | differentiation step; cross-trial exclusion rests on VP-G-040 + ISPOR ITC VP-G-080..082 (G10) + NICE DSU TSD 18 VP-G-070/071 (G9 VERIFIED); the TPP is read as the seller supplies it (draft, VP-G-030, VP-G-031) |
 | step | step 7 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 8 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 9 | ENGINEERING RULE | the choice of population definition and the sign-off are human only (owner ruling) |
@@ -17,7 +17,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | task card | 02-standard-of-care-and-unmet-need.md | ENGINEERING RULE | follows the skill's output contract (answer first, then evidence rows); gap stated: no published standard prescribes this card sequence |
 | task card | 03-competing-marketed-products.md | ENGINEERING RULE | follows the skill's output contract (answer first, then evidence rows); gap stated: no published standard prescribes this card sequence |
 | task card | 04-competing-pipeline.md | ENGINEERING RULE | registry cross-check VP-G-050, VP-G-051, VP-G-052; gap stated: no open competitive-intelligence source |
-| task card | 05-differentiation.md | ENGINEERING RULE | cross-trial exclusion VP-G-040 + VP-G-070/071; TPP draft VP-G-030, VP-G-031 |
+| task card | 05-differentiation.md | ENGINEERING RULE | cross-trial exclusion VP-G-040 + VP-G-070/071 + VP-G-080..082; TPP draft VP-G-030, VP-G-031 |
 | task card | 06-failure-modes-and-questions.md | ENGINEERING RULE | follows the skill's output contract (answer first, then evidence rows); gap stated: no published standard prescribes this card sequence |
 | task card | 07-write-register.md | ENGINEERING RULE | follows the skill's output contract (answer first, then evidence rows); gap stated: no published standard prescribes this card sequence |
 | template | market-register.md | ENGINEERING RULE | section structure is the decision-ready order of anatomy 3.6 with this skill's register fields; a house format, gap stated: no published reporting standard exists for a diligence register |
@@ -26,7 +26,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | constant or list | PREVALENCE-REPORTING (measure, extrapolation, textbook flags) | VERIFIED-REOPENED | VP-G-010, VP-G-011, VP-G-013 and GATHER VP-G-001 to VP-G-003; the field names are the plugin's |
 | constant or list | REG-STATUS-CONTEXT and REG-CROSSCHECK | VERIFIED-REOPENED | VP-G-050, VP-G-051, VP-G-052; unit test |
 | constant or list | MKT-OVERESTIMATE-CONTEXT | VERIFIED-REOPENED | VP-G-060; context only |
-| constant or list | basis kinds, comparison types (head_to_head, indirect, cross_trial, none) | ENGINEERING RULE | closed sets; cross-trial exclusion motivated by VP-G-040 + VP-G-070/071 |
+| constant or list | basis kinds, comparison types (head_to_head, indirect, cross_trial, none) | ENGINEERING RULE | closed sets; cross-trial exclusion motivated by VP-G-040 + VP-G-070/071 + VP-G-080..082 |
 | constant or list | forbidden price keys and forecast phrase patterns | ENGINEERING RULE | keep price, coverage, access and sales figures out of this register (owner ruling: Market Access pack owns them) |
 | constant or list | max_figure_age_years (buyer-set) | ENGINEERING RULE | not a constant: the buyer sets the age limit; no source sets one |
 | detection question | MG-01 | ENGINEERING RULE | Detection question written for this skill; gap stated: no published detection checklist exists; the finding it screens for is in the failure-modes row |

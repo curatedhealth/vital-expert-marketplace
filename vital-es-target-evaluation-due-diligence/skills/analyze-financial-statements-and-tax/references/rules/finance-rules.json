@@ -1,5 +1,5 @@
 {
- "_comment": "Rules of skill E. A rule computes only if VERIFIED-REOPENED. Passages recorded in references/method-standards.md. No published standard exists for burn-rate or runway calculation; the burn-basis rule is an engineering rule of this skill. Grounding lane (7 November 2026): every rule carries passage_ids; FIN-ASC205-40-ISSUE stays disabled (SUMMARY-ONLY: the FASB text could not be opened).",
+ "_comment": "Rules of skill E. A rule computes only if VERIFIED-REOPENED. Passages recorded in references/method-standards.md. No published standard exists for burn-rate or runway calculation; the burn-basis rule is an engineering rule of this skill. Grounding lane (7 November 2026; deepen 8 November 2026): every enabled rule carries passage_ids. REFUSE ENABLE: FIN-ASC205-40-ISSUE stays SUMMARY-ONLY / disabled with empty passage_ids even after E3 PARTIAL ASU dual-read — Codification dual-read + owner yes still required before any enable.",
  "rules": [
   {
    "id": "FIN-HORIZON-12M",
@@ -29,10 +29,12 @@
    "id": "FIN-ASC205-40-ISSUE",
    "kind": "horizon",
    "source": "E3",
-   "passage": "FASB ASC 205-40 / ASU 2014-15 look-ahead of one year after the date the financial statements are issued: known only from secondary summaries; the FASB PDF could not be read.",
+   "passage": "FASB ASC 205-40 / ASU 2014-15 management look-ahead of one year after issuance: ASU 2014-15 text was dual-read via a PwC Viewpoint host (E3 PARTIAL; VP-E-060/061 registered for documentation only). FASB Codification Basic View remains unauthorized. REFUSE ENABLE — this rule stays SUMMARY-ONLY / disabled; do not attach passage_ids or compute the issuance-based horizon until Codification dual-read + owner yes.",
    "status": "SUMMARY-ONLY",
    "disabled_message": "[CHECK] management's look-ahead (ASC 205-40) is not applied; the filed going-concern language is read as written",
-   "passage_ids": []
+   "passage_ids": [],
+   "refuse_enable": true,
+   "enable_gate": "Codification dual-read of ASC 205-40 + explicit owner enable; ASU host PARTIAL alone is insufficient"
   },
   {
    "id": "TAX-382-OWNERSHIP-50PT",

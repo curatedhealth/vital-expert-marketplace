@@ -8,7 +8,7 @@
    "years": 5,
    "months": 0,
    "source": "S1",
-   "passage": "New Chemical Entity Exclusivity (NCE) \u2013 5 years; Exclusivity attaches upon approval of a drug product if the statutory requirements are met.",
+   "passage": "New Chemical Entity Exclusivity (NCE) – 5 years; Exclusivity attaches upon approval of a drug product if the statutory requirements are met.",
    "status": "VERIFIED-REOPENED",
    "passage_ids": [
     "VP-C-001"
@@ -21,7 +21,7 @@
    "years": 3,
    "months": 0,
    "source": "S1",
-   "passage": "New Clinical Investigation Exclusivity \u2013 3 years",
+   "passage": "New Clinical Investigation Exclusivity – 3 years",
    "status": "VERIFIED-REOPENED",
    "passage_ids": [
     "VP-C-001"
@@ -34,7 +34,7 @@
    "years": 7,
    "months": 0,
    "source": "S1,S5",
-   "passage": "Orphan Drug Exclusivity (ODE) \u2013 7 years; 21 U.S.C. 360cc(a): until the expiration of seven years from the date of the approval of the approved application or the issuance of the license.",
+   "passage": "Orphan Drug Exclusivity (ODE) – 7 years; 21 U.S.C. 360cc(a): until the expiration of seven years from the date of the approval of the approved application or the issuance of the license.",
    "status": "VERIFIED-REOPENED",
    "passage_ids": [
     "VP-C-001",
@@ -74,7 +74,7 @@
    "years": 0,
    "months": 6,
    "source": "S1,S6",
-   "passage": "Pediatric Exclusivity (PED) \u2013 6 months added to existing Patents/Exclusivity; 21 U.S.C. 355a: the 5-year, 3-year and 7-year periods are each deemed to be that period and six months.",
+   "passage": "Pediatric Exclusivity (PED) – 6 months added to existing Patents/Exclusivity; 21 U.S.C. 355a: the 5-year, 3-year and 7-year periods are each deemed to be that period and six months.",
    "status": "VERIFIED-REOPENED",
    "passage_ids": [
     "VP-C-001",
@@ -187,7 +187,7 @@
    "market": "US",
    "kind": "pte_formula",
    "source": "S2",
-   "passage": "156(c) lead-in: The term of a patent eligible for extension under subsection (a) shall be extended by the time equal to the regulatory review period for the approved product which period occurs after the date the patent is issued, except that\u2014; 156(g)(1)(B): The regulatory review period for a new drug, antibiotic drug, or human biological product is the sum of\u2014 (i) and (ii). The halving clause (c)(2) names only the (B)(i) periods, so the (B)(ii) period counts in full: this is a reading of the quoted text, not a quoted sentence.",
+   "passage": "156(c) lead-in: The term of a patent eligible for extension under subsection (a) shall be extended by the time equal to the regulatory review period for the approved product which period occurs after the date the patent is issued, except that—; 156(g)(1)(B): The regulatory review period for a new drug, antibiotic drug, or human biological product is the sum of— (i) and (ii). The halving clause (c)(2) names only the (B)(i) periods, so the (B)(ii) period counts in full: this is a reading of the quoted text, not a quoted sentence.",
    "status": "VERIFIED-REOPENED",
    "note": "reading of quoted text; counsel confirms",
    "passage_ids": [
@@ -202,10 +202,13 @@
    "kind": "regulatory",
    "years": 4,
    "months": 0,
-   "source": "S1",
-   "passage": "The FDA FAQ page does not mention the four-year paragraph IV filing window or the 30-month stay (keyword search of the page, 6 Nov 2026). Gap stated: the closing condition of 355(j)(5)(F)(ii) was not registered in this lane.",
+   "source": "S19",
+   "passage": "Primary dual-read 8 Nov 2026 (govinfo USCODE-2024 + uscode.house.gov): 355(j)(5)(F)(ii) — no ANDA referring to the NCE before five years, except after four years if it contains a paragraph IV certification (subclause IV of (2)(A)(vii)); approval follows (B), with possible extension of the 30-month stay so 7.5 years elapse from NDA approval if suit is filed in the year beginning at 48 months (VP-C-189). Status stays [CHECK]: fragment VERIFIED on S19, but automatic NCE-1 date arithmetic is not enabled (7.5y stay interaction unmodeled; C-KA-07 expects disabled/[CHECK]). Do not invent a four-year end date. Gap stated: automatic four-year end-date arithmetic remains disabled until the 7.5-year stay interaction is modeled.",
    "status": "[CHECK]",
-   "passage_ids": []
+   "passage_ids": [],
+   "computes": false,
+   "note": "S19 fragment VERIFIED; rule remains disabled for date computation. computes=false.",
+   "disabled_message": "[CHECK] US-NCE1-4Y filing-window arithmetic not applied; see VP-C-189 / S19"
   },
   {
    "id": "EU-DP-8Y",
@@ -346,6 +349,43 @@
    "status": "VERIFIED-REOPENED",
    "passage_ids": [
     "VP-C-011"
+   ]
+  },
+  {
+   "id": "EU-SPC-MFG-WAIVER-NOTE",
+   "market": "EU",
+   "kind": "counsel_flag",
+   "source": "S7c",
+   "passage": "Reg 2019/933 replaced Art 5 of Reg 469/2009: conditional derogation for making for export to third countries and for making/storing no earlier than six months before expiry for post-expiry EU day-1 launch (VP-C-187); does not cover import into the Union merely for repackaging, re-export or storing (VP-C-188). Does not alter Art 13 duration (EU-SPC-DURATION). Applicability HUMAN ONLY (counsel); never an FTO conclusion.",
+   "status": "VERIFIED-REOPENED",
+   "computes": false,
+   "passage_ids": [
+    "VP-C-187",
+    "VP-C-188"
+   ]
+  },
+  {
+   "id": "EU-BOLAR-NOTE",
+   "market": "EU",
+   "kind": "counsel_flag",
+   "source": "S10b",
+   "passage": "Directive 2001/83/EC Art 10(6): conducting necessary studies and trials with a view to Art 10(1)-(4) applications and consequential practical requirements shall not be regarded as contrary to patent rights or SPCs (VP-C-190). Not FTO; national implementations differ.",
+   "status": "VERIFIED-REOPENED",
+   "computes": false,
+   "passage_ids": [
+    "VP-C-190"
+   ]
+  },
+  {
+   "id": "EU-SPC-ART3A-MEDEVA-NOTE",
+   "market": "EU",
+   "kind": "counsel_flag",
+   "source": "S30",
+   "passage": "CJEU C-322/10 Medeva: Art 3(a) precludes SPC for active ingredients not specified in the wording of the claims of the basic patent (VP-C-191). Diligence question for counsel; later cases refine functional claiming. Never AI SPC-grant or FTO prediction.",
+   "status": "VERIFIED-REOPENED",
+   "computes": false,
+   "passage_ids": [
+    "VP-C-191"
    ]
   }
  ]

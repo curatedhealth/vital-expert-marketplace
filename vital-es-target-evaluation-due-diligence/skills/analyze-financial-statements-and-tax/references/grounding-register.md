@@ -13,7 +13,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | step | step 7 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 8 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | step | step 9 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
-| step | step 10 | ENGINEERING RULE | quality of earnings, net debt, accounting and tax opinions are human only (owner ruling); no source for the practice was found (E13) |
+| step | step 10 | ENGINEERING RULE | quality of earnings, net debt, accounting and tax opinions are human only (owner ruling); E13 / VP-E-070 warrants consulting≠attest — not a QoE method standard |
 | step | step 11 | ENGINEERING RULE | workflow design choice of this skill; gap stated: no published standard prescribes this step of a drug due diligence |
 | task card | 01-liquidity-and-going-concern.md | VERIFIED-REOPENED | Item 303 VP-E-001 to VP-E-003; going-concern horizon VP-E-050, VP-E-051 |
 | task card | 02-runway.md | VERIFIED-REOPENED | horizons VP-E-001, VP-E-051; scenario and burn-basis design is the plugin's (ENGINEERING RULE in the constants rows) |
@@ -25,7 +25,7 @@ One row per asset item of this skill: method step, task card, template, script c
 | template | financial-register.md | ENGINEERING RULE | section structure is the decision-ready order of anatomy 3.6 with this skill's register fields; a house format, gap stated: no published reporting standard exists for a diligence register |
 | constant or list | FIN-HORIZON-12M | VERIFIED-REOPENED | VP-E-001, VP-E-003; unit test matches the wording |
 | constant or list | FIN-AUDITOR-1Y | VERIFIED-REOPENED | VP-E-050, VP-E-051; unit test matches the wording (PCAOB page, browser-confirmed) |
-| constant or list | FIN-ASC205-40-ISSUE (disabled) | ENGINEERING RULE | rule disabled; gap stated: the FASB text could not be opened (E3, SUMMARY-ONLY); no look-ahead rule is applied |
+| constant or list | FIN-ASC205-40-ISSUE (disabled) | ENGINEERING RULE | **REFUSE ENABLE** — SUMMARY-ONLY, `passage_ids: []`; E3 ASU host dual-read is PARTIAL documentation only (VP-E-060/061 must not be attached to this rule); Codification login still unauthorized; no issuance look-ahead is applied |
 | constant or list | TAX-382-OWNERSHIP-50PT, TAX-382-TESTING-3Y, TAX-382-LIMIT-FORMULA | VERIFIED-REOPENED | VP-E-020 to VP-E-023; govinfo statute text; unit tests |
 | constant or list | TAX-172-NOL-80PCT (flag only) | VERIFIED-REOPENED | VP-E-024; enabled in the grounding lane; the IRS rate source is named (VP-E-025), no rate value is used |
 | constant or list | FIN-REDACTED-TERMS (E_REDACTED) | VERIFIED-REOPENED | VP-E-010, VP-E-012, VP-E-013; a redacted term is a GAP with a request for the unredacted agreement; unit test |

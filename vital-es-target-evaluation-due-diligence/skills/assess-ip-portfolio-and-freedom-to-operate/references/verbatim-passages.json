@@ -1,6 +1,6 @@
 {
  "register": "verbatim-passages",
- "built": "2026-11-07",
+ "built": "2026-11-08",
  "method": "extracted by scripts/due_diligence/verbatim/build_register.py; whitespace collapsed; nothing else changed",
  "passages": [
   {
@@ -747,6 +747,71 @@
    "cue": "none",
    "source_text_sha256": null,
    "note": "Whitespace-collapsed 12.5+12.7. Complements VP-C-183."
+  },
+  {
+   "source_id": "eu2019933",
+   "source_title": "Regulation (EU) 2019/933 of the European Parliament and of the Council of 20 May 2019 amending Regulation (EC) No 469/2009 concerning the supplementary protection certificate for medicinal products (EUR-Lex HTML CELEX 32019R0933)",
+   "page": null,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0933",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "6340f157e142e2b50a616c8703e5f16cb3f7ce6134dfc6bfbe1189b34775f813",
+   "id": "VP-C-187",
+   "section": "Art 5(2)(a) as inserted (making for export / EU day-1 stockpiling)",
+   "text": "2. By way of derogation from paragraph 1, the certificate referred to in paragraph 1 shall not confer protection against certain acts which would otherwise require the consent of the holder of the certificate (“the certificate holder”), if the following conditions are met: (a) the acts comprise: (i) the making of a product, or a medicinal product containing that product, for the purpose of export to third countries; or (ii) any related act that is strictly necessary for the making, in the Union, referred to in point (i), or for the actual export; or (iii) the making, no earlier than six months before the expiry of the certificate, of a product, or a medicinal product containing that product, for the purpose of storing it in the Member State of making, in order to place that product, or a medicinal product containing that product, on the market of Member States after the expiry of the corresponding certificate; or (iv) any related act that is strictly necessary for the making, in the Union, referred to in point (iii), or for the actual storing, provided that such related act is carried out no earlier than six months before the expiry of the certificate.",
+   "note": "Whitespace-collapsed from EUR-Lex HTML. Derogation conditions (b)–(e) and notification detail not fully quoted here; counsel confirms applicability. Does not alter Art 13 duration arithmetic."
+  },
+  {
+   "source_id": "eu2019933",
+   "source_title": "Regulation (EU) 2019/933 of the European Parliament and of the Council of 20 May 2019 amending Regulation (EC) No 469/2009 concerning the supplementary protection certificate for medicinal products (EUR-Lex HTML CELEX 32019R0933)",
+   "page": null,
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0933",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "6340f157e142e2b50a616c8703e5f16cb3f7ce6134dfc6bfbe1189b34775f813",
+   "id": "VP-C-188",
+   "section": "Art 5(3) as inserted (import for repackaging/re-export/storing excluded)",
+   "text": "3. The exception referred to in paragraph 2 shall not apply to any act or activity carried out for the import of products, or medicinal products containing those products, into the Union merely for the purpose of repackaging, re-exporting or storing.",
+   "note": "Whitespace-collapsed from EUR-Lex HTML. Import-for-repackaging carve-out to the manufacturing waiver."
+  },
+  {
+   "id": "VP-C-189",
+   "source_id": "u355",
+   "source_title": "21 U.S.C. 355 — New drugs. U.S. Code 2024 edition (govinfo HTML); dual-read uscode.house.gov identical whitespace-collapsed (ii) text",
+   "section": "355(j)(5)(F)(ii)",
+   "page": null,
+   "text": "(ii) If an application submitted under subsection (b) for a drug, no active moiety (as defined by the Secretary in section 314.3 of title 21, Code of Federal Regulations (or any successor regulations)) of which has been approved in any other application under subsection (b), is approved after September 24, 1984, no application may be submitted under this subsection which refers to the drug for which the subsection (b) application was submitted before the expiration of five years from the date of the approval of the application under subsection (b), except that such an application may be submitted under this subsection after the expiration of four years from the date of the approval of the subsection (b) application if it contains a certification of patent invalidity or noninfringement described in subclause (IV) of paragraph (2)(A)(vii). The approval of such an application shall be made effective in accordance with subparagraph (B) except that, if an action for patent infringement is commenced during the one-year period beginning forty-eight months after the date of the approval of the subsection (b) application, the thirty-month period referred to in subparagraph (B)(iii) shall be extended by such amount of time (if any) which is required for seven and one-half years to have elapsed from the date of approval of the subsection (b) application.",
+   "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title21/html/USCODE-2024-title21-chap9-subchapV-partA-sec355.htm",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "9b495c989371d19c4845f3c24dc2d06bd9805a3ac7f405e43079cb8dfe77f765",
+   "note": "Whitespace-collapsed full (ii). Fragment sha256 b99b9db58b9f75e33877f81fd054f098ef5efe44da239fb5b74a9da8a39f80ee. Dual-read house.gov view matched. Filing-window fact only — US-NCE1-4Y date arithmetic stays disabled (7.5y stay interaction unmodeled; C-KA-07 expects [CHECK])."
+  },
+  {
+   "id": "VP-C-190",
+   "source_id": "dir200183",
+   "source_title": "Directive 2001/83/EC consolidated 1 January 2025 (EUR-Lex HTML CELEX 02001L0083-20250101); dual-read second EUR-Lex HTML fetch same CELEX",
+   "section": "Art 10(6)",
+   "page": null,
+   "text": "Conducting the necessary studies and trials with a view to the application of paragraphs 1, 2, 3 and 4 and the consequential practical requirements shall not be regarded as contrary to patent rights or to supplementary protection certificates for medicinal products.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02001L0083-20250101",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "818bce9b914b83032d7b0966d15fa17bd5c59bdd28a358be0f51f6c3916e0ac1",
+   "note": "Whitespace-collapsed Art 10(6) from consolidated HTML (paragraph marker '6.' stripped). Fragment sha256 fa36a148e237fabe0cd5eea3abb194225f04a270d224bb935b1f6f2b69e0c626. Counsel flag only — not FTO; national implementations differ."
+  },
+  {
+   "id": "VP-C-191",
+   "source_id": "cjeu_medeva",
+   "source_title": "CJEU Case C-322/10 Medeva BV, Judgment of 24 November 2011 — EUR-Lex HTML CELEX 62010CJ0322 dual-read CURIA docid=115209 (operative part 1 identical)",
+   "section": "Operative part 1 / Art 3(a)",
+   "page": null,
+   "text": "Article 3(a) of Regulation (EC) No 469/2009 of the European Parliament and of the Council of 6 May 2009 concerning the supplementary protection certificate for medicinal products must be interpreted as precluding the competent industrial property office of a Member State from granting a supplementary protection certificate relating to active ingredients which are not specified in the wording of the claims of the basic patent relied on in support of the application for such a certificate.",
+   "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62010CJ0322",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": "910bce628cc0c561d73ae691a93184562d618e4afff2815c8a9459c3c5dc7684",
+   "note": "Whitespace-collapsed operative part 1. Dual-read CURIA https://curia.europa.eu/juris/document/document.jsf?docid=115209&doclang=en (WebFetch 2026-11-08). Later cases (Lilly C-493/12; Teva C-121/17) refine product identification — diligence question only; never AI FTO or SPC-grant prediction."
   }
  ],
  "skill": "assess-ip-portfolio-and-freedom-to-operate"
