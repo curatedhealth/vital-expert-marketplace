@@ -113,7 +113,7 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 | `tasks/clinical-safety-statements.md` | Guard, repair and check for safety statements against the label | Part A, statements |
 | `tasks/patient-safety-language.md` | Guard, repair and check for patient-facing wording | Part A, patient material |
 | `tasks/side-effect-flag.md` | How to spot and flag a possible safety report | Part B, every time |
-| `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
 | `references/tools.md` | Companion slots and the two scripts | Before computing or handing off |
 | `scripts/scan_safety_mentions.py` | Finds words that may signal a safety report, or patient-wording problems | A backstop while reading inputs or patient drafts |
 | `scripts/label_match.py` | Compares safety sentences in a draft with the supplied label text | Checking statements against the label |

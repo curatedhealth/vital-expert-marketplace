@@ -128,7 +128,7 @@ host. Details in `references/tools.md`.
 | `tasks/so-what.md` | Guard, repair and check for the implication | That task runs |
 | `tasks/actionability.md` | Guard, repair and check for decision, next step and owner | That task runs |
 | `tasks/structure-integrity.md` | Guard, repair and check for frameworks and headings | That task runs |
-| `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scan script | Before scanning |
 | `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
 | `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |

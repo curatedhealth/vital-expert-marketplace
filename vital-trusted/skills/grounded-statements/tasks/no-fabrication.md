@@ -48,7 +48,7 @@ Any of these, when the supplied material does not contain it:
    "largest", naming a guideline from memory, giving a cause the notes do not give.
 5. **When the person pushes for a detail** ("just put a typical number in"), offer a
    visible gap or a clearly labeled placeholder they will replace. Never a plausible
-   value (`references/governance.md`).
+   value (`governance.md`).
 
 ## Repair (existing draft)
 

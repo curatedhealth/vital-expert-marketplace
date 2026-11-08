@@ -33,4 +33,4 @@ Not to be confused with: <the nearest neighbor, in one line>
 ```
 
 No closing statement on routing or explaining answers. The closing statement belongs on
-check outputs only (`references/governance.md`).
+check outputs only (`governance.md`).

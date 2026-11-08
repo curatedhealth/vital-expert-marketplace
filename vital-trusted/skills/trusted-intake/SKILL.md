@@ -76,7 +76,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
   person did not give is either asked, assumed out loud, or left unknown on the card.
 - **Never decide whether a tool is approved.** Record what the person says their AI use
   policy allows. The decision belongs to the person and their AI policy owner
-  (TR-H11, `references/governance.md`).
+  (TR-H11, `governance.md`).
 - **SOPs come first (TR-H11).** When the work falls under an internal process, name the
   kind of process in plain words. Never name or guess a specific company's SOP.
 - **Plain language (TR-H13).** Questions and assumptions use everyday words. No rule
@@ -108,7 +108,7 @@ the card records the policy as the person states it, never as checked (TR-H4).
 |---|---|---|
 | `tasks/work-context.md` | Reading the request, choosing questions, setting stakes and the internal process | Any new deliverable |
 | `tasks/data-and-policy-context.md` | Input sensitivity and the AI use policy question | Something is pasted, attached or mentioned |
-| `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before the card or questions go out |
+| `governance.md` | Boundaries, stop rules, internal processes, never claimed | Before the card or questions go out |
 | `references/tools.md` | Companion slot per task | Companion questions |
 | `templates/context-card.md` | The card other skills read, and the person view | Building the card |
 | `templates/intake-questions.md` | How the questions look to the person | Asking |

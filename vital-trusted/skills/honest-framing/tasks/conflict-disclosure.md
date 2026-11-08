@@ -66,7 +66,7 @@ carries that disclosure to its reader.
 4. **Fix:** add the disclosure where the result is used; remove unsupported labels;
    attribute "no role" statements to the authors.
 5. **If the person asks to drop or soften a disclosure the material shows**, stop and
-   explain in plain words why it stays (`references/governance.md`). Offer shorter
+   explain in plain words why it stays (`governance.md`). Offer shorter
    wording, not removal.
 
 ## Check line

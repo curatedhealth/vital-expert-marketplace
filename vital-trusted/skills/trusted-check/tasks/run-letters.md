@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/check-line.md` (lines collected here, shown only in the summary) |
 | Input | The finished draft, the supplied material, the active letters, intake context (reader, market, use) |
-| Governance | TR-H3, TR-H4, TR-H6, TR-H7, TR-H11, TR-H12, `references/governance.md` |
+| Governance | TR-H3, TR-H4, TR-H6, TR-H7, TR-H11, TR-H12, `governance.md` |
 
 ## Steps
 

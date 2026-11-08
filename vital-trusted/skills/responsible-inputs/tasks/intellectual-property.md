@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/input-note.md`, `templates/check-line.md` |
 | Input | The request, the material, where the result will go, any license terms the person supplies |
-| Governance | TR-H1, TR-H3, TR-H7, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H7, TR-H11, `governance.md` |
 
 ## What to recognize
 

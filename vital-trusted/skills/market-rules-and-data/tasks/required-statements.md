@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/statements-list.md`, `templates/market-note.md`, `templates/check-line.md` |
 | Input | The draft, the context card, the supplied label for the market, any template or element list the person supplies |
-| Governance | TR-H1, TR-H2, TR-H3, TR-H7, TR-H8, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H2, TR-H3, TR-H7, TR-H8, TR-H11, `governance.md` |
 
 ## When it runs
 

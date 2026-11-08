@@ -101,7 +101,7 @@ tool-checked" (TR-H4).
 | `tasks/no-fabrication.md` | Guard, repair and check for invented content | That task runs |
 | `tasks/number-consistency.md` | Guard, repair and check for figures | That task runs |
 | `tasks/method-description.md` | Guard, repair and check for describing studies | That task runs |
-| `references/governance.md` | Boundaries and when to stop and ask | Before output leaves the conversation |
+| `governance.md` | Boundaries and when to stop and ask | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and scripts | Before computing or handing off |
 | `scripts/risk_metrics.py` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
 | `scripts/extract_numbers.py` | Every number in a text with its context | Checking figures |

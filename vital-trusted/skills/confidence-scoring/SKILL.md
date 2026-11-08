@@ -101,7 +101,7 @@ and say what VERIFY would add (`references/tools.md`).
 |---|---|---|
 | `tasks/faithfulness-and-source-scores.md` | Steps for the percent and the score lines, and what each means | That task runs |
 | `tasks/verify-card.md` | Steps for counts, open items and the one recommendation | That task runs |
-| `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | What VERIFY returns that this skill reads; the script | Before computing |
 | `scripts/faithfulness.py` | Percent and card counts from counts or a JSON list of statuses | Any computation |
 | `scripts/test_faithfulness.py` | Tests for the script | After changing the script |

@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/context-card.md`, `templates/intake-questions.md`, `templates/check-line.md` |
 | Input | The request, any attached or pasted material, earlier turns, any card already in the conversation |
-| Governance | TR-H1, TR-H7, TR-H11, TR-H12, TR-H13, `references/governance.md` |
+| Governance | TR-H1, TR-H7, TR-H11, TR-H12, TR-H13, `governance.md` |
 
 ## The fields
 
@@ -65,7 +65,7 @@ for an answer) or **unknown** (does not change this answer, left open).
 7. **Write the questions** with `templates/intake-questions.md`. Each question is one line,
    with a short reason in plain words, and offers likely answers where that saves typing.
 8. **State the assumptions** for every other gap in one line each, choosing the careful
-   option (`references/governance.md`, careful defaults).
+   option (`governance.md`, careful defaults).
 9. **Name the internal process** when the stakes are leaving the company, or when the
    work is promotional or answers a doctor at any stakes. Use the kind of process only:
    "your promotional review process", "your medical information procedure", "your safety

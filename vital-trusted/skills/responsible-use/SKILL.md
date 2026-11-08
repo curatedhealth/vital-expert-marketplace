@@ -131,7 +131,7 @@ the person and say the answer comes from their policy (TR-H4). Details in
 | `tasks/ai-use-disclosure.md` | Where disclosure is expected and how to word it | That task runs |
 | `tasks/authorship-integrity.md` | AI not an author; no ghostwriting presented as own work | That task runs |
 | `tasks/equity-and-inclusion.md` | People-first, non-stigmatizing language; groups and evidence gaps | That task runs |
-| `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the wording scan | Before scanning or handing off |
 | `scripts/scan_language.py` | Lists phrases to look at for stigmatizing wording | Patient or population material |
 | `templates/use-note.md`, `templates/check-line.md` | Output formats | Building the answer |

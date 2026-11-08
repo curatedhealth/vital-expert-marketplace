@@ -67,7 +67,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
   never "nothing flagged". VERIFY results appear only when VERIFY returned them.
 - **The person's letters stand.** Letters turned off read "off by choice". Never turn
   one back on silently or argue the choice. Hard rules still run (see
-  `references/governance.md`).
+  `governance.md`).
 - **Nothing invented (TR-H1).** The summary reports what the draft and the supplied
   material show. It adds no facts and names no reviewer the person did not name.
 - **Plain language (TR-H13).** Letter words, not codes. No skill names, rule ids or gap
@@ -101,7 +101,7 @@ draft inside the check.
 | `tasks/write-summary.md` | Turning lines into the plain summary | Every check |
 | `tasks/prove-handoff.md` | What goes to VERIFY, in what order, what comes back | VERIFY is connected |
 | `references/letter-lines.md` | The line grammar, where each skill's line shapes live, and who prints what under the references | Reading a line, or writing a new skill |
-| `references/governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
+| `governance.md` | Boundaries, stop rules, processes, never claimed | Before the summary leaves the conversation |
 | `references/tools.md` | Companion slot per task, VERIFY chain, script | Hand-off, script use |
 | `templates/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
 | `templates/check-line.md` | The line contract this skill accepts | Reading lines |

@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/use-note.md` (disclosure part), `templates/check-line.md` |
 | Input | The work, who receives it, the venue, the context card `AI use policy` line, the facts of what the AI did (from `work-record` or the person) |
-| Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H6, TR-H7, TR-H11, `governance.md` |
 
 ## Who might expect disclosure
 

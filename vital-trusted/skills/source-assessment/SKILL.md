@@ -107,7 +107,7 @@ Currency without a tool: ask for the date and mark currency "not checked".
 - To `trusted-check` only: the lines in `templates/check-line.md`. Never append them to a
   direct reply.
 - On a check output for a reviewer, the closing statement from
-  `references/governance.md`. Not on a quick answer.
+  `governance.md`. Not on a quick answer.
 
 ## Files in this skill
 
@@ -116,7 +116,7 @@ Currency without a tool: ask for the date and mark currency "not checked".
 | `tasks/qualify-source.md` | Kind, peer review, authors and funders, fit; VERIFY qualify and ingest | That task runs |
 | `tasks/evidence-strength-and-currency.md` | Where the evidence sits, one study or many, retraction, superseded, date; VERIFY currency | That task runs |
 | `references/source-types.md` | Each kind of source: what it is, peer review, what it can and cannot carry | Naming a source and its reach |
-| `references/governance.md` | Boundaries, stop rules, never-claimed, closing statement | Before output leaves |
+| `governance.md` | Boundaries, stop rules, never-claimed, closing statement | Before output leaves |
 | `references/tools.md` | VERIFY calls: exact arguments, what comes back, pitfalls | Before any tool call |
 | `../../templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `scripts/identify_source_id.py` | Says which VERIFY argument an identifier belongs in (doi, pmid, pmcid, url) | Before a VERIFY call |

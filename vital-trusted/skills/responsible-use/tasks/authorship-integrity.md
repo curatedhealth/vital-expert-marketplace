@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/use-note.md` (authorship part), `templates/check-line.md` |
 | Input | The work, the named author or signer, who actually drafted it, the venue, the company's role and funding as stated |
-| Governance | TR-H1, TR-H3, TR-H5, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H5, TR-H11, `governance.md` |
 
 ## When authorship matters
 

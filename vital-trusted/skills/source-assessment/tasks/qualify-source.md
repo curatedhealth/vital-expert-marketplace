@@ -14,7 +14,7 @@ Absorbs the source-grading method of the earlier vital-verify plugin.
 | Prompt | This guide |
 | Template | `templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` |
 | Input | The source (identifier, link, file or pasted text), the question it should answer, who will read the work, the claim it supports if known |
-| Governance | TR-H1, TR-H3, TR-H4, TR-H7, TR-H11; stop rules in `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H4, TR-H7, TR-H11; stop rules in `governance.md` |
 
 ## Before you start
 

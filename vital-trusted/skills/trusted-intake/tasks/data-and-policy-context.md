@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/context-card.md` (inputs and policy lines), `templates/intake-questions.md` |
 | Input | What the person says they will paste or attach, what they already pasted, any statement about their company policy |
-| Governance | TR-H3, TR-H6, TR-H11, TR-H13, `references/governance.md` |
+| Governance | TR-H3, TR-H6, TR-H11, TR-H13, `governance.md` |
 
 ## Kinds of input
 
@@ -52,7 +52,7 @@ Name the kind in plain words. More than one can apply.
 5. **If it was already pasted**, say so once, without blame: note the kind, suggest the
    person checks with the policy owner, and keep the material out of the output except
    what the work needs. If the output would carry identifiable patient details, stop
-   (`references/governance.md`).
+   (`governance.md`).
 6. **Patient details.** Never ask for more of them. If a case includes a possible side
    effect, note it for the safety function and do not judge it (TR-H6).
 7. **Hand on for depth.** Intake records and asks. The full check of inputs and

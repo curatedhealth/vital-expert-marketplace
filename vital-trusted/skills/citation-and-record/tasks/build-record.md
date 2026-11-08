@@ -9,12 +9,12 @@ Absorbs the record method and the escalation method of the earlier vital-verify 
 | Worker | Quality and compliance lead. Prepares the record for the person who clears it. Does not clear |
 | Workflow | Gather what was checked, list open items, get a decision and a named clearer from the person, hand on what cannot be cleared, then write the record or label it an uncleared draft |
 | Skill | TR-8.4.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4), `references/failure-modes.md` / `references/knowledge.md` (C6–C12), `references/governance.md`, `references/tools.md` |
+| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4), `references/failure-modes.md` / `references/knowledge.md` (C6–C12), `governance.md`, `references/tools.md` |
 | Tool | VERIFY `build_record`, only after a named person has given a decision for every open item. VERIFY `build_evidence_table`, only when the person asks for the table |
 | Prompt | This guide |
 | Template | `templates/record-note.md`, `templates/open-items.md` |
 | Input | The finished text; the claims and their results from `claim-assessment`; the sources and their results from `source-assessment`; the reference lines from TR-8.4.1; the person's decisions and the clearer's name and role as the person states them |
-| Governance | TR-H3, TR-H4, TR-H5, TR-H11, TR-H13; `references/governance.md` |
+| Governance | TR-H3, TR-H4, TR-H5, TR-H11, TR-H13; `governance.md` |
 
 ## Steps
 
@@ -49,7 +49,7 @@ Absorbs the record method and the escalation method of the earlier vital-verify 
    the named clearer says they reviewed it and gives a reason; never suggest it. Ask
    for the clearer's name and role exactly as the person states them, and the date of
    the decision.
-6. **Check the clearer** (`references/governance.md`):
+6. **Check the clearer** (`governance.md`):
    - It is a person's name the person gave in this conversation. Not taken from the
      document's author line, an email signature or a meeting list.
    - That person reviewed the work. "Put my manager's name, she will sign later" means

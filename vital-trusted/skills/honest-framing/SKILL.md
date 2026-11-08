@@ -115,7 +115,7 @@ is described as tool-checked (TR-H4).
 | `tasks/uncertainty-size.md` | Guard, repair and check for certainty words, intervals, limitations and hedging | That task runs |
 | `tasks/numbers-and-charts.md` | Guard, repair and check for framing of figures and charts | That task runs |
 | `tasks/conflict-disclosure.md` | Guard, repair and check for sponsors, funding and ties | That task runs |
-| `references/governance.md` | Boundaries with neighbor skills, stop rules, never-claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries with neighbor skills, stop rules, never-claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and scripts | Before computing |
 | `scripts/chart_scale.py` | How much a truncated axis or scaled pictogram enlarges a difference; cumulative into per-period | A chart or pictogram is involved |
 | `scripts/find_framing_cues.py` | Lists certainty, hedging, minimizing and independence words for review | Repairing a longer draft |

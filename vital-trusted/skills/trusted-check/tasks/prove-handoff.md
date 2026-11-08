@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | Prove lines in `references/letter-lines.md`; their place in `templates/check-output-full.md` |
 | Input | The finished draft, the True items found in TR-0.3.1, the sources the person supplied, the reader and purpose, the reviewer's name if given |
-| Governance | TR-H4, TR-H5, `references/governance.md` |
+| Governance | TR-H4, TR-H5, `governance.md` |
 
 ## When to hand off
 

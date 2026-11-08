@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/companion-answer.md` |
 | Input | The person's question; the assistant's current tool list |
-| Governance | TR-H4, `references/governance.md` |
+| Governance | TR-H4, `governance.md` |
 
 ## Steps
 

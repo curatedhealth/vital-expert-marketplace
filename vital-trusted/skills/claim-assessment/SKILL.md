@@ -73,7 +73,7 @@ These apply the TRUSTED hard rules (ids from `trusted-capability-map`).
   label every result "not tool-checked", and use the manual result words in
   `tasks/decide-support.md`, never VERIFY's status words.
 - **No verdicts on demand.** A request to mark claims supported without a check is
-  declined in plain words, with an offer to run the check (`references/governance.md`).
+  declined in plain words, with an offer to run the check (`governance.md`).
 - **A human decides (TR-H5).** Results are a draft for the person and their review
   process. Nothing here clears the work.
 - **Plain language (TR-H13).** Name the problem in everyday words. Rule and pattern ids
@@ -109,7 +109,7 @@ passage — connect VERIFY]`.
 |---|---|---|
 | `tasks/break-into-claims.md` | Part A: what one claim is, priority, pairing with passages | Every fact-check |
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
-| `references/governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; the manual script | Before calling a tool |
 | `scripts/split_claims.py` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
 | `templates/claim-list.md`, `templates/support-result.md`, `templates/check-line.md` | Output formats | Building the answer |

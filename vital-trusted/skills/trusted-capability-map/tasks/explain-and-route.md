@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/route-answer.md` |
 | Input | The person's question or request, and any draft they attached |
-| Governance | TR-H3, TR-H9, `references/governance.md` |
+| Governance | TR-H3, TR-H9, `governance.md` |
 
 ## Steps
 

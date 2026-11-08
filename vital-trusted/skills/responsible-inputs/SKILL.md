@@ -109,7 +109,7 @@ this skill (TR-H4). Details in `references/tools.md`.
 |---|---|---|
 | `tasks/input-confidentiality.md` | Guard, repair and check for what goes into the tool | That task runs |
 | `tasks/intellectual-property.md` | Guard, repair and check for other people's work | That task runs |
-| `references/governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the pattern-scan script | Before scanning or handing off |
 | `scripts/scan_inputs.py` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
 | `templates/input-note.md`, `templates/check-line.md` | Output formats | Building the answer |

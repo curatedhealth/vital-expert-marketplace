@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/privacy-note.md`, `templates/check-line.md` |
 | Input | The draft, the material it was written from, the context card (reader, market, stakes) |
-| Governance | TR-H1, TR-H3, TR-H6, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H6, TR-H11, `governance.md` |
 
 ## What to look for
 

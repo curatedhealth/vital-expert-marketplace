@@ -7,7 +7,7 @@
 | Worker | Experienced cross-functional colleague acting as a final reader |
 | Workflow | Turn the collected lines into plain notes per letter, list what is open for a person, what could not be checked, the next internal process, and close |
 | Skill | TR-0.3.2 |
-| Knowledge | `references/failure-modes.md` / `references/knowledge.md`, `references/gap-rules.md`, `references/governance.md` |
+| Knowledge | `references/failure-modes.md` / `references/knowledge.md`, `references/gap-rules.md`, `governance.md` |
 | Tool | `scripts/scan_verdicts.py` where code can run. Companion slot: none |
 | Prompt | This guide |
 | Template | `templates/check-output-light.md`, `templates/check-output-short.md`, `templates/check-output-full.md` |

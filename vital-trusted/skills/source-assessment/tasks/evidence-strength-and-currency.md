@@ -14,7 +14,7 @@ Absorbs the currency-check method of the earlier vital-verify plugin.
 | Prompt | This guide |
 | Template | `templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |
 | Input | The qualified source from TR-8.2.1, the claim it is meant to support, who will read it |
-| Governance | TR-H1, TR-H3, TR-H4, TR-H6, TR-H8; stop rules in `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H4, TR-H6, TR-H8; stop rules in `governance.md` |
 
 ## Steps
 

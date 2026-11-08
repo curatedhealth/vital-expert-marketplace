@@ -142,7 +142,7 @@ indication is approved there. A future label-source companion would fill those s
 | `tasks/label-and-intended-use.md` | Guard, repair and check against the label or intended purpose | That task runs |
 | `tasks/promotional-boundary.md` | Scientific exchange, promotion, replies to unsolicited questions, audience | That task runs |
 | `tasks/comparative-claims.md` | Comparisons, superlatives, "first" and "only", disparagement | That task runs |
-| `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
 | `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |

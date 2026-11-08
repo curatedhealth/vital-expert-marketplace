@@ -108,7 +108,7 @@ marked "not tool-built".
 |---|---|---|
 | `tasks/build-citations.md` | Steps, tool call and fallback for references | That task runs |
 | `tasks/build-record.md` | Steps, tool call, clearer rules and handing on open items | That task runs |
-| `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
+| `governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; scripts | Before any call |
 | `scripts/plain_reference.py` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
 | `templates/*.md` | Reference list, record note, open items, check line | Building the answer |

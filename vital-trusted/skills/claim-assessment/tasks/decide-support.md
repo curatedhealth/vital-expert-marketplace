@@ -98,7 +98,7 @@ Decline in plain words, without lecturing: "I can't mark these supported without
 comparing them with a passage. A result nobody checked would look the same as one that
 was, and a reviewer would rely on it." Offer one of: run the check now; label them "not
 checked" so they go to review as open items; or list which passages would be needed.
-Never produce the labels anyway (`references/governance.md`).
+Never produce the labels anyway (`governance.md`).
 
 ## Check line
 

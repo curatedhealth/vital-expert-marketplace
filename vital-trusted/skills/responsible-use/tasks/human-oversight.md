@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/use-note.md` (review part), `templates/check-line.md` |
 | Input | The draft, who it is for (context card `Reader`, `Stakes`, `Next process`), what the person says about review |
-| Governance | TR-H3, TR-H5, TR-H11, TR-H12, `references/governance.md` |
+| Governance | TR-H3, TR-H5, TR-H11, TR-H12, `governance.md` |
 
 ## Review in proportion
 

@@ -114,7 +114,7 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 |---|---|---|
 | `tasks/fair-balance.md` | Benefits with their risks, discontinuations and limitations; reassuring words | That task runs |
 | `tasks/selective-reporting.md` | Fair choice of studies, endpoints, subgroups and time points | That task runs |
-| `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
 | `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
 | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |

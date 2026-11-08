@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/market-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the context card (reader, market, product status, use), any supplied label |
-| Governance | TR-H1, TR-H3, TR-H7, TR-H8, TR-H11, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H7, TR-H8, TR-H11, `governance.md` |
 
 ## What to establish first
 

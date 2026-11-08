@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/safety-flag.md`, `templates/check-line.md` |
 | Input | Everything the person supplied, not only the draft: emails, notes, transcripts, posts, comments, complaints, call logs, attachments |
-| Governance | TR-H6, TR-H11, TR-H3, TR-H7, `references/governance.md` |
+| Governance | TR-H6, TR-H11, TR-H3, TR-H7, `governance.md` |
 
 ## What to look for
 

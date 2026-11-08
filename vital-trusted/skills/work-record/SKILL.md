@@ -118,7 +118,7 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 | `tasks/record-of-making.md` | Sources, tools and AI used | That task runs |
 | `tasks/assumptions-and-open-items.md` | Assumptions, gaps, pending decisions and owners | That task runs |
 | `tasks/honest-status.md` | Draft, reviewed, cleared, final, and when each may be written | That task runs |
-| `references/governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
 | `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
 | `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |

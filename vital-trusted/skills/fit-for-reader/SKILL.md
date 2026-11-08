@@ -131,7 +131,7 @@ in full on any host. Two scripts help where code can run. Details in
 | `tasks/deliverable-fit.md` | Guard, repair and check for format, length and structure | That task runs |
 | `tasks/translation-fidelity.md` | Guard, repair and check for translations | That task runs |
 | `references/readers.md` | The ten readers: what each decides, vocabulary, depth, watch-outs | Any audience work |
-| `references/governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
+| `governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scripts | Before scanning or comparing |
 | `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
 | `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |

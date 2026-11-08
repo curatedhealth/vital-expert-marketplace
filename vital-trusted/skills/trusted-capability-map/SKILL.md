@@ -115,7 +115,7 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 - Speak in plain business language. Name a letter by its word, not its code.
 - Gaps use the classes in `references/knowledge.md`, so every skill words them the same
   way.
-- Never claim what `references/governance.md` lists as never claimed, in any copy.
+- Never claim what `governance.md` lists as never claimed, in any copy.
 - When routing, describe the next step plainly (`templates/route-answer.md`). Skill names
   and gap syntax stay out of what the person reads unless they ask for them.
 
@@ -124,7 +124,7 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 | File | What it holds | Read it when |
 |---|---|---|
 | `references/standard.md` | The seven letters in full, boundaries, skill index and routing cues | Explaining or routing |
-| `references/governance.md` | Never-claim list, closing statement, sign-off | Before anything leaves the conversation |
+| `governance.md` | Never-claim list, closing statement, sign-off | Before anything leaves the conversation |
 | `references/tools.md` | Companions, the VERIFY tool list, slot behavior | Companion questions |
 | `tasks/*.md` | The three task guides | That task runs |
 | `templates/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |

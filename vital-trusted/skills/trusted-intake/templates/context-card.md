@@ -35,7 +35,7 @@ Rules for the card:
 - `Product status` cites its source: "per your label" when a label was supplied, "as you
   said" when stated. Never from memory.
 - `Unknown` fields are left unknown. Other skills treat them with the careful defaults in
-  `references/governance.md`.
+  `governance.md`.
 
 ## Person view (leadership stakes and above)
 

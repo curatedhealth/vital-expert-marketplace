@@ -115,7 +115,7 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 | `tasks/jurisdiction.md` | Guard, repair and check for market fit and audience reach | That task runs |
 | `tasks/required-statements.md` | Guard, repair and check for statements a market expects | That task runs |
 | `tasks/privacy-in-output.md` | Guard, repair and check for personal details in the output | That task runs |
-| `references/governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
+| `governance.md` | Boundaries, decisions never made, stop rules | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the cue-scan script | Before scanning or handing off |
 | `scripts/scan_output.py` | Cue scan for expected statements and personal details | Checking a draft where code can run |
 | `templates/market-note.md`, `templates/statements-list.md`, `templates/privacy-note.md`, `templates/check-line.md` | Output formats | Building the answer |

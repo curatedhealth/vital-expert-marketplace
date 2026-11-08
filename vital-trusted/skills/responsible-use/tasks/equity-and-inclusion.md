@@ -12,7 +12,7 @@
 | Prompt | This guide |
 | Template | `templates/use-note.md` (language part), `templates/check-line.md` |
 | Input | The draft, who it describes and who reads it, any community or company language guide the person supplies, the source material for evidence statements |
-| Governance | TR-H1, TR-H3, TR-H9, TR-H12, `references/governance.md` |
+| Governance | TR-H1, TR-H3, TR-H9, TR-H12, `governance.md` |
 
 ## What to look at
 
