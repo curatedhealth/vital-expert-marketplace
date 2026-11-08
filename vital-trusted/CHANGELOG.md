@@ -2,6 +2,8 @@
 
 ## 0.3.0 — 8 November 2026
 
+**Gaps closure (same day, late):** path hygiene (`assets/`→`templates/`, Files tables); Prove/Core `good-sourced-draft` floor + Core WC-* http rows; `stamp_check_line.py --letter-lines`; scenario-specific `poor-invented-certainty`; VERIFY gate PASS; marketplace tip `aa975fc` (follow-up tip may include this CHANGELOG). Pilot unchanged — see `mcps/trusted/TRUSTED_PILOT_OWNER_HITL_2026-11-08.md`.
+
 World-class content pass (same day evening): shared `templates/` cards; Prove/Core/Build deepen with IFPMA/ABPI/FDA/RAGAS citations; rendered card examples; digest `mcps/trusted/WORLD_CLASS_PRACTICES_DIGEST_2026-11-08.md`.
 
 **Build wave 2:** fit-for-reader, substance-and-usefulness, market-rules-and-data, grounded-statements, sourced-claims, responsible-inputs, responsible-use, work-record — Output cards + WC-* standards + full card examples (all 12 Build skills now on the card pattern).
