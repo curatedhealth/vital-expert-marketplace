@@ -12,7 +12,7 @@ Absorbs the currency-check method of the earlier vital-verify plugin.
 | Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/failure-modes.md` / `references/knowledge.md` (S5, S6, S9–S12, S16) |
 | Tool | VERIFY `check_currency`. `scripts/identify_source_id.py` where code runs |
 | Prompt | This guide |
-| Template | `templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |
+| Template | `../../templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |
 | Input | The qualified source from TR-8.2.1, the claim it is meant to support, who will read it |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H6, TR-H8; stop rules in `governance.md` |
 
