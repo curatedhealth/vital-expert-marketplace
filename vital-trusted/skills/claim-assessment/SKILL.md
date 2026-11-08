@@ -115,3 +115,4 @@ passage — connect VERIFY]`.
 | `templates/claim-list.md`, `templates/support-result.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/value-story-registry.md` | Worked case: value story against a registry summary | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | Gap classes as used here | Writing any gap |

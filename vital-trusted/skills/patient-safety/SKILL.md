@@ -121,3 +121,4 @@ a tool could establish is marked as a gap (TR-H4). See `references/tools.md`.
 | `templates/*.md` | Safety flag, label table, repair note, check line | Building the answer |
 | `examples/doctor-email-side-effect.md`, `examples/social-comment-reply.md` | Worked cases from everyday work | Shaping the answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

@@ -130,3 +130,4 @@ Every TRUSTED skill cites these by id. The reasoning behind each, with examples,
 | `templates/*.md` | Output formats for routing, letter choice and companion answers | Building the answer |
 | `examples/route-medical-information.md` | A worked routing case | Shaping a routing answer |
 | `evals/evals.json` | Test requests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | Gap classes and wording | Writing any gap |

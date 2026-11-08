@@ -134,3 +134,4 @@ host. Details in `references/tools.md`.
 | `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

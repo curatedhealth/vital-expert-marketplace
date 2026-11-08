@@ -120,3 +120,4 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

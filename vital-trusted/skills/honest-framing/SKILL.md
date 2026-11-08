@@ -123,3 +123,4 @@ is described as tool-checked (TR-H4).
 | `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md`, `templates/disclosure-line.md` | Output formats | Building the answer |
 | `examples/deck-proves-superiority.md`, `examples/overhedged-summary.md` | Worked cases: a sales deck that overclaims, a summary that over-hedges | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

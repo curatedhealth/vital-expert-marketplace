@@ -124,3 +124,4 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 | `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |
+| `references/gap-rules.md` | How to word gaps in a record | Writing any gap |

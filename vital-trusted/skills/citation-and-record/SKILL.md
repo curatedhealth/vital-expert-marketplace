@@ -114,3 +114,4 @@ marked "not tool-built".
 | `templates/*.md` | Reference list, record note, open items, check line | Building the answer |
 | `examples/advisory-board-pre-read.md` | A worked case: three sources, one missing year, two contradicted claims | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | Gap classes as used here | Writing any gap |

@@ -121,3 +121,4 @@ only those systems could confirm is marked as not checkable here (TR-H4). Detail
 | `templates/market-note.md`, `templates/statements-list.md`, `templates/privacy-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-follow-up-patient.md`, `examples/eu-deck-us-wording.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

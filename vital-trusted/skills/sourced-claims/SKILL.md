@@ -112,3 +112,4 @@ it (`citation-and-record`). Until then, say "source not graded with a tool" (TR-
 | `templates/check-line.md`, `templates/source-note.md`, `templates/reference-list.md` | Output formats | Building the answer |
 | `examples/brand-deck.md`, `examples/add-references.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

@@ -137,3 +137,4 @@ the person and say the answer comes from their policy (TR-H4). Details in
 | `templates/use-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/doctor-reply-no-review.md`, `examples/kol-article.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including ones to redirect | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

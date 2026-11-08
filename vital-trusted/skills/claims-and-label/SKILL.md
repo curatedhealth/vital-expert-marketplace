@@ -148,3 +148,4 @@ indication is approved there. A future label-source companion would fill those s
 | `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |
 | `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

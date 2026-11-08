@@ -115,3 +115,4 @@ the card records the policy as the person states it, never as checked (TR-H4).
 | `templates/check-line.md` | The line for `trusted-check` | Returning to the check |
 | `examples/doctor-email-no-market.md`, `examples/board-update-no-questions.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must redirect | Testing |
+| `references/gap-rules.md` | Gap classes as intake uses them | Writing an unknown field |

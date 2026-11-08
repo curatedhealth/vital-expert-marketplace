@@ -115,3 +115,4 @@ this skill (TR-H4). Details in `references/tools.md`.
 | `templates/input-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/csr-into-chatgpt.md`, `examples/article-for-newsletter.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must stay light | Testing |
+| `references/gap-rules.md` | How to word gaps in this skill | Writing any gap |

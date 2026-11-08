@@ -108,3 +108,4 @@ draft inside the check.
 | `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
 | `examples/*.md` | Worked cases: agency email, team email, board update | Shaping the answer |
 | `evals/evals.json` | Test requests, including one it must not approve | Testing |
+| `references/gap-rules.md` | Gap classes as they appear in a summary | Writing open items |

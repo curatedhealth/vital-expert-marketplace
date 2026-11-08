@@ -123,3 +123,4 @@ Currency without a tool: ask for the date and mark currency "not checked".
 | `scripts/print_source_score.py` | Prints a VERIFY source score as the total plus numeric axes, nulls left out | After qualify_source |
 | `examples/*.md` | Worked cases: a preprint in a payer deck, a competitor press release | Shaping the answer |
 | `evals/evals.json` | Daily-user tests, including one the skill must decline | Testing |
+| `references/gap-rules.md` | Gap classes as used here | Writing any gap |

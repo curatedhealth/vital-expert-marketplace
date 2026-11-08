@@ -108,3 +108,4 @@ tool-checked" (TR-H4).
 | `templates/check-line.md`, `templates/repair-note.md` | Output formats | Building the answer |
 | `examples/board-update.md`, `examples/repair-trial-summary.md` | Worked cases, one business, one scientific | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones the skill must decline | Testing |
+| `references/gap-rules.md` | How to word gaps | Writing any gap |

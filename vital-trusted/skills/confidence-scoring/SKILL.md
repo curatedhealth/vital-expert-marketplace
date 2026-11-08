@@ -108,3 +108,4 @@ and say what VERIFY would add (`references/tools.md`).
 | `templates/confidence-line.md`, `templates/verify-card.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md` | A worked case on a payer value story | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones to decline or redirect | Testing |
+| `references/gap-rules.md` | Gap classes as they apply here | Writing any gap |
