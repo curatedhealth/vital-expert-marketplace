@@ -1,0 +1,28 @@
+{
+  "name": "vital-navigator-outcomes",
+  "version": "0.3.0-live-test",
+  "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools run on the Ontology Navigator connector (vont_ key).",
+  "author": {
+    "name": "Vital.Expert",
+    "url": "https://vital.expert"
+  },
+  "license": "Proprietary",
+  "skills": "./skills",
+  "keywords": [
+    "navigator",
+    "outcomes",
+    "investment-decision",
+    "value-realized",
+    "vital",
+    "CF-01.06.01"
+  ],
+  "userConfig": {
+    "navigator_key": {
+      "type": "string",
+      "title": "Ontology Navigator key",
+      "description": "The vont_ key from your VITAL purchase. Cowork sends it only to mcp.vital.expert.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

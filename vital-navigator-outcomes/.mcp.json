@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vital-ontology-navigator": {
+      "type": "http",
+      "url": "https://mcp.vital.expert/api/mcp/ontology-navigator",
+      "headers": {
+        "Authorization": "Bearer ${user_config.navigator_key}"
+      }
+    }
+  }
+}

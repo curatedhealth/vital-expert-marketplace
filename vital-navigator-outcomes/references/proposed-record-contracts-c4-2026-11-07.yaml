@@ -1,0 +1,57 @@
+# Offline proposal only — not live MCP schema.
+# Absorb pointer for C4 R-C4-01…06 field contracts. Do not invent people/tiers/targets.
+# Source export: diligence/c4-exports-2026-11-07/recommendations/proposed_record_contracts.yaml
+
+status: proposed offline design; inspect real schemas; not MCP fields
+authority: Owner rules + Lane A informed VITAL synthesis; no values prefilled
+delivery_record_fields:
+- approved_outcome_or_decision_ref
+- work_package_id
+- output_and_acceptance_evidence
+- depends_on
+- constraints
+- human_selected_owner_ref
+- human_selected_oversight_ref
+- demand_units_and_calendar
+- availability_evidence_ref
+- reviews_and_escalation
+- dc05_reference
+- canonical_dc09_reference_and_version
+- initiator_executor_authority
+- human_risk_input_refs
+- ai_proposal_separate_from_human_choice
+- stop_override_and_fallback
+trial_record_fields:
+- nonclinical_scope_and_domain_assessment
+- decision_to_inform
+- material_uncertainty
+- hypothesis
+- evidence_method
+- metric_or_qualitative_criteria
+- baseline_and_source_where_applicable
+- human_target_or_criteria_provenance
+- success_failure_signals
+- observation_plan
+- time_limit
+- stop_rule
+- exit_condition
+- oversight_and_escalation
+- human_value_and_cost_ranges_with_units_basis
+- criterion_revision_log
+- inference_limits_and_next_review
+capability_build_fields:
+- existing_gap_ref
+- affected_outcome_or_work_package
+- skill_vs_capacity_gap
+- required_need_and_date
+- current_evidence
+- human_chosen_build_borrow_transfer_approach
+- depends_on
+- human_owner_ref
+- resources
+- knowledge_transfer_handover
+- acceptance_evidence_and_review
+- dependent_scale_condition
+- oversight_capacity_evidence
+warning: No invented named person, tier, target, date, risk rating, proficiency or vendor. Field presence does not
+  prove evidence or authority.

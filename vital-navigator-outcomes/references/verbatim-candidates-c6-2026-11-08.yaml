@@ -1,0 +1,84 @@
+- id: VP-ON-C6-001
+  finding_id: WR-C6-002
+  quote: Different scales can be misleading.
+  word_count: 5
+  source:
+    title: 'Chart details: Axes and gridlines'
+    authors_or_org: Office for National Statistics
+    year: null
+    url_or_doi: https://service-manual.ons.gov.uk/data-visualisation/guidance/axes-and-gridlines
+    locator: Consistent scales; Dual axes
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).
+- id: VP-ON-C6-002
+  finding_id: WR-C6-004
+  quote: Use absolute risk rather than relative risk.
+  word_count: 7
+  source:
+    title: Shared decision making, NG197
+    authors_or_org: NICE
+    year: 2021
+    url_or_doi: https://www.nice.org.uk/guidance/ng197/chapter/recommendations
+    locator: 1.4.7 and rationale
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).
+- id: VP-ON-C6-003
+  finding_id: WR-C6-018
+  quote: All analysis shall be assured.
+  word_count: 5
+  source:
+    title: The AQuA Book, 2025 edition
+    authors_or_org: Government Analysis Function; GORS; Government Actuary’s Department; ONS
+    year: 2025
+    url_or_doi: https://www.gov.uk/guidance/the-aqua-book
+    locator: Ch3; §4.2.1; Ch5
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).
+- id: VP-ON-C6-004
+  finding_id: WR-C6-019
+  quote: A revision is a derivation for which the resulting entity is a revised version of some original.
+  word_count: 17
+  source:
+    title: 'PROV-DM: The PROV Data Model'
+    authors_or_org: W3C; editors Luc Moreau and Paolo Missier
+    year: 2013
+    url_or_doi: https://www.w3.org/TR/2013/REC-prov-dm-20130430/
+    locator: §2.2.1.1 revision definition
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).
+- id: VP-ON-C6-005
+  finding_id: WR-C6-029
+  quote: The guidance should not be used as a tick-box list of actions which should be followed in every situation.
+  word_count: 19
+  source:
+    title: Corporate Governance Code Guidance
+    authors_or_org: Financial Reporting Council
+    year: 2024
+    url_or_doi: https://www.frc.org.uk/library/standards-codes-policy/corporate-governance/corporate-governance-code-guidance/
+    locator: ExecutiveSummary1–6
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).
+- id: VP-ON-C6-006
+  finding_id: WR-C6-008
+  quote: Use consistent language so that users know what to expect and can absorb information more quickly.
+  word_count: 16
+  source:
+    title: 'Writing and editing: Plain language'
+    authors_or_org: Office for National Statistics
+    year: null
+    url_or_doi: https://service-manual.ons.gov.uk/content/writing-for-users/plain-language
+    locator: Users/needs; Word choice; Consistency
+    accessed: '2026-11-08'
+  quote_verified: true
+  reuse_cleared: owner_internal_pack_yes
+  permission_note: Owner Option A 8 Nov 2026 — internal method/examples only; not marketing/Marketplace; explicit parallel to C3 (not inheritance from C4/C5).

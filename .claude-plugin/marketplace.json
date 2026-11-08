@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, and navigator-ai-investment, and vital-mlr-review, and vital-decision-companion.",
+  "description": "Vital.Expert plugins for Cowork. Digital Health: five merged packs (regulatory and quality, access and value, clinical development, go-to-market, patient and user experience), plus vital-trusted, vital-verify, vital-navigator-outcomes (legacy navigator-ai-investment), vital-mlr-review, and vital-decision-companion.",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -27,9 +27,14 @@
       "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied."
     },
     {
+      "name": "vital-navigator-outcomes",
+      "source": "./vital-navigator-outcomes",
+      "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools run on the Ontology Navigator connector (vont_ key). Marketplace v1 live-test."
+    },
+    {
       "name": "navigator-ai-investment",
       "source": "./navigator-ai-investment",
-      "description": "Facilitated AI investment decisions on the VITAL Ontology Navigator. Tools run on the Ontology Navigator connector (vont_ key)."
+      "description": "Legacy id for Outcome Navigator. Prefer vital-navigator-outcomes@vital-expert. Tools run on the Ontology Navigator connector (vont_ key)."
     },
     {
       "name": "dh-regulatory-and-quality",

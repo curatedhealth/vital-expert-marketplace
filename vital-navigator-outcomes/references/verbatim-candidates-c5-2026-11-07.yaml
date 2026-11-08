@@ -1,0 +1,52 @@
+- id: VP-ON-C5-001
+  finding_id: WR-C5-012
+  quote: Note that a benefit is not closed simply because the associated work is completed.
+  word_count: 14
+  source:
+    title: 'The Teal Book, Chapter19: Benefits management'
+    authors_or_org: Government Project Delivery
+    year: 2024
+    url_or_doi: https://projectdelivery.gov.uk/teal-book/home/part-e-planning-and-control/chapter-19-benefits-management/
+    locator: §19.6.3.10
+    accessed: '2026-11-07'
+  quote_verified: true
+  reuse_cleared: unknown
+- id: VP-ON-C5-002
+  finding_id: WR-C5-014
+  quote: Contribution analysis does not provide definitive proof that the intervention has had a causal effect
+  word_count: 15
+  source:
+    title: 'Magenta Book AnnexA: Analytical methods for use within an evaluation'
+    authors_or_org: HM Treasury; Evaluation Task Force
+    year: 2026
+    url_or_doi: https://www.gov.uk/government/publications/the-magenta-book/magenta-book-annex-a-analytical-methods-for-use-within-an-evaluation-html
+    locator: §A1.4 Pros and cons
+    accessed: '2026-11-07'
+  quote_verified: true
+  reuse_cleared: unknown
+- id: VP-ON-C5-003
+  finding_id: WR-C5-010
+  quote: where or how the benefit or impact happens
+  word_count: 8
+  source:
+    title: 'Benefits practitioner workbook, PartC: Key activities in managing benefits'
+    authors_or_org: Government Project Delivery
+    year: 2025
+    url_or_doi: https://projectdelivery.gov.uk/library-products/benefits-practitioner-workbook/part-c-key-activities-in-managing-benefits/
+    locator: §§7.4,7.6.3.1–7.6.3.3,7.6.6.3
+    accessed: '2026-11-07'
+  quote_verified: true
+  reuse_cleared: unknown
+- id: VP-ON-C5-004
+  finding_id: WR-C5-023
+  quote: Just because something can be measured does not mean that it should be measured.
+  word_count: 14
+  source:
+    title: 'The Value and Impact of Medical Affairs: Mastering the Art of Leveraging Meaningful Metrics'
+    authors_or_org: Becky Harmon, Paul Tebbey, Anna Walz, Leah Williams; MAPS
+    year: null
+    url_or_doi: https://medicalaffairs.org/wp-content/uploads/2022/05/White-Paper-The-Art-Of-Metrics-FINAL.pdf
+    locator: p.7 Can vs Should
+    accessed: '2026-11-07'
+  quote_verified: true
+  reuse_cleared: unknown

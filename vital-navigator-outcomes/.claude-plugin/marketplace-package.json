@@ -1,0 +1,8 @@
+{
+  "id": "vital-navigator-outcomes",
+  "legacy_id": "navigator-ai-investment",
+  "capability_code": "CF-01.06.01",
+  "version": "0.3.0-live-test",
+  "display_name": "Outcome Navigator",
+  "description": "Investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Marketplace v1 live-test."
+}

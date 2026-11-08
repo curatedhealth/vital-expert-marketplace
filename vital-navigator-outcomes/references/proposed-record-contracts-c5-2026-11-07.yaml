@@ -1,0 +1,37 @@
+status: proposed offline fields; reconcile actual schemas; no prefilled values
+leak:
+- category_from_existing_set
+- alias_if_supported
+- who_what_period_how_known
+- observed_forecast_risk
+- supplied_magnitude_unit_basis_or_gap
+- domain_constraints
+- overlap_ref
+baseline:
+- observed_or_BAU_role
+- metric_scope_population_period
+- source_record_version
+- human_value_provenance
+- method_limits
+- old_new_versions
+- change_reason_approval_date
+- teaching_live_status
+realization:
+- existing_benefit_profile_ref
+- original_current_forecast_refs
+- comparable_actual_source
+- unit_period_scope_metric_baseline_versions
+- evaluation_state_per_canon
+- recognized_value_per_owner_rule
+- contribution_evidence_other_influences
+- cashable_action_evidence
+- overlap_gross_net
+- owner_cadence_closure
+review:
+- benefit_outcome_refs
+- evidence_age
+- indicator_role_lag
+- dependencies_disbenefits_constraints
+- human_disposition_rationale_steward
+- next_evidence_date
+- approved_change_ref

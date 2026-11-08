@@ -1,0 +1,38 @@
+{
+  "description": "Verbatim-style register for Outcome Navigator skill `place-the-portfolio`. Passages are adapted from in-repo peer skills and design docs for method grounding. They are NOT primary regulatory statutes. Status of use: [CHECK] until owner traces or replaces with primary sources.",
+  "checked_on": "2026-11-07",
+  "comparison_rule": "adapted paraphrase of in-repo peer method text; not a literal PDF substring",
+  "release_state": "Draft",
+  "passages": [
+    {
+      "id": "VP-ON-PLACE-TH-001",
+      "source_id": "SRC-TRUSTED-GROUNDED",
+      "section": "TRUSTED grounded-statements / no-fabrication (adapted)",
+      "page": null,
+      "text": "Write only what the supplied material supports; mark the rest as a visible gap; never a plausible value when the person asks to 'just put a typical number in'.",
+      "url": "in-repo:mcps/trusted/plugin/vital-trusted/skills/grounded-statements/tasks/no-fabrication.md",
+      "access_date": "2026-11-07",
+      "cue": "should"
+    },
+    {
+      "id": "VP-ON-PLACE-TH-002",
+      "source_id": "SRC-LN-RECORD-02",
+      "section": "Shared decision record standard \u00a72 (non-gate path)",
+      "page": null,
+      "text": "One record shape with ten parts; choice under a named person's name; signature status prepared for signature or blocked; signed remains false for the assistant.",
+      "url": "in-repo:docs/claude-project/launch-navigator/02_decision_record_standard.md",
+      "access_date": "2026-11-07",
+      "cue": "must"
+    },
+    {
+      "id": "VP-ON-PLACE-TH-003",
+      "source_id": "SRC-FOCUSED-MEMORY",
+      "section": "FOCUSED gather-intelligence / DC hard rules (adapted)",
+      "page": null,
+      "text": "Do not fill the unknown from memory; only stored material counts; teaching examples are never input.",
+      "url": "in-repo:mcps/decision_companion/plugin/vital-decision-companion/skills/gather-intelligence/SKILL.md",
+      "access_date": "2026-11-07",
+      "cue": "must"
+    }
+  ]
+}

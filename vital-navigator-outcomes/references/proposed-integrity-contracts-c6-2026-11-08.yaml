@@ -1,0 +1,21 @@
+status: offline proposal, inspect real enums/contracts
+claim:
+- exact_claim_id_revision_text
+- source_revision_passage_locator
+- unit_period_scope_derivation
+- warrant_qualifier_counterevidence
+- actual_response_or_explicit_unchecked_event
+- content_binding_and_limits
+evidence:
+- actual_tip_id_revision_or_empty
+- source_derivation_agent
+- digest_ifavailable
+- separate_access_rights_reuse
+pack:
+- specific_pack_revision
+- ordered_matching_ground_cut_verify_or_fallback_frame_refs
+- claim_exhibit_evidence_snapshot
+- gaps_limits_concerns
+- human_authority_scope
+- reopen_review_responsibility
+warning: No invented values/statuses/identity/acceptance/tips; hash not truth; draft not final authorization.
