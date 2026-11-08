@@ -52,5 +52,5 @@ Ethical · what went in: 1 question for your AI use policy (unpublished study da
 
 ## Behind the reply (reference only, not shown to the person)
 
-Patterns avoided: C1, C2, C5, C7, T1 in `references/knowledge.md`. Rules that explain the
+Patterns avoided: C1, C2, C5, C7, T1 in `references/failure-modes.md` / `references/knowledge.md`. Rules that explain the
 reasons: I1 to I6 (patient-level data in listings), I8 (price-sensitive, EU scope).

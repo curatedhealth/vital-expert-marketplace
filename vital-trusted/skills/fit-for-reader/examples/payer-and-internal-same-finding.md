@@ -59,6 +59,6 @@ goes through your market access or promotional review process before the meeting
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns A3, A4 in `references/knowledge.md`. Association wording and absolute figures
+Patterns A3, A4 in `references/failure-modes.md` / `references/knowledge.md`. Association wording and absolute figures
 come from `grounded-statements` (its patterns M5, N1). Whether the payer material is
 promotional is for the company's process (TR-H11).

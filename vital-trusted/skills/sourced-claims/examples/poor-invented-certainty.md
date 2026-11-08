@@ -75,7 +75,7 @@ I did not write any reference from memory. I did not check any source with a too
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns S4, S1, S2, S5 and C4 in `references/knowledge.md`. Whether a comparative claim
+Patterns S4, S1, S2, S5 and C4 in `references/failure-modes.md` / `references/knowledge.md`. Whether a comparative claim
 is permitted at all is for `claims-and-label`; this skill only names what would source
 it.
 

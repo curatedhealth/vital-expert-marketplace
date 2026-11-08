@@ -111,7 +111,7 @@ is still in this version, except the two cuts listed. I did not test it with rea
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L1, L2, L3, L5, L6, L7 in `references/knowledge.md`. Rules R1 (lay term first,
+Patterns L1, L2, L3, L5, L6, L7 in `references/failure-modes.md` / `references/knowledge.md`. Rules R1 (lay term first,
 medical term after; no long sentences; no symbols; abbreviations explained) and R5
 (numbers the audience uses). The kidney statement and the side-effect wording go to
 `patient-safety` for checking against the label; the route to a doctor was in the

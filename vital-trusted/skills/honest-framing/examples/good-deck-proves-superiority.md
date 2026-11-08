@@ -92,7 +92,7 @@ I compared the draft with what you gave me; nothing here was checked with a tool
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns UC1, UC2, NF1, NF7, CH1, IN1, IN5, UC7, UC8 in `references/knowledge.md`.
+Patterns UC1, UC2, NF1, NF7, CH1, IN1, IN5, UC7, UC8 in `references/failure-modes.md` / `references/knowledge.md`.
 Rules: R5 and R7 (UK, if the market is the UK), R1 to R4 as good practice since the
 market is not stated and the audience is doctors, not consumers; R9 for what a
 disclosure contains. The superiority claim itself goes to `claims-and-label`; the
