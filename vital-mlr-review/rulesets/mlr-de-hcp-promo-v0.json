@@ -1,0 +1,97 @@
+{
+  "ruleset_id": "mlr-de-hcp-promo-v0",
+  "jurisdiction": "DE",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "HWG compliant",
+    "BfArM approved this copy"
+  ],
+  "sources": [
+    {
+      "id": "SRC-DE-01",
+      "title": "Heilmittelwerbegesetz (HWG) — Law on Advertising in the Health Care System",
+      "url": "https://www.gesetze-im-internet.de/hwg/",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-DE-02",
+      "title": "Arzneimittelgesetz (AMG) — advertising-related provisions (as applicable)",
+      "url": "https://www.gesetze-im-internet.de/amg_1976/",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-DE-03",
+      "title": "FSA Code of Conduct (Freiwillige Selbstkontrolle für die Arzneimittelindustrie)",
+      "url": "https://www.fsa-pharma.de/",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "DE-PROMO-MED-001",
+        "title": "Advertising consistent with Fachinformation",
+        "check_prompt": "Flag claims inconsistent with the supplied German Fachinformation / SmPC. Missing FI → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-DE-02",
+        "applies_to": ["DE"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "DE-PROMO-MED-002",
+        "title": "Prohibited advertising statements (HWG themes)",
+        "check_prompt": "Flag absolute success guarantees, fear appeals, or before/after style claims typical of HWG restrictions when unsupported. Do not cite section numbers unless supplied.",
+        "fail_close": true,
+        "source_ref": "SRC-DE-01",
+        "applies_to": ["DE"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "DE-PROMO-LEG-001",
+        "title": "Public vs professional advertising boundary",
+        "check_prompt": "Flag Rx advertising that would be directed to the general public. HCP-only materials must not read as consumer ads.",
+        "fail_close": true,
+        "source_ref": "SRC-DE-01",
+        "applies_to": ["DE"],
+        "chair": "legal"
+      },
+      {
+        "rule_id": "DE-PROMO-LEG-002",
+        "title": "Benefits / samples / hospitality",
+        "check_prompt": "Flag offers of benefits inconsistent with FSA-style industry rules. Escalate; do not clear.",
+        "fail_close": true,
+        "source_ref": "SRC-DE-03",
+        "applies_to": ["DE"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "DE-PROMO-REG-001",
+        "title": "Mandatory particulars for specialist advertising",
+        "check_prompt": "For Fachkreise advertising, check for required particulars (e.g. name, composition themes, contraindications as applicable to format). Incomplete → finding or [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-DE-01",
+        "applies_to": ["DE"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "DE-PROMO-REG-002",
+        "title": "EU pack is not a substitute",
+        "check_prompt": "If only the EU-central pack was applied for German materials, flag that DE rules must also be applied.",
+        "fail_close": true,
+        "source_ref": "SRC-DE-01",
+        "applies_to": ["DE"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

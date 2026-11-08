@@ -1,0 +1,114 @@
+{
+  "registry_version": "0.2.0",
+  "product": "mlr-review",
+  "updated": "2026-10-24",
+  "note": "Catalogue for mlr_list_rulesets. Full packs ship checklists; stubs list authority hints only. No US default.",
+  "packs": [
+    {
+      "ruleset_id": "mlr-global-hcp-promo-v0",
+      "jurisdiction": "global",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-global-hcp-promo-v0.json"
+    },
+    {
+      "ruleset_id": "mlr-global-hcp-scientific_exchange-v0",
+      "jurisdiction": "global",
+      "audience": "hcp",
+      "channel": "scientific_exchange",
+      "status": "full",
+      "file": "mlr-global-hcp-scientific_exchange-v0.json"
+    },
+    {
+      "ruleset_id": "mlr-us-hcp-promo-v0",
+      "jurisdiction": "US",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-us-hcp-promo-v0.json",
+      "authority_hints": ["FDA", "21 CFR 202", "FD&C Act"]
+    },
+    {
+      "ruleset_id": "mlr-eu-hcp-promo-v0",
+      "jurisdiction": "EU",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-eu-hcp-promo-v0.json",
+      "authority_hints": ["Directive 2001/83/EC", "EFPIA Code"]
+    },
+    {
+      "ruleset_id": "mlr-uk-hcp-promo-v0",
+      "jurisdiction": "UK",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-uk-hcp-promo-v0.json",
+      "authority_hints": ["ABPI Code", "MHRA Blue Guide"]
+    },
+    {
+      "ruleset_id": "mlr-de-hcp-promo-v0",
+      "jurisdiction": "DE",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-de-hcp-promo-v0.json",
+      "authority_hints": ["HWG", "AMG", "FSA Code"]
+    },
+    {
+      "ruleset_id": "mlr-ch-hcp-promo-v0",
+      "jurisdiction": "CH",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "full",
+      "file": "mlr-ch-hcp-promo-v0.json",
+      "authority_hints": ["Swissmedic", "TPA/HMG", "Pharma Code"]
+    },
+    {
+      "ruleset_id": "mlr-fr-hcp-promo-v0",
+      "jurisdiction": "FR",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "stub",
+      "file": null,
+      "authority_hints": ["ANSM", "Charte de la visite médicale", "Leem"]
+    },
+    {
+      "ruleset_id": "mlr-jp-hcp-promo-v0",
+      "jurisdiction": "JP",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "stub",
+      "file": null,
+      "authority_hints": ["PMDA", "MHLW", "JPMA Code"]
+    },
+    {
+      "ruleset_id": "mlr-ca-hcp-promo-v0",
+      "jurisdiction": "CA",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "stub",
+      "file": null,
+      "authority_hints": ["Health Canada", "PAAB", "Innovative Medicines Canada Code"]
+    },
+    {
+      "ruleset_id": "mlr-au-hcp-promo-v0",
+      "jurisdiction": "AU",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "stub",
+      "file": null,
+      "authority_hints": ["TGA", "Medicines Australia Code"]
+    },
+    {
+      "ruleset_id": "mlr-br-hcp-promo-v0",
+      "jurisdiction": "BR",
+      "audience": "hcp",
+      "channel": "promo",
+      "status": "stub",
+      "file": null,
+      "authority_hints": ["ANVISA", "Interfarma / ethics codes"]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+# Vital Expert READY (MLR Ready) Plugin — Proprietary License
+
+**Copyright (c) 2026 Crossroads Catalyst GmbH.**  
+Vital Expert is a product of **Crossroads Catalyst GmbH** (Swiss limited liability company).  
+All rights reserved.
+
+Software, skills, templates, tools, documentation, and related materials in this
+plugin (the "Plugin") are proprietary to Crossroads Catalyst GmbH.
+
+## Grant of license
+
+Subject to this License and any applicable marketplace or seat agreement with
+Crossroads Catalyst GmbH or its authorized distributors, you are granted a
+limited, non-exclusive, non-transferable, revocable license to:
+
+1. Install and use the Plugin inside authorized host environments (including
+   Claude Cowork / Claude Code and other Agent Skills hosts that Crossroads
+   Catalyst GmbH designates);
+2. Use the Plugin solely for your organization's internal life-sciences work
+   quality workflows; and
+3. Generate outputs for your organization's use, subject to the disclaimers below.
+
+## Restrictions
+
+You may not, except with prior written permission from Crossroads Catalyst GmbH:
+
+- Redistribute, sublicense, sell, rent, lease, or publish the Plugin or any
+  substantial portion of its skills, prompts, templates, tools, or evaluation kits;
+- Remove or alter copyright, trademark, or proprietary notices;
+- Use the Plugin to train, fine-tune, or improve a competing general-purpose
+  model or skill pack, other than incidental use of outputs for your own work;
+- Circumvent marketplace seat, authentication, or usage controls; or
+- Represent that Crossroads Catalyst GmbH, Vital Expert, or the Plugin has
+  medically, legally, or regulatorily cleared any specific piece of content.
+
+## Trademarks
+
+"Vital Expert", "VITAL READY", "READY", and related marks are trademarks or
+product names of Crossroads Catalyst GmbH. No trademark license is granted except
+as needed to identify the Plugin as provided.
+
+## No professional advice — human oversight required
+
+The Plugin assists drafting and quality review. It is **not** medical, legal,
+regulatory, pharmacovigilance, or compliance advice. It does **not** replace your
+organization's SOPs, promotional review, medical information procedures, or
+qualified human judgment. Outputs remain uncleared drafts unless a named human
+in your organization clears them under your process.
+
+Life-sciences promotional and scientific communications remain subject to
+applicable codes and laws (including, where relevant, IFPMA, ABPI/PMCPA, FDA
+promotional labeling rules, and national advertising ordinances). The Plugin's
+citations to such standards are educational; they are not a determination that
+any material is compliant.
+
+## Disclaimer of warranties
+
+THE PLUGIN IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. Crossroads
+Catalyst GmbH does not warrant that outputs will be accurate, complete, current,
+or suitable for any external use.
+
+## Limitation of liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CROSSROADS CATALYST GMBH AND
+ITS DIRECTORS, EMPLOYEES, AND SUPPLIERS SHALL NOT BE LIABLE FOR ANY INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS,
+DATA, GOODWILL, OR BUSINESS OPPORTUNITY, ARISING FROM USE OF THE PLUGIN, EVEN IF
+ADVISED OF THE POSSIBILITY. AGGREGATE LIABILITY FOR DIRECT DAMAGES SHALL NOT
+EXCEED THE FEES PAID FOR THE PLUGIN SEAT IN THE TWELVE (12) MONTHS PRECEDING THE
+CLAIM, OR CHF 100 IF NO FEE WAS PAID.
+
+## Optional live MCP tools
+
+Optional live MLR (`vmlr_`) and VERIFY (`vvfy_`) tools may call mcp.vital.expert.
+Use of those tools is subject to your key terms and does not change the
+disclaimers above. READY never returns medical, legal, or regulatory approval. Offline use must be labeled READY-local / not
+tool-checked where the skills so require.
+
+## Termination
+
+This license terminates automatically if you breach it. On termination you must
+cease use and delete installed copies of the Plugin, except copies your law
+requires you to retain.
+
+## Governing law
+
+This License is governed by the substantive laws of Switzerland, excluding
+conflict-of-law rules. Exclusive place of jurisdiction is the competent courts
+at the registered seat of Crossroads Catalyst GmbH, unless mandatory consumer
+protection law provides otherwise.
+
+## Contact
+
+Crossroads Catalyst GmbH — Vital Expert  
+https://vital.expert
+
+For marketplace distribution terms beyond this seat license, contact the copyright
+holder. SPDX-License-Identifier equivalent for metadata: `LicenseRef-CrossroadsCatalyst-Proprietary`.

@@ -1,48 +1,23 @@
-# Tool calls
+# Tools: mlr-compile
 
-## Companion slot
+## Offline first
+Hybrid B default: run local CLIs under `plugin/vital-mlr-review/tools/` and `scripts/`.
+Exit 0 = pass; 1 = hard rule error. Soft issues → flags / [CHECK] / [GAP].
+Label **not tool-checked** when live MCP keys (`vmlr_`, `vvfy_`) are absent (MLR-H4).
 
-MLR tools are on MCP server `vital-mlr-review` with a `vmlr_` key.
-VERIFY tools are on MCP server `vital-verify` with a `vvfy_` key (same connector as vital-trusted / vital-verify).
-Without the needed key, run the method by hand and label the turn **not tool-checked** (MLR-H4).
-Never invent a tool field. Always use `ServerName:tool_name`.
+| Tool | Path | Use for | Never for |
+|---|---|---|---|
+| `mlr_validate_packet_offline.py` | `tools/mlr_validate_packet_offline.py` | Packet schema | Board ownership |
+| `mlr_compile_checklist_offline.py` | `tools/mlr_compile_checklist_offline.py` | Open-item checklist | Hiding gaps |
+| `mlr_align_claims_offline.py` | `tools/mlr_align_claims_offline.py` | Align pass | Clearance |
+| `mlr_get_packet_schema_offline.py` | `tools/mlr_get_packet_schema_offline.py` | Schema dump | Live MCP require |
+| `stamp_ready_line.py` | `tools/stamp_ready_line.py` | Closing stamp line | Approval language |
 
-## Primary tools
+## Live connectors (optional)
+When `vmlr_` is present, MCP tools on server `vital-mlr-review` may mirror the offline CLIs.
+When `vvfy_` is present, VERIFY handoff may be tool-checked. Never invent tool fields.
+Always use fully qualified `vital-mlr-review:<tool>` names if calling MCP.
 
-## `vital-mlr-review:mlr_compile_checklist`
-
-Short name: `mlr_compile_checklist`. Always call the fully qualified name when multiple MCP servers are connected.
-
-Arguments: see MCP descriptors / `mcps/mlr_review/tools.py`.
-
-Pitfall: Treating a successful tool call as MLR approval.
-
-Schema source: `mcps/mlr_review/tools.py`, method pack `0.3.1`.
-
-## `vital-mlr-review:mlr_validate_packet`
-
-Short name: `mlr_validate_packet`. Always call the fully qualified name when multiple MCP servers are connected.
-
-Arguments: see MCP descriptors / `mcps/mlr_review/tools.py`.
-
-Pitfall: Treating a successful tool call as MLR approval.
-
-Schema source: `mcps/mlr_review/tools.py`, method pack `0.3.1`.
-
-## `vital-mlr-review:mlr_get_packet_schema`
-
-Short name: `mlr_get_packet_schema`. Always call the fully qualified name when multiple MCP servers are connected.
-
-Arguments: see MCP descriptors / `mcps/mlr_review/tools.py`.
-
-Pitfall: Treating a successful tool call as MLR approval.
-
-Schema source: `mcps/mlr_review/tools.py`, method pack `0.3.1`.
-
-
-## Also named
-
-- `vital-mlr-review:mlr_align_claims`
-
-These stay on their own connector or skill. This skill does not reimplement them.
-`vital-mlr-review:my_usage` is a meter — not a skill tool.
+## Invocation rule
+Offline first. Stamp every user-facing close with `python tools/stamp_ready_line.py --skill mlr-compile --status <status>`.
+Written 8 November 2026 (READY world-class content uplift).

@@ -1,0 +1,76 @@
+{
+  "ruleset_id": "mlr-global-hcp-scientific_exchange-v0",
+  "jurisdiction": "global",
+  "audience": "hcp",
+  "channel": "scientific_exchange",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "compliant with",
+    "promotional clearance"
+  ],
+  "sources": [
+    {
+      "id": "SRC-GLOBAL-SE-01",
+      "title": "Scientific exchange hygiene (non-promotional intent, reactive context, balance)",
+      "note": "Cross-cutting; market packs add local definitions of scientific exchange vs advertising.",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "GLOBAL-SE-MED-001",
+        "title": "Evidence graded honestly",
+        "check_prompt": "Flag overstated certainty, missing limitations, or selective endpoint highlighting versus supplied papers. Invented citations are fail-close.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-SE-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "GLOBAL-SE-MED-002",
+        "title": "Unsolicited vs proactive",
+        "check_prompt": "If context says reactive medical information, flag proactive product selling language. If context silent, [GAP] ask whether exchange is solicited.",
+        "fail_close": false,
+        "source_ref": "SRC-GLOBAL-SE-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "GLOBAL-SE-LEG-001",
+        "title": "No disguised promotion",
+        "check_prompt": "Flag brand taglines, call-to-action to prescribe, or leave-behind style CTAs inside supposed scientific exchange.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-SE-01",
+        "applies_to": ["global"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "GLOBAL-SE-REG-001",
+        "title": "Channel integrity",
+        "check_prompt": "Confirm channel remains scientific_exchange. If content is primarily product promotion, recommend re-intake as promo and load promo rulesets.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-SE-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "GLOBAL-SE-REG-002",
+        "title": "Off-label discussion controls",
+        "check_prompt": "If off-label or investigational use is discussed, require clear labeling as such and point to company medical-info SOP. Do not approve; mark human_gate_required when off-label content is present.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-SE-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "ruleset_id": "mlr-eu-hcp-promo-v0",
+  "jurisdiction": "EU",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "EMA approved this copy",
+    "compliant with Directive 2001/83"
+  ],
+  "sources": [
+    {
+      "id": "SRC-EU-01",
+      "title": "Directive 2001/83/EC — Title VIII Advertising",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32001L0083",
+      "date_read": "2026-10-24",
+      "note": "Member-state implementation and national codes still apply; DE/FR packs or stubs capture national deltas."
+    },
+    {
+      "id": "SRC-EU-02",
+      "title": "EFPIA Code of Practice",
+      "url": "https://www.efpia.eu/relationships-code/the-efpia-code/",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "EU-PROMO-MED-001",
+        "title": "Advertising only for authorized medicines / indications",
+        "check_prompt": "Using supplied SmPC / authorized indications for the EU markets in scope, flag promotion of unauthorized medicines or indications. Missing SmPC → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-EU-01",
+        "applies_to": ["EU"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "EU-PROMO-MED-002",
+        "title": "Essential information accompanies advertising",
+        "check_prompt": "Check that essential information compatible with the SmPC (as implemented nationally) is not omitted when the format requires it. Format unclear → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-EU-01",
+        "applies_to": ["EU"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "EU-PROMO-MED-003",
+        "title": "Substantiation of claims",
+        "check_prompt": "Flag claims that lack a clear scientific reference in the supplied materials. Do not invent PubMed citations.",
+        "fail_close": true,
+        "source_ref": "SRC-EU-02",
+        "applies_to": ["EU"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "EU-PROMO-LEG-001",
+        "title": "No advertising to the general public for prescription medicines",
+        "check_prompt": "If audience is HCP-only but channel/copy would reach the public (open web, consumer tone), flag public-advertising risk under Title VIII principles.",
+        "fail_close": true,
+        "source_ref": "SRC-EU-01",
+        "applies_to": ["EU"],
+        "chair": "legal"
+      },
+      {
+        "rule_id": "EU-PROMO-LEG-002",
+        "title": "Gifts, inducements, and hospitality language",
+        "check_prompt": "Flag copy that offers prohibited inducements or hospitality inconsistent with EFPIA-style restrictions. Ambiguity → escalate to compliance, do not clear.",
+        "fail_close": true,
+        "source_ref": "SRC-EU-02",
+        "applies_to": ["EU"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "EU-PROMO-REG-001",
+        "title": "Member-state overlay not ignored",
+        "check_prompt": "If jurisdictions include specific member states (e.g. DE, FR), require those packs or stubs to be loaded. EU-central pack alone is not enough for national launch materials.",
+        "fail_close": true,
+        "source_ref": "SRC-EU-01",
+        "applies_to": ["EU"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "EU-PROMO-REG-002",
+        "title": "Cross-border digital promotion",
+        "check_prompt": "For digital HCP promotion accessible across EU, flag missing geo/access controls or country-specific prescribing information when materials claim multi-country use.",
+        "fail_close": false,
+        "source_ref": "SRC-EU-02",
+        "applies_to": ["EU"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

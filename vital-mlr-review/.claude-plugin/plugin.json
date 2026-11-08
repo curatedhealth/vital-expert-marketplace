@@ -1,8 +1,47 @@
 {
   "name": "vital-mlr-review",
-  "version": "0.3.1",
-  "description": "MLR board preparation: separate Medical, Legal, and Regulatory chairs grounded in industry standards; multi-jurisdiction rulesets; never approves. Optional VERIFY companion.",
+  "displayName": "VITAL READY (MLR Ready)",
+  "version": "0.4.0",
+  "release_state": "Pilot",
+  "tier": "Standard",
+  "domain": "platform",
+  "capability_code": "READY",
+  "depends_on": [
+    "vital-core-atoms"
+  ],
+  "generated_by": "ready-hybrid-upgrade-2026-11-08",
+  "description": "READY / MLR Ready prepares Medical–Legal–Regulatory board packets. Offline-first: skills + local tools (rulesets, validate, align, compile, VERIFY handoff packet, prep record) run without keys and stamp READY-local / not tool-checked. Optional vmlr_ adds metered cloud tools or durable prep record; optional vvfy_ adds live VERIFY. Host model writes chair findings. Never approves. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
-    "name": "VITAL Expert"
+    "name": "Crossroads Catalyst GmbH — Vital Expert",
+    "url": "https://vital.expert"
+  },
+  "homepage": "https://vital.expert",
+  "repository": "https://github.com/curatedhealth/vital-expert-main",
+  "license": "LicenseRef-CrossroadsCatalyst-Proprietary",
+  "keywords": [
+    "life sciences",
+    "pharma",
+    "MLR",
+    "promotional review",
+    "medical legal regulatory",
+    "READY",
+    "MLR Ready"
+  ],
+  "skills": "./skills",
+  "userConfig": {
+    "mlr_key": {
+      "type": "string",
+      "title": "VITAL MLR Review key (optional)",
+      "description": "Personal vmlr_ key for metered cloud MLR tools or durable prep record at mcp.vital.expert. Optional: without it, READY runs fully offline.",
+      "required": false,
+      "sensitive": true
+    },
+    "verify_key": {
+      "type": "string",
+      "title": "VITAL Verify key (optional)",
+      "description": "Personal vvfy_ key for live VERIFY claim clearance. Optional: without it, use mlr-verify-handoff offline packet and TRUSTED Prove offline path.",
+      "required": false,
+      "sensitive": true
+    }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "allowed_statuses": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "must_contain": [
+    "findings_only",
+    "READY-local",
+    "not tool-checked",
+    "This prepares material for human MLR review",
+    "Conflict",
+    "compile-conflict-matrix"
+  ],
+  "must_not_contain": [
+    "approved for use",
+    "mlr approved",
+    "cleared for promotion"
+  ],
+  "never_approve": true,
+  "skill": "mlr-compile",
+  "template": "compile-conflict-matrix.md",
+  "unique_gate": "wc-mlr-compile-470b3d5e54",
+  "world_class_uplift": "2026-11-08"
+}

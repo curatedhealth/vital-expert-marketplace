@@ -1,0 +1,88 @@
+{
+  "ruleset_id": "mlr-ch-hcp-promo-v0",
+  "jurisdiction": "CH",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "Swissmedic approved this copy",
+    "Pharma Code compliant"
+  ],
+  "sources": [
+    {
+      "id": "SRC-CH-01",
+      "title": "Swissmedic — Advertising of therapeutic products (guidance hub)",
+      "url": "https://www.swissmedic.ch/swissmedic/en/home/services/advertising.html",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-CH-02",
+      "title": "Therapeutic Products Act (TPA / HMG) — advertising framework",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2001/422/en",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-CH-03",
+      "title": "Pharma Code (scienceindustries) — industry self-regulation",
+      "url": "https://www.scienceindustries.ch/en/article/12477/pharma-code",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "CH-PROMO-MED-001",
+        "title": "Consistent with Swiss information for healthcare professionals",
+        "check_prompt": "Flag claims inconsistent with the supplied Swiss Fachinformation / product information. Missing → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-CH-01",
+        "applies_to": ["CH"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "CH-PROMO-MED-002",
+        "title": "Balanced presentation",
+        "check_prompt": "Flag benefit claims that omit material risks present in supplied Swiss product information.",
+        "fail_close": true,
+        "source_ref": "SRC-CH-01",
+        "applies_to": ["CH"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "CH-PROMO-LEG-001",
+        "title": "Public advertising restrictions for Rx",
+        "check_prompt": "Flag prescription medicine advertising aimed at the public. Confirm HCP-directed placement.",
+        "fail_close": true,
+        "source_ref": "SRC-CH-02",
+        "applies_to": ["CH"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "CH-PROMO-REG-001",
+        "title": "Swissmedic advertising rules for the format",
+        "check_prompt": "Check format-specific Swissmedic advertising expectations against supplied materials. Unknown format → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-CH-01",
+        "applies_to": ["CH"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "CH-PROMO-REG-002",
+        "title": "Pharma Code company obligations",
+        "check_prompt": "Note that Pharma Code certification/approval is a company process. Packet prepares reviewers; it does not certify.",
+        "fail_close": false,
+        "source_ref": "SRC-CH-03",
+        "applies_to": ["CH"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

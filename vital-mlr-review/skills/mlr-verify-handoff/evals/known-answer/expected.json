@@ -1,0 +1,26 @@
+{
+  "allowed_statuses": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "must_contain": [
+    "findings_only",
+    "READY-local",
+    "not tool-checked",
+    "This prepares material for human MLR review",
+    "VERIFY handoff",
+    "called_verify"
+  ],
+  "must_not_contain": [
+    "approved for use",
+    "mlr approved",
+    "cleared for promotion"
+  ],
+  "never_approve": true,
+  "skill": "mlr-verify-handoff",
+  "template": "claim-label-matrix.md",
+  "unique_gate": "wc-mlr-verify-handoff-60696a0dcf",
+  "world_class_uplift": "2026-11-08"
+}

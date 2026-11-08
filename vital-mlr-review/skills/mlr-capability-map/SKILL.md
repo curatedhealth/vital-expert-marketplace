@@ -2,7 +2,7 @@
 name: mlr-capability-map
 description: "This skill should be used when the person asks what MLR Review can do, which skill to run, how TRUSTED differs from VERIFY and MLR, whether Medical versus Legal versus Regulatory applies, how to set up vmlr_/vvfy_, or whether a piece is ready for the MLR board. Routes to intake, chairs, compile, verify-handoff, or board-prep. Do not use to approve copy or replace the company MLR committee."
 license: "[CHECK] VITAL MLR Review terms — set before marketplace publish"
-compatibility: "Needs the MLR Review connector (vmlr_) for tool-checked work. VERIFY (vvfy_) optional where named. Without keys, run by hand and label not tool-checked."
+compatibility: "Runs offline with skills + local tools. Optional vmlr_/vvfy_ when `.mcp.json` opted in. Without keys label not tool-checked and stamp READY-local."
 metadata:
   framework_code: "MLR-0.0"
   register_code: "MLR-0.0"
@@ -10,7 +10,8 @@ metadata:
   family: "mlr-core"
   worker: "Cross-functional MLR coordinator"
   pack: "vital-mlr-review"
-  version: "0.3.1"
+  version: "0.4.0"
+  release_state: Pilot
   route:
     - "What can MLR Review do on this host"
     - "Route me to the right MLR skill"
@@ -34,7 +35,7 @@ Routeboard for VITAL MLR Review. Explain prep-only scope. Point to the next skil
 2. Pick the matching task below; follow its Formula and Companion slots.
 3. Call tools only with fully qualified names from `references/tools.md`.
 4. Run listed scripts for deterministic checks when inputs are files/JSON.
-5. Match `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+5. Match `../../templates/` Output cards (see SKILL.md). End with the closing line in `references/governance.md`.
 
 ## Pick the task
 
@@ -54,29 +55,40 @@ Run with the host Python. Prefer tool-checked connector results when `vmlr_` / `
 
 | Skill | Own question |
 |---|---|
+| `mlr-channel-intent` | Promo vs scientific exchange vs med_info gate |
 | `mlr-intake` | Markets, audience, channel, artefact version, authorized use per market |
-| `mlr-medical-chair` | **M** — clinical/label accuracy, fair balance, clinical evidence |
+| `mlr-claims-matrix` | Pre-chair verbatim claims + locators + authorised-use bind |
+| `mlr-medical-chair` | **M** — clinical/label accuracy, clinical evidence |
 | `mlr-legal-chair` | **L** — misleading impression, comparative-ad, privacy/IP |
-| `mlr-regulatory-chair` | **R** — ISI/format, pre-approval gates, code process, audience/channel |
-| `mlr-compile` | Align three chairs; validate; conflict slots |
-| `mlr-verify-handoff` | Admit sources / check claims on VERIFY |
+| `mlr-fair-balance-isi` | Fair balance / ISI / net impression (prep) |
+| `mlr-regulatory-chair` | **R** — format, pre-approval gates, code process, audience/channel overlays |
+| `mlr-compile` | Align chairs; validate; conflict slots; reconciliation |
+| `mlr-verify-handoff` | Admit sources / check claims on VERIFY (or offline packet) |
 | `mlr-board-prep` | Named-human prep record for the committee |
 
-Hard rules detail: `references/hard-rules.md`. Chair MECE: `references/chair-index.md`.
+Hard rules detail: `references/hard-rules.md`. Chair MECE: `references/chair-index.md`. Funnel: `../../workflows/offline-prep-e2e.md`.
 
 ## Boundaries
 
 | Question | Where it goes |
 |---|---|
 | What can this pack do / which skill | `mlr-capability-map` |
+| Promo vs scientific exchange | `mlr-channel-intent` |
 | Markets and ruleset load | `mlr-intake` |
+| Claims matrix / locators | `mlr-claims-matrix` |
 | Clinical / label accuracy | `mlr-medical-chair` |
 | Misleadingness / comparative-ad / privacy | `mlr-legal-chair` |
-| ISI / format / pre-approval process | `mlr-regulatory-chair` |
+| Fair balance / ISI prominence | `mlr-fair-balance-isi` |
+| Format / pre-approval process | `mlr-regulatory-chair` |
 | Align + validate | `mlr-compile` |
 | Passage / source proof | `mlr-verify-handoff` |
 | Named-human prep record | `mlr-board-prep` |
 
+
+
+## Closing stamp
+
+End every user-facing turn with `python tools/stamp_ready_line.py --skill mlr-capability-map --status <status>` (see `templates/check-line-stamp.md`). Optional `--letter-lines` prints the liability line.
 
 ## Hard rules (every MLR skill)
 
@@ -91,7 +103,7 @@ Hard rules detail: `references/hard-rules.md`. Chair MECE: `references/chair-ind
 
 ## What to return
 
-Sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+Sections in `../../templates/` Output cards (see SKILL.md). End with the closing line in `references/governance.md`.
 
 ## Files
 
@@ -99,11 +111,11 @@ Sections in `assets/worksheet-output.md`. End with the closing line in `referenc
 |---|---|
 | `tasks/` | Formula tasks for this skill |
 | `references/tools.md` | Fully qualified MCP tool names |
-| `references/rules.md` | Skill rules |
-| `references/patterns.md` | Shapes, not facts |
-| `references/gap-rules.md` | How a miss is worded |
+| `references/knowledge.md` | Skill rules |
+| `references/knowledge.md` | Shapes, not facts |
+| `references/failure-modes.md` | How a miss is worded |
 | `references/governance.md` | Stop rules and the closing line |
-| `assets/worksheet-output.md` | Sections to return |
+| `../../templates/` Output cards (see SKILL.md) | Sections to return |
 | `examples/worked.md` | Teaching shape |
 | `evals/evals.json` | Route and refuse cases |
 | `scripts/check_forbidden_phrases.py` | Deterministic check — run, do not re-implement |

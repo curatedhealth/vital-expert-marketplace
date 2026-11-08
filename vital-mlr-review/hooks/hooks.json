@@ -1,0 +1,53 @@
+{
+  "version": "0.4.0",
+  "product": "READY",
+  "hooks": [
+    {
+      "id": "H-channel",
+      "skill": "mlr-channel-intent",
+      "any_phrase": ["scientific exchange", "unsolicited", "med info", "non-promotional", "off-label enquiry"]
+    },
+    {
+      "id": "H-claims",
+      "skill": "mlr-claims-matrix",
+      "any_phrase": ["claims matrix", "evidence locator", "annotate", "referenced copy", "claim inventory"]
+    },
+    {
+      "id": "H-isi",
+      "skill": "mlr-fair-balance-isi",
+      "any_phrase": ["fair balance", "ISI", "important safety information", "brief summary", "net impression"]
+    },
+    {
+      "id": "H-intake",
+      "skill": "mlr-intake",
+      "any_phrase": ["MLR intake", "jurisdictions", "open intake"]
+    },
+    {
+      "id": "H-board",
+      "skill": "mlr-board-prep",
+      "any_phrase": ["board pack", "prep record", "MLR packet"]
+    },
+    {
+      "id": "H-reconcile",
+      "skill": "mlr-compile",
+      "workflow": "workflows/reconcile-after-findings.md",
+      "any_phrase": ["reconcile findings", "re-queue chairs", "conflict matrix", "revision loop"]
+    },
+    {
+      "id": "H-refuse",
+      "skill": null,
+      "action": "refuse",
+      "any_phrase": [
+        "approved for use",
+        "mlr approved",
+        "mlr_reviewed",
+        "cleared for promotion",
+        "file form 2253",
+        "submit 2253",
+        "file with fda",
+        "file with opdp"
+      ],
+      "point_to": "references/post-clearance-deferred.md"
+    }
+  ]
+}

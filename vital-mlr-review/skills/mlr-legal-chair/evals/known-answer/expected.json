@@ -1,0 +1,26 @@
+{
+  "allowed_statuses": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "must_contain": [
+    "findings_only",
+    "READY-local",
+    "not tool-checked",
+    "This prepares material for human MLR review",
+    "Misleadingness",
+    "Legal finding"
+  ],
+  "must_not_contain": [
+    "approved for use",
+    "mlr approved",
+    "cleared for promotion"
+  ],
+  "never_approve": true,
+  "skill": "mlr-legal-chair",
+  "template": "legal-finding-card.md",
+  "unique_gate": "wc-mlr-legal-chair-14dfbb57b1",
+  "world_class_uplift": "2026-11-08"
+}

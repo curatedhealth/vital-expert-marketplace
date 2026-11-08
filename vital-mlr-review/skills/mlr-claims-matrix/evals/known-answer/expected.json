@@ -1,0 +1,29 @@
+{
+  "allowed_statuses": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "must_contain": [
+    "This prepares material for human MLR review. It is not medical, legal, or regulatory approval.",
+    "READY-local",
+    "[GAP]"
+  ],
+  "must_not_contain": [
+    "approved for use",
+    "mlr approved",
+    "cleared for promotion",
+    "mlr_reviewed"
+  ],
+  "never_approve": true,
+  "skill": "mlr-claims-matrix",
+  "status_allowed": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "unique_gate": "wc-mlr-claims-matrix-ed628c258e",
+  "world_class_uplift": "2026-11-08"
+}

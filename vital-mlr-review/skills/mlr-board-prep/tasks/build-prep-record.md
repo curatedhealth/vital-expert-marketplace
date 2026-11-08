@@ -9,10 +9,10 @@ Build prep record with named human.
 | Worker | MLR coordinator. Does not approve copy and does not sign for the company. |
 | Workflow | Follow the steps below; stop when the output asset is filled. |
 | Skill | MLR-6.1 Board prep |
-| Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
-| Tool | `vital-mlr-review:mlr_build_prep_record`; see the companion slot |
+| Knowledge | `references/knowledge.md`, `references/failure-modes.md` |
+| Tool | Default: `python ../../tools/mlr_build_prep_record_offline.py` + `render_board_pack.py` + `stamp_ready_line.py`. Optional live MCP when `vmlr_` present. |
 | Prompt | Use only fields the person supplied or the tool returned. Imperative instructions. |
-| Template | `assets/worksheet-output.md` |
+| Template | `../../templates/` Output cards (see SKILL.md) |
 | Input | The person's words, prior packet fields, and tool results in this conversation. |
 | Governance | MLR-H1–H8, `references/governance.md`. A missing field stays `[GAP]`. |
 
@@ -36,4 +36,4 @@ Build prep record with named human.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `../../templates/` Output cards (see SKILL.md). Then the closing line.

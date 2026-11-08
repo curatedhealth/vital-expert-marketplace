@@ -1,0 +1,91 @@
+{
+  "ruleset_id": "mlr-uk-hcp-promo-v0",
+  "jurisdiction": "UK",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "MHRA approved this copy",
+    "ABPI compliant"
+  ],
+  "sources": [
+    {
+      "id": "SRC-UK-01",
+      "title": "ABPI Code of Practice for the Pharmaceutical Industry",
+      "url": "https://www.abpi.org.uk/reputation/abpi-code-of-practice/",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-UK-02",
+      "title": "MHRA Blue Guide — Advertising and Promotion of Medicines in the UK",
+      "url": "https://www.gov.uk/government/publications/blue-guide-advertising-and-promoting-medicines",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "UK-PROMO-MED-001",
+        "title": "Claims consistent with SmPC",
+        "check_prompt": "Flag claims inconsistent with the supplied UK SmPC. Missing SmPC → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-UK-01",
+        "applies_to": ["UK"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "UK-PROMO-MED-002",
+        "title": "Misleading impression / exaggeration",
+        "check_prompt": "Flag exaggerated, all-embracing, or absolute claims (e.g. 'safe', 'no side effects') common to Code complaints when unsupported.",
+        "fail_close": true,
+        "source_ref": "SRC-UK-01",
+        "applies_to": ["UK"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "UK-PROMO-LEG-001",
+        "title": "Comparisons fair and substantiated",
+        "check_prompt": "Flag comparative claims without a clear basis in supplied evidence and without fair presentation of the comparator.",
+        "fail_close": true,
+        "source_ref": "SRC-UK-01",
+        "applies_to": ["UK"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "UK-PROMO-REG-001",
+        "title": "Prescription-only advertising controls",
+        "check_prompt": "Confirm audience is HCPs and that copy is not directed to the public. Flag consumer-facing placement.",
+        "fail_close": true,
+        "source_ref": "SRC-UK-02",
+        "applies_to": ["UK"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "UK-PROMO-REG-002",
+        "title": "Prescribing information / obligatory information",
+        "check_prompt": "For promotional items that require prescribing information under UK rules, flag absence or incompleteness. Format unknown → [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-UK-02",
+        "applies_to": ["UK"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "UK-PROMO-REG-003",
+        "title": "PMCPA / company certification path",
+        "check_prompt": "Remind that final certification under the ABPI Code is a company process. This packet prepares humans; it does not certify.",
+        "fail_close": false,
+        "source_ref": "SRC-UK-01",
+        "applies_to": ["UK"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

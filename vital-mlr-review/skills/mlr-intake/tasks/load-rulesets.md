@@ -9,10 +9,10 @@ List and load rulesets for named markets.
 | Worker | MLR intake coordinator. Does not approve copy and does not sign for the company. |
 | Workflow | Follow the steps below; stop when the output asset is filled. |
 | Skill | MLR-0.1 Intake |
-| Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
-| Tool | `vital-mlr-review:mlr_intake`, `vital-mlr-review:mlr_list_rulesets`, `vital-mlr-review:mlr_get_ruleset`; see the companion slot |
+| Knowledge | `references/knowledge.md`, `references/failure-modes.md` |
+| Tool | Default: `python ../../tools/mlr_intake_offline.py` (+ list/get ruleset offline CLIs). Optional live `vital-mlr-review:mlr_intake` when `vmlr_` present; see `references/tools.md` / `without-connector.md`. |
 | Prompt | Use only fields the person supplied or the tool returned. Imperative instructions. |
-| Template | `assets/worksheet-output.md` |
+| Template | `../../templates/` Output cards (see SKILL.md) |
 | Input | The person's words, prior packet fields, and tool results in this conversation. |
 | Governance | MLR-H1–H8, `references/governance.md`. A missing field stays `[GAP]`. |
 
@@ -43,4 +43,4 @@ List and load rulesets for named markets.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `../../templates/` Output cards (see SKILL.md). Then the closing line.

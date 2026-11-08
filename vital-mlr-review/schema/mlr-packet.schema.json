@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mcp.vital.expert/schemas/mlr-review/mlr-packet.schema.json",
+  "title": "MLR Review packet objects",
+  "version": "0.2.0",
+  "$defs": {
+    "gap": {
+      "type": "object",
+      "required": ["code", "detail"],
+      "properties": {
+        "code": { "type": "string" },
+        "detail": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "finding": {
+      "type": "object",
+      "required": ["id", "chair", "severity", "rule_id", "claim_span", "issue", "recommended_action", "applies_to"],
+      "properties": {
+        "id": { "type": "string" },
+        "chair": { "enum": ["medical", "legal", "regulatory"] },
+        "severity": { "enum": ["info", "minor", "major", "critical"] },
+        "rule_id": { "type": "string" },
+        "applies_to": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "claim_span": { "type": "string" },
+        "issue": { "type": "string" },
+        "recommended_action": { "type": "string" },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "chair_packet": {
+      "type": "object",
+      "required": ["chair", "artefact_version", "ruleset_id", "decision", "findings", "comments", "gaps"],
+      "properties": {
+        "chair": { "enum": ["medical", "legal", "regulatory"] },
+        "artefact_version": { "type": "string", "minLength": 1 },
+        "ruleset_id": { "type": "string", "minLength": 1 },
+        "decision": { "enum": ["approve", "revise", "reject", "abstain"] },
+        "findings": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/finding" }
+        },
+        "comments": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "gaps": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/gap" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["topic", "detail"],
+      "properties": {
+        "topic": { "type": "string" },
+        "chairs_disagree": { "type": "boolean" },
+        "markets_disagree": { "type": "boolean" },
+        "detail": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "required": ["artefact_version", "jurisdictions", "audience", "channel"],
+      "properties": {
+        "artefact_id": { "type": "string" },
+        "artefact_version": { "type": "string", "minLength": 1 },
+        "content_hash": { "type": "string" },
+        "jurisdictions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        },
+        "audience": {
+          "enum": ["hcp", "patient", "payer", "internal", "mixed"]
+        },
+        "channel": {
+          "enum": ["promo", "scientific_exchange", "med_info", "digital", "congress", "other"]
+        },
+        "product_name": { "type": "string" },
+        "authorized_use_by_jurisdiction": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+              "text": { "type": "string" },
+              "source": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "authorized_use_text": { "type": "string" },
+        "body": { "type": "string" },
+        "company_sop_ref": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "compile_packet": {
+      "type": "object",
+      "required": [
+        "artefact_version",
+        "jurisdictions",
+        "ruleset_ids",
+        "chairs",
+        "conflicts",
+        "mlr_status",
+        "liability_line"
+      ],
+      "properties": {
+        "artefact_version": { "type": "string" },
+        "jurisdictions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "ruleset_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "chairs": {
+          "type": "object",
+          "required": ["medical", "legal", "regulatory"],
+          "properties": {
+            "medical": { "$ref": "#/$defs/chair_packet" },
+            "legal": { "$ref": "#/$defs/chair_packet" },
+            "regulatory": { "$ref": "#/$defs/chair_packet" }
+          },
+          "additionalProperties": false
+        },
+        "conflicts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/conflict" }
+        },
+        "mlr_status": {
+          "enum": [
+            "findings_only",
+            "revise",
+            "human_gate_required",
+            "prep_complete"
+          ]
+        },
+        "liability_line": {
+          "type": "string",
+          "const": "This prepares material for human MLR review. It is not medical, legal, or regulatory approval."
+        }
+      },
+      "additionalProperties": false
+    },
+    "prep_record": {
+      "type": "object",
+      "required": ["artefact_version", "compile", "status"],
+      "properties": {
+        "record_id": { "type": "string" },
+        "artefact_version": { "type": "string" },
+        "compile": { "$ref": "#/$defs/compile_packet" },
+        "cleared_by": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 },
+            "role": { "type": "string" },
+            "date": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "purpose": { "type": "string" },
+        "status": {
+          "enum": ["draft", "prep_cleared_for_human_mlr"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/context" },
+    { "$ref": "#/$defs/chair_packet" },
+    { "$ref": "#/$defs/compile_packet" },
+    { "$ref": "#/$defs/prep_record" }
+  ]
+}

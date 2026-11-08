@@ -1,41 +1,57 @@
-# VITAL MLR Review (Cowork plugin)
+# VITAL READY (MLR Ready) — Cowork plugin
 
-Prepare Medical–Legal–Regulatory **board packets** on the host you already use.  
-Your model writes chair findings. VITAL tools supply multi-jurisdiction rulesets, validation, and VERIFY handoff. **Nothing here approves copy.**
+READY prepares an MLR board packet offline with local rulesets and validators. Add a `vmlr_` key only for metered cloud tools or a durable prep record. Add `vvfy_` only when you want live VERIFY. Humans still approve.
 
 ## Install
 
-1. Marketplace: `curatedhealth/vital-expert-marketplace` → **vital-mlr-review** (when published).
-2. Paste personal `vmlr_` key when prompted.
-3. Optional: paste `vvfy_` for VERIFY (same connector as **vital-trusted** / **vital-verify**). Do not add a second Verify server.
+1. Marketplace: `curatedhealth/vital-expert-marketplace` → **vital-mlr-review** (when restaged).
+2. Default: **no keys required**. Skills + `tools/` run intake → chairs → compile → board pack locally and stamp `READY-local` / `not tool-checked` / `not metered`.
+3. Optional: paste personal `vmlr_` for metered cloud MLR tools or durable prep record; paste `vvfy_` for live VERIFY. See `references/mcp-opt-in.md`.
 
-Connector: `https://mcp.vital.expert/api/mcp/mlr-review`
+Connector (optional): `https://mcp.vital.expert/api/mcp/mlr-review`
 
-## Skills (v0.3.1 — complete set of 8, Anthropic-aligned)
+## Skills (v0.4.0 — Pilot — Hybrid B + Standard — **11 skills**)
 
-Each skill matches VITAL gold **and** Anthropic Agent Skills practice: third-person description (“This skill should be used…”), imperative body, progressive disclosure, 10 route phrases, `references/{tools,rules,patterns,gap-rules,governance}.md`, formula tasks, worksheet output, teaching example, routing evals, fully qualified MCP names (`vital-mlr-review:…` / `vital-verify:…`), and deterministic `scripts/` where checks are fragile. Regenerator: `mcps/mlr_review/scripts/harden_skills.py`. Harness: `mcps/mlr_review/tests/test_skills.py`.
+Taxonomy challenge: `../../READY_SKILL_TAXONOMY_CHALLENGE_2026-11-08.md`.
 
 | Skill | Role |
 |---|---|
-| `mlr-capability-map` | Routebook: TRUSTED vs VERIFY vs MLR; M / L / R index; hard rules |
-| `mlr-intake` | Markets, channel, authorized use, load rulesets |
-| `mlr-medical-chair` | **M** — label/clinical accuracy (FDA/CFR, Directive/EFPIA, ABPI, HWG, Swissmedic…) |
+| `mlr-capability-map` | Routebook: TRUSTED vs VERIFY vs READY; skill index |
+| `mlr-channel-intent` | Promo vs scientific exchange vs med_info gate |
+| `mlr-intake` | Markets, channel, authorized use, load rulesets (offline CLI) |
+| `mlr-claims-matrix` | Pre-chair verbatim claims + locators + authorised-use bind |
+| `mlr-medical-chair` | **M** — label/clinical accuracy, evidence adequacy |
 | `mlr-legal-chair` | **L** — misleadingness, comparative-ad, privacy/IP |
-| `mlr-regulatory-chair` | **R** — ISI/format, pre-approval gates, code process |
-| `mlr-compile` | Align three chairs; validate; conflicts |
-| `mlr-verify-handoff` | Compose VERIFY (`qualify_source` → `check_claim`) |
+| `mlr-fair-balance-isi` | Fair balance / ISI / net impression prep |
+| `mlr-regulatory-chair` | **R** — format, pre-approval gates, code process |
+| `mlr-compile` | Align chairs; validate; conflict matrix; reconciliation |
+| `mlr-verify-handoff` | Build VERIFY paste packet offline; live VERIFY only with `vvfy_` |
 | `mlr-board-prep` | Reviewer pack + named-human prep record (`mlr_reviewed` stays false) |
 
-**Do not blend M / L / R.** Each chair loads only its ruleset slice.
+**Do not blend M / L / R.** Fair-balance/ISI is a dedicated prep skill; Regulatory still owns format/gates.
 
-## Happy path
+## Offline happy path (default)
 
-1. `mlr-capability-map` or straight to `mlr-intake` with explicit markets (include a non-US set once).
-2. `mlr-medical-chair` → `mlr-legal-chair` → `mlr-regulatory-chair`.
-3. `mlr-compile` → `mlr_validate_packet`.
-4. Optional `mlr-verify-handoff`.
-5. `mlr-board-prep` with a named human → company MLR SOP.
+See `workflows/offline-prep-e2e.md`.
+
+1. `mlr-capability-map` → `mlr-channel-intent` when channel is disputed.
+2. `mlr-intake` with explicit markets (never US-default).
+3. `mlr-claims-matrix` before chairs.
+4. Chairs + `mlr-fair-balance-isi` (parallel prep).
+5. `mlr-compile` → validate offline.
+6. Optional `mlr-verify-handoff` (packet only unless `vvfy_` present).
+7. `mlr-board-prep` with a named human → company MLR SOP.
+
+Stamp every close with:
+
+```bash
+python tools/stamp_ready_line.py --skill mlr-board-prep --letter-lines
+```
 
 ## Liability
 
 Every summary ends with: *This prepares material for human MLR review. It is not medical, legal, or regulatory approval.*
+
+## License
+
+Proprietary — Crossroads Catalyst GmbH (Vital Expert). See `LICENSE`. `release_state: Pilot` until owner yes for Released.

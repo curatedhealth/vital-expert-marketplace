@@ -1,28 +1,20 @@
-# Tool calls
+# Tools: mlr-board-prep
 
-## Companion slot
+## Offline first
+Hybrid B default: run local CLIs under `plugin/vital-mlr-review/tools/` and `scripts/`.
+Exit 0 = pass; 1 = hard rule error. Soft issues → flags / [CHECK] / [GAP].
+Label **not tool-checked** when live MCP keys (`vmlr_`, `vvfy_`) are absent (MLR-H4).
 
-MLR tools are on MCP server `vital-mlr-review` with a `vmlr_` key.
-VERIFY tools are on MCP server `vital-verify` with a `vvfy_` key (same connector as vital-trusted / vital-verify).
-Without the needed key, run the method by hand and label the turn **not tool-checked** (MLR-H4).
-Never invent a tool field. Always use `ServerName:tool_name`.
+| Tool | Path | Use for | Never for |
+|---|---|---|---|
+| `mlr_build_prep_record_offline.py` | `tools/mlr_build_prep_record_offline.py` | Named-human prep record | AI as cleared_by |
+| `stamp_ready_line.py` | `tools/stamp_ready_line.py` | Closing stamp line | Approval language |
 
-## Primary tools
+## Live connectors (optional)
+When `vmlr_` is present, MCP tools on server `vital-mlr-review` may mirror the offline CLIs.
+When `vvfy_` is present, VERIFY handoff may be tool-checked. Never invent tool fields.
+Always use fully qualified `vital-mlr-review:<tool>` names if calling MCP.
 
-## `vital-mlr-review:mlr_build_prep_record`
-
-Short name: `mlr_build_prep_record`. Always call the fully qualified name when multiple MCP servers are connected.
-
-Arguments: see MCP descriptors / `mcps/mlr_review/tools.py`.
-
-Pitfall: Treating a successful tool call as MLR approval.
-
-Schema source: `mcps/mlr_review/tools.py`, method pack `0.3.1`.
-
-
-## Also named
-
-- `vital-mlr-review:mlr_validate_packet`
-
-These stay on their own connector or skill. This skill does not reimplement them.
-`vital-mlr-review:my_usage` is a meter — not a skill tool.
+## Invocation rule
+Offline first. Stamp every user-facing close with `python tools/stamp_ready_line.py --skill mlr-board-prep --status <status>`.
+Written 8 November 2026 (READY world-class content uplift).

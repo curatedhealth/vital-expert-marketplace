@@ -9,10 +9,10 @@ Validate packet and set prep status.
 | Worker | MLR compile lead. Does not approve copy and does not sign for the company. |
 | Workflow | Follow the steps below; stop when the output asset is filled. |
 | Skill | MLR-4.1 Compile |
-| Knowledge | `references/rules.md`, `references/patterns.md`, `references/gap-rules.md` |
-| Tool | `vital-mlr-review:mlr_compile_checklist`, `vital-mlr-review:mlr_validate_packet`, `vital-mlr-review:mlr_get_packet_schema`; see the companion slot |
+| Knowledge | `references/knowledge.md`, `references/failure-modes.md` |
+| Tool | Default: `python ../../tools/mlr_compile_checklist_offline.py` + `mlr_validate_packet_offline.py`. Optional live MCP when `vmlr_` present. |
 | Prompt | Use only fields the person supplied or the tool returned. Imperative instructions. |
-| Template | `assets/worksheet-output.md` |
+| Template | `../../templates/` Output cards (see SKILL.md) |
 | Input | The person's words, prior packet fields, and tool results in this conversation. |
 | Governance | MLR-H1–H8, `references/governance.md`. A missing field stays `[GAP]`. |
 
@@ -36,4 +36,4 @@ Validate packet and set prep status.
 
 ## Output
 
-Match `assets/worksheet-output.md`. Then the closing line.
+Match `../../templates/` Output cards (see SKILL.md). Then the closing line.

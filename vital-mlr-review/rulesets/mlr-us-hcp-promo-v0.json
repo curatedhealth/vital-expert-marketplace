@@ -1,0 +1,115 @@
+{
+  "ruleset_id": "mlr-us-hcp-promo-v0",
+  "jurisdiction": "US",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "FDA approved this copy",
+    "compliant with 21 CFR"
+  ],
+  "sources": [
+    {
+      "id": "SRC-US-01",
+      "title": "21 CFR Part 202 — Prescription Drug Advertising",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-US-02",
+      "title": "FDA — Medical Product Communications That Are Consistent With the FDA-Required Labeling (Guidance)",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/medical-product-communications-are-consistent-fda-required-labeling-questions-and-answers",
+      "date_read": "2026-10-24"
+    },
+    {
+      "id": "SRC-US-03",
+      "title": "FDA — Brief Summary and adequate directions / fair balance expectations for Rx advertising (overview pages)",
+      "url": "https://www.fda.gov/drugs/advertising-and-promotion",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "US-PROMO-MED-001",
+        "title": "Consistent with FDA-required labeling",
+        "check_prompt": "Using supplied US PI / labeling, flag product claims that are inconsistent with labeled indication, limitations, or safety. If PI not supplied, [GAP] — do not recall a label from memory.",
+        "fail_close": true,
+        "source_ref": "SRC-US-02",
+        "applies_to": ["US"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "US-PROMO-MED-002",
+        "title": "Fair balance of risk information",
+        "check_prompt": "For HCP promotional content, check whether risk information is presented with prominence reasonably comparable to benefits (fair balance). Flag benefit-heavy layouts that bury risks.",
+        "fail_close": true,
+        "source_ref": "SRC-US-01",
+        "applies_to": ["US"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "US-PROMO-MED-003",
+        "title": "Clinical superiority without adequate evidence",
+        "check_prompt": "Flag superiority or 'best' language without a supplied adequate and well-controlled comparative basis in materials.",
+        "fail_close": true,
+        "source_ref": "SRC-US-01",
+        "applies_to": ["US"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "US-PROMO-LEG-001",
+        "title": "False or misleading impression",
+        "check_prompt": "Flag omissions or juxtapositions that would make a true statement misleading to an HCP reader. Note as legal concern for counsel — do not declare violation.",
+        "fail_close": true,
+        "source_ref": "SRC-US-01",
+        "applies_to": ["US"],
+        "chair": "legal"
+      },
+      {
+        "rule_id": "US-PROMO-LEG-002",
+        "title": "Reminder vs product claim ad",
+        "check_prompt": "If materials look like reminder advertising, check they do not include representations/suggestions about the product beyond reminder limits. Ambiguity → [GAP] for classification.",
+        "fail_close": false,
+        "source_ref": "SRC-US-01",
+        "applies_to": ["US"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "US-PROMO-REG-001",
+        "title": "Brief summary / ISI presence for product claim ads",
+        "check_prompt": "For product-claim HCP ads, check whether brief summary / important safety information is present or clearly linked as required for the format. Missing → finding; if format unknown, [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-US-03",
+        "applies_to": ["US"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "US-PROMO-REG-002",
+        "title": "Pre-approval / investigational promotion",
+        "check_prompt": "Flag promotion of an investigational or unapproved use as if approved. Investigational disclosures must be explicit if present in materials.",
+        "fail_close": true,
+        "source_ref": "SRC-US-02",
+        "applies_to": ["US"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "US-PROMO-REG-003",
+        "title": "Companion diagnostic or REMS silence",
+        "check_prompt": "If supplied PI mentions REMS or companion diagnostic requirements, flag promotional copy that omits them when discussing use.",
+        "fail_close": false,
+        "source_ref": "SRC-US-02",
+        "applies_to": ["US"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

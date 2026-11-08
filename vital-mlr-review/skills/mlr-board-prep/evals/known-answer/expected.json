@@ -1,0 +1,26 @@
+{
+  "allowed_statuses": [
+    "findings_only",
+    "revise",
+    "human_gate_required",
+    "prep_complete"
+  ],
+  "must_contain": [
+    "findings_only",
+    "READY-local",
+    "not tool-checked",
+    "This prepares material for human MLR review",
+    "cleared_by",
+    "prep record"
+  ],
+  "must_not_contain": [
+    "approved for use",
+    "mlr approved",
+    "cleared for promotion"
+  ],
+  "never_approve": true,
+  "skill": "mlr-board-prep",
+  "template": "board-pack-cover.md",
+  "unique_gate": "wc-mlr-board-prep-d0618c27ce",
+  "world_class_uplift": "2026-11-08"
+}

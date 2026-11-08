@@ -12,11 +12,6 @@
       "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). Offline-first; optional TRUSTED Prove live MCP via vvfy_ key (https://mcp.vital.expert/api/mcp/verify, server id trusted-prove). The vital-verify plugin is retired \u2014 install this pack only."
     },
     {
-      "name": "vital-mlr-review",
-      "source": "./vital-mlr-review",
-      "description": "Multi-jurisdiction Medical\u2013Legal\u2013Regulatory board preparation. Host writes Medical, Legal, and Regulatory chairs; never approves. Tools on mcp.vital.expert/api/mcp/mlr-review (vmlr_). Claim checks stay on Verify."
-    },
-    {
       "name": "vital-decision-companion",
       "source": "./vital-decision-companion",
       "description": "Decision Companion: the FOCUSED coaching skills (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Coaches a business decision one question at a time and leaves the choice with the person. The Decision Connector adds the scored comparison and the decision record; Ontology Navigator and Verify tools are called, not copied."
@@ -80,6 +75,11 @@
       "name": "vital-ontology-curator",
       "source": "./plugins/vital-ontology-curator",
       "description": "Ontology Curator enrichment \u2014 VP-anchored tips across ontology families (vcur_)."
+    },
+    {
+      "name": "vital-mlr-review",
+      "source": "./vital-mlr-review",
+      "description": "READY / MLR board preparation (Pilot 0.4.0 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
     }
   ]
 }

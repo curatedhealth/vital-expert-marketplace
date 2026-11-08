@@ -1,0 +1,132 @@
+{
+  "ruleset_id": "mlr-global-hcp-promo-v0",
+  "jurisdiction": "global",
+  "audience": "hcp",
+  "channel": "promo",
+  "version": "0.2.0",
+  "status": "full",
+  "retrieved_at": "2026-10-24",
+  "forbidden_output_phrases": [
+    "approved for use",
+    "mlr approved",
+    "mlr_reviewed",
+    "compliant with",
+    "cleared for promotion",
+    "regulator approved this copy"
+  ],
+  "sources": [
+    {
+      "id": "SRC-GLOBAL-01",
+      "title": "Cross-cutting promotional hygiene (invention, fair balance, audience fit)",
+      "note": "Not a single statute. Encodes fail-closed habits shared across major codes; market packs add local procedure.",
+      "date_read": "2026-10-24"
+    }
+  ],
+  "chairs": {
+    "medical": [
+      {
+        "rule_id": "GLOBAL-PROMO-MED-001",
+        "title": "No invented efficacy or safety figures",
+        "check_prompt": "Flag any efficacy, safety, onset, duration, or comparative figure not present in the supplied label/authorized-use text or cited source material. If missing, emit [GAP] — do not fill from model memory.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-MED-002",
+        "title": "Benefits without material risks",
+        "check_prompt": "If the draft states or implies clinical benefit for HCP promotion, check whether material risks, limitations, or contraindications appearing in the supplied materials are omitted or minimized. Flag imbalance.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-MED-003",
+        "title": "Population and indication match",
+        "check_prompt": "Check that implied patients, lines of therapy, and settings match the authorized use supplied. Broader use without support is a finding; if authorized use text is missing, [GAP].",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-MED-004",
+        "title": "Study described as it was",
+        "check_prompt": "If a study is named, verify design, population, endpoint, and limitations match supplied sources. Do not upgrade observational work to pivotal or invent p-values.",
+        "fail_close": false,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "medical"
+      }
+    ],
+    "legal": [
+      {
+        "rule_id": "GLOBAL-PROMO-LEG-001",
+        "title": "Comparative claims need a basis",
+        "check_prompt": "Flag head-to-head or superiority language without a supplied comparative study or cleared claim. If none supplied, [GAP] or finding — do not invent a trial.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "legal"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-LEG-002",
+        "title": "Third-party trademarks and quotes",
+        "check_prompt": "Flag competitor names, logos, or long quotes without attribution or clearance note in the materials. Missing clearance → [GAP], not an approval.",
+        "fail_close": false,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "legal"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-LEG-003",
+        "title": "Personal data in the draft",
+        "check_prompt": "Flag patient or HCP personal data that appears unnecessary for the promotional purpose. Do not judge GDPR/HIPAA compliance; mark for privacy review.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "legal"
+      }
+    ],
+    "regulatory": [
+      {
+        "rule_id": "GLOBAL-PROMO-REG-001",
+        "title": "Promotional vs scientific exchange framing",
+        "check_prompt": "Confirm the draft is treated as promotion for this channel. If it mixes medical-information or scientific-exchange framing to soften claims, flag channel mismatch.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-REG-002",
+        "title": "Off-label or unapproved use implication",
+        "check_prompt": "Flag any use, dose, combination, or population beyond the supplied authorized-use text. If authorized-use text is absent, every indication claim is [GAP] and human_gate_required.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-REG-003",
+        "title": "Jurisdiction named and not assumed",
+        "check_prompt": "Confirm markets in scope are explicit. Do not apply one country's procedure to another. Missing market → intake failure, not a silent default.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      },
+      {
+        "rule_id": "GLOBAL-PROMO-REG-004",
+        "title": "No fake approval language",
+        "check_prompt": "Flag any sentence that says the copy, claims, or AI review is approved, compliant, MLR-cleared, or regulator-endorsed.",
+        "fail_close": true,
+        "source_ref": "SRC-GLOBAL-01",
+        "applies_to": ["global"],
+        "chair": "regulatory"
+      }
+    ]
+  }
+}

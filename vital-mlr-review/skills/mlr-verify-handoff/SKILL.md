@@ -10,7 +10,8 @@ metadata:
   family: "mlr-prep"
   worker: "MLR evidence handoff"
   pack: "vital-mlr-review"
-  version: "0.3.1"
+  version: "0.4.0"
+  release_state: Pilot
   route:
     - "Build the MLR verify handoff steps"
     - "mlr_handoff_verify then qualify_source"
@@ -34,7 +35,7 @@ Prepare VERIFY call lists and paste results into MLR notes. A VERIFY pass is not
 2. Pick the matching task below; follow its Formula and Companion slots.
 3. Call tools only with fully qualified names from `references/tools.md`.
 4. Run listed scripts for deterministic checks when inputs are files/JSON.
-5. Match `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+5. Match `../../templates/` Output cards (see SKILL.md). End with the closing line in `references/governance.md`.
 
 ## Pick the task
 
@@ -71,6 +72,11 @@ Run with the host Python. Prefer tool-checked connector results when `vmlr_` / `
 | Named-human prep record | `mlr-board-prep` |
 
 
+
+## Closing stamp
+
+End every user-facing turn with `python tools/stamp_ready_line.py --skill mlr-verify-handoff --status <status>` (see `templates/check-line-stamp.md`). Optional `--letter-lines` prints the liability line.
+
 ## Hard rules (every MLR skill)
 
 - **MLR-H1.** Only stored material counts — fields from the person or a tool result.
@@ -84,7 +90,7 @@ Run with the host Python. Prefer tool-checked connector results when `vmlr_` / `
 
 ## What to return
 
-Sections in `assets/worksheet-output.md`. End with the closing line in `references/governance.md`.
+Sections in `../../templates/` Output cards (see SKILL.md). End with the closing line in `references/governance.md`.
 
 ## Files
 
@@ -92,11 +98,11 @@ Sections in `assets/worksheet-output.md`. End with the closing line in `referenc
 |---|---|
 | `tasks/` | Formula tasks for this skill |
 | `references/tools.md` | Fully qualified MCP tool names |
-| `references/rules.md` | Skill rules |
-| `references/patterns.md` | Shapes, not facts |
-| `references/gap-rules.md` | How a miss is worded |
+| `references/knowledge.md` | Skill rules |
+| `references/knowledge.md` | Shapes, not facts |
+| `references/failure-modes.md` | How a miss is worded |
 | `references/governance.md` | Stop rules and the closing line |
-| `assets/worksheet-output.md` | Sections to return |
+| `../../templates/` Output cards (see SKILL.md) | Sections to return |
 | `examples/worked.md` | Teaching shape |
 | `evals/evals.json` | Route and refuse cases |
 | `scripts/check_forbidden_phrases.py` | Deterministic check — run, do not re-implement |
