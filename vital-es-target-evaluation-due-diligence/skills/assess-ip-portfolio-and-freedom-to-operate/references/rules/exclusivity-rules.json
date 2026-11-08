@@ -1,0 +1,352 @@
+{
+ "_comment": "Exclusivity and term rules. A rule is enabled only if status is VERIFIED-REOPENED. The script refuses any rule whose status is not, and prints a [CHECK] message. Passages are the fragments recorded when the source was opened (see references/method-standards.md for how each was read). Grounding lane (7 November 2026): every enabled rule carries passage_ids that resolve in references/verbatim-passages.json; US statutes are re-registered from the govinfo U.S. Code 2024 edition; EU texts from EUR-Lex HTML.",
+ "rules": [
+  {
+   "id": "US-NCE-5Y",
+   "market": "US",
+   "kind": "regulatory",
+   "years": 5,
+   "months": 0,
+   "source": "S1",
+   "passage": "New Chemical Entity Exclusivity (NCE) \u2013 5 years; Exclusivity attaches upon approval of a drug product if the statutory requirements are met.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-001"
+   ]
+  },
+  {
+   "id": "US-NCI-3Y",
+   "market": "US",
+   "kind": "regulatory",
+   "years": 3,
+   "months": 0,
+   "source": "S1",
+   "passage": "New Clinical Investigation Exclusivity \u2013 3 years",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-001"
+   ]
+  },
+  {
+   "id": "US-ODE-7Y",
+   "market": "US",
+   "kind": "regulatory",
+   "years": 7,
+   "months": 0,
+   "source": "S1,S5",
+   "passage": "Orphan Drug Exclusivity (ODE) \u2013 7 years; 21 U.S.C. 360cc(a): until the expiration of seven years from the date of the approval of the approved application or the issuance of the license.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-001",
+    "VP-C-050"
+   ]
+  },
+  {
+   "id": "US-BIO-12Y",
+   "market": "US",
+   "kind": "regulatory",
+   "years": 12,
+   "months": 0,
+   "source": "S3",
+   "passage": "42 U.S.C. 262(k)(7)(A): Approval of an application under this subsection may not be made effective by the Secretary until the date that is 12 years after the date on which the reference product was first licensed under subsection (a).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-030"
+   ]
+  },
+  {
+   "id": "US-BIO-4Y-FILING",
+   "market": "US",
+   "kind": "filing_bar",
+   "years": 4,
+   "months": 0,
+   "source": "S3",
+   "passage": "42 U.S.C. 262(k)(7)(B): An application under this subsection may not be submitted to the Secretary until the date that is 4 years after the date on which the reference product was first licensed under subsection (a).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-031"
+   ]
+  },
+  {
+   "id": "US-PED-6M-EXCL",
+   "market": "US",
+   "kind": "pediatric_add",
+   "years": 0,
+   "months": 6,
+   "source": "S1,S6",
+   "passage": "Pediatric Exclusivity (PED) \u2013 6 months added to existing Patents/Exclusivity; 21 U.S.C. 355a: the 5-year, 3-year and 7-year periods are each deemed to be that period and six months.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-001",
+    "VP-C-020"
+   ]
+  },
+  {
+   "id": "US-PED-6M-PATENT",
+   "market": "US",
+   "kind": "pediatric_add_patent",
+   "years": 0,
+   "months": 6,
+   "source": "S6",
+   "passage": "21 U.S.C. 355a: shall be extended by a period of six months after the date the patent expires (including any patent extensions). Which patents this attaches to is a legal condition not verified here; the script applies it only to patents the user marks pediatric_extends=true.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-021"
+   ]
+  },
+  {
+   "id": "US-BIO-PED",
+   "market": "US",
+   "kind": "pediatric_add",
+   "years": null,
+   "months": 6,
+   "source": "S3",
+   "passage": "42 U.S.C. 262(m)(2) (govinfo, U.S. Code 2024 edition): the periods referred to in subsection (k)(7) \"are deemed to be 4 years and 6 months rather than 4 years and 12 years and 6 months rather than 12 years\" and, for an orphan-designated biological product, the 360cc(a) period \"is deemed to be 7 years and 6 months rather than 7 years\". The pediatric-study conditions (written request, accepted reports) are the user's input us.pediatric_exclusivity_granted.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-033"
+   ]
+  },
+  {
+   "id": "US-GAIN-5Y",
+   "market": "US",
+   "kind": "regulatory_add",
+   "years": 5,
+   "months": null,
+   "source": "S1",
+   "passage": "21 U.S.C. 355f(a)-(c) (govinfo): for a drug designated a qualified infectious disease product the 4- and 5-year periods, the 3-year periods and the 7-year orphan period \"shall be extended by 5 years\"; the extension is in addition to pediatric exclusivity (355f(b)); subsection (a) does not apply to an application under section 262(a) of title 42 (biologics) (355f(c)).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-040",
+    "VP-C-041",
+    "VP-C-042"
+   ]
+  },
+  {
+   "id": "US-PTE-CAP-5Y",
+   "market": "US",
+   "kind": "pte_cap",
+   "years": 5,
+   "months": 0,
+   "source": "S2",
+   "passage": "35 U.S.C. 156(g)(6)(A): If the patent involved was issued after the date of the enactment of this section, the period of extension determined on the basis of the regulatory review period determined under any such paragraph may not exceed five years.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-017"
+   ]
+  },
+  {
+   "id": "US-PTE-CAP-14Y",
+   "market": "US",
+   "kind": "pte_cap",
+   "years": 14,
+   "months": 0,
+   "source": "S2",
+   "passage": "35 U.S.C. 156(c)(3): if the period remaining in the term of a patent after the date of the approval of the approved product ... when added to the regulatory review period as revised under paragraphs (1) and (2) exceeds fourteen years, the period of extension shall be reduced so that the total of both such periods does not exceed fourteen years.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-013"
+   ]
+  },
+  {
+   "id": "US-PTE-TESTING-HALF",
+   "market": "US",
+   "kind": "pte_formula",
+   "source": "S2",
+   "passage": "35 U.S.C. 156(c)(2): after any reduction required by paragraph (1), the period of extension shall include only one-half of the time remaining in the periods described in paragraphs (1)(B)(i), (2)(B)(i), (3)(B)(i), (4)(B)(i), and (5)(B)(i) of subsection (g).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-012"
+   ]
+  },
+  {
+   "id": "US-PTE-PHASES",
+   "market": "US",
+   "kind": "pte_formula",
+   "source": "S2",
+   "passage": "156(g)(1)(B)(i): the period beginning on the date an exemption under subsection (i) of section 505 ... became effective for the approved product and ending on the date an application was initially submitted ...; (ii): the period beginning on the date the application was initially submitted ... and ending on the date such application was approved.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-016"
+   ]
+  },
+  {
+   "id": "US-PTE-DEADLINE-60D",
+   "market": "US",
+   "kind": "pte_deadline",
+   "days": 60,
+   "source": "S2",
+   "passage": "156(d)(1): such an application may only be submitted within the sixty-day period beginning on the date the product received permission ... for commercial marketing or use.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-015"
+   ]
+  },
+  {
+   "id": "US-PTE-APPROVAL-PHASE-FULL",
+   "market": "US",
+   "kind": "pte_formula",
+   "source": "S2",
+   "passage": "156(c) lead-in: The term of a patent eligible for extension under subsection (a) shall be extended by the time equal to the regulatory review period for the approved product which period occurs after the date the patent is issued, except that\u2014; 156(g)(1)(B): The regulatory review period for a new drug, antibiotic drug, or human biological product is the sum of\u2014 (i) and (ii). The halving clause (c)(2) names only the (B)(i) periods, so the (B)(ii) period counts in full: this is a reading of the quoted text, not a quoted sentence.",
+   "status": "VERIFIED-REOPENED",
+   "note": "reading of quoted text; counsel confirms",
+   "passage_ids": [
+    "VP-C-010",
+    "VP-C-016",
+    "VP-C-012"
+   ]
+  },
+  {
+   "id": "US-NCE1-4Y",
+   "market": "US",
+   "kind": "regulatory",
+   "years": 4,
+   "months": 0,
+   "source": "S1",
+   "passage": "The FDA FAQ page does not mention the four-year paragraph IV filing window or the 30-month stay (keyword search of the page, 6 Nov 2026). Gap stated: the closing condition of 355(j)(5)(F)(ii) was not registered in this lane.",
+   "status": "[CHECK]",
+   "passage_ids": []
+  },
+  {
+   "id": "EU-DP-8Y",
+   "market": "EU",
+   "kind": "regulatory",
+   "years": 8,
+   "months": 0,
+   "source": "S9,S10",
+   "passage": "Reg 726/2004 Art 14(11), opened in full 7 Nov 2026: \"shall benefit from an eight-year period of data protection and a ten-year period of marketing protection\". Dir 2001/83/EC Art 10(1), opened in full: \"authorised under Article 6 for not less than eight years\". Both periods run from the authorisation date; they are not added.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-070",
+    "VP-C-073"
+   ]
+  },
+  {
+   "id": "EU-MP-10Y",
+   "market": "EU",
+   "kind": "regulatory",
+   "years": 10,
+   "months": 0,
+   "source": "S9,S10",
+   "passage": "Dir 2001/83/EC Art 10(1), second subparagraph (opened in full, consolidated 01/01/2025): \"A generic medicinal product authorised pursuant to this provision shall not be placed on the market until ten years have elapsed from the initial authorisation of the reference product.\"",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-071"
+   ]
+  },
+  {
+   "id": "EU-MP-11Y",
+   "market": "EU",
+   "kind": "regulatory",
+   "years": 11,
+   "months": 0,
+   "source": "S10",
+   "passage": "Dir 2001/83/EC Art 10(1), fourth subparagraph (opened in full): \"The ten-year period referred to in the second subparagraph shall be extended to a maximum of eleven years if, during the first eight years of those ten years, the marketing authorisation holder obtains an authorisation for one or more new therapeutic indications which, during the scientific evaluation prior to their authorisation, are held to bring a significant clinical benefit in comparison with existing therapies.\" Same wording in Reg 726/2004 Art 14(11).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-072"
+   ]
+  },
+  {
+   "id": "EU-ORPHAN-10Y",
+   "market": "EU",
+   "kind": "orphan",
+   "years": 10,
+   "months": 0,
+   "source": "S11",
+   "passage": "Reg 141/2000 Art 8(1): the Community and the Member States shall not, for a period of 10 years, accept another application or grant a marketing authorisation ... for the same therapeutic indication, in respect of a similar medicinal product.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-080"
+   ]
+  },
+  {
+   "id": "EU-ORPHAN-12Y",
+   "market": "EU",
+   "kind": "orphan",
+   "years": 12,
+   "months": 0,
+   "source": "S8",
+   "passage": "Reg 1901/2006 Art 37: the ten-year period referred to in Article 8(1) of Regulation (EC) No 141/2000 shall be extended to twelve years.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-065"
+   ]
+  },
+  {
+   "id": "EU-ORPHAN-6Y",
+   "market": "EU",
+   "kind": "orphan",
+   "years": 6,
+   "months": 0,
+   "source": "S11",
+   "passage": "Reg 141/2000 Art 8(2): This period may however be reduced to six years if, at the end of the fifth year, it is established ... that the criteria laid down in Article 3 are no longer met.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-081"
+   ]
+  },
+  {
+   "id": "EU-SPC-DURATION",
+   "market": "EU",
+   "kind": "spc",
+   "years": 5,
+   "months": 0,
+   "source": "S7",
+   "passage": "Reg 469/2009 Art 13(1): The certificate shall take effect at the end of the lawful term of the basic patent for a period equal to the period which elapsed between the date on which the application for a basic patent was lodged and the date of the first authorisation to place the product on the market in the Community, reduced by a period of five years. Art 13(2): the duration of the certificate may not exceed five years from the date on which it takes effect.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-061",
+    "VP-C-062"
+   ]
+  },
+  {
+   "id": "EU-SPC-PED-6M",
+   "market": "EU",
+   "kind": "spc_pediatric",
+   "years": 0,
+   "months": 6,
+   "source": "S7,S8",
+   "passage": "Reg 469/2009 Art 13(3): The periods laid down in paragraphs 1 and 2 shall be extended by six months in the case where Article 36 of Regulation (EC) No 1901/2006 applies. Reg 1901/2006 Art 36(3): ... granted only if the product is authorised in all Member States. Art 36(4): They shall not apply to medicinal products designated as orphan medicinal products pursuant to Regulation (EC) No 141/2000.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-063",
+    "VP-C-064"
+   ]
+  },
+  {
+   "id": "EU-SPC-FILING-6M",
+   "market": "EU",
+   "kind": "spc_deadline",
+   "months": 6,
+   "source": "S7",
+   "passage": "Reg 469/2009 Art 7(1): lodged within six months of the date on which the authorisation ... was granted. Art 7(2): where the authorisation is granted before the basic patent is granted, within six months of the date on which the patent is granted.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-060"
+   ]
+  },
+  {
+   "id": "US-PTE-AFTER-ISSUE",
+   "market": "US",
+   "kind": "pte_formula",
+   "source": "S2",
+   "passage": "156(c): the regulatory review period for the approved product which period occurs after the date the patent is issued. The script starts the testing phase at the later of the IND effective date and the patent issue date (a reading of the quoted text; counsel confirms).",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-010"
+   ]
+  },
+  {
+   "id": "US-PTE-DILIGENCE",
+   "market": "US",
+   "kind": "pte_formula",
+   "source": "S2",
+   "passage": "156(c)(1): each period of the regulatory review period shall be reduced by any period determined under subsection (d)(2)(B) during which the applicant for the patent extension did not act with due diligence during such period of the regulatory review period. The number of days is not known to the script; it is an input and, if absent, a GAP.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-C-011"
+   ]
+  }
+ ]
+}

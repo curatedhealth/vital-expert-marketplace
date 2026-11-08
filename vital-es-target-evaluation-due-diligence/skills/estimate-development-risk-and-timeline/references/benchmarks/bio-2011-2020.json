@@ -1,0 +1,694 @@
+{
+ "source": {
+  "id": "B1",
+  "title": "New Clinical Development Success Rates 2011-2020 Report (Clinical Development Success Rates and Contributing Factors 2011-2020)",
+  "publisher": "BIO, Informa Pharma Intelligence, QLS Advisors",
+  "date": "February 2021 (page footer of the PDF)",
+  "url": "https://www.bio.org/clinical-development-success-rates-and-contributing-factors-2011-2020",
+  "pdf": "https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf",
+  "status": "VERIFIED-REOPENED: every stratum points to the registered passage of its figure table (references/verbatim-passages.json, VP-B-010 to VP-B-014); a unit test checks each n and rate against that passage text; second check against the PDF in scripts/due_diligence/bio_check/verify_benchmark.py",
+  "definition": "Phase success = number advancing to the next phase divided by number advanced plus suspended (n). NDA/BLA to approval is the probability of FDA approval after submission, including resubmissions (page 6). Durations are averages over successful transitions; LOA from Phase I overall 7.9%; average 10.5 years Phase I to approval (2.3 + 3.6 + 3.3 + 1.3) (pages 3, 24).",
+  "limits": [
+   "US (FDA) approval benchmark only; no EU approval benchmark in this file [GAP]",
+   "Phase I rates may be inflated by omission bias (report page 6)",
+   "Strata are not combinable: no rare-disease-by-oncology or modality-by-disease cell is read. Use one stratum as the benchmark and treat other attributes as adjustments with reasons",
+   "Benchmarks describe past programs 2011-2020; no study measures deal-model overstatement"
+  ],
+  "passage_ids": [
+   "VP-B-001",
+   "VP-B-002",
+   "VP-B-003",
+   "VP-B-004"
+  ]
+ },
+ "transitions": [
+  "phase1",
+  "phase2",
+  "phase3",
+  "nda_bla"
+ ],
+ "transition_labels": {
+  "phase1": "Phase I to II",
+  "phase2": "Phase II to III",
+  "phase3": "Phase III to NDA/BLA",
+  "nda_bla": "NDA/BLA to approval"
+ },
+ "strata": {
+  "all_indications": {
+   "label": "All indications, all modalities",
+   "n": [
+    4414,
+    4933,
+    1928,
+    1453
+   ],
+   "pos": [
+    0.52,
+    0.289,
+    0.578,
+    0.906
+   ],
+   "durations_years": [
+    2.3,
+    3.6,
+    3.3,
+    1.3
+   ],
+   "fig": "Fig 1, Fig 2, Fig 17b",
+   "pdf_page": [
+    6,
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "hematology": {
+   "label": "Hematology",
+   "n": [
+    92,
+    106,
+    82,
+    72
+   ],
+   "pos": [
+    0.696,
+    0.481,
+    0.768,
+    0.931
+   ],
+   "durations_years": [
+    2.2,
+    3.4,
+    3.6,
+    1.5
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "metabolic": {
+   "label": "Metabolic",
+   "n": [
+    136,
+    149,
+    66,
+    48
+   ],
+   "pos": [
+    0.618,
+    0.45,
+    0.636,
+    0.875
+   ],
+   "durations_years": [
+    2.0,
+    3.2,
+    3.1,
+    1.2
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "infectious_disease": {
+   "label": "Infectious disease",
+   "n": [
+    403,
+    414,
+    197,
+    156
+   ],
+   "pos": [
+    0.578,
+    0.384,
+    0.64,
+    0.929
+   ],
+   "durations_years": [
+    2.0,
+    3.5,
+    3.1,
+    1.2
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "ophthalmology": {
+   "label": "Ophthalmology",
+   "n": [
+    88,
+    200,
+    82,
+    45
+   ],
+   "pos": [
+    0.716,
+    0.355,
+    0.512,
+    0.911
+   ],
+   "durations_years": [
+    2.1,
+    2.9,
+    3.4,
+    1.3
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "autoimmune": {
+   "label": "Autoimmune",
+   "n": [
+    413,
+    471,
+    219,
+    202
+   ],
+   "pos": [
+    0.552,
+    0.314,
+    0.653,
+    0.941
+   ],
+   "durations_years": [
+    2.1,
+    3.6,
+    3.2,
+    1.1
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "allergy": {
+   "label": "Allergy",
+   "n": [
+    55,
+    92,
+    34,
+    20
+   ],
+   "pos": [
+    0.564,
+    0.283,
+    0.647,
+    1.0
+   ],
+   "durations_years": [
+    1.5,
+    3.8,
+    2.9,
+    1.1
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "gastroenterology_non_ibd": {
+   "label": "Gastroenterology (non-IBD)",
+   "n": [
+    45,
+    73,
+    35,
+    33
+   ],
+   "pos": [
+    0.467,
+    0.342,
+    0.571,
+    0.909
+   ],
+   "durations_years": [
+    1.6,
+    3.9,
+    3.9,
+    1.4
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "respiratory": {
+   "label": "Respiratory",
+   "n": [
+    179,
+    215,
+    62,
+    45
+   ],
+   "pos": [
+    0.559,
+    0.219,
+    0.645,
+    0.956
+   ],
+   "durations_years": [
+    2.1,
+    3.5,
+    3.3,
+    1.5
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "psychiatry": {
+   "label": "Psychiatry",
+   "n": [
+    150,
+    164,
+    71,
+    57
+   ],
+   "pos": [
+    0.527,
+    0.268,
+    0.563,
+    0.912
+   ],
+   "durations_years": [
+    2.3,
+    3.4,
+    2.8,
+    1.8
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "endocrine": {
+   "label": "Endocrine",
+   "n": [
+    319,
+    293,
+    151,
+    124
+   ],
+   "pos": [
+    0.433,
+    0.266,
+    0.662,
+    0.863
+   ],
+   "durations_years": [
+    1.8,
+    3.4,
+    3.7,
+    1.8
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "neurology": {
+   "label": "Neurology",
+   "n": [
+    516,
+    504,
+    226,
+    165
+   ],
+   "pos": [
+    0.477,
+    0.268,
+    0.531,
+    0.867
+   ],
+   "durations_years": [
+    2.1,
+    3.7,
+    3.7,
+    1.6
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "oncology": {
+   "label": "Oncology",
+   "n": [
+    1628,
+    1732,
+    495,
+    324
+   ],
+   "pos": [
+    0.488,
+    0.246,
+    0.477,
+    0.92
+   ],
+   "durations_years": [
+    2.7,
+    3.7,
+    3.1,
+    0.8
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "cardiovascular": {
+   "label": "Cardiovascular",
+   "n": [
+    214,
+    252,
+    105,
+    80
+   ],
+   "pos": [
+    0.5,
+    0.21,
+    0.552,
+    0.825
+   ],
+   "durations_years": [
+    2.4,
+    3.8,
+    4.2,
+    1.2
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "urology": {
+   "label": "Urology",
+   "n": [
+    22,
+    40,
+    13,
+    13
+   ],
+   "pos": [
+    0.409,
+    0.15,
+    0.692,
+    0.846
+   ],
+   "durations_years": [
+    2.7,
+    5.0,
+    2.9,
+    1.6
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "other_disease_areas": {
+   "label": "Others (dermatology, renal, obstetrics, non-autoimmune rheumatology, ENT/dental, orthopedics)",
+   "n": [
+    154,
+    228,
+    90,
+    69
+   ],
+   "pos": [
+    0.636,
+    0.386,
+    0.6,
+    0.884
+   ],
+   "durations_years": [
+    1.9,
+    3.5,
+    3.2,
+    1.8
+   ],
+   "fig": "Fig 2 (rates), Fig 17b (durations)",
+   "pdf_page": [
+    7,
+    25
+   ],
+   "passage_ids": [
+    "VP-B-010",
+    "VP-B-014"
+   ]
+  },
+  "rare_disease_non_oncology": {
+   "label": "Rare disease, non-oncology",
+   "n": [
+    380,
+    464,
+    240,
+    172
+   ],
+   "pos": [
+    0.674,
+    0.446,
+    0.604,
+    0.936
+   ],
+   "durations_years": null,
+   "fig": "Fig 8b",
+   "pdf_page": [
+    14
+   ],
+   "note": "no duration reported for this stratum in the table read; use the all-indications duration and say so",
+   "passage_ids": [
+    "VP-B-011"
+   ]
+  },
+  "chronic_high_prevalence_non_oncology": {
+   "label": "Chronic, high-prevalence disease, non-oncology",
+   "n": [
+    745,
+    737,
+    279,
+    217
+   ],
+   "pos": [
+    0.46,
+    0.231,
+    0.595,
+    0.926
+   ],
+   "durations_years": null,
+   "fig": "Fig 8b",
+   "pdf_page": [
+    14
+   ],
+   "note": "no duration reported for this stratum",
+   "passage_ids": [
+    "VP-B-011"
+   ]
+  },
+  "patient_preselection_biomarkers": {
+   "label": "Programs with patient preselection biomarkers",
+   "n": [
+    414,
+    149,
+    129,
+    75
+   ],
+   "pos": [
+    0.524,
+    0.463,
+    0.682,
+    0.96
+   ],
+   "durations_years": null,
+   "fig": "Fig 11",
+   "pdf_page": [
+    18
+   ],
+   "note": "all indications; not combinable with a disease-area stratum",
+   "passage_ids": [
+    "VP-B-013"
+   ]
+  },
+  "no_preselection_biomarkers": {
+   "label": "Programs without patient preselection biomarkers",
+   "n": [
+    4000,
+    4784,
+    1799,
+    1378
+   ],
+   "pos": [
+    0.52,
+    0.283,
+    0.571,
+    0.903
+   ],
+   "durations_years": null,
+   "fig": "Fig 11",
+   "pdf_page": [
+    18
+   ],
+   "passage_ids": [
+    "VP-B-013"
+   ]
+  },
+  "modality_monoclonal_antibody": {
+   "label": "Monoclonal antibody",
+   "n": [
+    804,
+    740,
+    310,
+    282
+   ],
+   "pos": [
+    0.547,
+    0.341,
+    0.681,
+    0.954
+   ],
+   "durations_years": null,
+   "fig": "Fig 10b",
+   "pdf_page": [
+    17
+   ],
+   "passage_ids": [
+    "VP-B-012"
+   ]
+  },
+  "modality_small_molecule": {
+   "label": "Small molecule",
+   "n": [
+    2308,
+    2896,
+    1118,
+    849
+   ],
+   "pos": [
+    0.526,
+    0.28,
+    0.569,
+    0.895
+   ],
+   "durations_years": null,
+   "fig": "Fig 10b",
+   "pdf_page": [
+    17
+   ],
+   "passage_ids": [
+    "VP-B-012"
+   ]
+  },
+  "modality_gene_therapy": {
+   "label": "Gene therapy",
+   "n": [
+    27,
+    57,
+    10,
+    2
+   ],
+   "pos": [
+    0.519,
+    0.386,
+    0.5,
+    1.0
+   ],
+   "durations_years": null,
+   "fig": "Fig 10b",
+   "pdf_page": [
+    17
+   ],
+   "note": "very small n; the NDA/BLA transition rests on n=2",
+   "passage_ids": [
+    "VP-B-012"
+   ]
+  }
+ },
+ "eu_assessment_timing": {
+  "source": "M9 EMA accelerated assessment page, 6 Nov 2026",
+  "standard_days": 210,
+  "accelerated_days": 150,
+  "excludes_clock_stops": true,
+  "status": "VERIFIED-REOPENED (verbatim from fetch)",
+  "passage_ids": [
+   "VP-B-031"
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "_comment": "Rules of skill G. A rule applies only if VERIFIED-REOPENED. There is no published standard for market sizing or competitive positioning; the arithmetic of the addressable population and the checks on sources, dates and differentiation are engineering rules of this skill. Grounding lane (7 November 2026; G9 updated 8 November 2026): every enabled rule carries passage_ids. Cha (VP-G-060) and the two registry studies are context. NICE DSU TSD 18 dual-read as VP-G-070/071 (G9 VERIFIED). FDA draft TPP guidance body text still not re-opened.",
+ "rules": [
+  {
+   "id": "ORPHAN-US-200K",
+   "kind": "threshold",
+   "persons": 200000,
+   "source": "G2",
+   "passage": "21 U.S.C. 360bb(a)(2) (Cornell LII, opened in full 7 Nov 2026): \"the term 'rare disease or condition' means any disease or condition which (A) affects less than 200,000 persons in the United States, or (B) affects more than 200,000 in the United States and for which there is no reasonable expectation that the cost of developing and making available in the United States a drug for such disease or condition will be recovered from sales in the United States of such drug.\" The script checks limb (A) only.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-G-020"
+   ]
+  },
+  {
+   "id": "ORPHAN-EU-5PER10K",
+   "kind": "threshold",
+   "per_10000": 5,
+   "source": "G3",
+   "passage": "Regulation (EC) No 141/2000 Art 3(1)(a) (EUR-Lex, opened in full 7 Nov 2026): a condition \"affecting not more than five in 10 thousand persons in the Community when the application is made\". The script checks that limb only; the alternative return-on-investment limb and the criteria of Art 3(1)(b) are not checked.",
+   "status": "VERIFIED-REOPENED",
+   "passage_ids": [
+    "VP-G-021"
+   ]
+  },
+  {
+   "id": "REG-STATUS-CONTEXT",
+   "kind": "context",
+   "source": "G5",
+   "passage": "BMJ Open 2017 (PMC, opened in full 7 Nov 2026): \"In total, 125 trials (31%) either had a listed recruitment status which was incorrect or had a delay of more than 1 year between the time the study was concluded and the time the registry recruitment status was updated.\" Random sample of phase 2-4 trials registered 2010-2012. Context for a flag only; no rate is applied.",
+   "status": "VERIFIED-REOPENED",
+   "computed": false,
+   "passage_ids": [
+    "VP-G-052"
+   ]
+  },
+  {
+   "id": "MKT-OVERESTIMATE-CONTEXT",
+   "kind": "context",
+   "source": "G1",
+   "passage": "Cha, Rifai and Sarraf, Nat Rev Drug Discov 2013, supplementary Box S1 (read in full 7 Nov 2026): \"Of the 260 drugs used in the analysis above, 54 'outliers' - drugs whose consensus forecasts were >160% higher than actual revenues - were excluded from subsequent analyses.\" Context only; the results in the article body were behind a paywall and not read.",
+   "status": "VERIFIED-REOPENED",
+   "computed": false,
+   "passage_ids": [
+    "VP-G-060"
+   ]
+  },
+  {
+   "id": "PREVALENCE-REPORTING",
+   "status": "VERIFIED-REOPENED",
+   "source": "G1b",
+   "passage": "EMA COMP points to consider (EMA/COMP/436/01 Rev. 1, 2019): complete prevalence and partial prevalence are different measures (VP-G-010); assumptions for extrapolating regional data must be made and justified (VP-G-011); sensitivity analyses varying the most critical assumptions are required (VP-G-012); a textbook, monograph or thesis statement is insufficient (VP-G-013). SCOPE: orphan designation; used here by analogy for market-sizing figures. GATHER (PLoS Med 2016) is a reporting standard for health estimates: data sources, uncertainty intervals, limitations (VP-G-001 to VP-G-003); it is not a market-sizing method.",
+   "passage_ids": [
+    "VP-G-001",
+    "VP-G-002",
+    "VP-G-003",
+    "VP-G-010",
+    "VP-G-011",
+    "VP-G-012",
+    "VP-G-013"
+   ]
+  },
+  {
+   "id": "REG-CROSSCHECK",
+   "status": "VERIFIED-REOPENED",
+   "source": "G4a",
+   "passage": "Fleminger and Goldacre, PLoS One 2018 (PMC5841737): 16.2% of dual-registered trials were discrepant on completion status; completion status on registries is commonly inaccurate. A registry-only competitor status is cross-checked against the other registry.",
+   "passage_ids": [
+    "VP-G-050",
+    "VP-G-051"
+   ]
+  }
+ ]
+}

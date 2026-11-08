@@ -1,0 +1,54 @@
+# Grounding register
+
+One row per asset item of this skill: method step, task card, template, script constant or list, failure-mode detection question, example, eval fixture. Status: VERIFIED-REOPENED (cites registered passages in `verbatim-passages.json`) or ENGINEERING RULE (no external source; the reason is stated). **No item is UNGROUNDED**; `tools/lint_plugin.py` checks that every step, task card, template, failure mode, constant, example and fixture has a row. Written 7 November 2026; regraded 7 November 2026 in the grounding lane.
+
+| Item type | Item | Status | Passage ids or reason |
+|---|---|---|---|
+| step | step 1 | ENGINEERING RULE | the one-message intake with a missing-input rule is the anatomy's house format (3.2); no published standard prescribes diligence intake |
+| step | step 2 | ENGINEERING RULE | extracting the seller's claim as a claim (not as established fact) is a house rule; the claim wording is the seller's |
+| step | step 3 | ENGINEERING RULE | the human-evidence grade (human_genetic, clinical_pharmacology, preclinical_only, none) is a house taxonomy; the population-level context behind it is VP-F-001 to VP-F-003, VP-F-140, VP-F-141, VP-F-150, VP-F-151 (strength varies with source type and causal-gene confidence; the GWAS estimate was sensitive to the cutoff) and is never applied as a probability; authors of the genetic studies disclose industry ties |
+| step | step 4 | VERIFIED-REOPENED | applies the ARRIVE Essential 10 reporting items: VP-F-010 to VP-F-021 |
+| step | step 4 (experimental unit and pseudoreplication) | VERIFIED-REOPENED | ARRIVE 2.0 E&E: n of 50 cells from one mouse is n = 1 when the mouse is the experimental unit; pseudoreplication underestimates variability (VP-F-110, VP-F-111); report n per experiment including independent replications (VP-F-112) |
+| step | step 5 | ENGINEERING RULE | gap stated: no source defines independence by performing organization, so "different organization" is the plugin's rule; the new-data requirement and the graded (not pass/fail) result are sourced in the next rows; the pharmacodynamic definition used for biomarkers is VP-F-075 |
+| step | step 5 (replication needs new data; result is a degree) | VERIFIED-REOPENED | National Academies: replicability means consistent results across studies, each of which obtained its own data (VP-F-100); the assessment may be a degree, not a binary pass/fail (VP-F-101) |
+| step | step 6 | ENGINEERING RULE | class precedent and differentiation are kept as sourced rows; the adverse-precedent flags are house rules; a class-wide warning is regulatory extrapolation that supports vigilance and does not prove identical toxicity (VP-F-121, VP-F-123, a narrative review); the FDA labeling-change draft (VP-F-130, VP-F-131) does not use the word class; no guidance on class labeling as such was found |
+| step | step 7 | ENGINEERING RULE | the screen uses the closed answer set triggered / not triggered / cannot tell so that no mode ends as a free-text maybe; house rule |
+| step | step 8 | ENGINEERING RULE | the script step runs the deterministic checks of this skill; each check is graded in the constants and rules rows below |
+| step | step 9 | ENGINEERING RULE | the human gate is the owner's ruling for this skill (the person decides, the skill prepares); not a published standard |
+| task card | 01-target-and-mechanism.md | ENGINEERING RULE | the order follows the skill's output contract (answer first, then evidence rows); no published standard prescribes this diligence sequence; the AB1 question prompt is graded in its own row |
+| task card | 01-target-and-mechanism.md (AB1 question and structure) | VERIFIED-REOPENED | GOT-IT AB1 target-disease linkage and its first question (VP-F-161, VP-F-163); written for academic target assessment, used as a prompt and a structure only |
+| task card | 02-human-evidence.md | ENGINEERING RULE | house grading of human evidence; context passages VP-F-001 to VP-F-003 |
+| task card | 03-preclinical-and-translatability.md | VERIFIED-REOPENED | ARRIVE Essential 10 items VP-F-010 to VP-F-021; experimental unit and pseudoreplication VP-F-110 to VP-F-112; strengths and weaknesses of cited prior research as a prompt from a funder policy notice (VP-F-170, VP-F-171; not a diligence method); translatability notes are the scientist's |
+| task card | 04-reproduction-and-biomarkers.md | ENGINEERING RULE | gap stated: independence by organization has no source (the new-data requirement is VP-F-100 and the degree-not-pass/fail point is VP-F-101); biomarker definition VP-F-075 |
+| task card | 05-class-precedent-and-differentiation.md | ENGINEERING RULE | house flags for adverse class precedent; class warning example VP-F-050, VP-F-051; class-wide vigilance not proof VP-F-121, VP-F-123; the evidence-basis labels are the plugin's (motivated by VP-F-122) |
+| task card | 06-failure-modes-and-questions.md | ENGINEERING RULE | the screen uses the closed answer set triggered / not triggered / cannot tell so that no mode ends as a free-text maybe; house rule |
+| task card | 07-write-register.md | ENGINEERING RULE | section structure is the decision-ready order of anatomy 3.6 with this skill's register fields; a house format, no published reporting standard exists for a diligence register |
+| template | mechanism-register.md | ENGINEERING RULE | section structure is the decision-ready order of anatomy 3.6 with this skill's register fields; a house format, no published reporting standard exists for a diligence register |
+| constant or list | ARRIVE items (10) | VERIFIED-REOPENED | VP-F-010 to VP-F-021; a unit test matches each item name to its registered table row |
+| constant or list | BEST pharmacodynamic definition | VERIFIED-REOPENED | VP-F-075 |
+| constant or list | MINIKEL context (not computed) | VERIFIED-REOPENED | VP-F-003 |
+| constant or list | SEOK figure (disabled) | ENGINEERING RULE | disabled rule: the figure is contested and not applied; kept as context with the dispute not located (F12); no external source enables it |
+| constant or list | HUMAN_KINDS | ENGINEERING RULE | house taxonomy of human evidence kinds |
+| constant or list | OUTCOMES (class precedent) | ENGINEERING RULE | closed outcome set so adverse precedents can be counted; motivated by VP-F-050, VP-F-051 |
+| constant or list | REPRO (reproduction results) | VERIFIED-REOPENED | a graded result is required because replicability is a degree, not a pass/fail (VP-F-101) and replications differ in size (VP-F-041, VP-F-042); the three exact labels (reproduced, not reproduced, partial) are the plugin's |
+| constant or list | BIOMARKER_TYPES | ENGINEERING RULE | pharmacodynamic vs other; the pharmacodynamic definition is VP-F-075 |
+| constant or list | SECTIONS (7) | ENGINEERING RULE | the seven sections are the owner's output specification for the mechanism register |
+| constant or list | GONOGO phrase patterns | ENGINEERING RULE | phrases that state a scientific go/no-go; the gate is the owner's ruling |
+| constant or list | independence rule (organization differs from originator) | ENGINEERING RULE | gap stated: no published standard or National Academies text defines independence by organization (VP-F-100 requires only that a study obtain its own data); the plugin requires both new data and a different organization |
+| constant or list | new_data_collected requirement | VERIFIED-REOPENED | National Academies definition of replicability: each study obtained its own data (VP-F-100); a unit test matches the wording |
+| constant or list | experimental_unit and n_counts_experimental_units fields | VERIFIED-REOPENED | ARRIVE 2.0 E&E items 1b and 2 (VP-F-110 to VP-F-112); the two field names are the plugin's |
+| constant or list | EVIDENCE_BASIS (randomized_safety_trial, pharmacovigilance_or_pooled, mechanistic_extrapolation) | ENGINEERING RULE | closed set so a class warning states what it rests on for each agent; motivated by the review's statement that the strongest causal evidence is molecule-specific while other signals come mainly from pharmacovigilance and less comparable data (VP-F-122); the labels are the plugin's |
+| constant or list | class-warning wording (vigilance, not proof of uniform toxicity) | VERIFIED-REOPENED | VP-F-121 and VP-F-123 (narrative review); the FDA labeling-change draft is context only (VP-F-130, VP-F-131; DRAFT; no use of the word class) |
+| constant or list | genetic-support strength varies by source and gene confidence | VERIFIED-REOPENED | VP-F-003, VP-F-140, VP-F-141 (Minikel) and VP-F-150, VP-F-151 (King, independent reanalysis); never a probability for the asset |
+| constant or list | GOT-IT block mapping (AB1 to AB5 to register sections) | VERIFIED-REOPENED | VP-F-161 lists the five blocks; the mapping to this register's sections is the plugin's and is written in method-standards (GOT-IT is written for academic use) |
+| detection question | FM-01 | ENGINEERING RULE | Detection question written for this skill (gap stated: no published detection checklist exists); the finding it screens for is sourced (VP-F-030 to VP-F-043, VP-F-061) |
+| detection question | FM-02 | ENGINEERING RULE | Detection question written for this skill (gap stated: no published detection checklist exists); the finding is sourced (VP-F-070 to VP-F-074) |
+| detection question | FM-03 | ENGINEERING RULE | Detection question written for this skill (gap stated: no published detection checklist exists); the finding is sourced (VP-F-050, VP-F-051) |
+| detection question | FM-04 | ENGINEERING RULE | Detection question written for this skill (gap stated: no published detection checklist exists); the finding is sourced (VP-F-001 to VP-F-005) |
+| detection question | FM-05 | ENGINEERING RULE | Detection question written for this skill (gap stated: no published detection checklist exists); the finding is sourced (VP-F-010 to VP-F-022, VP-F-060) |
+| example | good-fictional-register.md | ENGINEERING RULE | fictional asset; each fact pattern traces to a cited real precedent listed in the local appendix docs/due_diligence/EXAMPLES_REAL_PRECEDENTS.md |
+| example | poor-validated-claim.md | ENGINEERING RULE | fictional asset; each fact pattern traces to a cited real precedent listed in the local appendix docs/due_diligence/EXAMPLES_REAL_PRECEDENTS.md |
+| eval fixture | good-mechanism-input.json | ENGINEERING RULE | fictional input built to test one rule; not tied to a real case |
+| eval fixture | good-register.json | ENGINEERING RULE | fictional input built to test one rule; not tied to a real case |
+| eval fixture | poor-register.json | ENGINEERING RULE | fictional input built to test one rule; not tied to a real case |
+| eval set | evals/evals.json | ENGINEERING RULE | functional evals of this skill's behavior, written by the author; not tied to a real case |

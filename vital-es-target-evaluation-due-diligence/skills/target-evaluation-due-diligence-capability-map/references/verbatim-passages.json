@@ -1,0 +1,143 @@
+{
+ "skill": "target-evaluation-due-diligence-capability-map",
+ "passages": [
+  {
+   "id": "VP-CM-010",
+   "source_id": "pcaob_as1215",
+   "source_title": "PCAOB AS 1215: Audit Documentation",
+   "section": ".02 Objectives of Audit Documentation",
+   "page": null,
+   "text": "Audit documentation is the written record of the basis for the auditor's conclusions that provides the support for the auditor's representations, whether those representations are contained in the auditor's report or otherwise. Audit documentation also facilitates the planning, performance, and supervision of the engagement, and is the basis for the review of the quality of the work because it provides the reviewer (e.g., engagement partner or other reviewers) with written documentation of the evidence supporting the auditor's significant conclusions. Among other things, audit documentation includes records of the planning and performance of the work, the procedures performed, evidence obtained, and conclusions reached by the auditor.",
+   "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS1215",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "PRACTITIONER analog for diligence workpapers — plugin does not perform PCAOB audits."
+  },
+  {
+   "id": "VP-CM-011",
+   "source_id": "pcaob_as1215",
+   "source_title": "PCAOB AS 1215: Audit Documentation",
+   "section": ".06 Audit Documentation Requirement",
+   "page": null,
+   "text": "The auditor must document the procedures performed, evidence obtained, and conclusions reached with respect to relevant financial statement assertions. Audit documentation must clearly demonstrate that the work was in fact performed, who performed the work, the person or persons who reviewed the work, and the date of such review.",
+   "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS1215",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null
+  },
+  {
+   "id": "VP-CM-020",
+   "source_id": "pcaob_as1105",
+   "source_title": "PCAOB AS 1105: Audit Evidence",
+   "section": ".02 Introduction",
+   "page": null,
+   "text": "Audit evidence is all the information, whether obtained from audit procedures or other sources, that is used by the auditor in arriving at the conclusions on which the auditor's opinion is based. Audit evidence consists of both information that supports and corroborates management's assertions regarding the financial statements or internal control over financial reporting and information that contradicts such assertions.",
+   "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS1105",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Supports retaining contrary findings in assembled packs."
+  },
+  {
+   "id": "VP-CM-021",
+   "source_id": "pcaob_as1105",
+   "source_title": "PCAOB AS 1105: Audit Evidence",
+   "section": ".05–.06 Sufficient Appropriate Audit Evidence",
+   "page": null,
+   "text": "Sufficiency is the measure of the quantity of audit evidence. Appropriateness is the measure of the quality of audit evidence, i.e., its relevance and reliability. To be appropriate, audit evidence must be both relevant and reliable in providing support for the conclusions on which the auditor's opinion is based.",
+   "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS1105",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Whitespace-collapsed from .05 and .06."
+  },
+  {
+   "id": "VP-CM-030",
+   "source_id": "icmje_coi",
+   "source_title": "ICMJE Recommendations — Author Responsibilities — Conflicts of Interest",
+   "section": "B. Disclosure…",
+   "page": null,
+   "text": "The potential for conflict of interest and bias exists when professional judgment concerning a primary interest (such as patients' welfare or the validity of research) may be influenced by a secondary interest (such as financial gain). Perceptions of conflict of interest are as important as actual conflicts of interest.",
+   "url": "https://www.icmje.org/recommendations/browse/roles-and-responsibilities/author-responsibilities--conflicts-of-interest.html",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null
+  },
+  {
+   "id": "VP-CM-031",
+   "source_id": "icmje_coi",
+   "source_title": "ICMJE Recommendations — Author Responsibilities — Conflicts of Interest",
+   "section": "1.a. Authors",
+   "page": null,
+   "text": "When authors submit a manuscript of any type or format they are responsible for disclosing all relationships and activities that might bias or be seen to bias their work.",
+   "url": "https://www.icmje.org/recommendations/browse/roles-and-responsibilities/author-responsibilities--conflicts-of-interest.html",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null
+  },
+  {
+   "id": "VP-CM-040",
+   "source_id": "icmje_ai",
+   "source_title": "ICMJE Recommendations — AI use by authors",
+   "section": "Artificial Intelligence (AI)–Assisted Technology",
+   "page": null,
+   "text": "Chatbots (such as ChatGPT) and other AI-assisted tools should not be listed as authors because they cannot be responsible for the accuracy, integrity, and originality of the work, and these responsibilities are required for authorship. Therefore, humans are responsible for any submitted material that included the use of AI-assisted technologies.",
+   "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null
+  },
+  {
+   "id": "VP-CM-050",
+   "source_id": "iia_14_6",
+   "source_title": "IIA Global Internal Audit Standards (January 2024) — Standard 14.6 Engagement Documentation",
+   "section": "Requirements",
+   "page": null,
+   "text": "The analyses, evaluations, and supporting information relevant to an engagement must be documented such that an informed, prudent internal auditor, or similarly informed and competent person, could repeat the work and derive the same engagement results.",
+   "url": "https://www.theiia.org/globalassets/site/standards/globalinternalauditstandards_2024january9.pdf",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "PRACTITIONER analog for evidence ledger re-performance; not a binding internal-audit engagement."
+  },
+  {
+   "id": "VP-CM-060",
+   "source_id": "icaew_cdd",
+   "source_title": "ICAEW — Commercial Due Diligence guidance",
+   "section": "Principles — false or misleading / scope",
+   "page": null,
+   "text": "The CDD report must not contain anything false or misleading, or omit a matter that would render it misleading. The scope and limitations of the work should be included.",
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/corporate-finance/guidelines/commercial-due-diligence-72.ashx",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "PRACTITIONER; commercial DD only."
+  },
+  {
+   "id": "VP-CM-061",
+   "source_id": "icaew_cdd",
+   "source_title": "ICAEW — Commercial Due Diligence guidance",
+   "section": "Conflicts of interest",
+   "page": null,
+   "text": "Conflicts must be considered at the outset of an engagement. The engagement must also be monitored throughout to identify any conflicts that may arise. The CDD practitioner should not accept an engagement when conflicts of interest are not considered to be manageable.",
+   "url": "https://www.icaew.com/-/media/corporate/files/technical/corporate-finance/guidelines/commercial-due-diligence-72.ashx",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null
+  },
+  {
+   "id": "VP-CM-070",
+   "source_id": "rule_175",
+   "source_title": "17 CFR §230.175 — Liability for certain statements by issuers",
+   "section": "(a)",
+   "page": null,
+   "text": "A statement within the coverage of paragraph (b) of this section which is made by or on behalf of an issuer or by an outside reviewer retained by the issuer shall be deemed not to be a fraudulent statement (as defined in paragraph (d) of this section), unless it is shown that such statement was made or reaffirmed without a reasonable basis or was disclosed other than in good faith.",
+   "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.175",
+   "access_date": "2026-11-08",
+   "cue": "none",
+   "source_text_sha256": null,
+   "note": "Anti-misuse: diligence packs are not issuer filings; do not claim Rule 175 safe harbor."
+  }
+ ]
+}

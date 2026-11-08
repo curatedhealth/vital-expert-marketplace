@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clinical evidence register (input to scripts/validate_register.py)",
+  "type": "object",
+  "required": ["asset", "buyer_mode", "unit", "markets", "rows", "failure_mode_screen"],
+  "properties": {
+    "buyer_mode": {"enum": ["bd", "investor"]},
+    "unit": {"enum": ["asset", "company"]},
+    "markets": {"type": "array", "items": {"enum": ["US", "EU"]}},
+    "rows": {"type": "array", "items": {"type": "object", "required": ["id", "kind"]}},
+    "failure_mode_screen": {"type": "array", "items": {"type": "object", "required": ["mode_id", "state"]}}
+  }
+}
