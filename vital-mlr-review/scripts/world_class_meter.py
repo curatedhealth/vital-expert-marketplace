@@ -170,8 +170,10 @@ def main() -> int:
         except json.JSONDecodeError:
             fails.append(".mcp.json invalid")
     pj = json.loads((ROOT / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
-    if pj.get("release_state") != "Pilot":
-        warns.append(f"release_state is {pj.get('release_state')!r} (expected Pilot until owner yes)")
+    if pj.get("release_state") not in ("Pilot", "Released"):
+        fails.append(f"release_state unexpected: {pj.get('release_state')!r}")
+    elif pj.get("release_state") == "Released":
+        warns.append("release_state=Released (owner-promoted)")
     # legacy assets path refs already zero; warn if many asset files remain
     asset_files = list((ROOT / "skills").glob("*/assets/*"))
     if len(asset_files) > 0:

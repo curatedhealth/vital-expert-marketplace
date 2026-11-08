@@ -10,8 +10,8 @@ metadata:
   family: "mlr-prep"
   worker: "MLR intake coordinator"
   pack: "vital-mlr-review"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   route:
     - "Open an MLR intake for this artefact"
     - "Collect jurisdictions for the MLR packet"

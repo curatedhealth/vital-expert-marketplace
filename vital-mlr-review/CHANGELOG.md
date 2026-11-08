@@ -1,3 +1,8 @@
+## 0.4.1 — 8 November 2026 (Released)
+
+- Owner yes: flip `release_state` Pilot → **Released**; ship marketplace + prod promote.
+- Content unchanged from 0.4.0 Hybrid B world-class Pilot (11 skills, 60 use cases, offline E2E).
+
 # Changelog — vital-mlr-review (READY / MLR Ready)
 
 ## 0.4.0 — 8 November 2026 (Pilot)

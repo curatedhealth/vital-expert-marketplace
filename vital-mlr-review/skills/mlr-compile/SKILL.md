@@ -10,8 +10,8 @@ metadata:
   family: "mlr-prep"
   worker: "MLR compile lead"
   pack: "vital-mlr-review"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   route:
     - "Compile the three MLR chair packets"
     - "Validate the MLR packet for the board"

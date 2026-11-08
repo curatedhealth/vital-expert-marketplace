@@ -10,8 +10,8 @@ metadata:
   family: "mlr-prep"
   worker: "MLR evidence handoff"
   pack: "vital-mlr-review"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   route:
     - "Build the MLR verify handoff steps"
     - "mlr_handoff_verify then qualify_source"

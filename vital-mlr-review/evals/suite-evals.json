@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.1",
   "pack": "vital-mlr-review",
   "routing_harness": "mcps/mlr_review/tests/test_skills.py",
   "script_self_tests": [
@@ -105,5 +105,6 @@
     "progressive_disclosure": true,
     "deterministic_scripts": true,
     "model_versus_model": false
-  }
+  },
+  "release_state": "Released"
 }

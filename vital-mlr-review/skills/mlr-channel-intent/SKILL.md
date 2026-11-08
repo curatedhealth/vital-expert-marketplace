@@ -9,8 +9,8 @@ metadata:
   worker: "MLR channel intent"
   pack: "vital-mlr-review"
   product: "READY"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   route:
     - "Classify promo versus scientific exchange for MLR"
     - "Channel intent gate before MLR chairs"

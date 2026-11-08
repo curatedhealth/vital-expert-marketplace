@@ -10,8 +10,8 @@ metadata:
   family: "mlr-chair"
   worker: "Legal reviewer (host-reasoner)"
   pack: "vital-mlr-review"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   chair: "legal"
   route:
     - "Run the legal chair on misleading impression"

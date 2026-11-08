@@ -24,7 +24,7 @@
     {
       "name": "vital-es-target-evaluation-due-diligence",
       "source": "./vital-es-target-evaluation-due-diligence",
-      "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + ON↔DD use-case packs. Standard KA Pass (v9); Draft 0.1.2-on-dd-e2e for Cowork. Not Marketplace Done. Optional vont_/verify keys; offline script-first."
+      "description": "Target Evaluation & Due Diligence (CF-01.02.06). Nine skills + ON\u2194DD use-case packs. Standard KA Pass (v9); Draft 0.1.2-on-dd-e2e for Cowork. Not Marketplace Done. Optional vont_/verify keys; offline script-first."
     },
     {
       "name": "vital-es-financial-modeling-and-valuation",
@@ -79,7 +79,7 @@
     {
       "name": "vital-mlr-review",
       "source": "./vital-mlr-review",
-      "description": "READY / MLR board preparation (Pilot 0.4.0 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
+      "description": "READY / MLR board preparation (Released 0.4.1 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
     }
   ]
 }

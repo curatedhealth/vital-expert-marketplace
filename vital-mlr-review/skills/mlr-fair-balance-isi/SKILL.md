@@ -9,8 +9,8 @@ metadata:
   worker: "MLR fair balance isi"
   pack: "vital-mlr-review"
   product: "READY"
-  version: "0.4.0"
-  release_state: Pilot
+  version: "0.4.1"
+  release_state: Released
   route:
     - "Check fair balance and ISI prominence for MLR"
     - "ISI present but tiny type versus benefit headlines"
