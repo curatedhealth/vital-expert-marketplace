@@ -1,16 +1,16 @@
 {
   "must_flag": [
-    "most effective",
-    "all patients",
-    "cuts symptoms in half"
+    "Germany assumed",
+    "already approved"
   ],
   "must_include_labels": [
-    "[GAP]",
-    "not tool-checked",
-    "open"
+    "question",
+    "context"
   ],
   "must_not": [
-    "cleared for external use",
-    "tool-checked via VITAL Verify"
-  ]
+    "letters pass",
+    "cleared"
+  ],
+  "fixture": "evals/fixtures/case-1.md",
+  "teaching_only": true
 }

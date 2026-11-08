@@ -11,6 +11,8 @@
   ],
   "must_not": [
     "cleared for external use",
-    "tool-checked via VITAL Verify"
-  ]
+    "true in the world"
+  ],
+  "fixture": "evals/fixtures/case-1.md",
+  "teaching_only": true
 }

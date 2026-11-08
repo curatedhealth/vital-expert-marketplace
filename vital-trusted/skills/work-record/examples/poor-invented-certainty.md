@@ -31,3 +31,9 @@ Stamp: TRUSTED / work-record: cleared
 - Attribute only what the person states ("as you told me").
 - Offer a clean copy for review with open points listed.
 - Stamp uncleared / draft until a named clearer is supplied.
+
+## Stamp contrast
+
+Poor (forbidden): `TRUSTED / work-record: cleared · tool-checked · ready to send`
+
+Required: `TRUSTED / work-record: not tool-checked · gaps open · uncleared draft`

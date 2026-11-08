@@ -1,16 +1,15 @@
 {
   "must_flag": [
     "most effective",
-    "all patients",
-    "cuts symptoms in half"
+    "promotional use"
   ],
   "must_include_labels": [
-    "[GAP]",
-    "not tool-checked",
-    "open"
+    "label",
+    "[GAP]"
   ],
   "must_not": [
-    "cleared for external use",
-    "tool-checked via VITAL Verify"
-  ]
+    "off-label OK"
+  ],
+  "fixture": "evals/fixtures/case-1.md",
+  "teaching_only": true
 }

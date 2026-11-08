@@ -14,3 +14,8 @@ Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERI
 
 | C8 | Faithfulness = supported atomic claims / total claims against context (RAGAS). TRUSTED uses (S+0.5P)/(S+P+U+C+V); exclude out_of_scope and not_checked. | RAGAS Faithfulness docs | VERIFIED — accessed 8 November 2026 | https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/ |
 | C9 | Relative risk without absolute risk can mislead on clinical impact. | ABPI Code 2024 Cl. 6.1 guidance | VERIFIED — accessed 8 November 2026 | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
+
+| WC-RAGAS-F | Faithfulness = fraction of claims supported by context | RAGAS | VERIFIED (digest 8 Nov 2026) | https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/ |
+| WC-FActScore | Atomic claims; % supported vs knowledge/context | Min et al. EMNLP 2023 | VERIFIED (digest 8 Nov 2026) | https://aclanthology.org/2023.emnlp-main.741/ |
+| WC-ABPI-6.1 | Do not convert a faithfulness % into a promotional certainty claim | ABPI Cl. 6.1 | VERIFIED (digest 8 Nov 2026) | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
+

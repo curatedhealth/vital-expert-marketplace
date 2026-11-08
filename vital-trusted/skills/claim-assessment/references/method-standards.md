@@ -14,3 +14,9 @@
 | R9 | Relative risk must not appear without absolute risk when assessing clinical impact of an outcome (ABPI guidance under Cl. 6.1). | ABPI Code 2024 interactive Cl. 6.1 | VERIFIED — accessed 8 November 2026 | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
 
 Rows above are migrated from prior `rules.md` citations plus the 8 November 2026 world-class digest. Status vocabulary: VERIFIED / PARTIAL / UNVERIFIED / [CHECK] / [GAP]. Re-verify against primary PDFs before Released.
+
+| WC-IFPMA-4.2 | No distortion/exaggeration/omission when rewriting claims | IFPMA Art. 4.2 | VERIFIED (digest 8 Nov 2026) | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+| WC-IFPMA-4.3 | Substantiation path required for external claims | IFPMA Art. 4.3 | VERIFIED (digest 8 Nov 2026) | same PDF |
+| WC-ABPI-6.1 | Relative claims with absolute risk where applicable | ABPI Cl. 6.1 | VERIFIED (digest 8 Nov 2026) | https://www.pmcpa.org.uk/the-code/2024-interactive-abpi-code-of-practice/clause-6-information-claims-comparisons-and-disparagement/ |
+| WC-RAGAS-F | Faithfulness-style overlap is not world-truth | RAGAS faithfulness | VERIFIED (digest 8 Nov 2026) | https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/faithfulness/ |
+

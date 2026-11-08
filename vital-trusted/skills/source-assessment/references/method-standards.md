@@ -16,3 +16,8 @@ Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERI
 
 | S7 | Check Crossref/Retraction Watch style signals before treating a paper as current; without a live currency tool, label currency "not checked". | Crossref Retraction Watch documentation | PARTIAL — confirm against live tool when key present | https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/ |
 | S8 | Promotion must be capable of substantiation by labeling or scientific evidence (source quality gates the claim). | IFPMA Code 2019 Art. 4.3 | VERIFIED — accessed 8 November 2026 | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+
+| WC-IFPMA-4.3 | Press/messaging ≠ scientific substantiation | IFPMA Art. 4.3 | VERIFIED (digest 8 Nov 2026) | https://www.ifpma.org/wp-content/uploads/2018/09/IFPMA_Code_of_Practice_2019_EN.pdf |
+| WC-ABPI-6.2 | Claims need capable substantiation sources | ABPI Cl. 6.2 | VERIFIED (digest 8 Nov 2026) | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+| WC-ICMJE | Disclose sponsor/author interests when scoring independence | ICMJE recommendations | PARTIAL | https://www.icmje.org/recommendations/ |
+

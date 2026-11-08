@@ -11,3 +11,8 @@ Rows above are migrated from prior `rules.md` citations. Status vocabulary: VERI
 
 | CR7 | Citations attribute to supplied spans; they are not a verdict of world-truth (Claude Citations pattern; TRUSTED same). | Anthropic Citations docs | VERIFIED — accessed 8 November 2026 | https://platform.claude.com/docs/en/build-with-claude/citations |
 | CR8 | Every claim/comparison must be capable of substantiation; keep the work record so a named human can clear. | ABPI Code 2024 Cl. 6.2 | VERIFIED — accessed 8 November 2026 | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+
+| WC-ABPI-6.2 | Record must show substantiation path or open gap | ABPI Cl. 6.2 | VERIFIED (digest 8 Nov 2026) | https://pmcpa.org.uk/media/r0anf5ya/2024-abpi-code.pdf |
+| WC-FDA-BadAd | Unsupported claims and omitted risk stay as open items in the record | FDA Bad Ad | VERIFIED (digest 8 Nov 2026) | https://www.fda.gov/drugs/prescription-drug-advertising-and-promotional-labeling/bad-ad-program |
+| WC-ICMJE | Citations identify the source; do not invent clearer names | ICMJE | PARTIAL | https://www.icmje.org/recommendations/ |
+

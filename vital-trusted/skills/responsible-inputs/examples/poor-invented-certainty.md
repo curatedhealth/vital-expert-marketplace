@@ -29,3 +29,9 @@ you have the PDF. No privacy issue. Ethical: pass.
 - Hold the summary as internal-only until the person confirms permission.
 - Mark public use as `[CHECK]` / gap if policy unknown.
 - No Ethical pass without those answers.
+
+## Stamp contrast
+
+Poor (forbidden): `TRUSTED / responsible-inputs: cleared · tool-checked · ready to send`
+
+Required: `TRUSTED / responsible-inputs: not tool-checked · gaps open · uncleared draft`

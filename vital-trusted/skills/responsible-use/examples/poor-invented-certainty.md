@@ -28,3 +28,9 @@ you described. TRUSTED Ethical letter: pass.
 - Quote only label text; gap if the use is not addressed.
 - No letter PASS stamp without the skill actually running.
 - Keep uncleared draft language.
+
+## Stamp contrast
+
+Poor (forbidden): `TRUSTED / responsible-use: cleared · tool-checked · ready to send`
+
+Required: `TRUSTED / responsible-use: not tool-checked · gaps open · uncleared draft`

@@ -34,3 +34,9 @@ Stamp: TRUSTED / substance-and-usefulness: concrete and ready
 - List the three inputs to send (sales/plan, prescriber uptake, account count/date).
 - Remove empty intensifiers ("strong", "soon") or turn them into gaps.
 - Stamp with gaps open — never invent concreteness.
+
+## Stamp contrast
+
+Poor (forbidden): `TRUSTED / substance-and-usefulness: cleared · tool-checked · ready to send`
+
+Required: `TRUSTED / substance-and-usefulness: not tool-checked · gaps open · uncleared draft`
