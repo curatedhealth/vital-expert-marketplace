@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 — 9 November 2026 (Pilot demotion)
+
+**Pilot** (owner Hicham). Marketplace `release_state` set to Pilot so new users do not install 0.3.2 while 0.3.3 rebuild is in progress. Version string stays 0.3.2. No skill content change in this tip.
+
 ## 0.3.2 — 8 November 2026
 
 **Released** (owner Hicham). Fix release only: restore dropped `references/gap-rules.md` for all 19 skills from October build `978a0bda` (unchanged substance) and restore October pointers; retarget `references/governance.md` → skill-root `governance.md` (44 files); fix `source-assessment` `source-card` pointers to shared `../../templates/source-card.md`; add `scripts/check_vital_trusted_pointers.py` path gate; relocate each skill `references/failure-modes.md` into `references/knowledge.md` so plugin file count stays ≤512 after gap-rules restore. No evals/examples/method content edits beyond pointer fixes. Patterns/rules remain in `references/knowledge.md` (Migrated sections).

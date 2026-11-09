@@ -2,14 +2,14 @@
   "name": "vital-trusted",
   "displayName": "VITAL TRUSTED",
   "version": "0.3.2",
-  "release_state": "Released",
+  "release_state": "Pilot",
   "tier": "Standard",
   "domain": "platform",
   "capability_code": "TRUSTED",
   "depends_on": [
     "vital-core-atoms"
   ],
-  "generated_by": "owner-release-2026-11-08-hicham-0.3.2",
+  "generated_by": "owner-demote-pilot-2026-11-09-pending-0.3.3",
   "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Offline-first: Prove skills run without a key and label results not tool-checked; optional TRUSTED Prove live MCP (same endpoint mcp.vital.expert/api/mcp/verify, server id trusted-prove) adds live source admission when a vvfy_ key is present. The vital-verify plugin is retired \u2014 this pack is the sole buyer surface. Human oversight required for healthcare use. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
     "name": "Crossroads Catalyst GmbH \u2014 Vital Expert",
