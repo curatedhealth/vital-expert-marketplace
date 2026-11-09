@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-channel-intent
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: DE, US (person listed both; US not defaulted).
 - Draft claim: "Product X reduces HbA1c in adults with type 2 diabetes."

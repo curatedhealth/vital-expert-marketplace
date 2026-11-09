@@ -1,3 +1,18 @@
+## 0.4.2 — 9 November 2026 (Released)
+
+READY TEH hardening on tip `cbc9aff22` (tickets **TEH-RDY-004..064**). Themes:
+
+- **Never-approve + AI-owner refusal** — forbidden phrases / must_refuse preserved; board-prep refuses AI/model/assistant/system as `cleared_by`.
+- **Status** — single status with precedence map; board-prep re-derives status; no silent approve path.
+- **Markets** — jurisdictions explicit and echoed; no US default.
+- **Inputs** — no fabricated locators/labels; tools operate only on supplied text; teaching examples stay non-input.
+- **Chair isolation** — Medical / Legal / Regulatory MECE ownership preserved.
+- **Intent vs medium + channel gate** — mixed content routes to human; provisional readings named; channel rulings hardened.
+- **Board-prep** — artefact version checks; re-derived status; liability/stamp intact.
+- **Harness** — asserts for never-approve, AI owner, markets, VERIFY honesty; legacy generators refuse overwrite without `--force-overwrite-teh-fixes`.
+
+No softening of never-approve rules, forbidden phrases, must_refuse lists, or test bars.
+
 ## 0.4.1 — 8 November 2026 (Released)
 
 - Owner yes: flip `release_state` Pilot → **Released**; ship marketplace + prod promote.

@@ -89,6 +89,10 @@
         "channel": {
           "enum": ["promo", "scientific_exchange", "med_info", "digital", "congress", "other"]
         },
+        "medium": {
+          "type": "string",
+          "description": "Delivery medium as the person named it (email, print, digital display, congress, social ...). Recorded only; never binds a rule pack — packs bind on market + audience + channel (intent). TEH-RDY-057."
+        },
         "product_name": { "type": "string" },
         "authorized_use_by_jurisdiction": {
           "type": "object",

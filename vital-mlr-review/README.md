@@ -1,6 +1,6 @@
 # VITAL READY (MLR Ready) — Cowork plugin
 
-**release_state: Released** · version **0.4.1** · Hybrid B offline-first.
+**release_state: Released** · version **0.4.2** · Hybrid B offline-first.
 
 
 READY prepares an MLR board packet offline with local rulesets and validators. Add a `vmlr_` key only for metered cloud tools or a durable prep record. Add `vvfy_` only when you want live VERIFY. Humans still approve.

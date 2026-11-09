@@ -15,7 +15,7 @@
 
 ## World-class depth notes (8 November 2026)
 - Score presence, proximity, type-size/contrast, and market-specific panels separately.
-- US and DE fair-balance are not interchangeable checklists.
+- Fair-balance checklists are market-specific: one market's checklist never stands in for another's.
 - Refusing to draft "final ISI" is a feature (never-approve).
 - See standards-by-market.md for per-jurisdiction rows.
 

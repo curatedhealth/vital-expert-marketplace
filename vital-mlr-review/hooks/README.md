@@ -12,4 +12,4 @@ These are **skill-routing hooks** for Cowork / Agent Skills hosts — not OS aut
 | `H-reconcile` | reconcile findings, re-queue chairs, revision loop | `mlr-compile` + `workflows/reconcile-after-findings.md` |
 | `H-refuse` | approve / mlr_reviewed / cleared for promotion / file Form 2253 / submit to FDA | Refuse — never-approve; post-clearance filing deferred |
 
-Machine-readable twin: `hooks.json`. Post-clearance: `references/post-clearance-deferred.md`.
+Machine-readable twin: `routing-hints.json` (not named `hooks.json`: Claude Code loads `hooks/hooks.json` as event hooks, and this routing table is not in that schema). Post-clearance: `references/post-clearance-deferred.md`.

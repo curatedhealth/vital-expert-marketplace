@@ -1,5 +1,7 @@
 # Poor anti-pattern — Regulatory chair
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "Cures 99% of patients before approval."

@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-intake
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Person named markets: Germany (DE), Switzerland (CH). United States was never offered.
 - Audience: HCP. Channel: promotional (person-declared after channel gate elsewhere).

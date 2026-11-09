@@ -1,5 +1,7 @@
 # Poor anti-pattern — Legal chair
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "Brand X is clearly superior; no head-to-head needed."

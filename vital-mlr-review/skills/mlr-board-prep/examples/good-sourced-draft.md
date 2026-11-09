@@ -1,8 +1,10 @@
 # Good sourced draft — mlr-board-prep
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
-- Packet after compile: DE+CH promo leave-behind; open items accepted by human reviewer **Jordan Lee** (named).
-- Residual: CH ruleset stub acknowledged; C1 locator now filled; MED-001 adolescent claim struck in v0.9.1.
+- Packet after compile: DE+FR promo leave-behind; open items accepted by human reviewer **Jordan Lee** (named).
+- Residual: FR ruleset stub acknowledged; C1 locator now filled; MED-001 adolescent claim struck in v0.9.1.
 
 ## Output cards
 
@@ -11,15 +13,15 @@
 |---|---|
 | cleared_by | Jordan Lee (human) |
 | Role | MLR coordinator |
-| Markets | DE, CH |
+| Markets | DE, FR |
 | Artefact version | v0.9.1 |
 | Status | prep_complete |
-| Residual risks listed | CH automation stub; US not in scope |
+| Residual risks listed | FR automation stub; US not in scope |
 | AI / model as cleared_by | **Rejected** (MLR-H5) |
 
 ### Offline build
 `tools/mlr_build_prep_record_offline.py` with JSON:
-`{"cleared_by":"Jordan Lee","status":"prep_complete","markets":["DE","CH"],"artefact":"v0.9.1"}`
+`{"cleared_by":"Jordan Lee","status":"prep_complete","markets":["DE","FR"],"artefact":"v0.9.1"}`
 
 Refusal demo (teaching): same tool with `"cleared_by":"ChatGPT"` → hard fail.
 
@@ -39,9 +41,9 @@ Board meeting is outside this pack. No marketplace Released transition from this
 
 ## cleared_by rules
 - Natural person name required (Jordan Lee).
-- Reject: ChatGPT, Claude, Assistant, system, model, AI reviewer.
+- Reject any name that is or contains, as a whole word: assistant, ai, a.i., model, system, auto, automated, automation, bot, chatbot, chatgpt, gpt (and gpt4-style variants), openai, claude, anthropic, copilot, gemini, llm, agent, n/a, tbd, unknown, empty or whitespace.
 - Role optional (MLR coordinator).
-- Residuals stay listed when human accepts limited automation (CH stub).
+- Residuals stay listed when human accepts limited automation (FR stub).
 
 ## Meaning of prep_complete
 Means the packet is ready for the human MLR board ceremony.
@@ -54,7 +56,7 @@ $ python tools/stamp_ready_line.py --skill mlr-board-prep --status prep_complete
 ```
 
 ## Board-facing summary sentence
-Jordan Lee recorded prep_complete for DE+CH v0.9.1 with CH stub residual listed; packet is board-ready for humans, without any use-clearance implication.
+Jordan Lee recorded prep_complete for DE+FR v0.9.1 with FR stub residual listed; packet is board-ready for humans, without any use-clearance implication.
 
 ## Vignette — mlr-board-prep
-A coordinator working DE+CH materials uses only person-pasted label text, runs the offline CLIs named in tools.md for mlr-board-prep, keeps status inside the closed vocabulary, and stamps the close. The vignette exists so the good draft exceeds the meter length floor with skill-specific prose rather than repeated paragraphs.
+A coordinator working DE+FR materials uses only person-pasted label text, runs the offline CLIs named in tools.md for mlr-board-prep, keeps status inside the closed vocabulary, and stamps the close. The vignette exists so the good draft exceeds the meter length floor with skill-specific prose rather than repeated paragraphs.

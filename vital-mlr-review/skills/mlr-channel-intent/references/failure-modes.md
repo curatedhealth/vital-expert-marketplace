@@ -11,7 +11,8 @@ Detect, name the gap, do not invent clearance.
 
 ## Additional failure modes
 - Accepting "scientific exchange" on a branded efficacy leave-behind with no MI request record.
-- Auto-rewriting channel without human_gate_required.
+- Auto-rewriting the declared channel (intent) yourself, or reading a delivery medium (email, print, congress) as an intent or as an unrecognized channel (TEH-RDY-057).
+- Escalating to human_gate_required only because the intent or posture was not supplied (that is findings_only with questions, TEH-RDY-058).
 - Applying US-only channel doctrine to DE-only packets without saying so.
 
 ## Cross-skill failure modes

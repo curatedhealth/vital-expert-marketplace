@@ -15,6 +15,26 @@ LIABILITY = (
     "It is not medical, legal, or regulatory approval."
 )
 ACCESS = "8 November 2026"
+TARGET_VERSION = "0.4.0"  # version this legacy generator writes
+
+
+def _refuse_unless_target_version(target: str, plugin_json: Path) -> None:
+    """Legacy generator guard (TEH-RDY-011): this script writes version {target} content.
+    Running it against a plugin at any other version would downgrade or overwrite it."""
+    import sys
+
+    try:
+        current = json.loads(plugin_json.read_text(encoding="utf-8")).get("version")
+    except (OSError, ValueError) as exc:
+        sys.stderr.write(f"REFUSED: cannot read {plugin_json}: {exc}\n")
+        raise SystemExit(2)
+    if current != target:
+        sys.stderr.write(
+            f"REFUSED: {Path(__file__).name} targets vital-mlr-review {target}, but "
+            f"{plugin_json} is {current}. Running it would downgrade or overwrite the "
+            f"plugin. Legacy generator — do not run; nothing was written.\n"
+        )
+        raise SystemExit(2)
 
 METHOD_STANDARDS = textwrap.dedent(
     f"""\
@@ -666,6 +686,26 @@ def main() -> None:
         known_answer(skill, meta)
     print("CF04 upgrade files written.")
 
+FORCE_FLAG = "--force-overwrite-teh-fixes"
+
+
+def _refuse_unless_forced() -> None:
+    """Wholesale-rewrite guard (TEH-RDY-032): this script rewrites SKILL.md / references /
+    examples wholesale and would overwrite the TEH fix-lane changes. It refuses unless the
+    explicit flag is passed."""
+    import sys as _sys
+
+    if FORCE_FLAG not in _sys.argv[1:]:
+        _sys.stderr.write(
+            f"REFUSED: {Path(__file__).name} rewrites SKILL.md and references wholesale and would "
+            f"overwrite the TEH fix-lane changes (TEH-RDY-012 to TEH-RDY-032). Run it only on the "
+            f"owner's explicit instruction, with {FORCE_FLAG}. Nothing was written.\n"
+        )
+        raise SystemExit(2)
+    _sys.argv.remove(FORCE_FLAG)
+
 
 if __name__ == "__main__":
+    _refuse_unless_forced()
+    _refuse_unless_target_version(TARGET_VERSION, PLUGIN / ".claude-plugin" / "plugin.json")
     main()

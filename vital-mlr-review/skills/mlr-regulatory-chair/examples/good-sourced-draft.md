@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-regulatory-chair
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: US, DE.
 - Artefact: pre-approval congress booth panel mentioning Product X by trade name with efficacy chart.

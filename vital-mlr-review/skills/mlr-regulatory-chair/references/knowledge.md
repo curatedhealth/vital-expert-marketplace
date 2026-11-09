@@ -39,7 +39,8 @@ Use `mlr-fair-balance-isi` for ISI prominence checklists. Regulatory chair owns 
 
 ## World-class depth notes (8 November 2026)
 - Approval status unknown + efficacy promo → human_gate_required.
-- Form 2253 is deferred in Pilot — record [DEFERRED], do not fake a filing path.
+- Form 2253 is deferred: only when US is a supplied market or the person asks, write one line `[DEFERRED] Form 2253 — out of READY scope`; never a finding, rule row or rule id; do not fake a filing path (TEH-RDY-025).
+- Fail-close is a property of the rule row, not a status: a correctable wording or format finding is `revise`; a human judgment call (pre-approval, audience/channel gate on supplied facts) is `human_gate_required` (TEH-RDY-027); a missing audience, channel or ruleset is a `[GAP]` with `findings_only` (TEH-RDY-047).
 - National advertising rules (e.g. HWG) stay market-scoped.
 
 ## Operating memory (world-class)

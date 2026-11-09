@@ -1,5 +1,7 @@
 # Poor anti-pattern — Intake
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "Just use US rules — we always ship US first."

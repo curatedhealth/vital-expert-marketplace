@@ -33,7 +33,8 @@ Collect markets, channel, artefact, authorized use.
 1. Ask only for missing fields: `jurisdictions[]`, `audience`, `channel`, `artefact_version`, body or artefact id, `authorized_use_by_jurisdiction` (or single-market text), company SOP pointer if any.
 2. If the user names one country, keep it as a one-element array — do not add US.
 3. If the user says "global campaign" without markets, ask for the launch countries.
-4. Call `vital-mlr-review:vital-mlr-review:mlr_intake` with the partial context when `vmlr_` is connected.
+3a. When no markets are named: When the person has named no markets: ask for them, and do not list, enumerate or suggest any specific jurisdiction (not from the ruleset registry, not as "for reference"). Say only that rule packs exist and will be listed once the person names markets.
+4. Call `vital-mlr-review:mlr_intake` with the partial context when `vmlr_` is connected.
 5. Report `missing_fields` and `ruleset_coverage` preview. Do not fill gaps with invented label text.
 
 ## Output

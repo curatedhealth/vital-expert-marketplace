@@ -4,7 +4,7 @@ Access date: 8 November 2026. Teaching citations; confirm live before relying in
 
 | Standard | Why it matters here | URL |
 |---|---|---|
-| EMA SmPC / QRD templates | DE/EU label basis structure for authorized-use paste | https://www.ema.europa.eu/en/human-regulatory/marketing-authorisation/product-information/product-information-templates-human |
+| EMA SmPC / QRD templates | SmPC-based label basis structure for authorized-use paste (supplied markets only) | https://www.ema.europa.eu/en/human-regulatory/marketing-authorisation/product-information/product-information-templates-human |
 | Swissmedic product information | CH label excerpts | https://www.swissmedic.ch/swissmedic/en/home.html |
 | FDA Prescribing Information resources | Only when US is person-listed — never default | https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files |
 

@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """Harden packaging for 11-skill use-case registry + Hybrid B.
 
-- Restore empty .mcp.json
-- plugin.json 0.4.0 Pilot
-- CF04 stubs for channel/claims/fair-balance (worked, gap-rules, patterns, rules, assets)
-- suite-evals.json 11 skills
+Default (no flags or --check): read-only check, exit 0/1.
+--write: create only missing pieces (empty .mcp.json, CF04 stubs, suite-evals
+entries); version and release_state are always read from plugin.json, never pinned.
 - soft-update monorepo test_skills EXPECTED set via companion note (tests updated separately)
 """
 
 from __future__ import annotations
 
+import argparse
 import json
+import re
 from pathlib import Path
 
 PLUGIN = Path(__file__).resolve().parents[1]
@@ -23,9 +24,14 @@ def write(path: Path, text: str) -> None:
     path.write_text(text.rstrip() + "\n", encoding="utf-8")
 
 
+def write_if_missing(path: Path, text: str) -> None:
+    if not path.exists():
+        write(path, text)
+
+
 def stub_cf04(skill: str) -> None:
     root = SKILLS / skill
-    write(
+    write_if_missing(
         root / "examples" / "worked.md",
         f"""# Worked example — {skill}
 
@@ -35,7 +41,7 @@ See `good-sourced-draft.md` for the world-class Output-card shape and
 `poor-*.md` for refuse patterns. Offline stamp via `tools/stamp_ready_line.py`.
 """,
     )
-    write(
+    write_if_missing(
         root / "references" / "gap-rules.md",
         f"""# Gap rules — {skill}
 
@@ -45,7 +51,7 @@ See `good-sourced-draft.md` for the world-class Output-card shape and
 - Cross-chair themes → route to owning skill; do not blend.
 """,
     )
-    write(
+    write_if_missing(
         root / "references" / "patterns.md",
         f"""# Patterns — {skill}
 
@@ -55,7 +61,7 @@ See `good-sourced-draft.md` for the world-class Output-card shape and
 4. Close with stamp + liability line.
 """,
     )
-    write(
+    write_if_missing(
         root / "references" / "rules.md",
         f"""# Rules — {skill}
 
@@ -64,7 +70,7 @@ See `good-sourced-draft.md` for the world-class Output-card shape and
 - Markets explicit; never silent US default.
 """,
     )
-    write(
+    write_if_missing(
         root / "assets" / "worksheet-output.md",
         f"""# Worksheet output — {skill}
 
@@ -72,7 +78,7 @@ Point host output at the matching card under `../../templates/`.
 Teaching material only.
 """,
     )
-    write(
+    write_if_missing(
         root / "assets" / "liability-line.md",
         "This prepares material for human MLR review. It is not medical, legal, or regulatory approval.\n",
     )
@@ -83,59 +89,91 @@ Teaching material only.
             write(ex, "Teaching material only (MLR-H2).\n\n" + text)
 
 
-def main() -> int:
-    write(PLUGIN / ".mcp.json", "{}")
-    pj_path = PLUGIN / ".claude-plugin" / "plugin.json"
-    pj = json.loads(pj_path.read_text(encoding="utf-8"))
-    pj["version"] = "0.4.0"
-    pj["release_state"] = "Pilot"
-    pj["description"] = (
-        "MLR board preparation (READY): 11 skills, Hybrid B offline-first, "
-        "never approves. Pilot — not marketplace Released."
-    )
-    write(pj_path, json.dumps(pj, indent=2))
+CF04_FILES = (
+    "examples/worked.md",
+    "references/gap-rules.md",
+    "references/patterns.md",
+    "references/rules.md",
+    "assets/worksheet-output.md",
+    "assets/liability-line.md",
+)
+ALLOWED_STATES = {"Pilot", "Back-tested", "Released"}
 
+
+def _disk_skills() -> list[str]:
+    return sorted(p.name for p in SKILLS.iterdir() if (p / "SKILL.md").is_file())
+
+
+def check() -> list[str]:
+    """Read-only packaging check. Returns a list of failures (empty = pass)."""
+    fails: list[str] = []
+    try:
+        if json.loads((PLUGIN / ".mcp.json").read_text(encoding="utf-8")) != {}:
+            fails.append(".mcp.json not empty (Hybrid B)")
+    except (OSError, json.JSONDecodeError) as exc:
+        fails.append(f".mcp.json unreadable: {exc}")
+    pj = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
+    if not re.fullmatch(r"\d+\.\d+\.\d+", str(pj.get("version") or "")):
+        fails.append(f"plugin.json version not semver: {pj.get('version')!r}")
+    if pj.get("release_state") not in ALLOWED_STATES:
+        fails.append(f"plugin.json release_state {pj.get('release_state')!r} not in {sorted(ALLOWED_STATES)}")
+    for skill in NEW:
+        for rel in CF04_FILES:
+            if not (SKILLS / skill / rel).is_file():
+                fails.append(f"{skill} missing CF04 file {rel}")
+    suite = json.loads((PLUGIN / "evals" / "suite-evals.json").read_text(encoding="utf-8"))
+    ids = sorted(s["id"] for s in suite.get("skills", []))
+    if ids != _disk_skills():
+        fails.append(f"suite-evals skills {ids} != skills on disk {_disk_skills()}")
+    for entry in suite.get("skills", []):
+        if not entry.get("must_refuse"):
+            fails.append(f"suite-evals {entry.get('id')} missing must_refuse")
+    if suite.get("version") != pj.get("version"):
+        fails.append(f"suite-evals version {suite.get('version')!r} != plugin.json {pj.get('version')!r}")
+    return fails
+
+
+def write_missing() -> None:
+    """Create only what is missing. Never changes plugin.json version, release_state
+    or description, and never overwrites existing CF04 files or suite entries."""
+    write(PLUGIN / ".mcp.json", "{}")
+    pj = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
     for skill in NEW:
         stub_cf04(skill)
-
-    # suite-evals
     suite_path = PLUGIN / "evals" / "suite-evals.json"
-    skills = sorted(p.name for p in SKILLS.iterdir() if (p / "SKILL.md").is_file())
-    suite = {
-        "version": "0.4.0",
-        "pack": "vital-mlr-review",
-        "release_state": "Pilot",
-        "routing_harness": "mcps/mlr_review/tests/test_skills.py",
-        "use_case_registry": "evals/USE_CASE_REGISTRY.json",
-        "use_case_e2e": "scripts/run_use_case_e2e.py",
-        "script_self_tests": [
-            "check_forbidden_phrases.py",
-            "check_jurisdictions.py",
-            "check_finding_shape.py",
-            "validate_packet_shape.py",
-        ],
-        "skills": [
-            {
-                "id": s,
-                "evals": f"skills/{s}/evals/evals.json",
-            }
-            for s in skills
-        ],
-        "anthropic_alignment": {
-            "third_person_description": True,
-            "imperative_skill_body": True,
-            "qualified_mcp_tools": True,
-            "progressive_disclosure": True,
-            "deterministic_scripts": True,
-            "model_versus_model": False,
-        },
-        "counts": {
-            "skills": len(skills),
-            "use_cases": 60,
-        },
-    }
+    suite = json.loads(suite_path.read_text(encoding="utf-8")) if suite_path.is_file() else {"skills": []}
+    suite["version"] = pj["version"]
+    suite["release_state"] = pj.get("release_state")
+    have = {s["id"] for s in suite.get("skills", [])}
+    for skill in _disk_skills():
+        if skill in have:
+            continue
+        ev = json.loads((SKILLS / skill / "evals" / "evals.json").read_text(encoding="utf-8"))
+        refuse = (ev.get("must_refuse") or [{}])[0].get("request", "")
+        suite.setdefault("skills", []).append(
+            {"id": skill, "must_refuse": refuse, "scripts": [], "primary_tools": []}
+        )
     write(suite_path, json.dumps(suite, indent=2))
-    print("hardened packaging: empty mcp, 0.4.0 Pilot, CF04 stubs, suite-evals")
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument(
+        "--write",
+        action="store_true",
+        help="create missing packaging pieces (default is a read-only --check)",
+    )
+    ap.add_argument("--check", action="store_true", help="read-only packaging check (default)")
+    args = ap.parse_args(argv)
+    if args.write and not args.check:
+        write_missing()
+    fails = check()
+    if fails:
+        print(f"FAIL ({len(fails)}):")
+        for f in fails:
+            print(" -", f)
+        return 1
+    print("PASS packaging: empty mcp, version/state from plugin.json, CF04 files, suite-evals covers all skills")
     return 0
 
 

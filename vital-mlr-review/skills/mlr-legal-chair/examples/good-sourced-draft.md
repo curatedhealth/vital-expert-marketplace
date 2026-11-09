@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-legal-chair
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: DE, US.
 - Artefact line: "The #1 prescribed T2D therapy among endocrinologists — better tolerated than Product Y."

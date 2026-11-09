@@ -26,7 +26,7 @@ The four class names are the pack standard (aligned with Verify / Decision Compa
 ## Additional failure modes
 - Dropping open checklist items to reach prep_complete.
 - Merging M/L/R into a single approve score.
-- Hiding CH stub warnings from the board packet.
+- Hiding stub-ruleset warnings (catalogue status `stub`) from the board packet.
 
 ## Cross-skill failure modes
 - Borrowing another skill's good-draft paragraphs (clone detection fails the meter).

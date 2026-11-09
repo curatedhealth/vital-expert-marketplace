@@ -1,5 +1,7 @@
 # Poor anti-pattern — Medical chair
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "As MLR we approve clinically and legally this slide is fine."

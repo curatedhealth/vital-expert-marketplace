@@ -2,6 +2,9 @@
 
 Access date: 8 November 2026. Orientation only; confirm current law/guidance before a live board.
 
+
+Use only the rows for markets the person supplied. Never write a line for a market the person did not supply, and never copy this table's market list into an answer (TEH-RDY-024).
+
 | Market | Instrument / theme | What to score on the artefact | URL |
 |---|---|---|---|
 | US | 21 CFR 202.1 fair balance | Risk info comparable in scope to benefit claims; ISI presence + prominence | https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202 |

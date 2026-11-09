@@ -2,6 +2,8 @@
 
 Stamp every close `READY-local · not tool-checked · not metered`. Never approve.
 
+**Inputs (MLR-H1, TEH-RDY-017):** never create stand-in packets, placeholder versions, or chair decisions to make a tool run. When a step's input (artefact version, a chair packet, the validated compile output) is not supplied, stop at that step, say what is missing, close with `Status: findings_only` (or `human_gate_required` when the request asks to approve or clear, or to bypass any hard rule MLR-H1–H8, including an AI owner request — precedence rule 1, `../references/finding-status-map.md`), and do not call later tools — never `mlr_build_prep_record`.
+
 1. **Route** — `mlr-capability-map`
 2. **Channel gate** — `mlr-channel-intent` → `python tools/channel_intent_gate.py`
 3. **Intake** — `mlr-intake` → `python tools/mlr_intake_offline.py` (jurisdictions required)
@@ -13,4 +15,6 @@ Stamp every close `READY-local · not tool-checked · not metered`. Never approv
 
 Reconciliation: if claim text changes after chairs, use `workflows/reconcile-after-findings.md` and `templates/reconciliation-loop.md`.
 
-**Stop here for READY.** Form 2253 / archival filing are human ops after clearance — see `workflows/post-clearance-human-ops-deferred.md`. Do not invent a filing step.
+**Stop here for READY.** Regulator submission filings and archival are human ops after clearance (name Form 2253 only when US is a supplied market or the person asks) — see `workflows/post-clearance-human-ops-deferred.md`. Do not invent a filing step.
+
+**Close stamp (TEH-RDY-030):** the stamp names the last skill actually run in this answer. When the workflow stops early (a gate, a missing input), stamp the skill where it stopped — never a later skill that did not run.

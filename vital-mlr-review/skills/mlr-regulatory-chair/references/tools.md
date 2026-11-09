@@ -16,6 +16,9 @@ When `vmlr_` is present, MCP tools on server `vital-mlr-review` may mirror the o
 When `vvfy_` is present, VERIFY handoff may be tool-checked. Never invent tool fields.
 Always use fully qualified `vital-mlr-review:<tool>` names if calling MCP.
 
+Qualified MCP names for this skill (call only when the key is present; otherwise run offline and label **not tool-checked**):
+- `vital-mlr-review:mlr_get_ruleset` — primary
+
 ## Invocation rule
 Offline first. Stamp every user-facing close with `python tools/stamp_ready_line.py --skill mlr-regulatory-chair --status <status>`.
 Written 8 November 2026 (READY world-class content uplift).

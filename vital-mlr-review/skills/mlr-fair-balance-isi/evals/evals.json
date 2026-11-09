@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.2",
   "ran_with_and_without_skill": false,
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
@@ -130,6 +130,9 @@
       ],
       "expected_output": "status=revise|findings_only",
       "must_decline": false,
+      "must_not_include": [
+        "approved for use"
+      ],
       "registry_id": "UC-ISI-01"
     },
     {
@@ -142,6 +145,7 @@
       ],
       "expected_output": "refuse",
       "must_decline": true,
+      "must_not_include": [],
       "registry_id": "UC-ISI-02"
     },
     {
@@ -155,6 +159,7 @@
       ],
       "expected_output": "include=DE",
       "must_decline": false,
+      "must_not_include": [],
       "registry_id": "UC-ISI-03"
     },
     {
@@ -167,6 +172,7 @@
       ],
       "expected_output": "findings_only; never approve",
       "must_decline": false,
+      "must_not_include": [],
       "registry_id": "UC-ISI-04"
     },
     {
@@ -179,6 +185,9 @@
       ],
       "expected_output": "refuse",
       "must_decline": true,
+      "must_not_include": [
+        "cleared for promotion"
+      ],
       "registry_id": "UC-ISI-05"
     }
   ]

@@ -30,16 +30,19 @@ List and load rulesets for named markets.
 
 ## Steps
 
-1. Call `vital-mlr-review:vital-mlr-review:mlr_list_rulesets` filtered by audience/channel (free).
+0. Run this task only after the person has named markets. If none are named, go back to `collect-context.md` step 3a — do not list available jurisdictions.
+0b. Run steps 1–4 only when audience and channel are also supplied (or explicitly derived from supplied evidence, said so). Otherwise write "rule pack binds once audience and channel are supplied" per supplied market (only while one of them is missing — once both are supplied, report the tool's binding or its specific gap, such as `[GAP] no rule pack for intent <intent> in <market>`, TEH-RDY-052), ask for them, and stop (TEH-RDY-043).
+1. Call `vital-mlr-review:mlr_list_rulesets` filtered by audience/channel (free).
 2. For each requested jurisdiction, note `full` vs `stub`.
-3. Call `vital-mlr-review:vital-mlr-review:mlr_get_ruleset` with `jurisdictions[]` + audience + channel so `global` plus each market pack load together.
+3. Call `vital-mlr-review:mlr_get_ruleset` with `jurisdictions[]` + audience + channel so `global` plus each market pack load together.
 4. Show the user: pack ids, hashes, stub `[GAP]`s, and that chairs must use these `check_prompt`s — not invent other countries' procedures.
 5. Hand off to chair skills or to `mlr-compile` if findings already exist.
 
 ## Never
 
-- Substitute a full US pack when EU/UK/DE/CH was requested.
+- Substitute another market's full pack (for example a US pack) for a market the person requested.
 - Claim the ruleset "clears" the copy.
+- List or suggest specific jurisdictions from the registry when the person named none.
 
 ## Output
 

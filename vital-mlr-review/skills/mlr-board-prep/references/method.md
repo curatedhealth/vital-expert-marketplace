@@ -8,4 +8,4 @@
 
 Hard stop: no jurisdictions → stop. No approval language ever.
 
-After the pack is ready: stop. Do not file Form 2253. See `../../references/post-clearance-deferred.md`.
+After the pack is ready: stop. Do not file any regulator submission (Form 2253 is named only when US is a supplied market or the person asks). See `../../references/post-clearance-deferred.md`.

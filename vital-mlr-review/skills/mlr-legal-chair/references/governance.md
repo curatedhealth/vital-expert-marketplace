@@ -17,7 +17,7 @@
 ## Never claimed
 
 - That the copy is MLR approved, regulator approved, or cleared for promotion.
-- That a missing PI/SmPC/FI was reconstructed from model memory.
+- That missing authorized labeling text was reconstructed from model memory.
 - That VERIFY ran when `vvfy_` was absent.
 
 ## Closing statement

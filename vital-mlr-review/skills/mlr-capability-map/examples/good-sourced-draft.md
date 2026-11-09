@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-capability-map
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 Operator asks: "What can this pack do for a DE+CH HCP leave-behind before the board?"
 No artefact body yet — map skills and refuse approval language.

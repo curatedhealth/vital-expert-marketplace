@@ -16,7 +16,8 @@
 ## World-class depth notes (8 November 2026)
 - Declared channel loses to artefact signals when they conflict.
 - Unsolicited MI request records are evidence; absence is [GAP], not "probably fine."
-- Mixed channel pieces are usually `human_gate_required`.
+- Mixed channel pieces — promotional and medical-information content in one piece (for example branded claims plus MI letter fragments), or any content that supports more than one channel/intent reading — are `human_gate_required`, with the conflicting elements quoted (TEH-RDY-061). A piece whose intent was simply not declared is not mixed: when its supplied content carries one reading, it gets a provisional decision (`provisional: treat as promotional — pending: …`, `findings_only`; TEH-RDY-062); when the content is incomplete and carries no reading, it is a missing input (TEH-RDY-058).
+- Intent (promo / scientific exchange / med info) is what binds a rule pack; the delivery medium (email, print, congress, social) is recorded only (TEH-RDY-057).
 - Branding + efficacy + ISI footer strongly suggests promotional posture.
 
 ## Operating memory (world-class)

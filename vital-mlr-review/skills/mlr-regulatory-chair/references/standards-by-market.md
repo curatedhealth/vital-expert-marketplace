@@ -2,6 +2,9 @@
 
 Checklists and URLs: `mlr_get_ruleset` packs. Date-read: 24 October 2026.
 
+
+Use only the rows for markets the person supplied. Never write a line for a market the person did not supply, and never copy this table's market list into an answer (TEH-RDY-024).
+
 | Market | Regulatory / process instruments (primary) | Regulatory lens |
 |---|---|---|
 | **global** | Cross-cutting promo hygiene (audience fit; no invented compliance stamps) | Channel/audience fitness before local overlays |
@@ -10,7 +13,7 @@ Checklists and URLs: `mlr_get_ruleset` packs. Date-read: 24 October 2026.
 | **UK** | ABPI Code of Practice; MHRA Blue Guide | Examination/certification expectations; Blue Guide process |
 | **DE** | HWG; AMG advertising-related; FSA Code | National advertising restrictions + self-regulation process |
 | **CH** | Swissmedic advertising guidance; TPA/HMG; Pharma Code | Swiss advertising authorization / self-regulation process |
-| **FR / JP / CA / AU / BR** | Stub hints (e.g. ANSM / Charte where listed) | `[GAP]` — do not invent national filing rules |
+| Any market the catalogue lists as `stub` (`rulesets/REGISTRY.json`) | Authority hints from the catalogue only | `[GAP]` — do not invent national filing rules |
 
 ## Practice rules (regulatory)
 

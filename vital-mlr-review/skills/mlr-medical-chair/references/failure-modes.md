@@ -7,7 +7,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | Class | Meaning here | How to word it |
 |---|---|---|
 | found | Ruleset medical item fails | Write finding with source_ref |
-| field missing | No authorized-use text | [GAP]; do not invent PI/SmPC/FI |
+| field missing | No authorized-use text | [GAP]; do not invent authorized labeling text |
 | covered but absent | No medical issue | decision approve means not blocking handoff |
 | not covered | No vmlr_ | Chair by hand; not tool-checked |
 
@@ -26,6 +26,7 @@ The four class names are the pack standard (aligned with Verify / Decision Compa
 ## Additional failure modes
 - Expanding indication to adolescents without label support.
 - Blending Legal comparative themes into Medical cards.
+- Writing a medical finding or severity on a ranking / “#1” claim when no clinical data or label text was supplied — record `[GAP]` and route to Legal instead.
 - Using "medically accurate" as a status synonym for approved.
 
 ## Cross-skill failure modes

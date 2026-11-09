@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-medical-chair
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: DE, CH.
 - Claim under review: "Product X is indicated for adults and adolescents ≥12 years with type 2 diabetes."

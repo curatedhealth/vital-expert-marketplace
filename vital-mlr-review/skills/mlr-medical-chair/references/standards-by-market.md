@@ -2,7 +2,10 @@
 
 Authoritative names the medical skill must respect. Full checklists and URLs live in
 `mlr_get_ruleset` packs (`mcps/mlr_review/rulesets/`). Date-read on packs: 24 October 2026.
-Stubs (FR, JP, CA, AU, BR) list authority hints only — mark `[GAP]`, never substitute another market’s pack.
+Markets the catalogue (`rulesets/REGISTRY.json`) lists as `stub` have authority hints only — mark `[GAP]`, never substitute another market’s pack.
+
+
+Use only the rows for markets the person supplied. Never write a line for a market the person did not supply, and never copy this table's market list into an answer (TEH-RDY-024).
 
 | Market | Medical-facing instruments (primary) | What medical reviews against |
 |---|---|---|
@@ -12,12 +15,12 @@ Stubs (FR, JP, CA, AU, BR) list authority hints only — mark `[GAP]`, never sub
 | **UK** | ABPI Code (claims consistent with SmPC); MHRA Blue Guide (clinical promotional expectations) | UK SmPC |
 | **DE** | HWG + AMG advertising-related limits; FSA Code clinical advertising norms | German Fachinformation / SmPC |
 | **CH** | Swissmedic advertising guidance; TPA/HMG advertising frame; Pharma Code | Swiss product information supplied by user |
-| **FR / JP / CA / AU / BR** | Stub authority hints only in registry | Do not invent national medical rules; `[GAP]` + company SOP |
+| Any market the catalogue lists as `stub` (`rulesets/REGISTRY.json`) | Authority hints only in the catalogue | Do not invent national medical rules; `[GAP]` + company SOP |
 
 ## Practice rules (medical)
 
-1. **Label first.** No PI/SmPC/FI for a market → medical finding is `[GAP]`, not a recalled label.
-2. **Per-market authorized use.** US PI is not a substitute for EU SmPC or DE Fachinformation.
+1. **Label first.** No authorized labeling text for a market → medical finding is `[GAP]`, not a recalled label. Name the document from that market's row in `../../../references/label-basis-by-market.md`.
+2. **Per-market authorized use.** One market's labeling is never a substitute for another market's.
 3. **Fair balance is clinical.** Benefit claims without material risks from the supplied label are medical findings; burying risks in layout may also be regulatory — flag medical severity and point Regulatory at format.
 4. **Superiority needs basis.** Comparative clinical claims without adequate supplied evidence → medical finding; legal owns disparagement/comparative-ad risk separately.
 5. **Company medical SOP wins** when it is stricter; name it when supplied.

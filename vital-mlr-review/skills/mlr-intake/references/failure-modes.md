@@ -24,8 +24,9 @@ The four class names are the pack standard (aligned with Verify / Decision Compa
 - FM-IN1: Silent US insertion when user said 'Europe'.
 
 ## Additional failure modes
-- Silent US market inject when person listed only EU/CH markets.
-- Treating CH stub ruleset as full automation coverage.
+- Silent US market inject when the person listed only non-US markets.
+- Markets menu: person named no markets and the answer enumerated available ruleset jurisdictions (even "for reference" or "not a suggestion").
+- Treating a stub ruleset (catalogue status `stub`) as full automation coverage, or calling a `full` pack a stub.
 - Pasting competitor label text as if it were the product FI.
 - Closing intake with status prep_complete (wrong skill).
 

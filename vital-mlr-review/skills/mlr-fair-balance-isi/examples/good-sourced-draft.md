@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-fair-balance-isi
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: US, DE (person listed both).
 - Artefact: 2-page HCP leave-behind. Page 1 efficacy bullets; page 2 dense ISI block in 7pt.

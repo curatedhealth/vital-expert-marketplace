@@ -1,5 +1,7 @@
 # Poor anti-pattern — Compile
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "Medical, legal, and regulatory all approved this packet."

@@ -1043,6 +1043,25 @@ Why poor: Violates MLR-H3 / FORBIDDEN_PHRASES. Correct status is findings_only|r
     print(f"upgraded skills; pruned assets dirs={n}")
     return 0
 
+FORCE_FLAG = "--force-overwrite-teh-fixes"
+
+
+def _refuse_unless_forced() -> None:
+    """Wholesale-rewrite guard (TEH-RDY-032): this script rewrites SKILL.md / references /
+    examples wholesale and would overwrite the TEH fix-lane changes. It refuses unless the
+    explicit flag is passed."""
+    import sys as _sys
+
+    if FORCE_FLAG not in _sys.argv[1:]:
+        _sys.stderr.write(
+            f"REFUSED: {Path(__file__).name} rewrites SKILL.md and references wholesale and would "
+            f"overwrite the TEH fix-lane changes (TEH-RDY-012 to TEH-RDY-032). Run it only on the "
+            f"owner's explicit instruction, with {FORCE_FLAG}. Nothing was written.\n"
+        )
+        raise SystemExit(2)
+    _sys.argv.remove(FORCE_FLAG)
+
 
 if __name__ == "__main__":
+    _refuse_unless_forced()
     raise SystemExit(main())

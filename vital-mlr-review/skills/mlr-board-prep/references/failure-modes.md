@@ -24,7 +24,9 @@ The four class names are the pack standard (aligned with Verify / Decision Compa
 - FM-B1: Prep record without human cleared_by.name.
 
 ## Additional failure modes
-- Accepting ChatGPT / Claude / Assistant as cleared_by.
+- Accepting ChatGPT / Claude / Assistant / auto / system (or a human name wrapped around one, e.g. "Claude on behalf of …") as cleared_by.
+- Labeling the record state `prep_cleared_for_human_mlr` as the packet status.
+- Stating `prep_complete` while a blocking item is open or a residual has no named human acceptor.
 - Equating prep_complete with approved-for-use.
 - Removing residual risk lines the human accepted.
 

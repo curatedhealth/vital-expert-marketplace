@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -187,11 +188,64 @@ def run_journey(name: str, fails: list[str]) -> None:
     fail(f"unknown journey {name}", fails)
 
 
+def _dig(obj: object, dotted: str) -> object:
+    for part in dotted.split("."):
+        obj = obj.get(part) if isinstance(obj, dict) else None
+    return obj
+
+
+def run_input_steps(case: dict, probe: dict, fails: list[str]) -> None:
+    """Probe steps fed by the case's person-supplied input (TEH-RDY-020)."""
+    cid = case["id"]
+    inp = case.get("inputs") or {}
+    path = PLUGIN / str(inp.get("path") or "")
+    if not inp.get("path") or not path.is_file():
+        fail(f"{cid} supplied input file missing: {inp.get('path')!r}", fails)
+        return
+    supplied = json.loads(path.read_text(encoding="utf-8"))
+    if json.loads(inp.get("text") or "null") != supplied:
+        fail(f"{cid} registry input text differs from {inp['path']} — rerun the builder", fails)
+    try:
+        home = os.getcwd()
+    except FileNotFoundError:  # an earlier journey may have left a removed temp folder as cwd
+        home = str(PLUGIN)
+    with tempfile.TemporaryDirectory() as tmp:
+        os.chdir(tmp)  # the prep-record tool writes ready-sessions/ under the working folder
+        try:
+            for i, step in enumerate(probe["steps"], 1):
+                data = json.loads(json.dumps(supplied))
+                for key in step.get("drop_keys") or []:
+                    data.pop(key, None)
+                args = dict(data) if step.get("input_as") == "args" else {step["input_as"]: data}
+                args.update(step.get("args") or {})
+                out = run_tool(step["tool"], args)
+                tag = f"{cid} step {i} {step['tool']}"
+                want = step.get("assert_ok")
+                if want is True and not out.get("ok"):
+                    fail(f"{tag} expected ok: {out.get('errors') or out.get('gaps')}", fails)
+                    continue
+                if want is False and out.get("ok"):
+                    fail(f"{tag} expected fail", fails)
+                if "expect_status" in step:
+                    got = out.get("mlr_status")
+                    if got != step["expect_status"]:
+                        fail(f"{tag} status {got!r} != expected {step['expect_status']!r}", fails)
+                for dotted, expected in (step.get("expect_record") or {}).items():
+                    got = _dig(out.get("record"), dotted)
+                    if got != expected:
+                        fail(f"{tag} record.{dotted}={got!r} != {expected!r}", fails)
+        finally:
+            os.chdir(home)
+
+
 def run_probe(case: dict, fails: list[str]) -> None:
     probe = case.get("offline_probe")
     if not probe:
         return
     cid = case["id"]
+    if "steps" in probe:
+        run_input_steps(case, probe, fails)
+        return
     if "journey" in probe:
         run_journey(probe["journey"], fails)
         return
@@ -224,6 +278,32 @@ def run_probe(case: dict, fails: list[str]) -> None:
             fail(f"{cid} submission expected ok", fails)
         return
     fail(f"{cid} unknown probe", fails)
+
+
+def _skill_meta_version(skill_md: Path) -> str | None:
+    """metadata.version from SKILL.md front matter (no yaml dependency)."""
+    text = skill_md.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        return None
+    front = text.split("---", 2)[1]
+    m = re.search(r"^  version:\s*\"?([^\"\n]+?)\"?\s*$", front, re.MULTILINE)
+    return m.group(1).strip() if m else None
+
+
+def _version_labels() -> list[tuple[str, object]]:
+    labels: list[tuple[str, object]] = []
+    for rel in ("evals/suite-evals.json", "evals/USE_CASE_REGISTRY.json", "hooks/routing-hints.json"):
+        path = PLUGIN / rel
+        if path.is_file():
+            labels.append((rel, json.loads(path.read_text(encoding="utf-8")).get("version")))
+        else:
+            labels.append((rel, "<missing file>"))
+    for skill_dir in sorted(p for p in (PLUGIN / "skills").iterdir() if p.is_dir()):
+        labels.append((f"skills/{skill_dir.name}/SKILL.md metadata.version", _skill_meta_version(skill_dir / "SKILL.md")))
+        ev = skill_dir / "evals" / "evals.json"
+        if ev.is_file():
+            labels.append((f"skills/{skill_dir.name}/evals/evals.json", json.loads(ev.read_text(encoding="utf-8")).get("version")))
+    return labels
 
 
 def main() -> int:
@@ -268,13 +348,22 @@ def main() -> int:
     if mcp != {}:
         fail(f".mcp.json not empty Hybrid B: {mcp}", fails)
 
+    # Version is read from plugin.json itself (no hard pin); it must be a
+    # well-formed semver string. release_state must be a known pilot-or-later state.
     pj = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
-    if pj.get("version") != "0.4.0":
-        fail(f"plugin.json version {pj.get('version')} != 0.4.0", fails)
-    if pj.get("release_state") not in (None, "Pilot"):
-        # prefer Pilot set
-        if pj.get("release_state") != "Pilot":
-            fail(f"release_state {pj.get('release_state')}", fails)
+    version = pj.get("version")
+    if not isinstance(version, str) or not re.fullmatch(r"\d+\.\d+\.\d+", version):
+        fail(f"plugin.json version missing or not semver: {version!r}", fails)
+    allowed_states = {"Pilot", "Back-tested", "Released"}
+    if pj.get("release_state") not in allowed_states:
+        fail(f"release_state {pj.get('release_state')!r} not in {sorted(allowed_states)}", fails)
+
+    # Version agreement (TEH-RDY-010): every version label the pack carries must equal
+    # plugin.json — suite evals, the use-case registry, the routing-hint table, and each
+    # skill's SKILL.md metadata.version and evals/evals.json version.
+    for label, value in _version_labels():
+        if value != version:
+            fail(f"version mismatch: {label}={value!r} != plugin.json {version!r}", fails)
 
     # workflows exist
     for name in (
@@ -328,7 +417,7 @@ def main() -> int:
         if proc.returncode != 0:
             fail(f"{test} FAIL\n{proc.stdout[-400:]}\n{proc.stderr[-400:]}", fails)
 
-    print(f"READY use-case E2E — cases={len(cases)}")
+    print(f"READY use-case E2E — cases={len(cases)} version={pj.get('version')} release_state={pj.get('release_state')}")
     if fails:
         print(f"FAIL ({len(fails)}):")
         for f in fails:

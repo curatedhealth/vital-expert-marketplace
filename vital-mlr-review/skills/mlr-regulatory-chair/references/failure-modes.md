@@ -26,6 +26,9 @@ The four class names are the pack standard (aligned with Verify / Decision Compa
 ## Additional failure modes
 - Soft-pedaling pre-approval trade-name efficacy charts.
 - Simulating Form 2253 submission while deferred.
+- Writing Form 2253 as a finding or rule row, or minting a rule id that is not in a loaded ruleset (TEH-RDY-025).
+- Composing a claim span that is not a verbatim quote of person-supplied text (TEH-RDY-026).
+- Gating a correctable wording or format finding only because its rule row is fail-close (TEH-RDY-027).
 - Treating compile schema-OK as regulatory clearance.
 
 ## Cross-skill failure modes

@@ -1,5 +1,7 @@
 # Poor anti-pattern — Board prep
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "cleared_by: system / ChatGPT"

@@ -1,0 +1,54 @@
+{
+  "artefact_version": "v0.9.1",
+  "jurisdictions": [
+    "DE",
+    "FR"
+  ],
+  "ruleset_ids": [
+    "mlr-global-hcp-promo-v0",
+    "mlr-de-hcp-promo-v0"
+  ],
+  "chairs": {
+    "medical": {
+      "chair": "medical",
+      "artefact_version": "v0.9.1",
+      "ruleset_id": "mlr-de-hcp-promo-v0",
+      "decision": "approve",
+      "findings": [],
+      "comments": [
+        "Fictional product Velarix (case input, not a real medicine). C1 passage locator added in v0.9.1; no medical finding open."
+      ],
+      "gaps": []
+    },
+    "legal": {
+      "chair": "legal",
+      "artefact_version": "v0.9.1",
+      "ruleset_id": "mlr-de-hcp-promo-v0",
+      "decision": "approve",
+      "findings": [],
+      "comments": [
+        "No legal finding open on v0.9.1."
+      ],
+      "gaps": []
+    },
+    "regulatory": {
+      "chair": "regulatory",
+      "artefact_version": "v0.9.1",
+      "ruleset_id": "mlr-de-hcp-promo-v0",
+      "decision": "approve",
+      "findings": [],
+      "comments": [
+        "No regulatory finding open on v0.9.1. One residual listed under gaps."
+      ],
+      "gaps": [
+        {
+          "code": "FR_STUB_RESIDUAL",
+          "detail": "FR stub residual: the offline ruleset catalogue (rulesets/REGISTRY.json) lists mlr-fr-hcp-promo-v0 as stub (authority hints only, no checklist), so FR rows had no automated checklist. Listed on the board cover and accepted by Jordan Lee (Coordinator) for this artefact version."
+        }
+      ]
+    }
+  },
+  "conflicts": [],
+  "mlr_status": "prep_complete",
+  "liability_line": "This prepares material for human MLR review. It is not medical, legal, or regulatory approval."
+}

@@ -15,9 +15,12 @@ from contract import (
     AUDIENCES,
     CHAIRS,
     CHANNELS,
+    INTENTS,
+    split_channel,
     CHAIR_DECISIONS,
     COUNTED_TOOLS,
     DISPLAY_NAME,
+    FORBIDDEN_PATTERNS,
     FORBIDDEN_PHRASES,
     LIABILITY_LINE,
     METHOD_VERSION,
@@ -148,6 +151,18 @@ def _norm_jurisdictions(args: dict[str, Any]) -> list[str]:
     return out
 
 
+def _no_pack_for_channel(jurisdiction: str, audience: str, channel: str) -> str:
+    """Specific coverage gap when no catalogue pack matches market + audience + intent (TEH-RDY-052).
+
+    `channel` here is the rule-pack catalogue key: the communication intent (TEH-RDY-057)."""
+    where = "global" if jurisdiction.upper() == "GLOBAL" else jurisdiction
+    for row in _registry().get("packs") or []:
+        j = str(row.get("jurisdiction", ""))
+        if (j.upper() == jurisdiction.upper()) and row.get("audience") == audience:
+            return f"[GAP] no rule pack for intent {channel} in {where}"
+    return f"[GAP] no ruleset catalogue row for {jurisdiction}/{audience}/{channel}"
+
+
 def _coverage_for(jurisdiction: str, audience: str, channel: str) -> dict[str, Any]:
     packs = _registry().get("packs") or []
     match = None
@@ -160,20 +175,14 @@ def _coverage_for(jurisdiction: str, audience: str, channel: str) -> dict[str, A
                 match = row
                 break
     if match is None:
-        # fall back to any pack for that jurisdiction + audience
-        for row in packs:
-            j = str(row.get("jurisdiction", ""))
-            if j.upper() == jurisdiction.upper() or (jurisdiction.upper() == "GLOBAL" and j == "global"):
-                if row.get("audience") == audience:
-                    match = row
-                    break
-    if match is None:
+        # TEH-RDY-052: never substitute a pack for another intent. A pack for the same market and
+        # audience but a different intent is not coverage — report the specific gap instead.
         return {
             "jurisdiction": jurisdiction,
             "status": "missing",
             "ruleset_id": None,
             "authority_hints": [],
-            "gap": f"[GAP] no ruleset catalogue row for {jurisdiction}/{audience}/{channel}",
+            "gap": _no_pack_for_channel(jurisdiction, audience, channel),
         }
     return {
         "jurisdiction": jurisdiction,
@@ -186,17 +195,65 @@ def _coverage_for(jurisdiction: str, audience: str, channel: str) -> dict[str, A
     }
 
 
+def _channel_notes(split: dict[str, Any] | None) -> str:
+    """Report the intent/medium split back to the person (TEH-RDY-057): never a silent mapping."""
+    if not split:
+        return ""
+    notes = []
+    for m in split.get("mapping") or []:
+        if m.get("read_as") == "intent" and m.get("supplied", "").strip().lower() != m.get("value"):
+            notes.append(f"Intent word {m['supplied']!r} read as intent {m['value']} — report this mapping.")
+    if split.get("medium"):
+        notes.append(f"Medium {split['medium']!r} recorded; a delivery medium never binds a rule pack.")
+    if split.get("conflict"):
+        notes.append("Supplied intent values conflict — ask which intent applies; do not choose.")
+    return (" " + " ".join(notes)) if notes else ""
+
+
+def _intake_next(missing: list[str], unmatched_channel: str, jurisdictions: list[str],
+                 coverage: list[dict[str, Any]] | None = None, split: dict[str, Any] | None = None) -> str:
+    """The intake `next` line: binding instruction, the specific intent gap, or the bind-later ask."""
+    notes = _channel_notes(split)
+    if "audience" in missing or "channel" in missing:
+        text = ("Rule pack binds once audience and channel are supplied — ask the person; do not guess (TEH-RDY-043). "
+                "Channel here is the communication intent the rule-pack catalogue keys on (promo or "
+                "scientific_exchange), not the delivery medium (TEH-RDY-057).")
+        if unmatched_channel:
+            text += (f" Supplied value {unmatched_channel!r} is neither a known intent nor a known medium — ask which "
+                     "intent applies; do not map it yourself.")
+        return text + notes
+    if unmatched_channel:
+        markets = ", ".join(jurisdictions)
+        return (
+            f"No rule pack for intent {unmatched_channel} in {markets} (supplied value {unmatched_channel!r} is neither "
+            f"an intent in the catalogue vocabulary ({', '.join(INTENTS)}) nor a known delivery medium). Report this "
+            "gap per market; ask the person which intent applies — do not map it yourself and do not bind another "
+            "intent's pack (TEH-RDY-052)." + notes
+        )
+    gaps = [c["gap"] for c in coverage or [] if c.get("status") == "missing" and c.get("jurisdiction") != "global"]
+    if gaps:
+        return ("Report each market's coverage exactly as returned, including: " + "; ".join(gaps)
+                + ". Never substitute another intent's or market's pack (TEH-RDY-052)." + notes)
+    return "Call mlr_get_ruleset with the same jurisdictions, audience, and channel (intent)." + notes
+
+
 def _intake(args: dict[str, Any]) -> dict[str, Any]:
     jurisdictions = _norm_jurisdictions(args)
     audience = str(args.get("audience") or "").strip().lower()
-    channel = str(args.get("channel") or "").strip().lower()
+    # TEH-RDY-057: split the supplied channel words into the ruleset intent and the delivery medium.
+    # The intent binds (market + audience + intent); the medium is recorded and never binds. Intent
+    # words are mapped transparently ("promotional" -> promo) and the mapping is returned.
+    split = split_channel(args.get("channel"), args.get("intent"), args.get("medium"))
+    channel = split["intent"]
     missing: list[str] = []
     if audience not in AUDIENCES:
         missing.append("audience")
         audience = audience or ""
-    if channel not in CHANNELS:
+    # TEH-RDY-052: a supplied value that is neither an intent nor a known medium is not "missing" and
+    # is never mapped to another intent here: each supplied market reports that specific gap.
+    unmatched_channel = split["unmatched"] if not channel and not split["conflict"] else ""
+    if not channel and not unmatched_channel:
         missing.append("channel")
-        channel = channel or ""
     body = args.get("body")
     artefact_id = args.get("artefact_id")
     if not body and not artefact_id:
@@ -210,6 +267,15 @@ def _intake(args: dict[str, Any]) -> dict[str, Any]:
         coverage.append(_coverage_for("global", audience, channel))
         for j in jurisdictions:
             coverage.append(_coverage_for(j, audience, channel))
+    elif audience in AUDIENCES and unmatched_channel:
+        for j in ["global", *jurisdictions]:
+            coverage.append({
+                "jurisdiction": j,
+                "status": "missing",
+                "ruleset_id": None,
+                "authority_hints": [],
+                "gap": f"[GAP] no rule pack for intent {unmatched_channel} in {j}",
+            })
 
     depth = _DEPTH.get((audience, channel), "full" if channel == "promo" else "short")
     context = {
@@ -219,6 +285,7 @@ def _intake(args: dict[str, Any]) -> dict[str, Any]:
         "jurisdictions": jurisdictions,
         "audience": audience or None,
         "channel": channel or None,
+        "medium": split["medium"] or None,
         "product_name": args.get("product_name"),
         "authorized_use_by_jurisdiction": args.get("authorized_use_by_jurisdiction"),
         "authorized_use_text": args.get("authorized_use_text"),
@@ -235,20 +302,24 @@ def _intake(args: dict[str, Any]) -> dict[str, Any]:
 
     return {
         "tool": "mlr_intake",
-        "ok": not missing,
+        "ok": not missing and not unmatched_channel,
         "context": context,
         "missing_fields": missing,
         "suggested_depth": depth,
         "ruleset_coverage": coverage,
         "notes": args.get("notes"),
-        "next": "Call mlr_get_ruleset with the same jurisdictions, audience, and channel.",
+        "next": _intake_next(missing, unmatched_channel, jurisdictions, coverage, split),
+        "medium": split["medium"] or None,
+        "channel_mapping": split["mapping"],
     }
 
 
 def _list_rulesets(args: dict[str, Any]) -> dict[str, Any]:
     j_filter = str(args.get("jurisdiction") or "").strip().upper() or None
     audience = str(args.get("audience") or "").strip().lower() or None
-    channel = str(args.get("channel") or "").strip().lower() or None
+    # TEH-RDY-057: filter on the intent only; a medium is recorded and never selects packs.
+    split = split_channel(args.get("channel"), args.get("intent"), args.get("medium"))
+    channel = split["intent"] or (str(split["unmatched"]).strip().lower() or None)
     status = str(args.get("status") or "any").strip().lower()
     rows = []
     for row in _registry().get("packs") or []:
@@ -275,7 +346,8 @@ def _list_rulesets(args: dict[str, Any]) -> dict[str, Any]:
                 else _load_pack(row["file"]).get("ruleset_hash"),
             }
         )
-    return {"tool": "mlr_list_rulesets", "ok": True, "counted": False, "packs": rows}
+    return {"tool": "mlr_list_rulesets", "ok": True, "counted": False, "packs": rows,
+            "medium": split["medium"] or None, "channel_mapping": split["mapping"]}
 
 
 def _find_registry_row(jurisdiction: str, audience: str, channel: str) -> dict[str, Any] | None:
@@ -294,8 +366,14 @@ def _find_registry_row(jurisdiction: str, audience: str, channel: str) -> dict[s
 
 def _get_ruleset(args: dict[str, Any]) -> dict[str, Any]:
     audience = str(args.get("audience") or "").strip().lower()
-    channel = str(args.get("channel") or "").strip().lower()
+    split = split_channel(args.get("channel"), args.get("intent"), args.get("medium"))
+    channel = split["intent"]
     if audience not in AUDIENCES or channel not in CHANNELS:
+        if split["medium"] and not channel:
+            raise ValueError(
+                f"audience and channel (intent) required — medium {split['medium']!r} recorded; a delivery medium "
+                "never binds a rule pack (TEH-RDY-057)"
+            )
         raise ValueError("audience and channel required")
 
     pin = args.get("ruleset_id") or args.get("ruleset_ids")
@@ -366,6 +444,8 @@ def _get_ruleset(args: dict[str, Any]) -> dict[str, Any]:
         "chairs": chairs,
         "forbidden_output_phrases": forbidden,
         "retrieved_at": datetime.now(timezone.utc).date().isoformat(),
+        "medium": split["medium"] or None,
+        "channel_mapping": split["mapping"],
     }
 
 
@@ -385,6 +465,10 @@ def _scan_forbidden(text: str) -> list[str]:
     for phrase in FORBIDDEN_PHRASES:
         if phrase in lower:
             hits.append(phrase)
+    for pattern in FORBIDDEN_PATTERNS:  # TEH-RDY-019 regulator-cleared forms
+        for m in re.finditer(pattern, lower):
+            if m.group(0) not in hits:
+                hits.append(m.group(0))
     return hits
 
 
@@ -402,6 +486,37 @@ def _walk_strings(obj: Any) -> list[str]:
             out.extend(_walk_strings(v))
         return out
     return []
+
+
+_STATUS_RANK = {"findings_only": 0, "revise": 1, "human_gate_required": 2}
+# Validation errors a copy or record edit can fix (TEH-RDY-050).
+_CORRECTABLE_ERROR_PREFIXES = ("artefact_version mismatch",)
+
+
+def _status_after_failed_validation(chairs: Any, errors: list[str], force_gate: bool, supplied: Any) -> str:
+    """Status for a packet that failed validation (TEH-RDY-046, TEH-RDY-050).
+
+    Never prep_complete. Precedence on what is open: reject / abstain / a forced gate →
+    human_gate_required; an open revise decision and/or a correctable validation error (for example
+    an artefact_version mismatch) → revise; otherwise findings_only. A status the packet already
+    carries is kept when it is higher.
+    """
+    decisions = [
+        chairs[c].get("decision")
+        for c in CHAIRS
+        if isinstance(chairs, dict) and isinstance(chairs.get(c), dict)
+    ]
+    if force_gate or any(d in {"reject", "abstain"} for d in decisions):
+        derived = "human_gate_required"
+    elif any(d == "revise" for d in decisions) or any(
+        e.startswith(_CORRECTABLE_ERROR_PREFIXES) for e in errors
+    ):
+        derived = "revise"
+    else:
+        derived = "findings_only"
+    if supplied in _STATUS_RANK and _STATUS_RANK[supplied] > _STATUS_RANK[derived]:
+        return supplied
+    return derived
 
 
 def _validate_packet(args: dict[str, Any]) -> dict[str, Any]:
@@ -444,6 +559,20 @@ def _validate_packet(args: dict[str, Any]) -> dict[str, Any]:
 
     if versions and len(set(versions)) > 1:
         errors.append("artefact_version mismatch across chairs")
+
+    # TEH-RDY-046: every chair packet carries the packet header's artefact_version. A mismatch is
+    # an error naming each version exactly as supplied; prep_complete is never derived over it.
+    header_version = str(packet.get("artefact_version") or "").strip()
+    if header_version:
+        for name in CHAIRS:
+            chair = chairs.get(name)
+            if not isinstance(chair, dict):
+                continue
+            ver = str(chair.get("artefact_version") or "").strip()
+            if ver and ver != header_version:
+                errors.append(
+                    f"artefact_version mismatch: packet header {header_version} vs {name} {ver}"
+                )
 
     jurisdictions = packet.get("jurisdictions") or []
     if not jurisdictions:
@@ -503,12 +632,14 @@ def _validate_packet(args: dict[str, Any]) -> dict[str, Any]:
             else:
                 status = "prep_complete"
     else:
-        status = status if status in MLR_STATUSES else "findings_only"
+        # A packet that fails validation is never prep_complete (TEH-RDY-046). Its status follows the
+        # precedence order on what is open, never a blanket findings_only (TEH-RDY-050).
+        status = _status_after_failed_validation(chairs, errors, force_gate, status)
 
     normalised = dict(packet)
     normalised["mlr_status"] = status
     normalised["liability_line"] = LIABILITY_LINE
-    if versions and len(set(versions)) == 1:
+    if versions and len(set(versions)) == 1 and not header_version:
         normalised["artefact_version"] = versions[0]
 
     return {
@@ -622,6 +753,24 @@ def _compile_checklist(args: dict[str, Any]) -> dict[str, Any]:
             )
             continue
         decisions[name] = chair.get("decision")
+    # TEH-RDY-046: chair artefact versions must equal the packet header version (exactly as supplied).
+    header_version = str(args.get("artefact_version") or "").strip()
+    chair_versions = {
+        name: str(chairs[name].get("artefact_version") or "").strip()
+        for name in CHAIRS
+        if isinstance(chairs.get(name), dict)
+    }
+    seen = {v for v in chair_versions.values() if v}
+    if (header_version and any(v and v != header_version for v in chair_versions.values())) or len(seen) > 1:
+        detail = ", ".join(f"{n} {v or '[GAP]'}" for n, v in chair_versions.items())
+        slots.append(
+            {
+                "topic": "artefact_version_mismatch",
+                "chairs_disagree": len(seen) > 1,
+                "markets_disagree": False,
+                "detail": f"Artefact versions differ: packet header {header_version or '[GAP]'}; {detail}",
+            }
+        )
     if len(set(decisions.values())) > 1:
         slots.append(
             {
@@ -721,6 +870,91 @@ def _handoff_verify(args: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+# MLR-H5: a named human owns the prep record. Token-based, case-insensitive refusal of
+# AI / automation / placeholder owners. Whole-token match (word boundaries), so real
+# names that merely contain a token ("Aileen", "Claudette", "Gaia") are not refused.
+CLEARED_BY_REFUSED_TOKENS = frozenset(
+    {
+        "assistant",
+        "ai",
+        "model",
+        "system",
+        "auto",
+        "automated",
+        "automation",
+        "bot",
+        "chatbot",
+        "chatgpt",
+        "gpt",
+        "openai",
+        "claude",
+        "anthropic",
+        "copilot",
+        "gemini",
+        "llm",
+        "agent",
+        "tbd",
+        "unknown",
+    }
+)
+_H5_GPT_VARIANT = re.compile(r"^gpt[0-9][a-z0-9]*$")  # gpt4, gpt4o, gpt35 ...
+_H5_AI_DOTTED = re.compile(r"\ba\.i\b\.?")  # "A.I." / "a.i"
+_H5_NA = re.compile(r"(?<![a-z0-9])n\s*/\s*a(?![a-z0-9])")  # "n/a", "N / A"
+
+
+def cleared_by_refusal(name: Any) -> str | None:
+    """Return the refusal reason for a cleared_by name, or None when it may be a named human."""
+    text = str(name or "").strip()
+    if not text:
+        return "empty"
+    low = text.lower()
+    if _H5_NA.search(low):
+        return "n/a"
+    low = _H5_AI_DOTTED.sub(" ai ", low)
+    tokens = [t for t in re.split(r"[\W_]+", low) if t]
+    if not tokens:
+        return "empty"
+    for tok in tokens:
+        if tok in CLEARED_BY_REFUSED_TOKENS or _H5_GPT_VARIANT.match(tok):
+            return tok
+    return None
+
+
+# TEH-RDY-017 (MLR-H1): never build a prep record on a stand-in packet. The tool cannot see
+# provenance, so this is a narrow, fail-closed guard: an explicit synthetic / stand-in flag on the
+# packet or a chair, or a placeholder token in an artefact_version or chair summary, is refused.
+STAND_IN_FLAGS = ("synthetic", "stand_in", "placeholder", "is_placeholder")
+STAND_IN_TOKENS = frozenset({"placeholder", "placeholders", "stand", "standin", "dummy", "fake", "mock", "tbd", "synthetic"})
+
+
+def stand_in_packet_refusal(packet: Any) -> str | None:
+    """Return why a packet looks invented to make the tool run, or None."""
+    if not isinstance(packet, dict):
+        return None
+    for flag in STAND_IN_FLAGS:
+        if packet.get(flag) is True:
+            return f"packet flag {flag}=true"
+    chairs = packet.get("chairs") if isinstance(packet.get("chairs"), dict) else {}
+    texts = [("artefact_version", packet.get("artefact_version"))]
+    for cname, chair in chairs.items():
+        if not isinstance(chair, dict):
+            continue
+        for flag in STAND_IN_FLAGS:
+            if chair.get(flag) is True:
+                return f"{cname} flag {flag}=true"
+        texts.append((f"{cname}.artefact_version", chair.get("artefact_version")))
+        texts.append((f"{cname}.summary", chair.get("summary")))
+    for where, value in texts:
+        low = str(value or "").lower()
+        tokens = [t for t in re.split(r"[\W_]+", low) if t]
+        for i, tok in enumerate(tokens):
+            if tok == "stand" and i + 1 < len(tokens) and tokens[i + 1] == "in":
+                return f"{where}: stand-in"
+            if tok in STAND_IN_TOKENS and tok != "stand":
+                return f"{where}: {tok}"
+    return None
+
+
 def _build_prep_record(args: dict[str, Any]) -> dict[str, Any]:
     packet = args.get("packet") or args.get("compile")
     if not isinstance(packet, dict):
@@ -732,6 +966,19 @@ def _build_prep_record(args: dict[str, Any]) -> dict[str, Any]:
             "ok": False,
             "status": "draft",
             "errors": validation.get("errors"),
+            "record": None,
+        }
+    stand_in = stand_in_packet_refusal(packet)
+    if stand_in:
+        return {
+            "tool": "mlr_build_prep_record",
+            "ok": False,
+            "status": "draft",
+            "errors": [
+                "packet looks like a stand-in, not the person's validated compile output — "
+                "supply the real packet; never invent packets, versions or chair decisions (MLR-H1)",
+                f"refused: {stand_in}",
+            ],
             "record": None,
         }
     cleared = args.get("cleared_by") or {}
@@ -749,27 +996,16 @@ def _build_prep_record(args: dict[str, Any]) -> dict[str, Any]:
             "errors": ["cleared_by.name required — a named human must own the prep record"],
             "record": None,
         }
-    # MLR-H5: refuse AI / model / assistant / system as cleared_by
-    blocked = (
-        "chatgpt",
-        "claude",
-        "assistant",
-        "gpt",
-        "model",
-        "system",
-        "ai reviewer",
-        "copilot",
-        "gemini",
-        "llm",
-    )
-    low = name.lower()
-    if any(b == low or b in low.split() or low.startswith(b) for b in blocked) or low in blocked:
+    # MLR-H5: refuse AI / automation / placeholder names as cleared_by (token-based)
+    refused = cleared_by_refusal(name)
+    if refused:
         return {
             "tool": "mlr_build_prep_record",
             "ok": False,
             "status": "draft",
             "errors": [
-                "cleared_by must be a named human — refuse AI/model/assistant/system (MLR-H5)"
+                "cleared_by must be a named human — refuse AI/model/assistant/system (MLR-H5)",
+                f"refused token: {refused}",
             ],
             "record": None,
         }

@@ -8,7 +8,8 @@ Requires `cleared_by.name` (human). Statuses allowed: `findings_only` · `revise
 | artefact_version | |
 | jurisdictions | |
 | ruleset_ids | |
-| mlr_status | |
+| mlr_status (the packet status: one of the four only) | |
+| record state (tool field `record.status`) | `prep_cleared_for_human_mlr` — report as `Record state (not a status, not use-clearance): prep_cleared_for_human_mlr`, never as the status |
 | cleared_by.name | **required** |
 | cleared_by.role | |
 | purpose | |
@@ -19,7 +20,7 @@ Requires `cleared_by.name` (human). Statuses allowed: `findings_only` · `revise
 ## Explicit non-goals
 
 - Never claim copy is cleared or approved
-- Never claim FDA Form 2253 was filed or submitted
+- Never claim a regulator submission filing (for example Form 2253) was filed or submitted
 - Not regulator clearance
 
 Liability: This prepares material for human MLR review. It is not medical, legal, or regulatory approval.

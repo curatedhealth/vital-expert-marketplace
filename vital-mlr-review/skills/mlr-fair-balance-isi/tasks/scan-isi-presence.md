@@ -1,4 +1,4 @@
-# Task: Scan for ISI / brief summary / PI pointers
+# Task: Scan for ISI / brief summary / label pointers
 
 ## Formula
 
@@ -13,6 +13,14 @@
 | Template | `../../templates/isi-fair-balance-checklist.md` |
 | Input | Person words + prior packet fields + tool JSON. |
 | Governance | Root `governance.md`. Missing → `[GAP]`. |
+
+## Companion
+
+| State | What to do |
+|---|---|
+| `vmlr_` connected | Call primary tools with `vital-mlr-review:tool_name` from `references/tools.md`. |
+| `vmlr_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vvfy_` (when named) | Call `vital-verify:tool_name`. Do not add a second claim checker. |
 
 ## Steps
 

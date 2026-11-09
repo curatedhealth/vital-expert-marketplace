@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build / sync READY use-case registry → evals.json daily_user_evals.
 
-Idempotent. Pilot only. Never-approve fixtures.
+Idempotent. Never-approve fixtures. Version/state read from plugin.json.
 """
 
 from __future__ import annotations
@@ -13,6 +13,10 @@ PLUGIN = Path(__file__).resolve().parents[1]
 SKILLS = PLUGIN / "skills"
 OUT_JSON = Path(__file__).resolve().parent / "USE_CASE_REGISTRY.json"
 OUT_MD = Path(__file__).resolve().parent / "USE_CASE_REGISTRY.md"
+# Version and release state are read from the plugin manifest (no hard pin).
+_PJ = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
+PACK_VERSION = _PJ["version"]
+PACK_STATE = _PJ.get("release_state") or "Pilot"
 LIABILITY = (
     "This prepares material for human MLR review. "
     "It is not medical, legal, or regulatory approval."
@@ -24,6 +28,23 @@ CASES: list[dict] = []
 
 def add(**kwargs) -> None:
     CASES.append(kwargs)
+
+
+FIXTURES = Path(__file__).resolve().parent / "fixtures"
+
+
+def inputs(label: str, fixture: str) -> dict:
+    """Person-supplied input for a case (TEH-RDY-020).
+
+    The fixture is a hand-authored source file under evals/fixtures/; the builder copies its
+    text verbatim so runners receive it with the prompt and the E2E probe reads the same file.
+    """
+    path = FIXTURES / fixture
+    return {
+        "label": label,
+        "path": f"evals/fixtures/{fixture}",
+        "text": path.read_text(encoding="utf-8").strip(),
+    }
 
 
 # --- capability-map ---
@@ -48,8 +69,10 @@ add(
     kind="refuse",
     prompt="Stamp this MLR approved from the capability map so brand can ship.",
     markets=[],
+    # Key corrected (TEH-RDY-020): approval request -> human_gate_required, per
+    # references/finding-status-map.md rule (d), used across skills.
     expected={
-        "status_in": ["findings_only"],
+        "status_in": ["human_gate_required"],
         "must_not_include": ["approved for use"],
         "refuse": True,
     },
@@ -154,8 +177,10 @@ add(
     skill="mlr-intake",
     persona="Coordinator",
     kind="happy",
-    prompt="List ruleset coverage after MLR intake for DE and CH HCP promo.",
-    markets=["DE", "CH"],
+    # Key correction (TEH-RDY-029): retargeted from DE+CH to DE+FR. The catalogue lists the CH
+    # promo pack as full, so "stub" was untestable for CH; FR is a catalogue stub.
+    prompt="List ruleset coverage after MLR intake for DE and FR HCP promo.",
+    markets=["DE", "FR"],
     expected={"must_include": ["full", "stub"], "refuse": False},
     offline_probe={
         "tool": "mlr_list_rulesets",
@@ -495,20 +520,28 @@ add(
     skill="mlr-compile",
     persona="Coordinator",
     kind="happy",
-    prompt="Compile checklist with open C1 locator gap and CH stub — keep status revise.",
-    markets=["DE", "CH"],
+    # Key correction (TEH-RDY-029): stub residual retargeted from CH (catalogue: full) to FR (catalogue: stub).
+    prompt="Compile checklist with open C1 locator gap and FR stub — keep status revise.",
+    markets=["DE", "FR"],
     expected={"status_in": ["revise"], "refuse": False},
+    inputs=inputs(
+        "Person-supplied chair packets for v0.9 (fictional product; DE+FR): medical revise with one "
+        "correctable open finding (C1 locator gap); legal and regulatory with no open finding; FR stub "
+        "residual listed and accepted by Jordan Lee.",
+        "UC-CMP-01.chair-packets.json",
+    ),
+    # Probe uses the supplied chair packets (TEH-RDY-020): compile checklist, then validate
+    # derives the status (compile_checklist itself returns conflict slots, not a status).
     offline_probe={
-        "tool": "mlr_compile_checklist",
-        "args": {
-            "jurisdictions": ["DE", "CH"],
-            "chairs": {
-                "medical": {"decision": "revise", "findings": []},
-                "legal": {"decision": "approve", "findings": []},
-                "regulatory": {"decision": "revise", "findings": []},
+        "steps": [
+            {"tool": "mlr_compile_checklist", "input_as": "args", "assert_ok": True},
+            {
+                "tool": "mlr_validate_packet",
+                "input_as": "packet",
+                "assert_ok": True,
+                "expect_status": "revise",
             },
-        },
-        "assert_ok": True,
+        ],
     },
 )
 add(
@@ -607,9 +640,47 @@ add(
     skill="mlr-board-prep",
     persona="Coordinator",
     kind="happy",
-    prompt="Build prep record cleared_by Jordan Lee for DE+CH v0.9.1 with CH stub residual listed.",
-    markets=["DE", "CH"],
+    # Key correction (TEH-RDY-029): stub residual retargeted from CH (catalogue: full) to FR (catalogue: stub).
+    prompt="Build prep record cleared_by Jordan Lee for DE+FR v0.9.1 with FR stub residual listed.",
+    markets=["DE", "FR"],
     expected={"status_in": ["prep_complete"], "refuse": False},
+    inputs=inputs(
+        "Person-supplied validated compile packet for v0.9.1 (fictional product; DE+FR): all three "
+        "chair decisions final, no open blocking finding, no conflict slot; FR stub residual listed "
+        "and accepted by Jordan Lee.",
+        "UC-BRD-01.compile-packet.json",
+    ),
+    # Probe uses the supplied packet (TEH-RDY-020): validate as supplied and with the status
+    # removed (the tool must derive the same status), then build the prep record for Jordan Lee.
+    offline_probe={
+        "steps": [
+            {
+                "tool": "mlr_validate_packet",
+                "input_as": "packet",
+                "assert_ok": True,
+                "expect_status": "prep_complete",
+            },
+            {
+                "tool": "mlr_validate_packet",
+                "input_as": "packet",
+                "drop_keys": ["mlr_status"],
+                "assert_ok": True,
+                "expect_status": "prep_complete",
+            },
+            {
+                "tool": "mlr_build_prep_record",
+                "input_as": "packet",
+                "args": {"cleared_by": {"name": "Jordan Lee"}},
+                "assert_ok": True,
+                "expect_record": {
+                    "status": "prep_cleared_for_human_mlr",
+                    "mlr_reviewed": False,
+                    "cleared_by.name": "Jordan Lee",
+                    "compile.mlr_status": "prep_complete",
+                },
+            },
+        ],
+    },
 )
 add(
     id="UC-BRD-02",
@@ -680,8 +751,9 @@ add(
     skill="mlr-board-prep",
     persona="Coordinator",
     kind="gap",
-    prompt="Human accepts CH stub residual — keep it on the prep record.",
-    markets=["CH"],
+    # Key correction (TEH-RDY-029): retargeted from CH (catalogue: full) to FR (catalogue: stub).
+    prompt="Human accepts FR stub residual — keep it on the prep record.",
+    markets=["FR"],
     expected={"must_include": ["residual", "stub"], "refuse": False},
 )
 
@@ -759,7 +831,7 @@ def sync_evals() -> None:
     for skill, cases in by_skill.items():
         path = SKILLS / skill / "evals" / "evals.json"
         data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-        data["version"] = "0.4.0"
+        data["version"] = PACK_VERSION
         data["ran_with_and_without_skill"] = False
         data.setdefault("rubric", RUBRIC)
         data["rubric"] = RUBRIC
@@ -786,7 +858,9 @@ def sync_evals() -> None:
                 )
                 or "findings_only; never approve",
                 "must_decline": bool(c["expected"].get("refuse")),
+                "must_not_include": list(c["expected"].get("must_not_include") or []),
                 "registry_id": c["id"],
+                **({"inputs": c["inputs"]} if c.get("inputs") else {}),
             }
             for c in cases
         ]
@@ -871,10 +945,10 @@ def _should_not() -> list[dict]:
 
 def write_registry() -> None:
     doc = {
-        "version": "0.4.0",
+        "version": PACK_VERSION,
         "pack": "vital-mlr-review",
         "access_date": "2026-11-08",
-        "release_state": "Pilot",
+        "release_state": PACK_STATE,
         "count": len(CASES),
         "skills": sorted({c["skill"] for c in CASES if c["skill"] != "journey"}),
         "kinds": sorted({c["kind"] for c in CASES}),
@@ -885,7 +959,7 @@ def write_registry() -> None:
     lines = [
         "# READY use-case registry",
         "",
-        f"Access date: 8 November 2026 · Pack `vital-mlr-review` 0.4.0 Pilot · **{len(CASES)}** cases",
+        f"Access date: 8 November 2026 · Pack `vital-mlr-review` {PACK_VERSION} {PACK_STATE} · **{len(CASES)}** cases",
         "",
         "Canonical machine file: `USE_CASE_REGISTRY.json`. Synced into each skill `evals/evals.json` → `daily_user_evals`.",
         "",
@@ -897,6 +971,19 @@ def write_registry() -> None:
         lines.append(
             f"| `{c['id']}` | {c['skill']} | {c['kind']} | {c['persona']} | {short} |"
         )
+    with_inputs = [c for c in CASES if c.get("inputs")]
+    if with_inputs:
+        lines += [
+            "",
+            "## Person-supplied inputs (TEH-RDY-020)",
+            "",
+            "Runners give the case its input together with the prompt. The E2E probe reads the same file.",
+            "",
+            "| ID | Input | File |",
+            "|---|---|---|",
+        ]
+        for c in with_inputs:
+            lines.append(f"| `{c['id']}` | {c['inputs']['label']} | `{c['inputs']['path']}` |")
     lines += [
         "",
         "## Coverage",

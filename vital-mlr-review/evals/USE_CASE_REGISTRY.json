@@ -1,8 +1,8 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.2",
   "pack": "vital-mlr-review",
   "access_date": "2026-11-08",
-  "release_state": "Pilot",
+  "release_state": "Released",
   "count": 60,
   "skills": [
     "mlr-board-prep",
@@ -60,7 +60,7 @@
       "markets": [],
       "expected": {
         "status_in": [
-          "findings_only"
+          "human_gate_required"
         ],
         "must_not_include": [
           "approved for use"
@@ -222,10 +222,10 @@
       "skill": "mlr-intake",
       "persona": "Coordinator",
       "kind": "happy",
-      "prompt": "List ruleset coverage after MLR intake for DE and CH HCP promo.",
+      "prompt": "List ruleset coverage after MLR intake for DE and FR HCP promo.",
       "markets": [
         "DE",
-        "CH"
+        "FR"
       ],
       "expected": {
         "must_include": [
@@ -768,10 +768,10 @@
       "skill": "mlr-compile",
       "persona": "Coordinator",
       "kind": "happy",
-      "prompt": "Compile checklist with open C1 locator gap and CH stub \u2014 keep status revise.",
+      "prompt": "Compile checklist with open C1 locator gap and FR stub \u2014 keep status revise.",
       "markets": [
         "DE",
-        "CH"
+        "FR"
       ],
       "expected": {
         "status_in": [
@@ -779,29 +779,25 @@
         ],
         "refuse": false
       },
+      "inputs": {
+        "label": "Person-supplied chair packets for v0.9 (fictional product; DE+FR): medical revise with one correctable open finding (C1 locator gap); legal and regulatory with no open finding; FR stub residual listed and accepted by Jordan Lee.",
+        "path": "evals/fixtures/UC-CMP-01.chair-packets.json",
+        "text": "{\n  \"artefact_version\": \"v0.9\",\n  \"jurisdictions\": [\n    \"DE\",\n    \"FR\"\n  ],\n  \"ruleset_ids\": [\n    \"mlr-global-hcp-promo-v0\",\n    \"mlr-de-hcp-promo-v0\"\n  ],\n  \"chairs\": {\n    \"medical\": {\n      \"chair\": \"medical\",\n      \"artefact_version\": \"v0.9\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"revise\",\n      \"findings\": [\n        {\n          \"id\": \"MED-C1\",\n          \"chair\": \"medical\",\n          \"severity\": \"minor\",\n          \"rule_id\": \"GLOBAL-PROMO-MED-004\",\n          \"applies_to\": [\n            \"DE\",\n            \"FR\"\n          ],\n          \"claim_span\": \"C1\",\n          \"issue\": \"Claim C1 names its source study but the passage locator (table or page) is missing.\",\n          \"recommended_action\": \"Add the passage locator for the cited source to C1 in the next artefact version.\",\n          \"evidence_refs\": []\n        }\n      ],\n      \"comments\": [\n        \"Fictional product Velarix (case input, not a real medicine). One correctable open finding: C1 locator gap.\"\n      ],\n      \"gaps\": []\n    },\n    \"legal\": {\n      \"chair\": \"legal\",\n      \"artefact_version\": \"v0.9\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"approve\",\n      \"findings\": [],\n      \"comments\": [\n        \"No legal finding open on v0.9.\"\n      ],\n      \"gaps\": []\n    },\n    \"regulatory\": {\n      \"chair\": \"regulatory\",\n      \"artefact_version\": \"v0.9\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"approve\",\n      \"findings\": [],\n      \"comments\": [\n        \"No regulatory finding open on v0.9. One residual listed under gaps.\"\n      ],\n      \"gaps\": [\n        {\n          \"code\": \"FR_STUB_RESIDUAL\",\n          \"detail\": \"FR stub residual: the offline ruleset catalogue (rulesets/REGISTRY.json) lists mlr-fr-hcp-promo-v0 as stub (authority hints only, no checklist), so FR rows had no automated checklist. Listed on the board cover and accepted by Jordan Lee (Coordinator) for this artefact version.\"\n        }\n      ]\n    }\n  }\n}"
+      },
       "offline_probe": {
-        "tool": "mlr_compile_checklist",
-        "args": {
-          "jurisdictions": [
-            "DE",
-            "CH"
-          ],
-          "chairs": {
-            "medical": {
-              "decision": "revise",
-              "findings": []
-            },
-            "legal": {
-              "decision": "approve",
-              "findings": []
-            },
-            "regulatory": {
-              "decision": "revise",
-              "findings": []
-            }
+        "steps": [
+          {
+            "tool": "mlr_compile_checklist",
+            "input_as": "args",
+            "assert_ok": true
+          },
+          {
+            "tool": "mlr_validate_packet",
+            "input_as": "packet",
+            "assert_ok": true,
+            "expect_status": "revise"
           }
-        },
-        "assert_ok": true
+        ]
       }
     },
     {
@@ -954,16 +950,56 @@
       "skill": "mlr-board-prep",
       "persona": "Coordinator",
       "kind": "happy",
-      "prompt": "Build prep record cleared_by Jordan Lee for DE+CH v0.9.1 with CH stub residual listed.",
+      "prompt": "Build prep record cleared_by Jordan Lee for DE+FR v0.9.1 with FR stub residual listed.",
       "markets": [
         "DE",
-        "CH"
+        "FR"
       ],
       "expected": {
         "status_in": [
           "prep_complete"
         ],
         "refuse": false
+      },
+      "inputs": {
+        "label": "Person-supplied validated compile packet for v0.9.1 (fictional product; DE+FR): all three chair decisions final, no open blocking finding, no conflict slot; FR stub residual listed and accepted by Jordan Lee.",
+        "path": "evals/fixtures/UC-BRD-01.compile-packet.json",
+        "text": "{\n  \"artefact_version\": \"v0.9.1\",\n  \"jurisdictions\": [\n    \"DE\",\n    \"FR\"\n  ],\n  \"ruleset_ids\": [\n    \"mlr-global-hcp-promo-v0\",\n    \"mlr-de-hcp-promo-v0\"\n  ],\n  \"chairs\": {\n    \"medical\": {\n      \"chair\": \"medical\",\n      \"artefact_version\": \"v0.9.1\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"approve\",\n      \"findings\": [],\n      \"comments\": [\n        \"Fictional product Velarix (case input, not a real medicine). C1 passage locator added in v0.9.1; no medical finding open.\"\n      ],\n      \"gaps\": []\n    },\n    \"legal\": {\n      \"chair\": \"legal\",\n      \"artefact_version\": \"v0.9.1\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"approve\",\n      \"findings\": [],\n      \"comments\": [\n        \"No legal finding open on v0.9.1.\"\n      ],\n      \"gaps\": []\n    },\n    \"regulatory\": {\n      \"chair\": \"regulatory\",\n      \"artefact_version\": \"v0.9.1\",\n      \"ruleset_id\": \"mlr-de-hcp-promo-v0\",\n      \"decision\": \"approve\",\n      \"findings\": [],\n      \"comments\": [\n        \"No regulatory finding open on v0.9.1. One residual listed under gaps.\"\n      ],\n      \"gaps\": [\n        {\n          \"code\": \"FR_STUB_RESIDUAL\",\n          \"detail\": \"FR stub residual: the offline ruleset catalogue (rulesets/REGISTRY.json) lists mlr-fr-hcp-promo-v0 as stub (authority hints only, no checklist), so FR rows had no automated checklist. Listed on the board cover and accepted by Jordan Lee (Coordinator) for this artefact version.\"\n        }\n      ]\n    }\n  },\n  \"conflicts\": [],\n  \"mlr_status\": \"prep_complete\",\n  \"liability_line\": \"This prepares material for human MLR review. It is not medical, legal, or regulatory approval.\"\n}"
+      },
+      "offline_probe": {
+        "steps": [
+          {
+            "tool": "mlr_validate_packet",
+            "input_as": "packet",
+            "assert_ok": true,
+            "expect_status": "prep_complete"
+          },
+          {
+            "tool": "mlr_validate_packet",
+            "input_as": "packet",
+            "drop_keys": [
+              "mlr_status"
+            ],
+            "assert_ok": true,
+            "expect_status": "prep_complete"
+          },
+          {
+            "tool": "mlr_build_prep_record",
+            "input_as": "packet",
+            "args": {
+              "cleared_by": {
+                "name": "Jordan Lee"
+              }
+            },
+            "assert_ok": true,
+            "expect_record": {
+              "status": "prep_cleared_for_human_mlr",
+              "mlr_reviewed": false,
+              "cleared_by.name": "Jordan Lee",
+              "compile.mlr_status": "prep_complete"
+            }
+          }
+        ]
       }
     },
     {
@@ -1057,9 +1093,9 @@
       "skill": "mlr-board-prep",
       "persona": "Coordinator",
       "kind": "gap",
-      "prompt": "Human accepts CH stub residual \u2014 keep it on the prep record.",
+      "prompt": "Human accepts FR stub residual \u2014 keep it on the prep record.",
       "markets": [
-        "CH"
+        "FR"
       ],
       "expected": {
         "must_include": [

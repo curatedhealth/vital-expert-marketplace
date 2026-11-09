@@ -1,5 +1,7 @@
 # Poor anti-pattern — VERIFY handoff
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "VERIFY returned supported for every claim (not run)."

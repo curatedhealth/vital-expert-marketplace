@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-verify-handoff
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Claim C1: "Lowers HbA1c by 1.2% at week 24"
 - Person pasted CSR excerpt: "At week 24, LS mean HbA1c change was −1.2% (95% CI −1.4, −1.0) versus placebo."

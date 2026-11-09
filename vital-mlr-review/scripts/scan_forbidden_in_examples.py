@@ -8,12 +8,13 @@ only for bare positive hits without a negation cue on the same line.
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from contract import FORBIDDEN_PHRASES  # noqa: E402
+from contract import FORBIDDEN_PATTERNS, FORBIDDEN_PHRASES  # noqa: E402
 
 NEGATION = ("not ", "never ", "false", "refuse", "do not", "don't", "must not", "**false**")
 
@@ -35,12 +36,20 @@ def main() -> int:
         for phrase in FORBIDDEN_PHRASES:
             if phrase in text:
                 bad.append(f"{path}: {phrase}")
+        for pattern in FORBIDDEN_PATTERNS:  # TEH-RDY-019
+            for m in re.finditer(pattern, text):
+                bad.append(f"{path}: {m.group(0)}")
 
     for path in templates:
         for i, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             for phrase in FORBIDDEN_PHRASES:
                 if _positive_hit(line, phrase):
                     bad.append(f"{path}:{i}: {phrase}")
+            low = line.lower()
+            for pattern in FORBIDDEN_PATTERNS:  # TEH-RDY-019, same negation cue as phrases
+                for m in re.finditer(pattern, low):
+                    if not any(n in low for n in NEGATION):
+                        bad.append(f"{path}:{i}: {m.group(0)}")
 
     if bad:
         print("FORBIDDEN_HITS")

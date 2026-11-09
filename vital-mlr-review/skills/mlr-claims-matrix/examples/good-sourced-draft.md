@@ -1,5 +1,7 @@
 # Good sourced draft — mlr-claims-matrix
 
+Teaching material only (MLR-H2).
+
 ## Synthetic context (teaching only — MLR-H2)
 - Markets: DE, CH.
 - Claims extracted from leave-behind (person-highlighted):

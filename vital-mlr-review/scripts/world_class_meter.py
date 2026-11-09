@@ -170,7 +170,7 @@ def main() -> int:
         except json.JSONDecodeError:
             fails.append(".mcp.json invalid")
     pj = json.loads((ROOT / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
-    if pj.get("release_state") not in ("Pilot", "Released"):
+    if pj.get("release_state") not in ("Pilot", "Back-tested", "Released"):
         fails.append(f"release_state unexpected: {pj.get('release_state')!r}")
     elif pj.get("release_state") == "Released":
         warns.append("release_state=Released (owner-promoted)")

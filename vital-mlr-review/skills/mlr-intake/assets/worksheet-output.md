@@ -8,7 +8,7 @@ Return these sections, in order. Omit a section only when the task did not reach
 
 ## Ruleset coverage
 
-[from the person or the tool, else [GAP]]
+[from the tool, run only with supplied markets, audience and channel — per supplied market the `ruleset_id` and status it returned, or its specific gap such as `[GAP] no rule pack for intent <intent> in <market>` (TEH-RDY-052); only while audience or channel is missing, per supplied market: rule pack binds once audience and channel are supplied]
 
 ## Missing fields
 

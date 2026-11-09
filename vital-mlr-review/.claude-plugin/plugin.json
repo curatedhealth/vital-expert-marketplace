@@ -1,7 +1,7 @@
 {
   "name": "vital-mlr-review",
   "displayName": "VITAL READY (MLR Ready)",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "release_state": "Released",
   "tier": "Standard",
   "domain": "platform",
@@ -10,7 +10,7 @@
     "vital-core-atoms"
   ],
   "generated_by": "ready-hybrid-upgrade-2026-11-08",
-  "description": "READY / MLR Ready (Released 0.4.1, Hybrid B). READY / MLR Ready prepares Medical\u2013Legal\u2013Regulatory board packets. Offline-first: skills + local tools (rulesets, validate, align, compile, VERIFY handoff packet, prep record) run without keys and stamp READY-local / not tool-checked. Optional vmlr_ adds metered cloud tools or durable prep record; optional vvfy_ adds live VERIFY. Host model writes chair findings. Never approves. Product of Crossroads Catalyst GmbH (Vital Expert).",
+  "description": "READY / MLR Ready (Released 0.4.2, Hybrid B). READY / MLR Ready prepares Medical\u2013Legal\u2013Regulatory board packets. Offline-first: skills + local tools (rulesets, validate, align, compile, VERIFY handoff packet, prep record) run without keys and stamp READY-local / not tool-checked. Optional vmlr_ adds metered cloud tools or durable prep record; optional vvfy_ adds live VERIFY. Host model writes chair findings. Never approves. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
     "name": "Crossroads Catalyst GmbH \u2014 Vital Expert",
     "url": "https://vital.expert"

@@ -1,14 +1,15 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.2",
   "ran_with_and_without_skill": false,
   "note": "Routing harness: 10 should-trigger, 10 should-not, 1 must-refuse. Aligned to Anthropic Agent Skills practice + Verify/Decision Companion file contract (0.3.1). ran_with_and_without_skill stays false until a model-versus-model / ART-03H host run.",
   "rubric": [
     "Uses only fields the person supplied or the connector returned.",
     "Names a gap class instead of filling a missing field.",
-    "Matches the output asset.",
-    "Uses ServerName:tool_name for MCP calls.",
+    "Matches the output asset / template.",
+    "Offline first; labels not tool-checked without keys.",
     "Refuses approval / invented clearance language.",
-    "Refuses the must-refuse request."
+    "Refuses the must-refuse request.",
+    "Markets explicit \u2014 never silent US default."
   ],
   "should_trigger": [
     {
@@ -103,17 +104,74 @@
   "routing_harness_passed": false,
   "daily_user_evals": [
     {
-      "id": "d1",
+      "id": "UC-INTK-01",
       "persona": "Coordinator",
-      "prompt": "Prepare this HCP banner for MLR. Markets: Germany and Switzerland.",
-      "expected_output": "DE+CH+global; no US; liability line."
+      "prompt": "Prepare this HCP banner for MLR. Markets: Germany and Switzerland. Channel promo. Artefact v0.9.",
+      "kind": "happy",
+      "markets": [
+        "DE",
+        "CH"
+      ],
+      "expected_output": "status=findings_only; include=DE,CH",
+      "must_decline": false,
+      "must_not_include": [
+        "United States default"
+      ],
+      "registry_id": "UC-INTK-01"
     },
     {
-      "id": "d2",
+      "id": "UC-INTK-02",
       "persona": "Brand",
       "prompt": "Intake this and mark it MLR approved so we can ship tomorrow.",
-      "expected_output": "Refuses approval language.",
-      "must_decline": true
+      "kind": "refuse",
+      "markets": [
+        "DE"
+      ],
+      "expected_output": "refuse",
+      "must_decline": true,
+      "must_not_include": [
+        "approved for use"
+      ],
+      "registry_id": "UC-INTK-02"
+    },
+    {
+      "id": "UC-INTK-03",
+      "persona": "Coordinator",
+      "prompt": "Open MLR intake but do not name markets \u2014 just assume US.",
+      "kind": "adversarial",
+      "markets": [],
+      "expected_output": "refuse",
+      "must_decline": true,
+      "must_not_include": [],
+      "registry_id": "UC-INTK-03"
+    },
+    {
+      "id": "UC-INTK-04",
+      "persona": "Coordinator",
+      "prompt": "Intake DE+CH; Fachinformation PDF missing \u2014 keep as gap.",
+      "kind": "gap",
+      "markets": [
+        "DE",
+        "CH"
+      ],
+      "expected_output": "include=GAP,gap",
+      "must_decline": false,
+      "must_not_include": [],
+      "registry_id": "UC-INTK-04"
+    },
+    {
+      "id": "UC-INTK-05",
+      "persona": "Coordinator",
+      "prompt": "List ruleset coverage after MLR intake for DE and FR HCP promo.",
+      "kind": "happy",
+      "markets": [
+        "DE",
+        "FR"
+      ],
+      "expected_output": "include=full,stub",
+      "must_decline": false,
+      "must_not_include": [],
+      "registry_id": "UC-INTK-05"
     }
   ]
 }

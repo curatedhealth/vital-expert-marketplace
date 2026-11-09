@@ -2,6 +2,9 @@
 
 Checklists and URLs: `mlr_get_ruleset` packs. Date-read: 24 October 2026.
 
+
+Use only the rows for markets the person supplied. Never write a line for a market the person did not supply, and never copy this table's market list into an answer (TEH-RDY-024).
+
 | Market | Legal-facing instruments (primary) | Legal lens |
 |---|---|---|
 | **global** | Cross-cutting: no invented support; no deceptive framing | Commercial statement risk shared across codes |
@@ -10,7 +13,7 @@ Checklists and URLs: `mlr_get_ruleset` packs. Date-read: 24 October 2026.
 | **UK** | ABPI Code; MHRA Blue Guide (misleading / comparative promotional rules) | Code + Blue Guide legal/commercial risk |
 | **DE** | HWG (health advertising restrictions); AMG advertising-related; FSA Code | Unfair / prohibited advertising forms |
 | **CH** | TPA/HMG advertising frame; Pharma Code; Swissmedic advertising hub | Therapeutic-product advertising restrictions |
-| **FR / JP / CA / AU / BR** | Stub hints only | `[GAP]` — do not invent national case law |
+| Any market the catalogue lists as `stub` (`rulesets/REGISTRY.json`) | Authority hints only | `[GAP]` — do not invent national case law |
 
 ## Practice rules (legal)
 

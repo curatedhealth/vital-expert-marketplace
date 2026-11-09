@@ -31,7 +31,7 @@ Stub FR → explicit gap in coverage.
 
 ## Pattern 3
 
-Fail-close + chair approve → human_gate_required.
+Fail-close row open + chair approve → never `prep_complete`; the status follows the shared map: a correctable copy fix → `revise`, a human judgment call or a chair disagreement → `human_gate_required` (TEH-RDY-027).
 
 
 ## Reconciliation

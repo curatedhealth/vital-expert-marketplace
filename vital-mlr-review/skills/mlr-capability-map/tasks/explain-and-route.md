@@ -36,4 +36,4 @@ Explain scope and route to the next skill.
 
 ## Output
 
-Match `../../templates/` Output cards (see SKILL.md). Then the closing line.
+The full `../../../templates/capability-map-card.md` — all 11 skill rows (this skill included) and the whole "Will never" block (TEH-RDY-039) — then the route for this request and the closing line.

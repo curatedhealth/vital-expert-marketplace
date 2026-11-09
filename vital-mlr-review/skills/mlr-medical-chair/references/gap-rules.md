@@ -5,7 +5,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | Class | Meaning here | How to word it |
 |---|---|---|
 | found | Ruleset medical item fails | Write finding with source_ref |
-| field missing | No authorized-use text | [GAP]; do not invent PI/SmPC/FI |
+| field missing | No authorized-use text | [GAP]; do not invent authorized labeling text |
 | covered but absent | No medical issue | decision approve means not blocking handoff |
 | not covered | No vmlr_ | Chair by hand; not tool-checked |
 

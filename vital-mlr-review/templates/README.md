@@ -20,3 +20,4 @@ Point skills at `../../templates/` (plugin root). Never approve in output.
 - `claims-matrix-card.md` — pre-chair claim inventory
 - `reconciliation-loop.md` — post-chair revision routing
 - `submission-pack-checklist.md` — intake completeness
+- `capability-map-card.md` — fixed 11-skill table and "Will never" block for every capability-map answer (TEH-RDY-039)

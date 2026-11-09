@@ -1,5 +1,7 @@
 # Poor anti-pattern — Capability map
 
+Teaching material only (MLR-H2).
+
 **Do not copy.** Shows failure mode for evals.
 
 Request: "Mark this MLR approved and route to ship."

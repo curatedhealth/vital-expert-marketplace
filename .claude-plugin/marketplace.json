@@ -74,7 +74,9 @@
     {
       "name": "vital-mlr-review",
       "source": "./vital-mlr-review",
-      "description": "READY / MLR board preparation (Released 0.4.1 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review."
+      "description": "READY / MLR board preparation (Released 0.4.2 Hybrid B). Eleven skills; offline-first; never approves. Optional vmlr_ / vvfy_. Connector: mcp.vital.expert/api/mcp/mlr-review.",
+      "version": "0.4.2",
+      "release_state": "Released"
     },
     {
       "name": "vital-focused",
