@@ -3,9 +3,8 @@
 Invented case for teaching. "Velostra", the NORLA registry and Professor Anna Keller are
 fictional; the figures are made up.
 
-This run is manual, because no VERIFY result can be shown in a teaching file without
-simulating one (TR-H4). With VERIFY connected, the same steps run with `extract_claims`
-and `check_claim`, and the result reports the status VERIFY returned.
+This run is by hand, as every run of this skill is. No tool decides a result, and each
+result carries the label "not tool-checked".
 
 ## Request
 
@@ -39,20 +38,23 @@ strong as you can."
 | 6 | "saves hospitals EUR 3,000 per patient" | 1 (number, performance claim) | (4) |
 | 7 | "Payers should prioritize Velostra for patients over 65" | recommendation | none; "over 65" appears nowhere |
 
-Claims 1 to 3 sit in one sentence; VERIFY would return that sentence as one claim. They
-are paired separately so the result can say which part holds.
+Claims 1 to 3 sit in one sentence. They are paired separately so the result can say which part holds.
 
 ## Result as the person sees it
 
 Fact-check against the passages you supplied (draft, for your review)
 
-Not tool-checked: I compared each sentence with your passages by hand.
+Not tool-checked: I compared each claim with your passages by hand.
 Checked against: NORLA registry summary (supplied).
 
 What a match means: the passage you gave says the same thing as the sentence. It does
 not mean the sentence is true, that the source is good, or that the work is ready.
 
-Rewrite to match (3)
+6 factual claims: 0 found in your passage, 3 partly found, 2 not found in your passage,
+1 your passage says something different, 0 no passage to compare with.
+Listed separately, not in the total: 1 opinion, recommendation or definition.
+
+Partly found: rewrite to match (3)
 1. "Velostra cuts heart failure admissions by 40%" → "Hospital admission for heart
    failure within 12 months occurred in 12.0% of patients on Velostra and 20.0% on
    standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75)". Your summary gives
@@ -64,18 +66,21 @@ Rewrite to match (3)
 3. "nearly 2,000 patients" → "1,850 adults". Your summary gives the exact number.
 All three rewritten, not tool-checked.
 
-Removed (2)
+Not found in your passage: removed (2)
 1. "Professor Anna Keller, the registry lead, calls it 'a new standard of care'." Your
-   summary contains no quote and names no one. Left out, not replaced.
+   summary contains no quote and names no one. Left out, not replaced; to keep it, send
+   the interview or article it came from.
 2. "Velostra saves hospitals EUR 3,000 per patient." Your summary says no cost analysis
    was performed. Left out, not replaced.
 
-Ask you (1)
-1. "Patients stay on treatment, with 95% persistence at one year." Your summary says:
-   "Discontinuation of Velostra for any reason was 14% at 12 months." That is not 95%.
-   Should the sentence report discontinuation as the summary does?
+No passage to compare with: open, not removed (0)
 
-For your judgment (1)
+Your passage says something different: ask you (1)
+1. Your draft: "Patients stay on treatment, with 95% persistence at one year." Your
+   passage: "Discontinuation of Velostra for any reason was 14% at 12 months." (registry
+   summary, line 3). Which is right? Held out of the revised text until you say.
+
+Opinion, recommendation or definition: for your judgment (1)
 1. "Payers should prioritize Velostra for patients over 65." This is a recommendation,
    not something a passage can settle, and nothing supplied reports results for patients
    over 65. Whether it can appear in payer material is a question for your review
@@ -86,12 +91,12 @@ Revised text
 > In the NORLA observational registry of 1,850 adults with heart failure, hospital
 > admission for heart failure within 12 months occurred in 12.0% of patients on Velostra
 > and 20.0% on standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75).
-> [GAP: conflicting — persistence at one year — confirm whether to report 14%
-> discontinuation as in the summary]
+> [GAP: conflicting; your draft says "95% persistence at one year", your passage says
+> "Discontinuation of Velostra for any reason was 14% at 12 months"; tell me which is right]
 
-VERIFY would test each sentence against its passage; connect it if this needs to be
-shown. Next: because this goes to payers, source quality, the confidence figure and the
-record can be added, and it goes through your promotional review process before use.
+Next: because this goes to payers, source quality, the open-items summary and the
+record can be added, and it goes through your market access or promotional review and
+your medical review, as your process names it, before use.
 
 This check flags issues. It is not medical, legal, regulatory or ethics review.
 

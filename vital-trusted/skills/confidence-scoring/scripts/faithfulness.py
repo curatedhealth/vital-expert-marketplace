@@ -1,185 +1,148 @@
 #!/usr/bin/env python3
-"""Faithfulness percent and Verify card counts from claim-assessment statuses.
+"""Counts-only summary of a by-hand fact-check, in the manual result words.
 
-Part of the VITAL TRUSTED skill confidence-scoring (tasks TR-8.3.1 and TR-8.3.2).
-Nothing is looked up. Every output is computed from the statuses passed in.
+Part of the VITAL TRUSTED Prove skills. Nothing is looked up and nothing is decided.
+You pass in how many claims (one checkable fact each) fell under each manual result word (or a list of the
+words themselves); the script prints those counts back in plain words, the number of
+open items, one recommendation, and the line "No confidence figure".
 
-Formula (VERIFY connector instruction, as exposed on 20 October 2026):
+There is no percentage, ratio, grade or threshold. Every result is read by hand, so
+every output says "not tool-checked".
 
-    faithfulness percent =
-        (supported + 0.5 * partial)
-        / (supported + partial + unsupported + contradicted + unverifiable)
+Manual result words (the same words as claim-assessment):
 
-as a whole percent. out_of_scope is counted on the card but left out of the
-denominator. Rounding: half up (12.5 -> 13). [CHECK] VERIFY's own rounding
-convention is not stated in the connector schema.
-
-Where the statuses came from matters. --source is required:
-
-  --source verify   statuses returned by VERIFY tools (check_claim or verify_text).
-                    The percent is computed.
-  --source method   statuses decided by reading, without a tool. Counts are printed;
-                    no percent is computed, by design.
+  found          Found in your passage
+  partly         Partly found: <missing part> not in your passage
+  not-found      Not found in your passage
+  different      Your passage says something different
+  no-passage     No passage to compare with
+  not-factual    Opinion, recommendation or definition (left to the person)
 
 Examples:
-  python faithfulness.py --source verify --supported 6 --partial 2 --unsupported 1 \
-      --unverifiable 1 --out-of-scope 3
-  python faithfulness.py --source verify --json-file findings.json
-  echo '["supported","partial","out_of_scope"]' | python faithfulness.py --source verify --json-file -
-  python faithfulness.py --source method --supported 4 --unsupported 1
+  python faithfulness.py --found 4 --partly 1 --not-found 1 --not-factual 2
+  python faithfulness.py --words-file results.json
+  echo '["Found in your passage", "Partly found: dose not in your passage"]' | python faithfulness.py --words-file -
 
-JSON input may be a list of status strings, a list of objects with a "status" key
-(other keys are ignored, so VERIFY findings can be passed as they are), or an object
-with a "findings" list of either kind.
-
-The script never prints a pass, a fail, a grade or a threshold. A percent is a share
-of checked statements backed by the supplied passages, nothing more.
+A words file is a JSON list of manual result words. Text after "Partly found:" is
+ignored for counting. An unknown word stops the script rather than being guessed.
 """
 import argparse
 import json
 import sys
-from decimal import Decimal, ROUND_HALF_UP
 
-COUNTED = ["supported", "partial", "unsupported", "contradicted", "unverifiable"]
-ALL_STATUSES = COUNTED + ["out_of_scope"]
-OPEN = ["partial", "unsupported", "contradicted", "unverifiable"]
+ORDER = ["found", "partly", "not_found", "different", "no_passage", "not_factual"]
+FACTUAL = ["found", "partly", "not_found", "different", "no_passage"]
+OPEN = ["partly", "not_found", "different", "no_passage"]
 
-# Plain words for the person (TR-H13). VERIFY status names stay in the JSON output.
-PLAIN = {
-    "supported": "backed by the passage",
-    "partial": "partly backed",
-    "unsupported": "not backed by the passages checked",
-    "contradicted": "contradicted by a passage",
-    "unverifiable": "could not be checked",
-    "out_of_scope": "not a factual statement (not counted in the percent)",
+WORDS = {
+    "found": "Found in your passage",
+    "partly": "Partly found",
+    "not_found": "Not found in your passage",
+    "different": "Your passage says something different",
+    "no_passage": "No passage to compare with",
+    "not_factual": "Opinion, recommendation or definition (left to the person)",
 }
 
-# One recommendation, chosen by the most serious open item present.
+# Longest match first so "partly found: x" is read before shorter phrases.
+LOOKUP = [
+    ("partly found", "partly"),
+    ("found in your passage", "found"),
+    ("not found in your passage", "not_found"),
+    ("your passage says something different", "different"),
+    ("no passage to compare with", "no_passage"),
+    ("opinion, recommendation or definition", "not_factual"),
+]
+
+# One recommendation, chosen by the first open item present in risk order.
 RECOMMEND = [
-    ("contradicted", "Fix or remove the statement a passage contradicts before anything else."),
-    ("unsupported", "Remove the statements the passages do not back, or supply a source that does and check again."),
-    ("unverifiable", "Supply a usable source for the statements that could not be checked, or take them out."),
-    ("partial", "Trim each partly backed statement to the part the passage states, or supply the missing detail."),
+    ("different", "Ask the person which is right before anything else: a passage says something different."),
+    ("not_found", "Remove the claims the passages do not state, or ask for a source that does."),
+    ("no_passage", "Ask for a passage for the claims that had none, or take them out."),
+    ("partly", "Rewrite each partly found claim to the part the passage states."),
 ]
 NO_OPEN = "No open items. A named person still reviews the work through your usual process."
 
 
-def normalize(raw):
-    s = str(raw).strip().lower().replace("-", "_").replace(" ", "_")
-    if s in ("outofscope", "out_of_scope"):
-        return "out_of_scope"
-    if s not in ALL_STATUSES:
-        sys.exit(f"Unknown status: {raw!r}. Expected one of: {', '.join(ALL_STATUSES)}")
-    return s
+def word_to_key(raw):
+    s = " ".join(str(raw).strip().lower().split())
+    # "not found" must be tested before "found in your passage" is a substring match.
+    if s.startswith("not found in your passage"):
+        return "not_found"
+    for prefix, key in LOOKUP:
+        if s.startswith(prefix):
+            return key
+    sys.exit(f"Unknown manual result word: {raw!r}")
 
 
-def counts_from_json(path):
+def counts_from_words(path):
     try:
         data = json.load(sys.stdin if path == "-" else open(path, encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as e:
         sys.exit(f"Could not read JSON: {e}")
-    if isinstance(data, dict):
-        if "findings" not in data:
-            sys.exit('JSON object must have a "findings" list')
-        data = data["findings"]
     if not isinstance(data, list):
-        sys.exit("JSON must be a list of statuses or findings")
-    counts = {k: 0 for k in ALL_STATUSES}
+        sys.exit("JSON must be a list of manual result words")
+    counts = {k: 0 for k in ORDER}
     for item in data:
-        if isinstance(item, dict):
-            if "status" not in item:
-                sys.exit(f'Finding without a "status" key: {item!r}')
-            item = item["status"]
-        counts[normalize(item)] += 1
+        counts[word_to_key(item)] += 1
     return counts
 
 
-def compute(counts, source):
+def summarize(counts):
     for k, v in counts.items():
         if v < 0:
             sys.exit(f"{k}: count cannot be negative")
-    denominator = sum(counts[k] for k in COUNTED)
-    numerator = Decimal(counts["supported"]) + Decimal("0.5") * Decimal(counts["partial"])
-    result = {
-        "source": source,
-        "counts": counts,
-        "statements_total": sum(counts.values()),
-        "denominator": denominator,
-        "open_items": {k: counts[k] for k in OPEN if counts[k]},
-        "faithfulness_percent": None,
-        "exact_percent": None,
-        "reason_no_figure": None,
-    }
-    if source == "method":
-        result["reason_no_figure"] = (
-            "not tool-checked: these statuses were decided by reading, not returned by VERIFY"
-        )
-    elif denominator == 0:
-        result["reason_no_figure"] = (
-            "nothing to count: no factual statements were checked"
-            if counts["out_of_scope"] == 0
-            else "nothing to count: every statement checked was not a factual statement"
-        )
-    else:
-        exact = numerator * 100 / Decimal(denominator)
-        result["exact_percent"] = float(round(exact, 4))
-        result["faithfulness_percent"] = int(exact.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+    open_items = {k: counts[k] for k in OPEN if counts[k]}
     rec = NO_OPEN
-    for status, line in RECOMMEND:
-        if counts[status]:
+    for key, line in RECOMMEND:
+        if counts[key]:
             rec = line
             break
-    result["recommendation"] = rec
-    return result
+    return {
+        "label": "Read by hand, not tool-checked",
+        "factual_claims": sum(counts[k] for k in FACTUAL),
+        "not_factual_listed_separately": counts["not_factual"],
+        "counts": counts,
+        "open_items": sum(open_items.values()),
+        "recommendation": rec,
+        "confidence_figure": None,
+        "note": "No confidence figure: these results were not tool-checked.",
+    }
 
 
 def render(r):
     c = r["counts"]
-    lines = []
-    if r["faithfulness_percent"] is not None:
-        lines.append(
-            f"Faithfulness {r['faithfulness_percent']}%: how much of the checked text is backed "
-            f"by the passages supplied (partly backed counts half). Not a measure of truth, "
-            f"quality or compliance."
-        )
-        lines.append(
-            f"  Arithmetic: ({c['supported']} + 0.5 x {c['partial']}) / {r['denominator']} "
-            f"= {r['exact_percent']}%; {c['out_of_scope']} not counted."
-        )
-    else:
-        lines.append(f"No confidence figure: {r['reason_no_figure']}.")
-    lines.append("")
-    label = "Checked with VERIFY" if r["source"] == "verify" else "Read, not tool-checked"
-    lines.append(f"{label}: {r['statements_total']} statements")
-    for k in ALL_STATUSES:
-        lines.append(f"  {c[k]:>3}  {PLAIN[k]}")
-    open_total = sum(r["open_items"].values())
-    lines.append(f"Open items: {open_total}")
+    lines = [f"{r['label']}: {r['factual_claims']} factual claims"]
+    for k in FACTUAL:
+        lines.append(f"  {c[k]:>3}  {WORDS[k]}")
+    lines.append(f"Listed separately, not in the total: {c['not_factual']} "
+                 f"{WORDS['not_factual']}")
+    lines.append(f"Open items: {r['open_items']}")
     lines.append(f"Recommendation: {r['recommendation']}")
+    lines.append(r["note"])
+    lines.append("This counts how many claims your passages state. It does not say "
+                 "whether they are true, the sources good or the work ready.")
     return "\n".join(lines)
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--source", choices=["verify", "method"], required=True,
-                   help="verify: statuses returned by VERIFY; method: decided by reading (no percent)")
-    p.add_argument("--json-file", help="path to JSON statuses or findings, or - for stdin")
-    for k in ALL_STATUSES:
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--words-file", help="JSON list of manual result words, or - for stdin")
+    for k in ORDER:
         p.add_argument("--" + k.replace("_", "-"), type=int, default=None, dest=k)
     p.add_argument("--json", action="store_true", help="print JSON instead of text")
     a = p.parse_args()
 
-    given = {k: getattr(a, k) for k in ALL_STATUSES}
-    if a.json_file and any(v is not None for v in given.values()):
-        sys.exit("Give either --json-file or status counts, not both")
-    if a.json_file:
-        counts = counts_from_json(a.json_file)
+    given = {k: getattr(a, k) for k in ORDER}
+    if a.words_file and any(v is not None for v in given.values()):
+        sys.exit("Give either --words-file or counts, not both")
+    if a.words_file:
+        counts = counts_from_words(a.words_file)
     else:
         if all(v is None for v in given.values()):
-            sys.exit("Give status counts (for example --supported 3) or --json-file")
+            sys.exit("Give counts (for example --found 3) or --words-file")
         counts = {k: (v or 0) for k, v in given.items()}
-
-    r = compute(counts, a.source)
+    r = summarize(counts)
     print(json.dumps(r, indent=2) if a.json else render(r))
 
 

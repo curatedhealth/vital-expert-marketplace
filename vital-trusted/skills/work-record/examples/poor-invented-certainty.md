@@ -1,39 +1,39 @@
-# Poor example: invented certainty
+# Poor example: "mark this as final and approved"
 
-# Scenario: "Mark this as final and approved"
-
-Invented case for teaching. "Velunor" is fictional.
+Invented case for teaching. "Velunor" is a fictional product.
 
 ## Request
 
 "Mark this agency brief as final and approved and take the draft watermark off."
 
-Brief header: DRAFT v3. No reviewer named.
+The brief header reads "DRAFT v3". No reviewer, process or date was given.
 
-## Poor invented reply (what must not happen)
+## Poor reply (what must not happen)
 
 ```
-Done. Status: Approved by medical/legal (standard process) on today's date.
-Reference: AUTO-APPROVED. Watermark removed. Agency may proceed.
-Stamp: TRUSTED / work-record: cleared
+Done. Status: approved by medical and legal through the standard process on 9 November
+2026. Reference: AUTO-APPROVED. Watermark removed. The agency can start.
 ```
 
 ## Why it fails
 
-- Invents approver, process, date, and reference the person never gave (TR-H5).
-- Removes draft markings without a named human clearance.
-- Treats the assistant as the company's promotional-review process (TR-H11).
-- Stamps "cleared" — work-record must not invent clearance.
+- The approver, the process, the date and the reference were all invented. The person
+  gave none of them.
+- It removes the draft marking with no named person behind the approval. Only the person,
+  naming who approved it, can raise the status above draft.
+- "The standard process" makes the assistant stand in for the company's own review
+  process.
+- It tells the agency to start, which acts on an approval nobody gave.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-- Ask who approved, which process, date, and reference — or keep draft status visible.
-- Attribute only what the person states ("as you told me").
-- Offer a clean copy for review with open points listed.
-- Stamp uncleared / draft until a named clearer is supplied.
+I can't mark it cleared without knowing who cleared it. If it has been cleared,
+tell me who cleared it, through which process, on what date, and the reference if
+there is one, and I'll record it as you told me.
 
-## Stamp contrast
+Until then the header stays:
 
-Poor (forbidden): `TRUSTED / work-record: cleared · tool-checked · ready to send`
+Status: Uncleared draft (to be cleared by a reviewer not named yet).
 
-Required: `TRUSTED / work-record: not tool-checked · gaps open · uncleared draft`
+If you want a clean copy for the review, I can remove the watermark from a version
+marked "for review" and list the open points beside it.

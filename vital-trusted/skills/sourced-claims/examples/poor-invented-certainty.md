@@ -1,97 +1,73 @@
-# Poor example: invented certainty
+# Poor example: sources added from memory
 
-# Worked example: a brand deck with "studies show" and "leading treatment"
-
-Invented case for teaching. "Lumivra" and "Corvanta" are fictional products; the study
-name, data provider and figures are made up.
+Invented case for teaching. "Brand A", "ORION-4" and "Competitor B" are fictional.
 
 ## Request
 
-"Tidy up these three slides for the regional brand meeting, then we'll send them to the
-agency to turn into HCP materials. Keep it punchy."
+"Add the sources to these claims before it goes to the payer."
 
-## Slides supplied
+> - Studies show fewer admissions with Brand A.
+> - Leading treatment in its class.
+> - Better outcomes than Competitor B.
 
-> Slide 1. Lumivra: the leading treatment for moderate psoriasis.
-> Slide 2. Studies show Lumivra clears skin faster than Corvanta. Experts agree early
-> clearance matters most to patients.
-> Slide 3. 72% of patients reach clear or almost clear skin by week 16 (LUMI-1). Current
-> guidelines recommend Lumivra first line.
+Sources supplied: an excerpt of the ORION-4 registry report (internal, data cut-off 30
+June 2026) with two admission rates and a hazard ratio, no follow-up length and no page
+numbers; a company press release of 14 March 2026 with no rates. Nothing on Competitor B.
 
-## Sources supplied
+## Poor reply (what must not happen)
 
-> LUMI-1 publication (PDF): randomized, placebo-controlled; 72% clear or almost clear
-> skin at week 16 on Lumivra versus 9% on placebo (table 2).
-> Prescription data extract, regional, Q2 2026: Lumivra 31% of new patients, Corvanta 28%.
+```
+- Studies show fewer admissions with Brand A within 12 months (Mueller et al., N Engl J
+  Med 2025;392:114-123, p. 14).
+- Leading treatment in its class (IQVIA Market Report 2026).
+- Better outcomes than Competitor B (head-to-head study, Lancet 2025).
 
-## Depth
+All claims are sourced and the references are verified.
+```
 
-The deck goes to an agency to become HCP material: it is leaving the company, so the
-full check applies (TR-H12).
+## Why it fails
 
-## Fixed slides
+- The three references were written from memory. The person supplied no journal article,
+  no market report and no head-to-head study, so each reference is invented, with
+  authors, volume and pages that nobody gave.
+- "Within 12 months" and "p. 14" are details that the excerpt does not hold.
+- The press release is never mentioned, and no line says which source supports which
+  claim, so the person cannot check the claim against the page.
+- "Leading in its class" and "better than Competitor B" have no source in the material.
+  They should have been shown as open, not given a reference.
+- "All claims are sourced and the references are verified" reports a check that was
+  not run.
 
-> Slide 1. Lumivra: 31% of new patients in the region in Q2 2026,
-> versus 28% for Corvanta (regional prescription data extract).
-> Slide 2. [GAP: not supplied — head-to-head study of time to clearance versus Corvanta —
-> supply the study; without it, remove the comparison] [GAP: not supplied — source for
-> what matters most to patients — supply the survey or advisory board report, with who
-> and how many]
-> Slide 3. 72% of patients reached clear or almost clear skin by week 16 on Lumivra,
-> versus 9% on placebo (LUMI-1, table 2). [GAP: out of date or unclear date — "current
-> guidelines recommend first line" has no guideline named — supply the guideline, its
-> edition and the recommendation]
+## Repair (as the person sees it)
 
-## Source note (as the person sees it)
+Sources: what I changed and what is still needed (Uncleared draft)
 
-Sources: what I changed and what is still needed (draft, not yet reviewed)
-
-Sources you gave me: LUMI-1 study publication (PDF); regional prescription data
-extract, Q2 2026 (sales data).
+Sources you gave me: ORION-4 registry report (internal), data cut-off 30 June 2026;
+company press release, 14 March 2026.
 
 Changed
-1. "the leading treatment" → the share figures your extract supports, with market and
-   period. "Leading" on its own has no measure a reviewer can check, and your extract
-   covers two products only, so it cannot show Lumivra leads the whole market.
-2. "Studies show Lumivra clears skin faster than Corvanta" → a gap. No study comparing
-   the two was supplied, and LUMI-1 compares with placebo only.
-3. "Experts agree early clearance matters most to patients" → a gap. No survey, panel or
-   guideline was supplied.
-4. "72% of patients…" → kept, with the placebo figure and the table it comes from, so a
-   reviewer can find it.
-5. "Current guidelines recommend Lumivra first line" → a gap. No guideline was supplied,
-   and "current" needs a named edition and date.
+1. "Studies show fewer admissions" → "In the ORION-4 registry, 12.0% of patients on Brand
+   A were admitted to hospital, versus 20.0% on standard care (adjusted hazard ratio
+   0.60, 95% CI 0.48 to 0.75)." The length of follow-up for these figures is not in the
+   excerpt; it is still missing, from the registry report.
 
 Claims that still need a source
-1. Faster clearance than Corvanta — needs a head-to-head study; a cross-trial comparison
-   would need your medical review to decide whether it can be used at all.
-2. What matters most to patients — needs the survey or advisory board report.
-3. Guideline recommendation — needs the guideline itself.
+1. "Leading treatment in its class" needs a source that ranks the treatments.
+2. "Better outcomes than Competitor B" needs a study that compares the two.
 
-Next step: these slides go through your promotional review process before the agency
-uses them.
+Sources that cannot carry their claim for this reader
+1. The press release gives no rates, so it can support the date of the announcement and
+   nothing more.
 
-I did not write any reference from memory. I did not check any source with a tool.
+I did not write any reference from memory. No source was tool-checked.
 
-## Behind the note (reference only, not shown to the person)
+References (built from the sources you supplied; not tool-checked)
 
-Patterns S4, S1, S2, S5 and C4 in `references/failure-modes.md` / `references/knowledge.md`. Whether a comparative claim
-is permitted at all is for `claims-and-label`; this skill only names what would source
-it.
+1. ORION-4 registry report. Internal report. Data cut-off 30 June 2026. Used for: the
+   admission rates and the hazard ratio.
+2. Company press release announcing topline ORION-4 results, 14 March 2026. Used for:
+   the date of the announcement.
 
-## Check line returned to trusted-check
-
-```
-True · sources: 5 claims that need a source, 2 with a source you supplied, 0 with a source named but not supplied, 3 with no source (not tool-checked)
-True · citations: 1 reference looked at, 0 missing details a reviewer needs, 1 guidance or "current" statement with no title or date (not built with a tool)
-```
-
-## Why it fails (anti-pattern to avoid)
-
-- Leaves "studies show" / "leading treatment" without a named source.
-- Invents a citation to look sourced.
-- Treats brand adjectives as evidenced claims.
-
-## What the skill must do instead
-
-Every claim needs a source or a gap; strip unsourced superlatives; no fake citations.
+Missing details
+- Reference 1: the authors, the report title and the table or page for the figures are
+  not in what you sent; please add them from the full report.

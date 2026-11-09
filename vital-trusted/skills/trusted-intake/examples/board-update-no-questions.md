@@ -42,6 +42,7 @@ Product status  unknown; update makes no product claims             (unknown)
 Use             internal only                                       (stated)
 Deliverable     one page, prose                                     (stated)
 Material        launch readiness notes
+Not seen        nothing the update relies on is missing
 Stakes          leadership
 Next process    none apparent
 Inputs          internal

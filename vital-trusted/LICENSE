@@ -1,4 +1,4 @@
-# Vital Expert TRUSTED Plugin — Proprietary License
+# Vital Expert TRUSTED Plugin: Proprietary License
 
 **Copyright (c) 2026 Crossroads Catalyst GmbH.**  
 Vital Expert is a product of **Crossroads Catalyst GmbH** (Swiss limited liability company).  
@@ -71,12 +71,13 @@ ADVISED OF THE POSSIBILITY. AGGREGATE LIABILITY FOR DIRECT DAMAGES SHALL NOT
 EXCEED THE FEES PAID FOR THE PLUGIN SEAT IN THE TWELVE (12) MONTHS PRECEDING THE
 CLAIM, OR CHF 100 IF NO FEE WAS PAID.
 
-## Prove / live tools
+## Prove checks by hand
 
-Optional live Prove tools may call VITAL Verify endpoints (for example
-`mcp.vital.expert`). Use of those tools is subject to your Verify key terms and
-does not change the disclaimers above. Offline use must be labeled not
-tool-checked where the skills so require.
+The Plugin has no connector and needs no key. Its Prove skills compare claims, sources
+and references by hand against material you supply, and label every such result "not
+tool-checked". Those results are counts and notes. They are not a determination that
+any statement is true or that any material is compliant, and they do not change the
+disclaimers above.
 
 ## Termination
 
@@ -93,7 +94,7 @@ protection law provides otherwise.
 
 ## Contact
 
-Crossroads Catalyst GmbH — Vital Expert  
+Crossroads Catalyst GmbH, Vital Expert  
 https://vital.expert
 
 For marketplace distribution terms beyond this seat license, contact the copyright

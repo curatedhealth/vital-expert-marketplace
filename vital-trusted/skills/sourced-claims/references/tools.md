@@ -2,24 +2,13 @@
 
 ## Companion slot
 
-No companion is connected to this skill at launch. It hands finished work to the Prove
-skills, which own the VERIFY tool calls and their interpretation. This skill never calls
-VERIFY directly.
+This skill uses no tool. It hands finished work to the Prove skills, which run by hand.
 
-| Task | What a companion would do | Tool (through which skill) | Without it |
+| Task | What a companion would do | Handed to | Without it |
 |---|---|---|---|
-| Every claim sourced | Test each sourced claim against the quoted passage it rests on | VERIFY `check_claim`, `verify_text`, through `claim-assessment` | Method runs; check line says "not tool-checked" |
-| Right type of source | Qualify a specific source (type, peer review, funding, fit for the question) and check whether it is current or superseded | VERIFY `qualify_source`, `check_currency`, `ingest_document`, through `source-assessment` | Method names the type and whether it fits; specific grading marked `[GAP: not checkable here — …]`; "not graded with a tool" |
-| Specific citations | Build a formatted citation from a supplied or fetched source | VERIFY `build_citation`, through `citation-and-record` | Method lists fields from the supplied source; "citation not built or checked with a tool" |
-
-Tool names are as the VERIFY connector lists them. This skill did not read their
-argument or return contracts; those are recorded in the Prove skills. `[CHECK]` that the
-three hand-offs above match the final Prove skill scopes.
-
-A future companion that could fill a slot here: a company reference library (approved
-references and data on file with their identifiers), which would let the specific
-citations task match claims to approved references instead of asking. Candidate, not a
-commitment. `[CHECK: not in the concept's candidate list; for the owner to decide]`
+| Every claim sourced | Compare each sourced claim with the quoted passage it rests on | `claim-assessment`, by hand | Method runs; check line says "not tool-checked" |
+| Right type of source | Qualify a specific source (type, peer review, funding, fit for the question) and check whether it is current or superseded | `source-assessment`, by hand (a source card) | Method names the type and whether it fits; anything about the specific source beyond its type is left open in plain words; "not tool-checked" |
+| Specific citations | Build a plain citation from a supplied source | `citation-and-record`, by hand | Method lists fields from the supplied source; "citation not tool-checked" |
 
 ## Script
 

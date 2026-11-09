@@ -42,7 +42,7 @@ The pasted text carries "© 2026 Fictional Journal Press. All rights reserved."
 ## Check line (to trusted-check only)
 
 ```
-Ethical · other people's work: 1 item reproduced in full or close to it, 1 licensed item, 1 question for your licensing process (asked, not checked)
+Ethical · other people's work: 1 item reproduced in full or close to it, 1 licensed item, 1 question for your licensing process (not tool-checked)
 ```
 
 ## Behind the reply (reference only, not shown to the person)

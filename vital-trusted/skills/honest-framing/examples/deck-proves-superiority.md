@@ -38,26 +38,27 @@ the company. Market: not stated. Next process: promotional review.
 
 1. "In KELNA-1, an open-label trial of 640 adults, fewer patients had a flare by week 24
    with Velostra than with Corvane."
-2. "Flares by week 24: 22% with Velostra, 28% with Corvane: 6 percentage points fewer, a
-   relative reduction of about 21% (relative risk 0.79, 95% CI 0.64 to 0.97). Follow-up
-   was 24 weeks."
+2. "Flares by week 24: 22% with Velostra, 28% with Corvane (relative risk 0.79, 95% CI
+   0.64 to 0.97). Follow-up was 24 weeks."
 3. "KELNA-1 was funded and analyzed by Example Pharma, the maker of Velostra."
 4. Chart: see the chart description below.
 5. "Injection-site reactions: 3% with Velostra, 1% with Corvane."
 
 ## Framing note (as the person sees it)
 
-What I changed and why (draft, not yet reviewed)
+How I changed the framing (Uncleared draft)
 
 Based on: KELNA-1 abstract and disclosures (supplied)
+
+Strong words changed: 4. Chart issues: 1. Framing questions for you: 2.
 
 Changed
 1. "proves Velostra is superior" → the result of the one trial, with its design. One
    open-label trial cannot prove superiority; it shows fewer flares in this trial.
    Whether a superiority claim can be made at all is a question for your promotional
    review.
-2. "cuts flares by 21%, a dramatic improvement" → both rates, the 6-point difference,
-   the relative figure and its range. 21% on its own reads larger than 6 in 100;
+2. "cuts flares by 21%, a dramatic improvement" → both rates and the relative risk with
+   its range. 21% on its own reads larger than the two rates, 22% and 28%, do;
    "dramatic" is gone, the numbers carry it.
 3. "Independent head-to-head data" → who funded and analyzed the trial. The paper names
    Example Pharma as funder and analyst, and three authors are its employees, so
@@ -69,10 +70,9 @@ Changed
 
 Charts
 1. Slide 4, bar chart of 75% improvement at week 16. What the reader sees now: the
-   Velostra bar looks twice as tall as the Corvane bar. What the data are: 88% versus
-   84%, a 4-point difference that was not statistically significant, on a secondary
-   endpoint. Measured: because the axis starts at 80%, the gap looks about 21 times its
-   real size. Plainer version: with the axis from 0% to 100% the bars are nearly the
+   axis starts at 80%, not 0%, and ends at 90%, so the bars look far apart. What the
+   data are: 88% versus 84%, a difference that was not statistically significant, on a
+   secondary endpoint. Plainer version: with the axis from 0% to 100% the bars are nearly the
    same height. To change: start the axis at 0%; print 88% and 84% on the bars; add n
    = 320 per arm; title it as a secondary endpoint and say the difference was not
    statistically significant; add the source. Or drop the chart; that choice is yours.
@@ -81,34 +81,36 @@ Who stands behind the evidence
 1. KELNA-1: funded, designed and analyzed by Example Pharma; three of eight authors are
    employees. Now stated on slide 3, where the result is used.
 
-Questions for you
-1. Which market is the doctor-facing version for? It changes which rules your review
-   will apply.
+Question for you
+Which market is the doctor-facing version for? It changes which rules apply in your
+review.
 
 Next step: this goes through your promotional review process before the sales force or
 the agency uses it.
 
-I compared the draft with what you gave me; nothing here was checked with a tool.
+I compared the draft with what you gave me; none of this was tool-checked.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns UC1, UC2, NF1, NF7, CH1, IN1, IN5, UC7, UC8 in `references/failure-modes.md` / `references/knowledge.md`.
+Patterns UC1, UC2, NF1, NF7, CH1, IN1, IN5, UC7, UC8 in `references/patterns.md`.
 Rules: R5 and R7 (UK, if the market is the UK), R1 to R4 as good practice since the
 market is not stated and the audience is doctors, not consumers; R9 for what a
 disclosure contains. The superiority claim itself goes to `claims-and-label`; the
-relative-only figure on slide 2 is also counted by `grounded-statements`.
+relative-only figure on slide 2 is counted by `grounded-statements`, not in the framing
+line here (`governance.md`).
 
 Scripts used:
 
 ```
 python scripts/chart_scale.py --axis-min 80 --axis-max 90 --value 84 --value 88
-python ../grounded-statements/scripts/risk_metrics.py --treat-rate 0.22 --ctrl-rate 0.28
-python ../grounded-statements/scripts/risk_metrics.py --treat-rate 0.03 --ctrl-rate 0.01
+python ../../grounded-statements/scripts/risk_metrics.py --treat-rate 0.22 --ctrl-rate 0.28
+python ../../grounded-statements/scripts/risk_metrics.py --treat-rate 0.03 --ctrl-rate 0.01
 ```
 
 Derived: drawn bar ratio 2.0 against an actual ratio of 1.048, so the difference looks 21
 times its real size, and fills 40% of the plotted range. Flares: risk difference −6.0
 percentage points, crude relative risk 0.786; the paper's 0.79 is reported as given.
+These were used to check the draft's "21%"; none was added to the slides.
 Injection-site reactions: +2.0 percentage points, relative risk 3.0.
 
 Check lines returned to `trusted-check`:
@@ -117,8 +119,8 @@ Check lines returned to `trusted-check`:
 Unbiased · uncertainty: 2 statements more certain than the data allow, 0 statements less certain than the data allow, 2 results missing an interval, sample size, follow-up or limitation the material gives (not tool-checked)
   - slide 1: "proves superiority" from one open-label trial
   - slide 2: "dramatic"; follow-up and design not stated
-Unbiased · framing: 3 figures or charts framed to look larger or smaller than they are (not tool-checked)
-  - slide 4: axis starts at 80%, so a 4-point, non-significant gap looks like a doubling
+Unbiased · framing: 2 figures or charts framed to look larger or smaller than they are (not tool-checked)
+  - slide 4: axis runs from 80% to 90%, so 88% versus 84%, not significant, looks far apart
   - slide 5: "only 3%" with no comparator, while the benefit is given as a relative figure
 Unbiased · interests: 2 interests in the material, 2 not disclosed where the result is used, 1 source labeled independent or neutral without support in the material (not tool-checked)
   - slide 3 calls the trial independent; the paper names the maker as funder and analyst

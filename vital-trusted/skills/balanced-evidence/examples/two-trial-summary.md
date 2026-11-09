@@ -24,21 +24,25 @@ both safety findings appear; short note.
 
 ## Draft
 
-> Zelorastat has two placebo-controlled phase 3 trials in condition X. In ZELORA-2 (600
+> Two placebo-controlled phase 3 trials in condition X were supplied. In ZELORA-2 (600
 > adults), a major event occurred by week 52 in 6.0% on zelorastat vs 9.0% on placebo
 > (HR 0.66, 95% CI 0.45 to 0.97). In ZELORA-3 (820 adults), the primary endpoint was not
 > met: 7.8% vs 8.6% (HR 0.91, 95% CI 0.70 to 1.18). Serious adverse events in ZELORA-2
-> were 11% vs 10%; in ZELORA-3, 8% vs 5% stopped because of side effects. [GAP: not
-> supplied — serious adverse events in ZELORA-3 and discontinuation in ZELORA-2 — supply
+> were 11% vs 10%; in ZELORA-3, discontinuation due to adverse events was 8% vs 5%. [GAP: not
+> supplied; serious adverse events in ZELORA-3 and discontinuation in ZELORA-2; supply
 > the full safety tables]
 
 ## Short note to the person
 
-Added: ZELORA-3, which missed its primary endpoint, alongside ZELORA-2, so the team sees
-both results. Gap left: the safety figures each abstract does not give.
+Studies in your material: 2.
+Gaps left: serious adverse events in ZELORA-3 and discontinuation in ZELORA-2, which the
+abstracts do not give; the full safety tables would supply them.
 
 ## Why this is the right depth
 
-The draft did not hide the second trial, so there is no repair note, only one line. Had
-the person asked for "only ZELORA-2", the reply would ask what the call is for and state
-the scope in the summary ("ZELORA-3 is not covered here") rather than drop it silently.
+The summary was drafted from the two abstracts, with no draft of the person's, so
+nothing was added or moved and there is no count of changes: the short note gives the
+studies and the gaps only. Both trials, including the one that missed its primary
+endpoint, are in the summary from the start. Had the person asked for "only ZELORA-2",
+the reply would ask what the call is for and state the scope in the summary ("ZELORA-3
+is not covered here") rather than drop it silently.

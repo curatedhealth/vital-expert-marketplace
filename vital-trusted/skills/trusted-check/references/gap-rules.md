@@ -2,7 +2,7 @@
 
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
-Same classes as every TRUSTED skill: `[GAP: <class> — <what is missing> — <what would
+Same classes as every TRUSTED skill: `[GAP: <class>; <what is missing>; <what would
 close it>]`. The letter skills write gaps in this syntax inside drafts. `trusted-check`
 does not edit the draft, so in the summary each gap is translated into plain words
 (TR-H13). The syntax appears only in the "Detail for reviewers" view, when asked.
@@ -10,7 +10,7 @@ does not edit the draft, so in the summary each gap is translated into plain wor
 | Class | Where it lands in the summary | Plain wording |
 |---|---|---|
 | `not supplied` | The letter's row, and "Open for a person" when the person can supply it | "'9 out of 10' has no source in what you gave me. Share the study to keep it." |
-| `not checkable here` | "Could not be checked" | "Whether the claims match your sources: VERIFY is not connected." / "Whether the safety statements match the approved label: no label was supplied." |
+| `not checkable here` | "Could not be checked" | "Whether the claims match your sources: no sources were supplied." / "Whether the safety statements match the approved label: no label was supplied." |
 | `conflicting` | The letter's row, and "Open for a person" | "Your notes give 412 patients; the paper gives 408. Which is final?" |
 | `needs a decision` | "Open for a person", with who decides | "Whether this tool can take unpublished data: your AI policy owner decides." |
 | `out of date or unclear date` | The True row | "'Latest guidance' names no document or date." |

@@ -13,7 +13,7 @@ Statements usually expected for <kind of material> in <market>
 - Side-effect reporting statement ........................ <in the draft, link and company to fill | placeholder left | not confirmed for this market: ask your review process>
 - Audience statement (who the material is for) .......... <in the draft | placeholder left> (usual practice)
 - Job code ............................................... <placeholder left: from your approval system>
-- <Other elements for this market, e.g. dispensing category, authorisation holder and address>
+- <Other elements for this market, e.g. dispensing category, authorization holder and address>
 
 Not filled in by me: job code, dates, links and prescribing information text. They come
 from your approval system and the approved label.

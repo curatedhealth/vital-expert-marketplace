@@ -21,5 +21,5 @@ the depth for material that leaves the company.
 ```
 Primary:      <reader>  decides <…>
 Secondary:    <reader>  needs to find <…>
-Conflict:     <none | what conflicts — ask which leads>
+Conflict:     <none | what conflicts: ask which leads>
 ```

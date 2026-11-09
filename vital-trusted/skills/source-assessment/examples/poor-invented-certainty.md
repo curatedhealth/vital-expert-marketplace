@@ -1,90 +1,61 @@
-# Poor example: invented certainty
+# Poor example: a grade for two sources nobody looked up
 
-# Worked example: a competitor claim from a press release (with VERIFY)
-
-Invented case for teaching. "Orvelin", its maker and every figure are fictional. The
-VERIFY values below are placeholders in angle brackets: no tool ran for this example,
-and a real answer prints only what the tool returned (TR-H4).
+Invented case for teaching. "Velostra", the NORLA registry and Example Pharma are
+fictional.
 
 ## Request
 
-"Brand manager. I'm writing the competitor summary for our leadership team. Orvelin
-says it cuts relapses by 60%. Here's their press release link. Can I put that in as a
-fact?" The person supplies an https link to the competitor's news page.
+"Are these two sources fine for the payer slide?"
 
-VERIFY is connected.
+> 1. "Outcomes after Velostra in NORLA", Example Cardiology Journal, 2023. Abstract only.
+>    It states that Example Pharma funded the registry.
+> 2. Example Pharma press release, 1 March 2024, headline "40% fewer admissions". No rates.
 
-## Depth
+## Poor reply (what must not happen)
 
-Leadership material, internal: short card (TR-H12). The person's question is whether
-the press release can carry "a fact".
+```
+Both sources are strong.
 
-## Steps and calls
+1. Example Cardiology Journal, 2023: peer reviewed, current, score 86 out of 100, gold
+   tier. Confirms Velostra reduces admissions.
+2. Example Pharma press release, 2024: score 74 out of 100, silver tier. Confirms the
+   40% reduction.
 
-1. `python scripts/identify_source_id.py "<link>"` returns URL only, with the note
-   that the currency check will come back "not checked".
-2. Qualify, passing the person's question:
+Both are fine to use on the slide.
+```
 
-   ```
-   qualify_source({ "url": "<link as supplied>", "question": "Does Orvelin reduce relapses by 60%?" })
-   ```
+## Why it fails
 
-3. Currency, with the only identifier available:
+- No score or tier can be computed by hand. The numbers 86 and 74 and the tiers are
+  invented, and they look like a measurement.
+- "Peer reviewed" and "current" were not in what was supplied. The abstract does not say
+  whether the article was reviewed, and no one checked whether it was corrected or
+  replaced since 2023.
+- The funding by Example Pharma, which the abstract states, is left out. A payer reader
+  needs it.
+- A press release cannot carry an admissions claim. Calling it a source that "confirms
+  the 40% reduction" treats the company's headline as evidence.
+- "Strong" and "fine to use" are verdicts. Only the person's review process can give that.
 
-   ```
-   check_currency({ "url": "<link as supplied>" })
-   ```
+## Repair (as the person sees it)
 
-   Per the schema, a URL alone returns notices ["not checked"].
-4. Read the page as supplied: dated 2 May 2026; issued by Orvelin's maker; says the
-   phase 3 trial "reduced relapses by 60%"; gives no event rates, no number of patients
-   and no publication; says full results "will be presented at an upcoming meeting".
-5. No sentence is being tested against the page here. If the person later wants
-   "Orvelin's maker reported a 60% relative reduction" checked against the page, that
-   goes to `claim-assessment` with the quoted passage.
+I can't tell you whether they are good enough; your review process decides that. Here is what each can and cannot carry for a payer reader.
 
-## What the person reads
+"Outcomes after Velostra in NORLA", Example Cardiology Journal, 2023 (full date not shown)
+- Kind: a journal article, from the abstract only. Peer review status is not
+  confirmed; the abstract does not say.
+- Funders and interests: funded by Example Pharma, as the abstract states.
+- Can carry: that admissions were reported for Velostra in one observational registry
+  analysis.
+- Cannot carry: that Velostra caused the difference. Needs: the full article.
 
-**Orvelin press release, 2 May 2026:** a company announcement by Orvelin's maker, not
-peer reviewed. It can carry: "Orvelin's maker announced on 2 May 2026 that its phase 3
-trial reduced relapses by 60% (relative figure; no event rates or publication yet)." It
-cannot carry "Orvelin cuts relapses by 60%" as a fact: the trial results are not
-published, the figure is relative only, and the source is the competitor itself.
-Worth watching for the full results at the meeting the release mentions.
+Example Pharma press release, 1 March 2024
+- Kind: a company press release; not peer reviewed; no rates.
+- Can carry: that the company announced the result on that date.
+- Cannot carry: the admissions claim. Cite the article for the figures.
 
-Checked with VERIFY on 20 October 2026
-<title, issuer and date as returned>
-Source score <total as returned>: <each axis with a number, as returned>
-Tier: <tier as returned> (how completely the source identifies itself, not how strong
-the evidence is)
-Retraction and updates: not checked (link only, no DOI)
+Not tool-checked. No retraction or currency check was run, and no score is given.
+Next step: this goes through your market access or promotional review and your medical
+review, as your process names it, before it is used.
 
-The score describes the page: who published it, how recent it is, how well it matches
-your question, how completely it identifies itself. It does not say whether the 60%
-is right.
-
-## If qualify_source had returned inadmissible
-
-"VERIFY could not qualify this link: <reason as returned; for a failed fetch, the fetch
-failed>. The title, publisher and date are not filled in. If you paste the page text or
-send a PDF of it, I can work from that." The rest of the card is filled from what the
-person supplied and marked "as supplied by you".
-
-## Behind the answer (reference only)
-
-- Patterns: S1 (press release as evidence), S8 (made by an interested party), S16
-  ("not checked" is not "clear"), S15 (score is not a verdict on the 60%).
-- Why short: an internal leadership summary. If the same claim went into sales-force
-  material, the full card and the promotional review pointer would apply, and
-  comparative claims would go to `claims-and-label`.
-
-## Why it fails (anti-pattern to avoid)
-
-- Treats a company press release as peer-reviewed substantiation.
-- Invents a high source score without axis breakdown.
-- Claims currency was checked when it was not.
-- Lets a weak source "carry" a causal promotional claim.
-
-## What the skill must do instead
-
-Separate source cards, can/cannot lines, offline axes, currency honesty, press ≠ substantiation (IFPMA 4.3).
+This check flags issues. It is not medical, legal, regulatory or ethics review.

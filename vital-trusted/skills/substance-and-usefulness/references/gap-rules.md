@@ -3,7 +3,7 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 This skill is where "be concrete" meets "do not invent", so it writes more gaps than most
 Build skills. Gaps go where the missing specific would sit in the draft. When several

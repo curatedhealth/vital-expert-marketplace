@@ -5,9 +5,9 @@
 | Slot | For this task |
 |---|---|
 | Worker | Medical writer who has written for every audience, working with qualified translators |
-| Workflow | List what must survive unchanged, translate or read the translation against it, compare numbers and units, flag terms that need a qualified translator or approved wording |
+| Workflow | List what must survive unchanged, translate or read the translation against it, compare numbers and units, list translated terms to confirm against the approved product information |
 | Skill | TR-1.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R6, R7), `references/knowledge.md` (T1–T9) |
+| Knowledge | `references/rules.md` (R3, R6, R7), `references/patterns.md` (T1–T9) |
 | Tool | `scripts/compare_numbers.py` where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/translation-note.md`, `templates/check-line.md` |
@@ -39,6 +39,19 @@ Claims and limits:   every qualifier ("in adults", "post hoc", "compared with pl
 Required lines:      any statement the original carries for a market or process
 ```
 
+## The one translation rule
+
+This is the one rule for translation in TRUSTED; every other skill points here.
+Translate fully and naturally, and never leave the text unusable with original-language
+terms inside it. Where a medical or regulatory term has no supplied source in the target
+language, translate it and list it under "Terms to confirm against the approved
+<language> product information". Dose, warning and contraindication sentences, and
+required statements whose wording a rule fixes (a reporting line, label text), are
+translated too, each one listed to confirm, and the note says that the approved local
+label text or approved local wording replaces them before any use outside the company.
+Wording the person supplied in the target language is used as supplied. Nothing is
+composed from memory as if it were approved local wording.
+
 ## Guard (while translating)
 
 1. **Meaning exactly.** Translate what the original says. No strengthening ("may
@@ -47,10 +60,12 @@ Required lines:      any statement the original carries for a market or process
 2. **Natural, not literal.** Word order and idiom follow the target language; meaning
    does not move. Where a literal rendering would be unnatural and a natural one would
    shift the meaning, keep the meaning and note the choice.
-3. **Medical terms are not paraphrased loosely.** Use the approved local term when
-   supplied. Otherwise use the standard term you would expect a qualified medical
-   translator to use and flag it in the note as unconfirmed, or leave it in the original
-   with a flag. Never invent a local brand name, indication wording or frequency term.
+3. **Medical terms are translated, then listed to confirm.** Use the approved local
+   term when supplied. Otherwise translate the term naturally and list it in the note
+   under "Terms to confirm against the approved <language> product information" (for
+   example "episodic migraine" in a German draft). Never leave the text unusable with
+   original-language terms inside it. Never invent a local brand name: product, study
+   and comparator names follow step 5.
 4. **Numbers and units unchanged.** Same values, same units, same precision. Local
    notation (decimal comma, thousands separator, space before %) is a convention, not a
    change; apply it consistently and never round. Do not convert units unless the person
@@ -83,7 +98,9 @@ was made or checked.
 ## Boundaries
 
 - Whether a translation meets a market's legal language or labeling requirement is a
-  regulatory or legal determination (TR-H6). Flag it for that function.
+  regulatory or legal determination (TR-H6). When the target market is named, say in
+  one line of the note that its language and promotional requirements are for the
+  regulatory or legal function in that market to check; give no verdict.
 - A translation by the assistant is a draft for a qualified translator and the company's
   review in the target market. Never call it final, certified, validated or accurate
   (TR-H3, TR-H11).

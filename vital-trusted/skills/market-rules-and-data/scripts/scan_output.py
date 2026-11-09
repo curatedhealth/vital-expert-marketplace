@@ -42,7 +42,7 @@ CUES = {
     "supply or dispensing classification": re.compile(
         r"\bPOM\b|prescription only|\bRx only\b|Abgabekategorie|cat[ée]gorie de remise|supply classification"
         r"|legal classification|dispensing category", re.I),
-    "authorisation holder name and address": re.compile(
+    "authorization holder name and address": re.compile(
         r"marketing authori[sz]ation holder|Zulassungsinhaberin|titulaire de l'autorisation", re.I),
     "black triangle": re.compile(r"▼|black triangle|additional monitoring", re.I),
     "non-proprietary name": re.compile(r"\((?:[a-z]+(?:mab|nib|stat|pril|sartan|vir|tide|cept|ase|ide|ine|ol))\)", re.I),
@@ -54,7 +54,7 @@ MARKETS = {
            "black triangle", "audience statement", "job code or reference"],
     "EU": ["prescribing information or where to find it", "date of preparation or last revision",
            "supply or dispensing classification", "audience statement", "job code or reference"],
-    "CH": ["prescribing information or where to find it", "authorisation holder name and address",
+    "CH": ["prescribing information or where to find it", "authorization holder name and address",
            "supply or dispensing classification", "audience statement", "job code or reference"],
     "US": ["prescribing information or where to find it", "audience statement", "job code or reference"],
     "unknown": ["job code or reference", "date of preparation or last revision"],
@@ -63,7 +63,7 @@ MARKETS = {
 NOTES = {
     "UK": "UK list from the ABPI Code 2024 as read; black triangle only when required.",
     "EU": "EU list from Directive 2001/83/EC and the EFPIA Code as read; national codes add more.",
-    "CH": "Swiss list from the advertising ordinance (AWV) Article 6 as read; the full item list is in references/rules.md.",
+    "CH": "Swiss list from the advertising ordinance (AWV) Article 6 as read; your promotional review process holds the full list.",
     "US": "US list is partial: advertisement rules as read; emails and brochures not read.",
     "unknown": "Market not given: only company-system elements listed. Ask the market.",
 }

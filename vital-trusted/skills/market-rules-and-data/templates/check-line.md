@@ -32,6 +32,6 @@ note: "  - 3 details from the notes kept out of the draft".
 When the market is unknown and the work leaves the company:
 
 ```
-Rule-compliant · market: not checkable — market not stated (<n> product statements affected)
-Rule-compliant · required statements: not checkable — market not stated
+Rule-compliant · market: not checked, market not stated (<n> product statements affected)
+Rule-compliant · required statements: not checked, market not stated
 ```

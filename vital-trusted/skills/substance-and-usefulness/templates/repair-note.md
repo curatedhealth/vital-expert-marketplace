@@ -7,9 +7,14 @@ material, the short form; for anything leaving the company, the full note.
 ## Full note (leaving the company)
 
 ```
-What I changed and why (draft, not yet reviewed)
+What I changed and why (Uncleared draft)
 
 Written for: <reader and what they need to do, from the context card or as you told me>
+
+Vague statements made specific: <n>. Filler passages cut: <n>. Repeats cut: <n>.
+Sections with no "so what": <n>. Gaps left: <n>.
+Other changes: <n> (<short kinds, e.g. causal claim softened, disclosure added,
+unsupported claim removed>).
 
 Cut
 - <n> passages that said nothing specific, e.g. "<before>". <One plain line on why.>
@@ -22,7 +27,7 @@ Added for you to confirm
 1. <a "so what" or proposed recommendation, quoted>. <What it rests on.>
 
 Left as gaps for you to fill
-1. <what is missing> — <where it would come from or who decides>
+1. <what is missing>: <where it would come from or who decides>
 
 Structure
 - <framework removed or flagged, heading rewritten, point moved, with one line why>
@@ -34,6 +39,7 @@ before it is used.
 ## Short note (leadership or cross-team)
 
 ```
+Vague statements: <n>. Filler passages: <n>. Sections with no "so what": <n>.
 Cut <n> passages of filler and <n> repeats. Made <n> statements specific from your
 notes. Added for you to confirm: <so what or ask, one line>. Still needed from you:
 <owner, date or figure>, <…>.
@@ -47,6 +53,13 @@ Cut the opening paragraph. Who owns the follow-up?
 
 Rules:
 
+- The counts line is required in the full note and the short note whenever something
+  was changed or found, and shows only the counts that apply: leave out a count that
+  would read 0. When nothing was changed or
+  found, give no note and no counts line.
+- "Other changes: <n> (<short kinds>)" counts any change the named counts do not cover
+  (a causal claim softened, a disclosure added, an unsupported claim removed), so the
+  main fix is never uncounted.
 - Every cut of the person's own content is reported, at least as a count with one
   example. Never delete silently.
 - Anything the assistant added that is a reading of the material (a "so what", a

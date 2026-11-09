@@ -1,92 +1,109 @@
-# Rendered example: payer slide claims after citation repair (sourced draft)
+# Worked example: payer slide claims with a report and a press release
 
-Invented teaching case ("Brand A", trials fictional). Fixed bullets, source note,
-reference list, claim and source cards, gap list, check-line stamp. Citations name
-supplied documents; they do not prove world-truth.
+Invented case for teaching. "Brand A", "ORION-4" and "Competitor B" are fictional.
 
-## Material supplied (excerpt)
+## Context card (from trusted-intake, already in the conversation)
 
-ORION-4 registry report (internal, 30 June 2026 data cut): 1,850 adults; hospital
-admission 12.0% Brand A vs 20.0% standard care (adjusted HR 0.60, 95% CI 0.48–0.75).
-Company press release 14 March 2026 (announced topline only; no rates). No competitor
-trial PDF.
+```
+TRUSTED context: payer slide on a registry result
 
-## Fixed bullets (person-facing)
-
-> - In the supplied ORION-4 registry (n=1,850; cut-off 30 June 2026), 12.0% of patients
->   on Brand A were admitted to hospital within 12 months versus 20.0% on standard care
->   (adjusted HR 0.60, 95% CI 0.48 to 0.75) (ORION-4 registry report, internal).
-> - The company announced topline ORION-4 results on 14 March 2026; rates in this slide
->   come from the registry report you supplied, not the press release.
-> - Versus Competitor B: [GAP: no head-to-head or indirect comparison study supplied —
->   next: supply study or remove comparison].
-
-## Source note (`templates/source-note.md`, short header)
-
-Sourced claims: what I cited, weakened, or left open (draft, not yet reviewed)
-
-Based on: ORION-4 registry report (internal, 30 June 2026); press release 14 March 2026;
-payer audience; Germany.
-
-Cited from supplied material
-1. Admission rates and HR — ORION-4 registry report, pages 12–14.
-2. Announcement date only — press release 14 March 2026 (no efficacy numbers on that doc).
-
-Weakened or removed
-1. "Studies show fewer admissions" — replaced with named registry and figure.
-2. "Leading treatment in class" — no source supplied; removed.
-
-Next step: medical and market access review; substantiation on file per company process.
-
-## Reference list (`templates/reference-list.md`, excerpt)
-
-1. ORION-4 registry report, data cut-off 30 June 2026 (internal; supplied in conversation).
-2. Brand A company press release, 14 March 2026 (supplied PDF; topline announcement only).
-
-## Claim cards (shared `../../templates/claim-card.md`)
-
-### Claim 1
-- **Statement:** 12.0% vs 20.0% admissions; HR 0.60 (95% CI 0.48–0.75).
-- **Passage:** ORION-4 registry report, §3.2, table 4 (supplied).
-- **Status:** attributed to supplied passage (not world-truth verified here).
-
-### Claim 2
-- **Statement:** Company announced ORION-4 topline 14 March 2026.
-- **Passage:** Press release headline and date (supplied).
-- **Status:** attributed to supplied passage.
-
-## Source cards (shared `../../templates/source-card.md`)
-
-### Source 1
-- **Document:** ORION-4 registry report (internal).
-- **Can carry for payer:** observational efficacy rates with limitations stated; not
-  registration-quality alone without reviewer sign-off.
-- **Not checked:** current SmPC alignment (not tool-checked).
-
-### Source 2
-- **Document:** Press release 14 March 2026.
-- **Can carry:** announcement timing; cannot carry numeric efficacy without full report.
-
-## Open items (`../../templates/gap-list.md`)
-
-```text
-Open items
-1. Competitor B comparison — no study supplied — next: Supply comparative evidence or drop claim
-
-Not yet checked
-- Whether registry report is the version approved for external payer use
+Reader          a payer's medical adviser                           (stated)
+Market          not stated                                          (asked)
+Use             promotional                                         (assumed)
+Deliverable     three bullets for a slide                           (stated)
+Material        ORION-4 registry report; company press release
+Stakes          leaving the company
+Next process    your review process for material sent to payers
 ```
 
-## Check-line stamp (`../../templates/check-line-stamp.md`)
+## Request
 
-```text
-TRUSTED / sourced-claims: not tool-checked (offline tools) · claims: 3 cited, 1 gap; vague: 2 repaired; press release: not used for rates
+"Add the sources to these claims before it goes to the payer."
+
+## Material supplied
+
+> **ORION-4 registry report (internal), data cut-off 30 June 2026:** 1,850 adults.
+> Hospital admission: 12.0% on Brand A versus 20.0% on standard care (adjusted hazard
+> ratio 0.60, 95% CI 0.48 to 0.75). The excerpt does not give the length of follow-up or
+> page numbers.
+> **Press release, 14 March 2026:** announces topline ORION-4 results. It gives no rates.
+> No study comparing Brand A with Competitor B was supplied.
+
+## Draft supplied
+
+> - Studies show fewer admissions with Brand A (press release, 14 March 2026).
+> - Leading treatment in its class.
+> - Better outcomes than Competitor B.
+
+## Revised bullets
+
+> - In the ORION-4 registry (1,850 adults; data cut-off 30 June 2026), 12.0% of patients
+>   on Brand A were admitted to hospital, versus 20.0% on standard care (adjusted hazard
+>   ratio 0.60, 95% CI 0.48 to 0.75). [GAP: not supplied; length of follow-up for the admission figures; from the registry report]
+> - The company announced topline ORION-4 results on 14 March 2026.
+> - Comparison with Competitor B: [GAP: not supplied; a study that compares Brand A with Competitor B; supply it or remove the comparison]
+
+## Note to the person
+
+Sources: what I changed and what is still needed (Uncleared draft)
+
+Sources you gave me: ORION-4 registry report (internal), data cut-off 30 June 2026;
+company press release, 14 March 2026.
+
+Changed
+1. "Studies show fewer admissions (press release)" → the registry named, with its two
+   admission rates. "Studies show" needs the study named, and the press release gives no
+   rates.
+2. "Leading treatment in its class" → removed. No source was supplied for a ranking.
+
+Claims that still need a source
+1. "Better outcomes than Competitor B" needs a study that compares the two, for a payer
+   reader. Your medical information team may hold one.
+
+Sources that cannot carry their claim for this reader
+1. The press release announces the results and gives no rates, so it can support the
+   date of the announcement and nothing more.
+
+Question for you
+Which market is this for, and can the internal ORION-4 registry report be provided to
+the payer on request? Your review process decides the second part; until then the rates
+rest on a report the payer cannot see.
+
+Next step: this goes through your review process for material sent to payers before it
+is used.
+
+I did not write any reference from memory. No source was tool-checked.
+
+References (built from the sources you supplied; not tool-checked)
+
+1. ORION-4 registry report. Internal report. Data cut-off 30 June 2026. Used for: the
+   admission rates and the hazard ratio.
+2. Company press release announcing topline ORION-4 results, 14 March 2026. Used for:
+   the date of the announcement.
+
+Missing details
+- Reference 1: the authors, the report title and the table or page for the figures are
+  not in what you sent; please add them from the full report.
+
+Claims with no reference yet
+- "Better outcomes than Competitor B" needs a study that compares the two.
+
+## Why it is written this way
+
+- Every detail in the bullets comes from the excerpt. No time window, page number or
+  market was added; each is a gap or a question.
+- The press release is used for the one thing it can carry. Why the rates come from the
+  registry report is said in the note, not on the slide.
+- The registry report is internal, so whether it can be provided to the payer is asked,
+  not assumed.
+- The references list only what the person supplied.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Sourced · every claim: 3 factual claims carry named source or gap, 1 gap open (not tool-checked)
-Sourced · source type: press release not used for efficacy figures (not tool-checked)
-Sourced · citations: 2 findable references from supplied docs (not tool-checked)
+True · sources: 3 claims that need a source, 1 with a source you supplied, 0 with a source named but not supplied, 2 with no source (not tool-checked)
+True · kind of source: 1 claim resting on a source that cannot carry it for this reader (not tool-checked)
+  - the admissions statement cited only a press release, which gives no rates
+True · citations: 1 reference looked at, 1 missing details a reviewer needs, 0 guidance or "current" statements with no title or date (not tool-checked)
+  - the press release citation in the draft has no title or issuing company
 ```

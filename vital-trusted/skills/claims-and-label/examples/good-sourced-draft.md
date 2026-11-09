@@ -1,69 +1,105 @@
-# Rendered example: field key messages kept inside label (sourced draft)
+# Worked example: a reply to a doctor's question about adolescents
 
-Invented teaching case ("Brevanzo", "Kelandro" fictional). Claims note, finding cards,
-gap list, stamp.
+Invented case for teaching. "Tavonis", "TAV-ADOL", the doctor and the figures are
+fictional.
 
-## Draft messages returned to person
+## Context card (from trusted-intake, already in the conversation)
 
-1. Brevanzo is indicated for adults with moderate to severe atopic dermatitis who are
-   candidates for systemic therapy.
-2. In KESTREL-2, 41% of adults on Brevanzo had clear or almost clear skin at week 16,
-   versus 11% on placebo.
-3. In KESTREL-2, improvement in itch with Brevanzo first separated from placebo at week 2.
-4. One 150 mg injection every two weeks.
+```
+TRUSTED context: reply to a doctor's own question
 
-## Claims note (`templates/claims-note.md`, excerpt)
+Reader          Dr. Meier, a dermatologist                          (stated)
+Market          Switzerland                                         (stated)
+Product status  approved in Switzerland per your label              (read)
+Use             scientific exchange, a reply to a question          (stated)
+Deliverable     email reply                                         (stated)
+Material        Swiss label excerpt; study report; the doctor's email
+Stakes          leaving the company
+Next process    your medical information procedure
+```
 
-Label, promotion and comparisons: what I changed (draft, not yet reviewed)
+## Request
 
-Working from: Brevanzo EU SmPC (March 2026), KESTREL-2 PDF, Kelandro PDF; Germany;
-promotional; dermatologists.
+"Dr. Meier asked on 2 November 2026 whether Tavonis can be used in patients aged 14 to
+17. Draft the reply from the label and the study report I attached."
+
+## Material supplied
+
+> **Label excerpt (Swiss product information, revision March 2026, as supplied):** Tavonis is indicated for
+> the treatment of moderate to severe atopic dermatitis in adults who are candidates for
+> systemic therapy. Safety and efficacy in patients under 18 years have not been
+> established.
+>
+> **Study report (TAV-ADOL, as supplied):** open-label, single-arm study in 32 patients
+> aged 12 to 17 with moderate to severe atopic dermatitis, 12 weeks. Clear or almost
+> clear skin at week 12: 11 of 32 patients (34%). No comparator group.
+
+## Reply (as the person sees it)
+
+> Subject: Your question about adolescents
+>
+> Dear Dr. Meier,
+>
+> Thank you for your question of 2 November 2026 about the use of Tavonis in patients
+> aged 14 to 17.
+>
+> This use is not included in the approved Swiss product information (revision March
+> 2026). The approved use is the treatment of moderate to severe atopic
+> dermatitis in adults who are candidates for systemic therapy, and safety and efficacy
+> in patients under 18 years have not been established. The information below is
+> provided in response to your question and is not a recommendation to use Tavonis in
+> this way.
+>
+> **What the available data show.** The TAV-ADOL study was an open-label, single-arm
+> study in 32 patients aged 12 to 17 with moderate to severe atopic dermatitis. At week
+> 12, 11 of 32 patients (34%) had clear or almost clear skin. The study had no comparator
+> group, was small and was open-label, so it cannot show how Tavonis compares with
+> other treatment or with no treatment.
+>
+> **References**
+> TAV-ADOL study report, as supplied.
+>
+> Kind regards,
+> [GAP: not supplied; sender name and role; from your medical information team]
+
+## Note to the person (not part of the reply)
+
+Label, promotion and comparisons: what I changed (Uncleared draft)
+
+Working from: the Swiss product information excerpt you supplied (revision March 2026);
+for Dr. Meier, as a reply to a question.
+
+"Not included in the approved Swiss product information" is per the label you supplied.
 
 Kept out
-1. Teenager message — SmPC adults only; under 18 not established.
-2. "Faster than Kelandro" — no head-to-head study supplied; replaced with week-2 itch vs
-   placebo from KESTREL-2.
+1. The efficacy data in the approved adult use. The doctor did not ask about it.
+2. Any statement about dose or patient selection for adolescents. Neither the label nor
+   the study report gives one, and the reply makes no recommendation.
 
-Comparisons
-1. Did not place KESTREL-2 and Kelandro week-16 percentages side by side (separate
-   placebo-controlled trials).
+Left as gaps for you to fill
+1. The sender's name and role.
 
-Next step: promotional review before field use.
+Next step: this goes through your medical information procedure before it is sent.
+Whether it can be used is decided there.
 
-I did not verify the SmPC is the current approved version for Germany (not tool-checked).
+I compared the draft with the label you gave me. I did not check that the label is the
+current approved version, and none of this was tool-checked.
 
-## Finding cards (shared `../../templates/finding-card.md`)
+## Why it is written this way
 
-### Finding 1
-- **Requested:** Key message on use in teenagers.
-- **Issue:** Goes beyond supplied SmPC section 4.1 (adults only; under 18 not established).
-- **Action:** Not written; route unsolicited questions to medical information.
+- The first paragraph of substance says plainly that the use is outside the label,
+  using the label's words and its revision date, not TRUSTED's own ruling. "Per the label
+  you supplied" goes in the note to the person, who supplied it, not in the reply to the
+  doctor, who did not.
+- The only data are what the person supplied. The percentage is the study report's own,
+  with the count behind it, and the limits are the ones the design shows.
+- The reply has no taglines, no adjectives about the product and no call to prescribe.
+- The doctor's email mentions no side effect, so no safety flag is needed here.
 
-### Finding 2
-- **Requested:** "Works faster than Kelandro."
-- **Issue:** No direct comparative study in material; two separate placebo trials.
-- **Action:** Dropped superiority; kept week-2 itch separation vs placebo only.
+## Lines returned to trusted-check (not shown to the person)
 
-## Open items (`../../templates/gap-list.md`)
-
-```text
-Open items
-(none)
-
-Not yet checked
-- Current approved SmPC version for Germany — needs label-source companion
 ```
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / claims-and-label: not tool-checked (offline tools) · label: 1 beyond-label idea blocked; comparisons: 1 indirect superiority declined
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Rule-compliant · label and intended use: 1 statement beyond label blocked, label supplied (not tool-checked)
-Rule-compliant · promotion: 4 statements for promotional review (not tool-checked)
-Rule-compliant · comparisons: 1 comparative claim without head-to-head source (not tool-checked)
+Rule-compliant · label and intended use: 1 statement beyond the label or intended use, label supplied (not tool-checked)
+  - the study data on patients aged 12 to 17 are outside the approved adult use; the reply says so before giving them
+Rule-compliant · promotion: 0 promotional statements in material meant as scientific exchange (not tool-checked)
 ```

@@ -2,7 +2,7 @@
 
 Design-time guidance: which kind of source can carry which claim, for which reader. It
 does not grade a specific source (peer review status checked, funding, retraction,
-study quality); that is `source-assessment` with VERIFY.
+study quality); that is `source-assessment`, by hand.
 
 ## Formula
 
@@ -11,8 +11,8 @@ study quality); that is `source-assessment` with VERIFY.
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Name each source's type, name each claim's kind, match them against the reader's bar |
 | Skill | TR-5.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R2, R5, R7, R8, R9, R10), `references/knowledge.md` (T1–T7) |
-| Tool | None. Companion slot: VERIFY `qualify_source` and `check_currency` through `source-assessment` |
+| Knowledge | `references/rules.md` (R2, R5, R7, R8, R9, R10), `references/patterns.md` (T1–T7) |
+| Tool | None. A source card by hand through `source-assessment` |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/source-note.md` |
 | Input | The draft, the supplied sources, the audience and use from intake |
@@ -20,7 +20,7 @@ study quality); that is `source-assessment` with VERIFY.
 
 ## What each kind of source can and cannot carry
 
-Good practice, built on the rules in `references/method-standards.md` / `references/knowledge.md`. Where a rule is marked
+Good practice, built on the rules in `references/rules.md`. Where a rule is marked
 `[CHECK]` there, the row is practice, not a requirement.
 
 | Source type | Can carry | Cannot carry on its own | Watch for |
@@ -32,9 +32,10 @@ Good practice, built on the rules in `references/method-standards.md` / `referen
 | Conference abstract or poster | That a result was presented, with the limited detail an abstract gives | Full methods; final results; a primary reference where a full article exists (R10) | Interim data; later publication may differ |
 | Regulator or HTA document (assessment report, guidance, decision) | What that body decided, required or recommended, on that date, for that market | Another market's position; the body's view on a question it did not address | Draft versus final; superseded versions; title and date |
 | Clinical guideline from a professional society | What the guideline recommends, at the grade it gives, as of its date | That the recommendation is universal or current without a date | Edition, year, region |
-| Company data on file | Internal data the company holds and can provide on request | A claim a payer or doctor cannot see the basis for unless it will be provided; anything inconsistent with the label or the registration studies (R8) | Name the data on file specifically; confirm it can be shared on request through the company's process |
+| Company data on file | Internal data the company holds and can provide on request | A claim a payer or doctor cannot see the basis for unless it will be provided; anything inconsistent with the label or the registration studies (R8) | Name the data on file specifically; confirm it can be shared on request through the company's process. Cite it only when the person supplied it or said it exists ("data on file, as you told me"), keep the reference a gap until supplied, and never write that it is attached or provided |
 | Market research or survey (own or third-party) | What the surveyed group said or did, with sample size and date | What "physicians" or "patients" in general think; efficacy | Sample, method, sponsor, date |
 | Sales or prescription data (third-party or internal) | Volumes, share, trends for the stated period and market | Why the numbers moved | Data provider, period, definition of the market |
+| Earnings call transcript or investor presentation | That the company's executives said it, on that date, to investors; the company's stated plans and timing | Efficacy, safety, market or comparative claims as fact; a stated date as confirmed | Forward-looking statements are the company's expectation; attribute them by speaker and date |
 | Press release (any company) | That the company announced something, on that date | Efficacy, safety or comparative claims as fact | Written by an interested party; look for the underlying publication or regulatory record |
 | News article or trade press | That something was reported, on that date | Study results, regulatory decisions or competitor facts as fact | Find the primary record the article reports on |
 | Blog, social post, opinion piece | That a person expressed a view | Any factual claim in material leaving the company | Author, date, interest |
@@ -67,7 +68,9 @@ Good practice, built on the rules in `references/method-standards.md` / `referen
 1. **List each claim with the source it rests on** and that source's type.
 2. **Flag mismatches:** a claim carried by a source type that cannot carry it for this
    reader. Name the mismatch in plain words ("this efficacy figure comes from a news
-   story; the trial publication would be needed").
+   story; the trial publication would be needed"). Name a currency or market mismatch
+   too ("the saving is in euros; your reader is a Canadian payer"), and ask; never
+   convert the figure.
 3. **Fix:** step the claim down to what the source supports, or keep it with a gap for the
    stronger source. Do not swap in a better source from memory.
 
@@ -79,6 +82,6 @@ See `templates/check-line.md`.
 
 - This task names the type of source and whether that type fits. It does not judge
   whether a particular study is well done, peer reviewed, retracted or superseded; that
-  is `source-assessment`. Say "not graded with a tool" when VERIFY has not run.
+  is `source-assessment`. Say "not tool-checked".
 - Whether data on file may be used in a given market, and how it is provided on request,
   is for the company's promotional or medical review process (TR-H11).

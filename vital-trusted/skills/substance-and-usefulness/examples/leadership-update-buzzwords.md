@@ -28,7 +28,7 @@ The card already holds the reader and their job, so nothing is asked again.
 
 > Tavrelo access, Q3: listed by 4 of 6 cantonal hospital groups (2 new in Q3).
 > Canton X payer review still open, concern = year-2 budget impact; asked for updated
-> budget impact model. Canton Y decision meeting 12 November.
+> budget impact model. Canton Y decision meeting 12 November 2026.
 > Field: 1 of 2 open KAM roles filled.
 > Ask for leadership: approve budget for an external health-economics update of the
 > model (quote received, CHF 40,000).
@@ -48,21 +48,25 @@ The card already holds the reader and their job, so nothing is asked again.
 > Tavrelo is now listed by 4 of 6 cantonal hospital groups, 2 of them new in Q3. The
 > main open risk is canton X, where the payer review is still open: the payer is
 > concerned about budget impact in year 2 and has asked for an updated budget impact
-> model. Canton Y decides at its meeting on 12 November.
+> model. Canton Y decides at its meeting on 12 November 2026.
 >
-> One of the two open key account manager roles is filled [GAP: needs a decision —
-> plan for the second role — say whether it is still being recruited].
+> One of the two open key account manager roles is filled [GAP: needs a decision;
+> plan for the second role; say whether it is still being recruited].
 >
 > **For decision:** approve CHF 40,000 for an external health-economics update of the
-> budget impact model, to answer canton X [GAP: needs a decision — owner and target
-> date for sending the model to canton X — name who sends it, by when].
+> budget impact model, to answer canton X [GAP: needs a decision; owner and target
+> date for sending the model to canton X; name who sends it, by when].
 
 ## Short note to the person
 
-Cut the opening and closing paragraphs and five buzzword phrases ("leverage synergies
-across the stakeholder ecosystem", "holistic engagement", "robust progress"); none
-carried information your notes did not state more plainly. Made four statements
-specific from your notes (listings, canton X concern, canton Y date, hiring). Added for
+Vague statements: 3. Filler passages: 4. Sections with no "so what": 1.
+Cut 4 passages of filler: the opening sentence ("rapidly evolving healthcare
+landscape"), the sentence on "synergies across the stakeholder ecosystem" and "holistic
+engagement", the "going forward" sentence and the closing sentence ("momentum remains
+strong"). None carried information your notes did not state more plainly. Made 3 vague
+statements specific from your notes: "strong interest" became the listings, "further
+listings soon" became the canton Y date, and "robust progress" became the hiring
+figure. Added from your notes: the canton X concern. Added for
 you to confirm: canton X as "the main open risk", the ask placed at the end as a
 decision, and the link between the model update and canton X's request (your notes list
 them separately). Still needed from you: who sends the model to canton X and by when, and the
@@ -82,7 +86,7 @@ plan for the second role.
 ## Lines returned to trusted-check (not shown to the person)
 
 ```
-Tangible · substance: 5 statements too vague to act on, 4 passages of filler or repetition, 1 section with no "so what" (not tool-checked)
+Tangible · substance: 3 statements too vague to act on, 4 passages of filler or repetition, 1 section with no "so what" (not tool-checked)
 Tangible · next step: decision or recommendation missing, owner missing (not tool-checked)
   - the ask for the CHF 40,000 budget was in your notes but not in the draft
 ```

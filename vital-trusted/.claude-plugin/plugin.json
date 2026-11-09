@@ -1,18 +1,15 @@
 {
   "name": "vital-trusted",
   "displayName": "VITAL TRUSTED",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "release_state": "Pilot",
   "tier": "Standard",
   "domain": "platform",
   "capability_code": "TRUSTED",
-  "depends_on": [
-    "vital-core-atoms"
-  ],
-  "generated_by": "owner-demote-pilot-2026-11-09-pending-0.3.3",
-  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Offline-first: Prove skills run without a key and label results not tool-checked; optional TRUSTED Prove live MCP (same endpoint mcp.vital.expert/api/mcp/verify, server id trusted-prove) adds live source admission when a vvfy_ key is present. The vital-verify plugin is retired \u2014 this pack is the sole buyer surface. Human oversight required for healthcare use. Product of Crossroads Catalyst GmbH (Vital Expert).",
+  "generated_by": "trusted-0.3.4-pilot-2026-11-09",
+  "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. No connector and no key: the Prove skills check claims, sources and references by hand against the material the person supplies, and label every such result not tool-checked. Pilot build, not published. Human oversight required for healthcare use. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
-    "name": "Crossroads Catalyst GmbH \u2014 Vital Expert",
+    "name": "Crossroads Catalyst GmbH (Vital Expert)",
     "url": "https://vital.expert"
   },
   "homepage": "https://vital.expert",
@@ -28,14 +25,5 @@
     "evidence",
     "TRUSTED"
   ],
-  "skills": "./skills",
-  "userConfig": {
-    "verify_key": {
-      "type": "string",
-      "title": "VITAL Verify key",
-      "description": "Personal vvfy_ key for TRUSTED Prove live tools (mcp.vital.expert). Optional: without it, Prove skills still run offline and label results not tool-checked. Do not install a separate vital-verify plugin.",
-      "required": false,
-      "sensitive": true
-    }
-  }
+  "skills": "./skills"
 }

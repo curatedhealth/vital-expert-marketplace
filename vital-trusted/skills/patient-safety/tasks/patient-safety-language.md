@@ -5,9 +5,9 @@
 | Slot | For this task |
 |---|---|
 | Worker | Drug safety physician who supports colleagues |
-| Workflow | Read the piece as the patient would; remove advice, false reassurance and scare framing; make sure there is always a route to a doctor, nurse or pharmacist |
+| Workflow | Read the piece as the patient would; remove advice, false reassurance and scare framing; keep the source's route to a doctor, nurse or pharmacist, or leave a gap for it (never written new) |
 | Skill | TR-4.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10, S13 to S15), `references/knowledge.md` (L1 to L9) |
+| Knowledge | `references/rules.md` (S10, S13 to S15), `references/patterns.md` (L1 to L9) |
 | Tool | `scripts/scan_safety_mentions.py --patient` where code can run. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/repair-note.md`, `templates/check-line.md` |
@@ -24,22 +24,24 @@ letter. When unsure whether the public will see it, ask once.
 
 | Check | What it looks like | What it should be |
 |---|---|---|
-| No advice | An instruction about this person's treatment that the patient leaflet does not give: "you can stop once you feel better", "take two if you miss one", "it's fine with alcohol", "no need to see your doctor" | Only instructions the supplied leaflet gives, quoted; anything else is "ask your doctor or pharmacist" |
+| No advice | An instruction about this person's treatment that the patient leaflet does not give: "you can stop once you feel better", "take two if you miss one", "it's fine with alcohol", "no need to see your doctor" | Only instructions the supplied leaflet gives, quoted; anything else is removed, and the route line below takes its place |
 | No false reassurance | "Completely safe", "no side effects", "nothing to worry about", "gentle", "natural so harmless", "everyone tolerates it" | Say what the leaflet says about side effects; never a comfort the leaflet does not give |
 | No scare framing | Vivid or alarming wording meant to push action: "deadly", "your kidneys could fail if you skip a dose", fear used to drive adherence or uptake | Calm, factual wording from the leaflet, with what to do and whom to ask |
-| A route to a clinician | No line telling the reader who to ask when unsure, when something feels wrong, or before changing anything | At least one clear line naming a doctor, nurse or pharmacist; where the leaflet tells patients how to report side effects, keep that |
+| A route to a clinician | No line telling the reader who to ask when unsure, when something feels wrong, or before changing anything | The route line from the supplied leaflet or the person's approved patient wording, kept as written; if neither has one, the gap `[GAP: needs a decision; a line telling readers who to ask; use your approved patient wording]`. Never new wording. Where the leaflet tells patients how to report side effects, keep that |
 
 ## Guard (while drafting)
 
 1. **Start from the patient leaflet** if one was supplied; quote its safety wording.
    If none was supplied and the piece needs safety content, ask for it, or leave
-   `[GAP: not supplied — patient leaflet wording on <x> — supply the approved leaflet]`.
+   `[GAP: not supplied; patient leaflet wording on <x>; supply the approved leaflet]`.
 2. **Write no instruction the leaflet does not give.** Questions about a person's own
-   treatment are answered with "ask your doctor, nurse or pharmacist".
-3. **Put the route in.** At least one plain line, near the safety content: "If you have
-   any questions, or if something does not feel right, talk to your doctor, nurse or
-   pharmacist." Keep any side-effect reporting line the leaflet or the person supplied.
-   Do not invent a phone number, website or reporting scheme.
+   treatment point to the route line (step 3), never to advice.
+3. **Put the route in, never as new wording.** Near the safety content: if the supplied
+   leaflet or the person's approved patient wording has a line telling readers who to
+   ask, keep it as written. If not, leave the gap in the drafted text:
+   `[GAP: needs a decision; a line telling readers who to ask; use your approved patient wording]`. Do not write the line yourself, even a plain one. Keep any side-effect
+   reporting line the leaflet or the person supplied. Do not invent a phone number,
+   website or reporting scheme.
 4. **Keep urgent symptoms as the leaflet states them.** If the leaflet says "seek medical
    help immediately if…", quote it exactly. Do not add or remove symptoms.
 5. **Keep the tone level.** No comfort beyond the leaflet, no fear beyond the leaflet.
@@ -54,8 +56,9 @@ letter. When unsure whether the public will see it, ask once.
 2. **Mark each passage:** advice not in the leaflet; reassurance not in the leaflet;
    alarming framing; route to a clinician missing; safety statement changed from the
    leaflet (send to `tasks/clinical-safety-statements.md`).
-3. **Fix:** remove or replace advice with "ask your doctor or pharmacist"; replace
-   reassurance with the leaflet's wording; calm the framing; add the route line.
+3. **Fix:** remove advice; replace reassurance with the leaflet's wording; calm the
+   framing; keep the source's route line, or leave the route gap from Guard step 3 when
+   the source has none.
 4. **Note each change** in `templates/repair-note.md`. Patient material always goes to the
    company's patient material review and promotional review process next (TR-H11).
 
@@ -69,9 +72,10 @@ an email), Part B runs first (`tasks/side-effect-flag.md`). The reply:
 - does not discuss whether the product caused it, whether it is common or known, or what
   they should do about their treatment;
 - does not ask for health details in public;
-- tells them to talk to their doctor or pharmacist;
+- tells them who to ask (a doctor or pharmacist) only in the person's approved wording;
+  otherwise the route gap from Guard step 3;
 - gives the company's contact route for safety reports only if the person supplied it;
-  otherwise `[GAP: needs a decision — contact route for this reply — from your safety
+  otherwise `[GAP: needs a decision; contact route for this reply; from your safety
   reporting procedure or social media procedure]`.
 
 ## Check line

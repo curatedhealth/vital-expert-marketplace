@@ -2,13 +2,13 @@
 
 ## Companion slot
 
-No companion exists for this skill yet. Do not imitate one (TR-H4). VERIFY does not fill
-these slots: it checks sentences against supplied passages; it does not hold approved
+No companion exists for this skill yet. Do not imitate one (TR-H4). No tool fills
+these slots, and a hand comparison of sentences with passages does not hold approved
 labels or route safety reports.
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
-| Clinical safety statements | A label-source companion would return the current approved label for a named product, market and formulation, with its revision date, section by section | None yet | Ask the person for the label; quote only what they supply; mark currency `[GAP: not checkable here — whether this is the current approved label — confirm with your regulatory function]` |
+| Clinical safety statements | A label-source companion would return the current approved label for a named product, market and formulation, with its revision date, section by section | None yet | Ask the person for the label; quote only what they supply; mark currency `[GAP: not checkable here; whether this is the current approved label; confirm with your regulatory function]` |
 | Patient safety language | The same label-source companion, for the approved patient leaflet | None yet | Ask for the leaflet; method runs; "not tool-checked" |
 | Side-effect flag | A safety-routing companion would open an intake in the company's safety system with the quoted text and source, and return a receipt reference. It would never assess the case | None yet | Write the flag for the person to pass on; never say it was sent |
 
@@ -16,7 +16,7 @@ When the person quotes their safety procedure, a contact route or a label in the
 conversation, use their words as supplied, with their date, and do not extend them. That
 is the person's input, not a companion result.
 
-VERIFY may still check, through `claim-assessment`, that a quoted label sentence matches
+`claim-assessment` may still compare, by hand, a quoted label sentence with
 the supplied label passage. That is a support check on wording, not a safety check.
 
 ## Scripts

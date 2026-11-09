@@ -7,7 +7,7 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Pair every benefit with the risks, discontinuations and limitations the material gives for it; keep them in the same piece with comparable weight; replace reassurance with data |
 | Skill | TR-3.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R7, R8, R10), `references/knowledge.md` (FB1–FB8) |
+| Knowledge | `references/rules.md` (R1, R2, R4, R5, R7, R8, R10), `references/patterns.md` (FB1–FB8) |
 | Tool | `scripts/balance_cues.py` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
@@ -41,7 +41,7 @@ events, and the authors' stated limitations.
    company.
 2. **If the material holds no safety or limitation data**, do not draft a benefits-only
    piece. Ask for the label or results, or leave a visible gap where the risks will go:
-   `[GAP: not supplied — side effects and discontinuations for <product, study> — supply
+   `[GAP: not supplied; side effects and discontinuations for <product, study>; supply
    the label or the safety table]`.
 3. **Put the risk with the benefit.** In the body, near the claim it qualifies, in words
    the reader of the benefit will also read. A footnote, an appendix, a back page or "see
@@ -57,6 +57,11 @@ events, and the authors' stated limitations.
 6. **Keep balance inside the piece.** Do not plan safety for "a separate slide deck",
    "the next email" or "the medical team's version". Each piece the reader may see on its
    own carries its own balance.
+7. **Say when cost or market data are missing.** If the piece touches value, cost,
+   budget or savings and the material holds no cost analysis, say so in one plain
+   sentence, make no value or savings statement, and leave a gap where it would go. If
+   the market is not stated and it changes what a payer expects, ask one question:
+   "Which market is this for?"
 
 ## Repair (existing draft)
 
@@ -76,8 +81,8 @@ events, and the authors' stated limitations.
 
 Decline the part that removes or hides risks, in one plain sentence: a reader who later
 finds a side effect or a dropout rate that was left out stops trusting the whole piece,
-and your review process will ask for it anyway. Then help with what is legitimate: lead
-with the best supported benefit, keep the risk wording short and accurate, cut hedging
+and your review process decides what the piece carries. Then help with what is
+legitimate: lead with the benefit your material supports, keep the risk wording short and accurate, cut hedging
 the material does not require. If "the PI" is meant as the prescribing information, say
 that it adds detail but does not take the main risks out of the body. If it means a
 principal investigator, the piece still carries its own balance.

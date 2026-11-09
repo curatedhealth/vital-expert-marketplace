@@ -7,7 +7,7 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Establish the market and the reader, find wording, approvals and rules from another market, check who else could read it, ask what is missing |
 | Skill | TR-2.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M12), `references/knowledge.md` (J1 to J8) |
+| Knowledge | `references/rules.md` (M1 to M12), `references/patterns.md` (J1 to J8) |
 | Tool | None. Companion slot: future MLR preparation companion with market templates (none yet) |
 | Prompt | This guide |
 | Template | `templates/market-note.md`, `templates/check-line.md` |
@@ -18,7 +18,7 @@
 
 | Question | Where the answer comes from | If missing |
 |---|---|---|
-| Which market will read it? | The person, the context card, the "to" line, the language, a named country | Ask, when the work leaves the company and is about a product |
+| Which market will read it? | The person, the context card, the "to" line, the language, a named country | Ask, when the work leaves the company and makes product statements. An email that only lists agreed attachments, with no product claims, does not need it |
 | Who will read it? | Greeting, channel, request ("for our reps", "for the website") | Ask "Who will read this?" |
 | Where is the product approved, for what? | The supplied label for that market, or what the person states | Do not write approval status; leave a gap |
 | Which channel? | Email, printed piece, website, social post, congress stand | Ask if it could reach a different reader |
@@ -28,6 +28,9 @@ which markets it will actually be used in, and whether each affiliate adapts it.
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Fix the market before the first product sentence.** If the context card holds it,
    use it. If not and the work leaves the company, ask, with a plain reason: "Which
    country? What can go in an email to doctors differs between countries."
@@ -36,18 +39,36 @@ which markets it will actually be used in, and whether each affiliate adapts it.
    US prescribing information) only as the person or the supplied label names it. Never
    carry over another market's headings, approval wording, reporting route or price
    format.
-3. **State approval only for the market it was granted in, and only from a source.** "Approved
-   in [market] for [indication], per the label you supplied." Without a label or a
-   statement from the person, use `[GAP: not supplied — approval status in <market> —
-   the approved label for <market>]`.
+3. **State approval only for the market it was granted in, and only from a source.** In
+   the text: "Approved in [market] for [indication]", using the label document's own
+   name and revision date where the reader needs them. In the note to the person: "Taken
+   from the label you supplied." "Per the label you supplied" never goes into wording a
+   reader outside the company sees. Without a label or a statement from the person, use
+   `[GAP: not supplied; approval status in <market>; the approved label for <market>]`.
+   An EU summary of product characteristics gives the indication wording; it does not
+   show the authorization or marketing status in one member state (the Netherlands,
+   Ireland). Use the indication wording if wanted, and leave a visible gap for that
+   status: `[GAP: not supplied; authorization and marketing status in <member state>;
+   your regulatory team]`. A line in the note alone is not enough.
 4. **Check who else can read it.** A public social post, an open web page, a press
    release or a patient leaflet reaches the public. Material about a prescription
    medicine that is meant for doctors must not drift into those channels without the
-   review process deciding (M2, M4, M7). Ask where it will be posted when the channel is
-   open.
-5. **Keep rules in their own market.** Use a rule from `references/method-standards.md` / `references/knowledge.md` only for
+   review process deciding (M2, M8, M12). When the output is public and the product is a
+   prescription medicine, name in one line what the market's rule covers, with no
+   verdict on this piece: for the UK, "The UK industry code covers advertising of
+   prescription-only medicines to the public: they must not be advertised to it." Ask
+   where it will be posted when the channel is open.
+5. **Keep rules in their own market.** Use a rule from `references/rules.md` only for
    the jurisdiction listed against it. A UK industry code line does not belong in a
    Swiss email; a US guidance does not govern an EU deck.
+6. **Name the local code without a verdict.** When a market is named, say in one line
+   that its local industry code may add elements to what is listed here, and that your
+   review process checks them ("Switzerland's industry code may add elements; your
+   review process checks them.").
+7. **Keep the language asked for.** Draft in the language the person asked for.
+   Translation, including required statements, reporting lines and label wording,
+   follows the one rule in `../../fit-for-reader/tasks/translation-fidelity.md` ("The
+   one translation rule").
 
 ## Repair (existing draft)
 
@@ -77,5 +98,5 @@ See `templates/check-line.md`.
 - Whether a piece is promotion or scientific exchange is decided by the company's review
   process. Record the use the person states, or the careful assumption from
   `trusted-intake`.
-- No market's rules are stated from memory. If the market is not in `references/method-standards.md` / `references/knowledge.md`,
+- No market's rules are stated from memory. If the market is not in `references/rules.md`,
   say the rules were not read here and point to the review process.

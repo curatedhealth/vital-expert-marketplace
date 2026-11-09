@@ -43,9 +43,13 @@ Never name or invent a specific company's SOP, and never say that work satisfies
 
 Stop and ask before continuing when:
 
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
+
 - The person asks to send, or to prepare for sending without review, anything for a
-  doctor, patient, payer, regulator, agency or the public. Offer the draft for review
-  and ask who reads it.
+  doctor, patient, payer, regulator, agency or the public. Only the skipping of review is
+  held back: give the draft in the same reply, labeled for review before any use, and
+  ask who reviews it.
 - The host can send or publish, and the work is external. Leave it as a draft.
 - The person asks for an article, letter or post to go out as an independent expert's
   own work with the writing support hidden. Offer the honest route (A1).
@@ -65,16 +69,18 @@ correspondence, a brainstorm.
 - That the person's draft meets ICMJE, GPP or any venue's authorship rules.
 - That the language is free of stigma or bias. Only what was changed and what is open.
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/human-oversight.md`, Guard step 4: who reads the work before it is used is set by the review your process names. The skill never sends the work or labels it reviewed.
+- `tasks/authorship-integrity.md`, Guard step 1: the named author confirms they reviewed and own the work, as your process names.
+- `tasks/ai-use-disclosure.md`, Guard step 3: whether and where AI help is disclosed follows the venue's rule and the policy your process names. The skill drafts the wording either way.
+
 ## Closing statement
 
 When this skill's check lines reach the TRUSTED summary, the summary ends with: "This
 check flags issues. It is not medical, legal, regulatory or ethics review." Direct
 replies and use notes do not carry it.
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

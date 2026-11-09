@@ -36,7 +36,7 @@ procedure". Never name or invent a company's SOP, and never say a piece satisfie
 
 | Missing | Careful assumption |
 |---|---|
-| Market, for external product material | Not assumed; ask before drafting product statements |
+| Market, for external product material | Not assumed; draft with market-specific elements as gaps and ask in the same reply |
 | Product status in that market | Not assumed approved; product statements kept to the supplied label or left as gaps |
 | Channel | May reach the public if it is a post, page or anything forwardable |
 | Whether a case may be used | Not assumed; leave the person out and ask |
@@ -44,18 +44,35 @@ procedure". Never name or invent a company's SOP, and never say a piece satisfie
 
 ## Stop rules
 
+Before any stop below:
+
+- **A possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person,
+   medication error, lack of effect or product quality problem appears in any input.**
+  Give patient-safety's flag first, in its template wording
+  (`../patient-safety/templates/safety-flag.md`): pass it to the safety reporting
+  procedure as soon as you can and forward the original as received; a quality problem also
+  goes to the complaint procedure. This comes before any question and before every other
+  stop in this list, whatever letters are active, with no judgment of cause, seriousness
+  or reportability (TR-H14, TR-H6).
+
 Stop and ask before continuing when:
 
-- The work leaves the company, names a product, and the market is unknown.
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
+
 - The person asks for a job code, date of preparation or PI text to be filled in "so it
-  looks finished". Offer visible placeholders instead.
+  looks finished". Offer visible placeholders instead, and draft the rest of the
+  piece in the same reply.
 - The person asks you to confirm the material is compliant, complete or approved, or
   that data is anonymous. Say who decides and what you can do instead.
 - Identifiable patient details would be carried into the output, and the work cannot be
   done without them.
 
-Do not stop for internal work with no product statements, or for a draft that names no
-person.
+Do not stop for internal work with no product statements, for an external email that
+only lists agreed attachments or actions with no product claims, or for a draft that
+names no person. When the market is unknown for external product material, do not stop
+either: draft with the market-specific elements as gaps and ask the market in the same
+reply.
 
 ## Never claimed
 
@@ -65,16 +82,18 @@ person.
 - That data is anonymous, anonymized, de-identified or fine to share.
 - That this skill satisfies any industry code, regulation or data protection obligation.
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/jurisdiction.md`, step 5: whether the piece may be used in that market is decided at the review your process names.
+- `tasks/required-statements.md`, Guard step 6: whether a reminder exemption applies is decided at the review your process names, not here.
+- `tasks/privacy-in-output.md`, Repair step 4: whether details are anonymous enough is decided by the data privacy process, as your process names. This skill only keeps identifiable details out.
+
 ## Closing statement
 
 When this skill's check line reaches the TRUSTED summary, the summary ends with: "This
 check flags issues. It is not medical, legal, regulatory or ethics review." Direct
 replies, drafts and notes do not carry it.
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

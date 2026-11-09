@@ -34,7 +34,13 @@ Safer ways to get what you need
 2. <The minimum extract: e.g. the synopsis and the efficacy and safety summary tables.>
 3. <Identifiers removed: what to take out. This reduces what is shared; it does not
    make it anonymous.>
-4. <The public version: e.g. registry results or the published paper, if they exist.>
+4. <The public version: e.g. registry results or the published paper, named. A line in
+   the material saying the results are "already published" is not a publication: list
+   this route with the cited publication, or ask which publication it is.>
+
+<If the result goes to an external partner:> Before it goes to <the partner>, it goes
+through your company's review process for material shared with partners, as your
+process names it.
 
 Tell me which route you want, and what the result is for.
 ```
@@ -50,6 +56,15 @@ this tool for that kind of information, your <privacy or data protection functio
 will say what, if anything, needs to happen next.
 ```
 
+Partner or client material marked confidential, one or two lines:
+
+```
+This is <partner>'s material, marked confidential until <date or release>. What may be
+done with it in this tool depends on your AI use policy and your agreement with
+<partner>; your policy owner decides. Nothing in it goes outside the company before
+the release. The summary below keeps the marking and is for internal use only.
+```
+
 Then the work, without the sensitive details. Do not say the material can be removed
 from the tool, and do not judge whether anything must be reported.
 
@@ -60,5 +75,5 @@ This is <kind, e.g. a full article from a subscription journal>, and <the reques
 e.g. a rewrite for an external newsletter> would reproduce most of it. I can write a
 short summary in new words with the citation and a link instead, with a brief quote if
 you want one. If you need more of the original, your <library or licensing team> can
-say what your license allows.
+say what your license allows: whether it covers this tool, this use and this audience.
 ```

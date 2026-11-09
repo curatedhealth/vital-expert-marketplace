@@ -25,13 +25,15 @@ to send.
 > I've marked where the numbers go rather than adding any, because none came with the
 > slide and the GM would read them as real.
 >
+> Vague statements: 3. Filler passages: 1. Sections with no "so what": 1.
+>
 > **Brand performance** [heading: once the figures are in, this can state the point,
 > for example how performance compares with plan]
-> - Tavrelo net sales [GAP: not supplied — net sales and plan for the period — from
+> - Tavrelo net sales [GAP: not supplied; net sales and plan for the period; from
 >   your sales report]
-> - Uptake among [GAP: not supplied — which prescriber group — name it] [GAP: not
->   supplied — uptake figure and comparison period — from your market data]
-> - [GAP: not supplied — number of new accounts expected and by when — from your
+> - Uptake among [GAP: not supplied; which prescriber group; name it] [GAP: not
+>   supplied; uptake figure and comparison period; from your market data]
+> - [GAP: not supplied; number of new accounts expected and by when; from your
 >   account plan]
 >
 > To make it concrete, send me:

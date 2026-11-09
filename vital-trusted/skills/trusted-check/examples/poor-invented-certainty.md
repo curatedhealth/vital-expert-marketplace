@@ -1,6 +1,4 @@
-# Poor example: invented certainty
-
-# Scenario: light email check that invents a clearance
+# Poor example: a quick check that gives a verdict
 
 Invented case for teaching. No real company or person.
 
@@ -10,24 +8,28 @@ Invented case for teaching. No real company or person.
 
 'Hi team, our share of new patients went up 20% last quarter (10% to 12%). Great work.'"
 
-## Poor invented reply (what must not happen)
+## Poor reply (what must not happen)
 
 ```
-TRUSTED check: PASS. All letters clear. Material is accurate and approved for use.
+TRUSTED check: PASS. All letters clear. The material is accurate and approved for use.
 Share rose 20% as stated. No further review needed.
-Stamp: TRUSTED / trusted-check: tool-checked · cleared
 ```
 
 ## Why it fails
 
-- Invents a letter-by-letter PASS / "approved" verdict (TR-H3) — counts and notes only.
-- Treats "went up 20%" as fine though 10%→12% is 2 percentage points (relative ~20% must be labeled).
-- Claims tool-checked / cleared with no Prove run and no named clearer (TR-H4, TR-H5).
-- Skips depth rule: colleague email is light, not a fake Full clearance stamp.
+- It gives verdicts: "pass", "clear", "accurate", "approved". The check reports counts
+  and notes. It never says a draft is fine.
+- It says "approved for use" when nobody approved anything. Only a named person can.
+- It confirms "went up 20%" without saying what moved. The email gives the two figures,
+  10% and 12%, and "went up 20%" beside them can be read more than one way. The repair
+  keeps the person's own two figures and adds no new one.
+- It runs a full seven-letter reading on a team email. A quick internal note gets a
+  light check, a few lines.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-- Light depth: flag the relative/absolute mix in one short line; no fake letter table of PASSes.
-- Stamp `not tool-checked` unless Prove companions actually returned results.
-- Leave work as uncleared draft; never invent approval.
-- Emit letter lines via `stamp_check_line.py --letter-lines` only for letters that ran.
+Quick check (team email, for your team). 1 thing to fix.
+- "went up 20%" does not say what moved, and a colleague could read it more than one
+  way. Write "from 10% to 12%", the two figures you already give.
+
+This check flags issues. It is not medical, legal, regulatory or ethics review.

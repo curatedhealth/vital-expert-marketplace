@@ -1,6 +1,4 @@
-# Poor example: invented certainty
-
-# Scenario: medical-information ask routed as "just draft the reply"
+# Poor example: routing that skips the questions and invents a dose
 
 Invented case for teaching. No real product or person.
 
@@ -9,23 +7,40 @@ Invented case for teaching. No real product or person.
 "A doctor emailed asking whether our product can be used in moderate kidney impairment.
 Draft the reply from the label I attached."
 
-## Poor invented reply (what must not happen)
+The label attached is silent on moderate kidney impairment.
+
+## Poor reply (what must not happen)
 
 ```
-Route: skip intake. You can send this draft to the doctor now — Safe and Rule-compliant
-are fine. Dosing: 50 mg daily in moderate impairment (standard).
+No need to ask anything first. You can send the draft below to the doctor now. It is
+fine on safety and on the rules.
+
+Dear doctor, the recommended dose in moderate kidney impairment is 50 mg daily, the same
+as the standard dose.
 ```
 
 ## Why it fails
 
-- Invents a dosing figure not shown as quoted from the attached label.
-- Skips `trusted-intake` (country, unsolicited question, use) which changes what may be said.
-- Declares Safe / Rule-compliant "fine" without running those skills (TR-H4).
-- Implies the draft may be sent — replaces the company's medical-information process (TR-H11).
+- The 50 mg dose is not in the label the person attached. It is an invented figure that
+  a doctor could act on.
+- It skips the two questions that change what the reply may say: which country the
+  doctor is in, and whether the doctor asked unprompted.
+- It says the draft is "fine on safety and on the rules" when no check was run. A
+  routing answer reports no result.
+- It tells the person to send the draft now. That replaces the company's medical
+  information process with the assistant's say-so.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-- Route: intake → patient-safety → claims-and-label; True hard rules throughout.
-- Quote label wording only; if moderate impairment is absent, say so as a gap.
-- Point at shared `../../templates/` for cards; no invented clearance.
-- Stamp capability-map route only — not a send-ready verdict.
+You need a reply to a doctor's question about moderate kidney impairment, drafted from
+the label you attached.
+
+What I'd do first: confirm which country the doctor is in and that the question came
+from them unprompted, because both change what the reply may say.
+Then: take every dosing statement word for word from the label. The label you attached
+does not mention moderate kidney impairment, so the reply will say that plainly and
+will not suggest a dose.
+
+After that it goes through your medical information procedure before it is sent.
+
+Want me to start on the draft?

@@ -2,7 +2,7 @@
 
 ## Companion slot
 
-No companion exists for this skill and none is planned (product concept v0.4, §10.2:
+No companion exists for this skill and none is planned (the TRUSTED standard:
 Tangible stays method only). Usefulness is judged by reading against the reader's job;
 there is nothing for a tool to verify. Do not imitate one (TR-H4).
 
@@ -14,9 +14,9 @@ there is nothing for a tool to verify. Do not imitate one (TR-H4).
 | Actionability | Read the action log or tracker to find owners and dates already agreed | None | Ask; leave `needs a decision` gaps |
 | Structure integrity | Read the company's standard templates, so a mandated structure is not flagged | None | Ask whether a template applies |
 
-VERIFY does not fill these slots. It checks sentences against supplied passages; when a
-new specific or "so what" is added and VERIFY is connected, it goes to
-`claim-assessment` like any other sentence, through `trusted-check`.
+No tool fills these slots. When a new specific or "so what" is added, it goes to
+`claim-assessment` like any other sentence, through `trusted-check`, and is compared by
+hand with a passage.
 
 ## Script
 

@@ -1,8 +1,8 @@
 # Output format: check line for trusted-check
 
 Returned to `trusted-check` only, never shown at the end of a direct reply. One line per
-task that ran, in plain words. Counts only; no verdict words (TR-H3, TR-H13). The shape
-matches the proposal in `trusted-check/references/letter-lines.md`.
+task that ran, in plain words. Counts only; no verdict words (TR-H3, TR-H13). The grammar
+is in `../../trusted-check/references/letter-lines.md`.
 
 ```
 Unbiased · balance: <n> benefit statements, <n> risk or limitation statements, <n> benefits with no risk or limitation nearby (not tool-checked)
@@ -24,8 +24,8 @@ what the counts do not show:
 If the task could not run:
 
 ```
-Unbiased · balance: not checkable — no side-effect, discontinuation or limitation data supplied (<n> benefit statements affected)
-Unbiased · selective reporting: not checkable — only the draft was supplied, not the material it draws on (<n> results affected)
+Unbiased · balance: not checked, no side-effect, discontinuation or limitation data supplied (<n> statements affected)
+Unbiased · selective reporting: not checked, only the draft was supplied, not the material it draws on (<n> statements affected)
 ```
 
 Counting rules:

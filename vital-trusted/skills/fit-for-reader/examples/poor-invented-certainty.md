@@ -1,6 +1,4 @@
-# Poor example: invented certainty
-
-# Worked example: one finding, a payer and an internal team
+# Poor example: one finding sent to two readers in the same words
 
 Invented case for teaching. "Velunor" is a fictional product; the registry and figures
 are made up.
@@ -13,64 +11,68 @@ paragraph for the payer's medical adviser we're meeting. Same data."
 ## Material supplied
 
 > Velunor observational registry, 1,850 patients. Hospital admission within 12 months:
-> 12.0% on Velunor vs 20.0% on standard care. Adjusted HR 0.60 (95% CI 0.48 to 0.75).
-> No cost analysis done yet.
+> 12.0% on Velunor versus 20.0% on standard care. Adjusted hazard ratio 0.60 (95% CI
+> 0.48 to 0.75). No cost analysis done yet.
 
-## The facts both versions must carry
+## Poor reply (what must not happen)
 
 ```
-Design:      observational registry, 1,850 patients
-Outcome:     hospital admission within 12 months
-Result:      12.0% Velunor vs 20.0% standard care; adjusted HR 0.60 (95% CI 0.48 to 0.75)
-Limit:       observational: an association, not proof Velunor caused the difference
-Not there:   cost or savings
+Brand team:
+Adj. HR 0.60 (95% CI 0.48-0.75); 12-mo hospitalization 12.0% vs 20.0%; n=1,850.
+
+Payer:
+Velunor patients were admitted to hospital less often: 12.0% versus 20.0%.
 ```
 
-## Internal brand team (two lines)
+## Why it fails
 
-> Our registry (1,850 patients, observational) shows fewer hospital admissions within
-> 12 months on Velunor: 12.0% vs 20.0% on standard care. It is an association, not proof
-> of cause, and there is no cost analysis yet, so we cannot talk about savings.
+- The brand team version is a string of statistics. It does not say what the finding is,
+  what it rests on or what to do with it. The reader asked for two lines they can use,
+  and statistical shorthand like "Adj. HR" and "CI" is not that.
+- The payer version drops what the payer's medical adviser needs to weigh the number: it
+  is an observational registry, not a trial, the adjusted hazard ratio and its range,
+  and the fact that no cost analysis exists.
+- Both versions are written for the same reader, the statistician. They are different
+  lengths, not different texts for different people.
+- Nothing tells the person what was cut or why, so the dropped limits cannot be noticed.
 
-## Payer's medical adviser (short paragraph)
+## Repair (as the person sees it)
 
-> In an observational registry of 1,850 patients, hospital admission within 12 months
-> occurred in 12.0% of patients treated with Velunor and 20.0% of patients on standard
-> care, an 8 percentage point difference (adjusted hazard ratio 0.60, 95% CI 0.48 to
-> 0.75). As an observational analysis, it shows an association and cannot establish
-> that Velunor caused the difference. No cost analysis has been done.
+**Brand team (two lines)**
+> In an observational registry of 1,850 patients, 12.0% of Velunor patients were admitted
+> to hospital within 12 months, against 20.0% on standard care.
+> It is a registry, not a trial, so other differences between the groups may play a
+> part, and no cost analysis exists yet.
 
-## What changed between the two, and what did not
+**Payer's medical adviser (short paragraph)**
+> In an observational registry of 1,850 patients, 12.0% of patients on Velunor had a
+> hospital admission within 12 months, compared with 20.0% on standard care. The
+> adjusted hazard ratio was 0.60 (95% confidence interval 0.48 to 0.75). Because this is
+> a registry and not a randomized trial, other differences between the groups may play a
+> part. No cost analysis has been done yet.
 
-| | Internal | Payer |
-|---|---|---|
-| Facts | Design, size, both rates, limit, no cost analysis | The same, plus the adjusted HR and interval the payer will ask for, both from the material |
-| Order | The usable line first | Method first, then result, then limit |
-| Words | "Our registry", "we cannot talk about savings" | Neutral, third person; the method named |
-| Depth | Rates only | Rates, difference, adjusted estimate with interval |
+What I changed for each reader and why (Uncleared draft)
 
-The 8 percentage point difference is derived from the two supplied rates (20.0 minus
-12.0) and labeled in the text as a difference.
+Passages changed: 2. Passages cut or moved: 1.
 
-## Short note to the person
+Changed
+1. Brand team: the statistics became a sentence about what was found, with the
+   registry's limit stated so nobody repeats it as proof.
+2. Payer: the design, the hazard ratio with its range and the missing cost analysis
+   are all kept, because the payer version needs them to be read correctly.
 
-Both versions carry the same facts; only the order, words and depth differ. The payer
-version leads with the method and gives the adjusted figure a medical adviser will ask
-for. Neither mentions savings, because there is no cost analysis. The payer paragraph
-goes through your market access or promotional review process before the meeting.
+Kept on purpose
+1. The registry's limit appears in both versions, even though it makes the brand team
+   version longer.
 
-## Behind the note (reference only, not shown to the person)
+Cut or moved
+1. Brand team: the adjusted hazard ratio, 0.60 (95% confidence interval 0.48 to 0.75),
+   is left out of the two lines to keep them short. It is in the payer version and can
+   go back in if the brand team wants it.
 
-Patterns A3, A4 in `references/failure-modes.md` / `references/knowledge.md`. Association wording and absolute figures
-come from `grounded-statements` (its patterns M5, N1). Whether the payer material is
-promotional is for the company's process (TR-H11).
+I changed the words, not the facts: every figure and limit in your material is in the
+payer version, and in the brand team version except the hazard ratio noted above. I did
+not test them with readers.
 
-## Why it fails (anti-pattern to avoid)
-
-- Sends the same dense technical paragraph to a payer and to an internal ops list.
-- Invents what the reader "already knows".
-- Drops fair-balance elements because "the reader is sophisticated".
-
-## What the skill must do instead
-
-Match depth and wording to the named reader; ask if reader unknown; keep required balance.
+Next step: the payer version goes through your review process for material sent to
+payers before it is used.

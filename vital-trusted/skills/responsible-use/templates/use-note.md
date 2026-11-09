@@ -38,7 +38,8 @@ AI help: <one of:>
 
 Whose name it goes under: <one or two lines, e.g. "For this to go out under Dr <name>'s
 name, she shapes and approves the content, and the writing support and funding are
-acknowledged. Your publications process sets the steps.">
+acknowledged. AI tools are not listed as authors. Your publications process sets the
+steps.">
 
 Language: changed <n> phrases.
 1. "<before>" → "<after>": <a few plain words of why>.
@@ -49,6 +50,9 @@ Language: changed <n> phrases.
 ## Redirect (send without review, or hidden ghostwriting)
 
 ```
+<If asked to send:> I haven't sent it.
+<If the request skips a review, quote it:> You wrote "<their words, e.g. No need for
+medical review>".
 <One plain sentence on why, e.g. "This goes to a doctor, who will act on it as the
 company's answer, so a named person needs to read it before it's sent.">
 

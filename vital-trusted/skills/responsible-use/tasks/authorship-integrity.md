@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find whose name the work goes out under and what that name claims; keep AI off the byline; turn ghostwriting into acknowledged support the named person makes their own |
 | Skill | TR-6.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U1–U5), `references/knowledge.md` (A1–A6) |
+| Knowledge | `references/rules.md` (U1–U5), `references/patterns.md` (A1–A6) |
 | Tool | None. Companion slot: future publications or AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (authorship part), `templates/check-line.md` |
@@ -23,6 +23,7 @@
 | An article, opinion piece, blog or post for a KOL or external expert | "This independent expert's own view and work" | Full task |
 | A journal manuscript, abstract, poster or congress presentation | Authorship under the venue's criteria | Full task, plus disclosure (`tasks/ai-use-disclosure.md`) |
 | A quote attributed to a person in a press release or campaign | "This person said this" | The person approves the exact words |
+| A patient or customer testimonial that no real person gave | "A real person said this" | Never presented as real; a labeled composite or a real, consented quote |
 
 ## Guard (while drafting)
 
@@ -35,22 +36,34 @@
    experience or patient anecdotes (TR-H1).
 4. **Name what makes it honest**, briefly, for anything going out under an expert's or
    author's name:
+   - AI tools are not listed as authors (U1); say this in those words whenever
+     authorship, a byline or acknowledgments come up;
    - the named person shapes and approves the content and can stand behind all of it
      (U4);
    - writing support, by people and by the assistant, is acknowledged as the venue
      requires (U2, U4, U5);
    - the company's funding or role is disclosed (with `honest-framing`);
    - it goes through the company's publications process (TR-H11).
-5. **For manuscripts**, list the authorship criteria in plain words only if the person
+5. **Invented testimonials.** When asked for a patient or customer quote or story
+   presented as real but given by no one, decline that version in one line: readers
+   would believe a real person said it. Offer a composite clearly labeled as
+   illustrative ("Illustrative example, not a real patient"), or a real quote from a
+   consented person who approves the exact words, through your company's process for
+   patient stories. Draft the labeled composite only when the person asks for an
+   illustration. It carries the label, makes no claim about real patients or results,
+   and keeps to everyday narrative (daily life, feelings, the steps of care in general
+   terms); any outcome, figure or result about a medicine stays a gap. Outcome wording
+   about a medicine in it is `claims-and-label`.
+6. **For manuscripts**, list the authorship criteria in plain words only if the person
    asks or the author list looks wrong (a guest name, a writer listed for drafting
    alone).
 
-## Repair ("write it for Dr X to sign as her own")
+## Repair ("write it for Dr. X to sign as her own")
 
-1. **One plain line on the problem**: readers will take it as Dr X's own independent
+1. **One plain line on the problem**: readers will take it as Dr. X's own independent
    work; if the company or the assistant wrote it and that is hidden, it misleads them
-   and exposes Dr X and the company.
-2. **Offer the honest route, not a refusal**: a first draft for Dr X to rework as her
+   and exposes Dr. X and the company.
+2. **Offer the honest route, not a refusal**: a first draft for Dr. X to rework as her
    own, with acknowledgment of writing support and funding, going through the
    publications process. Or the same content published under the company's name.
 3. **Do not produce the version framed as her unaided work** ("ready for her to

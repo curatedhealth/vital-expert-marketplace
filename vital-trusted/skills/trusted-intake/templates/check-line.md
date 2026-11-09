@@ -15,5 +15,6 @@ If intake did not run before the draft:
 Context · not gathered before drafting; reader, market and use taken from the draft only
 ```
 
-Suggested for `trusted-check` (not yet built): list assumed and open context under "Open for a human" when the stakes
-are leaving the company.
+`trusted-check` reads these lines as input, not as a letter row: it takes the reader and
+stakes from them to set the depth, and lists assumed and open context under "Open for a
+person" when the work is leaving the company (see `../../trusted-check/references/letter-lines.md`).

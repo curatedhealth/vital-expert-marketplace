@@ -2,14 +2,14 @@
 
 ## Companion slot
 
-No companion exists for this skill. VERIFY tests sentences against supplied passages;
-it does not judge certainty, framing or charts, and this skill does not hand off to it.
+No companion exists for this skill. A hand comparison of sentences with passages does not
+judge certainty, framing or charts, and this skill does not hand off to it.
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
 | Uncertainty at its real size | Read the supplied paper's results table and limitations section and return, per result, the estimate, interval, n, follow-up and whether it was primary, so the result card is filled from the source rather than from the assistant's reading | No companion yet | Method runs; the result card is filled by reading the material; check line says "not tool-checked" |
-| Numbers and charts | Read a chart image or file and return the axis start and end, scale per panel, series plotted and the values behind each mark, then compute the distortion | No companion yet | Method and `scripts/chart_scale.py` run on what the person supplies or describes; where the chart's values or axis are not supplied, `[GAP: not checkable here — whether the chart matches its data — supply the data or the chart file]` |
-| Conflict disclosure | Read the source's funding and disclosure sections and return the sponsor, its stated role and author ties, quoted | No companion yet. Related: `source-assessment` records what a source discloses, with VERIFY `qualify_source` when connected | Method runs from the supplied material; "not tool-checked" |
+| Numbers and charts | Read a chart image or file and return the axis start and end, scale per panel, series plotted and the values behind each mark, then compute the distortion | No companion yet | Method and `scripts/chart_scale.py` run on what the person supplies or describes; where the chart's values or axis are not supplied, `[GAP: not checkable here; whether the chart matches its data; supply the data or the chart file]` |
+| Conflict disclosure | Read the source's funding and disclosure sections and return the sponsor, its stated role and author ties, quoted | No companion yet. Related: `source-assessment` records what a source discloses, by hand | Method runs from the supplied material; "not tool-checked" |
 
 Never describe any of the above as having run (TR-H4).
 
@@ -65,13 +65,13 @@ cat draft.txt | python scripts/find_framing_cues.py -
 It finds words, not meaning. "Clearly labeled" is not overclaiming; "funded by" may
 already be the disclosure. Read every hit against the material.
 
-### Reused: `../grounded-statements/scripts/risk_metrics.py`
+### Reused: `../../grounded-statements/scripts/risk_metrics.py`
 
 For relative and absolute effects of a binary outcome from arm rates or counts, use the
 script in `grounded-statements` by its path. Do not copy it into this skill.
 
 ```
-python ../grounded-statements/scripts/risk_metrics.py --treat-rate 0.01 --ctrl-rate 0.02
+python ../../grounded-statements/scripts/risk_metrics.py --treat-rate 0.01 --ctrl-rate 0.02
 ```
 
 Use it here to set benefit and harm in the same format (pattern NF1), not to correct a

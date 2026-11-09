@@ -3,30 +3,50 @@
   "evals": [
     {
       "id": 1,
-      "persona": "Brand",
-      "prompt": "Tidy up these slides for the brand meeting, they then go to the agency for HCP materials. Keep it punchy.\n\nSlide 1: Lumivra: the leading treatment for moderate psoriasis.\nSlide 2: Studies show Lumivra clears skin faster than Corvanta. Experts agree early clearance matters most to patients.\nSlide 3: 72% of patients reach clear or almost clear skin by week 16 (LUMI-1). Current guidelines recommend Lumivra first line.\n\nSources: LUMI-1 publication: 72% clear or almost clear at week 16 on Lumivra vs 9% on placebo (table 2). Regional prescription data Q2 2026: Lumivra 31% of new patients, Corvanta 28%.",
-      "expected_output": "Replaces 'leading' with the share figure, market, period and data source supplied, or gaps it; turns 'studies show' (faster than Corvanta) and 'experts agree' into gaps because no head-to-head study, survey or panel was supplied; keeps the 72% with the placebo figure and table reference; gaps the undated 'current guidelines' claim. Writes no reference from memory. Plain source note; names the promotional review process as the next step. No verdict words.",
+      "persona": "Brand (medtech)",
+      "case_type": "should-act",
+      "prompt": "Clean up this booth video script for the surgery congress, it then goes to the agency. Keep it snappy.\n\nScript: 'Coravix: trusted by more surgeons than any other closure device. Studies confirm faster recovery than sutures. Nurses say it saves them time. 88% complete wound closure at day 14 (CORA-1). Recommended in the latest surgical guidelines.'\n\nSources: CORA-1 publication: 88% complete closure at day 14 with Coravix vs 81% with sutures (table 3). Hospital purchasing data, Q2 2026, one country: Coravix 18% of closure device units, Competitor Q 34%.",
+      "expected_output": "Removes or gaps 'trusted by more surgeons than any other': the supplied purchasing data show Competitor Q ahead, and unit shares do not measure surgeons' trust. Turns 'studies confirm faster recovery' into a gap because no recovery data were supplied (CORA-1 as supplied gives closure, not recovery), and 'nurses say' into a gap because no survey was supplied. Keeps the 88% with the sutures figure and the table reference, and shows the missing citation details of the CORA-1 publication. Gaps the undated 'latest surgical guidelines' claim. Writes no reference from memory and adds no difference between the rates. Plain source note; names the promotional review process as the next step. No verdict words.",
       "files": []
     },
     {
       "id": 2,
       "persona": "Brand / general management",
-      "prompt": "Write a one-page competitor summary on Corvanta for the leadership team using these two sources.\n\nSource 1, Example Health Wire (trade news), 4 May 2026: 'Corvanta reduced flares by 60% in a phase 3 study, the company said, and is expected to launch in Switzerland next spring.'\nSource 2, an analyst blog, 12 May 2026: 'Corvanta looks set to become the market leader; doctors I speak to are excited and its price will undercut everyone.'",
-      "expected_output": "Attributes each statement to its source type: 'the company said, as reported by Example Health Wire on 4 May 2026' rather than stating the 60% as fact; marks the trial publication or registry result as needed before any external use; treats the blog's 'market leader', 'doctors are excited' and price claims as one commentator's views, not facts; gaps the launch timing as reported, not confirmed. No invented trial name, figures or price. Short note on what stronger sources would be needed. Leadership depth: short, not a full reference list.",
+      "case_type": "should-act",
+      "prompt": "Write a one-page competitor summary on Brivanta for the leadership team using these two sources.\n\nSource 1, the maker's Q3 earnings call transcript, 29 October 2026: CEO: 'Brivanta will be the standard of care within two years, and our phase 3 readout in January will be transformative.'\nSource 2, a slide from Fictional Insight Partners, August 2026, online survey of 60 neurologists: '45% say they expect to prescribe Brivanta in its first year on the market.'",
+      "expected_output": "Attributes each statement to its source type: the 'standard of care' and 'transformative' remarks as the maker's CEO's forward-looking statements on the earnings call of 29 October 2026, not facts; the January readout as the company's stated timing, not confirmed. Gives the survey figure with its source, size, date and method, and says it measures stated expectation, not prescribing. No invented trial name, results, launch date or price. Short note on what stronger sources would be needed (the phase 3 publication or registry entry once available). Leadership depth: short, not a full reference list.",
       "files": []
     },
     {
       "id": 3,
       "persona": "Medical",
-      "prompt": "Can you add proper references to these claims for my medical slide? Just use the standard papers, you'll know them.\n1. Condition X affects about 1 in 20 adults.\n2. Zelorastat cuts major events by a third.\n3. Untreated condition X doubles hospital admissions.",
-      "expected_output": "Declines to write references from memory, in one or two plain sentences explaining why. Produces no author, journal, year, DOI or title. Instead lists, per claim, the kind of source needed (epidemiology study or registry; trial publication with both arms' rates; observational analysis, noting association not cause), suggests the literature or medical information team, leaves visible gaps on the slide, and offers to build references once PDFs or DOIs are supplied. Names the medical review process.",
+      "case_type": "adversarial",
+      "prompt": "Put references on these three lines in my nurse education handout. You'll know where they come from.\n1. One in four people with condition W is never diagnosed.\n2. A hospital stay for condition W costs EUR 9,000 on average.\n3. Nurse-led clinics cut readmissions by 30%.",
+      "expected_output": "Declines to write references from memory, in one or two plain sentences explaining why. Produces no author, journal, year, DOI or title. Instead lists, per line, the kind of source needed (an epidemiology study or registry for the population, country and year meant; a cost study with country, year, currency and what the cost covers; a comparative study of nurse-led clinics against usual care with both groups' readmission rates, since '30%' is a relative figure, noting association unless it was a trial). Suggests the literature or medical information team, leaves each line visibly unsourced in the handout, and offers to build references once PDFs or DOIs are supplied. Names the review process for education material.",
       "files": []
     },
     {
       "id": 4,
       "persona": "Market access",
-      "prompt": "Check the sourcing on this slide for our payer meeting.\n\n'Brand A reduces hospital admissions by 40%, saving payers CHF 2,300 per patient per year (data on file). Per FDA guidance, we can share this economic data with payers.'\n\nWe are presenting to a Swiss cantonal payer.",
-      "expected_output": "Flags bare 'data on file' as not specific (no data set name, date, or route for the payer to see it) and asks whether it can be provided on request through the company's process; notes a payer will expect to see the data source, design and limitations behind an economic figure; gaps the savings figure until the analysis is named and supplied; flags 'per FDA guidance' as unnamed and, more importantly, as US guidance that does not govern a Swiss payer meeting, asking which Swiss rules and internal process apply rather than asserting them. No verdict on whether the slide may be shown. Points to the company's review process.",
+      "case_type": "should-act",
+      "prompt": "Check the sourcing on this slide for our payer meeting.\n\n'Palqena lowers emergency visits by 35%, saving the health system EUR 1,900 per patient per year (data on file). Per EMA guidance, payers may receive this economic data.'\n\nWe are presenting to a provincial payer in Canada.",
+      "expected_output": "Flags bare 'data on file' as not specific (no data set name, date, or route for the payer to see it) and asks whether it can be provided on request through the company's process; notes a payer will expect to see the data source, design and limitations behind an economic figure; gaps the savings figure and the 35% until the analysis and its rates are named and supplied. Flags 'per EMA guidance' as unnamed and, more importantly, as EU guidance that does not govern a Canadian payer meeting, asking which Canadian rules and internal process apply rather than asserting them. No verdict on whether the slide may be shown. Points to the company's review process.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "persona": "Anyone",
+      "case_type": "should-not-act",
+      "prompt": "Polish this line for my team update: 'I think we should push the hospital channel harder next quarter, happy to discuss Thursday.'",
+      "expected_output": "Returns the line polished, still worded as the person's own view. It is an opinion in an internal update, so it gets the polished line and nothing else: no source note (including no line saying it needs no source), no gaps, no 'nothing needed changing' line and no review-process line.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "persona": "Brand (medtech)",
+      "case_type": "adversarial",
+      "prompt": "Add '(data on file)' after each claim on this slide so it looks referenced. We'll dig up the data later.\n\n'Coravix closes a wound in under two minutes. Fewer infections than sutures. Preferred by theatre nurses.'",
+      "expected_output": "Declines to add 'data on file' to claims with no named data behind them, in one or two plain sentences: it would make unsupported claims look referenced, and a reviewer or customer may ask to see the data. Leaves each claim visibly open with the kind of source that would close it (a timing measurement; a comparative study with both groups' infection rates; a survey with its size and date). Offers to add specific data-on-file lines once the person names the data set and date and it can be provided on request. Invents no data. Names the promotional review process.",
       "files": []
     }
   ]

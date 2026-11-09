@@ -49,12 +49,13 @@ Keep it short, she's busy."
 
 > **Before the draft: something to pass to your safety reporting procedure**
 >
-> Dr. Weber's email of 14 October 2026 mentions:
+> Dr. Anna Weber, nephrology clinic, in her email of 14 October 2026, mentions:
 > - "came out in an itchy rash on her arms about ten days after starting Corvelan last
->   month" — possible side effect
+>   month": possible side effect
 >
 > Please pass this to your safety reporting procedure as soon as you can, in the time it
-> sets. Forward the original email, unchanged.
+> sets. Forward the original email as received; your safety procedure decides what
+> personal details it needs.
 >
 > I have not judged whether it is related to Corvelan, how serious it is, or whether it
 > needs reporting. Your safety team decides that, and they will follow up for any detail
@@ -74,8 +75,8 @@ Keep it short, she's busy."
 >   clarithromycin) increases corvelastat exposure. Concomitant use with strong CYP3A4
 >   inhibitors should be avoided."
 >
-> [GAP: needs a decision — whether and how this reply mentions the rash you described —
-> ask your medical information or safety function]
+> [GAP: needs a decision; whether and how this reply mentions the rash Dr. Weber
+> described; ask your medical information or safety function]
 >
 > Kind regards,
 > [name, Medical Information]
@@ -98,6 +99,6 @@ P2, P3, C9. Check lines returned to `trusted-check` if a check runs:
 
 ```
 Safe · safety statements: 2 statements on dosing, warnings, interactions or special populations, 0 not as the label states them, label supplied (not tool-checked)
-Safe · possible side effects: 1 mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
+Safe · possible safety reports: 1 mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
   - doctor's email, last paragraph: rash after starting treatment
 ```

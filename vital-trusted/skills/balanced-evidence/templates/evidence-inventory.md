@@ -1,10 +1,13 @@
 # Output format: evidence inventory
 
 Filled from the supplied material only, before drafting or repairing. Every field not in
-the material is `[GAP: not supplied]`, never inferred. For anything leaving the company,
-the inventory is shown in the balance note; for internal work, it stays as working.
+the material reads "not in your material", never inferred. For anything leaving the
+company, the inventory is shown in the balance note; for internal work, it stays as
+working. The `[GAP: ...]` marker belongs only inside a drafted deliverable, not in this
+inventory.
 
-Plain words throughout, so it can be shown to the person (TR-H13).
+Plain words throughout, so it can be shown to the person (TR-H13). The inventory has no
+counts line of its own; the balance note's counts line is the only one in the reply.
 
 ```
 Evidence in your material, and where it is in the draft
@@ -30,7 +33,7 @@ Subgroups and analysis sets
 Side effects and discontinuations
   Serious adverse events: <each group>                        in draft: <yes | footnote only | no>
   Most common side effects: <as the source lists, each group> in draft: <...>
-  Stopped because of side effects: <each group>               in draft: <...>
+  Stopped because of adverse events: <each group, in the source's words> in draft: <...>
   Stopped for any reason: <each group>                        in draft: <...>
   Warnings the label or study puts first: <as listed>         in draft: <...>
 

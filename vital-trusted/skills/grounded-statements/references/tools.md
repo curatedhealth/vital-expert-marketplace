@@ -2,15 +2,14 @@
 
 ## Companion slot
 
-| Task | What a companion would do | Tool | Without it |
+| Task | What a companion would do | Handed to | Without it |
 |---|---|---|---|
-| No fabrication | Test each claim against the quoted passage it rests on | VERIFY `check_claim`, `verify_text`, through `claim-assessment` | Method runs; check line says "not tool-checked" |
-| Number consistency | Test that each figure appears in its passage | VERIFY `check_claim`, through `claim-assessment` | Method and scripts run; "not tool-checked" |
-| Method description | Test that design and endpoint statements match the passage | VERIFY `check_claim`, through `claim-assessment` | Method runs; "not tool-checked" |
+| No fabrication | Test each claim against the quoted passage it rests on | `claim-assessment`, by hand | Method runs; check line says "not tool-checked" |
+| Number consistency | Test that each figure appears in its passage | `claim-assessment`, by hand | Method and scripts run; "not tool-checked" |
+| Method description | Test that design and endpoint statements match the passage | `claim-assessment`, by hand | Method runs; "not tool-checked" |
 
-This skill never calls VERIFY directly. It hands finished text to `claim-assessment`,
-which owns the tool calls and their interpretation. That keeps the tool contract in one
-place. [CHECK: VERIFY argument and return contracts to be confirmed in claim-assessment.]
+This skill uses no tool. It hands finished text to `claim-assessment`, which compares it
+with passages by hand and owns the six hand-check results.
 
 ## Scripts
 

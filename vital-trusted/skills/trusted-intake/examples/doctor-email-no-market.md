@@ -18,7 +18,7 @@ the press release below. Keep it short, they're busy."
 | Reader | Dermatologists | read |
 | Market | Not named. The press release says "approved" but not where | unknown, and it changes the answer |
 | Product status | "Approved for moderate to severe plaque psoriasis in adults", market not given | read, market missing |
-| Use | An email the company sends out, not a reply to a question | read: likely promotional |
+| Use | An email the company sends out, not a reply to a question | assumed, said aloud: sent out, not a reply |
 | Deliverable | Short email | read |
 | Material | One press release | read |
 | Stakes | Leaving the company | read |
@@ -26,21 +26,40 @@ the press release below. Keep it short, they're busy."
 
 Two fields matter and are missing or uncertain: the market, and whether the 52-week data
 fit what the label covers in that market. The second depends on the first, so one
-question covers the market and a second asks for the label.
+combined question covers both. The email is drafted in the same reply, with every
+statement that depends on them as a gap (draft first).
 
-## Questions (as the person sees them)
+## What the person sees
 
-You want a short email to dermatologists on the new 52-week Lumivra results, from the
-press release.
+Working from:
+- Reader: dermatologists (from your request)
+- Market: not given
+- Product status: "approved for moderate to severe plaque psoriasis in adults" (from the
+  press release; which country is not said)
+- Use: promotional (my assumption; tell me if that's wrong)
+- Material: the press release
+- Not seen: the approved label
 
-Before I draft, two quick questions:
-- Which country will the dermatologists be in? What can go in an email to doctors differs
-  by market.
-- Can you share the approved label for that country? The email can only say what the
-  label supports, and the press release doesn't say where Lumivra is approved.
+> Subject: Lumivra: 52-week extension data
+>
+> Dear Doctor,
+>
+> New 52-week extension data for Lumivra were presented at [GAP: not supplied; the
+> congress name and date; the press release's full text or the poster]. At week 52, 71%
+> of patients maintained clear or almost clear skin [GAP: not supplied; how many
+> patients and which study the 71% comes from; the poster or the study report].
+>
+> [GAP: needs a decision; whether the label in the doctors' country covers this use and
+> the 52-week data; your approved label for that market]
+>
+> [GAP: not supplied; the safety information and the statements this market requires;
+> your approved label and your promotional review process]
 
-Otherwise I'll treat this as promotional material, which goes through your promotional
-review process before it's sent.
+One question: which country will the dermatologists be in, and can you share the
+approved label there? What can go in an email to doctors differs by market, and the
+press release doesn't say where Lumivra is approved. I'll fill the gaps when you reply.
+
+It goes through your promotional review process before it's sent.
 
 ## Card (for other skills)
 
@@ -50,9 +69,10 @@ TRUSTED context: short email to dermatologists on 52-week data
 Reader          dermatologists                                      (read)
 Market          not yet given                                       (asked)
 Product status  approved for moderate to severe plaque psoriasis in adults, market not given (read from press release)
-Use             promotional                                         (assumed)
+Use             promotional                                         (assumed, said aloud: sent out, not a reply)
 Deliverable     short email                                         (read)
 Material        press release on 52-week extension data
+Not seen        label: not seen
 Stakes          leaving the company
 Next process    your promotional review process
 Inputs          public
@@ -60,21 +80,24 @@ AI use policy   not asked (no sensitive input)
 Tool decision   not made here; it belongs to the person and their AI policy owner
 
 Assumed         treated as promotional material
-Asked           market; approved label for that market
+Asked           market and the approved label there, in one question
 ```
 
 ## Why this is the right intake
 
-- Two questions, not a form. Reader, deliverable and material were read, not asked.
-- The market is asked before drafting because the work leaves the company and a draft
-  for the wrong market would be thrown away.
-- Use is assumed in the careful direction (promotional) and said out loud, not decided.
+- One combined question, not a form. Reader, deliverable and material were read, not
+  asked.
+- The draft comes in the same reply. Nothing market-specific is written as fact: every
+  statement that depends on the market or the label is a gap the person can see.
+- Use is read from the request (an email the company sends out, not a reply to a
+  doctor's question), so it is not asked. It is recorded as promotional and said out
+  loud; the review process decides.
 - No data question: a press release is public.
 - Nothing about the label is invented; the press release's "approved" is recorded with
-  its limit.
+  its limit, and the card says the label was not seen.
 
 ## Behind the answer (reference only, not shown to the person)
 
 Rules I1 and I6 (advertising to prescribers; national rules differ). Patterns avoided: C1
-(the form), C5 (the silent market), C7 (draft first, ask later), C10 (classifying the
+(the form), C5 (the silent market), C7 (questions instead of a draft), C10 (classifying the
 work).

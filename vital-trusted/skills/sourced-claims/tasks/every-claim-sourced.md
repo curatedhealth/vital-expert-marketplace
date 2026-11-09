@@ -7,8 +7,8 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Sort statements into claims and non-claims, attach a supplied source to each claim, gap the rest |
 | Skill | TR-5.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R5, R6), `references/knowledge.md` (S1–S8) |
-| Tool | `scripts/find_source_cues.py` where code can run. Companion slot: none at launch; VERIFY `check_claim` through `claim-assessment` tests a claim against its passage after drafting |
+| Knowledge | `references/rules.md` (R1, R2, R5, R6), `references/patterns.md` (S1–S8) |
+| Tool | `scripts/find_source_cues.py` where code can run. Companion slot: none; `claim-assessment` compares a claim with its passage by hand after drafting |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/source-note.md` |
 | Input | The draft or request, the supplied sources, the audience from intake |
@@ -45,8 +45,10 @@ the payer channel, because payers now cover 70% of prescriptions" carries a figu
 2. **For each claim you write, know its source** before you write it. Show it in short
    form beside the claim at leadership depth and above ("(Q3 IQVIA extract, supplied)").
 3. **Where a claim has no supplied source, write the gap inline:**
-   `[GAP: not supplied — source for <claim> — <what would close it>]`. Keep the claim only
-   if the person wants it kept with the gap visible; otherwise leave it out and say so.
+   `[GAP: not supplied; source for <claim>; <what would close it>]`. When you cannot ask
+   first, keep the claim in the drafted deliverable with the gap visible and list it in
+   the note; if the person then wants it out, take it out. A claim their own data
+   contradict stays out.
 4. **Turn collective authority into a name.** "Studies show" becomes the named study or a
    gap. "Experts agree" becomes the named panel, survey or guideline, or a gap. "Per FDA
    guidance" becomes the guidance title and date, or a gap.
@@ -72,7 +74,7 @@ See `templates/check-line.md`.
 ## Boundaries
 
 - Whether the claim says what the source says is `grounded-statements` (while drafting)
-  and `claim-assessment` (with tools). This task checks that a source is named and
+  and `claim-assessment` (by hand, after drafting). This task checks that a source is named and
   supplied.
 - Whether a comparative or superlative claim is allowed at all in this market is
   `claims-and-label`. This task asks only what would source it.

@@ -36,8 +36,3 @@ Rules:
 - Counts are of passages the reader would notice, not of list hits from the script.
 - Specifics left as gaps are counted in the substance line ("statements too vague to
   act on") until the person supplies them.
-
-Two differences from the shapes proposed in `trusted-check/references/letter-lines.md`:
-the structure line adds "frameworks or groupings the content does not support", and the
-next step line adds the "not needed" values. Both are proposed amendments to that file,
-to be applied there by its owner so the contract stays in one place.

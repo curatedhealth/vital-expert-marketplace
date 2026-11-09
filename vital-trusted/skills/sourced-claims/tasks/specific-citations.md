@@ -7,8 +7,8 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Build each citation from the supplied source only; mark missing fields; never fill from memory |
 | Skill | TR-5.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R10), `references/knowledge.md` (C1–C7) |
-| Tool | `scripts/find_source_cues.py` flags vague citations. Companion slot: VERIFY `build_citation` through `citation-and-record` |
+| Knowledge | `references/rules.md` (R3, R4, R7, R10), `references/patterns.md` (C1–C7) |
+| Tool | `scripts/find_source_cues.py` flags vague citations. Plain reference lines by hand through `citation-and-record` |
 | Prompt | This guide |
 | Template | `templates/reference-list.md`, `templates/check-line.md` |
 | Input | The draft, the supplied sources (documents, links, exports) |
@@ -48,7 +48,7 @@ This request is common and is where invented references are most likely.
    publication the claim came from). Each claim gets a gap in the text.
 4. **If the person names a reference from their own knowledge** ("it's the Smith paper
    in 2023"), write it as a gap to confirm until they supply the document or its
-   identifier: `[GAP: not supplied — full citation for the paper you named — send the
+   identifier: `[GAP: not supplied; full citation for the paper you named; send the
    PDF or its DOI]`.
 
 ## Guard (while drafting)
@@ -79,5 +79,5 @@ See `templates/check-line.md`.
 - Citation style (Vancouver, APA, house style) is the person's choice (TR-H9). This task
   cares that the fields are there, not how they are punctuated.
 - A complete citation is not a verified one. Whether the source exists as cited, and
-  whether it says what the claim says, is `citation-and-record` and `claim-assessment`
-  with VERIFY. Without VERIFY, say "citation not built or checked with a tool".
+  whether it says what the claim says, is `citation-and-record` and `claim-assessment`,
+  by hand. Say "citation not tool-checked".

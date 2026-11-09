@@ -36,19 +36,26 @@ content.
 
 Stop and ask before continuing when:
 
-- The reader is not known, the work leaves the company, and the reader changes what is
-  written.
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
+
 - Making a patient text simpler would need clinical advice or a fact the material does
   not hold ("tell them what to do if they miss a dose" with no source).
 - The person asks to make patient material more reassuring or more alarming than the
-  source.
+  source. Only that change is held back: give the plain-language draft at the source's
+  own level of reassurance in the same reply and say so in one line. Offer to use reassurance wording from the approved patient material if the person supplies it.
 - The content cannot fit the format asked for without dropping a fact that changes the
   meaning.
-- A translation is for patients, product information, safety wording or consent, and
-  the person intends to use it without a qualified translator or the company's review.
+- A translation is patient material, regulated product information, safety wording,
+  consent or legal text, or anything leaving the company in the target market (the same
+  list as `tasks/translation-fidelity.md`, guard step 6), and the person intends to use
+  it without a qualified translator or the company's review in that market.
   Translate as a draft and say who settles it; do not present it as ready.
 - The request is to translate a validated questionnaire or other instrument. Point to
-  the instrument owner's process (`references/method-standards.md` / `references/knowledge.md` R9).
+  the instrument owner's process (`references/rules.md` R9).
+
+Do not stop when the reader is not known: draft for the stricter reader, say the
+assumption in one line, and ask once in the same reply.
 
 ## Never claimed
 
@@ -60,16 +67,17 @@ Stop and ask before continuing when:
 - That local wording is approved, unless the person supplied it as approved, and then
   only as "approved wording as you supplied it, dated …" (attribution, TR-H3).
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/audience-and-literacy.md`, step 5: patient material goes to the review your process names, which decides whether it can be used.
+- `tasks/translation-fidelity.md`, Repair step 4: approved local wording and the sign-off of a translation belong to a qualified translator and the review your process names.
+
 ## Closing statement
 
 Drafts, rewrites and translation notes are not checks and do not carry the closing
 statement. When this skill's lines appear in the TRUSTED summary, that summary ends
 with: "This check flags issues. It is not medical, legal, regulatory or ethics review."
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

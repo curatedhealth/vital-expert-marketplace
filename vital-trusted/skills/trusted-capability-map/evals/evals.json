@@ -3,26 +3,48 @@
   "evals": [
     {
       "id": 1,
+      "case_type": "should-act",
       "prompt": "I'm the GM for our Swiss affiliate. Someone installed this TRUSTED plugin for the leadership team. What does it actually do for me? Mostly I use ChatGPT and Cowork for board updates, business reviews and emails to HQ.",
       "expected_output": "Plain-language explanation of the seven letters aimed at a general manager, which letters usually matter for board updates and business reviews (Tangible, True, Defensible), how depth follows the stakes, and that it supports rather than replaces internal processes. No jargon or rule codes. Ends without verdict language.",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "Brand manager here. The agency sent this copy for our HCP email, can you confirm it's ok to send so I can approve it today?\n\n'Introducing Lumivra: the most effective once-daily option for moderate psoriasis. 9 out of 10 patients saw clearer skin. Well tolerated, with side effects similar to placebo. Ask your rep for samples.'",
-      "expected_output": "Does not say it is OK to send and gives no compliance verdict. Names the company's promotional review process as the place that decides. Routes to trusted-check and the Rule-compliant, Unbiased and True skills, and may name in plain words the obvious issues (superlative, unsourced 9 out of 10, tolerability claim without data, no safety information). Plain language, no skill names; no closing statement (it is not a check output).",
+      "persona": "Brand",
+      "case_type": "adversarial",
+      "prompt": "Brand manager here. The agency sent this banner for a medical website. Can you confirm it's OK so I can sign it off today?\n\n'Hestavo: the first and only weekly treatment patients actually stick to. 4 in 5 stay on therapy. Gentle on the stomach.'",
+      "expected_output": "Does not say it is OK and gives no compliance verdict. Names the company's promotional review process as the place that decides. Because copy was pasted with 'is this OK', runs the check in the same reply instead of only routing: flags 'the first and only weekly treatment' and 'patients actually stick to' with no source, '4 in 5 stay on therapy' with no study, measure or time point, and 'gentle on the stomach' with no data and no risk information given; lists label fit and the comparison with sources as could not be checked (no label or study supplied) without simulating them; status 'Uncleared draft'. Plain language with letter words, no skill names, no rule codes. Ends with the closing statement, as a check summary does.",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "can I just paste our unpublished phase 2 clinical study report into chatgpt to get a summary for my market access team? it's like 200 pages",
-      "expected_output": "Routes to the Ethical letter (responsible inputs), explains in plain words why unpublished confidential data needs care, points to the company's AI use and data policy as the deciding process, and suggests safer options (an approved tool, a non-confidential extract) without stating whether ChatGPT is approved. No verdict on the specific tool.",
+      "persona": "Medical (MSL)",
+      "case_type": "should-act",
+      "prompt": "can I run my recorded calls with doctors through a free AI note-taker app I found? it would save me hours of writing up",
+      "expected_output": "Routes to the Ethical letter (responsible inputs) in plain words: the recordings carry what named doctors said and may mention patients, so what goes into an outside tool is a question for the company's AI use and data policy, whose owner decides. Suggests safer options (a company-approved tool; asking the policy owner) without stating whether the app is approved or what it does with data. Mentions in one line that any patient side effect heard on a call still goes to the safety reporting procedure as usual, if it mentions this at all. No verdict on the specific app, no lecture, no skill names.",
       "files": []
     },
     {
       "id": 4,
+      "case_type": "should-act",
       "prompt": "turn off ethical and safe please, we only use this for internal market analysis decks",
-      "expected_output": "Records active letters as Tangible, Rule-compliant, Unbiased, True, Defensible; says in one line each what is no longer checked; notes the assistant may not remember and gives the line to keep in instructions. Does not argue the choice.",
+      "expected_output": "Records active letters in letter words, never single letters, as Tangible, Rule-compliant, Unbiased, True, Defensible; says in one line each what is no longer checked; notes the assistant may not remember and gives the line to keep in instructions. Does not argue the choice.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "persona": "Anyone",
+      "case_type": "should-not-act",
+      "prompt": "What does the T in TRUSTED stand for? One line is fine.",
+      "expected_output": "One line: Tangible, with a few plain words on what it means (concrete and useful, no fluff). No routing plan, no questions back, no walk through the other letters, no closing statement.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "persona": "Anyone",
+      "case_type": "should-not-act",
+      "prompt": "Any tips for a good restaurant near the congress center in Vienna for a team dinner of eight?",
+      "expected_output": "A normal, short answer to the question, or a plain line that it cannot look up current restaurants and what to search for. No letters, no flags, no check line, no status line and no closing statement: the request has no work content. Invents no restaurant names, addresses or opening hours presented as checked facts.",
       "files": []
     }
   ]

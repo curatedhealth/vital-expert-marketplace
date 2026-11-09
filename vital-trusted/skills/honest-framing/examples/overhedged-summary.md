@@ -40,9 +40,11 @@ Working from: internal medical team, the KELNA-2 abstract and disclosures.
 
 ## Short note (as the person sees it)
 
-Changed: the primary result was met with a clear range, so I said it plainly and kept
-one caveat, the 24-week follow-up the authors name; the over-65 result is wide and now
-labeled exploratory; nausea now has both arms; the funder and the employed authors are
+Hedges removed: 3.
+Your summary undersells the result. The primary endpoint was met (32% versus 47%;
+difference 15 percentage points, 95% CI 9 to 21), and the draft hedged it three times.
+Changed: I said the met result plainly and kept one caveat, the 24-week follow-up the
+authors name; the over-65 result is wide and now labeled exploratory; nausea now has both arms; the funder and the employed authors are
 named. Nothing left as a gap.
 
 ## Why this is the right depth

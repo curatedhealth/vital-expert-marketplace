@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Name the reader's job, find sections that list facts with no implication, draw the implication from the material or ask |
 | Skill | TR-1.1.3 |
-| Knowledge | `references/knowledge.md` (W1–W5) |
+| Knowledge | `references/patterns.md` (W1–W5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |
@@ -31,7 +31,8 @@ work out the implication alone.
    neither shows it, ask once.
 2. **After each group of facts, write the implication for that job**, in one or two
    sentences, and put it first where the reader skims: the finding, then the facts that
-   support it.
+   support it. When the person asks for the work to be more useful, every item leads
+   with its implication, not with the fact as its heading.
 3. **Draw only what the facts support.** Use the material's own facts and the person's
    stated plan or goal. Word it as a reading: "This puts our Q1 listing ahead of
    Competitor B's", not "Competitor B will lose share".
@@ -48,7 +49,7 @@ work out the implication alone.
    job. If no implication follows from what is there, say so in the note rather than
    writing one.
 3. **Check the new sentence does not add a fact, cause or forecast** the material does
-   not hold (`references/knowledge.md` W3, W4). If True is active, it is passed to
+   not hold (`references/patterns.md` W3, W4). If True is active, it is passed to
    `grounded-statements` like any new sentence.
 4. **Move the "so what" to the top** of its section when the reader skims (board papers,
    slide headlines, email openings).
@@ -59,7 +60,8 @@ work out the implication alone.
 
 The "so what" of a study summary for a medical team is what the result means for the
 evidence base and the team's next step (for example, "the primary endpoint was missed,
-so the secondary results need careful framing in the advisory board pre-read"). It is
+so the secondary results are presented as exploratory, with the missed primary endpoint
+stated first, in the advisory board pre-read"). It is
 never what a prescriber should do for a patient, never a causality judgment about a
 side effect and never a call on whether something must be reported (TR-H6). Name the
 function that decides.

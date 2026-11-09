@@ -1,5 +1,9 @@
 # Task TR-2.1.2 Promotional boundary
 
+Contents: Formula; This task does not decide what the piece is; What to look for; Replies
+to unsolicited questions; Guard (while drafting); Repair (existing draft); Check line;
+Boundaries.
+
 Helps a piece stay what the person says it is: scientific exchange, a reply to a
 question, disease information, or promotion. Flags what makes information read as
 promotion, checks that the audience fits the piece, shapes replies to unsolicited
@@ -12,7 +16,7 @@ questions, and points to the review process that decides.
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Record the stated use and reader, read for promotional signals, shape the piece to its use, route to the deciding process |
 | Skill | TR-2.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R10 to R16, R20), `references/knowledge.md` (P1–P8) |
+| Knowledge | `references/rules.md` (R3, R10 to R16, R20), `references/patterns.md` (P1–P8) |
 | Tool | None. Companion slot: a future MLR-preparation companion (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/unsolicited-reply.md`, `templates/claims-note.md`, `templates/check-line.md` |
@@ -40,7 +44,7 @@ decides.
 | Reply beyond the question | Benefits, uses, products or competitor points the asker did not ask about | A reply qualifies only when it relates solely to the question (R12) |
 | Prompted question | The company invited or suggested the question | A prompted enquiry is not unsolicited (R12) |
 | Indirect product reference | Disease information that names, pictures or clearly points to the product | Disease information stays outside advertising rules only with no reference, even indirect (R10) |
-| Wrong audience | Professional material for patients or the public; prescription medicine promoted to the public | Prescription medicines may not be advertised to the public in the EU, and only some categories in Switzerland (R11, R15) |
+| Wrong audience | Professional material for patients or the public; prescription medicine promoted to the public | Prescription medicines may not be advertised to the public in the EU or in Switzerland; in Switzerland public advertising is limited to medicines that are not prescription-only, today dispensing categories D and E (category C was abolished on 1 January 2019) (R11, R15) |
 | Hidden promotion | Promotion presented as an article, study summary or independent view | Advertising must be recognizable as such in Switzerland; good practice elsewhere (R9) |
 
 ## Replies to unsolicited questions
@@ -48,6 +52,11 @@ decides.
 For a medical science liaison, medical information or medical affairs reply to a
 doctor's own question, including one about a use outside the label:
 
+0. **Safety first (TR-H14).** If the doctor's question or any other input mentions a
+   possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person,
+   medication error, lack of effect or product quality problem, the flag for your safety reporting procedure comes before the reply and before
+   any question, in the wording of `../../patient-safety/templates/safety-flag.md`,
+   unconditional and with the original forwarded. Then continue.
 1. **Confirm it is unsolicited, as the person states it.** If the company prompted the
    question, stop: do not draft the reply, and name the medical information procedure
    (pattern P2).
@@ -55,8 +64,8 @@ doctor's own question, including one about a use outside the label:
 3. **Answer only that question.** No other uses, benefits, products or competitor
    points.
 4. **Say plainly when the use is outside the label supplied**: "This use is not
-   included in the approved product information for <market>, per the label you
-   supplied." Then give the supplied data as reported, with design, size and
+   included in the approved <market> product information (revision <date>)." "Per the
+   label you supplied" goes in the note to the person, not in the reply. Then give the supplied data as reported, with design, size and
    limitations, and no recommendation.
 5. **No clinical advice (TR-H6).** Do not recommend a dose, a patient selection or a
    treatment decision for the use asked about. Data as reported is not advice; a
@@ -69,10 +78,13 @@ doctor's own question, including one about a use outside the label:
    review process, before it is sent (TR-H11).
 
 Format: `templates/unsolicited-reply.md`. US practice for unsolicited replies is
-`[CHECK]` in `references/method-standards.md` / `references/knowledge.md`; apply the steps above as good practice there.
+`[CHECK]` in `references/rules.md`; apply the steps above as good practice there.
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Record the reader and the use** as the person states them. Ask if either is
    missing and the piece leaves the company (TR-H7).
 2. **Write to the use.** Scientific exchange and replies use neutral, data-first
@@ -80,8 +92,12 @@ Format: `templates/unsolicited-reply.md`. US practice for unsolicited replies is
    indirectly. Promotional material stays inside the label (TR-2.1.1) and goes to
    promotional review.
 3. **Fit the audience.** If the reader is a patient or the public and the product is a
-   prescription medicine, say plainly that promotion to the public is restricted in
-   many markets and route to promotional review before drafting product content.
+   prescription medicine, draft first: write only what the supplied material allows,
+   with product statements as gaps, in the same reply. Say in one plain line that advertising
+   prescription-only medicines to the public is not allowed in the EU, the UK or
+   Switzerland (source for the runner: `../../market-rules-and-data/references/rules.md`,
+   M2, M8, M12; do not cite them, any law, code or article in the reply). For any other market, say plainly that its rules were
+   not checked here. Name promotional review as the next step.
 4. **Name the next process** in the note.
 
 ## Repair (existing draft)
@@ -107,6 +123,6 @@ exchange or a reply; the second when it is promotional or the use is not stated.
 - Whether the reply is balanced is `balanced-evidence`; whether dosing and warnings are
   stated safely is `patient-safety`.
 - A side effect mentioned in the doctor's question is flagged to the safety reporting
-  procedure (`patient-safety`); this task makes no causality or reportability judgment
-  (TR-H6).
+  procedure (`patient-safety`) before the reply, not in a note after it; this task makes
+  no causality or reportability judgment (TR-H6).
 - This task never decides that a piece is or is not promotional (TR-H3, TR-H6).

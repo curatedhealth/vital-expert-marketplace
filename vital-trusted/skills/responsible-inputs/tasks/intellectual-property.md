@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Recognize whose work it is and what the request does with it, prefer summary over reproduction, point to licensing |
 | Skill | TR-6.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I9, I10, I12), `references/knowledge.md` (P1–P7) |
+| Knowledge | `references/rules.md` (I9, I10, I12), `references/patterns.md` (P1–P7) |
 | Tool | `scripts/scan_inputs.py` (copyright and license markers) where code can run. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/input-note.md`, `templates/check-line.md` |
@@ -26,6 +26,9 @@
 
 ## Guard (before or as material comes in)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Set the depth.** Reading or summarizing for one's own understanding, from material
    the company has access to: usually one line at most, or nothing. Reproducing or
    reworking a whole work, or anything going outside the company: continue.
@@ -35,8 +38,10 @@
    and a link to the original, and at most short, attributed quotations. A close
    rewrite that follows the article paragraph by paragraph is still built on the
    article.
-4. **Respect licenses.** Licensed reports and data are used as their terms allow. Ask
-   whether the terms cover this use, this tool and this audience. Do not guess the
+4. **Respect licenses.** Licensed reports and data are used as their terms allow. For a
+   third-party report or dataset, ask all three where they apply: do the license terms
+   cover this tool (an AI assistant), this use (summary, slide, reworking) and this
+   audience (internal only, or outside the company)? Do not guess the
    terms and do not assume a subscription covers external use or use in an AI tool.
 5. **Point to the company's process** in plain words: the library or licensing team for
    publications and paid reports, the contract owner for client or partner material,
@@ -50,7 +55,7 @@
 1. **Find the reproduced passages:** long verbatim runs, close paraphrase that follows
    the source sentence by sentence, copied tables or figures, unattributed quotations.
 2. **Rewrite as a summary** in new words with a citation, or cut to a short quotation
-   with attribution, or mark `[GAP: needs a decision — permission to reproduce <item> —
+   with attribution, or mark `[GAP: needs a decision; permission to reproduce <item>;
    your licensing process]` where the person wants the reproduction kept.
 3. **Never remove the attribution** to make text look original, and never present
    someone else's figure or table as the company's own.

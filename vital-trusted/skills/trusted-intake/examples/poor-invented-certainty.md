@@ -1,36 +1,69 @@
-# Poor example: invented certainty
+# Poor example: intake that fills in the context itself
 
-# Scenario: external deck with missing market/use — intake invents them
-
-Invented case for teaching. "Zelorastat" is fictional.
+Invented case for teaching. "Zelorastat" is a fictional product.
 
 ## Request
 
 "Polish this launch slide for leadership."
 
-(No market, no use, no product status, no reader named. Notes mention "payers" once.)
+The person gave no market, no product status and no use. Their notes mention "payers"
+once, in passing.
 
-## Poor invented reply (what must not happen)
+## Poor reply (what must not happen)
 
 ```
 Context card:
-Reader = German payers (assumed)
-Market = DE
-Use = promotional
-Product = approved
-All set — no questions. Proceeding to Full TRUSTED check and clearance.
+Reader: German payers
+Market: Germany
+Use: promotional
+Product: approved
+
+All set, no questions. I'll go straight to the full check and mark it cleared.
 ```
 
 ## Why it fails
 
-- Invents market, use, and approval status the person never stated.
-- Skips questions that would change the answer (external vs internal; labeling on hand).
-- Pretends intake can clear or launch a Full check as already decided.
-- Violates IFPMA 4.3 / ABPI 6.2 posture: substantiation path never confirmed.
+- Germany, promotional use and approval were never stated. The card presents guesses as
+  facts, with no tag showing they were assumed.
+- The request says "for leadership". The card swaps in a different reader, payers, from
+  one passing word in the notes.
+- It says "mark it cleared". Intake records context; it never clears work.
+- It skips the one question worth asking. The slide may stay inside the company or reach
+  payers, and that changes how careful the draft must be.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-- Ask the few questions that change the draft (market, use, product status, labeling on hand).
-- Leave unknown fields unknown; do not invent Germany/promotional/approved.
-- Hand a partial context card + open asks; do not run letters or clear the pack.
-- Stamp intake-only; depth/letters decided after answers.
+Working from:
+- Reader: leadership team (as you said)
+- Material: your slide and notes
+- Not seen: the label
+I've assumed the slide could leave the company, so the polished version makes no claim
+about zelorastat's approval or use.
+
+(The polished slide follows here.)
+
+One question: will this stay with the leadership team, or could it also reach payers?
+Your notes mention payers once, and a slide that leaves the company is held to more.
+
+## Card (for other skills)
+
+```
+TRUSTED context: launch slide polished for leadership
+
+Reader          leadership                                          (stated)
+Market          unknown                                             (unknown)
+Language        not needed                                          (assumed)
+Product status  unknown                                             (unknown)
+Use             unclear                                             (unknown)
+Deliverable     one slide                                           (read)
+Material        the slide and the notes
+Not seen        label: not seen
+Stakes          leadership, possibly leaving the company
+Next process    none apparent
+Inputs          internal
+AI use policy   not asked (no sensitive input)
+Tool decision   not made here; it belongs to the person and their AI policy owner
+
+Assumed         could leave the company; no product claims written
+Asked           whether payers will see it
+```

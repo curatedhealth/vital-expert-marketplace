@@ -57,19 +57,22 @@ Words to reread for tone: nothing to worry about (1)
 >
 > In the study, 4 in every 100 people taking Orzenta had a headache.
 >
-> Do not take Orzenta if your kidneys are not working well enough [GAP: not supplied —
+> Do not take Orzenta if your kidneys are not working well enough [GAP: not supplied; 
 > the plain wording your approved patient leaflet uses for this kidney limit (eGFR below
-> 30) — supply the leaflet or ask your medical team].
+> 30); supply the leaflet or ask your medical team].
 >
 > Tell your doctor about any other medicines you take.
 
 ## Repair note (as the person sees it)
 
-What I changed for patients and why (draft, not yet reviewed)
+What I changed for patients and why (Uncleared draft)
 
 Written for: people newly prescribed Orzenta, who need to know what it is for and what
 to tell their doctor.
 Format: as asked, a short letter.
+
+Passages changed: 4. Terms replaced or explained: 6. Passages cut or moved: 2.
+Gaps left: 1.
 
 Changed
 1. "indicated for the treatment of moderate hypertension" → "a medicine for adults with
@@ -96,12 +99,12 @@ Cut
    does not need them to use this letter.
 
 Left as gaps for you to fill
-1. Plain wording for the kidney limit — from your approved patient leaflet. I did not
+1. Plain wording for the kidney limit: from your approved patient leaflet. I did not
    want to guess how it describes this.
 
-Questions for you
-1. The kidney statement and any side-effect wording are safety statements. Should they
-   match your patient leaflet word for word? Check them against it.
+Question for you
+The kidney statement and any side-effect wording are safety statements. Should they
+match your patient leaflet word for word? Check them against it.
 
 Next step: this goes through your promotional or medical review process before it is
 sent to patients.
@@ -111,7 +114,7 @@ is still in this version, except the two cuts listed. I did not test it with rea
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L1, L2, L3, L5, L6, L7 in `references/failure-modes.md` / `references/knowledge.md`. Rules R1 (lay term first,
+Patterns L1, L2, L3, L5, L6, L7 in `references/patterns.md`. Rules R1 (lay term first,
 medical term after; no long sentences; no symbols; abbreviations explained) and R5
 (numbers the audience uses). The kidney statement and the side-effect wording go to
 `patient-safety` for checking against the label; the route to a doctor was in the

@@ -7,7 +7,7 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Fix the format, length and structure that were asked for, fit the content into it, and say what did not fit |
 | Skill | TR-1.2.2 |
-| Knowledge | `references/knowledge.md` (D1–D8), `references/readers.md` |
+| Knowledge | `references/patterns.md` (D1–D8), `references/readers.md` |
 | Tool | None. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/repair-note.md`, `templates/check-line.md`, the format table below |
@@ -56,7 +56,10 @@ replaces them.
    answered.
 2. **Reshape** into the format asked for. Move detail out, merge repeats, put the point
    first. Use `substance-and-usefulness` if the problem is filler rather than shape.
-3. **List what was cut or moved** in the repair note. Never cut silently.
+3. **List what was cut or moved** in the repair note, each with where it could go if
+   wanted (an appendix, a separate note, the full report). Never cut silently. When the
+   original missed the format asked for, say so plainly in one line ("You asked for one
+   page; the original was about four"), not only "Format: one page".
 4. **If the content cannot fit** without losing a fact that changes the meaning, return
    the closest version and offer the person a choice: a longer format, an appendix, or
    which point to drop.

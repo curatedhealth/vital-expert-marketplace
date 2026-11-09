@@ -7,29 +7,33 @@ figures are made up.
 
 "HQ wants to know how we built the Velunor Q3 uptake analysis I sent them. Can you write
 them a short note? I did most of it in another chat with an AI assistant, and Marco in
-finance gave me the sales file. Say it was validated, they like that."
+finance gave me the sales file. The assistant drafted the text and built the summary
+table. The share figures are from the field team's monthly tracker for July to
+September, and I compared Q3 with Q2 of this year. Say it was validated, they like that."
 
 ## What this conversation shows
 
 Nothing of the earlier chat. The person has pasted the analysis (two pages, one table)
 and says: the sales file came from Marco in finance; the analysis was built in another
-conversation with an AI assistant; the share figures came from the field team's monthly
-tracker. No one else has looked at it.
+conversation with an AI assistant, which drafted the text and built the summary table;
+the share figures came from the field team's monthly tracker for July to September; Q3
+is compared with Q2 of this year. No one else has looked at it. Every one of these comes
+from the request; the note uses nothing else.
 
 ## Note to HQ (as the person sees it)
 
-> How the Velunor Q3 uptake analysis was made (draft, not yet reviewed)
+> How the Velunor Q3 uptake analysis was made (Uncleared draft)
 >
 > Built from: the Q3 sales file from Marco (finance) [file date or version not given]
 > and the field team's monthly share tracker for July to September.
 > AI's part: an AI assistant drafted the text and built the summary table from those two
-> files, in an earlier conversation.
+> files, in an earlier conversation, as you told me.
 > People's part: figures supplied by finance and the field team; no review by anyone
 > else yet.
-> Assumed: Q3 is compared with Q2 of this year, not with Q3 of last year.
+> Assumed: Q3 is compared with Q2 of this year, as you told me, not with Q3 of last year.
 > Open: whether the share tracker and the sales file cover the same accounts (owner to be
 > named); which assistant and version was used, if your policy asks for it.
-> Status: draft, not yet reviewed.
+> Status: Uncleared draft.
 
 ## Short note to the person
 
@@ -48,6 +52,6 @@ the way to earn it (TR-H5, TR-H3).
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns P2, P5, A1 and S1 in `references/failure-modes.md` / `references/knowledge.md`. Rule R1 (MHRA data integrity
+Patterns P2, P5, A1 and S1 in `references/patterns.md`. Rule R1 (MHRA data integrity
 guidance, attribution) supports the "as you told me" attributions as practice; the
 analysis itself is not a GxP record.

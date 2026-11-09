@@ -1,18 +1,33 @@
 # Intake: confidence-scoring
 
-Ask for these in one message. Do not assume product, indication, market or audience.
+Read the context card from `trusted-intake` first (`../trusted-intake/templates/context-card.md`).
+If the conversation holds one for this work, take the reader and stakes from it and do not
+ask again for anything it holds. Then read what `claim-assessment` and `source-assessment`
+already produced in the conversation. This skill works from those results and adds no
+new checking of its own.
+When the conversation holds no card (this skill used alone), take what the message says, ask at most the questions below, and do not run intake separately.
 
-| # | Input | If missing |
+## What this skill needs
+
+| Need | Comes from | If it is missing |
 |---|---|---|
-| 1 | The draft or question to work on | Stop and ask |
-| 2 | Audience (e.g. HCP, payer, internal, patient) | Ask; record "not yet set" only if the person declines |
-| 3 | Market / country if claims or rules depend on it | Ask or record "not yet set" |
-| 4 | Product / program name if relevant | Ask or record "not yet set" |
-| 5 | Sources or passages the person wants used | For Prove: stop if none and the task needs support checking; else `[GAP]` |
-| 6 | Whether a Verify key is connected | Default offline / not tool-checked |
+| The results of the hand check, one per claim | `claim-assessment` in this conversation | Do not ask for a number. If the material and its passages are pasted, run the claim check by hand first, then give one combined summary (`templates/open-items.md`). If they are not pasted, ask for them. If the person reports a check done elsewhere, see the stop rule in `governance.md` |
+| The source notes | `source-assessment` in this conversation | Carry on without them and say so in one line |
+| Reader | The card or the request | Ask once (question 1) |
 
-## Don'ts
+## Questions
 
-- Never invent a product, indication, market or comparator.
-- Never pull confidential patient identifiers into the workspace.
-- Never treat model memory as a source.
+At most one. Plain words, with the reason.
+
+1. "Who will read this?" Ask only when neither the card nor the request shows it and the
+   level of detail would differ.
+
+A request for a percent or a score is answered, not asked about: results are counts only,
+with no confidence figure, and the open items are listed for a person to
+decide.
+
+## Never
+
+- Estimate a percent, or print one. Every result is by hand and there is no figure.
+- Say that a count means the work is fine to send.
+- Ask whether a tool is connected.

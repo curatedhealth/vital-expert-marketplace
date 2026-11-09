@@ -1,78 +1,70 @@
-# Poor example: invented certainty
+# Poor example: sharpening the claims instead of sizing them
 
-# Worked example: a literature summary that hedges a clear result away
-
-Invented case for teaching. "Velostra", "KELNA-2" and "Example Pharma" are fictional; no
-real product, trial, company or person.
+Invented case for teaching. "Velostra", "Corvane", "KELNA-1" and "Example Pharma" are
+fictional.
 
 ## Request
 
-"Can you check my one-paragraph summary of KELNA-2 for the medical team's journal club?
-I tried to be careful not to oversell."
+"Tighten these slides for the sales team. Keep the punch."
 
-## Context card (one-line form)
-
-Working from: internal medical team, the KELNA-2 abstract and disclosures.
+> 1. KELNA-1 proves Velostra is superior to Corvane.
+> 2. Velostra cuts flares by 21%, a dramatic improvement.
+> 3. Independent head-to-head data.
+> 4. Chart: 75% improvement at week 16, vertical axis from 80% to 90%, Velostra 88%,
+>    Corvane 84%.
 
 ## Material supplied
 
-> KELNA-2 was a randomized, double-blind, placebo-controlled phase 3 trial in 702 adults
-> with moderate condition Z. Primary endpoint: at least one flare by week 24: 32% with
-> Velostra versus 47% with placebo (difference 15 percentage points, 95% CI 9 to 21;
-> p < 0.001). Exploratory analysis in patients over 65 (n = 88): difference 9 percentage
-> points (95% CI −11 to 29). Nausea: 18% versus 6%. Limitation named by the authors:
-> 24-week follow-up. Funding: Example Pharma. Two of nine authors are employees.
+> KELNA-1: randomized, open-label, 640 adults, 320 per arm. Flare by week 24: 22% versus
+> 28% (relative risk 0.79, 95% CI 0.64 to 0.97). At least 75% improvement at week 16
+> (secondary endpoint): 88% versus 84%, difference 4 percentage points, 95% CI -1 to 9.
+> Funding: Example Pharma, maker of Velostra, which designed the study and analyzed the
+> data.
 
-## Draft
-
-> KELNA-2 results may suggest that Velostra could potentially reduce flares in some
-> patients, although findings should be interpreted with caution and further research
-> may be needed. Older patients may also benefit. Some patients may possibly experience
-> nausea.
-
-## Repaired text
-
-> In KELNA-2, a double-blind, placebo-controlled trial of 702 adults funded by Example
-> Pharma (two of nine authors are employees), Velostra reduced flares, the primary
-> endpoint: by week 24, 32% of patients on Velostra and 47% on placebo had a flare (15
-> percentage points fewer, 95% CI 9 to 21). Follow-up was 24 weeks, the limitation the
-> authors name. In an exploratory analysis of 88 patients over 65, the range of possible
-> effects ran from 11 points worse to 29 points better, so this group's result is
-> uncertain. Nausea occurred in 18% of patients on Velostra and 6% on placebo.
-
-## Short note (as the person sees it)
-
-Changed: the primary result was met with a clear range, so I said it plainly and kept
-one caveat, the 24-week follow-up the authors name; the over-65 result is wide and now
-labeled exploratory; nausea now has both arms; the funder and the employed authors are
-named. Nothing left as a gap.
-
-## Why this is the right depth
-
-Internal medical audience (TR-H12): no full note, but the over-hedging is fixed because
-it misstates the result as surely as overclaiming would. The caution moved to where the
-real uncertainty is (the small exploratory group), not spread over everything.
-
-## Behind the note (reference only, not shown to the person)
-
-Patterns OH1, OH2, OH3, OH4, OH5, IN5. Rule R10 (ICMJE, uncertainty and limitations).
+## Poor reply (what must not happen)
 
 ```
-Unbiased · uncertainty: 1 statement more certain than the data allow, 2 statements less certain than the data allow, 2 results missing an interval, sample size, follow-up or limitation the material gives (not tool-checked)
-  - "older patients may also benefit" gives an exploratory result with a wide range as if it were a finding
-  - the met primary result is hedged three times
-Unbiased · framing: 1 figure or chart framed to look larger or smaller than it is (not tool-checked)
-  - nausea given as "some patients may possibly" with no rates
-Unbiased · interests: 2 interests in the material, 2 not disclosed where the result is used, 0 sources labeled independent or neutral without support in the material (not tool-checked)
+1. KELNA-1: the proof that Velostra beats Corvane, period.
+2. Velostra cuts flares by a dramatic 21%.
+3. Independent, head-to-head, randomized: the strongest data in the class.
+4. Chart: Velostra 88% vs Corvane 84%, axis 80 to 90%, "significantly better".
 ```
 
-## Why it fails (anti-pattern to avoid)
+## Why it fails
 
-- Hedges a clear primary result into mush while overstating a tiny exploratory subgroup.
-- Hides sponsor interest next to the result.
-- Softens AE rates into "some patients may possibly" without numbers.
-- Frames charts to exaggerate difference without both absolute rates.
+- "The proof" and "beats Corvane, period" claim more than one open-label trial can show.
+- "A dramatic 21%" gives only the relative change, with neither rate and no range.
+- "Independent" is kept and strengthened. The paper names Example Pharma as funder,
+  designer and analyst, and the reply hides that.
+- The chart keeps an axis starting at 80%, which makes 4 points look large, and adds
+  "significantly better" for a difference whose range, -1 to 9, includes no difference.
+- "The strongest data in the class" compares with studies nobody supplied.
+- The reply does not say what was changed, so the person cannot see the overclaims have
+  grown.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-Match certainty to the data; disclose interests; restore rates/CIs; repair framing notes — no invented caution or hype.
+> 1. In KELNA-1, an open-label trial of 640 adults, fewer patients had a flare by week 24
+>    with Velostra than with Corvane: 22% versus 28% (relative risk 0.79, 95% CI 0.64 to
+>    0.97).
+> 2. KELNA-1 was funded by Example Pharma, the maker of Velostra, which also designed the
+>    study and analyzed the data.
+> 3. At least 75% improvement at week 16, a secondary endpoint: 88% on Velostra versus
+>    84% on Corvane, a difference of 4 percentage points (95% CI -1 to 9).
+
+How I changed the framing (Uncleared draft)
+
+Strong words changed: 4. Chart issues: 1.
+
+Changed
+1. "proves ... superior" → one open-label trial, the two rates and the relative risk.
+2. "Independent" → the funding line from the paper. "Strongest data in the class" is out;
+   no other studies were supplied to compare with.
+3. The chart claim "significantly better" is out. The paper's range for that
+   difference, -1 to 9, includes no difference.
+
+Charts
+1. Slide 4: the axis starts at 80%, so 88% and 84% look far apart. To change: start the
+   axis at 0%, print both values, add n = 320 per arm.
+
+Next step: this goes through your promotional review process before it is used.

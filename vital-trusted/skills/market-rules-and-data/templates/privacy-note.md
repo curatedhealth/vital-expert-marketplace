@@ -27,9 +27,34 @@ minimum your company shows is set by your data privacy function; I've marked the
 <If named professionals:> I've referred to <role> instead of naming them, unless you
 confirm they agreed to be named for this.
 
-<If something happened to a patient on a product:> The notes mention <kind, e.g. a
-hospital stay while on treatment>. It may need to go through your safety reporting
-procedure; I haven't judged whether it is related.
 ```
+
+## If something happened to a patient on a product (safety first)
+
+Put this at the very top of the reply, before the summary or email and before everything
+above. It is the flag in `../../patient-safety/templates/safety-flag.md`, with the same
+wording and no "may need". The flag keeps the product name and strength, the event
+words, the reporter and the setting, and leaves out every patient identifier on the one
+list in that template, because the original notes you forward carry them:
+
+```
+Before the draft: something to pass to your safety reporting procedure
+
+<Source> mentions:
+- "<exact words from the input, without patient identifiers>" (<product name and strength, as given>): <kind in plain words, e.g. a hospital stay while on treatment>
+
+Please pass this to your safety reporting procedure as soon as you can, in the time it
+sets. Forward the original <notes | email | transcript> as received; your safety procedure decides what personal details it needs.
+
+I have not judged whether it is related to <product>, how serious it is, or whether it
+needs reporting. Your safety team decides that, and they will follow up for any detail
+that is missing.
+```
+
+This is the one exception to quoting the input word for word, and
+`../../patient-safety/tasks/side-effect-flag.md` allows it: the identifiers stay out of
+the flag because the original goes to the safety team as received. The optional lines of
+the patient-safety template apply here too, for example the complaint procedure for a
+product quality problem.
 
 Never write "anonymized", "de-identified", "safe to share" or "no personal data".

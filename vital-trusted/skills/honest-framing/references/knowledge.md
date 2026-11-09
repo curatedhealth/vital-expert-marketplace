@@ -1,8 +1,17 @@
 # Knowledge: honest-framing
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Primary rules behind honest framing
+## Contents
+
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
+
+## Part 1: Rules
 
 Each rule names its primary document, its date, its scope and how it was confirmed
 (TR-H8). `Confirmed` means the official copy was read on the date shown. A `[CHECK]`
@@ -11,7 +20,7 @@ requirement.
 
 Last reviewed: 20 October 2026.
 
-## Scope of what was read
+### Scope of what was read
 
 | Document | Official copy read | Jurisdiction | Binding? |
 |---|---|---|---|
@@ -25,7 +34,7 @@ The FDA guidance was first issued as a final guidance in June 2023 (FDA Roundup,
 marked Revision 1; the FDA page gives no note of what changed. This skill cites the
 December 2023 Revision 1 text.
 
-## Rules
+### Rules
 
 | Id | What the skill takes from it | Primary document | Status |
 |---|---|---|---|
@@ -33,14 +42,14 @@ December 2023 Revision 1 text.
 | R2 | Use the same numerical format throughout a piece; do not alternate qualitative words and numbers for the same concept; use the same denominator for side-by-side frequencies; do not round probabilities below 1 to a whole number, or round close values so their difference is lost. Do not minimize a serious risk: avoid presentations that focus on its low probability or suggest it is not important. Example 7: remove "only" from "only 2% of patients experienced bleeding that required hospitalization". | As R1, section III.C, examples 5 to 7 | Confirmed 20 October 2026. Scope: US DTC; good practice elsewhere |
 | R3 | Visual aids: explain the purpose and define the elements (title, variables, scales, axes); make displays "proportionate to the quantity being described" and scale axes so differences in bar height are proportional to differences in value; show both numerator and denominator in icon arrays and similar displays. Example 8 describes a bar graph that "does not truncate the y axis". | As R1, section III.D, example 8 | Confirmed 20 October 2026. Scope: US DTC; good practice elsewhere |
 | R4 | An advertisement is false, lacking in fair balance or otherwise misleading if, among other things, it presents a study as representing larger or more general experience than it does; uses "no significant difference" to claim clinical equivalence or to conceal a real difference; or uses headline or pictorial or other graphic matter in a misleading way. It may be misleading if it uses statistical significance to support a claim not shown to have clinical significance, "fails to reveal the range of variations around the quoted average results", uses retrospective analyses to cite findings the study does not soundly support, or "uses tables or graphs to distort or misrepresent the relationships, trends, differences, or changes" among the variables. | 21 CFR 202.1(e)(6)(v), (e)(6)(xv), (e)(6)(xviii), (e)(7)(ii), (e)(7)(iii), (e)(7)(iv) | Confirmed from the eCFR text as of 1 October 2026, read 20 October 2026. Scope: US prescription drug advertisements. Whether and how FDA applies these paragraphs to promotional labeling: `[CHECK]` |
-| R5 | Information, claims and comparisons must be accurate, balanced, fair, objective and unambiguous, and must not mislead "by distortion, exaggeration or undue emphasis"; claims must stand alone, generally not qualified by footnotes. Supplementary information: "relative risk should never be referred to without also referring to the absolute risk"; statistical information must have a sound statistical basis; "differences which do not reach statistical significance must not be presented in such a way as to mislead"; statistical information must be subjected to statistical appraisal before use. Applies also to pricing and market share claims. | ABPI Code 2024, clause 6.1 and its supplementary information | Confirmed 20 October 2026. Scope: UK, material within the ABPI Code |
+| R5 | Information, claims and comparisons must be accurate, balanced, fair, objective and unambiguous, and must not mislead "by distortion, exaggeration or undue emphasis"; claims must stand alone, generally not qualified by footnotes. Supplementary information: "relative risk should never be referred to without also referring to the absolute risk"; statistical information must have a sound statistical basis; "differences which do not reach statistical significance must not be presented in such a way as to mislead"; statistical information must be subjected to statistical appraisal before use. Applies also to pricing and market share claims. | ABPI Code 2024, clause 6.1 and its supplementary information | Clause 6.1 text confirmed 20 October 2026 and re-read 9 November 2026 in the PMCPA interactive 2024 Code. The supplementary quotes were not re-read `[CHECK]` exact wording. Scope: UK, material within the ABPI Code |
 | R6 | Graphs and tables must give "a clear, fair, balanced view" and be relevant to the claim; they must not mislead "by being incomplete or by the use of suppressed zeros or unusual scales"; they must be adequately labelled; a graph taken from a study must be faithfully reproduced, and any modification stated and not distorting; when expressing data as percentages, "patient numbers should be included wherever possible"; a graph that gives a visually misleading impression must not be used even if it appears in the published paper. | ABPI Code 2024, clause 6.3 and its supplementary information | Confirmed 20 October 2026. Scope: UK |
-| R7 | Promotion must present a medicine objectively "without exaggerating its properties"; "exaggerated or all-embracing claims must not be made"; superlatives only for a clear fact. The word "safe" must not be used without qualification; "demonstrated safety" and "proven safety" are given as prohibited examples. | ABPI Code 2024, clauses 14.4 and 6.4 with supplementary information | Confirmed 20 October 2026. Scope: UK promotional material. Used here only for the size of certainty words; label and safety statements belong to `claims-and-label` and `patient-safety` |
+| R7 | Promotion must present a medicine objectively "without exaggerating its properties"; "exaggerated or all-embracing claims must not be made"; superlatives only for a clear fact. The word "safe" must not be used without qualification; "demonstrated safety" and "proven safety" are given as prohibited examples. | ABPI Code 2024, clauses 14.4 and 6.4 with supplementary information | Clause 14.4 and 6.4 text confirmed 20 October 2026 and re-read 9 November 2026 in the PMCPA interactive 2024 Code. The supplementary examples ("demonstrated safety", "proven safety") were not re-read `[CHECK]`, as `balanced-evidence` R5. Scope: UK promotional material. Used here only for the size of certainty words; label and safety statements belong to `claims-and-label` and `patient-safety` |
 | R8 | Material about medicines, or about human health or disease, that a pharmaceutical company sponsors or is otherwise involved in "must clearly indicate the role of that pharmaceutical company". The declaration must be unambiguous so readers "are immediately able to understand the extent of the company's involvement and influence", and prominent enough that readers see it "at the outset". Market research material may instead state that it is commissioned by a pharmaceutical company. | ABPI Code 2024, clause 5.6 and its supplementary information | Confirmed 20 October 2026. Scope: UK |
 | R9 | Readers "must be able to make their own judgments" about whether authors' relationships and activities are pertinent, which "require transparent disclosures". Articles should declare authors' relationships and activities; sources of support "including sponsor names" and the sponsor's role in design, data collection, analysis, interpretation, writing and publication decisions, or a statement that it had none; and whether authors had access to the data. A funding statement covers direct support of the work. | ICMJE Recommendations, January 2026, section II.B, including II.B.2 | Confirmed 20 October 2026. Scope: journal publication; used here as the reference list of what an interest statement contains |
 | R10 | Abstracts should "note important limitations, and not overinterpret findings". Quantify findings with indicators of uncertainty "such as confidence intervals" and avoid relying solely on P values, "which fail to convey important information about effect size and precision"; distinguish prespecified from exploratory analyses. In the discussion, state limitations, "avoid unqualified statements and conclusions not adequately supported by the data", distinguish clinical from statistical significance, and avoid claiming priority. | ICMJE Recommendations, January 2026, section IV.A.3 (b. Abstract; d.iii Statistics; f. Discussion) | Confirmed 20 October 2026. Scope: journal publication; applied here as the reporting standard for summaries of studies |
 
-## Not read in this build
+### Not read in this build
 
 | Id | Intended source | Why it would matter | Status |
 |---|---|---|---|
@@ -50,7 +59,7 @@ December 2023 Revision 1 text.
 | X4 | Good Publication Practice (GPP 2022) for company-sponsored publications | Disclosure in company-sponsored publications | `[CHECK]` not read. Good practice only |
 | X5 | FDA rules and guidance on promotional labeling and on communications to health care providers (as distinct from DTC) | US material for doctors or payers | `[CHECK]` not read. R1 to R3 are applied to US HCP or payer material as good practice only |
 
-## How to use these rules in output
+### How to use these rules in output
 
 - In what the person reads, state the practice in plain words ("the absolute figures are
   now beside the 50%, so the reader can see the size of the effect"). Name a document
@@ -62,9 +71,7 @@ December 2023 Revision 1 text.
 - Which market's rules govern a piece is for the person and `market-rules-and-data`;
   if the market is unknown and the work leaves the company, ask (TR-H7).
 
-## Migrated patterns
-
-# Failure patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it rests
 on. All examples are invented for teaching; no real product, trial or person. Product
@@ -74,7 +81,7 @@ Pattern ids are for this file only. In what the person reads, describe the probl
 plain words (TR-H13). Rules R1 to R10 are in `references/method-standards.md` / `references/knowledge.md`; where a rule is
 outside its scope for the piece, it is good practice, not a requirement.
 
-## Contents
+### Contents
 
 - Uncertainty overstated UC1–UC9
 - Over-hedging OH1–OH5
@@ -82,13 +89,13 @@ outside its scope for the piece, it is good practice, not a requirement.
 - Charts CH1–CH8
 - Interests IN1–IN7
 
-## Uncertainty overstated
+### Uncertainty overstated
 
 **UC1 "Proves" on one study.** One trial, however good, is described as proof.
 Why: a single result can fail to replicate; "proves" leaves no room for that.
 Before: "KELNA-1 proves Velostra is superior to Corvane."
 After: "In KELNA-1, a single randomized trial of 640 patients, Velostra reduced flares
-more than Corvane over 24 weeks (rate ratio 0.78, 95% CI 0.64 to 0.95)." (R4, R7, R10)
+more than Corvane over 24 weeks (relative risk 0.79, 95% CI 0.64 to 0.97)." (R4, R7, R10)
 Note: whether a superiority claim may be made at all is for `claims-and-label`.
 
 **UC2 The intensity word.** "Dramatic", "remarkable", "breakthrough", "game-changing",
@@ -101,8 +108,8 @@ After: remove; let the interval show how clear it is. (R10)
 
 **UC4 Significance as importance.** "A highly significant reduction" meaning a large or
 important one.
-After: "a reduction of 3.0 percentage points (6.0% versus 9.0%; p = 0.01)". Do not say
-whether 3 points matters clinically (TR-H6). (R4, R10)
+After: "a reduction from 9.0% to 6.0% (p = <as reported>)". Do not say whether the
+difference matters clinically (TR-H6). (R4, R10)
 
 **UC5 The missing interval.** An estimate given alone when the material gives its range.
 After: "hazard ratio 0.66 (95% CI 0.45 to 0.97): the data fit an effect anywhere from
@@ -113,7 +120,7 @@ After: "In a pilot study of 24 patients, 15 improved." (R4, R10)
 
 **UC7 The unnamed short follow-up.** "Long-term benefit", "durable response" from 12
 weeks of data.
-After: "over 12 weeks; longer-term data [GAP: not supplied — results beyond week 12 —
+After: "over 12 weeks; longer-term data [GAP: not supplied; results beyond week 12;
 supply the extension data if any]". (R10)
 
 **UC8 Limitations moved away.** The authors' limitations sit in a footnote, an appendix
@@ -126,7 +133,7 @@ tolerated" restated without attribution when the primary endpoint was not met.
 After: "The authors concluded that … . The primary endpoint did not differ between
 groups." (R10)
 
-## Over-hedging
+### Over-hedging
 
 **OH1 The buried primary result.** A met primary endpoint with a clear interval is
 reported as "may offer a possible benefit".
@@ -153,15 +160,16 @@ After: say the primary plainly; label the subgroup as exploratory. (R10)
 the material gives 18% versus 6%.
 After: "Nausea occurred in 18% of patients on drug D and 6% on placebo." (R1, R2)
 
-## Numbers framed
+### Numbers framed
 
 These assume each number is right. Whether it is right, and the relative and absolute
 arithmetic, are for `grounded-statements`.
 
 **NF1 Mismatched formats.** Benefit as a relative change, harm as an absolute rate.
 Before: "Cuts strokes by 50%. Major bleeding: 2%."
-After: "Strokes: 1% versus 2% (absolute reduction 1 percentage point; relative reduction
-50%). Major bleeding: 2% versus 1%." (R1, R2, R5)
+After: "Strokes: 1% versus 2% (relative reduction 50%, as reported). Major bleeding: 2%
+versus 1%." Both arms for both outcomes; a difference in points is offered, and added
+only on request, labeled "calculated from the two figures you supplied". (R1, R2, R5)
 
 **NF2 The absolute figure in the footnote.** The relative figure is the headline; the
 absolute is small print on another slide.
@@ -189,7 +197,7 @@ beside a serious harm.
 After: "2% of patients on drug D and 1% on placebo had bleeding that needed hospital
 care." (R2, R7)
 
-## Charts
+### Charts
 
 **CH1 The cropped axis.** A bar chart whose value axis starts at 80%, so bars of 84%
 and 88% look like one is twice the other.
@@ -225,7 +233,7 @@ After: icons by count (an icon array), or bars. `scripts/chart_scale.py
 improved, with no picture of the hundred studied.
 After: show all 100, with the 10 marked. (R3)
 
-## Interests
+### Interests
 
 **IN1 The sponsored study as independent.** "An independent study found…" when the
 funding statement names the company.
@@ -259,10 +267,37 @@ end. (R8)
 **IN7 "No role" in the draft's voice.** "The sponsor had no influence on the results."
 After: "The authors state that the funder had no role in the design, analysis or
 writing." If the material says nothing about the sponsor's role:
-"[GAP: not supplied — sponsor's role in design, analysis and writing — see the funding
+"[GAP: not supplied; sponsor's role in design, analysis and writing; see the funding
 or disclosures section]". (R9)
 
-# Failure modes
+## Part 3: Gap rules
+
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/knowledge.md` (Part 2).
+
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+| Class | Typical case in this skill |
+|---|---|
+| `not supplied` | The confidence interval, n per arm, follow-up, the authors' limitations, the comparator's rate, the chart's underlying data or axis, the funding statement, the sponsor's role |
+| `conflicting` | The chart and the table give different values or periods; the abstract and the full text give different funding statements |
+| `needs a decision` | Which of several timepoints or analysis sets the chart should show, when the material holds several; the exact wording of a company declaration, which the company's process sets |
+| `not checkable here` | Whether a chart image matches its data, when only a description was supplied and no image or data |
+| `out of date or unclear date` | "Data on file" with no data set name or date |
+
+Wording rules:
+
+- Name the exact item: "95% CI for the flare rate difference at week 24", not
+  "statistics"; "the y-axis start value", not "chart details".
+- Never hint at a value inside a gap, and never at a funder ("probably company-funded").
+- "Not stated in the source" is a finding about the source only when the full source
+  was supplied and read. Otherwise use `not supplied`.
+- "Not stated" is never written as "independent", "no conflicts" or "unbiased".
+- A gap is not a failure of the person. Do not apologize for it or blame anyone.
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
@@ -270,6 +305,4 @@ or disclosures section]". (R9)
 | FM-HF-02 | Sponsor framed as independent | Does wording say independent when sponsor funded/analyzed? | Interests | ICMJE / disclosures | PARTIAL |
 | FM-HF-03 | Chart axis exaggeration | Does a truncated axis make a small gap look large? | Charts | TRUSTED honest-framing | [CHECK] |
 | FM-HF-04 | Over-hedging a clear primary | Is a clear primary result hedged into mush while a tiny subgroup is overstated? | Uncertainty size | TRUSTED honest-framing | [CHECK] |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `honest-framing`. Shared FM-08 is universal Prove honesty.
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

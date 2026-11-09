@@ -19,16 +19,16 @@ one until they look it up, and the slide fails review on it.
 
 Here is what each claim needs, so you or your literature team can pull the sources:
 
-1. "About 1 in 20 adults" — an epidemiology study or registry report for the population
+1. "About 1 in 20 adults": an epidemiology study or registry report for the population
    on the slide (country or region, age group, year).
-2. "Cuts major events by a third" — the trial publication, with both groups' event rates.
-   "A third" is a relative figure; a medical audience will expect the rates behind it.
-3. "Doubles hospital admissions" — an observational study or registry analysis comparing
+2. "Cuts major events by a third": the trial publication, with both groups' event rates.
+   "A third" is a relative figure; the slide does not give the rates behind it.
+3. "Doubles hospital admissions": an observational study or registry analysis comparing
    treated and untreated patients. Note that this shows an association, not a cause.
 
 On the slide I have left each claim with a visible gap:
 
-> Condition X affects about 1 in 20 adults [GAP: not supplied — epidemiology source —
+> Condition X affects about 1 in 20 adults [GAP: not supplied; epidemiology source;
 > supply the study or registry report]. …
 
 Send me the PDFs or their DOIs and I will build the references from them, with the table

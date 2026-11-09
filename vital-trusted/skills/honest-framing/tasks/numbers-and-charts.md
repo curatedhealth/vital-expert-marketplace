@@ -7,8 +7,8 @@
 | Worker | Medical reviewer with a statistics background |
 | Workflow | List every figure and chart, check how each is framed against the material, describe what a plain version shows, then fix or mark |
 | Skill | TR-3.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1–R4, R5, R6), `references/knowledge.md` (NF1–NF7, CH1–CH8) |
-| Tool | `scripts/chart_scale.py`; `../grounded-statements/scripts/risk_metrics.py` for relative and absolute effects. No companion yet |
+| Knowledge | `references/rules.md` (R1–R4, R5, R6), `references/patterns.md` (NF1–NF7, CH1–CH8) |
+| Tool | `scripts/chart_scale.py`; `../../grounded-statements/scripts/risk_metrics.py` for relative and absolute effects. No companion yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/framing-note.md`, `templates/chart-description.md` |
 | Input | The draft (text, chart, chart description or slide), the supplied data behind it, the context card |
@@ -17,8 +17,9 @@
 ## Who owns what
 
 `grounded-statements` owns whether each number is right and whether the arithmetic
-holds: matches the source, percent versus percentage points, the absolute figure added
-when only a relative one is given, the NNT derived from arm rates. This task owns
+holds: matches the source, percent versus percentage points, both arm rates given beside
+a relative figure, and any derived figure (such as an NNT) added only on request and
+labeled as calculated. This task owns
 whether the **choice and presentation** of correct numbers makes the effect look larger
 or smaller than it is. A relative-only figure is counted there, not here, unless its
 framing differs from another figure in the same piece (below, step 3).
@@ -58,7 +59,24 @@ framing differs from another figure in the same piece (below, step 3).
 8. **Describe what a plain version shows.** When a chart is changed or must be
    changed, write one or two plain sentences on what the same data look like with a
    zero baseline, the full period and both arms (`templates/chart-description.md`). This
-   is a description, not a redraw; the person or their agency redraws it.
+   is a description, not a redraw; the person or their agency redraws it. Describe the
+   scale with the axis values given ("the axis runs from 80% to 90%"), not with a ratio
+   ("six times as tall", "1.4 times") or a point difference ("a 5-point gap"). A
+   computed factor appears only when the person asks for it, with "calculated from the
+   values you supplied" in the same sentence; a label alone never makes an unrequested
+   factor acceptable.
+9. **Asked to keep a cropped axis.** Give two captions: one for the chart as given,
+   with the axis start stated plainly from the supplied values ("Axis starts at 84%, not
+   0%"), and one for the same data with the axis from 0% and the values printed on the
+   bars. The person chooses.
+10. **Every caption states its limitation.** A chart or exhibit caption ends with one
+   plain clause on its own limitation ("one trial over 12 weeks; not a comparison
+   across trials").
+11. **Proportions are derived figures.** Keep "62 of 140" as given. "More than 4 in 10",
+   "44%" or "nearly half" appear only when the person asks, labeled "calculated from
+   the two figures you supplied". When asked to make a figure "more impressive", offer
+   the figure as given with its base and source, and say in one line that a rounder or
+   larger-sounding version is not offered.
 
 ## Repair (existing draft)
 
@@ -71,13 +89,15 @@ framing differs from another figure in the same piece (below, step 3).
 3. **Measure, do not estimate.** For a cropped axis or a scaled pictogram, run
    `python scripts/chart_scale.py --axis-min 80 --value 84 --value 88` (or do the
    arithmetic and show it). It gives how many times larger the difference looks than it
-   is. For relative versus absolute, use
-   `python ../grounded-statements/scripts/risk_metrics.py` and keep its labels.
+   is. That factor is a derived figure: it is for your own check and goes in the note
+   only if the person asked for it, then with "calculated from the values you supplied"
+   in the same sentence. For relative versus absolute, use
+   `python ../../grounded-statements/scripts/risk_metrics.py` and keep its labels.
 4. **Fix the text** to the guard list. **For each chart**, give the plain description
    and the specific changes ("start the axis at 0%", "add the placebo bar", "show the
    12-month data the table supplies") for the person to make.
 5. **Mark what cannot be checked.** If the chart's data, axis or period are not
-   supplied, use `[GAP: not supplied — …]` rather than guessing what the chart shows.
+   supplied, use `[GAP: not supplied; …]` rather than guessing what the chart shows.
 
 ## Check line
 

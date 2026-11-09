@@ -3,7 +3,7 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 | Class | Typical case in this skill |
 |---|---|
@@ -20,9 +20,10 @@ Wording rules:
 - Never hint at a value inside a gap ("usually 10 mg").
 - "The label does not address X" is a finding only when the complete label was supplied
   and read. Otherwise use `not supplied`.
-- **A safety flag is never a gap.** A possible side effect, pregnancy, overdose, misuse,
-  medication error, lack of effect or quality problem is always written as a flag in the
-  format of `assets/safety-flag.md`, never as `[GAP]`, and never left for later.
+- **A safety flag is never a gap.** A possible side effect, pregnancy or breastfeeding exposure, overdose,
+  misuse or off-label use reported for a person, medication error, lack of effect or
+  product quality problem is always written as a flag in the
+  format of `templates/safety-flag.md`, never as `[GAP]`, and never left for later.
 - A gap never stands in for a judgment the skill must not make. Do not write
-  `[GAP: needs a decision — whether reportable]`; write the flag and point to the
+  `[GAP: needs a decision; whether reportable]`; write the flag and point to the
   procedure.

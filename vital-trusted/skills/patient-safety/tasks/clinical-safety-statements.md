@@ -7,7 +7,7 @@
 | Worker | Drug safety physician who supports colleagues |
 | Workflow | Find each safety statement in the supplied label; quote it word for word with its section, market and date; keep its conditions; gap the rest |
 | Skill | TR-4.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (S10 to S12), `references/knowledge.md` (C1 to C10) |
+| Knowledge | `references/rules.md` (S10 to S12), `references/patterns.md` (C1 to C10) |
 | Tool | `scripts/label_match.py` where code can run. Companion slot: label source (none yet) |
 | Prompt | This guide |
 | Template | `templates/label-statements.md`, `templates/repair-note.md`, `templates/check-line.md` |
@@ -33,29 +33,37 @@ Any sentence, table cell, bullet or chart label about:
 - **The right market.** The label for the market the work is for (from intake or the
   person). Another country's label is not used for this market; say so and ask
   (`claims-and-label` owns the wider label boundary).
+- **A translation is not a market use.** A request to translate another country's label
+  or patient text is a translation, not use of a foreign label for this market. The one
+  translation rule, including dose, warning and contraindication sentences, is in
+  `../../fit-for-reader/tasks/translation-fidelity.md`; follow it and do not restate it
+  here. The rule above is for using a foreign label as the source for this market's
+  statements.
 - **Dated.** Note the label's revision date if it shows one. If none shows,
-  `[GAP: out of date or unclear date — label revision date — confirm this is the current
+  `[GAP: out of date or unclear date; label revision date; confirm this is the current
   approved label]`.
 - **The right reader.** For a patient, the patient leaflet is the label to quote where it
   was supplied; for a doctor, the SmPC or prescribing information.
 
 ## Guard (while drafting)
 
-1. **If no label was supplied, do not draft safety content.** Ask for it in one line:
+1. **If no label was supplied, write no safety content.** Ask for it in one line:
    "Please paste or attach the current approved label for <market> so I can quote it."
-   If the person wants to go on, give the structure with every safety cell as
-   `[GAP: not supplied — <what> — from section <n> of the approved label]`.
-2. **Find the section first** (`references/method-standards.md` / `references/knowledge.md` S11 for EU, S12 for US) and quote
+   In the same reply, give the structure with every safety cell as
+   `[GAP: not supplied; <what>; from section <n> of the approved label]` (draft first,
+   TR-H7; `governance.md` stop rule).
+2. **Find the section first** (`references/rules.md` S11 for EU, S12 for US) and quote
    the statement word for word, in quotation marks or as a table cell marked as label
    text, with the section number.
 3. **Keep every condition.** Population, cut-off, timing, route, formulation, "in
    combination with". If the label says "creatinine clearance 30 to 50 mL/min", the draft
    says that, not "kidney problems".
 4. **Do not fill silence.** If the label does not address a population or interaction,
-   do not write that there is no risk or no need to adjust. Write what the label says,
-   or `[GAP: not supplied — label does not address <x> in the supplied text — ask your
-   medical information function]` when the full label was read; `not supplied` when only
-   part was given.
+   do not write that there is no risk or no need to adjust. Write what the label says.
+   When the full label was supplied and read and it is silent, write "The label does not
+   address <x> in the text supplied." This is a finding, not a gap. When only part of the
+   label was given, use `[GAP: not supplied; <x>; from section <n> of the approved
+   label]`.
 5. **Do not answer for a patient.** A doctor asking "can my patient with X take it"
    gets the label's statements on X, quoted, and no recommendation. The decision is the
    prescriber's (TR-H6).

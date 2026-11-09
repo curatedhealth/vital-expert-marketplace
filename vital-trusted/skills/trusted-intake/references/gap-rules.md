@@ -3,7 +3,7 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 Gaps on the context card are for other skills. The person never sees gap syntax from
 intake; they see a plain question or a one-line assumption (TR-H13).

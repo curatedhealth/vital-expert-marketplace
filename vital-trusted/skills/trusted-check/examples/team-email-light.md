@@ -10,7 +10,7 @@ Invented case for teaching. No real company, product or person.
 everyone. Please send me your account plans by the end of the month so I can pull them
 together for the regional review. Thanks, Ana'"
 
-All seven letters are on. VERIFY is connected, but no report was shared.
+All seven letters are on. No report was shared.
 
 ## Depth
 
@@ -19,20 +19,26 @@ no hand-off (the person did not ask, and nothing was supplied to check against).
 
 ## What was found
 
-One figure expressed misleadingly: share moved from 10% to 12%, which is a rise of
-2 percentage points (a 20% relative rise). "Went up 20%" reads as 10% to 30%.
+One figure that can mislead: "went up 20%" sits beside "10% to 12%", and a colleague
+could read it as a rise of 20 points. The email's own two figures say what moved, so the
+fix uses them and adds no new figure.
 
 ## The summary as the person sees it
 
 ```
-Quick check (email to your team): 1 thing to fix.
-- "Went up 20%": share moved from 10% to 12%, which is 2 percentage points. Say "rose 2 percentage points, from 10% to 12%".
+Quick check (email to your team, for your team). 1 thing to fix.
+- "Went up 20%" can be read more than one way. Say "rose from 10% to 12%", the figures you already give.
 This check flags issues. It is not medical, legal, regulatory or ethics review.
 ```
 
 ## Why it is written this way
 
-- Three lines for a three-line email (TR-H12). No rows for letters that found nothing.
-- No VERIFY line: the 10% and 12% are the person's own figures and the light pass does
+- A few lines for a three-line email (TR-H12). No rows for letters that found nothing.
+- No status line: a short internal message of a few sentences to colleagues goes
+  without one. Longer internal work (meeting notes, a brief) keeps "Uncleared draft"
+  (TR-H5).
+- The count matches the notes: 1 thing to fix, one note.
+- No figure is worked out from the person's numbers; the fix uses the two they gave.
+- No Prove line: the 10% and 12% are the person's own figures and the light pass does
   not hand off unless asked.
 - "Great work everyone" is tone, not a TRUSTED issue (TR-H9).

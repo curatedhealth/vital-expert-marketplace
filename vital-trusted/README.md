@@ -5,24 +5,24 @@ for daily work: general management, brand, market access, medical and other team
 TRUSTED supports the company's own SOPs and review processes. It never replaces them.
 
 **Product of Crossroads Catalyst GmbH (Vital Expert).**  
-**Status:** version **0.3.2** · `release_state: Pilot` (demoted 9 November 2026; do not install for new work until owner publishes 0.3.3).  
-**License:** Proprietary — see `LICENSE` (`LicenseRef-CrossroadsCatalyst-Proprietary`).
+**Status:** version **0.3.4** · `release_state: Pilot`. Not published yet.  
+**License:** Proprietary, see `LICENSE` (`LicenseRef-CrossroadsCatalyst-Proprietary`).
 
 Outputs remain uncleared drafts until a named human clears them under your process.
-`[CHECK]` markers inside skill standards still mean "confirm against the primary PDF
-before treating as settled doctrine."
+A `[CHECK]` marker inside a skill's standards means the rule has not been read in the
+official text yet. The skill applies it as good practice, never as a requirement.
 
 ## The standard
 
-| Letter | Need | The question it asks |
-|---|---|---|
-| T | Tangible | Is it useful to this reader, for this job? |
-| R | Rule-compliant | Is it allowed, for this audience, in this market? |
-| U | Unbiased | Is the evidence shown in proportion? |
-| S | Safe | Could it lead to harm? |
-| T | True | Is it correct, and can it be shown? |
-| E | Ethical | Is AI being used responsibly for this work? |
-| D | Defensible | Can the organization stand behind it? |
+| Need | The question it asks |
+|---|---|
+| Tangible | Is it useful to this reader, for this job? |
+| Rule-compliant | Is it allowed, for this audience, in this market? |
+| Unbiased | Is the evidence shown in proportion? |
+| Safe | Could it lead to harm? |
+| True | Is it correct, and can it be shown? |
+| Ethical | Is AI being used responsibly for this work? |
+| Defensible | Can the organization stand behind it? |
 
 ## The skills
 
@@ -48,18 +48,18 @@ before treating as settled doctrine."
 | TR-8.3 | confidence-scoring | Prove | True |
 | TR-8.4 | citation-and-record | Prove | True and Defensible |
 
-Build skills make the work good by design. Prove skills carry claim/source/confidence/
-citation method; offline tools label **not tool-checked**; optional live Prove MCP adds
-tool-checked results when a `vvfy_` key is present.
+Build skills make the work good by design. Prove skills carry the claim, source,
+confidence and citation method. There is no connector and no key: Prove checks are done
+by hand, by comparing each claim with the passage you supply, and every such result is
+labeled **not tool-checked**. Results are counts and plain notes, never a confidence
+figure or a verdict.
 
-## Installing (Claude Cowork)
+## Installing
 
-1. Add marketplace: `curatedhealth/vital-expert-marketplace`
-2. Install: `/plugin install vital-trusted@vital-expert-marketplace`
-3. Optional: paste a `vvfy_` key when prompted (Prove live tools only)
-
-Do **not** install retired `vital-verify`. Ask "what can TRUSTED do?" or start an everyday
-task such as a board update.
+0.3.4 is a Pilot build and has not been published. Do not install `vital-trusted` from
+the marketplace for new work; the listing there is the earlier build, 0.3.1, recorded as
+Released in the CHANGELOG.
+This build will be published only when the owner says so.
 
 ## Choosing letters
 
@@ -68,6 +68,11 @@ Safe" to change this for a conversation.
 
 ## Inside each skill
 
-`SKILL.md`, `tasks/`, `references/` (`method.md`, `method-standards.md`, `knowledge.md`,
-`failure-modes.md`, `tools.md`), skill `templates/`, shared `../../templates/` cards,
-`examples/`, `evals/`, and offline `tools/` at the plugin root.
+`SKILL.md` with the intake and governance notes beside it at the skill root, `tasks/`, `references/`
+(gap rules, knowledge, method, method standards, patterns, rules and tools notes), the skill's own `templates/`, `examples/`, `evals/`, and
+`scripts/` where the skill has a helper script.
+
+At the plugin root: release checks in `scripts/` (see `scripts/README.md`), shared output cards in `templates/` (a skill's own template always
+wins over a shared card), a small set of offline helpers in `tools/` (claim splitting,
+plain reference lines, letter lines; the counts-only script is in `confidence-scoring`), and the steward in `agents/`.
+Helpers run no lookups and label their output not tool-checked.

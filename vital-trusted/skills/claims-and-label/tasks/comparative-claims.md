@@ -1,5 +1,9 @@
 # Task TR-2.1.3 Comparative claims
 
+Contents: Formula; What counts as a comparative or absolute claim; The five questions for
+every comparison; Guard (while drafting); Repair (existing draft); "Make it more
+competitive"; Check line; Boundaries.
+
 Makes sure every comparison, superlative or absolute claim rests on data that compared
 like with like, says exactly what was compared, and does not disparage a competitor.
 
@@ -10,8 +14,8 @@ like with like, says exactly what was compared, and does not disparage a competi
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Find every comparison and absolute claim, find the data each rests on, test it against the five questions, rewrite or mark the gap |
 | Skill | TR-2.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R17 to R24), `references/knowledge.md` (C1–C8) |
-| Tool | None. Companion slot: VERIFY `check_claim` through `claim-assessment`, to test the comparison against its passage |
+| Knowledge | `references/rules.md` (R17 to R24), `references/patterns.md` (C1–C8) |
+| Tool | None. `claim-assessment` compares the comparison with its passage by hand |
 | Prompt | This guide |
 | Template | `templates/claims-note.md`, `templates/check-line.md` |
 | Input | The request, the draft, the supplied studies or data, the label, the context card (reader, market) |
@@ -36,7 +40,7 @@ like with like, says exactly what was compared, and does not disparage a competi
 
 Ask them in this order. A "no" or "not supplied" on any of them is a flag.
 
-| Question | What a reviewer will look for | Rules |
+| Question | What the claim needs to show | Rules |
 |---|---|---|
 | 1. Was it compared directly? | A study in which both products (or the product and the named comparator) were given to comparable patients and the stated outcome was measured. Two placebo-controlled trials are not a direct comparison | R17, R18, R23 |
 | 2. Is it like with like? | Same population, endpoint, dose, time point and setting; products for the same need | R18, R19, R21, R22, R23 |
@@ -50,6 +54,9 @@ rewritten without the absolute, or gapped (R20, R21, R22).
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Do not write a comparison the supplied data does not make.** When asked to "say we
    are better than X" with no direct comparison supplied, decline in one plain line and
    offer what can be said: each product's own result with its own comparator, a
@@ -63,8 +70,10 @@ rewritten without the absolute, or gapped (R20, R21, R22).
    leave it out.
 4. **Keep competitors factual.** No adjectives about their product.
 5. **Patient and public material carries no comparison with another treatment** until
-   the review process decides; several markets exclude it outright (R24) or exclude
-   public promotion of prescription medicines altogether (R11, R15).
+   the review process decides. Many markets exclude public promotion of prescription
+   medicines altogether (R11, R15). In Switzerland, advertising to the public may not
+   create the expectation that a medicine's effect equals or exceeds that of another
+   treatment or medicine (R24, AWV Art. 22 let. c).
 
 ## Repair (existing draft)
 
@@ -73,7 +82,13 @@ rewritten without the absolute, or gapped (R20, R21, R22).
 3. **Fix:** keep a comparison that has a direct, like-for-like source, with comparator
    and measure stated; rewrite a comparison resting on two separate trials into two
    separate statements with no "versus" between them; scope or remove absolutes;
-   remove disparaging language; gap any comparison with no source.
+   remove disparaging language; gap any comparison with no source. For each
+   superlative or absolute removed, offer alternative wording without it, built only
+   from what the supplied material states (for example the product's own result with
+   its comparator and time point), or a gap where nothing supplied supports one. This
+   holds for replies to review comments too: draft each response, never mark a comment
+   resolved, and write data on file the person says exists as "data on file, as you told
+   me", with the reference as a gap.
 4. **Cross-trial comparisons:** do not decide whether one can be shown at all. Present
    the results separately and route the question to medical review (pattern C2).
 5. **Never delete silently.** Every change appears in the claims note.
@@ -81,7 +96,7 @@ rewritten without the absolute, or gapped (R20, R21, R22).
 ## "Make it more competitive"
 
 People often want a sharper competitive message. Sharpen with what is supported: lead
-with the product's own strongest supported result, state a factual difference the label
+with a result of the product's own that the material supports, state a factual difference the label
 supports, make the reason it matters to this reader explicit. Do not add a comparison,
 a superlative or a competitor weakness to make it sharper, and say so in one line if the
 request implied it.
@@ -94,7 +109,7 @@ under the comparisons line.
 ## Boundaries
 
 - Whether the comparison's source says what is claimed is `grounded-statements` while
-  drafting and `claim-assessment` with VERIFY. This task asks whether a direct,
+  drafting and `claim-assessment`, by hand. This task asks whether a direct,
   like-for-like source exists and whether the wording matches it.
 - Which kind of source can carry a comparison for this reader is `sourced-claims`.
 - Whether benefits and risks are shown in proportion is `balanced-evidence`.

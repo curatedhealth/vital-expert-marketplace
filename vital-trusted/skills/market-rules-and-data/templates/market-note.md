@@ -3,7 +3,7 @@
 Follows the draft or the fixed text. Plain language, no clause numbers or rule ids
 (TR-H13). Size it to the stakes (TR-H12). Never repeat a personal detail.
 
-## Asking the market (before drafting)
+## Asking the market (after the draft, in the same reply)
 
 ```
 Which country will <the doctors | the readers> be in? What can go in <an email to
@@ -15,7 +15,7 @@ what it supports.
 ## Full note (leaving the company)
 
 ```
-Market and statements (draft, not yet reviewed)
+Market and statements (Uncleared draft)
 
 Written for: <market>, <reader>, <channel>, from <label or material supplied>.
 
@@ -27,14 +27,17 @@ Statements usually expected here, and where they stand
 <the list from templates/statements-list.md>
 
 Who might also read it
-<Only if relevant, e.g. "This is a public post about a prescription medicine; where it
-can appear is a question for your promotional review process.">
+<Only if relevant, e.g. "This is a public post about a prescription medicine. The UK
+industry code covers advertising of prescription-only medicines to the public: they must
+not be advertised to it. Where this post can appear is a question for your promotional
+review process.">
 
 People
 <Only if relevant: the privacy line from templates/privacy-note.md.>
 
 Next step: this goes through your <promotional review process> for <market> before it
-is used. The list above is what is usually expected; that process holds the full list.
+is used. The list above is what is usually expected; <market>'s local industry code
+may add elements, and that process checks them and holds the full list.
 ```
 
 ## Short note (leadership, or a small fix)

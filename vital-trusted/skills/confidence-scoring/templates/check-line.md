@@ -1,24 +1,18 @@
 # Output format: check line for trusted-check
 
 Returned to `trusted-check` only, never shown at the end of a direct reply. It fills the
-True row's "checked with VERIFY" lines in the TRUSTED summary. Counts only; no verdict
-words (TR-H3, TR-H13).
-
-When VERIFY ran:
-
-```
-→ checked with VERIFY: <n> backed, <n> partly backed, <n> not backed, <n> contradicted, <n> could not be checked (<k> not factual, not counted)
-→ faithfulness <n>% (support from supplied passages, not truth in the world); <m> open items
-```
-
-When nothing factual was checked:
+True row's counts in the TRUSTED summary. Counts only; no verdict words (TR-H3, TR-H13).
+The shape follows the shared stamp: letter word, aspect, counts, then "(not tool-checked)".
+The six results are defined once in `../../claim-assessment/references/statuses.md`.
 
 ```
-→ checked with VERIFY: no factual statements (<k> not factual); no confidence figure
+True · open items: <n> factual claims; <n> found in your passage, <n> partly found, <n> not found in your passage, <n> your passage says something different, <n> no passage to compare with; listed separately: <n> opinion, recommendation or definition; <m> open items (not tool-checked)
+True · No confidence figure: these results were not tool-checked.
 ```
 
-When VERIFY did not run:
+When nothing factual was compared:
 
 ```
-→ not tool-checked: no confidence figure (VERIFY would check each statement against its passage)
+True · open items: 0 open items, nothing factual compared, <k> opinion, recommendation or definition (not tool-checked)
+True · No confidence figure: these results were not tool-checked.
 ```
