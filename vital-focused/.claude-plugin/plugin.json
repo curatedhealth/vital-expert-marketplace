@@ -1,6 +1,7 @@
 {
   "name": "vital-focused",
-  "version": "0.5.4",
+  "displayName": "FOCUSED",
+  "version": "0.5.5",
   "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Runs offline with a local session file and pack tools for worksheets, score with \u00b110 robustness, and brief. Person decides at every step; skills never name a winner. Optional vdec_ key enables Decision cloud sync or usage only. Optional vont_ / vvfy_ for Navigator sealed scores and Verify claim checks. Human oversight required. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
     "name": "Crossroads Catalyst GmbH - Vital Expert",

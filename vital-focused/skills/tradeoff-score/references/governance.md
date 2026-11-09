@@ -3,7 +3,7 @@
 ## Boundaries
 
 - This skill does one job: trade-off. Sibling skills named in the plugin README own the other jobs.
-- Sealed ontology scores stay on Ontology Navigator. Adding up the person's own weights and ratings is `decision_score`. Claim checks stay on Verify.
+- Sealed ontology scores stay on Ontology Navigator. Adding up the person's own weights and ratings is the local scorer, or `decision_score` with a key. Claim checks stay on Verify.
 - Company SOPs and a named decision owner come before this draft.
 
 ## Stop rules

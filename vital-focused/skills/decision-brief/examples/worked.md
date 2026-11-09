@@ -5,6 +5,6 @@
 
 how_to_decide is complete. The other five stages are not.
 
-The markdown shows the stored payload under the first heading and [GAP] under the rest. No signature. Closing line included.
+The markdown shows the stored payload under the first heading and not given yet under the rest. No signature. Closing line included.
 
 Closing: This coaching draft is for the named person. It is not the decision, and it is not medical, legal, or regulatory clearance.

@@ -19,18 +19,18 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_start` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
 ## Steps
 
-1. Ask for a title when the person did not give one.
-2. Ask for an intent when the person did not name one. Offer the five intents.
+1. Take the title from the person's words; ask for it only if they gave nothing to go on.
+2. Infer the intent from what they said. Never offer a menu of intents, depths, modes or templates. If the decision itself is unclear, ask what exactly they are deciding.
 3. Call `decision_start` with that title and intent.
 4. Read `stages` and name the first open stage in spoken words.
 5. Stop. Do not open a second stage in the same turn.
 
 ## Output
 
-Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Reply as a coach: short plain prose and one question. Use `templates/worksheet-output.md` only when the person asks for the record or a summary of this step. End with the one question, or the closing line when the governance file says so.

@@ -1,3 +1,45 @@
+## 0.5.5 — 9 November 2026 (Released)
+
+Hardening round run in a Claude session with `claude plugin eval` (46 new fictional cases plus 6 negatives; graded by an AI judge of the same model family; no human grader). Owner yes 9 November 2026: Released and marketplace sync. Support: hicham.naim@xroadscatalyst.com.
+
+**Sealed October re-test (P1 to P4): not run.** Postponed; freeze contract SHA-256 `7d2b5a4c0fc30110c10b492135c2c82a3ac8ad454259f6b657dc935107f300e4`. Do not cite October-bank figures for this tip.
+
+### 0.5.5 — rounds 5 to 12 (same day, still a candidate)
+
+- Descriptions rewritten for routing: each starts "Use this skill whenever ..." with the words people actually say, then what it does, then what it is not for. No internal tokens (`[GAP]`, key prefixes, rule codes) in any description.
+- Coaching turn rule: at most three short sentences, then one question about one thing; a send-check closes the shared core (one question mark, no "and"/"or" joining two asks, no "best", no stakes the person did not state, no preamble or reassurance unless they asked you to decide).
+- usecase-library walks bundled fictional teaching cases offline (`references/teaching-cases.md`: competitive launch, vendor or agency, new market). Gold cards still come with the connector.
+- gut-check uses the result the person already states; decision-check names what is missing; make-decision reads back and asks confidence (no "confirm what you just said"), declines to be decider and asks who decides, and does not fire on messages about a choice already made.
+- widen-options always opens with the direct "including doing nothing" question; no seeded or described alternatives. where-to-start widens first only when the person rules out other options.
+- tradeoff-score honors lower-is-better as stated, reports on the person's own scale, never narrates whether the scorer ran.
+- record-dissent declines to record unanimity or drop a dissent, without drafting reassuring wording.
+- gather-intelligence handles requests for outside-world figures (counts, ballparks, rates).
+- Duplicated "Method lens" text and the per-skill template lists compressed to pointers.
+
+Behavior
+- Coaching replies are short plain prose with one question. Worksheets, tables and status lists appear only when the person asks for the record, the grid, the totals or a brief. No "not tool-checked" or "FOCUSED-local" stamps in replies; the stamp goes on saved records only.
+- Offline is the default in every skill: "Primary tool" connector lines now read as optional connector tools. Local scripts run by full path from the person's working folder (plugin root = two folders above the skill); never `cd` into the plugin. Failed saves are handled silently.
+- Scoring (TEH-FOC-005): tradeoff-score and gut-check run the local scorer; if no script can run, add up by hand with the working shown. `score_tradeoff_offline.py --grid` scores a grid without a saved session, accepts common shapes (weights map, nested ratings, `score`/`rating` keys, `lower_better` list) and reports the weighted average on the person's own scale and the gaps between options.
+- Pressure (TEH-FOC-003): make-decision owns "just pick / decide for me"; replies stay quick, keep the call with the person and offer a two-minute weighing.
+- Widen options (TEH-FOC-008): the direct "What else could you do, including doing nothing?" comes first; the vanishing-options hypothetical only after it; no seeded example options.
+- where-to-start: no menu of intents or depths; infers intent and asks one framing question; broadened description so decision-shaped requests reach a FOCUSED skill.
+- Rules disclosure (TEH-FOC-004): rules are summarised in plain words, never pasted.
+- Numbers: gather-intelligence handles "give me a number for the board" (no figures, ranges or study names from memory).
+- record-dissent handles requests to hide or soften a disagreement.
+- rigor-checklist proposes a depth from the stakes the person stated, as a suggestion, and shows what it covers (TEH-FOC-002).
+- usecase-library: offline fallback to the bundled teaching example until the gold cards are bundled (open item).
+
+Rules and content
+- Shared core rewritten (talk like a coach, local tools quietly, pressure, rules on request); identical in all 21 skills.
+- hard-rules.md: DC-H19 added (ids now contiguous H1 to H20; TEH-FOC-006); stale "Local-session note (0.5.0)" replaced; H17 and H16 updated for the local scorer and the pressure offer.
+- No `[GAP]` in anything the person sees: renderers, card templates and good examples say "not given yet".
+- 42 stale files removed (`skills/*/governance.md`, `skills/*/intake.md` at skill root, unlinked and out of date).
+
+Packaging
+- `displayName: "FOCUSED"` moved into plugin.json (accepted by `claude plugin validate --strict` on Claude Code 2.1.319).
+- `tools/test_tools_suite.py` moved out of the shipped plugin (developer tests).
+- Tools never write `__pycache__` (read-only hosts).
+
 ## 0.5.4 — 8 November 2026 (Released — rename)
 
 - Product name **FOCUSED**; Claude / marketplace buyer id **`vital-focused`** (retires `vital-decision-companion`).

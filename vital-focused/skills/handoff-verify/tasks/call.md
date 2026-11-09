@@ -19,7 +19,7 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_handoff_verify` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
@@ -31,6 +31,6 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `templates/worksheet-output.md`. Then the closing line.
+Use `templates/worksheet-output.md` for this record, then the closing line.
 
 On `source_missing`, ask for the source. Never say supported.

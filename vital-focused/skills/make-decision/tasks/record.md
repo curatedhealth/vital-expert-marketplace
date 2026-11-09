@@ -19,11 +19,13 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_run_stage` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
 ## Steps
+
+0. If the person asks you to pick or decide for them: do not pick and do not lean. Say in one line that you will be quick and the call stays theirs, offer to weigh what matters to them in two minutes, and ask the one question most likely to change the answer.
 
 1. Ask the decider to state the choice in one sentence and give their name. If someone else speaks for them, ask who is the decider.
 2. If the name is missing, is a role only, or is the assistant, a model, or Decision Companion, do not store. Ask for a person's name (`role_only_name`).
@@ -35,4 +37,4 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Reply as a coach: short plain prose and one question. Use `templates/worksheet-output.md` only when the person asks for the record or a summary of this step. End with the one question, or the closing line when the governance file says so.

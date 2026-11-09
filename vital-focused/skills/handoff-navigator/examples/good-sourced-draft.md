@@ -32,16 +32,16 @@ Rater: Jordan Lee. Totals from `score_tradeoff_offline.py` on the person's weigh
 ## Unknowns
 
 - Known: pilot KPI pack dated 1 October 2026 (person-supplied).
-- Unknown: FR pricing corridor - `[GAP]`.
+- Unknown: FR pricing corridor - not given yet.
 - Disconfirming: What would make expand-to-both clearly worse than pause?
 
 ## Examine
 
-Gut: uneasy about FR evidence timing. Premortem: underestimated local affiliate capacity. Dissent invited; none recorded yet - `[GAP]` if attestation required.
+Gut: uneasy about FR evidence timing. Premortem: underestimated local affiliate capacity. Dissent invited; none recorded yet - not given yet if attestation required.
 
 ## Decision record
 
-Choice left blank until Jordan authors it. Owner and review date `[GAP]` until implement step.
+Choice left blank until Jordan authors it. Owner and review date not given yet until implement step.
 
 ## Gap list
 

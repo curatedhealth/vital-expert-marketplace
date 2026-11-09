@@ -19,7 +19,7 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_tradeoff_matrix` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
@@ -31,9 +31,9 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 4. In a group, ask raters to score privately before any discussion, then share.
 5. Call `decision_tradeoff_matrix` with `criteria: [{name, weight, direction}]` and `ratings: [{option, criterion, value, rater}]`. `rater` is always the person's name. Send `weights_by` with the name of the person who set the weights. Do not send `authored_by` on a cell. Do not send `score`; the field is `value`. Send `scale` only when the person declared a scale other than 1–5.
 6. Read back per-index gaps in plain words: `invalid_cell` (wrong fields), `rater_missing`, `role_only_name`, `cell_replaced`. On `invalid_cell` for fields including `value` (or when the refusal means `score` was sent): **in the same turn**, resend the corrected cells with `value` (not `score`), same option/criterion/rater/numbers. Tell the person which cell was fixed. Ask only if the value itself is unknown; do not ask for confirmation of numbers you already have.
-7. Do not average, total or rank by hand. With the connector and a complete grid, go straight to the computed view (DC-H19): call `decision_score`. Read back each option's total, the gap between the top two, and whether the top-ranked option stays first when any one priority moves by up to 10 points (and the smallest shift that changes the order, if there is one). Show it as the person's own inputs added up, label it so, and ask whether it matches their judgment. Ratings on 1 to 5 need no conversion. If an option is unrated and the person wants it left out, pass `options` with the rated ones. Without the connector, read the grid back and ask the person to weigh it.
+7. Do not average, total or rank by hand. With a complete grid, go straight to the computed view (DC-H19): run the local scorer on the grid the person gave, with no saved session needed: `python3 <plugin root>/tools/score_tradeoff_offline.py --grid '<json>'` (format in the script header), or `--session <file>` for a saved session, or `decision_score` with a key. Read back each option's weighted average on the person's own rating scale (`weighted_average_on_rating_scale`; use one scale throughout and label it), the gap between the top two, and whether the top-ranked option stays first when any one priority moves by up to 10 points (and the smallest shift that changes the order, if there is one). Show it as the person's own inputs added up, label it so, and ask whether it matches their judgment. Ratings on 1 to 5 need no conversion. If an option is unrated and the person wants it left out, pass `options` with the rated ones. If no script can run, add up by hand with the working shown.
 8. End the turn with exactly one question. If several things are open (a direction check, the next rating, a missing rater), ask the one that blocks the next store and keep the rest for later turns.
 
 ## Output
 
-Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Reply as a coach: short plain prose and one question. Use `templates/worksheet-output.md` only when the person asks for the record or a summary of this step. End with the one question, or the closing line when the governance file says so.

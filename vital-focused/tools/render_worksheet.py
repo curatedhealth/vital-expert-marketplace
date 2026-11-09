@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+sys.dont_write_bytecode = True  # read-only hosts: never write __pycache__
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -13,7 +14,7 @@ from lib.session_io import load_session  # noqa: E402
 
 def _gap(value: object) -> str:
     text = str(value or "").strip()
-    return text if text else "[GAP]"
+    return text if text else "not given yet"
 
 
 def main() -> int:
@@ -34,21 +35,21 @@ def main() -> int:
         "## Options",
     ]
     for opt in row.get("options") or []:
-        lines.append(f"- {opt.get('name') or opt.get('id') or '[GAP]'}")
+        lines.append(f"- {opt.get('name') or opt.get('id') or 'not given yet'}")
     if not row.get("options"):
-        lines.append("- [GAP]")
+        lines.append("- not given yet")
     lines += ["", "## Criteria"]
     for c in row.get("criteria") or []:
-        lines.append(f"- {c.get('name')}: weight={c.get('weight', '[GAP]')} direction={c.get('direction', 'higher_better')}")
+        lines.append(f"- {c.get('name')}: weight={c.get('weight', 'not given yet')} direction={c.get('direction', 'higher_better')}")
     if not row.get("criteria"):
-        lines.append("- [GAP]")
+        lines.append("- not given yet")
     lines += ["", "## Ratings"]
     for cell in row.get("ratings") or []:
         lines.append(
             f"- {cell.get('rater')}: {cell.get('option') or cell.get('option_id')} / {cell.get('criterion')} = {cell.get('value')}"
         )
     if not row.get("ratings"):
-        lines.append("- [GAP]")
+        lines.append("- not given yet")
     print("\n".join(lines))
     return 0
 

@@ -19,16 +19,16 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_usecase_card` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
 ## Steps
 
-1. Call `decision_usecase_card` with that id.
+1. With a key, call `decision_usecase_card` with that id. Without a key, prefer `references/cards/uc01.md`, `uc02.md` or `uc05.md` when the id matches; otherwise walk the closest case in `references/teaching-cases.md`: say it is a fictional teaching example, walk all seven steps in plain words (one line each), and end with one question: whether they want to walk their own decision.
 2. Walk the beats. Label the card as teaching material.
 3. Do not copy its choice onto the person's session.
 
 ## Output
 
-Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Reply as a coach: short plain prose and one question. Use `templates/worksheet-output.md` only when the person asks for the record or a summary of this step. End with the one question, or the closing line when the governance file says so.

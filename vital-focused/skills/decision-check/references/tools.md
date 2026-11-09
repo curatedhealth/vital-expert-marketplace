@@ -2,7 +2,9 @@
 
 ## Default (no MCP)
 
-| Action | CLI (from plugin `tools/`) |
+Run each script by full path from the person's working folder, never after `cd` into the plugin: `python3 <plugin root>/tools/<script>.py`. The plugin root is two folders above this skill's folder.
+
+| Action | Script (run it) |
 |---|---|
 | Start / load session | `session_init.py`, session JSON path |
 | Patch stage fields | `session_patch_stage.py` |

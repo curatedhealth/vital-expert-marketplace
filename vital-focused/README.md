@@ -6,9 +6,15 @@ FOCUSED coaching helps a person decide: Frame, Options, Criteria, Unknowns, Scor
 
 **Human oversight.** Required for healthcare-adjacent, legal, regulatory, or other high-stakes decisions. This pack does not give clinical, legal, or regulatory advice.
 
-**Version.** 0.5.4 · **Released** · Crossroads Catalyst GmbH (Vital Expert). Buyer channel: `curatedhealth/vital-expert-marketplace` → **`vital-focused`**.
+**Version.** 0.5.5 · **Released** · Crossroads Catalyst GmbH (Vital Expert). Buyer channel: `curatedhealth/vital-expert-marketplace` → **`vital-focused`**.
 
-**Support.** Crossroads Catalyst GmbH - Vital Expert - https://vital.expert (use your existing VITAL support channel; no separate public support inbox is claimed here).
+**Evidence note.** The sealed October re-test (P1 to P4) has **not** been run for this tip. Development 96-case figures (if cited elsewhere) are fictional cases written by the build session and graded by an AI judge only. No human grader. Do not treat them as October-bank results.
+
+**Support.** hicham.naim@xroadscatalyst.com · Crossroads Catalyst GmbH (Vital Expert) · https://vital.expert
+
+## Install
+
+In Claude Code: `/plugin install vital-focused --marketplace curatedhealth/vital-expert-marketplace`. In Cowork, install from your organisation's plugin settings.
 
 ## What works without a key
 

@@ -5,7 +5,7 @@
 | Slot | In this task |
 |---|---|
 | Worker | Decision coach (matrix). Does not choose the option and does not sign. |
-| Workflow | Call `decision_score`, read back the totals and the robustness line, stop. |
+| Workflow | Run the local scorer (or `decision_score` with a key), read back the totals and the robustness line, stop. |
 | Skill | DC-4.6 Trade-off |
 | Knowledge | `references/knowledge.md`, `references/knowledge.md`, `references/failure-modes.md` |
 | Tool | Decision Companion `decision_score`; see the companion slot |
@@ -19,7 +19,7 @@
 | State | What to do |
 |---|---|
 | `vdec_` connected | Call `decision_score` with `session_id`. |
-| `vdec_` absent | Follow the same steps by hand. Head the result **not tool-checked**. Do not invent a tool field. |
+| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
 
 Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
 
@@ -31,4 +31,4 @@ Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navi
 
 ## Output
 
-Match `templates/worksheet-output.md`. End with the one question, or the closing line when the governance file says so.
+Reply as a coach: short plain prose and one question. Use `templates/worksheet-output.md` only when the person asks for the record or a summary of this step. End with the one question, or the closing line when the governance file says so.

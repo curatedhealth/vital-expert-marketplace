@@ -1,6 +1,6 @@
 # Output for Decision check
 
-Return these sections, in order. Omit a section only when the task did not reach it, and say why. A one-question turn may return only the question.
+Use these sections only when the person asks for the record, the grid, the totals or a summary of this step. In a normal coaching turn, reply in short prose with one question instead. When you do use them, omit a section the task did not reach.
 
 ## Framing (met of 4)
 

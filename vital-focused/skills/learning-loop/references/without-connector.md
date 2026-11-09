@@ -1,11 +1,11 @@
-# Without connector - learning-loop
+# Local mode (default) - learning-loop
 
-When no `vdec_` / `vont_` / `vvfy_` keys are present:
+No connector key is needed. This is how the skill normally runs.
 
-1. Run tasks using the local session file and plugin `tools/` CLIs.
-2. If tools cannot run in the host, complete cards by hand from the person's words only.
-3. Stamp with `--mode local` when tools ran, or `--mode method` when method/cards only.
-4. Never invent Decision MCP, Navigator, or Verify results.
-5. Tell the person results are **FOCUSED-local** or **not tool-checked** as appropriate.
+1. Run the plugin's scripts by full path from the person's working folder: `python3 <plugin root>/tools/<script>.py ...`. The plugin root is two folders above this skill's folder. Never `cd` into the plugin folder.
+2. Sessions save to `./focused-sessions/` in the working folder. If a save fails, or scripts cannot run in this host, do the same steps by hand from the person's words only. Do not mention the failure unless the person asked to save.
+3. Adding up weights and ratings: run `score_tradeoff_offline.py`. If no script can run, add up openly by hand, show the working in one line per option, and invite the person to check it.
+4. Never invent a Decision connector, Navigator or Verify result. Navigator sealed scores and Verify claim checks are only available with their keys; without them, say in plain words that this check is not connected and offer the local path.
+5. Do not label coaching replies (no "not tool-checked" or "FOCUSED-local" lines). The stamp goes on a saved record or brief only.
 
-Cloud sync and sealed/claim services wait until the person opts in with keys.
+With an optional key (`vdec_`, `vont_`, `vvfy_`) and the person's go-ahead, the connector tools named in SKILL.md replace the local scripts.

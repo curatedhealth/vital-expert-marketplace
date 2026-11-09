@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Compile a FOCUSED brief from a local session; missing fields → [GAP]."""
+"""Compile a FOCUSED brief from a local session; missing fields → not given yet."""
 
 from __future__ import annotations
 
 import argparse
 import sys
+sys.dont_write_bytecode = True  # read-only hosts: never write __pycache__
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -14,7 +15,7 @@ from lib.stage_checks import structural_gaps  # noqa: E402
 
 def _gap(value: object) -> str:
     text = str(value or "").strip()
-    return text if text else "[GAP]"
+    return text if text else "not given yet"
 
 
 def main() -> int:
@@ -39,7 +40,7 @@ def main() -> int:
     for opt in row.get("options") or []:
         lines.append(f"- {_gap(opt.get('name'))}")
     if not row.get("options"):
-        lines.append("- [GAP]")
+        lines.append("- not given yet")
     lines += [
         "",
         "## Choice (person-authored)",
