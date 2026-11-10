@@ -1,6 +1,6 @@
 {
   "name": "vital-expert",
-  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-mlr-review. The vital-verify plugin was retired 8 November 2026, vital-es-financial-modeling-and-valuation (CF-01.02.02 live-test), and FOCUSED (vital-focused).",
+  "description": "Vital.Expert plugins for Cowork. Digital Health packs, vital-trusted (sole Prove/Build/Core pack; optional vvfy_ for live Prove tools), vital-navigator-outcomes (legacy navigator-ai-investment), vital-mlr-review. The vital-verify plugin was retired 8 November 2026, and FOCUSED (vital-focused).",
   "owner": {
     "name": "Vital.Expert",
     "url": "https://vital.expert"
@@ -15,11 +15,6 @@
       "name": "vital-navigator-outcomes",
       "source": "./vital-navigator-outcomes",
       "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement \u2014 from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools on vont_; optional Curator steward skills (pull/classify/process/decide/enrich) on vcur_. Marketplace v0.3.1-live-test."
-    },
-    {
-      "name": "vital-es-financial-modeling-and-valuation",
-      "source": "./vital-es-financial-modeling-and-valuation",
-      "description": "Financial Modeling & Valuation (CF-01.02.02). Nine skills + valuation summary. Standard KA Pass (v2); Draft 0.1.1-live-test for Cowork. Not Marketplace Done. Ranges only \u2014 no fairness/recommend. Optional vont_/verify keys; offline script-first."
     },
     {
       "name": "navigator-ai-investment",
