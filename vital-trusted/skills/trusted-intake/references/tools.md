@@ -8,9 +8,8 @@ what the request shows. Never describe a lookup that did not run (TR-H4).
 | Work context | Read the approved label for the named market so product status is read, not asked (candidate: label source) | No companion yet | Status recorded as the person states it or as the supplied label shows; otherwise asked or left as a gap |
 | Data and policy context | Read the company's AI use policy and approved-tool list so the data question becomes a lookup with a quoted passage (candidate: AI policy companion) | No companion yet | The policy question is asked; the answer is recorded as "person states", never as checked |
 
-VERIFY does not fill an intake slot. It checks finished text against passages; it does
-not read company policies or labels for status. [CHECK: owner to confirm VERIFY has no
-intake role when the Prove skills are cross-checked.]
+No tool fills an intake slot. A hand comparison of finished text with passages does not
+read company policies or labels for status.
 
 ## Detecting a future companion
 

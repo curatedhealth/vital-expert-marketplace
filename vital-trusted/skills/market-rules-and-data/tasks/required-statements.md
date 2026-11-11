@@ -7,7 +7,7 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Establish market, reader, use and channel; build the list of statements usually expected; mark each present, missing or for the company's system; never write one from memory |
 | Skill | TR-2.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (M1 to M19), `references/knowledge.md` (S1 to S8) |
+| Knowledge | `references/rules.md` (M1 to M19), `references/patterns.md` (S1 to S8) |
 | Tool | `scripts/scan_output.py --statements` where code can run. Companion slot: future MLR preparation companion with market templates and job codes (none yet) |
 | Prompt | This guide |
 | Template | `templates/statements-list.md`, `templates/market-note.md`, `templates/check-line.md` |
@@ -27,7 +27,7 @@ it as the list and do not add to it from the rules below. Their list governs (M0
 
 ## The elements usually expected
 
-Build the list from `references/method-standards.md` / `references/knowledge.md` for the market only. Common elements:
+Build the list from `references/rules.md` for the market only. Common elements:
 
 | Element | UK (ABPI 2024) | EU (Directive, EFPIA) | Switzerland (AWV) | US |
 |---|---|---|---|---|
@@ -38,26 +38,42 @@ Build the list from `references/method-standards.md` / `references/knowledge.md`
 | Black triangle | When required (M7) | National rules `[CHECK]` | `[CHECK]` | Not applicable as read |
 | Audience statement | Usual practice `[CHECK]` (M18) | Usual practice `[CHECK]` | Usual practice `[CHECK]` | Usual practice `[CHECK]` |
 | Job code or reference | Company system (M17) | Company system | Company system | Company system |
-| Authorisation holder name and address | In PI (M6) | National `[CHECK]` | Yes (M11) | `[CHECK]` |
+| Authorization holder name and address | In PI (M6) | National `[CHECK]` | Yes (M11) | `[CHECK]` |
 
-A market not in this table: say the rules for that market were not read here, list
-only the company-system elements (job code, date), and point to the review process.
+An EU member state not in this table (for example Ireland or the Netherlands): use the
+EU column and say in one line that the national code was not read here. The
+authorization or marketing status in that state is a visible gap
+(`tasks/jurisdiction.md`, Guard step 3). Any other
+market not in this table: say the rules for that market were not read here, list only
+the company-system elements (job code, date), and point to the review process.
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Confirm the market, reader, use and channel** from the context card or the
-   jurisdiction task. Without the market, do not build a list; ask.
+   jurisdiction task. Without the market, do not build a list: place gaps for the job
+   code, the date and the market's statements, and ask the market in the same reply.
 2. **Build the list** for that market from the table, or from the person's own template.
 3. **Place each element as a visible placeholder** where it belongs, never as text you
-   wrote: `[Prescribing information: link to the current UK PI — from your PI owner]`,
-   `[Job code — from your approval system]`, `[Date of preparation — set at approval]`.
+   wrote, in the gap form: `[GAP: not supplied; link to the current UK PI; from your PI
+   owner]`, `[GAP: not supplied; job code; from your approval system]`, `[GAP: not
+   supplied; date of preparation; set at approval]`.
 4. **Use set wording only where the rule gives it and the market matches**: the ABPI
-   adverse event statement for UK material, the AWV public notice for Swiss category C
-   or D public advertising. Even then, the link and company name come from the person.
+   adverse event statement for UK material, the AWV public notice for Swiss category D
+   public advertising (the former category C included). Even then, the link and company name come from the person.
 5. **Never write prescribing information, a safety summary or a dispensing category
    from memory.** Take it word for word from the supplied label for that market, or
    leave the placeholder.
-6. **Do not decide the reminder exemption.** If the person says the piece carries only
+6. **A drafted letter or email carries contact placeholders.** When the person has not
+   supplied them, place `[GAP: not supplied; company contact for questions; from your
+   medical information or local office details]` and `[GAP: not supplied; marketing
+   authorization holder name and address; from the approved product information]`.
+   This holds for UK material (the holder sits in the PI, M6) and for EU and Irish
+   letters alike. A line in the source saying the prescribing information "is
+   attached" is not kept unless the person supplied it; it becomes the PI placeholder.
+7. **Do not decide the reminder exemption.** If the person says the piece carries only
    the name, note that some markets exempt reminders (M1, M5) and that the review
    process decides.
 

@@ -31,6 +31,9 @@ procedure.
 
 Stop and ask, or decline the part, when:
 
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
+
 - The person asks to remove, hide, shrink or move risks, discontinuations or limitations
   to make the story more positive ("keep it positive", "leave the safety for the PI",
   "we'll do safety in the next email"). Decline that part in one plain sentence, keep the
@@ -40,8 +43,8 @@ Stop and ask, or decline the part, when:
   material that leaves the company. Decline to drop the rest silently; offer to state
   the scope or to show both.
 - The material holds no safety or limitation data and the draft is a benefit claim for a
-  reader outside the company. Ask for the label or the results; do not draft a
-  benefits-only piece.
+  reader outside the company. Ask for the label or the results, or leave a visible gap
+  where the risks will go (`tasks/fair-balance.md`). Do not draft a benefits-only piece.
 - The person asks whether the piece "has fair balance", "is balanced enough" or "would
   pass review". Say what was added and what is open, and that the decision belongs to
   their review process.
@@ -58,16 +61,17 @@ Stop and ask, or decline the part, when:
   clinically important.
 - That a piece meets any code, regulation or company procedure.
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/fair-balance.md`, Guard step 2: when the material holds no safety data, the person supplies it or the review your process names decides what is shown. This skill does not draft a benefits-only piece for an outside reader.
+- `tasks/selective-reporting.md`, Repair step 5: a request to drop a study or a risk the material shows stops here. Every change appears in the balance note, and the choice goes to the review your process names.
+
 ## Closing statement
 
 When this skill's check lines go into a TRUSTED summary, that summary ends with: "This
 check flags issues. It is not medical, legal, regulatory or ethics review." Direct
 replies, drafts and balance notes do not carry it.
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

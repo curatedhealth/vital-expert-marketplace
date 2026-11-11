@@ -7,7 +7,7 @@
 | Worker | Experienced cross-functional colleague |
 | Workflow | Notice what is going into the assistant, name its kind in plain words, ask what the company AI use policy says, record the answer as stated, never decide |
 | Skill | TR-0.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (I7, I8), `references/knowledge.md` (C8, C9, C11, C13) |
+| Knowledge | `references/rules.md` (I7, I8), `references/patterns.md` (C8, C9, C11, C13) |
 | Tool | None. Companion slot: a future AI policy companion (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/context-card.md` (inputs and policy lines), `templates/intake-questions.md` |
@@ -47,15 +47,22 @@ Name the kind in plain words. More than one can apply.
      and identifiers before sharing, or describe the structure without the content.
    - "No policy": record that. Say in one line that the data owner (for client material,
      the client's agreement) still applies, and suggest checking before pasting.
-   - "My manager said it's fine": record exactly that. It is a statement, not an approval
-     of the tool.
+   - "My manager said it's fine": record "person states their manager said it is fine". It is a
+     statement, not an approval of the tool.
 5. **If it was already pasted**, say so once, without blame: note the kind, suggest the
    person checks with the policy owner, and keep the material out of the output except
    what the work needs. If the output would carry identifiable patient details, stop
    (`governance.md`).
-6. **Patient details.** Never ask for more of them. If a case includes a possible side
-   effect, note it for the safety function and do not judge it (TR-H6).
-7. **Hand on for depth.** Intake records and asks. The full check of inputs and
+6. **Patient details.** Never ask for more of them. If any input includes a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   patient-safety's flag goes out first, in its template wording
+   (`../../patient-safety/templates/safety-flag.md`), before the data question or any
+   other question, and nothing here judges it (TR-H6, TR-H14).
+7. **Unpublished or confidential results in work that leaves the company** (a payer
+   value story on unpublished real-world data). A draft prepared for the company's
+   review or disclosure route is allowed: say in one line that it is "for your <review>
+   before any use", and record that route as the next process. Public posts, or text
+   released outside that route, are not drafted (TR-H16).
+8. **Hand on for depth.** Intake records and asks. The full check of inputs and
    intellectual property belongs to the Ethical skill on inputs (`responsible-inputs`),
    which reads this card.
 

@@ -9,8 +9,8 @@ Make visible what was assumed, what is still a gap, and who needs to decide what
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Collect assumptions, gaps and pending decisions from the work; give each an owner as the person names it; size the list to the stakes |
 | Skill | TR-7.1.2 |
-| Knowledge | `references/knowledge.md` (A1–A5), `references/gap-rules.md` |
-| Tool | None. Companion slot: VERIFY `build_record` findings, through `citation-and-record` |
+| Knowledge | `references/patterns.md` (A1–A5), `references/gap-rules.md` |
+| Tool | None |
 | Prompt | This guide |
 | Template | `templates/record-note.md` (sections "Assumed" and "Open"), `templates/check-line.md` |
 | Input | The deliverable with its gaps, the conversation, the person's statements on who decides |
@@ -22,7 +22,7 @@ Make visible what was assumed, what is still a gap, and who needs to decide what
 |---|---|---|
 | Assumption | A choice the work rests on that someone could reasonably make differently | "Assumed a list price of CHF 1,200 per pack, as you told me; no net price supplied." |
 | Gap | Something the work needs that was not supplied | "Number of patients eligible in canton X not supplied." |
-| Decision | Something only a person with authority can settle | "Whether the deck may show the subgroup result: your medical lead." |
+| Decision | Something only a person with authority can settle | "Whether the deck may show the subgroup result: owner to be named." |
 
 An assumption is never a fact made quiet. If the work rests on an estimate, the record
 says it is an estimate and whose.

@@ -1,66 +1,49 @@
-# Rendered example: route answer + shared templates pointer + stamp
+# Worked example: a routing answer for a payer deck
 
-Invented teaching case. Person asks: “Do we need the full TRUSTED pack or just claim check?”
+Invented case for teaching. "Velostra" is a fictional product. No real company or person.
 
-## Route answer
+## Request
 
-```text
-┌─ Route ────────────────────────────────────────────
-│ Ask:     Full pack vs claim-check only?
-│ Answer:  Start with trusted-intake → trusted-check (depth Full if external).
-│          Prove companions (claim / source / confidence / citation) run under True
-│          whenever Prove live MCP is connected; offline tools if no key.
-│ Letters: Default all seven; person may turn letters off — hard rules still run.
-│ Cards:   Prefer shared templates under plugin `templates/`
-│          (claim-card, source-card, confidence-card, evidence-table, gap-list,
-│          verify-brief, check-line-stamp). See templates/README.md.
-│ Not this: Do not invent a company SOP name; do not mark Released.
-└────────────────────────────────────────────────────
-```
+"We're sending a payer deck for Velostra next week. Do I need to put it through all of
+TRUSTED, or can I just have the claims checked?"
 
-## Pointer
+Nothing else is in the conversation: no deck, no context card.
 
-Shared Output cards: `../../templates/README.md` (plugin root `templates/`).
+## Routing answer (as the person sees it)
 
-## Stamp
+You want to know whether a payer deck needs the whole TRUSTED read or only a check of
+its claims.
 
-```text
-TRUSTED / trusted-capability-map: route = intake→check + Prove cards · templates README · not tool-checked
-```
+What I'd do first: ask who at the payer will read it and which country it is for,
+because a deck that leaves the company gets the full read and the country changes which
+rules apply.
+Then: read the finished deck against all seven questions TRUSTED asks: is it useful, is
+it allowed, is the evidence in proportion, could it lead to harm, is it correct, is the
+assistant used responsibly, and can the company stand behind it. You can switch letters
+off, for example "use only True and Safe". A few checks still run when a letter is off,
+such as passing a possible side effect to your safety reporting procedure.
+And: the claims are the part that most often comes back from review, so they get
+checked against the sources you share. Without the sources I can say which statements
+need one, not whether they hold.
 
-**Why it works:** Routes without running letters, points at shared cards, keeps Pilot/uncleared discipline.
+After that it goes through your review process for material sent to payers, which
+decides whether it can be used.
 
+Want me to start by asking those two questions?
 
-## Companion map (short)
+## Behind the answer (reference only, not shown to the person)
 
-| Need | Skill |
-|---|---|
-| Context before letters | trusted-intake |
-| Letter orchestration | trusted-check |
-| Passage overlap | claim-assessment |
-| Source axes | source-assessment |
-| Faithfulness % | confidence-scoring |
-| Refs + record | citation-and-record |
+Routed to `trusted-intake` first, then `trusted-check` at the full depth because the
+reader is outside the company. The claim and source skills run under True when sources
+are supplied, by hand and labeled "not tool-checked".
 
-Hard rules still run when a letter is off by choice.
+## Why this routing
 
-## Method note
-
-This example is a teaching fixture for known-answer evals. Names (Velostra, NORLA, Example Pharma) are fictional. Prefer shared cards under `../../templates/` when rendering scannable packs. Stamp lines match `templates/check-line-stamp.md`.
-
-Accessed teaching date: 8 November 2026. release_state: Released (owner-authorized 8 November 2026). Still requires named human clearance per piece.
-## Checklist echo
-- [x] Rendered card(s) present
-- [x] Stamp present
-- [x] Offline / not tool-checked labeled when applicable
-- [x] Gaps left open (no fake clearance)
-
-See also: skill `references/method.md` and `references/method-standards.md`.
-
-See also: skill `references/method.md` and `references/method-standards.md`.
-
-See also: skill `references/method.md` and `references/method-standards.md`.
-
-See also: skill `references/method.md` and `references/method-standards.md`.
-
-See also: skill `references/method.md` and `references/method-standards.md`.
+- The person asked a choice question, so the answer explains the choice in their words
+  and does not start the work.
+- No skill names, letter codes or gap syntax appear in what the person reads.
+- The answer does not say how the deck will turn out, and it does not name a company
+  procedure; it names the kind of process.
+- No figure, product claim or market was added. Velostra's approval status is not
+  stated because nobody gave it.
+- There is no closing statement: the closing sentence belongs on check outputs only.

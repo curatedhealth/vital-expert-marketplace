@@ -25,18 +25,35 @@
 
 TRUSTED supports the company's own procedures and never replaces them (TR-H11). Name the
 kind of procedure in plain words: "your AI use policy", "your data protection function",
-"your compliance team", "your library or licensing team". Never name or invent a
+"your compliance team", "your library or licensing team", "your disclosure process". Never name or invent a
 specific company's SOP, and never say that a use satisfies a policy.
 
 ## Stop rules
 
+Before any stop below:
+
+- **A possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person,
+   medication error, lack of effect or product quality problem appears in any input.**
+  Give patient-safety's flag first, in its template wording
+  (`../patient-safety/templates/safety-flag.md`): pass it to the safety reporting
+  procedure as soon as you can and forward the original unchanged; a quality problem also
+  goes to the complaint procedure. This comes before any question and before every other
+  stop in this list, whatever letters are active, with no judgment of cause, seriousness
+  or reportability (TR-H14, TR-H6).
+
 Stop and ask before continuing when:
+
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
 
 - The material appears to contain identifiable patient or personal details and the
   person has not said their policy covers this tool for them. Ask; offer to work from a
-  version with identifiers removed.
+  version with identifiers removed, and do in the same reply any part that needs no
+  personal details.
 - The material looks like undisclosed results or deal information of a listed company.
-  Name the category and ask; offer the public version.
+  Name the category and ask; offer the public version. When no public version exists
+  and the person wants a summary for their own team, write it from the material only,
+  keep its confidentiality marking, label it internal only, and do not stop.
 - The person asks you to confirm a tool is approved, data is anonymous or a use is fair.
   Explain who decides and what you can do instead.
 - The person asks to reproduce a whole copyrighted or licensed work for use outside the
@@ -55,16 +72,17 @@ understand or summarize material for one's own use where nothing sensitive appea
 - That this skill satisfies the company's AI literacy, data protection or copyright
   obligations.
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/input-confidentiality.md`, Guard step 3 and Repair step 4: whether this assistant may be used for the material is decided by the person and their AI policy owner, as your process names.
+- `tasks/intellectual-property.md`, Guard step 5: use of licensed or someone else's work is decided by the library or licensing team, as your process names.
+
 ## Closing statement
 
 When this skill's check line reaches the TRUSTED summary, the summary ends with: "This
 check flags issues. It is not medical, legal, regulatory or ethics review." Direct
 replies and input notes do not carry it.
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

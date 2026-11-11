@@ -28,11 +28,14 @@ a company template or writing standard, it comes before this skill's patterns.
 
 Stop and ask before continuing when:
 
+Each stop holds back only the part it names. Draft the rest of the request in the same
+reply, with a gap where the held part would go (draft first).
+
 - The person asks to make the draft "more concrete", "more specific" or "data-driven"
   and the material does not hold the specifics. Ask for them; offer the gapped draft.
 - The person asks for "typical" or "placeholder" figures, owners or dates that would
-  look real. Offer a visible gap or a clearly labeled placeholder such as
-  `[INSERT OWNER]`.
+  look real. Offer a visible gap marker, for example
+  `[GAP: needs a decision; owner of this step; the person who will own it, named by you]`.
 - The person asks the assistant to decide a priority, owner or recommendation that is
   theirs to make. Offer options drawn from the material, labeled as options.
 - The requested "so what" or next step would be clinical advice, a causality judgment
@@ -47,16 +50,17 @@ Stop and ask before continuing when:
 - That a cut or rewrite preserved the meaning beyond what the repair note lists.
 - That any plain-language source is a requirement on the person's company.
 
+## Where a person decides
+
+A gate is a point where a named person decides, not this skill. The skill names it as
+"as your process names" and stops there. It never names a role, a form or a deadline the
+person did not give.
+
+- `tasks/actionability.md`, Guard step 4: owners, dates and decisions are never assigned here. The person names them, or the review your process names does.
+- `tasks/so-what.md`, Repair step 5: an implication added for the reader is marked "for you to confirm". For work going outside the company it is confirmed at the review your process names.
+
 ## Closing statement
 
 When this skill produces lines for `trusted-check`, the TRUSTED summary that carries
 them ends with: "This check flags issues. It is not medical, legal, regulatory or ethics
 review." Drafts and repair notes from this skill do not carry it.
-
-## Human gates (upgrade)
-
-| Gate | What is presented | Deciding role |
-|---|---|---|
-| G1 External release | Full draft + check-line + open items | Medical / legal / regulatory reviewer per SOP |
-| G2 Claim retention | Each contested claim with passage | Evidence or brand lead |
-| G3 Offline Prove acceptance | not tool-checked results | Named requester acknowledges offline limit |

@@ -1,8 +1,17 @@
 # Knowledge: patient-safety
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Primary rules behind this skill
+## Contents
+
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
+
+## Part 1: Rules
 
 Each rule names its primary source, the date and how it was confirmed. A rule marked
 `[CHECK]` has not been confirmed against the primary document and is applied as good
@@ -10,17 +19,17 @@ practice, not cited as a requirement (TR-H8). Jurisdiction is stated for each.
 
 Last reviewed: 20 October 2026.
 
-## The rule that governs first
+### The rule that governs first
 
 | Id | Rule | Source | Status |
 |---|---|---|---|
-| S0 | Whether an event is related to the product, whether it is serious or expected, whether it must be reported, to whom and by when, is decided by the company's safety (pharmacovigilance) function under its own written procedure. The procedure sets the internal timing for passing information on. | The person's own company safety reporting procedure. US: 21 CFR 314.80(b) requires the applicant to "develop written procedures for the surveillance, receipt, evaluation, and reporting of postmarketing adverse drug experiences" (see S7). | Owner-stated design rule (concept §8.3, TR-H6, TR-H11). The procedure is never assumed or named; the person is pointed to it. |
+| S0 | Whether an event is related to the product, whether it is serious or expected, whether it must be reported, to whom and by when, is decided by the company's safety (pharmacovigilance) function under its own written procedure. The procedure sets the internal timing for passing information on. | The person's own company safety reporting procedure. US: 21 CFR 314.80(b) requires the applicant to "develop written procedures for the surveillance, receipt, evaluation, and reporting of postmarketing adverse drug experiences" (see S7). | Owner-stated design rule (TR-H6, TR-H11). The procedure is never assumed or named; the person is pointed to it. |
 
 The public rules below explain why a flag matters and what kinds of information count.
 They are never used to decide seriousness, causality, expectedness or reportability on the
 company's behalf, and no timeframe below is ever given to the person as their deadline.
 
-## Part B: what counts as a possible safety report, and why it is passed on promptly
+### Part B: what counts as a possible safety report, and why it is passed on promptly
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -34,7 +43,7 @@ company's behalf, and no timeframe below is ever given to the person as their de
 | S8 | EU: reports from non-medical sources (for example the lay press or other media) are managed as spontaneous reports. A suspected adverse reaction associated with a quality defect or a falsified product is submitted as a valid case, and the company should have a system to investigate suspected quality defects in a timely way. Special situations include use in pregnancy or breastfeeding, use in children or the elderly, overdose, abuse, misuse, medication error, occupational exposure and lack of therapeutic efficacy. | GVP Module VI Rev 2, sections VI.B.1.1.3, VI.C.2.2.4 and VI.B.6 (same source as S5). | EU | Confirmed 20 October 2026. EU submission timeframes (15 days serious, 90 days non-serious) are quoted in GVP VI.C.3 from Directive 2001/83/EC Articles 107(3) and 107a(4); the Directive itself was not read `[CHECK]`. Not given to the person as a deadline in any case. |
 | S9 | Market research industry guidance: "Adverse Events" covers adverse events, special reporting situations (including overdose, off-label use, misuse, abuse, medication errors, lack of or unexpected effect, interactions) and product quality complaints (for example damaged packaging, wrong strength or color, broken delivery devices, counterfeits). The company's safety function "is accountable for ... determining the severity of each Adverse Event, and for assessing causality"; agencies do not. Agencies report to the company's safety function "within one business day" of becoming aware. Events reported by a carer, relative or friend are passed on without that individual's personal details. Where AI is used (moderation, transcription, translation), human oversight is built into the reporting process. | EPHMRA Adverse Event Reporting Guidelines, revised July 2026, sections 3.1.4, 4.2.3, 10.8, 12.5 and Appendix A. ABPI and BHBIA Guidance notes on collecting adverse events, product complaints and special reporting situations during market research, version 5.0, February 2021 (one business day). | Industry guidance, not law. EPHMRA: healthcare market research commissioned by the product's authorization holder, global. ABPI and BHBIA: UK. | EPHMRA confirmed 20 October 2026 from the July 2026 PDF. ABPI and BHBIA: the one-business-day line confirmed from the February 2021 PDF; the rest of that document not read, and whether it has been superseded `[CHECK]`. The one business day is the agency-to-company step in market research; it is never presented as the person's deadline. |
 
-## Part A: safety content comes from the approved label
+### Part A: safety content comes from the approved label
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -42,16 +51,16 @@ company's behalf, and no timeframe below is ever given to the person as their de
 | S11 | The SmPC holds safety content in fixed sections: 4.2 posology and method of administration, with special populations (for example elderly, renal impairment with the cut-off values used in studies, hepatic impairment as defined in studies, genotype, children); 4.3 contraindications; 4.4 special warnings and precautions; 4.5 interactions; 4.6 fertility, pregnancy and lactation. "It is not in the remit of the SmPC to give general advice on the treatment of particular medical conditions." | Same source as S10, sections 4.2 to 4.6 and introduction. | EU and EEA | Confirmed 20 October 2026. Used to find the statement in the right section and to keep its conditions (which patients, which cut-off) when it is quoted. |
 | S12 | US prescribing information holds safety content in fixed sections: boxed warning; 2 Dosage and administration; 4 Contraindications; 5 Warnings and precautions; 7 Drug interactions; 8 Use in specific populations, with 8.1 Pregnancy, 8.2 Lactation, 8.3 Females and males of reproductive potential, 8.4 Pediatric use, 8.5 Geriatric use. | 21 CFR 201.57(c), eCFR, current text read 20 October 2026. | US, prescription drugs and biologics in the format of 21 CFR 201.56(d) | Confirmed 20 October 2026 from eCFR. Labels in the older format (21 CFR 201.80) use different headings `[CHECK]`. |
 
-## Part A: patient-facing wording
+### Part A: patient-facing wording
 
 | Id | Rule | Intended primary source | Scope | Status |
 |---|---|---|---|---|
-| S13 | Patient information tells the reader to ask their doctor or pharmacist when unsure, and how to report side effects. | Directive 2001/83/EC, Article 59; EMA QRD product information template (package leaflet statements). | EU | `[CHECK]`: not read. Applied as good practice only: every patient piece gives a route to a doctor, nurse or pharmacist. |
+| S13 | Patient information tells the reader to ask their doctor or pharmacist when unsure, and how to report side effects. | Directive 2001/83/EC, Article 59; EMA QRD product information template (package leaflet statements). | EU | `[CHECK]`: not read. Applied as good practice only: every patient piece gives a route to a doctor, nurse or pharmacist, taken from the source or left as a gap, never written new. |
 | S14 | US patient labeling (Medication Guides) content and format. | 21 CFR part 208. | US | `[CHECK]`: not read. |
 | S15 | UK and Swiss equivalents for safety reporting and patient information (MHRA guidance; Swiss Therapeutic Products Act and its ordinance on pharmacovigilance reporting). | MHRA pharmacovigilance guidance; Swiss TPA SR 812.21, Article 59, and Swissmedic guidance. | UK, Switzerland | `[CHECK]`: not read. Treat as good practice in the same direction as S1 to S8. |
 | S16 | FDA guidance on adverse event information found on the internet and in social media. | FDA postmarketing safety reporting guidance documents. | US | `[CHECK]`: not read. S5 and S7 cover the principle that information received from any source is reviewed. |
 
-## How to use these rules in output
+### How to use these rules in output
 
 - In what the person reads, give the reason in plain words: "safety rules count the time
   from when anyone in the company first sees this, so pass it on as soon as you can, in
@@ -65,15 +74,13 @@ company's behalf, and no timeframe below is ever given to the person as their de
   market research, not a legal requirement on the person.
 - A `[CHECK]` rule is described as good practice, never as a requirement.
 
-## Migrated patterns
-
-# Failure patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it breaks.
 All examples are invented for teaching; "Corvelan" (corvelastat) and every person named
 are fictional.
 
-## Contents
+### Contents
 
 - Part B, the flag: P1 to P10
 - Part A, safety statements: C1 to C10
@@ -82,19 +89,19 @@ are fictional.
 Pattern ids are for this file only. In what the person reads, describe the problem in
 plain words (TR-H13).
 
-## Part B: the flag
+### Part B: the flag
 
 **P1 The side effect lost in the reply.** A doctor's question email mentions a reaction in
 their patient; the draft answers the question and says nothing about the reaction.
 Why: the company now knows about it; if nobody passes it on, the safety function never
 sees it (S4, S7).
-Before: a polished reply on dosing only. After: a three-line flag first, then the reply. (TR-H6, TR-H11)
+Before: a polished reply on dosing only. After: the flag in `../templates/safety-flag.md` first, then the reply. (TR-H6, TR-H11)
 
 **P2 The reportability call.** "This is a known side effect, so no report is needed."
 Why: whether and how it is reported is the safety function's decision; listed effects
 are still passed on (S0, S1).
-After: "The email mentions a rash after starting Corvelan. Pass it to your safety
-reporting procedure." (TR-H6)
+After: the flag in `../templates/safety-flag.md`, with the rash quoted, and no judgment of
+whether it is known or reportable. (TR-H6)
 
 **P3 The causality call.** "The dizziness is more likely due to her blood pressure
 tablets." Why: only the safety function, with the full case, assesses this (S1, S9).
@@ -127,8 +134,8 @@ After: flag, and say the safety function should get the original transcript or n
 **P9 The public reply that diagnoses.** "Sorry to hear about your headaches, this usually
 settles in a week." Why: clinical advice to a member of the public, and a judgment about
 the event (TR-H6).
-After: "Thank you for letting us know. Please talk to your doctor or pharmacist about
-this. [GAP: needs a decision — contact route — from your safety reporting procedure]".
+After: "Thank you for letting us know. [GAP: needs a decision; a line telling readers who to ask; use your approved patient wording] [GAP: needs a decision; contact route; from
+your safety reporting procedure]".
 
 **P10 Health details collected in public.** The reply asks the commenter for their age,
 dose and other medicines under the post. Why: follow-up is the safety function's job, by
@@ -136,13 +143,13 @@ the route its procedure sets, and health details in public expose the person (S5
 privacy good practice).
 After: point to a private route the procedure sets, or leave a gap for it.
 
-## Part A: safety statements
+### Part A: safety statements
 
 **C1 The remembered dose.** A dosing table filled in from what the assistant "knows".
 Why: doses differ by market, formulation and label version, and a wrong dose can harm
 (S10 to S12).
-Before: "Adults: 20 mg once daily." (No label supplied.) After: `[GAP: not supplied —
-adult dose — from section 4.2 of the approved label]`. (TR-H1, TR-H8)
+Before: "Adults: 20 mg once daily." (No label supplied.) After: `[GAP: not supplied ; 
+adult dose; from section 4.2 of the approved label]`. (TR-H1, TR-H8)
 
 **C2 The generalized population.** Label: "No dose adjustment is required in patients with
 mild hepatic impairment (Child-Pugh A)." Draft: "No dose change needed for liver
@@ -179,10 +186,10 @@ After: the label's statements on dose reduction, quoted, with no recommendation 
 patient.
 
 **C10 The undated label.** Safety content quoted from a label with no revision date.
-After: `[GAP: out of date or unclear date — label revision date — confirm the current
+After: `[GAP: out of date or unclear date; label revision date; confirm the current
 approved label]`.
 
-## Part A: patient language
+### Part A: patient language
 
 **L1 Complete safety.** "Corvelan is completely safe." After: say what the leaflet says
 about side effects; drop "safe". (TR-H3, TR-H6)
@@ -190,15 +197,16 @@ about side effects; drop "safe". (TR-H3, TR-H6)
 **L2 No side effects.** "Most people have no side effects." (Not in the leaflet.)
 After: the leaflet's side-effect wording, or a gap.
 
-**L3 The stop instruction.** "You can stop taking it once you feel better." After: "Talk
-to your doctor before stopping or changing your treatment," or the leaflet's own words.
+**L3 The stop instruction.** "You can stop taking it once you feel better." After: the
+leaflet's own words on stopping, or, when the leaflet has none, remove it and leave
+`[GAP: needs a decision; a line telling readers who to ask; use your approved patient wording]`.
 
 **L4 The double dose.** "If you miss a dose, take two next time." After: the leaflet's
 missed-dose instruction, quoted, or a gap.
 
 **L5 No route out.** A two-page leaflet with no line telling the reader whom to ask.
-After: "If you have any questions, or if something does not feel right, talk to your
-doctor, nurse or pharmacist." (S13, good practice)
+After: the leaflet's or the person's approved route line, kept as written, or
+`[GAP: needs a decision; a line telling readers who to ask; use your approved patient wording]`. Never new wording. (S13, good practice)
 
 **L6 The fear lever.** "Skipping doses can be deadly." After: the leaflet's wording on
 taking it as prescribed, and the route line.
@@ -212,13 +220,43 @@ quote a supplied, dated source with its size; `grounded-statements` owns the fig
 **L9 The invented hotline.** A phone number or reporting website added to "help". After:
 only a route the person supplied; otherwise a gap. (TR-H1)
 
-# Failure modes
+## Part 3: Gap rules
+
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/knowledge.md` (Part 2).
+
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+| Class | Typical case in this skill |
+|---|---|
+| `not supplied` | No label, or the supplied part of the label does not hold the dose, warning, interaction or population the draft needs |
+| `conflicting` | Two supplied labels (two versions, two markets, SmPC and leaflet) give different wording for the same statement |
+| `out of date or unclear date` | The label has no revision date, or the person is unsure it is the current approved version |
+| `not checkable here` | Whether the supplied label is the current approved one for this market, when no label-source companion is connected |
+| `needs a decision` | How a reply mentions a reported event; which contact route a public reply gives; whether a product named in a report is the company's |
+
+Wording rules:
+
+- Name the exact item and the label section: "adult dose in moderate renal impairment,
+  section 4.2", not "dosing information".
+- Never hint at a value inside a gap ("usually 10 mg").
+- "The label does not address X" is a finding only when the complete label was supplied
+  and read. Otherwise use `not supplied`.
+- **A safety flag is never a gap.** A possible side effect, pregnancy or breastfeeding exposure, overdose,
+  misuse or off-label use reported for a person, medication error, lack of effect or
+  product quality problem is always written as a flag in the
+  format of `templates/safety-flag.md`, never as `[GAP]`, and never left for later.
+- A gap never stands in for a judgment the skill must not make. Do not write
+  `[GAP: needs a decision; whether reportable]`; write the flag and point to the
+  procedure.
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
 | FM-PS-01 | Invented dosing/AE advice | Is any dose or AE management not quoted from label/material? | Safety | TRUSTED patient-safety | VERIFIED practice |
 | FM-PS-02 | Softened mentioned harm | Was a stated side effect softened to "usually fine"? | Safety tone | ABPI 6.4 | PARTIAL |
 | FM-PS-03 | HCP reply without MI process | Does the draft imply send-without-review for a doctor question? | Process | Company MI SOP (named not replaced) | [CHECK] |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `patient-safety`. Shared FM-08 is universal Prove honesty.
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

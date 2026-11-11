@@ -1,88 +1,113 @@
-# Rendered example: patient letter repair (sourced draft)
+# Worked example: a one-page patient letter from a clinician memo
 
-Invented teaching case only ("Medicine X", figures fictional). Shape of a full bundle after
-`fit-for-reader` repair: patient-facing text, reader card, repair note, gap list, check-line stamp.
+Invented case for teaching. "Medicine X" and the memo are fictional.
 
-## Context
+## Context card (from trusted-intake, already in the conversation)
 
-- **Reader:** Adult patient starting Medicine X (supplied clinician memo).
-- **Deliverable:** One-page patient letter (asked for).
-- **Material supplied:** Internal memo: Medicine X 50 mg once daily with food; nausea in
-  about 1 in 10 people; severe allergic reaction rare; call doctor if rash or swelling;
-  do not stop without talking to your doctor.
-
-## Reader card (`templates/reader-card.md`)
-
-```text
-Reader: patient (adult, lay)
-Decides: whether to start Medicine X and when to call the doctor
-Depth: what the medicine is for, how to take it, common and serious side effects, next step
-Vocabulary: everyday words; medical term only with plain explanation
+```
+Reader          adults newly prescribed Medicine X                 (stated)
+Deliverable     one-page patient letter                            (stated)
+Material        a clinician memo; no patient leaflet supplied
+Stakes          leaving the company
+Next process    your medical review process, as your company uses it for patient material
 ```
 
-## Fixed patient letter (person-facing)
+## Request
+
+"Turn this into a letter our patient support team can send. One page."
+
+## Material supplied
+
+> (Clinician memo) Medicine X 50 mg once daily with food. Nausea in about 1 in 10
+> people. Severe allergic reaction is rare. Call your doctor if rash or swelling. Do not
+> stop without talking to your doctor.
+
+## Draft supplied
+
+> Medicine X 50 mg qd with food. The adverse event profile is characterized by nausea
+> (about 10%); hypersensitivity reactions are rare. Contact your physician in case of
+> exanthema or edema. Discontinuation requires physician consultation. Optimize
+> concomitant therapy through adherence.
+
+## Revised letter
 
 > **Starting Medicine X**
 >
-> Your doctor has prescribed Medicine X to help with [GAP: indication wording not supplied —
-> use approved patient wording from your label team].
+> Your doctor has prescribed Medicine X to help with [GAP: not supplied; what Medicine
+> X is for, in approved patient wording; from your label or patient information team].
 >
-> **How to take it.** Take one 50 mg tablet once a day with food.
+> **How to take it.** [GAP: not supplied; the dose and how to take it, in approved
+> patient wording; from the approved patient leaflet or label]
 >
-> **Side effects.** About 1 in 10 people feel sick to their stomach (nausea). A severe
-> allergic reaction is rare. Get medical help straight away if you get a rash, swelling of
-> the face or throat, or trouble breathing.
+> **Side effects.** About 1 in 10 people feel sick (nausea). A severe allergic reaction
+> is rare. Call your doctor if you get a rash or swelling.
 >
-> **Do not stop on your own.** Talk to your doctor before you stop taking this medicine.
+> **Do not stop on your own.** Talk to your doctor before you stop taking Medicine X.
 
-## Repair note (`templates/repair-note.md`, short header)
+## Repair note (as the person sees it)
 
-Fit for reader: what I changed and left open (draft, not yet reviewed)
+What I changed for patients and why (Uncleared draft)
 
-Based on: clinician memo, 4 November 2026 (internal).
+Written for: adults newly prescribed Medicine X, who need to know how to take it and
+when to call their doctor.
+Format: one page, as asked.
+
+Passages changed: 3. Terms replaced or explained: 4 ("qd" went out with the dose, which
+is now a gap). Passages cut or moved: 1. Gaps left: 2.
 
 Changed
-1. Replaced "concomitant therapy" and "adverse event profile" with plain sentences above.
-2. Cut the four-page draft to one page; moved repetition into a single side-effects
-   paragraph.
-3. Removed "completely safe" — not in the memo.
+1. "The adverse event profile is characterized by nausea (about 10%); hypersensitivity
+   reactions are rare" → "About 1 in 10 people feel sick (nausea). A severe allergic
+   reaction is rare." Same facts, everyday words; your memo says severe, so the word
+   stays.
+2. "exanthema or edema" → "a rash or swelling", the words your memo uses.
+3. "Discontinuation requires physician consultation" → "Talk to your doctor before you
+   stop taking Medicine X", in your memo's own meaning. Kept on purpose, even though the
+   letter would be shorter without it.
 
-Left open
-1. Indication sentence — needs approved patient wording from your label review.
+Cut or moved
+1. "Optimize concomitant therapy through adherence". The memo gives no instruction about
+   other medicines, so there was nothing to say in plain words.
 
-Next step: medical review and, if required, user testing of the patient leaflet process.
+Left as gaps for you to fill
+1. What Medicine X is for, in approved patient wording, from your label or patient
+   information team.
+2. The dose and how to take it. A dose in a patient letter comes only from the approved
+   label or patient leaflet; your memo is neither, so the memo's dose is not carried in.
 
-## Finding cards (shared `../../templates/finding-card.md`)
+Before use: the side-effect wording and the lines about calling or talking to your
+doctor come from your memo, not the approved patient leaflet. Check them against it
+before use, as patient safety wording.
 
-### Finding 1
-- **Draft line:** "Optimize concomitant therapy through adherence."
-- **Issue:** Clinician language; patient cannot act on it.
-- **Action:** Rewrote as how-to-take and when-to-call-doctor bullets.
+Next step: this goes through your medical review process before it is used.
 
-### Finding 2
-- **Draft line:** Four pages for a one-page request.
-- **Issue:** Deliverable fit failure.
-- **Action:** Restructured to one page; listed cuts in this note.
+I changed the words, not the facts: every figure, condition and limit in your memo is
+still in this version, except the dose, which is left as a gap. I did not test it with
+readers.
 
-## Open items (`../../templates/gap-list.md`)
+## Why it is written this way
 
-```text
-Open items
-1. Indication wording — not in memo — next: Label / medical writing
+- The memo's own words, "rash or swelling" and "call your doctor", are the only
+  guidance given. No symptom, instruction, dose form or emergency advice was added.
+- Where the reader's route to care needs more than the memo says, that belongs to the
+  Safe check, not to a reading-level change.
+- The gaps hold the place of the indication, which the memo does not give, and of the
+  dose: a dose reaches a patient only from a label the person supplied, and a clinician
+  memo is not one. The note says so in one line and points to the Safe check of patient
+  wording, without doing that check here.
+- Patient material gets the full repair note even though it is short.
+- The note and the check line count the same draft: 5 passages above the reader's level
+  (3 changed, 1 cut, 1 replaced by the dose gap) and 5 terms (4 replaced, "qd" gone with
+  the dose).
 
-Not yet checked
-- User testing (EU Article 59(3) process) — not run by this skill
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / fit-for-reader: not tool-checked (offline tools) · audience: 12→4 clinician terms; deliverable: 4pp→1pp
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Fit · audience: 12 clinician terms flagged → 4 replaced with plain wording (not tool-checked)
-Fit · deliverable: 4 pages → 1 page per request (not tool-checked)
+Tangible · fit for the reader: written for adults newly prescribed Medicine X, 5 passages above that reader's level, 5 terms or abbreviations not explained (not tool-checked)
+  - the first sentence uses "qd"
+  - the side-effects sentence uses "adverse event profile" and "hypersensitivity"
+  - "exanthema" and "edema" are in the sentence about calling the doctor
+  - "Discontinuation requires physician consultation" and "Optimize concomitant therapy
+    through adherence" are above that reader's level
+Tangible · format: asked for one page, delivered as asked (not tool-checked)
 ```

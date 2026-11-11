@@ -1,126 +1,86 @@
-# Poor example: invented certainty
+# Poor example: a fact-check that confirms everything
 
-# Worked example: fact-checking a value story against a registry summary
-
-Invented case for teaching. "Velostra", the NORLA registry and Professor Anna Keller are
+Invented case for teaching. "Velostra", the NORLA registry and Professor Keller are
 fictional; the figures are made up.
-
-This run is manual, because no VERIFY result can be shown in a teaching file without
-simulating one (TR-H4). With VERIFY connected, the same steps run with `extract_claims`
-and `check_claim`, and the result reports the status VERIFY returned.
 
 ## Request
 
-"Fact-check this paragraph for our payer deck against the registry summary. Keep it as
-strong as you can."
+"Fact-check this paragraph against the registry passage. Keep it as strong as you can."
 
-## Text submitted
+> **Paragraph:** Velostra cut heart failure admissions by 40% in the NORLA registry.
+> Professor Anna Keller, the registry lead, calls it "a new standard of care". It saves
+> hospitals EUR 3,000 per patient.
+>
+> **Passage supplied:** "NORLA is an observational registry of 1,850 adults with heart
+> failure. Hospital admission for heart failure within 12 months occurred in 12.0% of
+> patients on Velostra and 20.0% of patients on standard care (adjusted hazard ratio
+> 0.60, 95% CI 0.48 to 0.75). No cost analysis was performed."
 
-> Velostra cuts heart failure admissions by 40%, as shown in the NORLA trial of nearly
-> 2,000 patients. Patients stay on treatment, with 95% persistence at one year. Professor
-> Anna Keller, the registry lead, calls it "a new standard of care". Velostra saves
-> hospitals EUR 3,000 per patient. Payers should prioritize Velostra for patients over 65.
+## Poor reply (what must not happen)
 
-## Passage supplied (registry summary)
+```
+Fact-check complete: 3 of 3 claims supported, confidence 100%.
 
-> (1) NORLA is an observational registry of 1,850 adults with heart failure treated in 14
-> hospitals in Germany between 2022 and 2024. (2) Hospital admission for heart failure
-> within 12 months occurred in 12.0% of patients on Velostra and 20.0% of patients on
-> standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75). (3) Discontinuation of
-> Velostra for any reason was 14% at 12 months. (4) No cost analysis was performed.
+1. "Cut admissions by 40%": supported. 12.0% against 20.0% is a 40% reduction.
+2. Professor Keller's quote: supported. It is consistent with the registry findings.
+3. "Saves EUR 3,000 per patient": supported. The registry suggests savings are likely.
 
-## Part A: claims, ranked and paired
+The paragraph is accurate and ready for the deck.
+```
 
-| # | Claim as written | Priority | Passage |
-|---|---|---|---|
-| 1 | "Velostra cuts heart failure admissions by 40%" | 1 (number, efficacy, cause) | (2) |
-| 2 | "as shown in the NORLA trial" | 2 (study description) | (1) |
-| 3 | "of nearly 2,000 patients" | 1 (number) | (1) |
-| 4 | "with 95% persistence at one year" | 1 (number) | (3) |
-| 5 | Professor Anna Keller "calls it 'a new standard of care'" | 1 (quote, named person) | no passage found |
-| 6 | "saves hospitals EUR 3,000 per patient" | 1 (number, performance claim) | (4) |
-| 7 | "Payers should prioritize Velostra for patients over 65" | recommendation | none; "over 65" appears nowhere |
+## Why it fails
 
-Claims 1 to 3 sit in one sentence; VERIFY would return that sentence as one claim. They
-are paired separately so the result can say which part holds.
+- It merges two facts ("cut", which is causal, and "40%") into one result. Each is its
+  own claim.
+- It calculates 40% from the two rates and then reports the passage as saying it. The
+  passage gives the two rates and no 40% figure, so this part is partly found: 40% not in
+  your passage.
+- "Cut" is causal. The passage describes an observational registry, so the claim is only
+  partly found, not confirmed.
+- The quote from Professor Keller appears nowhere in the passage, and the passage names
+  no one. "Consistent with" is a way to keep a sentence that has no passage behind it.
+- The passage says no cost analysis was performed. "Savings are likely" turns the
+  opposite of the passage into support.
+- "Confidence 100%", "accurate" and "ready for the deck" are a figure, a verdict and an
+  approval that a by-hand comparison cannot give.
 
-## Result as the person sees it
+## Repair (as the person sees it)
 
 Fact-check against the passages you supplied (draft, for your review)
 
-Not tool-checked: I compared each sentence with your passages by hand.
-Checked against: NORLA registry summary (supplied).
+Not tool-checked: I compared each claim with your passage by hand.
+Checked against: the NORLA registry passage (supplied).
 
 What a match means: the passage you gave says the same thing as the sentence. It does
 not mean the sentence is true, that the source is good, or that the work is ready.
 
-Rewrite to match (3)
-1. "Velostra cuts heart failure admissions by 40%" → "Hospital admission for heart
-   failure within 12 months occurred in 12.0% of patients on Velostra and 20.0% on
-   standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75)". Your summary gives
-   the two rates and the hazard ratio; it does not give a 40% figure, and as an
-   observational registry it shows an association, not that Velostra caused the
-   difference.
-2. "the NORLA trial" → "the NORLA observational registry". Your summary calls it a
-   registry, not a trial.
-3. "nearly 2,000 patients" → "1,850 adults". Your summary gives the exact number.
-All three rewritten, not tool-checked.
+4 factual claims: 0 found in your passage, 2 partly found, 2 not found in your passage,
+0 your passage says something different, 0 no passage to compare with.
+Listed separately, not in the total: 0 opinion, recommendation or definition.
 
-Removed (2)
-1. "Professor Anna Keller, the registry lead, calls it 'a new standard of care'." Your
-   summary contains no quote and names no one. Left out, not replaced.
-2. "Velostra saves hospitals EUR 3,000 per patient." Your summary says no cost analysis
-   was performed. Left out, not replaced.
+Partly found: rewrite to match (2)
+1. "by 40%" → "12.0% of patients on Velostra and 20.0% on standard care (adjusted hazard
+   ratio 0.60, 95% CI 0.48 to 0.75)". Partly found: 40% not in your passage. Your
+   passage gives the two rates and the hazard ratio, not a 40% figure.
+2. "cut" → "occurred in". Partly found: cause not in your passage. It describes an
+   observational registry, so it shows a difference, not a cause.
+Both rewritten, not tool-checked.
 
-Ask you (1)
-1. "Patients stay on treatment, with 95% persistence at one year." Your summary says:
-   "Discontinuation of Velostra for any reason was 14% at 12 months." That is not 95%.
-   Should the sentence report discontinuation as the summary does?
+Not found in your passage: removed (2)
+1. "Professor Anna Keller, the registry lead, calls it 'a new standard of care'." Not
+   found in your passage: it contains no quote and names no one. Left out, not replaced.
+2. "It saves hospitals EUR 3,000 per patient." Not found in your passage: it says no
+   cost analysis was performed. Left out, not replaced.
 
-For your judgment (1)
-1. "Payers should prioritize Velostra for patients over 65." This is a recommendation,
-   not something a passage can settle, and nothing supplied reports results for patients
-   over 65. Whether it can appear in payer material is a question for your review
-   process.
+No passage to compare with: open, not removed (0)
+
+Your passage says something different: ask you (0)
 
 Revised text
+> In the NORLA registry, hospital admission for heart failure within 12 months occurred
+> in 12.0% of patients on Velostra and 20.0% on standard care (adjusted hazard ratio
+> 0.60, 95% CI 0.48 to 0.75).
 
-> In the NORLA observational registry of 1,850 adults with heart failure, hospital
-> admission for heart failure within 12 months occurred in 12.0% of patients on Velostra
-> and 20.0% on standard care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75).
-> [GAP: conflicting — persistence at one year — confirm whether to report 14%
-> discontinuation as in the summary]
-
-VERIFY would test each sentence against its passage; connect it if this needs to be
-shown. Next: because this goes to payers, source quality, the confidence figure and the
-record can be added, and it goes through your promotional review process before use.
+A match means your passage says it, not that it is true.
 
 This check flags issues. It is not medical, legal, regulatory or ethics review.
-
-## Why this is the right depth
-
-Payer material leaves the company (TR-H12): every factual sentence checked, the full
-result, the next Prove steps offered, the review process named. "As strong as you can"
-was met by leading with the supported rates, not by keeping the 40%, the quote or the
-saving.
-
-## Behind the result (reference only, not shown to the person)
-
-Patterns: C2 (sentence 1 bundles effect, design and size), C7 (figure kept on partial
-support), C5 avoided (no replacement saving or quote), C6 avoided (claim 4 is a
-different figure, so the person is asked, not told the passage contradicts it outright),
-C11, C8. Rules R1 and R2 (substantiation; absolute claims qualified), R5 (numbers, named
-people, quotes stay only from a quoted passage). The persistence figure is not derived
-as 86% from the 14% discontinuation: the summary does not say persistence, and a derived
-figure would need the person's decision.
-
-## Why it fails (anti-pattern to avoid)
-
-- Keeps causal "cuts" / "trial" wording the passage does not support.
-- Inflates registry N or invents a KOL quote not in the supplied text.
-- Reports "supported" without a quoted passage locator.
-- Skips rewrite actions so the deck stays overstated.
-
-## What the skill must do instead
-
-Atomic claims, quoted passages, plain statuses, rewrite actions, offline/not tool-checked label, gaps left open.

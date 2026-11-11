@@ -1,91 +1,105 @@
-# Rendered example: UK HCP email repair (sourced draft)
+# Worked example: a US email adapted for hospital doctors in the United Kingdom
 
-Invented teaching case only ("Product Z"). Shape of a full bundle after `market-rules-and-data`
-repair: jurisdiction named, statements list, market note, gap list, check-line stamp.
+Invented case for teaching. "Ravelon", the study and the figures are fictional.
 
-## Context
+## Context card (from trusted-intake, already in the conversation)
 
-- **Jurisdiction:** United Kingdom (ABPI Code 2024 applies as usual practice).
-- **Reader:** Hospital doctors (promotional email).
-- **Material supplied:** US slide deck text pasted into draft ("FDA-approved", no PI link);
-  draft job code typed as "TBC"; patient surname in case vignette.
+```
+TRUSTED context: promotional email to hospital doctors
 
-## Fixed email excerpt (person-facing)
+Reader          hospital doctors                                    (stated)
+Market          United Kingdom                                      (stated)
+Product status  approved in the UK per your label                   (read)
+Use             promotional                                         (stated)
+Deliverable     email                                               (stated)
+Material        UK label excerpt; US deck text; study summary
+Stakes          leaving the company
+Next process    your promotional review process for the UK
+```
 
-> Subject: Product Z — updated efficacy summary for hospital use (UK)
+## Request
+
+"Adapt this US email for hospital doctors in the UK."
+
+## Material supplied
+
+> **UK label excerpt (as supplied, revision date July 2026):** Ravelon is indicated for
+> the treatment of moderate to severe plaque psoriasis in adults who are candidates for
+> systemic therapy.
+> **US email text (as supplied):** "Ravelon is FDA-approved for adults with moderate to
+> severe plaque psoriasis. In RAV-1, 62% of adults had clear or almost clear skin at
+> week 16 versus 9% on placebo. In one of our patients, Mr. Hale, treated on ward 4, the
+> skin was clear within 12 weeks." Job code typed as "TBC". No prescribing information
+> link.
+> **Study summary (RAV-1, as supplied):** randomized, placebo-controlled, 16 weeks. Clear
+> or almost clear skin at week 16: 62% versus 9% on placebo.
+
+## Revised email (as the person sees it)
+
+> Subject: Ravelon: results at week 16 for hospital doctors in the UK
 >
-> [Body uses only claims supported by the UK SmPC excerpt the person supplied.]
+> Ravelon is indicated for the treatment of moderate to severe plaque psoriasis in
+> adults who are candidates for systemic therapy.
 >
-> Product Z (INN placeholder per SmPC) is indicated for …
+> In RAV-1, a randomized, placebo-controlled study, 62% of adults on Ravelon had clear
+> or almost clear skin at week 16, versus 9% on placebo.
 >
-> **Prescribing information:** [GAP: single-click PI link or full PI text — supply from your
-> approval system]
+> This email is intended for UK healthcare professionals.
 >
-> **Date created or last revised:** [GAP: not supplied — supply from MLSR]
->
-> **Adverse events:** Adverse events should be reported. Reporting forms and information can
-> be found at https://yellowcard.mhra.gov.uk/. Adverse events should also be reported to
-> [GAP: company reporting line — supply from medical information]
->
-> **Job code:** [GAP: approved job code — supply from promotional review]
+> **Prescribing information:** [GAP: not supplied; prescribing information or a direct link to it; from your approval system]
+> **Date of preparation:** [GAP: not supplied; date of preparation; set at approval]
+> **Adverse events:** Adverse events should be reported. Reporting forms and information can be found at [GAP: not supplied; link to the UK reporting scheme for suspected side effects; from your prescribing information owner]. Adverse events should also be reported to [GAP: not supplied; the company's reporting contact; from your medical information team]
+> **Job code:** [GAP: not supplied; approved job code; from your approval system]
 
-Case vignette: generalized to "a hospital patient" — identifiers removed (see privacy note).
+## Note to the person
 
-## Statements list (`templates/statements-list.md`, UK)
+Market and statements (Uncleared draft)
 
-| Statement | Status |
-|---|---|
-| Prescribing information (Cl. 12) | GAP — person must supply link or text |
-| Date of preparation / revision (Cl. 12.4) | GAP |
-| Adverse event reporting (Cl. 12.6) | Wording in place; company line GAP |
-| Non-proprietary name with brand (Cl. 12.4) | From supplied SmPC excerpt |
-| Job / material code | GAP |
-| Black triangle if required | [CHECK] — confirm with PI |
-
-## Market note (`templates/market-note.md`, short header)
-
-Market and statements (draft, not yet reviewed)
-
-Written for: **United Kingdom**, hospital doctors, promotional email, from supplied SmPC
-excerpt and US deck (US-only claims removed).
+Written for: United Kingdom, hospital doctors, a promotional email, from the UK label
+excerpt and the US text you supplied.
 
 Changed for the market
-1. "FDA-approved" removed — wrong jurisdiction for UK readers; replaced with UK marketing
-   authorization wording only where SmPC supports it.
+1. "FDA-approved" → "indicated for ..." in the words of your UK label. FDA approval
+   tells a UK doctor nothing about use in the UK.
 
-People
-Personal identifiers removed from the case vignette; details not repeated in this note.
+Statements usually expected for a promotional email in the UK
+(from the rules read for this market)
 
-Next step: your promotional review process for the UK before send.
+- Prescribing information, or a direct link to it ........ placeholder left
+- Date of preparation or last revision ................... placeholder left: set at approval
+- Side-effect reporting statement ........................ in the draft, link and company to fill
+- Audience statement (who the material is for) .......... in the draft (usual practice)
+- Job code ............................................... placeholder left: from your approval system
 
-## Open items (`../../templates/gap-list.md`)
+Not filled in by me: job code, dates, links and prescribing information text. They come
+from your approval system and the approved label.
 
-```text
-Open items
-1. PI link or embedded PI — UK MLSR — next: Supply from approval system
-2. Job code — next: Supply from promotional review
-3. Company adverse-event reporting line — next: Medical information
-4. Date of preparation — next: Supply from MLSR
+People in this email
 
-Not yet checked
-- Whether black triangle applies — confirm on PI
+I left out the patient's name and the ward from the US text, and I did not keep the
+case, because the study figures make the point. Other details could still point to
+someone, so I haven't called it anonymous; your data privacy function decides that, and
+whether a case can be used at all.
+
+Next step: this goes through your promotional review process for the UK before it is
+used. The list above is what is usually expected; the UK industry code may add
+elements, and that process checks them and holds the full list.
+
+## Why it is written this way
+
+- The market is named by the person, so the rules read are that market's, with no
+  assumption that US wording carries over.
+- The side-effect reporting link, the company contact, the date and the job code are
+  left for the person, because they come from an approval system and none were supplied.
+- No statement says the email follows the UK code or is ready. The note names the
+  process that decides.
+- The patient details are not repeated anywhere in the note.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Privacy note (`templates/privacy-note.md`)
-
-One case vignette held a patient surname and ward; both were removed from the draft output.
-Whether the vignette may be used at all is for your privacy function.
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / market-rules-and-data: not tool-checked (offline tools) · jurisdiction: US→UK; statements: 4 gaps; privacy: 1 vignette scrubbed
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Market · jurisdiction: 1 US-only approval phrase removed for UK (not tool-checked)
-Market · statements: 4 expected items open (not tool-checked)
-Market · privacy: 1 identifiable vignette generalized (not tool-checked)
+Rule-compliant · market: United Kingdom, 1 statement that may not be allowed there (not tool-checked)
+Rule-compliant · required statements: 4 missing for this kind of material, as the person's market and process define them (not tool-checked)
+Rule-compliant · personal data in the output: 0 items that could identify a patient or person (not tool-checked)
+  - 1 patient name and ward from the US text kept out of the draft
 ```

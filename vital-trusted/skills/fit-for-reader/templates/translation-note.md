@@ -1,7 +1,15 @@
 # Output format: translation note
 
-Follows the translation. Plain language (TR-H13). Always the full note: a translation is
-always treated as leaving the company or reaching a new reader.
+Follows the translation. Plain language (TR-H13). Two forms:
+
+- **Full note** (below): when the translation will leave the company, is patient
+  material, regulated product information, safety, consent or legal text, or the person
+  asks for the note.
+- **Short form**: a translation asked as a plain edit for internal reading (a colleague's
+  email, team notes). The translated text, then only the "Terms to confirm against the
+  approved <target language> product information" list and, if dose, warning or
+  required-statement sentences were translated, the line saying the approved wording
+  replaces them before any use outside the company. Nothing else.
 
 ```
 About this translation (draft for a qualified translator and your review in <country>)
@@ -13,18 +21,27 @@ Numbers and units
 <Every number and unit is as in the original, in <target language> notation (for example
 2.5 mg written 2,5 mg). | Differences: …>
 
-Terms for a qualified translator or your approved wording
-1. "<original term>" → "<term used>" — <why it needs confirming, e.g. "side-effect term;
-   should match the approved <language> product information">
+Terms to confirm against the approved <target language> product information
+1. "<original term>" → "<translated term>": translated here, because no approved
+   <target language> wording was supplied. <Why it needs confirming, e.g. "side-effect
+   term">. If you supplied approved wording: "<original term>" → "<approved term>", as
+   you supplied it.
 2. ...
+
+<If dose, warning, contraindication or required-statement sentences were translated:>
+The dose, warning and required-statement sentences above are my translation; the approved
+<target language> label text or approved local wording replaces them before any use
+outside the company.
 
 Choices I made
 1. <where natural wording and literal wording differ, what I chose and why the meaning
    stays the same>
 
 Not translated
-1. <anything left in the original language on purpose: product name, study name, a
-   term with no confirmed local wording>
+1. <anything left in the original language on purpose: product name, study name>
+
+<If the market is named:> Language and promotional requirements in <country> are for
+your regulatory or legal function there to check.
 
 Next step: a qualified medical translator and your <kind of review process> in <country>
 settle the wording before it is used.

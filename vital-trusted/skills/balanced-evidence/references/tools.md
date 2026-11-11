@@ -2,18 +2,18 @@
 
 ## Companion slot
 
-No companion exists for this skill at launch. Both tasks run fully as method from the
-supplied material. This skill never calls VERIFY or any other connector.
+Both tasks run fully as method from the supplied material. This skill uses no tool or
+connector.
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
-| Fair balance | Read the approved label or the full safety tables for the product and market, and list the risks, warnings and discontinuation figures a piece about that benefit would normally carry, for the medical reviewer to choose from | None yet. Candidates in the product concept: an MLR preparation companion and a label source companion. Neither exists. | Method runs from what was supplied; missing risk data marked `[GAP: not supplied — …]`; check line says "not tool-checked" |
-| Selective reporting | List every registered study of the product for the use, and every registered primary and secondary outcome and time point, so the draft can be compared with the whole set and not only with what was supplied | None yet. `[CHECK]`: a trial registry or literature companion is not in the concept's candidate list; for the owner to decide. | Method compares the draft with the supplied material only; whether other studies exist is asked, never assumed, and marked `[GAP: not checkable here — …]` |
+| Fair balance | Read the approved label or the full safety tables for the product and market, and list the risks, warnings and discontinuation figures a piece about that benefit would normally carry, for the medical reviewer to choose from | None | Method runs from what was supplied; missing risk data marked `[GAP: not supplied; …]`; check line says "not tool-checked" |
+| Selective reporting | List every registered study of the product for the use, and every registered primary and secondary outcome and time point, so the draft can be compared with the whole set and not only with what was supplied | None | Method compares the draft with the supplied material only; whether other studies exist is asked, never assumed |
 
-What VERIFY does not do here: VERIFY tests whether a sentence is supported by a supplied
-passage (through `claim-assessment`). It does not test whether a passage that should be
-in the draft was left out. A draft can score well on support and still omit every
-side effect. Do not present a VERIFY result as evidence of balance (TR-H4).
+What a hand comparison does not do here: `claim-assessment` compares a sentence with a
+supplied passage. It does not test whether a passage that should be in the draft was left
+out. A draft can have every sentence found in its passage and still omit every side
+effect. Do not present a hand-check result as evidence of balance (TR-H4).
 
 ## Script
 

@@ -1,23 +1,33 @@
 # Output format: check line for trusted-check
 
-Returned to `trusted-check` only, never shown at the end of a direct reply. One line, in
-plain words. Counts only; no verdict words (TR-H3, TR-H13). It matches the Defensible row
-of the TRUSTED summary.
+Returned to `trusted-check` only, never shown at the end of a direct reply. This file is the
+one source for the Defensible line: `trusted-check` prints it in the Defensible row of the
+TRUSTED summary, and `citation-and-record` adds only its own formal record line. Counts
+only; no verdict words (TR-H3, TR-H13). Every line ends "(not tool-checked)".
 
 ```
-Defensible · record: <n> materials, <n> assumptions, <n> open items (<n> without an owner); <status: uncleared draft | reviewed by a named person, not approved | approved by a named person, as stated>
+Defensible · record: <n> materials, <n> assumptions, <n> open items (<n> without an owner); <status> (not tool-checked)
+```
+
+`<status>` is one of three forms, plus the "Uncleared draft (...)" placeholders in `status-line.md`, and no others:
+
+- `Uncleared draft`
+- `Uncleared draft, reviewed by <name>, as you told me` (only when the person said it)
+- `Cleared by <name>, <role>, <date>`
+
+Comments received are a note under "Uncleared draft", not a status:
+
+```
+  - comments from <name> received <date>, as you told me
 ```
 
 Add when they apply:
 
 ```
-Defensible · status words: <n> in the text with no named person behind them
-Defensible · not known: <n> record entries the person could not supply (for example, file versions)
-Defensible · formal record: <not built, no named clearer | not built, VERIFY not connected | built with VERIFY, cleared by a named person>
+Defensible · status words: <n> in the text with no named person behind them (not tool-checked)
+Defensible · not known: <n> record entries the person could not supply, for example file versions (not tool-checked)
 ```
 
-If the work is internal and quick and no record was made:
+The formal record line comes from `citation-and-record`, not from this skill.
 
-```
-Defensible · no record needed for internal note
-```
+When no record was made, for example an internal quick note, return no line.

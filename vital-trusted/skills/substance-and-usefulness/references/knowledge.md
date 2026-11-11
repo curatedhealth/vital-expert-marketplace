@@ -1,8 +1,17 @@
 # Knowledge: substance-and-usefulness
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Rules behind this skill
+## Contents
+
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
+
+## Part 1: Rules
 
 Each rule names its source, the date and how it was confirmed. A rule marked `[CHECK]`
 has not been confirmed against the primary document and is applied as good practice,
@@ -17,11 +26,11 @@ compliance requirement, and is never described to the person as one.
 
 | Id | Rule | Source | Scope | Status |
 |---|---|---|---|---|
-| U0 | Tangible asks whether the work is useful to this reader for this job: relevant, concrete, practical, actionable. Tangible pushes toward specifics; True forbids inventing them, so a vague draft gets a question or a `[GAP]`, never a supplied specific. Tangible judges usefulness, not style. | VITAL TRUSTED product concept v0.4, §5 (standard and boundaries), 20 October 2026; hard rules TR-H2 and TR-H9 in `trusted-capability-map`. | All work | Owner-stated design rule, approved 20 October 2026. |
-| U1 | Plain-language documents are built on four governing principles: readers get what they need (relevant), can easily find it (findable), can easily understand it (understandable) and can easily use it (usable). | ISO 24495-1:2023, Plain language — Part 1: Governing principles and guidelines, edition 1, published June 2023 (ISO catalogue entry, iso.org/standard/78907). | International; a voluntary standard | Title, edition, date and status confirmed from the ISO catalogue page on 20 October 2026. The wording of the four principles was read only on the International Plain Language Federation's page, not in the standard: `[CHECK]` against the standard text. Applied as good practice: relevant and usable underpin specificity, so what and actionability; findable underpins headings that carry meaning. |
+| U0 | Tangible asks whether the work is useful to this reader for this job: relevant, concrete, practical, actionable. Tangible pushes toward specifics; True forbids inventing them, so a vague draft gets a question or a `[GAP]`, never a supplied specific. Tangible judges usefulness, not style. | VITAL TRUSTED the TRUSTED standard (standard and boundaries), 20 October 2026; hard rules TR-H2 and TR-H9 in `trusted-capability-map`. | All work | Owner-stated design rule, approved 20 October 2026. |
+| U1 | Plain-language documents are built on four governing principles: readers get what they need (relevant), can easily find it (findable), can easily understand it (understandable) and can easily use it (usable). | ISO 24495-1:2023, Plain language, Part 1: Governing principles and guidelines, edition 1, published June 2023 (ISO catalogue entry, iso.org/standard/78907). | International; a voluntary standard | Title, edition, date and status confirmed from the ISO catalogue page on 20 October 2026. The wording of the four principles was read only on the International Plain Language Federation's page, not in the standard: `[CHECK]` against the standard text. Applied as good practice: relevant and usable underpin specificity, so what and actionability; findable underpins headings that carry meaning. |
 | U2 | Write for your audience; give each paragraph a topic sentence; for long documents, summarize at the start. | US federal plain language guidance, "Principles of plain language", Digital.gov (US General Services Administration), adapted from PlainLanguage.gov; page dated 11 September 2025. | US federal agencies, under the Plain Writing Act of 2010; voluntary for companies | The page was read on 20 October 2026 and gives "The first rule of plain language is: write for your audience" and "Have a topic sentence". The Plain Writing Act itself was not read: `[CHECK]`. Used here only as good practice for leading with the point (no fluff, so what). |
 
-## How to use these rules in output
+### How to use these rules in output
 
 - In what the person reads, explain the reason in plain words ("the board cannot act on
   'strong uptake' without the figure"). Do not cite ISO or the US guidance unless asked.
@@ -30,15 +39,13 @@ compliance requirement, and is never described to the person as one.
 - The company's own templates and writing standards, when the person supplies them, come
   before these sources (TR-H11).
 
-## Migrated patterns
-
-# Failure patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it breaks.
 All examples are invented for teaching; "Tavrelo", "Competitor B" and every figure are
 fictional.
 
-## Contents
+### Contents
 
 - Vague statements V1–V6
 - Fluff L1–L7
@@ -50,7 +57,7 @@ fictional.
 Pattern ids are for this file only. In what the person reads, describe the problem in
 plain words (TR-H13). U-ids refer to `references/method-standards.md` / `references/knowledge.md`.
 
-## Vague statements
+### Vague statements
 
 **V1 The faceless "stakeholders".** Who is meant is not said.
 Why: the reader cannot tell whom to call or whose view this is.
@@ -64,7 +71,7 @@ Before: "Uptake has been strong." After: "12% of new patients in September, up f
 
 **V3 Time with no date.** "Soon", "going forward", "in the near term", "shortly".
 Before: "We expect listing shortly." After: "Listing decision expected [GAP: not
-supplied — date or meeting — supply the payer's timetable]." (TR-H2)
+supplied; date or meeting; supply the payer's timetable]." (TR-H2)
 
 **V4 Comparison with no comparator.** "Ahead", "better", "lagging".
 Before: "Sales are ahead." After: "Q3 net sales CHF 2.4 million against plan CHF 2.9
@@ -79,7 +86,7 @@ Before: "We will optimize our access approach." After: the action the notes reco
 Why: when everything is a priority the reader cannot act on any.
 After: rank by the person's stated criterion, or ask which matter most. (TR-H7)
 
-## Fluff
+### Fluff
 
 **L1 Buzzword for a meaning.** "Leverage synergies across the stakeholder landscape."
 Why: the sentence has no object a reader could act on.
@@ -112,7 +119,7 @@ landscape" as a slide title over named competitors.
 Why it matters: cutting a technical term changes the meaning.
 After: keep it. A list hit is a prompt to read, not a finding. (TR-H9)
 
-## So what
+### So what
 
 **W1 The fact list.** A competitor summary that lists Competitor B's launch date, price
 and trial readout and stops.
@@ -127,7 +134,7 @@ After: lead with it; the facts follow as support.
 **W3 The implication that adds a fact.** "This means Competitor B will take 15% share."
 Why: a forecast nobody supplied, dressed as a "so what".
 After: "If their launch date holds, they arrive in the same quarter as our listing
-decision [GAP: not supplied — share forecast — supply one if you want to size the
+decision [GAP: not supplied; share forecast; supply one if you want to size the
 risk]." (TR-H1)
 
 **W4 The implication that adds a cause.** "Sales fell because of Competitor B's
@@ -141,13 +148,13 @@ Why: clinical advice (TR-H6).
 After: the implication for the team's work ("the advisory board pre-read needs to
 present the missed primary endpoint first").
 
-## Action
+### Action
 
 **A1 No ask.** A board update that ends without saying what the board is asked to do.
 After: "For decision: …" or "For information; no decision needed."
 
 **A2 Action with no owner.** "Next steps: follow up with canton X."
-After: "Follow up with canton X [GAP: needs a decision — owner and date — name who
+After: "Follow up with canton X [GAP: needs a decision; owner and date; name who
 follows up, by when]." (TR-H5)
 
 **A3 The owner the assistant chose.** "The KAM will send the model by 31 October."
@@ -163,7 +170,7 @@ model is sent?"
 when the person asked for options.
 After: "Proposed for your decision: …", with what it rests on. (TR-H5)
 
-## Structure
+### Structure
 
 **K1 The invented 2x2.** "Impact vs Readiness" matrix with four named quadrants, axes
 undefined, placements by nobody's data.
@@ -188,11 +195,11 @@ After: the five steps, unlabeled, unless the person asked for a name.
 **K6 The buried conclusion.** The main finding sits after three slides of background.
 After: lead with it; keep the background as support.
 
-## Pairing traps (Tangible pushing into invention)
+### Pairing traps (Tangible pushing into invention)
 
 **P1 Concrete-looking numbers.** Asked to "make it more concrete", the draft gains
 "uptake rose 34% in six months" with no source.
-After: "[GAP: not supplied — uptake figure and period — supply the source]" and a short
+After: "[GAP: not supplied; uptake figure and period; supply the source]" and a short
 list of what to send. (TR-H1, TR-H2)
 
 **P2 Plausible owners and dates.** "Owner: Head of Market Access, by Q1 2027" added
@@ -203,13 +210,42 @@ After: ask; leave the gap. (TR-H5)
 vivid, when nobody supplied it.
 After: use only examples from the material, or ask for one. (TR-H1)
 
-# Failure modes
+## Part 3: Gap rules
+
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/knowledge.md` (Part 2, "Where the marker belongs").
+
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+This skill is where "be concrete" meets "do not invent", so it writes more gaps than most
+Build skills. Gaps go where the missing specific would sit in the draft. When several
+are missing, also give the person one short list of what to send.
+
+| Class | Typical case in this skill |
+|---|---|
+| `not supplied` | A figure, comparator, date, named group or example the reader needs and the material lacks |
+| `needs a decision` | An owner, a deadline, a recommendation or a priority order that only the person or their manager can set |
+| `conflicting` | The notes give two dates or two owners for the same action |
+| `out of date or unclear date` | "Recently", "latest" or "this year" with no date the reader can place |
+| `not checkable here` | Rarely used; this skill has no companion, and usefulness is judged by reading |
+
+Wording rules:
+
+- Name the exact specific: "owner and date for sending the budget impact model", not
+  "more detail".
+- Never put a plausible value in the gap ("probably Q1", "around 15%").
+- Owners and dates are `needs a decision`, never `not supplied`, when the person may not
+  have decided them yet. The gap invites a decision rather than implying it was lost.
+- In a short internal reply, a plain question ("Who owns the follow-up?") can replace
+  the gap syntax (TR-H13).
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
 | FM-SU-01 | Invented concreteness | Were numbers added that were not in supplied material? | Substance | TR-H2 | VERIFIED practice |
 | FM-SU-02 | Empty intensifiers | Do "strong/soon/well" hide missing figures? | Usefulness | TRUSTED substance | [CHECK] |
 | FM-SU-03 | Action without owner/date | Is a next step vague with no who/when? | Usefulness | TRUSTED substance | [CHECK] |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `substance-and-usefulness`. Shared FM-08 is universal Prove honesty.
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

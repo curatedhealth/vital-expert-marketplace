@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Find each generic statement, ask what it would say if it were specific, fill from the material or ask |
 | Skill | TR-1.1.1 |
-| Knowledge | `references/knowledge.md` (V1–V6, P1–P3), `references/method-standards.md` / `references/knowledge.md` |
+| Knowledge | `references/patterns.md` (V1–V6, P1–P3), `references/rules.md` |
 | Tool | `scripts/scan_fluff.py` (vague-word prompts) where code can run. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |
@@ -40,9 +40,9 @@ what this reader needs to act.
 2. **Write each point with the specifics the material supports.** "Uptake is strong"
    becomes "12% of new patients in September, up from 10% in July" when the notes say so.
 3. **Where the material does not hold the specific and the reader needs it**, write the
-   gap where the specific would go: `[GAP: not supplied — owner for the access plan —
+   gap where the specific would go: `[GAP: not supplied; owner for the access plan;
    name the person or function]`.
-4. **Do not reach for a plausible specific** (`references/knowledge.md` P1–P3). A
+4. **Do not reach for a plausible specific** (`references/patterns.md` P1–P3). A
    typical-looking number, a likely date or an obvious-seeming owner is invented content.
 5. **Group the questions.** When several specifics are missing, ask for them in one
    short list rather than one at a time.

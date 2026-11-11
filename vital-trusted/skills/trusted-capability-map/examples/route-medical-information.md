@@ -26,7 +26,11 @@ Want me to start on the draft?
 ## Behind the answer (reference only)
 
 Routed to `trusted-intake`, then `patient-safety` (Safe), then `claims-and-label`
-(Rule-compliant). True applies throughout through TR-H1.
+(Rule-compliant). True applies throughout through TR-H1. The request mentions no possible side effect, pregnancy or breastfeeding exposure, overdose,
+misuse or off-label use reported for a person, medication error, lack of effect or product
+quality problem, so no safety flag goes
+first; if it did, `patient-safety` would come before intake and its flag before any
+question (TR-H14).
 
 ## Why this routing
 

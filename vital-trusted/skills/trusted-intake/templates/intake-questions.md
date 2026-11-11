@@ -1,25 +1,33 @@
 # Output format: intake questions
 
 What the person sees when something is missing. Plain words, no field names, no rule
-ids, no skill names (TR-H13). Zero to three questions. Never a numbered form of fields.
+ids, no skill names (TR-H13). At most one combined question, asked under the draft, not
+instead of it (draft first, TR-H7). Never a numbered form of fields.
+
+If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem, patient-safety's flag comes first, above the questions,
+in its template wording (`../../patient-safety/templates/safety-flag.md`) (TR-H14).
 
 ```
-<One sentence showing you understood the request, in the person's words.>
+Working from: <one short line per field that matters, each with its source tag, as in the person view of `context-card.md`>
+<If assumed:> I've assumed <assumption>; tell me if that's wrong.
 
-Before I draft, <one | two | three> quick question(s):
-- <Question>? <Short reason in plain words.> (<likely answers, if that saves typing>)
-- ...
+<The draft, by the skill that owns it, with each statement that depends on a missing detail as a gap.>
 
-<If proceeding on assumptions for anything else:> Otherwise I'll assume <assumption>.
-<Offer, only when the stakes allow drafting first:> Or say "go ahead" and I'll draft on those assumptions.
+One question: <question, covering at most two related fields>? <Short reason in plain words.> (<likely answers, if that saves typing>) I'll fill the gaps when you reply.
+<If an internal process applies:> It goes through your <kind of process> before it's used.
 ```
+
+Only when sensitive material is not yet pasted and the policy is unknown
+(`governance.md`) does the question come alone, with no draft, saying why it has to
+wait. Every other stop holds back only the part it names; the rest is drafted.
 
 ## Good questions
 
-- "Which country will the doctors be in? What can go in a doctor email differs by market."
+- "Which country will the doctors be in, and can you share the label there? What can go
+  in a doctor email differs by market."
 - "Did the doctor ask this themselves, or is this something we're sending out? It changes
   what the reply can cover."
-- "Is the product approved in that country for this use, or still in development?"
+- "Is it Austria or Switzerland, and can you share the label for the pen there?"
 - "Will this go only to the board, or also to headquarters or outside the company?"
 - "What does your company's AI use policy say about client material in this assistant?
   (allows it / doesn't / not sure / no policy)"

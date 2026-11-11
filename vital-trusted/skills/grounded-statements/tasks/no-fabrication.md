@@ -1,7 +1,5 @@
 # Task TR-5.1.1 No fabrication
 
-Absorbs the honesty method of the earlier vital-verify plugin.
-
 ## Formula
 
 | Slot | For this task |
@@ -9,8 +7,8 @@ Absorbs the honesty method of the earlier vital-verify plugin.
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Inventory the supplied material, write only what it supports, mark the rest |
 | Skill | TR-5.1.1 |
-| Knowledge | `references/knowledge.md` (F1–F7, B1–B6), `references/method-standards.md` / `references/knowledge.md` |
-| Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment`, after drafting |
+| Knowledge | `references/patterns.md` (F1–F7, B1–B6), `references/rules.md` |
+| Tool | None. `claim-assessment` compares claims with passages by hand, after drafting |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |
 | Input | The request, the supplied material (papers, label, data, notes), any existing draft |
@@ -37,18 +35,18 @@ Any of these, when the supplied material does not contain it:
 ## Guard (while drafting)
 
 1. **List what was supplied.** Name each source in one line. If nothing was supplied and
-   the request needs facts, ask for the material before drafting. Offer a structure with
-   gaps if the person wants to proceed without it.
+   the request needs facts, give a structure with gaps in the same reply and ask for
+   the material in one question.
 2. **Draft sentence by sentence against the material.** For each factual sentence, know
    which source and which part supports it.
 3. **Where the request wants something the material does not hold**, write the gap
-   inline: `[GAP: not supplied — <what> — <what would close it>]`.
-4. **Watch the patterns** in `references/knowledge.md`, especially the ones that feel
+   inline: `[GAP: not supplied; <what>; <what would close it>]`.
+4. **Watch the patterns** in `references/patterns.md`, especially the ones that feel
    helpful: turning "strong uptake" into a number, adding a "first", "record" or
    "largest", naming a guideline from memory, giving a cause the notes do not give.
 5. **When the person pushes for a detail** ("just put a typical number in"), offer a
-   visible gap or a clearly labeled placeholder they will replace. Never a plausible
-   value (`governance.md`).
+   visible gap marker, in the three-part form. Never a plausible value and never any other
+   placeholder (`governance.md`).
 
 ## Repair (existing draft)
 
@@ -56,15 +54,15 @@ Any of these, when the supplied material does not contain it:
 2. **Classify each factual claim:** supported; supported but altered (wording, number or
    scope changed); not found in the material; conflicting between sources.
 3. **Fix:** keep supported claims; restore altered ones to what the source says; replace
-   not-found claims with a gap; mark conflicts with `[GAP: conflicting — …]` and ask.
+   not-found claims with a gap; mark conflicts with `[GAP: conflicting; …]` and ask.
 4. **Never delete silently.** Every removal or change appears in the repair note.
-5. **If no source material was supplied**, do not judge the claims as false. Mark them
-   "not checkable without the source" and ask for it.
+5. **If no source material was supplied**, do not judge the claims as false. Say in a plain
+   sentence that they are not checkable here without the source, and ask for it.
 
 ## "Make it stronger"
 
 People often ask for a stronger version of a draft. Strengthen it with what is supported:
-lead with the best supported result, cut hedging the material does not require, make the
+lead with a result the material supports, cut hedging the material does not require, make the
 "so what" explicit. Do not add facts, superlatives or causes to make it stronger, and
 say so in one line if the request implied it.
 

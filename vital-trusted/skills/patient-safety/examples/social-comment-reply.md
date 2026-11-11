@@ -35,11 +35,12 @@ reply friendlier? We want to reassure her and keep the conversation positive."
 > **Before the draft: something to pass to your safety reporting procedure**
 >
 > The comment by @jules_r on your page, 18 October 2026, mentions:
-> - "my hair is falling out in clumps" after "3 weeks" on Corvelan — possible side effect
-> - "pretty sure it stopped working for my joints" — the product may not be working
+> - "my hair is falling out in clumps" after "3 weeks" on Corvelan: possible side effect
+> - "pretty sure it stopped working for my joints": the product may not be working
 >
 > Please pass this to your safety reporting procedure as soon as you can, in the time it
-> sets. Send a screenshot or link of the original comment, unchanged.
+> sets. Send a screenshot or link of the original comment as received; your safety
+> procedure decides what personal details it needs.
 >
 > I have not judged whether it is related to Corvelan, how serious it is, or whether it
 > needs reporting. Your safety team decides that, and they will follow up for any detail
@@ -47,13 +48,12 @@ reply friendlier? We want to reassure her and keep the conversation positive."
 >
 > **Reply, reworked**
 >
-> "Hi Jules, thank you for telling us, and we're sorry you're going through this. Please
-> talk to your doctor or pharmacist about what you're experiencing before making any
-> change to your treatment. [GAP: needs a decision — the private contact route this reply
-> gives for side-effect reports — from your safety reporting procedure or social media
+> "Hi Jules, thank you for telling us, and we're sorry you're going through this.
+> [GAP: needs a decision; a line telling readers who to ask; use your approved patient wording] [GAP: needs a decision; the private contact route this reply
+> gives for side-effect reports; from your safety reporting procedure or social media
 > procedure]"
 >
-> **What I changed and why (draft, not yet reviewed)**
+> **What I changed and why (Uncleared draft)**
 >
 > Taken out
 > 1. "a known and temporary side effect". Whether it is a side effect, and what kind, is
@@ -64,8 +64,10 @@ reply friendlier? We want to reassure her and keep the conversation positive."
 > 4. "DM us your age and dose". Follow-up is for your safety team, by the route your
 >    procedure sets, and health details should not be gathered in a public thread.
 >
-> Questions for you
-> 1. Which contact route should the reply give?
+> Question for you
+> Which contact route should the reply give, and what is your approved wording for the
+> line telling her who to ask? I have not written that line; it comes from your
+> approved patient wording.
 >
 > Next step: the reply goes through the review your company uses for social media
 > replies, and the comment goes to your safety reporting procedure. Kept friendly, as you
@@ -82,8 +84,8 @@ possible side effect is a clinical judgment (TR-H6).
 Rules S1, S2, S5. Patterns P2, P4, P9, P10, L1, L3, L9. Check lines:
 
 ```
-Safe · patient wording: 0 passages for patients with no route to a doctor, nurse or pharmacist (not tool-checked)
+Safe · patient wording: 1 passage for patients with no route to a doctor, nurse or pharmacist, left as a gap for your approved wording (not tool-checked)
   - original reply graded the event, reassured, advised to keep taking it and asked for health details in public; all removed
-Safe · possible side effects: 2 mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
+Safe · possible safety reports: 2 mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
   - comment: hair loss after three weeks; product may have stopped working
 ```

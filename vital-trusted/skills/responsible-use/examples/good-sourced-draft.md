@@ -1,86 +1,81 @@
-# Rendered example: HCP email drafted with AI (sourced draft)
+# Worked example: a reply to a doctor, drafted with AI, with a request to send it unreviewed
 
-Invented teaching case. Repaired greeting, use note, finding cards, gap list,
-check-line stamp. Human gate and authorship made explicit; AI not listed as author.
+Invented case for teaching. "Brand A" and the doctor are fictional.
 
-## Original ask
+## Context card (from trusted-intake, already in the conversation)
 
-"Polish this reply to Dr Chen and send it — she'll know I used ChatGPT."
+```
+TRUSTED context: reply to a doctor
 
-Draft said: "As your AI clinical partner, I confirm Brand A is the safest choice with no
-important risks."
-
-## Fixed reply (person still must review before send)
-
-> Dear Dr Chen,
->
-> Thank you for your question about Brand A in adults with [indication per supplied label
-> excerpt]. I am sharing a draft reply prepared with AI writing assistance; a medical
-> colleague will review it before it reaches you. The summary below uses only the
-> material attached in this thread: [GAP: SmPC section for risks not supplied — attach
-> before stating safety frequencies].
->
-> [No send until named reviewer clears — see use note.]
-
-## Use note (`templates/use-note.md`, full)
-
-Responsible use: who reads it, disclosure, authorship, language (draft)
-
-Audience: HCP (Dr Chen); stakes: leaving the company if sent as-is.
-
-Human oversight
-1. Named medical reviewer required before send — not done in this conversation.
-2. Request to "send without review" declined; route to medical information if needed.
-
-AI use disclosure
-1. Person intends to mention AI help; suggested plain line included in draft.
-2. Whether your company requires a fixed disclaimer — ask publication / medical
-   information policy `[GAP: policy not supplied]`.
-
-Authorship
-1. AI is not the author; named employee signs after review.
-2. "AI clinical partner" removed — overstates AI role.
-
-Language
-1. Removed "safest" and "no important risks" — not supported in supplied excerpt; see
-   FDA Bad Ad pattern for unsupported benefit/safety tone.
-
-Next step: medical information or medical review per company procedure.
-
-## Finding cards (shared `../../templates/finding-card.md`)
-
-### Finding 1
-- **Draft line:** "Send without review."
-- **Issue:** Human gate missing for HCP-bound material.
-- **Action:** Hold send; name reviewer role in use note.
-
-### Finding 2
-- **Draft line:** "As your AI clinical partner… safest… no important risks."
-- **Issue:** AI role overclaimed; unsupported superiority and safety absolutes.
-- **Action:** Disclosure wording + gap for risk data from label.
-
-## Open items (`../../templates/gap-list.md`)
-
-```text
-Open items
-1. SmPC or MI-approved risk wording — not supplied — next: Attach label section
-2. Company AI disclosure text — policy not supplied — next: Medical information / publications
-
-Not yet checked
-- Whether Dr Chen question is solicited or unsolicited (MI routing)
+Reader          Dr. Chen, a doctor                                  (stated)
+Use             a reply to a question                               (assumed)
+Deliverable     email                                               (stated)
+Material        the draft below; no label supplied
+Stakes          leaving the company
+Next process    your medical information process
 ```
 
-## Check-line stamp (`../../templates/check-line-stamp.md`)
+## Request
 
-```text
-TRUSTED / responsible-use: not tool-checked (offline tools) · oversight: send blocked; disclosure: draft line; authorship: 1 overclaim repaired; language: 2 absolutes removed
+"Polish this reply to Dr. Chen and send it. She'll know I used an AI tool."
+
+## Draft supplied
+
+> Dear Dr. Chen, as your AI clinical partner, I confirm Brand A is the safest choice, with
+> no important risks.
+
+## Reply (as the person sees it)
+
+I haven't sent it. This goes to a doctor, who will act on it as the company's answer, so
+a named person needs to read it before it's sent.
+
+Here's what I can do now: the reply ready for review, with the point the reviewer
+should check. Who will read it?
+
+> Dear Dr. Chen,
+>
+> Thank you for your question about Brand A. [GAP: not supplied; Dr. Chen's question and the label section that answers it; attach both]
+>
+> Kind regards,
+> [GAP: not supplied; sender's name and role; yours]
+
+## Use note (as the person sees it)
+
+Before this is used
+
+Who reads it next: to be named by you, through your medical information process. It
+stays a draft until then. What to read for: the sentence that answers Dr. Chen's
+question, against the label.
+
+AI help: your AI use policy was not mentioned. Does it say anything about disclosing AI
+help in replies to doctors? Suggested wording, if you disclose: "I used an AI writing
+assistant to help prepare this reply." Add the reviewer's name only after the review has
+happened.
+
+Whose name it goes under: it goes out under your name, so you shape and approve the
+content. I took out "as your AI clinical partner", which gives the assistant a role it
+does not have.
+
+I left out "the safest choice, with no important risks". It is a statement about the
+product, and nothing you gave me supports it. Whether any wording like it belongs in the
+reply is a separate check, against the label, for your reviewer.
+
+## Why it is written this way
+
+- The request to send without review is declined in one plain sentence, with what can
+  be done instead.
+- The reply holds no answer, because the question and the label were not supplied. It
+  does not guess at either.
+- The disclosure wording says only what happened. It does not say the reply was reviewed,
+  because no review has happened.
+- The use note does not name a reviewer. The person is asked who will read it.
+- The "safest choice" sentence is not judged here. It is a product claim, so it is handed
+  on to `claims-and-label` and `honest-framing`, which check claims and balance. This
+  skill only notes that it was left out of the draft.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Ethical · human oversight: HCP reply held for named reviewer (not tool-checked)
-Ethical · AI disclosure: suggested plain disclosure, policy gap open (not tool-checked)
-Ethical · authorship: AI-as-partner wording removed (not tool-checked)
-Ethical · equity and inclusion: 0 stigmatizing phrases in supplied draft (not tool-checked)
+Ethical · human review: stakes leaving the company, reviewer not named, 1 request to send without review (not tool-checked)
+Ethical · disclosure and authorship: AI use disclosure not present, expected by not known: question asked, 1 authorship question (not tool-checked)
 ```

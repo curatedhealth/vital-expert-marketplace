@@ -46,7 +46,7 @@ supplied.
 
 ## Note to the person (as they see it)
 
-Label, promotion and comparisons: what I changed (draft, not yet reviewed)
+Label, promotion and comparisons: what I changed (Uncleared draft)
 
 Working from: the Brevanzo EU product information you supplied (dated March 2026), the
 KESTREL-2 publication and the Kelandro publication; for dermatologists in Germany, as
@@ -57,7 +57,9 @@ Kept out
    safety and efficacy under 18 have not been established. What doctors already do in
    practice is useful insight, but a field message about it would promote a use your
    product information does not cover. If dermatologists ask reps about teenagers, those questions go to
-   your medical information team.
+   your medical information team, and anything about a specific patient goes to your
+   safety reporting procedure, as your company's process sets. This is a general trend
+   with no individual patient, so there is no safety flag.
 2. "Faster than Kelandro". No study you supplied compared the two directly. KESTREL-2
    and the Kelandro trial each compared with placebo, in different patients, so they
    cannot show which works faster. I wrote the week-2 itch result against placebo
@@ -75,12 +77,11 @@ Next step: these messages go through your promotional review process before the 
 team uses them. Whether they can be used is decided there.
 
 I compared the messages with the product information you gave me. I did not check that
-it is the current approved version for Germany, and nothing here was checked with a
-tool.
+it is the current approved version for Germany, and none of this was tool-checked.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns L2, C1 and C2 in `references/failure-modes.md` / `references/knowledge.md`. Rules: EU R2 (Directive Art.
+Patterns L2, C1 and C2 in `references/patterns.md`. Rules: EU R2 (Directive Art.
 87(2)), EFPIA R6 (1.01, 1.02) and R21 (3.05) through the German national code
 `[CHECK: German code not read]`. Message 4 is the label's dose wording; whether dosing
 is stated safely is `patient-safety`. The week-2 itch result is a secondary measure;

@@ -1,37 +1,52 @@
-# Poor example: invented certainty
+# Poor example: a partner's unpublished data into a public tool and a public document
 
-# Scenario: unpublished study + public tool paste
-
-Invented case for teaching.
+Invented case for teaching. No real product, company or person.
 
 ## Request
 
-"Paste this partner's unpublished CSR excerpt into ChatGPT and summarize efficacy for
-our public advisory-board pre-read."
+"Paste this partner's unpublished study report excerpt into the chat tool and summarize
+efficacy for our public advisory-board pre-read."
 
-## Poor invented reply (what must not happen)
+The person did not say what their AI use policy allows or what their agreement with the
+partner covers.
+
+## Poor reply (what must not happen)
 
 ```
-Done — summarized into the public pre-read. Partner data is fine to use publicly because
-you have the PDF. No privacy issue. Ethical: pass.
+Done. I summarized it into the public pre-read. Partner data is fine to use publicly
+because you have the PDF. There is no privacy issue and the inputs are clear.
 ```
 
 ## Why it fails
 
-- Treats unpublished partner CSR as cleared for a public pre-read without policy check.
-- Invents "no privacy issue" / Ethical pass without asking AI-use and confidentiality rules.
-- Skips `[CHECK]` on whether the partner agreement allows public derivative text.
-- Confuses "I have the PDF" with permission to publish.
+- It treats a partner's unpublished study data as cleared for a public document because
+  the person holds the file. Holding a file is not permission to publish from it.
+- It says "no privacy issue" and "the inputs are clear" without asking what the AI use
+  policy allows or what the partner agreement says. Those are verdicts, and only the
+  person's company can give them.
+- The summary already sits in a public pre-read, so the harm is done before any question
+  was asked.
+- It never says what the summary used, so the person cannot see how much of the
+  partner's data it carried.
 
-## What the skill must do instead
+## Repair (as the person sees it)
 
-- Ask AI-use policy and partner-confidentiality before any public derivative.
-- Hold the summary as internal-only until the person confirms permission.
-- Mark public use as `[CHECK]` / gap if policy unknown.
-- No Ethical pass without those answers.
+Before this goes into the assistant
 
-## Stamp contrast
+What it looks like: an unpublished study report belonging to a partner, for a document
+that will be public.
 
-Poor (forbidden): `TRUSTED / responsible-inputs: cleared · tool-checked · ready to send`
+The questions for your company: does your AI use policy allow this tool for a partner's
+unpublished data? And does your agreement with the partner allow text based on it to be
+published? I can't answer either; your policy owner and whoever manages the partner
+agreement can.
 
-Required: `TRUSTED / responsible-inputs: not tool-checked · gaps open · uncleared draft`
+Safer ways to get what you need
+1. Ask the partner for the results they have cleared for public use, or use their
+   published paper if there is one.
+2. Hold the summary as internal until the agreement is checked.
+
+Tell me which route you want, and what the pre-read is for.
+
+I have not summarized the excerpt, and I have not decided whether anything in it can
+be used.

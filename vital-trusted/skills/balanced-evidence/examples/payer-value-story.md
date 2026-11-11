@@ -26,8 +26,8 @@ only have ten minutes. Three bullets."
 
 ## Depth
 
-A payer meeting is outside the company: full check (TR-H12). Market is Switzerland, as
-stated; Swiss rules on balance are not confirmed in this skill's references, so the note
+A payer meeting is outside the company: full check (TR-H12). Market: Switzerland
+(assumed from "cantonal"); Swiss rules on balance are not confirmed in this skill's references, so the note
 names the internal review rather than a rule.
 
 ## Evidence inventory (working, shown in the note)
@@ -49,31 +49,39 @@ names the internal review rather than a rule.
 >   patients were given Brand A.
 > - 22% of patients stopped Brand A within 12 months (14% on standard care), 7% because of
 >   side effects (3%). The most common side effects were nausea (11%) and headache (6%).
-> - Cost impact: [GAP: not supplied — cost analysis — complete it before stating savings;
->   it should account for the higher stopping rate].
+> - Cost impact: [GAP: not supplied; cost analysis; complete it before stating savings].
 
 ## Balance note (as the person sees it)
 
-Balance: what I added, moved and left open (draft, not yet reviewed)
+Balance: what I added, moved and left open (Uncleared draft)
 
 Based on: Brand A registry report, data cut-off 30 June 2026 (internal).
 
+Studies in your material: 1. Results added or moved: 1.
+Risks or limitations added or moved: 3.
+Gaps left: 1.
+
 Added or moved
 1. "Well tolerated, with a favorable safety profile" → the side effects and stopping
-   rates from the registry. Those words are a conclusion; a payer will want the figures.
+   rates from the registry. Those words are a conclusion with no figures.
 2. "Patients stay on therapy, so the savings are sustained" → the stopping rates. Your
    registry shows more patients stopped Brand A than standard care (22% vs 14%), so the
    original bullet pointed the other way from your own data.
-3. Added one line on the registry's limitations, as the authors state them. A payer
-   assessing economic value will expect the design and its limits to be stated.
+3. Added one line on the registry's limitations, as the authors state them. The story
+   gave the design without its limits.
+4. "8 fewer hospital admissions per 100 patients per year" → the two admission rates
+   from the registry (12.0% vs 20.0%). The registry gives the rates; "8 fewer per 100"
+   was worked out from them without a label, so the rates are shown instead.
 
 Left as gaps for you to fill
-1. Cost analysis — none was done, so no savings figure or savings claim is stated.
+1. Cost analysis: none was done, so no savings figure or savings claim is stated.
+2. Whether the planned cost model adjusts for the 22% who stop within a year: your
+   health economics lead.
 
-Questions for you
-1. Which side effects should appear for this payer — I used the two the report lists
-   first. Your medical reviewer should confirm.
-2. Does the planned cost model adjust for the 22% who stop within a year?
+Question for you
+Is this for a Swiss payer, as I assumed from "cantonal", and which side effects should
+appear for them? I used the two the report lists first; your medical reviewer should
+confirm.
 
 I kept it to three bullets and kept the admissions result first. Leaving the stopping
 rate out would make the story easier to tell in ten minutes and harder to defend in the
@@ -87,9 +95,9 @@ not judge whether any side effect matters clinically.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns FB3, FB5, FB6 in `references/failure-modes.md` / `references/knowledge.md`. Rule R10 (FDA payor communications,
+Patterns FB3, FB5, FB6 in `references/patterns.md`. Rule R10 (FDA payor communications,
 limitations explicit) is US-only and was not cited for a Swiss payer; the Swiss sources
-are `[CHECK]` in `references/method-standards.md` / `references/knowledge.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
+are `[CHECK]` in `references/rules.md`. R8 (CONSORT 2025 items 22b, 27, 30) is trial
 reporting and informs the practice only.
 
 ## Check line returned to trusted-check

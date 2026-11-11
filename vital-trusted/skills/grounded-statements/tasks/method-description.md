@@ -7,8 +7,8 @@
 | Worker | Experienced colleague with an evidence background |
 | Workflow | Extract the study's design facts from the source, then hold the draft to them |
 | Skill | TR-5.1.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3–R6), `references/knowledge.md` (M1–M9) |
-| Tool | None. Companion slot: VERIFY `check_claim` via `claim-assessment` |
+| Knowledge | `references/rules.md` (R3–R6), `references/patterns.md` (M1–M9) |
+| Tool | None. `claim-assessment` compares claims with passages by hand |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md`, the study card below |
 | Input | The draft and the supplied study material |
@@ -25,7 +25,8 @@ is, who was in it and how many, what it measured, and do not let it say more tha
 ## The study card
 
 Before describing a study, fill this card from the supplied material only. Leave a field
-as `[GAP: not supplied]` rather than inferring it.
+as `[GAP: not supplied; <the field>; <the document that would give it>]` rather than
+inferring it.
 
 ```
 Study: <name or identifier as given>

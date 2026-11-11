@@ -1,37 +1,40 @@
 # Knowledge: confidence-scoring
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Rules this skill applies
+## Contents
 
-Each rule names its source, the date and its status (TR-H8). The confidence line is
-VERIFY's own definition, not a regulatory or industry requirement. No primary document
-known to this skill sets a faithfulness threshold for releasing material, and this skill
-sets none.
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
 
-Last reviewed: 20 October 2026.
+## Part 1: Rules
+
+Each rule names its source, the date and its status (TR-H8). No primary document known to
+this skill sets a confidence threshold for releasing material, and this skill sets none and
+computes no figure.
+
+Last reviewed: 9 November 2026.
 
 | Id | Rule | Source | Status |
 |---|---|---|---|
-| C1 | Faithfulness percent = (supported + 0.5 × partial) ÷ (supported + partial + unsupported + contradicted + unverifiable), as a whole percent. out_of_scope is left out of the denominator. | VERIFY connector server instruction, as exposed to this session on 20 October 2026. The same formula is restated in the earlier vital-verify `support-decision` skill (version 2026-10-19.2). | Confirmed against the connector instruction on 20 October 2026. The connector tool schemas do not state it. |
-| C2 | Rounding to a whole percent is half up (12.5 becomes 13). | None. Chosen by this skill so the result is reproducible. | `[CHECK]`: VERIFY's own rounding convention is not stated in the instruction or the schemas. Owner to confirm. |
-| C3 | The six statuses: supported, partial, unsupported, contradicted, unverifiable, out_of_scope. Open items are partial, unsupported, contradicted and unverifiable. | VERIFY connector instruction, 20 October 2026 (names the statuses in the formula and the open items). | Confirmed for the names on 20 October 2026. The `check_claim` schema says it "returns a status" but does not list the values; `[CHECK]` against a real return. |
-| C4 | Status meanings: supported means the passage states the claim or a stricter version; partial means part is stated and the rest can be named; unsupported needs admissible sources to have been checked; contradicted needs a passage stating the opposite; unverifiable is a refusal (no source, inadmissible source, empty passage) and not a finding that the claim is false; out_of_scope is for normative and definitional statements. A bronze-tier passage yields at most partial. | vital-verify `support-decision` skill, `references/statuses.md`, restated 19 October 2026 from the VERIFY method. | `[CHECK]`: a document, not the connector. To be re-established against `check_claim` returns before being stated as fact. |
-| C5 | A status measures word overlap between the statement and the passage. It is not a verdict that the statement is true in the world. | VERIFY connector instruction, 20 October 2026 ("A status is word overlap with that passage, not a verdict that the sentence is true in the world"). | Confirmed on 20 October 2026. |
-| C6 | Under each reference, print the source_score total and the axes whose values are numbers; omit an axis whose value is null. Then the confidence line, then a short card: counts by status, the open items, one recommendation. No evidence table unless asked. | VERIFY connector instruction, 20 October 2026. | Confirmed on 20 October 2026. |
-| C7 | Source score axes are authority, recency, relevance, provenance and currency (weights 25, 25, 30, 10, 10); null axes are dropped and the rest rescaled to 100; relevance is null when no question was passed; currency is null until a currency check runs. | vital-verify `source-grading` skill, `references/tiers-and-score.md`, 19 October 2026. The `qualify_source` schema says only that it returns "a tier and a source_score". | `[CHECK]`: axis names, weights and null behavior to be confirmed against a real `qualify_source` return. Print what comes back; do not recompute. |
+| C1 | The summary gives counts by result and nothing else. No percentage, ratio, score, grade, threshold, color or "high, medium, low" label. | Owner decision of 9 November 2026 (Option 2, no live tools); TRUSTED hard rules TR-H1, TR-H4 | In force |
+| C2 | The six results come from `claim-assessment/references/statuses.md` and are used by pointer. No other result words are used, and no result is changed here. | `claim-assessment/references/statuses.md` | In force |
+| C3 | Open items are: your passage says something different, not found in your passage, no passage to compare with, partly found. Opinions, recommendations and definitions are counted on their own line and are not open items. | `claim-assessment/references/statuses.md` | In force |
+| C4 | A count says how many sentences your passages state. It is not a verdict that the sentences are true in the world, the sources good, the evidence balanced or the work ready. | TRUSTED hard rule TR-H3 | In force |
+| C5 | Source notes stay separate from the counts. They are never added to them, averaged with them or called confidence. | Owner decision of 9 November 2026; `source-assessment` | In force |
+| C6 | Order of the summary: counts, open items in order of risk, one recommendation, the fixed line "No confidence figure: these results were not tool-checked.". No evidence table unless the person asks; then `citation-and-record` builds it by hand. | Owner decision of 9 November 2026 | In force |
 
-## How to use these rules in output
+### How to use these rules in output
 
-- Do the arithmetic of C1 in the open. Never describe it as an industry standard.
-- When a rule is `[CHECK]`, apply it as this skill's practice and do not cite it as
-  VERIFY behavior to the person.
-- Never add a threshold, a band or a label to the percent. None of these sources defines
-  one.
+- Say the practice in plain words, not the rule id, unless the person asks (TR-H13).
+- Never add a threshold, a band or a label to the counts. None of these sources defines one.
+- When asked for a percentage, say there is none (`tasks/open-items-summary.md`).
 
-## Migrated patterns
-
-# Misuse patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it breaks.
 All examples are invented for teaching; no real product, trial or person.
@@ -39,70 +42,83 @@ All examples are invented for teaching; no real product, trial or person.
 Pattern ids are for this file only. In what the person reads, describe the problem in
 plain words (TR-H13).
 
-**P1 The percent as a verdict.** The number is presented as a grade or a release signal.
-Why: the percent counts overlap with supplied passages. It says nothing about truth,
+**P1 The count as a verdict.** The counts are presented as a grade or a release signal.
+Why: a count says how many sentences the passages state. It says nothing about truth,
 balance, permission or whether the right sources were supplied.
-Before: "Faithfulness 96%: high confidence, safe to send to the payer."
-After: "Faithfulness 96%: of the 12 factual statements checked, 11 are backed by the
-passages supplied and 1 is partly backed. Open: 1 statement on cost. Your market access
-review decides whether it goes." (TR-H3, TR-H5, C5)
+Before: "11 of 12 found in your passage: high confidence, safe to send to the payer."
+After: "11 of the 12 sentences are found in your passage and 1 is partly found. Open: 1
+sentence on cost. Your market access or promotional review, as your process names it,
+decides whether it goes." (TR-H3, TR-H5, C4)
 
-**P2 The simulated percent.** A figure computed from the assistant's own reading, or
-estimated, when VERIFY did not run.
+**P2 The invented percentage.** A figure is offered when nobody measured anything.
 Why: it looks like a tool result and is not one. It is a fabricated record.
 Before: "I've checked it: about 80% faithful."
-After: "No confidence figure: VERIFY is not connected. Read, not tool-checked: 5
-statements match your material, 1 does not appear in it." (TR-H1, TR-H4)
+After: "There is no confidence figure. I compared each sentence with your passages by hand:
+5 are found, 1 is not found in your passage." (TR-H1, TR-H4, C1)
 
-**P3 Out of scope in the denominator.** Normative or definitional statements counted.
-Why: they cannot be backed by a passage, so counting them lowers the figure for no
-reason; leaving them off the card hides that they exist.
-Before: 6 supported, 2 partial, 1 unsupported, 1 unverifiable, 3 out of scope → "54%".
-After: (6 + 1) ÷ 10 = 70%; "3 statements are not factual and are not counted". (C1)
+**P3 The count that hides the opinions.** Recommendations and definitions are dropped from
+the summary, or counted as open items.
+Why: dropping them hides that they exist; counting them as open asks the person to
+resolve what no passage can settle.
+After: put them on their own line, "left to you, not counted as open". (C3)
 
-**P4 Unverifiable dropped to lift the figure.** "Leave out the ones it couldn't check."
-Why: a statement nobody could check is still in the text. Dropping it from the count but
+**P4 No-passage sentences dropped to tidy the summary.** "Leave out the ones with no
+source."
+Why: a sentence nobody could compare is still in the text. Dropping it from the count but
 not from the draft overstates support.
-After: keep it in the denominator, or remove the statement from the text and check
-again. (C1, TR-H1)
+After: keep it as an open item, or remove the sentence from the text and compare again.
+(C3, TR-H1)
 
-**P5 Unverifiable read as false.** "Two claims are wrong."
-Why: unverifiable means no usable source or passage, not that the statement is false.
-After: "2 statements could not be checked: no source was supplied for them." (C4)
+**P5 No passage read as false.** "Two claims are wrong."
+Why: "no passage to compare with" means nothing was supplied, not that the sentence is false.
+After: "2 sentences had no passage to compare with: no source was supplied for them." (C3)
 
-**P6 Source score called confidence.** "Source confidence 78", or the faithfulness
-percent averaged with the source scores.
-Why: the source score is about the page; the percent is about the statements. Mixing
-them produces a number that means nothing.
-After: print the source score under its reference and the faithfulness line once, apart.
-(C6, C7)
+**P6 A source note called confidence.** "Source confidence: strong", or the counts blended
+with a source note.
+Why: a source note is about the page; the counts are about the sentences. Mixing them
+produces something that means nothing.
+After: keep the source note in its own card and the counts in the summary. (C5)
 
-**P7 The empty axis as zero.** A null relevance or currency axis printed as 0.
-Why: zero says the check ran and scored nothing; null says it did not run.
-After: leave the axis out; if it matters, say "currency not checked". (C6)
+**P7 A grade or label added.** "Medium confidence", "amber", "7 out of 10".
+Why: none of these is measured, and each reads as a verdict.
+After: counts and open items only. (C1)
 
 **P8 Two recommendations, or a send decision.** "Fix the cost line, add a reference,
 check the subgroup, then it's good to go."
-Why: one recommendation keeps the next action clear; a send decision is not the card's
+Why: one recommendation keeps the next action clear; a send decision is not the summary's
 to make.
-After: "Recommendation: remove the cost-savings statement or supply the analysis that
-backs it, and check again." (C6, TR-H5)
+After: "Recommendation: remove the cost-savings sentence or supply the analysis that backs
+it, and compare again." (C6, TR-H5)
 
-**P9 Zero denominator printed as a number.** "0%" or "100%" when nothing factual was
-checked.
-After: "No confidence figure: nothing factual was checked." (C1)
+## Part 3: Gap rules
 
-**P10 Comparing drafts without the counts.** "Version 2 is better: 85% against 70%."
-Why: the two drafts may have had different statements checked.
-After: show both counts side by side and say what changed.
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
-# Failure modes
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+| Class | Typical case in this skill |
+|---|---|
+| `not supplied` | A sentence has no passage, so it is "no passage to compare with"; or the results were not passed on from the claim check: `[GAP: not supplied; passage for the cost-savings sentence; supply the analysis and compare again]` |
+| `conflicting` | Two results exist for the same sentence and the claim check did not settle which applies |
+| `needs a decision` | Whether the open items are acceptable for the reader. Only the named reviewer decides: `[GAP: needs a decision; whether the 2 open items can stay; your market access or promotional review, as your process names it]` |
+| `out of date or unclear date` | A source note says currency was not checked, or the source may be superseded |
+
+Wording rules:
+
+- A gap names what is missing for the item, never a guessed percentage.
+- "No passage to compare with" is never worded as "false" or "wrong".
+- On the summary the person reads, gaps appear as plain open items; the bracket syntax is
+  used inside the draft text or when the person asks for it (TR-H13).
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
-| FM-CS-01 | Faithfulness as truth % | Was faithfulness treated as probability the claim is true? | Meaning | RAGAS / VERIFY | VERIFIED |
-| FM-CS-02 | Invented counts | Were statuses invented that claim-assessment did not return? | Provenance | TR-H4 | VERIFIED practice |
-| FM-CS-03 | Clearance from % alone | Was high % used to clear a pack? | Clearance | TR-H5 | VERIFIED practice |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `confidence-scoring`. Shared FM-08 is universal Prove honesty.
+| FM-CS-01 | Count as truth | Was a count of found sentences treated as the probability that the work is true? | Meaning | TR-H3 | VERIFIED practice |
+| FM-CS-02 | Invented counts | Were results invented that claim-assessment did not give? | Provenance | TR-H4 | VERIFIED practice |
+| FM-CS-03 | Clearance from counts alone | Were few open items used to clear a pack? | Clearance | TR-H5 | VERIFIED practice |
+| FM-CS-04 | Figure given | Was a percentage, ratio, score or grade given? | Honesty | Owner decision of 9 November 2026 | VERIFIED practice |
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

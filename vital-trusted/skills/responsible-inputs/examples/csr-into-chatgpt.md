@@ -24,8 +24,8 @@ summary for my market access team? it's like 200 pages"
 > listings and case narratives, and the results may not be public yet.
 >
 > The question for your company is whether your AI use policy allows ChatGPT, in the
-> version you use, for unpublished study data. I can't answer that; your policy or its
-> owner can. If the company is listed and these results are not yet disclosed, your
+> version you use, for unpublished study data. The same question applies to this
+> assistant. I can't answer that; your policy or its owner can. If the company is listed and these results are not yet disclosed, your
 > compliance team may also want to know before they go into any external tool.
 >
 > Safer ways to get the summary your team needs:
@@ -47,10 +47,10 @@ summary for my market access team? it's like 200 pages"
 ## Check line (to trusted-check only)
 
 ```
-Ethical · what went in: 1 question for your AI use policy (unpublished study data), 3 safer routes offered, 0 sensitive details kept out of the output (asked, not checked: no AI-policy companion)
+Ethical · what went in: 1 question for your AI use policy (unpublished study data), 3 safer routes offered, 0 sensitive details kept out of the output (not tool-checked)
 ```
 
 ## Behind the reply (reference only, not shown to the person)
 
-Patterns avoided: C1, C2, C5, C7, T1 in `references/failure-modes.md` / `references/knowledge.md`. Rules that explain the
+Patterns avoided: C1, C2, C5, C7, T1 in `references/patterns.md`. Rules that explain the
 reasons: I1 to I6 (patient-level data in listings), I8 (price-sensitive, EU scope).

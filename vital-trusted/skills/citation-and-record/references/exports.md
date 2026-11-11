@@ -1,20 +1,30 @@
-# Record method reference
+# Hand-written outputs
 
-`build_record` refuses when `cleared_by.name` is missing. Prefer `generate_report` to draft exports; `build_record` files clearance. Templates live next to this skill:
+What this skill can write, by hand, and when. Every output is labeled "not tool-checked".
+Size the output to the stakes: a short note for a short piece, a full pack only for work
+leaving the company.
 
-| Export | Template | When it exists |
+| Output | Template | When to write it |
 |---|---|---|
-| Verify brief | `manifest/templates/verify-brief.md` | Default `generate_report` shape (counts, open items, sources). |
-| Gap list | `manifest/templates/gap-list.md` | Open items only. |
-| Clearance memo | `manifest/templates/clearance-memo.md` | Always drafted. First line says "Draft" until a human has decided. |
-| Source register | `manifest/templates/source-register.md` | One row per source that was graded, including inadmissible rows, with the reason. |
-| Evidence table | `manifest/templates/evidence-table.md` | Via `generate_report` or when the user asks for the table alone. |
-| Finding card | `manifest/templates/finding-card.md` | One card per finding. |
-| Overview / Assessment / Evidence review / Decision memo | `manifest/templates/{overview,assessment,evidence-review,decision-memo}.md` | Brief answer spine (section labels only). Does not commission Brief. Scan, Landscape, Outlook, Plan, Comparison, Diagnosis stay on Brief. |
+| Reference list | `../templates/reference-list.md` | For the sources the person supplied, sized as `../SKILL.md` "How deep to go" says: for internal quick work only if asked |
+| Record note | `../templates/record-note.md` | For leadership, cross-team and outside readers, or when asked. Internal quick work uses `work-record`'s everyday note instead. The first line says "Uncleared draft" until a named person has reviewed it |
+| Open items | `../templates/open-items.md` | When any sentence is partly found, not found, says something different, or has no passage |
+| Evidence table | `../../../templates/evidence-table.md` | Only when the person asks for it |
+| Source card | `../../../templates/source-card.md` | One per source, when the person wants to see what each can carry |
+| Finding card | `../../../templates/finding-card.md` | One card per finding in a longer pack |
+| Prove brief | `../../../templates/prove-brief.md` | A full pack for work leaving the company |
 
-A record with zero clearances is a draft even if every claim is `supported`. Support is not clearance. `generate_report` never clears.
+## Rules for every output
 
-Citation lines inside the memo are `formatted` from `build_citation`. The key's `citation_style` is `chicago` unless the key or the call says `harvard`. The memo does not add the caption "as returned by Verify."
-
-
-Restated 22 October 2026 from the Verify method.
+- A record with no named person who reviewed it is a draft, even when every sentence was
+  found in its passage. Finding a passage is not clearance.
+- The result words are the six hand-check results (`../../claim-assessment/references/statuses.md`).
+  Counts only. No percent, score or grade.
+- Reference lines are copied from the details the person supplied: plain lines in one
+  order when no style is named, or written by hand in the style the person named
+  (`../tasks/build-citations.md` step 4). Missing details are listed, not filled.
+- Do not add the caption "as returned by" any tool. Nothing was returned by a tool.
+- A source whose passage could not be read is listed with the reason, never dropped
+  quietly.
+- Do not draft a clearance memo. The record note carries the clearer's name if the person
+  gave one, and "Uncleared draft" if not.

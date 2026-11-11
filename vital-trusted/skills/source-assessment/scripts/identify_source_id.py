@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Say which identifier a string holds and which VERIFY argument it belongs in.
+"""Say which kind of identifier a string holds (DOI, PMID, PMCID or link).
 
 Part of the VITAL TRUSTED skill source-assessment (task TR-8.2.1).
 
@@ -33,21 +33,21 @@ def identify(text):
     found = []
     m = DOI.search(text)
     if m:
-        found.append({"kind": "DOI", "argument": "doi", "value": clean_doi(m.group(1))})
+        found.append({"kind": "DOI", "value": clean_doi(m.group(1))})
     m = PMCID.search(text)
     if m:
-        found.append({"kind": "PMCID", "argument": "pmcid", "value": m.group(1).upper()})
+        found.append({"kind": "PMCID", "value": m.group(1).upper()})
     m = PMID_LABELED.search(text) or PUBMED_URL.search(text) or BARE_DIGITS.match(text)
     if m:
-        found.append({"kind": "PMID", "argument": "pmid", "value": m.group(1)})
+        found.append({"kind": "PMID", "value": m.group(1)})
     m = URL.search(text)
     if m:
-        found.append({"kind": "URL", "argument": "url", "value": m.group(0).rstrip(".,;)]}")})
+        found.append({"kind": "URL", "value": m.group(0).rstrip(".,;)]}")})
     notes = []
     if not found:
-        notes.append("No DOI, PMID, PMCID or link found. Ask for one; a title alone cannot be qualified.")
+        notes.append("No DOI, PMID, PMCID or link found. Ask for one; a title alone is not enough to read the source.")
     elif found[0]["kind"] == "URL":
-        notes.append("Link only: check_currency will return \"not checked\" for it. Ask whether a DOI or PMID exists.")
+        notes.append("Link only: there is no DOI or PMID to look up in a retraction database. Ask whether one exists.")
     if any(f["kind"] == "PMID" for f in found) and BARE_DIGITS.match(text):
         notes.append("Bare digits read as a PMID by shape only; confirm with the person.")
     return {"input": text.strip(), "candidates": found, "use_first": found[0] if found else None, "notes": notes}
@@ -65,12 +65,12 @@ def main():
         return
     if r["use_first"]:
         u = r["use_first"]
-        print(f"{u['kind']}: {u['value']}  -> VERIFY argument \"{u['argument']}\"")
+        print(f"{u['kind']}: {u['value']}")
         for c in r["candidates"][1:]:
-            print(f"  also found {c['kind']}: {c['value']} (\"{c['argument']}\")")
+            print(f"  also found {c['kind']}: {c['value']}")
     for n in r["notes"]:
         print("Note: " + n)
-    print("Shape only: not resolved or checked.")
+    print("Shape only: not resolved or checked. Manual, not tool-checked.")
 
 
 if __name__ == "__main__":

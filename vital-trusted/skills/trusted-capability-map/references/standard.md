@@ -1,11 +1,10 @@
 # The TRUSTED standard
 
-Version 0.1.0. Source: VITAL TRUSTED product concept v0.4, approved by the owner on
-20 October 2026.
+Version 0.3.4. Source: the TRUSTED standard as set by the owner, 20 October 2026.
 
 ## Contents
 
-1. What the standard is
+1. What the standard is (with which letters matter most, by work type)
 2. The seven letters
 3. Boundaries between neighboring letters
 4. Skill index and routing cues
@@ -30,6 +29,23 @@ It sits underneath the company's own SOPs and review processes and never replace
 | Market access | Value stories, payer meeting notes and follow-ups, objection handling |
 | Medical | Replies to doctors' questions, literature summaries, advisory board notes |
 | Everyone | Emails, meeting notes, slide decks, summaries of documents |
+
+### Which letters matter most, by work type
+
+Guidance, not a rule. Every active letter still runs, and the person's letter choice
+stands. Use it to say where a piece of work usually goes wrong, for example when someone
+asks what TRUSTED does for their work.
+
+| Work | Letters that usually matter most | Why |
+|---|---|---|
+| Board update or business review | Tangible, True, Defensible | The board acts on the so-what; the figures must match the source; someone has to stand behind the numbers |
+| Payer slide | True, Unbiased, Rule-compliant | Every figure needs its source; benefits need their limits and comparator; payer material goes through review |
+| Reply to a doctor | Rule-compliant, Safe, True | It stays within the label and the medical information route; any event mentioned gets the safety flag; statements come from supplied sources |
+| Patient material | Safe, Rule-compliant, Tangible, True | Label wording and no advice; patient material rules; a reading level patients can use; claims that can be shown |
+| Internal email | Tangible, True | A clear ask; facts and figures right |
+| Social reply | Safe, Rule-compliant, Tangible | Events mentioned in public get the flag; what a public reply may say follows your social media procedure; plain words for the public |
+
+The safety flag and the other hard rules run whatever the work type (TR-H14).
 
 ## 2. The seven letters
 
@@ -85,7 +101,7 @@ never flagged, or patient material gives no route to a clinician.
 
 Covers statements (nothing invented, numbers consistent, methods described correctly)
 and sources (every claim sourced, the right kind of source, specific citations). The
-Prove skills then check finished work against sources with VERIFY.
+Prove skills then compare finished work with sources by hand.
 
 Fails alone when: the draft reads well and is useful, but quotes the wrong effect size or
 rests on a blog post presented as a study.
@@ -132,7 +148,7 @@ Route to one skill. Offer a second only when the request clearly spans two.
 
 | Skill | Route here when the person says or needs… |
 |---|---|
-| `trusted-capability-map` | "What can TRUSTED do", "what does this letter mean", "turn letters on or off", "how do I connect VERIFY" |
+| `trusted-capability-map` | "What can TRUSTED do", "what does this letter mean", "turn letters on or off", "do I need a tool" |
 | `trusted-intake` | Starting a deliverable; the audience, market, product status, sources or policy are unknown |
 | `trusted-check` | "Check this draft", "run TRUSTED on this", "is this ready for review" |
 
@@ -146,20 +162,20 @@ Route to one skill. Offer a second only when the request clearly spans two.
 | Rule-compliant | `market-rules-and-data` | Which country's rules apply, required statements, patient data in the output |
 | Unbiased | `balanced-evidence` | Fair balance, missing risks, cherry-picked studies or endpoints |
 | Unbiased | `honest-framing` | Overclaimed certainty, relative-only numbers, cropped charts, undisclosed interests |
-| Safe | `patient-safety` | Dosing, contraindications, interactions, patient wording, a side effect in the input |
+| Safe | `patient-safety` | Dosing, contraindications, interactions, patient wording; a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem in the input (routed first, flag before any question: TR-H14) |
 | True | `grounded-statements` | "Don't make anything up", numbers, relative vs absolute, subgroups, surrogates, study design |
 | True | `sourced-claims` | Which claims need a source, which source type fits, citation format |
 | Ethical | `responsible-inputs` | "Can I paste this into the assistant", confidential or client data, copyrighted text |
 | Ethical | `responsible-use` | How much human review, disclosing AI use, authorship, stigmatizing language |
 | Defensible | `work-record` | "How was this made", assumptions, open items, draft status |
 
-### Prove (with VERIFY)
+### Prove (by hand)
 
 | Skill | Route here when… |
 |---|---|
 | `claim-assessment` | "Fact-check this", "is this claim supported by the paper" |
 | `source-assessment` | "Is this source good enough", peer review, preprint vs article vs blog, retraction, currency |
-| `confidence-scoring` | "How confident can we be", faithfulness percentage, the VERIFY card |
+| `confidence-scoring` | "How confident can we be", counts and open items (no percentage) |
 | `citation-and-record` | Build citations, build the record, name the clearer, escalate |
 
 ## 5. Two families: Build and Prove
@@ -167,8 +183,8 @@ Route to one skill. Offer a second only when the request clearly spans two.
 **Build** skills make the work right while it is drafted: they guard the draft and
 repair flagged passages. They work on any host with no connector.
 
-**Prove** skills assess finished work with the VERIFY tools: break it into claims, decide
-support against quoted passages, qualify sources, calculate confidence, cite and record.
-Without VERIFY they explain what the check would establish and mark it `[GAP]`.
+**Prove** skills assess finished work by hand: break it into claims, compare each with
+a quoted passage, write source cards, count results, cite and record. Every result is
+labeled "not tool-checked".
 
 Build prevents. Prove shows. A human decides.

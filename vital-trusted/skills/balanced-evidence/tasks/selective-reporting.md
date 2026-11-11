@@ -7,7 +7,7 @@
 | Worker | Medical reviewer (an experienced colleague; not the company's medical review) |
 | Workflow | Inventory everything the material reports, mark what the draft uses, restore what changes the picture, and state the scope of the rest |
 | Skill | TR-3.1.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R9, R10), `references/knowledge.md` (SR1–SR8) |
+| Knowledge | `references/rules.md` (R3, R4, R7, R9, R10), `references/patterns.md` (SR1–SR8) |
 | Tool | `scripts/balance_cues.py --source material.txt` where code can run. Companion slot: none yet (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` |
@@ -45,8 +45,12 @@
    scope is fair; an unstated one reads as the whole picture.
 6. **Ask about what was not supplied.** If the draft rests on one study and you cannot see
    whether others exist, ask: "Are there other studies of this product for this use? A
-   summary that leaves one out will be read as selective." Never name a study from
+   summary that leaves one out reads as the whole picture when it is not." Never name a study from
    memory (TR-H1) and never say "no other studies exist".
+7. **Count without implying completeness.** "Studied in two trials" reads as "all the
+   trials there are". Unless the person said these are all the trials, write "in the two
+   trials in your material" or "two trials were supplied", and ask whether there are
+   others.
 
 ## Repair (existing draft)
 
@@ -63,7 +67,7 @@
    the other way. Restore those. For the rest, state the scope.
 4. **Fix** by restoring, reordering so the primary result leads, labeling subgroups and
    time points, and stating scope. Leave gaps for what is missing. When the person must
-   choose which study or time point leads, ask (`needs a decision`).
+   choose which study or time point leads, ask them which should lead, in one question.
 5. **Never delete silently.** Every change appears in the balance note.
 
 ## Check line

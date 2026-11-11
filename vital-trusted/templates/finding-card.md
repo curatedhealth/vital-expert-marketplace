@@ -1,7 +1,8 @@
 # Finding card
 
-Alias of the claim card for multi-finding packs. Number findings 1…N in order of appearance in the draft.
+The claim card, numbered for a longer pack. Number the findings 1 to N in the order they
+appear in the draft.
 
-Render with `### Finding N` then the claim-card fields, **or** the ASCII card in `claim-card.md`.
-
-Machine path: `tools/render_report.py --template finding-card`.
+Write `Finding <N>` as a heading, then the fields from `claim-card.md`. Use the same
+manual result words, the same quoted passage and the same "Not tool-checked" line.
+A skill's own card wins if it has one.

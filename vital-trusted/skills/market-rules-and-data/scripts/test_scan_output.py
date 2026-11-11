@@ -38,7 +38,7 @@ class Statements(unittest.TestCase):
         ch = {e["element"] for e in so.scan_statements("", "CH")}
         self.assertIn("side-effect reporting statement", uk)
         self.assertNotIn("side-effect reporting statement", ch)
-        self.assertIn("authorisation holder name and address", ch)
+        self.assertIn("authorization holder name and address", ch)
 
     def test_unknown_market_lists_only_company_elements(self):
         els = {e["element"] for e in so.scan_statements("", "unknown")}

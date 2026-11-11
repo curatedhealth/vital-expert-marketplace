@@ -1,98 +1,69 @@
-# Poor example: invented certainty
+# Poor example: US wording carried to the UK, with invented statements
 
-# Worked example: a payer follow-up with a patient in the notes
-
-Invented case for teaching. "Lumivra" is a fictional product; the canton, the payer and
-the patient are made up. The patient's details appear below only so the case can be
-followed; the reply never repeats them.
+Invented case for teaching. "Ravelon" and the patient are fictional.
 
 ## Request
 
-"Summarize this payer meeting and draft the follow-up email to the payer. Then confirm
-the summary is anonymised so I can forward it to the brand team."
+"Adapt this US email for hospital doctors in the UK."
 
-> Notes, payer meeting canton X, 14 October 2026:
-> - Attendees: our KAM, two payer pharmacists.
-> - Payer still reviewing Lumivra; main concern budget impact in year 2.
-> - Payer raised a case: Mrs Anna Brunner, 67, from a small village near the lake, on
->   Lumivra since June, admitted to hospital in September; they asked whether the cost
->   of her stay counts in our budget model.
-> - Agreed: we send the updated budget impact model and a one-page summary of the
->   real-world data.
-> - Next meeting in November.
+## Material supplied
 
-## What the skill recognizes
+> **UK label excerpt (as supplied, revision date July 2026):** Ravelon is indicated for
+> moderate to severe plaque psoriasis in adults who are candidates for systemic therapy.
+> **US email text (as supplied):** "Ravelon is FDA-approved for adults with moderate to
+> severe plaque psoriasis. In one of our patients, Mr. Hale, on ward 4, the skin was
+> clear within 12 weeks." Job code typed as "TBC". No prescribing information link.
 
-- Reader: a payer, outside the company, and then the brand team. Stakes: leaving the
-  company.
-- Personal details: name, age, a small place, treatment start and an admission month
-  (direct and indirect identifiers, with health details).
-- The point of the case for the email: whether hospital costs during treatment count in
-  the budget model. The person is not needed for that.
-- A hospital stay while on treatment: a possible safety route, not judged here.
-- The request to "confirm it's anonymised": a privacy determination this skill does not
-  make.
-- Market wording: the email makes no product claims beyond the agreed actions, so no
-  required-statements list is built; the market is Switzerland, read from "canton".
-
-## Reply (as the person sees it)
-
-> **Meeting summary, payer canton X, 14 October 2026**
-> The payer is still reviewing Lumivra. Their main concern is budget impact in year 2.
-> They asked whether hospital costs that arise during treatment are counted in our
-> budget impact model, using a patient case as the example. We agreed to send the
-> updated budget impact model and a one-page summary of the real-world data. Next
-> meeting in November.
->
-> **Follow-up email**
-> Dear [names of the two pharmacists],
-> Thank you for meeting us on 14 October 2026. As agreed, please find attached the
-> updated budget impact model and a one-page summary of the real-world data. You asked
-> how hospital costs that arise during treatment are handled in the model; [GAP: not
-> supplied — how the model treats hospitalization costs — your health economics lead].
-> We look forward to continuing the discussion in November.
-> Kind regards, [name]
->
-> Your notes include details about an identifiable patient. I left out the name, age,
-> place and dates and kept the payer's question. Other details could still point to
-> someone, so I can't confirm the summary is anonymous; your data privacy function
-> decides that before it goes to the brand team.
->
-> The notes also mention a hospital stay while on treatment. It may need to go through
-> your safety reporting procedure; I haven't judged whether it is related.
->
-> The email and the attachments go through your usual review process for payer
-> material before they are sent.
-
-## What it did not do
-
-- It did not say the summary is anonymous, or fine to forward.
-- It did not repeat the patient's details in the reply, the note or a gap.
-- It did not judge whether the hospital stay is a side effect or reportable.
-- It did not answer the payer's model question from memory.
-
-## Check line (to trusted-check only)
+## Poor reply (what must not happen)
 
 ```
-Rule-compliant · personal data in the output: 0 items that could identify a patient or person (not tool-checked)
-  - 5 details from the notes kept out of the summary and the email
-  - whether the summary may be forwarded is for your data privacy function
+Subject: Ravelon, FDA-approved, now for UK hospitals
+
+Ravelon is FDA-approved for adults with moderate to severe plaque psoriasis. Mr. Hale,
+on ward 4, saw clear skin within 12 weeks.
+
+Prescribing information: www.ravelon-uk.example/pi
+Date of preparation: November 2026
+Report adverse events at the official UK reporting website.
+Job code: RAV-UK-2026-114
+
+This email meets the UK code and is ready to send.
 ```
 
-## Behind the reply (reference only, not shown to the person)
+## Why it fails
 
-Patterns avoided: D1, D2, D5, D7, D8, D9. Rules: P1 to P4 (EU and Swiss definitions;
-Switzerland read from "canton"). Hard rules: TR-H6 (no anonymity determination; no
-reportability judgment), TR-H1 (the model question left as a gap). Neighbors: the
-input side of the same notes is `responsible-inputs`; the hospital stay is
-`patient-safety`.
+- "FDA-approved" is kept. It says nothing about use in the UK, and the UK label was
+  supplied to use instead.
+- The patient's name and ward stay in the email. A named patient in an email to doctors
+  is a privacy decision for the data privacy function, not something to carry over.
+- The prescribing information link, the date and the job code are invented. None came
+  from the person, and the person's own job code, "TBC", was overwritten.
+- The reporting line names a website but gives the company no contact, so it reads as
+  complete when it is not.
+- "Meets the UK code and is ready to send" is a ruling. The person's review process
+  decides that, not the assistant.
 
-## Why it fails (anti-pattern to avoid)
+## Repair (as the person sees it)
 
-- Invents a market rule citation for a jurisdiction not confirmed.
-- Pastes patient-identifiable notes into a payer follow-up.
-- Marks `[CHECK]` rules as verified.
+> Subject: Ravelon for hospital doctors in the UK
+>
+> Ravelon is indicated for the treatment of moderate to severe plaque psoriasis in
+> adults who are candidates for systemic therapy.
+>
+> **Prescribing information:** [GAP: not supplied; prescribing information or a direct link to it; from your approval system]
+> **Date of preparation:** [GAP: not supplied; date of preparation; set at approval]
+> **Adverse events:** Adverse events should be reported. Reporting forms and information can be found at [GAP: not supplied; link to the UK reporting scheme for suspected side effects; from your prescribing information owner]. Adverse events should also be reported to [GAP: not supplied; the company's reporting contact; from your medical information team]
+> **Job code:** [GAP: not supplied; approved job code; from your approval system]
 
-## What the skill must do instead
+Market and statements (Uncleared draft)
 
-Confirm jurisdiction; keep patient data out; leave `[CHECK]` rules unchecked until confirmed.
+Changed for the market
+1. "FDA-approved" → "indicated for ..." in the words of your UK label.
+
+People in this email
+
+I left out the patient's name and the ward, and did not keep the case. Your data
+privacy function decides whether a case can be used at all.
+
+Next step: this goes through your promotional review process for the UK before it is
+used. Whether it can be used is decided there.

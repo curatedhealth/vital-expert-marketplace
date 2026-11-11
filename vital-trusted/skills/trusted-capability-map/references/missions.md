@@ -1,23 +1,31 @@
-# Missions (CF02 map)
+# Missions
 
-TRUSTED is a capability map (CF02), not a single task skill. Missions below are the
-stable intents a buyer or steward routes through this map. Each mission lands on one or
-more CF04 skills.
+TRUSTED is a map of capabilities, not a single task. A mission is a stable reason a person
+comes to it. Each mission lands on one or more skills. The map explains and routes. It does
+not check, clear or approve anything.
 
-| Mission id | Intent | Primary skills | Autonomy |
+| Mission | What the person wants | Skills | What waits for a person |
 |---|---|---|---|
-| M-ROUTE | Explain TRUSTED / pick a skill | trusted-capability-map | Auto: route table. HITL: letter on/off. |
-| M-INTAKE | Gather context before drafting | trusted-intake | Auto: ask missing fields. HITL: confirm audience/market. |
-| M-BUILD | Draft under active letters | letter Build skills (12) | Auto: apply hard rules. HITL: never invent; stop on safety/ethics gates. |
-| M-CHECK | Score a finished draft | trusted-check + letter skills | Auto: checklist. HITL: present options; no clearance. |
-| M-PROVE-OFFLINE | Fact-check / source / confidence / cite without a Verify key | Prove skills + `tools/` | Auto: offline suite. Label **not tool-checked**. |
-| M-PROVE-LIVE | Same with live fetch/currency | Prove skills + TRUSTED Prove live MCP (`trusted-prove`) | Auto: call live tools. HITL: never clear for external use. |
+| Route | To understand TRUSTED, or to find the right skill | trusted-capability-map | Which letters to turn on or off |
+| Intake | To give context once before drafting | trusted-intake | Confirming audience and market |
+| Build | A draft written under the active letters | The twelve Build skills | Anything the skill cannot source. It never invents. A safety or ethics stop goes to a person |
+| Check | A finished draft read against the active letters | trusted-check and the Build skills | What to do with the findings. No clearance is given |
+| Prove | A fact-check, a source note, counts and references, by hand | claim-assessment, source-assessment, confidence-scoring, citation-and-record | Whether the work moves on. Nothing is cleared |
 
-## Offline vs live Prove
+## Prove is checked by hand
 
-| Path | When | Tools | Label |
-|---|---|---|---|
-| Offline | No `vvfy_` key / air-gapped | `plugin/vital-trusted/tools/*` | Every support status and score line: **not tool-checked** |
-| Live | Key pasted into vital-trusted | qualify_source, check_currency, ingest_document, plus offline suite for structure | Tool statuses allowed only when the tool ran |
+Prove has one path. You supply the passages. The skills compare each sentence with its
+passage, read by hand, and every result is labeled "not tool-checked". There is no
+confidence figure, tier or score, and a result is never presented as a tool's answer. If a
+person needs the sentences tested by a tool, that is outside TRUSTED today, and the skills
+say so in one line.
 
-See `../../connectors.md` and Prove skills' `references/without-verify.md`. The `vital-verify` plugin is retired.
+| What the person supplies | What comes back |
+|---|---|
+| Text and the passages it rests on | One of six hand-check results per sentence, and counts |
+| A source they want to rely on | What it can carry and cannot, and the checks only they can make |
+| Counts from a hand check | The counts, the open items, one recommendation, no figure |
+| Sources and results | Reference lines and an uncleared record note |
+
+See `tools.md` for the small helper scripts that list sentences and counts. They decide
+nothing.

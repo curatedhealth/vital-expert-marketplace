@@ -3,19 +3,17 @@
 ## Companion slot
 
 No companion exists for this skill at launch. The method runs fully on the label or
-intended-purpose statement the person supplies. This skill never calls VERIFY directly
+intended-purpose statement the person supplies. This skill uses no tool
 and never describes a label or review check that did not run (TR-H4).
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
-| Label and intended use | Fetch the current approved label for the named market and version, and compare each product statement with its indication, population and dose wording | No companion yet. Candidate: label source (`trusted-capability-map`, `references/tools.md`) | Method runs on the supplied label; whether that label is current and approved in the market is `[GAP: not checkable here — …]`; check line says "not tool-checked" |
+| Label and intended use | Fetch the current approved label for the named market and version, and compare each product statement with its indication, population and dose wording | No companion yet. Candidate: label source (`trusted-capability-map`, `references/tools.md`) | Method runs on the supplied label; whether that label is current and approved in the market is `[GAP: not checkable here; …]`; check line says "not tool-checked" |
 | Promotional boundary | Prepare the piece for the company's promotional or medical review: route it, attach the label and references, record reviewer comments | No companion yet. Candidate: MLR preparation | Method runs; the note names the kind of process; "not tool-checked" |
-| Comparative claims | Test the comparison against the passage of the head-to-head study it rests on | VERIFY `check_claim`, through `claim-assessment`, when VERIFY is connected | Method runs (five questions); whether the study says what the comparison claims is "not tool-checked" |
+| Comparative claims | Test the comparison against the passage of the head-to-head study it rests on | `claim-assessment`, by hand | Method runs (five questions); whether the study says what the comparison claims is "not tool-checked" |
 
 Hand-off rule: a comparison that has a supplied direct study goes to `claim-assessment`
-for the support check, which owns the VERIFY contract. This skill did not read VERIFY's
-argument or return contracts `[CHECK]` that the hand-off matches the final
-`claim-assessment` scope.
+for the by-hand comparison, which owns the six hand-check results.
 
 ## Script
 

@@ -1,65 +1,102 @@
-# Rendered example: source card + currency not checked + stamp
+# Worked example: two sources behind one payer slide
 
-Invented teaching case. Market-access draft cites one journal article and one press release.
-VERIFY key absent — **not tool-checked**. Offline `score_source_offline.py` used for axes.
+Invented case for teaching. "Velostra", the NORLA registry and Example Pharma are
+fictional.
 
-## Source card — primary (journal)
+This run is by hand. No source was looked up, no score was computed and no currency
+check was run.
 
-```text
-┌─ Source card ──────────────────────────────────────
-│ Title:     Outcomes after Velostra in NORLA (registry)
-│ Publisher: Example Cardiology Journal
-│ URL:       https://example.org/norla-velostra (teaching URL)
-│ Kind:      Peer-reviewed journal article (registry analysis)
-│ Can carry: Methods, rates, adjusted HR for admissions endpoint
-│ Cannot:    Causal “cuts” language; label claims; other markets
-│ Strength:  Observational registry; funded by Example Pharma
-│ Currency:  Publication year 2023 — **currency not tool-checked**
-│ Score:     Relevance 4 · Authority 4 · Currency 3 · Independence 2 ·
-│            Traceability 4 · Total 17/25 (offline rubric)
-│ Label:     not tool-checked
-└────────────────────────────────────────────────────
+## Context card (from trusted-intake, already in the conversation)
+
+```
+TRUSTED context: payer slide on admissions
+
+Reader          a payer's medical adviser                           (stated)
+Use             promotional                                         (assumed)
+Material        citation details and an abstract, as supplied
+Stakes          leaving the company
+Next process    your promotional review process
 ```
 
-## Source card — secondary (press)
+## Request
 
-```text
-┌─ Source card ──────────────────────────────────────
-│ Title:     Company press: “40% fewer admissions”
-│ Publisher: Example Pharma IR
-│ Kind:      Company press release
-│ Can carry: Company messaging only — not substantiation for external HCP use
-│ Cannot:    Stand alone as evidence for a claim (IFPMA 4.3 / ABPI 6.2)
-│ Currency:  Dated 2024-03-01 — **currency not tool-checked**
-│ Score:     Relevance 3 · Authority 2 · Currency 3 · Independence 1 ·
-│            Traceability 2 · Total 11/25
-│ Label:     not tool-checked
-└────────────────────────────────────────────────────
+"Are these two sources fine for the payer slide?"
+
+## What was supplied
+
+> 1. "Outcomes after Velostra in NORLA", Example Cardiology Journal, 2023. Only the
+>    abstract was sent. It describes an observational registry analysis and states that
+>    the registry was funded by Example Pharma. Authors and identifiers were not sent.
+> 2. Example Pharma press release, 1 March 2024, headline "40% fewer admissions". No
+>    rates were sent.
+
+## Reply (as the person sees it)
+
+I can't tell you whether they are good enough; your review process decides that. Here is what each can and cannot carry for a payer reader, so you can decide where
+to use them.
+
+Source: "Outcomes after Velostra in NORLA", Example Cardiology Journal, 2023 (full date not shown)
+Identifier: none supplied
+
+Kind: a journal article, from the abstract only
+Peer review: status not confirmed; the abstract does not say, and the journal's own page would
+Funders and interests: funded by Example Pharma, as the abstract states; authors not supplied, so their interests are not stated
+Fit to your question: it concerns Velostra admissions in an observational registry; whether
+the population matches your market is not shown in the abstract
+
+How strong: one observational registry analysis; one study
+Date: 2023, full date not shown
+Currency: not checked. The check you can do: the journal's page for the article and a retraction database
+
+Can carry for a payer: that, in this registry analysis, admissions were reported
+for Velostra, with the rates once you have the full article
+Cannot carry: that Velostra caused fewer admissions, or any claim about a market
+the abstract does not name
+
+To use it: the full article, for the event rates and the population
+Next step: this goes through your market access or promotional review and your medical
+review, as your process names it, before it is used.
+
+Not tool-checked: I read what you supplied. Currency and retraction checks are yours to make.
+
+Source: Example Pharma press release, 1 March 2024, headline "40% fewer admissions"
+Identifier: none supplied
+
+Kind: a company press release
+Peer review: not peer reviewed
+Funders and interests: made by Example Pharma, the maker of the product
+Fit to your question: it gives a headline and no rates, population or design
+
+How strong: not stated; no study design is given
+Date: 1 March 2024
+Currency: not checked. The check you can do: the company's page for a corrected or replaced release
+
+Can carry for a payer: that the company announced the result on 1 March 2024
+Cannot carry: the admissions claim itself, which needs the study behind the
+headline
+
+To use it: cite the article, not the release, for the figures
+Next step: this goes through your market access or promotional review and your medical
+review, as your process names it, before it is used.
+
+Not tool-checked.
+
+This check flags issues. It is not medical, legal, regulatory or ethics review.
+
+## Why it is written this way
+
+- Each source has its own card with what it can and cannot carry. No source is graded
+  and no score is shown, because no tool ran.
+- The article's peer review status is not assumed from the word "journal". It is shown
+  as not confirmed, with what would confirm it.
+- Dates are written in full, or marked "full date not shown".
+- The press release is kept to the one thing it can carry.
+- Payer material names both reviews: market access or promotional, and medical.
+- The cards are given as a check, so the closing statement is the last line.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## What the skill did
-
-1. Qualified each URL/kind before any claim check.
-2. Marked currency as not tool-checked (no live `check_currency`).
-3. Downgraded press release for independence; kept journal for rates/HR only.
-4. Did not invent a “strong evidence” verdict from the score total alone.
-
-## Stamp
-
-```text
-TRUSTED / source-assessment: not tool-checked (offline tools) · 2 sources · currency not tool-checked · gaps open
+True · sources: 2 looked at, 2 not peer reviewed or status not confirmed, 2 made or paid for by an interested party, 1 do not fit the question or reader (not tool-checked)
+True · strength and currency: 0 single studies carrying a general claim, 0 retracted or corrected, 1 may be replaced or undated, 2 currency not checked (not tool-checked)
 ```
-
-**Why it works:** Separate cards, explicit can/cannot, offline score with axes, currency honesty, press release not treated as substantiation.
-
-
-## Currency block (explicit)
-
-```text
-Currency: not tool-checked — publication year taken from citation metadata only.
-Re-check with live check_currency when Prove MCP is connected.
-```
-
-## Method note
-
-This example is a teaching fixture for known-answer evals. Names (Velostra, NORLA, Example Pharma) are fictional. Prefer shared cards under `../../templates/` when rendering scannable packs. Stamp lines match `templates/check-line-stamp.md`.

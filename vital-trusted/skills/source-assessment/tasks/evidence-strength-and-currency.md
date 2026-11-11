@@ -1,6 +1,8 @@
 # Task TR-8.2.2 Evidence strength and currency
 
-Absorbs the currency-check method of the earlier vital-verify plugin.
+Contents: Formula; Steps; Not tool-checked; Check line; Boundaries.
+
+Absorbs the currency-check method of the earlier Prove work, now done by the person with the pages named here.
 
 ## Formula
 
@@ -9,11 +11,11 @@ Absorbs the currency-check method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Place the evidence (design), count the studies behind the claim, check retraction, correction and supersession, date it, then say what it can carry |
 | Skill | TR-8.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/knowledge.md` (S5, S6, S9–S12, S16) |
-| Tool | VERIFY `check_currency`. `scripts/identify_source_id.py` where code runs |
+| Knowledge | `references/rules.md` (R1, R2, R4, R5, R6), `references/source-types.md`, `references/patterns.md` (S5, S6, S9–S12, S16) |
+| Tool | None. `scripts/identify_source_id.py` where code runs |
 | Prompt | This guide |
-| Template | `../../templates/source-card.md` (strength and currency rows), `templates/verify-block.md`, `templates/check-line.md` |
-| Input | The qualified source from TR-8.2.1, the claim it is meant to support, who will read it |
+| Template | `templates/source-card.md` (strength and currency rows), `templates/check-line.md` |
+| Input | The source as described by TR-8.2.1, the claim it is meant to support, who will read it |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H6, TR-H8; stop rules in `governance.md` |
 
 ## Steps
@@ -32,7 +34,7 @@ Name the design as the source names it. Do not upgrade it.
 | Model (economic, budget impact, simulation, forecast) | What follows if its inputs and assumptions hold | Results depend on inputs; it is not an observation |
 | Market research, survey | What these respondents said | Who was asked and how many limits who it speaks for |
 
-This order follows the logic of GRADE and the Oxford CEBM levels (`references/method-standards.md` / `references/knowledge.md`
+This order follows the logic of GRADE and the Oxford CEBM levels (`references/rules.md`
 R1, R2): randomized evidence starts higher than observational evidence; case series and
 expert opinion sit lowest; and a level can move down for risk of bias, inconsistency,
 indirectness, imprecision or publication bias. Do not assign a GRADE certainty rating
@@ -49,18 +51,16 @@ time (R1). Ask: is the claim resting on one study, or on several that agree?
 - If several studies were supplied and they disagree, say so. Do not pick the favorable
   one silently (that is also a balance problem for `balanced-evidence`).
 - If the person says "the evidence shows" but supplied one source, write `[GAP: not
-  supplied — other studies on this question — supply them or say "one study"]`.
+  supplied; other studies on this question; supply them or say "one study"]`.
 
 ### 3. Retraction, correction, expression of concern
 
-With VERIFY: call `check_currency` with the DOI, PMID or PMCID in its own argument
-(`references/tools.md`). Report the notice it returns, in plain words, with the time of
-the check. A URL alone returns "not checked"; say exactly that. "Not checked" is not
+You cannot confirm this by reading, and no tool does it here. Ask whether the person has
+checked the journal's own page for the article, the publisher notice and a retraction
+database (`references/rules.md` R6). Record it as "checked by you on <date>", or write
+"retraction and correction status not checked" and name the pages to look at. Never say a
+paper "has not been retracted" without that check, and never treat "not checked" as
 "clear".
-
-Without VERIFY: ask whether the person has checked the journal page and a retraction
-database (`references/method-standards.md` / `references/knowledge.md` R6), and write "retraction and correction status not
-checked". Never say a paper "has not been retracted" without a check.
 
 What the notices mean for the person:
 
@@ -90,8 +90,8 @@ Guidelines, labels, regulator and HTA documents are replaced. For each:
 - Give the publication or issue date as the source shows it, in full ("12 March 2024").
   If there is only a year, give the year and say the full date is not shown.
 - For "current", "latest", "standard of care" or "now" claims, the source must carry a
-  date that supports them. Otherwise `[GAP: out of date or unclear date — …]`.
-- Without a tool and without a date, ask for the date and mark currency "not checked".
+  date that supports them. Otherwise `[GAP: out of date or unclear date; …]`.
+- Without a date, ask for the date and mark currency "not checked".
 - Age alone is not a verdict. An older trial can still be the pivotal evidence; an older
   guideline may have been replaced. Say which question the date raises.
 
@@ -99,18 +99,17 @@ Guidelines, labels, regulator and HTA documents are replaced. For each:
 
 Write the two lines that matter most on the card:
 
-- **Can carry**: the narrowest true statement the source supports, for this reader. For
+- **Can carry**: the narrowest statement the source supports, in its own words, for this reader. For
   example: "That in one randomized trial in adults with condition X, events were lower
   with drug D than placebo at 52 weeks."
 - **Cannot carry**: what the person may be tempted to make it say. For example: "That
   drug D reduces events in all patients, or compared with other treatments, or that it
   is standard of care."
 
-## Without VERIFY
+## Not tool-checked
 
-Run steps 1, 2 and 4 to 6 by hand. Retraction and correction status is "not checked"
-and currency is "not checked" unless the person supplies a dated check. Label the card
-"not tool-checked".
+Run steps 1, 2 and 4 to 6 by hand. Retraction, correction and currency status are "not
+checked" unless the person supplies a dated check. Label the card "not tool-checked".
 
 ## Check line
 

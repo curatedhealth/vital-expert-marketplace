@@ -1,61 +1,88 @@
-# Rendered example: context card filled + stamp
+# Worked example: a payer deck with the label not yet supplied
 
-Invented teaching case before a TRUSTED letter run on a German market-access deck.
+Invented case for teaching. "Velostra" is a fictional product. No real company or person.
 
-## Context card
+## Request
 
-```text
-┌─ Context card ─────────────────────────────────────
-│ Work:          Draft payer slide deck (Velostra / NORLA)
-│ Reader:        Internal market-access team → then payer (external)
-│ Market:        Germany
-│ Use:           Market access / HTA discussion pack
-│ Product:       Approved (Velostra)
-│ Depth:         Full (external reader next)
-│ Data in pack:  Registry summary + company press (no patient-level files)
-│ Policy known:  Company MLR required before external send — process named, not replaced
-│ Open asks:     Confirm SmPC on hand? Confirm press may not substantiate?
-│ Letters hint:  R (claims/label), T (true/grounded), U (balance), D (record)
-│ Label:         Intake only — no letter verdicts yet
-└────────────────────────────────────────────────────
+"Build a short slide deck for German payers on Velostra, from the registry summary and
+the press release below. Velostra is approved in Germany. It goes out next week."
+
+> (Registry summary, supplied) Observational registry, 1,850 patients. Hospital admission
+> within 12 months: 12.0% on Velostra versus 20.0% on standard care. Adjusted hazard
+> ratio 0.60 (95% CI 0.48 to 0.75). No cost analysis done.
+> (Press release, supplied) The company announced publication of the registry results.
+
+## Reading the request
+
+| Field | What the request shows | Source |
+|---|---|---|
+| Reader | German payers | stated |
+| Market | Germany | stated |
+| Product status | Approved in Germany, but no label supplied | stated, label not seen |
+| Use | Not said whether this is promotional or scientific exchange | unclear |
+| Deliverable | Short slide deck | stated |
+| Material | Registry summary, press release | read |
+| Stakes | Leaving the company | read |
+| Inputs | A registry summary and a press release; nothing marked confidential, unpublished or personal | read |
+
+Two things would change the deck: the approved label, which sets what the slides may say
+about use, and whether the deck is promotional. The second is assumed in the careful
+direction and said out loud, so the one question asks for the label. The deck is drafted
+in the same reply, with label-dependent statements as gaps (draft first).
+
+## What the person sees
+
+Working from:
+- Reader: German payers (as you said)
+- Market: Germany (as you said)
+- Product status: approved in Germany (as you said; label not seen)
+- Use: promotional (my assumption; tell me if that's wrong)
+- Material: the registry summary and the press release
+- Not seen: the approved label
+
+> Slide 1. Velostra in an observational registry of 1,850 patients
+> Hospital admission within 12 months: 12.0% on Velostra versus 20.0% on standard care.
+> Adjusted hazard ratio 0.60 (95% CI 0.48 to 0.75). Observational data; no cost analysis
+> was done.
+>
+> Slide 2. Approved use
+> [GAP: not supplied; the approved indication in Germany; your approved label]
+
+One question: can you share the approved label for Germany? The deck can only say what
+the label supports, and I haven't seen it. I'll fill the gap when you reply.
+
+It goes through your review process for material sent to payers before it goes out.
+
+## Card (for other skills)
+
+```
+TRUSTED context: short slide deck for German payers on Velostra
+
+Reader          German payers                                       (stated)
+Market          Germany                                             (stated)
+Language        not needed                                          (assumed)
+Product status  approved in Germany, as you said; label not seen    (stated)
+Use             promotional                                         (assumed)
+Deliverable     short slide deck                                    (stated)
+Material        registry summary; press release
+Not seen        label: not seen
+Stakes          leaving the company
+Next process    the review process your company uses for material sent to payers
+Inputs          public
+AI use policy   not asked (no sensitive input)
+Tool decision   not made here; it belongs to the person and their AI policy owner
+
+Assumed         treated as promotional material
+Asked           approved label for Germany
 ```
 
-## Intake questions written (excerpt)
+## Why this is the right intake
 
-1. Is the SmPC / approved labeling available for this run?  
-2. Will this pack leave the company this week?  
-3. May company press be cited only as messaging, not as evidence?
-
-## Stamp
-
-```text
-TRUSTED / trusted-intake: not tool-checked · context card ready · external depth · gaps: labeling on hand?
-```
-
-**Why it works:** Fills market/use/product/reader before letters; does not invent policy; queues R/T/U/D without running them.
-
-
-## Why these fields matter (standards)
-
-- IFPMA 4.2 / ABPI 6.1 — market and use decide how balance and relative/absolute framing apply.
-- IFPMA 4.3 / ABPI 6.2 — labeling or scientific evidence must be on the path before external claims.
-- FDA Bad Ad patterns — omitting risk / overstating benefit are intake flags when US materials are in scope.
-
-## What intake does not do
-
-Does not run letters, does not score claims, does not clear the pack.
-
-## Method note
-
-This example is a teaching fixture for known-answer evals. Names (Velostra, NORLA, Example Pharma) are fictional. Prefer shared cards under `../../templates/` when rendering scannable packs. Stamp lines match `templates/check-line-stamp.md`.
-
-Accessed teaching date: 8 November 2026. release_state: Released (owner-authorized 8 November 2026). Still requires named human clearance per piece.
-## Checklist echo
-- [x] Rendered card(s) present
-- [x] Stamp present
-- [x] Offline / not tool-checked labeled when applicable
-- [x] Gaps left open (no fake clearance)
-
-See also: skill `references/method.md` and `references/method-standards.md`.
-
-See also: skill `references/method.md` and `references/method-standards.md`.
+- One question, under a draft, not a form. Reader, market, deliverable and material
+  were read or stated.
+- The product status carries its source: "as you said", with the note that no label was
+  seen. It is not recorded as approved on anyone's authority.
+- Use is assumed in the careful direction and said in one line. Payers are not
+  prescribers, so use is not asked (`SKILL.md`, "How deep to go").
+- No company policy is named or invented. The process is described by kind.
+- The card does not run any letter and does not say the deck can go out.

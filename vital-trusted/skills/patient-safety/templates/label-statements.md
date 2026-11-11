@@ -5,13 +5,13 @@ statements. Every cell is label text quoted exactly, or a gap. Nothing from memo
 (TR-H1). Shown to the person; plain headings, no rule ids.
 
 ```
-Safety statements for <product, formulation> — from the label you supplied
-Label: <title as given>, <market>, revision date <date as shown | [GAP: out of date or unclear date — revision date — confirm the current approved label]>
+Safety statements for <product, formulation>: from the label you supplied
+Label: <title as given>, <market>, revision date <date as shown | [GAP: out of date or unclear date; revision date; confirm the current approved label]>
 
 | Topic | What the label says (word for word) | Label section |
 |---|---|---|
 | Dose, adults | "<quoted text>" | <e.g. 4.2> |
-| Dose, children | "<quoted text>" or [GAP: not supplied — dose in children — from section 4.2] | <section> |
+| Dose, children | "<quoted text>" or [GAP: not supplied; dose in children; from section 4.2] | <section> |
 | Elderly | "<quoted text>" | <section> |
 | Kidney impairment | "<quoted text, with the label's own cut-offs>" | <section> |
 | Liver impairment | "<quoted text, with the label's own classes>" | <section> |

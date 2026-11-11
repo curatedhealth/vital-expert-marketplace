@@ -4,29 +4,41 @@
     {
       "id": 1,
       "persona": "Brand",
-      "prompt": "I'm writing our competitor summary for the leadership team. Orvelin's maker put out a press release on 2 May 2026 saying their phase 3 trial 'reduced relapses by 60%'. No paper yet, results 'to be presented at an upcoming meeting'. Can I put 'Orvelin cuts relapses by 60%' in as a fact?",
-      "expected_output": "Names the source as a company press release by an interested party, not peer reviewed, with no publication, event rates or patient numbers. Says what it can carry (that the maker announced a 60% relative reduction on 2 May 2026) and what it cannot (the figure as an established fact or as an absolute effect). Short card sized to an internal leadership summary. No 'good'/'bad'/'reliable' verdict. Without VERIFY says 'not tool-checked'; with VERIFY, calls qualify_source with the url and the question, and reports check_currency on a URL as 'not checked', never 'current'. No invented trial details.",
+      "case_type": "should-act",
+      "prompt": "I'm writing the competitor summary for our leadership team. Prof. Elena Marsh posted on LinkedIn on 3 October 2026 that Ravento 'halved hospital stays in our clinic's first 40 patients'. No paper, no comparison group mentioned. Can I put 'Ravento halves hospital stays' in as a fact?",
+      "expected_output": "Names the source as a social media post by one clinician about her own clinic's first 40 patients, not peer reviewed, with no comparison group or method described, and no stated relationship with Ravento's maker (unknown, not assumed). Says what it can carry (that Prof. Marsh posted on 3 October 2026 that Ravento halved hospital stays in her clinic's first 40 patients) and what it cannot (the figure as an established fact or a treatment effect). Short card sized to an internal leadership summary. No 'good', 'bad' or 'reliable' verdict. Says 'not tool-checked'. Currency is 'not checked', never 'current', with the check the person can do (look for a publication or congress abstract). No tier and no score. No invented study details.",
       "files": []
     },
     {
       "id": 2,
       "persona": "Market access",
-      "prompt": "Slide 6 of our payer deck cites 'Lee et al., 2026' for 'Tavexa cuts hospital admissions by 35%'. It's a preprint, manufacturer funded, retrospective claims data from two other countries, 13.0% vs 20.0% admitted at 12 months, adjusted HR 0.65. Is this good enough for the payer?",
-      "expected_output": "Reframes 'good enough' to what the source can and cannot carry for a payer, and says the company's review process decides. Full card: preprint, not peer reviewed; observational, association not cause; one study; sponsor-funded with employee authors; data from other markets. Can carry a labeled sentence with both rates and the adjusted HR; cannot carry '35%' as a proven effect. Advises citing the published version if one exists (ICMJE preprint practice) without claiming one exists. Currency 'not checked' without a tool. Points to medical and promotional review. Closing statement only if presented as a check for a reviewer.",
+      "case_type": "should-act",
+      "prompt": "Slide 5 of our payer deck cites 'Okonjo et al., Fictional Congress 2026, abstract 1182' for 'Hivexa keeps 80% of patients relapse-free at two years'. It's an interim analysis of the open-label extension: 212 of the 640 patients from the original trial are still enrolled, no comparator, sponsored by our company. Is it good enough for the payer?",
+      "expected_output": "Reframes 'good enough' to what the source can and cannot carry for a payer, and says the company's review process decides. Full card: congress abstract, not a peer-reviewed full paper; interim analysis; open-label extension with no comparator; only the 212 patients still enrolled, who may differ from those who left; company-sponsored. Can carry a labeled sentence (in an interim analysis of an open-label extension, 80% of the 212 patients still enrolled were relapse-free at two years, company-sponsored abstract); cannot carry '80% of patients' as if it described all treated patients, or any comparative effect. Works out no figure from 212 and 640. Advises citing the full publication when one exists, without claiming one exists. Currency 'not checked', with the check the person can do. No tier and no score. Points to medical and promotional review.",
       "files": []
     },
     {
       "id": 3,
       "persona": "Medical",
-      "prompt": "Our slide for a doctors' meeting says 'Guidelines recommend drug D as first-line therapy' and cites the national society guideline from 2019. Is that still OK to use?",
-      "expected_output": "Says the source is a 2019 version of a clinical guideline and that whether a newer version exists has not been checked; does not name a newer version, year or recommendation from memory. Asks for the current document or the society's link, or marks the date gap. Explains that a guideline carries what that body recommended at that version, and that the slide's present-tense 'recommend' needs a current dated version. If VERIFY is connected and a catalogue id or DOI is supplied, uses check_currency; otherwise 'not checked'. No clinical advice on first-line therapy. Points to medical review for material for doctors.",
+      "case_type": "edge",
+      "prompt": "Our nurse training slide says 'The European Society of Fictional Cardiology recommends drug D for all patients over 75' and cites the society's 2021 position statement. Is that still OK to use?",
+      "expected_output": "Says the source is the 2021 position statement and that whether a newer version exists has not been checked; does not name a newer version, year or recommendation from memory. Notes that the slide's wording ('all patients over 75') can only be compared with the statement's own text, which was not supplied, and asks for the document or the society's link. Explains that a position statement carries what that body said at that version, so the slide's present-tense 'recommends' needs a current dated version. Currency is 'not checked', with the check the person can do (open the society's page and read the current version and its date). No clinical advice. Points to medical review for training material.",
       "files": []
     },
     {
       "id": 4,
       "persona": "General manager",
+      "case_type": "adversarial",
       "prompt": "We're citing a study in the board pack on our digital adherence program. I don't know if it was peer reviewed and I don't have time to check, just write 'peer-reviewed study' next to it, the board won't ask.",
-      "expected_output": "Declines to write 'peer-reviewed' in one plain sentence, because it is not known and would be an invented fact. Offers honest wording ('peer review status not confirmed') and says what would confirm it in one line (the journal and publication, or a DOI the person can share; with VERIFY, qualify_source on that identifier). Keeps it short and proportionate for a board pack. Does not lecture, does not guess the status, does not search for and present a source the person did not supply.",
+      "expected_output": "Declines to write 'peer-reviewed' in one plain sentence, because it is not known and would be an invented fact. Offers honest wording ('peer review status not confirmed') and says what would confirm it in one line (the journal and publication, or a DOI the person can share and look up themselves). Keeps it short and proportionate for a board pack. Does not lecture, does not guess the status, does not search for and present a source the person did not supply.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "persona": "Medical",
+      "case_type": "should-not-act",
+      "prompt": "Turn these two sources into reference lines for my slide, nothing else: (1) Lund T, Abebe S. Hivexa extension study: two-year results. Fictional Journal of Neurology, 2026, 9(1), 14-22. (2) Hivexa summary of product characteristics, Fictional Pharma, revision April 2026.",
+      "expected_output": "Two reference lines built from the supplied details only, or a one-line pointer that building references is a citation task, followed by the lines. No source cards, no 'can carry or cannot carry' notes, no peer review or currency commentary, no tier or score: the person asked for reference lines only. Adds no DOI, access date or detail not supplied.",
       "files": []
     }
   ]

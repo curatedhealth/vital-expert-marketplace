@@ -1,8 +1,17 @@
 # Knowledge: responsible-inputs
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Primary rules behind this skill
+## Contents
+
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
+
+## Part 1: Rules
 
 Each rule names its primary source, the date and how it was confirmed. A rule marked
 `[CHECK]` has not been confirmed against the primary document and is applied as good
@@ -10,21 +19,21 @@ practice, not cited as a requirement (TR-H8). Jurisdiction is stated for each.
 
 Last reviewed: 20 October 2026.
 
-## The rule that governs first
+### The rule that governs first
 
 | Id | Rule | Source | Status |
 |---|---|---|---|
-| I11 | Whether a tool may be used for a kind of material is decided by the person's company AI use policy and the owners named in it, then by the company's data, privacy, legal and compliance functions. | The person's own company policy (concept §5 and §8.3: "rule source: the user's company AI policy, then sourced public frameworks"). | Owner-stated design rule. The policy is never assumed; it is asked for. |
+| I11 | Whether a tool may be used for a kind of material is decided by the person's company AI use policy and the owners named in it, then by the company's data, privacy, legal and compliance functions. | The person's own company policy (rule source: the person's company AI policy, then sourced public frameworks). | Owner-stated design rule. The policy is never assumed; it is asked for. |
 
 The public rules below explain why a question matters. They are never used to answer the
 policy question on the company's behalf.
 
-## Personal and patient data
+### Personal and patient data
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
 | I1 | Processing of special categories of personal data, including "data concerning health", genetic data and biometric data for uniquely identifying a person, is prohibited unless an exception in Article 9(2) applies (for example explicit consent). | Regulation (EU) 2016/679 (GDPR) of 27 April 2016, Article 9(1) and (2), Official Journal L 119, 4 May 2016 (original text); applies from 25 May 2018 (Article 99(2)). | EU and EEA | Confirmed 20 October 2026 from the Official Journal text (Publications Office). Later amending acts, if any, `[CHECK]`. |
-| I2 | Pseudonymised data that could be attributed to a person with additional information is still information on an identifiable person. Data protection principles do not apply to anonymous information, judged by "all the means reasonably likely to be used" to identify someone. | GDPR Recital 26; Article 4(1) (personal data) and 4(5) (pseudonymisation). Same source as I1. | EU and EEA | Confirmed 20 October 2026. Used here so that removing names is never described as making data anonymous. |
+| I2 | Pseudonymized data that could be attributed to a person with additional information is still information on an identifiable person. Data protection principles do not apply to anonymous information, judged by "all the means reasonably likely to be used" to identify someone. | GDPR Recital 26; Article 4(1) (personal data) and 4(5) (pseudonymization). Same source as I1. | EU and EEA | Confirmed 20 October 2026. Used here so that removing names is never described as making data anonymous. |
 | I3 | "Data concerning health" means personal data related to the physical or mental health of a person, including the provision of health care services, which reveal information about their health status. | GDPR Article 4(15). Same source as I1. | EU and EEA | Confirmed 20 October 2026. |
 | I4 | Sensitive personal data includes data relating to health, genetic data and biometric data that uniquely identifies a person. | Swiss Federal Act on Data Protection (FADP) of 25 September 2020, SR 235.1, Article 5(c); consolidated version of 7 July 2025, Fedlex. | Switzerland | Confirmed 20 October 2026 from the Fedlex English text, which states that English is not an official language and the translation has no legal force. The German, French and Italian texts govern. |
 | I5 | Personal data may be disclosed abroad if the Federal Council has found the destination's protection adequate or, failing that, if appropriate safeguards listed in the Act apply. | FADP Article 16(1) and (2), same source as I4. | Switzerland | Confirmed 20 October 2026. This skill does not assess where a tool processes data or whether a transfer is permitted; that is the data protection function's call. |
@@ -33,19 +42,19 @@ policy question on the company's behalf.
 UK GDPR and the UK Data Protection Act 2018: `[CHECK]`, not yet read. Treat as good
 practice in the same direction as I1 to I3 until confirmed.
 
-## AI literacy
+### AI literacy
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
-| I7 | Providers and deployers of AI systems shall take measures to support the development of AI literacy of their staff and others operating AI on their behalf; the obligation does not require any specific level of AI literacy of any individual. Chapter I, which holds Article 4, applies from 2 February 2025. | Regulation (EU) 2024/1689 (AI Act), Article 4, as replaced by Regulation (EU) 2026/1744 of 8 July 2026 (Digital Omnibus on AI); Article 113(a). Consolidated text of 27 July 2026, Publications Office. | EU | Confirmed 20 October 2026. The obligation sits with the company. This skill supports a person's habits; it does not satisfy or evidence the company's obligation. |
+| I7 | AI literacy. Article 4 of the AI Act, as replaced by Regulation (EU) 2026/1744 of 8 July 2026 (published in the Official Journal on 24 July 2026, in force 27 July 2026), paragraph 1: "Providers and deployers of AI systems shall take measures to support the development of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used. This obligation does not require providers or deployers to guarantee any specific level of AI literacy of any individual." Paragraph 2: the Commission and the Member States "shall support and facilitate the efforts of providers and deployers of AI systems, in particular SMEs". The duty stays with providers and deployers; it did not move to the authorities. The original 2024 wording asked providers and deployers to "take measures to ensure, to their best extent, a sufficient level of AI literacy" and applied from 2 February 2025 (Article 113) `[CHECK]`. | Regulation (EU) 2024/1689 (AI Act), Article 4, as replaced by Regulation (EU) 2026/1744 of 8 July 2026 (OJ text on EUR-Lex, ELI http://data.europa.eu/eli/reg/2026/1744/oj); Article 113 for the original application date | EU | Article 4 as replaced read 9 November 2026 in the Official Journal text on EUR-Lex; the entry-into-force date rests on the EUR-Lex metadata. `[CHECK]` applies only to the original 2024 wording and its application date, which were not re-read. The same row appears in rules.md, knowledge.md and method-standards.md, and agrees with `trusted-intake` I8. Any duty sits with the company: this skill supports a person's habits; it does not satisfy or evidence an obligation. |
 
-## Price-sensitive information
+### Price-sensitive information
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
 | I8 | Inside information is information of a precise nature, not made public, relating to an issuer or its financial instruments, which would be likely to have a significant effect on prices if made public. Unlawful disclosure arises where a person with inside information discloses it to another person, except in the normal exercise of employment, profession or duties. | Regulation (EU) No 596/2014 (Market Abuse Regulation), Article 7(1)(a) and Article 10(1); Regulation of 16 April 2014, Official Journal L 173, 12 June 2014 (original text). | EU, for issuers with instruments on EU trading venues | Definitions confirmed 20 October 2026 from the Official Journal text. Later amendments `[CHECK]`. Swiss and US equivalents `[CHECK]`. Whether information is inside information, and whether a tool use is a disclosure, is for legal or compliance; this skill only names the category. |
 
-## Intellectual property
+### Intellectual property
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -53,7 +62,7 @@ practice in the same direction as I1 to I3 until confirmed.
 | I10 | Reproduction rights and the quotation exception in the EU; equivalents in Switzerland and the UK. | Intended: Directive 2001/29/EC, Articles 2 and 5(3)(d); Swiss Copyright Act (SR 231.1); UK Copyright, Designs and Patents Act 1988. | EU, Switzerland, UK | `[CHECK]`: not read. Applied as good practice only: summarize in new words, quote briefly with attribution, ask the licensing process before reproducing. |
 | I12 | Licensed content and data are used only as the license terms allow; some publisher and data licenses address use in AI tools. | The specific license the company holds. | Any | `[CHECK]`: no license read. Good practice: ask, do not assume the terms. |
 
-## Unpublished study data and commercial confidentiality
+### Unpublished study data and commercial confidentiality
 
 No single public rule decides this. Confidentiality comes from the company's own policies,
 study contracts and confidentiality agreements, none of which this skill can read. The
@@ -61,7 +70,7 @@ skill names the category, asks the policy question and offers safer routes. Wher
 material also holds patient data (I1 to I6) or could be price-sensitive (I8), those rules
 explain why the question matters.
 
-## How to use these rules in output
+### How to use these rules in output
 
 - In what the person reads, name the reason in plain words ("health details about a
   named patient are treated as especially sensitive under data protection law"). Cite
@@ -70,14 +79,12 @@ explain why the question matters.
   anonymous under I2.
 - A `[CHECK]` rule is described as good practice, never as a requirement.
 
-## Migrated patterns
-
-# Failure patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it breaks.
 All examples are invented for teaching; no real product, study, company or person.
 
-## Contents
+### Contents
 
 - Confidentiality C1–C9
 - Intellectual property P1–P7
@@ -86,7 +93,7 @@ All examples are invented for teaching; no real product, study, company or perso
 Pattern ids are for this file only. In what the person reads, describe the problem in
 plain words (TR-H13).
 
-## Confidentiality
+### Confidentiality
 
 **C1 The approval verdict.** The assistant says the tool is fine, or not allowed.
 Why: only the company's policy can say; a wrong "fine" exposes the person, a wrong "not
@@ -119,7 +126,7 @@ the summary." (TR-H1, governance stop rule)
 **C5 All or nothing.** The only options offered are "paste it all" or "don't use AI".
 Why: people will paste it anyway; the job usually needs far less.
 After: offer the minimum extract, removed identifiers, the public version or an approved
-tool. (concept §5, Ethical stays concrete)
+tool.
 
 **C6 The incident judgment.** After material is already pasted, the assistant decides
 whether it is a breach or must be reported.
@@ -145,7 +152,7 @@ Why: the question is what went into the tool, not only who reads the result.
 After: keep the depth light for internal results, but still ask the policy question for
 sensitive inputs. (TR-H12)
 
-## Intellectual property
+### Intellectual property
 
 **P1 The full rewrite.** A whole paid article rewritten paragraph by paragraph for an
 external newsletter.
@@ -178,7 +185,7 @@ After: summarize the recommendations needed, cite the guideline and link to it. 
 were licensed for.
 After: ask the brand or legal team which uses the agreement covers.
 
-## Tone
+### Tone
 
 **T1 The lecture.** Three paragraphs on data protection before a one-line answer.
 After: one line, one question, one route. (TR-H12, TR-H13)
@@ -194,13 +201,39 @@ After: "Health details about a named patient are treated as especially sensitive
 **T4 Moralizing.** "It would be irresponsible to…"
 After: state the question and the route without judging the person.
 
-# Failure modes
+## Part 3: Gap rules
+
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/knowledge.md` (Part 2, "Where the marker belongs").
+
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+Gaps in this skill appear mostly in check lines and notes, not inside the person's
+document. In what the person reads, prefer the plain question ("Does your AI use policy
+allow this tool for unpublished study data?") over raw gap syntax (TR-H13).
+
+| Class | Typical case in this skill |
+|---|---|
+| `needs a decision` | Whether this tool is allowed for this kind of material; whether a license covers this use; whether information is price-sensitive; what to do after sensitive material was pasted |
+| `not supplied` | Which tool or account; where the result will go; the license terms; the policy text the person refers to |
+| `not checkable here` | Whether the tool's terms or location meet the company's requirements, with no AI-policy companion and no terms supplied |
+| `conflicting` | The person says the material is public, but it carries a "confidential" or "draft" marking |
+| `out of date or unclear date` | A policy or approved-tool list quoted with no version or date |
+
+Wording rules:
+
+- Name the kind of material and the decision, not the person: "permission to reproduce
+  the full article", not "user may be infringing".
+- Never hint at the answer inside the gap ("probably approved", "likely fair use").
+- Never write a gap that repeats a personal identifier.
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
 | FM-RI-01 | Public derivative of confidential | Was unpublished partner/CSR content pushed to a public pack? | Inputs | TRUSTED responsible-inputs | VERIFIED practice |
 | FM-RI-02 | AI-use policy skipped | Was sensitive input pasted to a public tool without policy check? | AI policy | TRUSTED responsible-inputs | [CHECK] |
 | FM-RI-03 | PHI assumed anonymized | Was identifiable data treated as fine without confirmation? | Privacy | TRUSTED responsible-inputs | PARTIAL |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `responsible-inputs`. Shared FM-08 is universal Prove honesty.
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

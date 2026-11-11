@@ -1,8 +1,17 @@
 # Knowledge: claims-and-label
 
-## Migrated rules
+This file is the single home for this skill's sourced rules, failure patterns, gap
+wording and failure modes. Where the same rule or pattern appeared in more than one
+earlier file, one copy is kept.
 
-# Primary rules behind this skill
+## Contents
+
+- Part 1: Rules (sourced, with scope and confirmation status)
+- Part 2: Failure patterns (before and after)
+- Part 3: Gap rules (shared wording, with this skill's cases)
+- Part 4: Failure modes (detection questions)
+
+## Part 1: Rules
 
 Each rule names its primary source, its date, its scope and how it was confirmed. A rule
 marked `[CHECK]` has not been read from the primary document, or its currency or scope
@@ -18,7 +27,7 @@ short span. Where a provision is longer, the wording is summarized and marked as
 
 Last reviewed: 20 October 2026.
 
-## Contents
+### Contents
 
 1. Label and intended use (task TR-2.1.1)
 2. What counts as promotion; replies to unsolicited questions (task TR-2.1.2)
@@ -27,7 +36,7 @@ Last reviewed: 20 October 2026.
 5. Intended sources not yet confirmed
 6. How to use these rules in output
 
-## 1. Label and intended use
+### 1. Label and intended use
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -37,11 +46,11 @@ Last reviewed: 20 October 2026.
 | R4 | An advertisement "shall not recommend or suggest any use that is not in the labeling accepted in such approved new-drug application". | 21 CFR 202.1(e)(4)(i)(a), eCFR, "up to date as of 16 October 2026" | US, prescription drug advertisements. Whether and how the same standard is applied to promotional labeling `[CHECK]` | Confirmed 20 October 2026 from eCFR (ecfr.gov). eCFR is the editorially compiled, authoritative-but-unofficial edition; the annual official CFR edition was not read. |
 | R5 | "The promotion of a medicine must be in accordance with the terms of its marketing authorisation and must not be inconsistent with the particulars listed in its summary of product characteristics" (clause 11.2). "A medicine must not be promoted prior to the grant of the marketing authorisation which permits its sale or supply" (clause 11.1). Supplementary information: "The promotion of indications not covered by the marketing authorisation for a medicine is prohibited." | ABPI Code of Practice 2024, clauses 11.1 and 11.2 and supplementary information, PMCPA 2024 interactive Code (pmcpa.org.uk) | UK, ABPI members and companies that agree to the Code | Confirmed 20 October 2026 from the PMCPA 2024 interactive Code page for clause 11, and the same wording quoted in PMCPA case CASE/0309/10/24 (2024 Code applied). Operation date: the Code's index page title, as read through a fetch tool, says it comes into operation 1 October 2024 `[CHECK]` against the printed Code. |
 | R6 | "A Medicinal Product must not be promoted prior to the grant of the marketing authorisation allowing its sale or supply or outside of its approved indications" (section 1.01). "Promotion must be consistent with the particulars listed in the summary of product characteristics" (section 1.02). | EFPIA Code of Practice, final consolidated version 2026 (efpia.eu, efpia-code-of-practice-2026.pdf). Adopted by the EFPIA Board 22 March 2019, ratified 27 June 2019, as stated on the cover | Europe, through EFPIA member associations' national codes; EFPIA states chapters 1 to 3 reflect Directive 2001/83/EC | Confirmed 20 October 2026 from the EFPIA-hosted PDF. Effective date of the 2026 consolidation not stated in the document `[CHECK]`. |
-| R7 | "No pharmaceutical product shall be promoted for use in a specific country until the requisite approval for marketing for such use has been given in that country." This "is not intended to restrict a full and proper exchange of scientific information concerning a pharmaceutical product". "Promotion should not be inconsistent with locally approved product information" (section 4.1). | IFPMA Code of Practice 2019, article 3 and section 4.1; effective 1 January 2019, replacing the 2012 Code | International baseline for IFPMA member companies and associations; national codes and law apply on top | Wording confirmed 20 October 2026 from the English text hosted by a member association (OPPI, India; cover marked "Updated April 2021"). Not read from an IFPMA-hosted copy in this build; `claim-assessment` records reading the IFPMA-hosted PDF for sections 4.2 and 4.3. Whether a later IFPMA Code supersedes 2019 `[CHECK]`. |
+| R7 | "No pharmaceutical product shall be promoted for use in a specific country until the requisite approval for marketing for such use has been given in that country." This "is not intended to restrict a full and proper exchange of scientific information concerning a pharmaceutical product". "Promotion should not be inconsistent with locally approved product information" (section 4.1). | IFPMA Code of Practice 2019, article 3 and section 4.1; effective 1 January 2019, replacing the 2012 Code | International baseline for IFPMA member companies and associations; national codes and law apply on top | Wording confirmed 20 October 2026 from the English text hosted by a member association (OPPI, India; cover marked "Updated April 2021"). Section 4.1 matched 9 November 2026 against the IFPMA-hosted PDF ("Promotion should not be inconsistent with locally approved product information."); article 3 not re-read there `[CHECK]`. No later IFPMA Code is listed (IFPMA page, read 9 November 2026). |
 | R8 | All statements in advertising to professionals must be consistent with the product information most recently approved by Swissmedic; in particular only indications and uses approved by Swissmedic may be advertised (Art. 5 para. 1). The same applies to advertising to the public (Art. 16 para. 1). Original: "Alle Angaben in der Fachwerbung müssen im Einklang mit der vom Schweizerischen Heilmittelinstitut (Swissmedic) zuletzt genehmigten Arzneimittelinformation stehen; insbesondere dürfen nur von der Swissmedic genehmigte Indikationen und Anwendungsmöglichkeiten beworben werden." | Swiss Ordinance on Advertising of Medicinal Products (Arzneimittel-Werbeverordnung, AWV), SR 812.212.5, of 17 October 2001, consolidated version as at 1 January 2020, Art. 5 para. 1 and Art. 16 para. 1 | Switzerland, advertising of ready-to-use medicinal products to professionals and the public | Confirmed 20 October 2026 from the official German text on fedlex (Federal Chancellery). The 1 January 2020 version was the latest consolidation with an HTML file found through the fedlex data service; whether a later version applies `[CHECK]`. English wording is a translation for this file. |
 | R9 | Advertising to professionals must be accurate, balanced, factually correct and capable of substantiation, and not misleading; substantiation must be provided to professionals on request (Art. 5 para. 3). Advertising must be recognizable as such, and advertising and editorial content must be clearly separated (Art. 5 para. 4: "Die Werbung muss als solche erkennbar sein. Werbung und redaktionelle Beiträge sind deutlich zu trennen."). | AWV, Art. 5 para. 3 and 4, as R8 | As R8 | As R8 |
 
-## 2. What counts as promotion; replies to unsolicited questions
+### 2. What counts as promotion; replies to unsolicited questions
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -50,23 +59,23 @@ Last reviewed: 20 October 2026.
 | R12 | Promotion means "any activity undertaken by a pharmaceutical company or with its authority which promotes the administration, consumption, prescription, purchase, recommendation, sale, supply or use of its medicines." It does not include "replies made in response to unsolicited individual enquiries from members of the health professions", but only if they "relate solely to the subject matter of the letter or enquiry, are accurate and do not mislead and are not promotional in nature". Supplementary information: "An unsolicited enquiry is one without any prompting from the company"; replies to enquiries received regularly may be drafted in advance "provided that they are used only when they directly and solely relate to the particular enquiry"; "Documents must not look like promotional material." | ABPI Code 2024, clause 1.17 and supplementary information | As R5 | Confirmed 20 October 2026 from the PMCPA 2024 interactive Code page for clause 1. |
 | R13 | The Code does not cover "correspondence, possibly accompanied by material of a non-promotional nature" that is "needed to answer a specific question about a particular Medicinal Product." | EFPIA Code 2026 consolidated, scope section | As R6 | As R6 |
 | R14 | Promotion means any activity "directed at HCPs" to promote the prescription, supply or use of a member company's products (article 1.2). Correspondence "needed to answer a specific question about a particular medicinal product is not covered by the Code" (questions and answers, 5.1). | IFPMA Code 2019, article 1.2 and Q&A 5.1 | As R7 | As R7 |
-| R15 | Advertising of medicinal products means all measures of information, market development and incentives aimed at promoting the prescription, dispensing, sale, consumption or use of medicinal products (Art. 2 let. a). Advertising to the public is allowed only for medicinal products of dispensing categories C, D and E and cantonally authorized products (Art. 14). Advertising to the public may not promote indications or uses that need a medical diagnosis or treatment (Art. 21 para. 1 let. a). | AWV, Art. 2 let. a, Art. 14, Art. 21 para. 1 let. a, as R8 | As R8 | As R8. Which dispensing categories are prescription-only is set in the Medicinal Products Ordinance (VAM), not read `[CHECK]`. |
+| R15 | Advertising of medicinal products means all measures of information, market development and incentives aimed at promoting the prescription, dispensing, sale, consumption or use of medicinal products (Art. 2 let. a). Advertising to the public is allowed only for medicinal products that are not prescription-only (HMG Art. 31 para. 1 let. b); HMG Art. 32 para. 2 let. a bans public advertising of medicines "die nur auf ärztliche Verschreibung abgegeben werden dürfen". The current dispensing categories are A and B (prescription), D and E (VAM Art. 41 to 44); category C was abolished on 1 January 2019 (VAM Art. 45 and 88), though AWV Art. 14 still names categories C, D and E and cantonally authorized products (see M12 in `market-rules-and-data`). Advertising to the public may not promote indications or uses that need a medical diagnosis or treatment (Art. 21 para. 1 let. a). | AWV, Art. 2 let. a, Art. 14, Art. 21 para. 1 let. a, as R8; HMG (SR 812.21) Art. 31 and 32; VAM (SR 812.212.21) Art. 41 to 45 and 88 | As R8 | As R8 for the AWV articles. fedlex.admin.ch could not be read on 9 November 2026. HMG wording read from the WIPO Lex consolidated text (Stand 1 January 2014) and droit-bilingue.ch; VAM (Stand 1 February 2021) and AWV (Stand 1 January 2019) read on lexfind.ch, a mirror of the official consolidated texts, not the official publication. Still `[CHECK]`: the current HMG Art. 32 wording on fedlex. |
 | R16 | For firm-initiated communications of scientific information on unapproved uses to health care providers: "It is critical that SIUU communications be truthful and non-misleading"; they "should be separate from promotional communications about approved uses"; they are "directed to HCPs engaged in prescribing or administering medical products to individual patients". Responses to unsolicited requests are the subject of a separate draft guidance (footnote 27). | FDA, "Communications From Firms to Health Care Providers Regarding Scientific Information on Unapproved Uses of Approved/Cleared Medical Products: Questions and Answers", final guidance, January 2025, docket FDA-2008-D-0053 (fda.gov/media/184871) | US, firm-initiated communications to HCPs. Guidance, not regulation; FDA's page states it "is not for current implementation" pending a decision on information collection | Confirmed 20 October 2026 from the FDA guidance page and PDF. It does not cover replies to unsolicited questions; the US rule for those is `[CHECK]` (section 5). |
 
-## 3. Comparisons, superlatives and disparagement
+### 3. Comparisons, superlatives and disparagement
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
 | R17 | An advertisement is false, lacking in fair balance or otherwise misleading if it contains "a representation or suggestion, not approved or permitted for use in the labeling, that a drug is better, more effective", more useful for a broader range of conditions or patients, safer, or has fewer or less serious side effects than substantial evidence or substantial clinical experience shows ((e)(6)(i), summarized after the quoted opening); or "a drug comparison that represents or suggests that a drug is safer or more effective than another drug" when that has not been demonstrated by substantial evidence or substantial clinical experience ((e)(6)(ii), summarized after the quoted opening). | 21 CFR 202.1(e)(6)(i) and (ii), as R4 | As R4 | As R4. Exact wording of the closing words of each paragraph was summarized by the fetch tool; read the eCFR text before quoting them `[CHECK]`. |
-| R18 | "A comparison is only permitted in promotional material if: it is not misleading; medicines or services for the same needs or intended for the same purpose are compared; one or more material, relevant, substantiable and representative features are compared; no confusion is created" with a competitor; a competitor's trademarks, medicines or activities "are not discredited or denigrated"; no unfair advantage is taken of a competitor's trademark; and products are not presented as imitations or replicas. | ABPI Code 2024, clause 14.1 (promotional material to health professionals and other relevant decision makers) | As R5 | Confirmed 20 October 2026 from the PMCPA 2024 interactive Code page for clause 14. |
+| R18 | "A comparison is only permitted in promotional material if: it is not misleading; medicines or services for the same needs or intended for the same purpose are compared; one or more material, relevant, substantiable and representative features are compared; no confusion is created" with a competitor; a competitor's trademarks, medicines or activities "are not discredited or denigrated"; no unfair advantage is taken of a competitor's trademark; and products are not presented as imitations or replicas. | ABPI Code 2024, clause 14.1 (promotional material to health professionals and other relevant decision makers) | As R5 | Confirmed 20 October 2026 from the PMCPA 2024 interactive Code page for clause 14. Clause numbers read again 9 November 2026 on the PMCPA 2024 pages: comparisons are 14.1 and superlatives 14.4; clause 6 holds general claims, substantiation, "safe" and disparagement (6.1 to 6.7), not comparisons. |
 | R19 | "The medicines, products and activities of other pharmaceutical companies must not be disparaged" (6.6). "The health professions and the clinical and scientific opinions of health professionals must not be disparaged" (6.7). Information, claims and comparisons must "not mislead either directly or by implication, by distortion, exaggeration or undue emphasis" (6.1); the supplementary information on price comparisons adds "Valid comparisons can only be made where like is compared with like." "The word 'safe' must not be used without qualification" (6.4). "New" may not describe a product or presentation generally available, or promoted, for more than twelve months in the UK (6.5, summarized). | ABPI Code 2024, clauses 6.1, 6.4, 6.5, 6.6, 6.7 | As R5 | Confirmed 20 October 2026 from the PMCPA 2024 interactive Code page for clause 6. Clauses 6.1 and 6.2 are also confirmed in `sourced-claims` (R1, R2) and `claim-assessment` (R3). |
 | R20 | "Exaggerated or all-embracing claims must not be made and superlatives must not be used except for those limited circumstances where they relate to a clear fact about a medicine." "Claims should not imply that a medicine or an active ingredient has some special merit, quality or property unless this can be substantiated." Promotion must present a medicine "objectively and without exaggerating its properties." | ABPI Code 2024, clause 14.4 | As R5 | Confirmed 20 October 2026, as R18. |
 | R21 | "Any comparison made between different Medicinal Products must be based on relevant and comparable aspects." "Comparative advertising must not be misleading or disparaging" (3.05). "Claims must not imply that a Medicinal Product, or an active ingredient, has some special merit" unless substantiated (3.03, summarized). "The word "safe" must never be used to describe a Medicinal Product without proper qualification" (3.07). Promotion must be "accurate, balanced, fair, objective and sufficiently complete" (3.01) and "capable of substantiation" (3.02). | EFPIA Code 2026 consolidated, sections 3.01, 3.02, 3.03, 3.05, 3.07 | As R6 | As R6 |
 | R22 | "Any comparison made between different pharmaceutical products should be based on relevant and comparable aspects" of the products, and comparative advertising "should not be misleading." Absolute or all-embracing claims "should be used with caution and only with adequate qualification and substantiation" (section 4.2). | IFPMA Code 2019, Q&A 9.1 and section 4.2 | As R7 | Q&A 9.1 as R7. Section 4.2 wording as confirmed in `claim-assessment` R2 from the IFPMA-hosted PDF on 20 October 2026; not re-read in this build. |
 | R23 | Comparisons with other medicinal products are allowed only if they are scientifically correct and rest on equivalent clinical trials or data collections that meet the requirements of Art. 5 para. 5 (Art. 7 para. 1). Where a comparison relies on in vitro or animal studies, this must be disclosed (Art. 7 para. 2). Original: "Aussagen zu Vergleichen mit anderen Arzneimitteln sind nur zulässig, wenn sie wissenschaftlich korrekt sind und sich auf gleichwertige klinische Versuche oder Datenerhebungen abstützen, welche die Anforderungen von Artikel 5 Absatz 5 erfüllen." Art. 5 para. 5 requires claims to reflect current scientific knowledge and refer only to clinical trials run under good clinical practice and published or accepted for publication, or to data such as meta-analyses published in a recognized journal, quoted word for word, completely and with the exact source. | AWV, Art. 5 para. 5 and Art. 7, as R8 | As R8, advertising to professionals | As R8 |
-| R24 | Advertising to professionals may not use the word "safe" unless the information makes clear what it refers to, or state that a medicine has no undesirable effects or is harmless (Art. 13 let. a and b). Advertising to the public may not create the expectation that the medicine's effect equals or exceeds that of another treatment or another medicine (Art. 22 let. c), and may not make a medical examination seem unnecessary, in particular by offering a diagnosis (Art. 22 let. a). | AWV, Art. 13 and Art. 22, as R8 | As R8 | As R8 |
+| R24 | Advertising to professionals may not use the word "safe" unless the information makes clear what it refers to, or state that a medicine has no undesirable effects or is harmless (Art. 13 let. a and b). Advertising to the public may not create the expectation that the medicine's effect equals or exceeds that of another treatment or another medicine (Art. 22 let. c: "die Erwartung wecken, die Wirkung des Arzneimittels entspreche einer anderen Behandlung oder derjenigen eines anderen Arzneimittels oder sei ihnen überlegen;"), and may not make a medical examination seem unnecessary, in particular by offering a diagnosis (Art. 22 let. a). | AWV, Art. 13 and Art. 22, as R8 | As R8 | As R8. Art. 22 let. c matched 9 November 2026 on lexfind.ch (AWV Stand 1 January 2019), a mirror of the official consolidated text. The article's lead-in `[CHECK]` on fedlex. |
 
-## 4. Medical devices and software
+### 4. Medical devices and software
 
 | Id | Rule | Primary source | Scope | Status |
 |---|---|---|---|---|
@@ -74,7 +83,7 @@ Last reviewed: 20 October 2026.
 | R26 | "'Intended purpose' means the use for which a device is intended" according to the data the manufacturer supplies on the label, in the instructions for use or in promotional or sales materials or statements, and as specified in the clinical evaluation (summarized after the quoted opening). A medical device includes software intended for "diagnosis, prevention, monitoring, prediction, prognosis, treatment or alleviation of disease". | MDR, Article 2(12) and 2(1), as R25 | As R25 | As R25 |
 | R27 | "Intended uses" "refer to the objective intent of the persons legally responsible for the labeling of an article"; "This objective intent may, for example, be shown by labeling claims, advertising matter, or oral or written statements". | 21 CFR 801.4, eCFR, as R4 | US, devices | Confirmed 20 October 2026 from eCFR. |
 
-## 5. Intended sources not yet confirmed
+### 5. Intended sources not yet confirmed
 
 Not applied as rules until read from the primary document. Until then the skill
 describes the practice as good practice and points to the review process.
@@ -82,7 +91,7 @@ describes the practice as good practice and points to the review process.
 | Intended source | Would support | Status |
 |---|---|---|
 | Swiss Pharma Code (Pharmakodex, scienceindustries), provisions on advertising to professionals, comparisons and scientific exchange | Swiss industry-code layer above R8, R9, R23, R24 | `[CHECK]` not found as a primary copy in this build |
-| Swiss Therapeutic Products Act (HMG, SR 812.21) Art. 31 and 32, and the Medical Devices Ordinance (MedDO) on advertising of devices | Swiss legal basis for R8 to R24; Swiss device claims | `[CHECK]` |
+| Medical Devices Ordinance (MedDO) on advertising of devices | Swiss device claims | `[CHECK]` not read |
 | FDA draft guidance on responding to unsolicited requests for information about unapproved uses (referred to in R16, footnote 27) | US practice for replies to unsolicited questions: answer only the question asked, to the person who asked, balanced and non-promotional | `[CHECK]` title, date and status not read |
 | Directive 2001/83/EC Articles 89 to 91 (content of advertising to the public and to professionals) | EU rules on comparisons in public advertising and minimum content | `[CHECK]` not read in this build |
 | The new EU directive on medicinal products repealing 2001/83/EC | Successor provisions to R1 to R3, R10, R11 | `[CHECK]` number, dates and articles not read |
@@ -91,7 +100,12 @@ describes the practice as good practice and points to the review process.
 | EU guidance on qualification of medical device software (MDCG) and FDA guidance on device software functions and clinical decision support | Whether an app is a medical device at all | `[CHECK]`. In any case a regulatory determination this skill does not make (TR-H6) |
 | Whether 21 CFR 202.1 standards apply to promotional labeling in the same way as to advertisements | Scope of R4 and R17 | `[CHECK]` |
 
-## 6. How to use these rules in output
+The Swiss Therapeutic Products Act (HMG, SR 812.21) Art. 31 and 32 is the Swiss legal basis
+for R8 to R24. It was read 9 November 2026 from the WIPO Lex consolidated text (Stand 1
+January 2014), because fedlex.admin.ch could not be read, and is used only as R15 quotes
+it; the current wording is `[CHECK]` on fedlex.
+
+### 6. How to use these rules in output
 
 - In what the person reads, say the practice in plain words: "your label covers adults
   only; this message reaches beyond it", "a 'better than' claim needs a study that
@@ -107,9 +121,7 @@ describes the practice as good practice and points to the review process.
   comparison. Say what goes beyond the supplied label, what reads as promotion, which
   comparisons have no direct source, and who decides (TR-H3, TR-H11).
 
-## Migrated patterns
-
-# Failure patterns
+## Part 2: Failure patterns
 
 Each pattern: what it looks like, why it fails, before and after, and the rule it
 breaks. All examples are invented for teaching; no real product, company, study or
@@ -120,7 +132,7 @@ file into an answer.
 Rule ids refer to `references/method-standards.md` / `references/knowledge.md`. Where a rule is `[CHECK]` or out of scope for
 the market, the pattern is good practice, not a cited requirement.
 
-## Contents
+### Contents
 
 - Label and intended use L1–L8 (task TR-2.1.1)
 - Promotional boundary P1–P8 (task TR-2.1.2)
@@ -129,7 +141,7 @@ the market, the pattern is good practice, not a cited requirement.
 Pattern ids are for this file only. In what the person reads, describe the problem in
 plain words (TR-H13).
 
-## Label and intended use
+### Label and intended use
 
 **L1 The widened population.** A message reaches patients the label does not cover.
 Why: the label states who the product is for; a message to a wider group suggests a use
@@ -162,7 +174,7 @@ language is fine elsewhere. (R2, R5, R8)
 another.
 Why: approvals differ by market and date; the label for this market is the boundary.
 After: ask which market; use that market's label; mark the difference as
-`[GAP: conflicting — …]` if both labels were supplied. (R1, R7, R8)
+`[GAP: conflicting; …]` if both labels were supplied. (R1, R7, R8)
 
 **L6 The pipeline preview.** An investigational product or indication appears in
 promotional material "as coming soon".
@@ -181,18 +193,18 @@ finds an irregular rhythm, so you can share it with your doctor." (R25, R26, R27
 
 **L8 The label from memory.** The assistant states the indication or dose without the
 label having been supplied.
-Why: the reviewer will check against the current label; a remembered one may be out of
+Why: the work is held to the current label; a remembered one may be out of
 date or from another market.
-After: ask for the label; until then `[GAP: not supplied — approved indication for
-<market> — supply the current label]`. (TR-H1, TR-H7)
+After: ask for the label; until then `[GAP: not supplied; approved indication for
+<market>; supply the current label]`. (TR-H1, TR-H7)
 
-## Promotional boundary
+### Promotional boundary
 
 **P1 The reply that sells.** A reply to a doctor's question carries brand slogans,
 unrequested benefits or a call to prescribe.
 Why: the exemption for replies holds only when the reply relates solely to the
 question, is accurate, not misleading and not promotional.
-Before: "Great question! Brevanzo is the trusted choice for … Here is our latest data."
+Before: "Great question. Brevanzo is the trusted choice for … Here is our latest data."
 After: restate the question, answer only it, with the data and its limits, no slogans.
 (R10, R12, R13, R14)
 
@@ -226,7 +238,7 @@ After: neutral verbs ("in the trial, …"), results with their limits, no call t
 
 **P6 The wrong audience.** Professional material reused for patients or the public.
 Why: different rules apply to each audience, and prescription medicines may not be
-advertised to the public in the EU and Switzerland.
+advertised to the public in the EU and Switzerland (in Switzerland, public advertising is limited to medicines that are not prescription-only: HMG Art. 31 para. 1 and Art. 32 para. 2 let. a, R15).
 After: ask who will read it; patient material goes through its own review. (R11, R15)
 
 **P7 The hidden promotion.** Promotional material presented as an article, a study
@@ -242,15 +254,15 @@ does not decide which it is.
 After: record the use as the person states it; route to the review process that
 decides. (TR-H6, TR-H11)
 
-## Comparative claims
+### Comparative claims
 
 **C1 Better with no head-to-head.** "Better", "more effective", "faster" or "safer" than
 a named competitor without a study that compared the two directly.
 Why: a comparison needs substantial evidence (US) or substantiable, representative,
 like-for-like data (UK, EFPIA, Switzerland); placebo-controlled trials of each product
 do not compare them with each other.
-Before: "Brevanzo works faster than Kelandro." After: "[GAP: not supplied — a study
-comparing Brevanzo with Kelandro on time to response — supply it; without it, remove
+Before: "Brevanzo works faster than Kelandro." After: "[GAP: not supplied; a study
+comparing Brevanzo with Kelandro on time to response; supply it; without it, remove
 the comparison]". (R17, R18, R21, R23)
 
 **C2 The cross-trial comparison.** Results from two separate trials set side by side as
@@ -296,13 +308,41 @@ Why: excluded outright in Swiss public advertising; prescription medicines may n
 advertised to the public in the EU at all. After: remove; route to promotional review.
 (R11, R15, R24)
 
-# Failure modes
+## Part 3: Gap rules
+
+> **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/knowledge.md` (Part 2, "Where the marker belongs").
+
+Same format and classes as every TRUSTED skill:
+`[GAP: <class>; <what is missing>; <what would close it>]`
+
+| Class | Typical case in this skill | Example |
+|---|---|---|
+| `not supplied` | The label or intended-purpose statement was not given; a comparison has no direct study; an absolute claim has no scoped source | `[GAP: not supplied; approved indication and population for Switzerland; supply the current product information]` |
+| `not supplied` (comparison) | A comparative claim rests on no study that compared the two directly | `[GAP: not supplied; study comparing Brevanzo with Kelandro on time to response; supply it; without it, remove the comparison]` |
+| `not checkable here` | Whether the supplied label is the current approved version for the market; whether an indication is approved there; whether an app's clearance or certification covers a function | `[GAP: not checkable here; whether this label is the current approved version for Germany; confirm with your regulatory team]` |
+| `conflicting` | Two supplied labels (two markets or two versions) differ on indication, population or dose | `[GAP: conflicting; US label includes adolescents, EU label adults only; confirm which market this is for]` |
+| `needs a decision` | Whether the piece is promotional or scientific exchange; whether a cross-trial comparison can be shown; whether material can go to patients or the public | `[GAP: needs a decision; whether results from two separate trials can be shown side by side; ask your medical review]` |
+| `out of date or unclear date` | The label has no version or date; "first" or "only" with no "as of" date | `[GAP: out of date or unclear date; "the only once-weekly option" has no date or scope; state market, date and source]` |
+
+Wording rules:
+
+- Name the exact boundary item: "population: adults 18 and over", not "the label".
+- Name the kind of document that would close the gap, never a specific study or label
+  version you have not been given.
+- Never hint at the answer inside a gap ("probably approved for adolescents too").
+- "The label does not cover X" is a finding only when the label was supplied and read.
+  Otherwise use `not supplied`.
+- A gap about whether something is permitted is always `needs a decision`, routed to
+  the review process. Never `not supplied`, which would suggest a document could
+  settle it.
+
+## Part 4: Failure modes
+
+Skill-specific rows for this skill. FM-08 is shared by every skill and covers Prove honesty.
 
 | Id | Failure mode | Detection question | Documented for | Source | Status |
 |---|---|---|---|---|---|
 | FM-CL-01 | Off-label implication | Does a message expand beyond labeled indication/audience? | Label | IFPMA 4.3 / SmPC | PARTIAL |
 | FM-CL-02 | Marketing voice as label quote | Is brand copy presented as if it were SmPC text? | Label integrity | TRUSTED claims-and-label | VERIFIED practice |
-| FM-CL-03 | Comparative without head-to-head | Is superiority claimed without a quoted comparative passage? | Comparatives | ABPI 6.2 | PARTIAL |
-| FM-08 | Tool status treated as world-truth | Is a local or Verify status described as "true in the world"? | Prove honesty | VERIFY / TRUSTED Prove | VERIFIED |
-
-Skill-specific rows for `claims-and-label`. Shared FM-08 is universal Prove honesty.
+| FM-CL-03 | Comparative without head-to-head | Is superiority claimed without a quoted comparative passage? | Comparatives | ABPI 14.1 | PARTIAL |
+| FM-08 | Hand-check result treated as world-truth | Is a hand-check result described as "true in the world"? | Prove honesty | TR-H3 | VERIFIED |

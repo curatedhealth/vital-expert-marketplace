@@ -34,19 +34,22 @@ EU SmPC section 4.1."
 
 ## Fixed slide (as the person sees it)
 
-> **Zelorastat** [GAP: not supplied — authorization status for Germany, as your label
-> states it — the German or EU product information]
+> **Zelorastat** [GAP: not supplied; authorization status for Germany, as your label
+> states it; the German or EU product information]
 > Indicated for the treatment of moderate to severe plaque psoriasis in adults who are
 > candidates for systemic therapy (SmPC section 4.1, as supplied).
-> [Essential information compatible with the SmPC, with its date — from your label owner]
-> [Supply classification — from the SmPC]
-> [Side-effect reporting statement for Germany, if your review process expects one]
-> [Price and reimbursement information, only if your review process asks for it]
-> [Job code — from your approval system] [Date of preparation — set at approval]
+> [GAP: not supplied; essential information compatible with the SmPC, with its date;
+> from your label owner]
+> [GAP: not supplied; supply classification; from the SmPC]
+> [GAP: needs a decision; side-effect reporting statement for Germany; your review
+> process]
+> [GAP: needs a decision; price and reimbursement information; your review process]
+> [GAP: not supplied; job code; from your approval system] [GAP: not supplied; date of
+> preparation; set at approval]
 
 ## Note (as the person sees it)
 
-> Market and statements (draft, not yet reviewed)
+> Market and statements (Uncleared draft)
 >
 > Written for: Germany, dermatologists, a company meeting, from the slide and SmPC
 > section 4.1 you supplied.

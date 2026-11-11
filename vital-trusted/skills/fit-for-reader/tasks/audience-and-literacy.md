@@ -1,5 +1,8 @@
 # Task TR-1.2.1 Audience and literacy
 
+Contents: Formula; The reader card; Guard (while drafting); Repair (existing draft); Check
+line; Boundaries.
+
 ## Formula
 
 | Slot | For this task |
@@ -7,7 +10,7 @@
 | Worker | Medical writer who has written for every audience |
 | Workflow | Name the reader and what they must decide or do, fill the reader card, then hold every passage to that reader's vocabulary and depth |
 | Skill | TR-1.2.1 |
-| Knowledge | `references/readers.md`, `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4, R5), `references/knowledge.md` (A1–A8, L1–L9) |
+| Knowledge | `references/readers.md`, `references/rules.md` (R1, R2, R4, R5), `references/patterns.md` (A1–A8, L1–L9) |
 | Tool | `scripts/plain_language_scan.py` for patient or lay text where code can run. Companion slot: none (no companion planned) |
 | Prompt | This guide |
 | Template | `templates/reader-card.md`, `templates/repair-note.md`, `templates/check-line.md` |
@@ -37,12 +40,14 @@ unless they ask; it steers the writing.
 4. **One finding, many readers.** When the same finding goes to two readers, keep the
    facts identical and change only the order, words and depth. If the payer version
    needs a fact the internal version did not use, it comes from the material or it is a
-   gap.
+   gap. Do not work out a difference or ratio for either version unless the person asks;
+   if asked, label it "calculated from the two figures you supplied". Wrong: "a
+   12-point improvement". Right: "48% with Product A and 36% with placebo".
 
 ### Patient and lay readers
 
 Patient-facing material is always at full depth (TR-H12). Apply these as good practice
-everywhere and, for EU package leaflets, as the guideline cited in `references/method-standards.md` / `references/knowledge.md`
+everywhere and, for EU package leaflets, as the guideline cited in `references/rules.md`
 R1.
 
 5. **Plain words.** Give the everyday word first and the medical term after it, in
@@ -50,8 +55,22 @@ R1.
    doctor): "high blood pressure (hypertension)". Otherwise use only the everyday word.
 6. **Short sentences.** Split long sentences, especially those carrying new information.
    One instruction per sentence. Active voice: "Take one tablet each morning", not
-   "One tablet should be taken".
-7. **No unexplained terms.** Spell out an abbreviation at first use or drop it. Replace
+   "One tablet should be taken", when the source already gives the instruction. Active
+   voice never adds one: if the active form would tell the reader to do something the
+   source only describes ("the tablet is usually taken with food"), keep the passive.
+7. **No unexplained terms.** Every term a patient may not know gets everyday words or a
+   short explanation, every time it appears in patient text: drug classes ("Janus
+   kinase inhibitor"), test names ("lymphocyte count"), and words such as
+   "contraindicated". If the material does not give enough to explain it, leave a gap
+   for the plain wording; never keep the term unexplained. An everyday equivalent that
+   carries no new fact is allowed ("placebo: a dummy tablet with no medicine in it",
+   "contraindicated: must not be used"). A general medical term gets a plain general
+   definition that adds no fact about this product ("monoclonal antibody: a lab-made
+   antibody medicine", "anticoagulant: a medicine that helps stop blood clots"); such a term is
+   never left in the patient text behind a gap. An explanation that needs a fact about
+   this product the material does not give (what this medicine targets, how it works,
+   what this test measures here) is a gap. Spell out an abbreviation at first use or
+   drop it. Replace
    symbols such as < and > with words ("less than"). Explain frequency words in numbers
    a patient can picture ("very common: may affect more than 1 in 10 people") only when
    the source gives the frequency.
@@ -61,10 +80,25 @@ R1.
 9. **Neither scare nor falsely reassure.** Keep each risk at the size and certainty the
    source gives it. Remove "nothing to worry about", "completely safe", "no side
    effects" unless the source says exactly that; remove alarming words the source does
-   not use. Do not add comfort or warning that is not in the material.
-10. **Keep the source's route to a professional.** If the source says "ask your doctor
-    or pharmacist", it stays, in plain words. Whether the material needs such a route,
-    and where, is `patient-safety` (Safe). Do not add or decide it here.
+   not use. Do not add comfort or warning that is not in the material. When the person
+   asks for more reassurance, say in one line that the draft keeps the source's level,
+   and offer to use reassurance wording from the approved patient material if they
+   supply it.
+10. **Keep the source's route to a professional; add no instruction or warning.** If the
+    source says "ask your doctor or pharmacist", it stays, in plain words. A patient
+    rewrite adds no instruction ("talk to your doctor, nurse or pharmacist"), warning
+    or advice that is not in the material, however safe it sounds. When a patient
+    would need an instruction the material lacks (what to do if they feel unwell), put
+    a gap in the draft where it belongs (`[GAP: not supplied; what to do if you feel
+    unwell; from your approved patient leaflet or medical team]`) and say so in the
+    note. A missing line telling readers who to ask is always `[GAP: needs a decision;
+    a line telling readers who to ask; use your approved patient wording]`. Whether the material needs such a route is `patient-safety` (Safe).
+11. **Dose and safety wording in patient text.** A dose reaches patient text only from
+    a label or patient leaflet the person supplied; from any other source (a clinician
+    memo, notes, a slide) it becomes a gap. When patient text carries dose or safety
+    statements, the note says in one line that they should match the approved patient
+    leaflet before use, and that the patient safety wording is checked against it (the
+    Safe check), without doing that check here.
 
 ## Repair (existing draft)
 
@@ -89,7 +123,7 @@ See `templates/check-line.md`.
 ## Boundaries
 
 - Rewriting into plain words is not a user test or a readability assessment. Never say
-  the text "meets" a readability standard or would pass user testing (`references/method-standards.md` / `references/knowledge.md`
+  the text "meets" a readability standard or would pass user testing (`references/rules.md`
   R4).
 - No readability score or grade level is given. The skill does not compute one, and a
   score would read as a verdict (TR-H3).

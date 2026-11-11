@@ -34,31 +34,32 @@ Not there:   cost or savings
 
 > In an observational registry of 1,850 patients, hospital admission within 12 months
 > occurred in 12.0% of patients treated with Velunor and 20.0% of patients on standard
-> care, an 8 percentage point difference (adjusted hazard ratio 0.60, 95% CI 0.48 to
-> 0.75). As an observational analysis, it shows an association and cannot establish
+> care (adjusted hazard ratio 0.60, 95% CI 0.48 to 0.75). As an observational analysis, it shows an association and cannot establish
 > that Velunor caused the difference. No cost analysis has been done.
 
 ## What changed between the two, and what did not
 
 | | Internal | Payer |
 |---|---|---|
-| Facts | Design, size, both rates, limit, no cost analysis | The same, plus the adjusted HR and interval the payer will ask for, both from the material |
+| Facts | Design, size, both rates, limit, no cost analysis | The same, plus the adjusted HR and interval, both from the material |
 | Order | The usable line first | Method first, then result, then limit |
 | Words | "Our registry", "we cannot talk about savings" | Neutral, third person; the method named |
-| Depth | Rates only | Rates, difference, adjusted estimate with interval |
+| Depth | Rates only | Rates, adjusted estimate with interval |
 
-The 8 percentage point difference is derived from the two supplied rates (20.0 minus
-12.0) and labeled in the text as a difference.
+No difference between the two rates is worked out in either version. The person did not
+ask for one; it is offered in the note, labeled if added.
 
 ## Short note to the person
 
+Passages changed: 2.
 Both versions carry the same facts; only the order, words and depth differ. The payer
-version leads with the method and gives the adjusted figure a medical adviser will ask
-for. Neither mentions savings, because there is no cost analysis. The payer paragraph
+version leads with the method and gives the adjusted figure from your material. Neither mentions savings, because there is no cost analysis. If you want the
+difference between the two rates, I can add it, labeled as calculated from the two
+figures you supplied. The payer paragraph
 goes through your market access or promotional review process before the meeting.
 
 ## Behind the note (reference only, not shown to the person)
 
-Patterns A3, A4 in `references/failure-modes.md` / `references/knowledge.md`. Association wording and absolute figures
+Patterns A3, A4 in `references/patterns.md`. Association wording and absolute figures
 come from `grounded-statements` (its patterns M5, N1). Whether the payer material is
 promotional is for the company's process (TR-H11).

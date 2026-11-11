@@ -1,74 +1,82 @@
-# Rendered example: HQ "how was this made?" record (sourced draft)
+# Worked example: a record of how a payer summary was made
 
-Invented teaching case. Defensible letter: who, what, when, open items, status line,
-check-line stamp. Uncleared draft; no invented reviewer.
+Invented case for teaching. "Brand A" and the registry are fictional.
 
-## Deliverable returned
+## Context card (from trusted-intake, already in the conversation)
 
-Short payer summary deck (five slides), still draft.
+```
+TRUSTED context: short payer summary deck
 
-## Record note (`templates/record-note.md`, full)
+Reader          German payers                                       (stated)
+Deliverable     five slides                                         (stated)
+Material        registry tables; internal forecast memo
+Stakes          leaving the company
+Next process    your market access review process
+```
 
-How this work was made (draft, not yet reviewed)
+## Request
 
-Who asked: Market access lead (name as person gave it: [not supplied in example]).
+"Add a note on how this deck was made, for the file. A colleague at headquarters will
+ask."
 
-Built from (as supplied in this conversation)
-1. ORION-4 registry tables PDF, data cut-off 30 June 2026 (person uploaded).
-2. Internal forecast memo, 2 September 2026 (person pasted excerpt).
+Earlier in the conversation the person said: "The registry tables are the 30 June 2026
+cut. The forecast bit is pasted from the memo of 2 September 2026. The cost model for the
+savings slide comes on 20 November 2026. Medical review isn't scheduled yet."
 
-Tools
-1. VITAL TRUSTED assistant in this thread (no other tools named by person).
-2. VERIFY not connected — no automated claim check ran.
+## Record note (as the person sees it)
+
+Record of how this was made
+
+Work: short payer summary deck, five slides, as you named it
+For: German payers
+
+Built from
+1. The registry tables you uploaded, data cut-off 30 June 2026.
+2. An excerpt of the internal forecast memo of 2 September 2026, which you pasted;
+   summarized, not used in full.
+
+Assistant and tools
+- Assistant: the assistant in this conversation; the host does not show a model name.
+- Connectors or tools used for this work: none.
 
 What the AI did
-1. Drafted slide bullets from the registry PDF excerpt.
-2. Summarized the forecast memo excerpt into one slide.
-3. Did not validate figures against a database; person should reconcile numbers.
+- Slide text: drafted from the registry tables.
+- Forecast slide: summarized from the memo excerpt.
+- Figures: not compared with any database.
 
-Assumed (person stated or visible in thread)
-1. Germany payer audience.
-2. Registry PDF is the version the team intends to use externally — not verified here.
-
-Open
-1. Cost model for savings slide — person said "coming next week" — owner: market access.
-2. Medical review — not yet done — owner: medical affairs (per person: "not scheduled").
+What people did
+- No one else has reviewed this yet.
 
 Checks that ran
-1. `sourced-claims` method pass in conversation — not tool-checked.
-2. No VERIFY `verify_text` — listed as not run.
+- None beyond reading the slides against your two files.
+- Not run: no tool check of claims against their sources.
 
-What this record is not
-1. Not approval, not final, not a substitute for document control.
+Assumed
+1. The audience is German payers, as you told me.
+2. The registry tables are the version the team means to use outside the company. I did
+   not check that.
 
-## Status line (`templates/status-line.md`)
+Open
+1. The cost model for the savings slide; you said it is due on 20 November 2026; owner to
+   be named; must be closed before use: yes.
+2. Medical review is not scheduled, as you told me; owner to be named; must be closed
+   before use: yes.
 
-```text
-Status: Uncleared draft — AI-assisted summary from supplied registry PDF and forecast excerpt; no named medical or market access reviewer recorded (8 November 2026).
+Status: Uncleared draft.
+
+Next step: this goes through your market access review process before it is used.
+
+## Why it is written this way
+
+- Every line comes from what the person said or from the conversation. Reviewers,
+  owners and dates that nobody gave are left as "to be named", not guessed.
+- The AI's part is described in plain verbs and no figure is called checked.
+- The status stays "Uncleared draft". The record is not an approval.
+- No skill name or tool name appears; it says no tool ran.
+- The closing statement is left off, because it belongs to check outputs only.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Open items (`../../templates/gap-list.md`)
-
-```text
-Open items
-1. Savings slide — cost model due next week — owner: Market access
-2. Medical review — not scheduled — owner: Medical affairs
-
-Not yet checked
-- Document control reference number (company SOP)
-- VERIFY formal record if person later names who cleared the work
-```
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / work-record: not tool-checked (offline tools) · record: full note; status: uncleared draft; open: 2 items; verify: not run
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Defensible · record of making: 2 sources listed, AI verbs only, VERIFY not run (not tool-checked)
-Defensible · assumptions and open items: 2 open with owners (not tool-checked)
-Defensible · honest status: uncleared draft, no false approval (not tool-checked)
+Defensible · record: 2 materials, 2 assumptions, 2 open items (2 without an owner); Uncleared draft (not tool-checked)
 ```

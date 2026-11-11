@@ -3,11 +3,12 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
-In the person's draft, required statements usually appear as plain placeholders where
-the element belongs (`[Job code — from your approval system]`), because the person will
-fill them before review. In notes and check lines, use the gap form. In what the person
+In the person's draft, required statements appear as gaps where the element belongs
+(`[GAP: not supplied; job code; from your approval system]`), because the person will
+fill them before review. In notes and check lines, write the missing element as a plain
+sentence. In what the person
 reads, prefer the plain question over raw gap syntax (TR-H13).
 
 | Class | Typical case in this skill |

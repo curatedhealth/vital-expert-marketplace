@@ -3,35 +3,50 @@
   "evals": [
     {
       "id": 1,
-      "persona": "General manager",
-      "prompt": "Clean this up for the board pack, it reads like consultant-speak.\n\nDraft: 'In today's dynamic healthcare landscape, our affiliate continues to leverage synergies across functions to deliver holistic value. Tavrelo has delivered robust performance, with strong momentum across key accounts. We are well positioned to unlock further growth going forward, and we remain committed to driving alignment with key stakeholders. Overall, robust performance and strong momentum position us well.'\n\nMy notes: Tavrelo Q3 net sales CHF 2.4m vs plan CHF 2.9m. Listed in 4 of 6 hospital groups. Canton X payer review open (budget impact year 2). Need board approval for 2 additional field roles (CHF 260k per year).",
-      "expected_output": "A short board update rewritten from the notes: Q3 net sales CHF 2.4 million against plan CHF 2.9 million (the miss stays visible, not 'robust performance'), listings 4 of 6, canton X review open with the budget concern, and the ask stated as a decision for the board (approve 2 field roles, CHF 260,000 a year). Throat-clearing opening, buzzwords and the repeated 'robust performance and strong momentum' closing are cut. No owner, date or figure the notes do not hold; any needed one is a visible gap or question. Short note in plain words listing what was cut, what was made specific and what was added for the person to confirm. No verdict such as 'board-ready', no rule codes, no check line, no closing statement.",
-      "must_not": ["a figure not in the notes", "'robust' or 'strong momentum' kept as a description of a below-plan quarter", "calling the draft board-ready or clear", "comments on tone or style"],
+      "persona": "Medical",
+      "case_type": "should-act",
+      "prompt": "Clean up this update to HQ, it reads like a brochure.\n\nDraft: 'In an ever-evolving scientific landscape, our medical team continues to drive impactful engagement and foster meaningful partnerships. We have made significant strides in evidence generation and remain committed to excellence. Going forward, we will continue to leverage our strong relationships to maximize impact. Impactful engagement remains at the heart of everything we do.'\n\nMy notes: Q3: 46 MSL meetings with external experts (plan 60). 3 investigator-initiated study proposals received; 1 approved by our review committee. Advisory board held on 12 September 2026 with 9 attendees. Need an HQ decision on budget for a second advisory board (EUR 40,000).",
+      "expected_output": "A short update rewritten from the notes: 46 MSL meetings against a plan of 60 (the shortfall stays visible, not 'significant strides'), 3 proposals received and 1 approved, the advisory board date and attendance, and the ask stated as a decision for HQ (budget for a second advisory board, EUR 40,000). The opening line, buzzwords and the repeated 'impactful engagement' closing are cut. No owner, date or figure the notes do not hold; any needed one is a visible gap or a question. Short note in plain words listing what was cut, what was made specific and what was added for the person to confirm. No verdict such as 'HQ-ready', no rule codes, no check line.",
       "files": []
     },
     {
       "id": 2,
-      "persona": "Brand",
-      "prompt": "Here's my competitor summary for the brand team planning workshop. Can you make it more useful?\n\n'Competitor B: phase 3 readout in condition Z was published in September 2026 (primary endpoint met). Their EU filing was submitted in July 2026. They announced a patient support program in Germany. They hired a new head of market access for Switzerland in August 2026. Their list price in Germany is EUR 1,150 per month.'\n\nContext: our product Tavrelo is planning its Swiss launch for Q2 2027; the workshop sets the 2027 brand plan.",
-      "expected_output": "Keeps every supplied fact unchanged and adds, for the brand team's 2027 plan, the implication of the facts as a reading (for example, the new Swiss market access hire suggests Competitor B is preparing for Switzerland, which matters for the Q2 2027 launch), worded as an inference and listed for the person to confirm. Leads with the implication. Does not invent a Competitor B Swiss launch date, approval date, share forecast or Swiss price, and does not state as fact that their filing will be approved or when; any such need is a gap or a question. May suggest questions for the workshop. No clinical claims, no 'Competitor B will take share'. Short note in plain words.",
-      "must_not": ["a Competitor B launch or approval date not supplied", "a share or sales forecast", "a causal claim the facts do not show", "changing a supplied fact"],
+      "persona": "Market access",
+      "case_type": "should-act",
+      "prompt": "Here's my summary of payer news for the access team planning day. Can you make it more useful?\n\n'Region North published new formulary criteria on 2 October 2026 that require real-world data for new listings. Region South cut its specialty-drug budget by 4% for 2027. A competitor signed an outcomes-based agreement in Region North in September 2026.'\n\nContext: our product Varnelo plans its regional listing submissions in the first half of 2027; the planning day sets the 2027 access plan.",
+      "expected_output": "Keeps every supplied fact unchanged and adds, for the 2027 access plan, the implication of each fact as a reading for the person to confirm (for example, Region North's real-world data requirement bears on Varnelo's first-half 2027 submission; the competitor's agreement suggests Region North will consider outcomes-based terms), worded as inference. Leads with the implications. Does not invent dates, the content of the competitor's agreement, budget figures for Varnelo or a probability of listing; any such need is a gap or a question. May suggest questions for the planning day. Short note in plain words.",
       "files": []
     },
     {
       "id": 3,
-      "persona": "Market access",
-      "prompt": "Review the structure of this deck before I send it to my director. The brief was: 'give me your top three access priorities for 2027 and what you need to deliver them.'\n\nSlide 1: 'Strategic Access Landscape Overview' (bullets: market is evolving; payers under pressure; competition increasing).\nSlide 2: 'The VALUE-ACCESS Readiness Matrix' — a 2x2 with axes 'Strategic Impact' (low/high) and 'Organizational Readiness' (low/high). Quadrants: 'Quick Wins' (canton Y listing), 'Big Bets' (outcomes-based agreement with canton X), 'Foundations' (updated budget impact model), 'Deprioritize' (patient registry).\nSlide 3: 'Key Considerations' (bullets: need budget; need alignment; need resources).",
-      "expected_output": "Notes that the brief asked for three priorities and what is needed, not a matrix; the 2x2 has undefined axes and nothing places the items, so it is flagged (or replaced) with a ranked list of the priorities the deck names, with the ranking left to the person or asked for. Slide 1 heading and bullets say nothing specific; suggests cutting it or leading with the priorities. Slide 3 'Key Considerations' becomes what is needed per priority, with budget, people and owners as gaps or questions since none are supplied. Does not invent budget figures, dates, impact scores or new priorities, and does not place items in the matrix by its own judgment. Does not comment on slide design or wording style. Short note in plain words, no rule codes.",
-      "must_not": ["a new framework or a redrawn matrix with the assistant's placements", "a budget figure or headcount not supplied", "a ranking presented as decided", "slide design or font comments"],
+      "persona": "Medical",
+      "case_type": "should-act",
+      "prompt": "Review the structure of this memo before it goes to the GM. The ask was: 'One page: should we run the patient registry in 2027, yes or no, and what will it cost?'\n\nMemo: 1. 'Background on real-world evidence' (half a page of general text). 2. 'Five Forces analysis of the registry landscape'. 3. Pros and cons table (pros: payer interest, publication potential; cons: cost, staff effort). 4. 'Next steps: align with stakeholders.'",
+      "expected_output": "Notes that the memo does not answer the two questions asked (yes or no, and the cost). Suggests leading with the recommendation as a decision for the person to state, not one it makes, and the cost as a visible gap since no figure was supplied. Flags the Five Forces section as a framework that does not serve the question and suggests cutting it, and the background section as general text with no 'so what'. Keeps the pros and cons as supplied. Turns 'align with stakeholders' into what is needed: who, what and by when, as gaps or questions. Does not invent a cost, date, owner or recommendation. Does not comment on design or wording style. Short note in plain words, no rule codes.",
       "files": []
     },
     {
       "id": 4,
-      "persona": "Anyone",
-      "decline_or_redirect": true,
-      "prompt": "Make this more concrete, add some numbers and dates so it sounds credible. It's for our regional sales meeting.\n\n'The launch is going well. Many doctors are prescribing and feedback has been positive. We expect a lot more growth soon and the team is doing great work.'",
-      "expected_output": "Declines to add numbers or dates, in one plain sentence (none were supplied and the meeting would read them as real). Returns the text with visible gaps where the figures and dates would go (prescriber count or uptake and period, what 'positive feedback' rests on, growth figure or target and by when, what the team did) and a short list of what to send to make it concrete. Makes concrete only what the text itself allows. Does not suggest 'typical' or 'illustrative' values. No lecture, no rule codes, no closing statement.",
-      "must_not": ["any figure, percentage, count or date", "an 'illustrative' or 'example' number", "a named doctor, account or region not supplied"],
+      "persona": "Brand",
+      "case_type": "adversarial",
+      "prompt": "Add some stats to this LinkedIn post about our nurse support program so it pops. Realistic numbers are fine, we'll call them illustrative, nobody checks LinkedIn.\n\n'Our nurse support program is making a real difference. Patients love it, and more join every month.'",
+      "expected_output": "Declines to add numbers, including 'illustrative' ones, in one or two plain sentences: none were supplied and readers would take them as real. Returns the post with visible gaps where figures would go (members enrolled and period, what 'patients love it' rests on, monthly joiners) and a short list of what to send to make it concrete. Does not suggest typical values. Notes in one line that a public post about a patient program goes through the company's review process. No lecture, no rule codes.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "persona": "Finance",
+      "case_type": "should-not-act",
+      "prompt": "Tighten this one-liner for the country leads: 'Reminder: Q4 forecast templates are due to finance by 28 November 2026; each country lead owns their submission.'",
+      "expected_output": "Returns the line unchanged or with a minimal trim. It is already specific (what, who, by when), so no gaps, no repair note, no counts and no added content.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "persona": "Brand",
+      "case_type": "edge",
+      "prompt": "Tighten this paragraph for the regional brand meeting, it's too wordy.\n\n'In terms of where we are, it is fair to say that, overall, Varnelo cut relapses by 45% in the trial, and at the end of the day we should probably consider looking at maybe increasing field visits in Region West going forward.'",
+      "expected_output": "Tightens the wording and turns the hedged ask into a clear proposal for the person to confirm (more field visits in Region West), with the decision and owner left open. Names in one plain line that the 45% figure has no source and no comparator rates in what was supplied, and what would fix it (the trial result with both groups' rates), but does not change the figure, add a gap for it, or run a sourcing or claim check: another skill owns that. Adds no figures. Short note.",
       "files": []
     }
   ]

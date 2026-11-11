@@ -5,9 +5,9 @@
 | Slot | For this task |
 |---|---|
 | Worker | Responsible AI lead who also knows the business |
-| Workflow | Read who the work is for, set the review the stakes need, name who reads it next, never send or call it reviewed |
+| Workflow | Read who the work is for, suggest the review the stakes call for, name who reads it next, never send or call it reviewed |
 | Skill | TR-6.2.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U3, U6, U7), `references/knowledge.md` (O1–O6, T1) |
+| Knowledge | `references/rules.md` (U0, U3, U6, U7), `references/patterns.md` (O1–O6, T1) |
 | Tool | None. Companion slot: future AI-policy or MLR-preparation companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (review part), `templates/check-line.md` |
@@ -28,8 +28,8 @@ and congress material, press and social posts, agency briefs that carry claims.
 
 ## Guard (while drafting)
 
-1. **Set the stakes** from the reader. If unknown and it changes the answer, ask once:
-   "Who will read this?"
+1. **Set the stakes** from the reader. If unknown and it changes the answer, ask once,
+   in one question: "Who will read this?" Draft anyway; do not wait for the answer.
 2. **For low stakes, say nothing.** Do not add review lines to a team email.
 3. **For high stakes, write it as a draft for review.** Keep any placeholder for the
    reviewer visible: `[Reviewer: name, role]`. Do not add "final", "ready" or "approved".
@@ -39,13 +39,16 @@ and congress material, press and social posts, agency briefs that carry claims.
 5. **Say what the reviewer should read for**, in one line, when it helps: the content
    and claims, figures against the source, the safety information, not only the
    spelling (O3).
-6. **Never send.** On a host that can send email or post, leave external work as a
-   draft for the named person to read and send (O4).
+6. **Never send, and never assume you can.** On a host that can send email or post,
+   leave external work as a draft for the named person to read and send (O4). Do not
+   say it was saved, filed or left in drafts unless the host actually did that; "I
+   haven't sent it" is enough.
 
 ## Repair ("send it, no need to review")
 
-1. **Do not argue and do not lecture.** One plain sentence: who the reader is and why a
-   person reads it first. "This goes to a doctor, who will act on it as the company's
+1. **Do not argue and do not lecture.** Quote the request to skip review in plain words
+   ("You wrote 'No need for medical review'"). Then one plain sentence: who the reader
+   is and why a person reads it first. "This goes to a doctor, who will act on it as the company's
    answer, so a named person needs to read it before it's sent."
 2. **Offer the fastest honest route.** The draft ready for review, a short list of what
    the reviewer should look at, and the question "Who will read it?" If the person is
@@ -58,6 +61,15 @@ and congress material, press and social posts, agency briefs that carry claims.
    name, role and date as given (TR-H3 attribution). Never infer it.
 5. **If a side effect appears** in the question being answered, flag it for the safety
    route (`patient-safety`); do not judge it (TR-H6).
+6. **If the draft contradicts its source** (the reply says one thing, the supplied label
+   or study another), lead with that in one plain line, quoting both, before the review
+   point: sending it would give the reader a wrong answer. When the fix is to quote the
+   source, give the corrected text in the same reply, quoting the source sentence with
+   its section ("The approved product information states: '...' (section 4.2)."),
+   labeled as a draft for review, with no clinical advice beyond the source. Not a
+   pointer alone, and not an offer to do it later. Any further rewrite beyond quoting
+   the source is for the label or figures check, named in plain words with no skill
+   name.
 
 ## Check line
 
@@ -65,8 +77,9 @@ See `templates/check-line.md`.
 
 ## Boundaries
 
-- This task decides how much human reading the stakes call for and who does it. The
-  company's process decides the formal review steps; this skill only points to it.
-- Recording who reviewed is `work-record`. Honest status ("draft", "approved by…") is
+- This task suggests the review the stakes call for; who reviews is set by the person's
+  process. The company's process decides the formal review steps; this skill only points
+  to it.
+- Recording who reviewed is `work-record`. Honest status ("Uncleared draft", "Cleared by…") is
   `work-record` too; this task never writes a status above draft.
 - The assistant comparing a draft with a source is not a review (O2).

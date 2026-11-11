@@ -1,82 +1,79 @@
-# Rendered example: business update repair (sourced draft)
+# Worked example: a business update with three facts the finance export does not hold
 
-Invented teaching case only. Shape of a full bundle after `grounded-statements` repair: fixed
-text, claim cards for invented figures, gap list, repair note, check-line stamp. Nothing invented
-to fill gaps.
+Invented case for teaching. The company figures are made up.
 
-## Material supplied (excerpt)
+## Context card (from trusted-intake, already in the conversation)
 
-Finance slide export, 30 September 2026: Q3 net sales USD 142M (vs USD 138M Q3 prior year);
-operating margin 18.2% (vs 17.5%). No market-share figures. No patient numbers.
+```
+TRUSTED context: quarterly business update
 
-## Original draft (errors)
+Reader          the leadership team                                 (stated)
+Use             internal only                                       (stated)
+Deliverable     three sentences for a slide                         (stated)
+Material        finance slide export, 30 September 2026
+Stakes          leadership
+Next process    none apparent
+```
 
-"Revenue grew 12% YoY to USD 158M. We now hold 24% market share in EU5. Enrollment in the
-pivotal trial reached 4,200 patients."
+## Request
 
-## Fixed draft (person-facing)
+"Make sure the numbers in this update are right."
 
-> Q3 net sales were **USD 142M**, up from **USD 138M** in Q3 last year (**about 2.9%**).
-> Operating margin was **18.2%** versus **17.5%** in the prior-year quarter.
+## Material supplied
+
+> (Finance slide export, 30 September 2026) Q3 net sales USD 142M, against USD 138M in
+> Q3 last year. Operating margin 18.2%, against 17.5% in the same quarter last year. The
+> export holds no market-share figures and no trial enrollment figures.
+
+## Draft supplied
+
+> Revenue grew 12% year on year to USD 158M. We now hold 24% market share in EU5.
+> Enrollment in the pivotal trial reached 4,200 patients.
+
+## Repaired text
+
+> Q3 net sales were USD 142M, against USD 138M in Q3 last year.
 >
-> Market share in EU5: [GAP: not supplied — sales operations or IQVIA extract].
-> Trial enrollment: [GAP: not supplied — clinical operations tracker].
+> Market share in EU5: [GAP: not supplied; EU5 market share; from your sales operations data]
+> Pivotal trial enrollment: [GAP: not supplied; number enrolled; from your clinical operations tracker]
 
-## Claim cards (shared `../../templates/claim-card.md`)
+## Repair note (as the person sees it)
 
-### Claim 1
-- **Draft:** "Revenue grew 12% YoY to USD 158M."
-- **Supplied:** USD 142M vs USD 138M (~2.9%).
-- **Status:** unsupported
-- **Action:** Replaced with supplied figures; removed 12% and 158M.
+What I changed to match your material (Uncleared draft)
 
-### Claim 2
-- **Draft:** "24% market share in EU5."
-- **Supplied:** (silent)
-- **Status:** invented
-- **Action:** Removed; gap left — not estimated.
+Based on: the finance slide export of 30 September 2026.
 
-### Claim 3
-- **Draft:** "Enrollment … 4,200 patients."
-- **Supplied:** (silent)
-- **Status:** invented
-- **Action:** Removed; gap left.
-
-## Repair note (`templates/repair-note.md`)
-
-Grounding: what I changed and left open (draft, not yet reviewed)
-
-Based on: finance slide export, 30 September 2026.
+Figures not in your material: 2. Figures changed: 1. Statements left as gaps: 2.
 
 Changed
-1. Three factual sentences replaced or removed; growth rate recomputed only from supplied
-   pair (142 vs 138).
+1. "Revenue grew 12% year on year to USD 158M" → the two Q3 net sales figures from the
+   export. Neither 12% nor USD 158M is in it.
+2. "24% market share in EU5" and "enrollment ... reached 4,200 patients" → left as gaps.
+   The export holds neither figure, and I did not estimate them.
 
-Left open
-1. EU5 share and trial enrollment — ask clinical ops / sales analytics; do not guess.
+Left as gaps for you to fill
+1. EU5 market share, from your sales operations data.
+2. Pivotal trial enrollment, from your clinical operations tracker.
 
-Next step: leadership review; run `claim-assessment` when VERIFY is connected.
+Question for you
+If you want a growth rate, I can work it out from the two net sales figures and label
+it as calculated. Do you want that?
 
-## Open items (`../../templates/gap-list.md`)
+I compared the draft with what you gave me; I did not check it against the original
+sources with a tool.
 
-```text
-Open items
-1. EU5 market share — not in material — next: Sales operations / data vendor
-2. Pivotal trial enrollment — not in material — next: Clinical operations
+## Why it is written this way
 
-Not yet checked
-- Tool-checked faithfulness (RAGAS) — not run; method-only pass
+- Each invented figure was replaced or left as a visible gap. No gap hints at a value.
+- The wording "grew 12% year on year" was not turned into a different growth rate. A
+  derived figure is offered, labeled, and only when the person asks for it.
+- The export also holds operating margin. The draft did not mention it, so it was not
+  added.
+- Internal leadership depth: a short note, with no check line shown to the person.
+
+## Lines returned to trusted-check (not shown to the person)
+
 ```
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / grounded-statements: not tool-checked (offline tools) · fabrication: 3→0 invented facts; figures: 1 recomputed from supply
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-True · fabrication: 3 unsupported facts removed (not tool-checked)
-True · numbers: 1 growth rate aligned to supplied USD pair (not tool-checked)
+True · invented details: 2 not in your material, 1 changed from the source, 0 where sources disagree (not tool-checked)
+True · numbers: 4 figures looked at, 2 differ from the source, 0 missing what they describe, 0 given only as a percentage change (not tool-checked)
 ```

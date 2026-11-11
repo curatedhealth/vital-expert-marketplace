@@ -3,7 +3,7 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 | Class | Typical case in this skill |
 |---|---|
@@ -21,5 +21,6 @@ Wording rules:
   you offer one, label it outside the gap as unconfirmed.
 - A gap in a patient text is written for the person who will fill it, not for the
   patient. It is removed before the text is used.
-- A term flagged for a qualified translator is listed in the translation note, not
-  scattered through the text as gaps, unless the person asks for inline flags.
+- A translated term to confirm is listed in the translation note under "Terms to
+  confirm against the approved <language> product information", not scattered through
+  the text as gaps, unless the person asks for inline flags.

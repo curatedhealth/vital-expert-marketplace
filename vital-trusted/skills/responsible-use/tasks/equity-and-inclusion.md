@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Read how people are described; repair stigmatizing, blaming or erasing language; name evidence gaps for groups only from the supplied material |
 | Skill | TR-6.2.4 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U9–U13), `references/knowledge.md` (E1–E8) |
+| Knowledge | `references/rules.md` (U9–U13), `references/patterns.md` (E1–E8) |
 | Tool | `scripts/scan_language.py` where code can run. Companion slot: future language companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (language part), `templates/check-line.md` |
@@ -35,8 +35,8 @@
    add groups, ages or ethnicities the source does not give.
 4. **Name evidence gaps honestly** when the work says who a result applies to: if the
    supplied material shows a group was few or absent, say so in one plain sentence. If
-   the material does not say, do not guess: `[GAP: not supplied — who was in the study
-   by age, sex and ethnicity — supply the baseline table]` (TR-H1, E7).
+   the material does not say, do not guess: `[GAP: not supplied; who was in the study
+   by age, sex and ethnicity; supply the baseline table]` (TR-H1, E7).
 5. **Scan** with `scripts/scan_language.py` where code can run, then read the hits;
    they are phrases to look at, not findings.
 
@@ -61,6 +61,6 @@ See `templates/check-line.md`.
   where they stigmatize, stereotype or erase people.
 - Which studies or endpoints a document leaves out is `balanced-evidence`. This task
   names gaps for population groups only.
-- Whether an evidence statement matches its source can go to `claim-assessment` when
-  VERIFY is connected.
+- Whether an evidence statement matches its source can go to `claim-assessment`,
+  which compares it by hand.
 - This is not a style guide (TR-H9). Voice, tone and brand style stay with the person.

@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Find filler, buzzwords, padding, repetition and throat-clearing; cut or replace with what the sentence was trying to say |
 | Skill | TR-1.1.2 |
-| Knowledge | `references/knowledge.md` (L1–L7) |
+| Knowledge | `references/patterns.md` (L1–L7) |
 | Tool | `scripts/scan_fluff.py` where code can run. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |

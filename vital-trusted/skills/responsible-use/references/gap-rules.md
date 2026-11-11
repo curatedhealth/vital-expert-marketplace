@@ -3,7 +3,7 @@
 > **Where the marker belongs.** Use the `[GAP: …]` marker only inside a drafted deliverable. In notes, open-item lists and explanations, write the gap as a plain sentence ("Still missing: …, from …"). See `trusted-capability-map/references/gap-rules.md`.
 
 Same format and classes as every TRUSTED skill:
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 Gaps in this skill appear mostly in the use note and the check lines, not inside the
 person's document. In what the person reads, prefer the plain question ("Who will read
@@ -20,7 +20,7 @@ placeholder the person must fill is fine: `[Reviewer: name, role]`.
 
 Wording rules:
 
-- Name the decision and who owns it, not the person: "reviewer before sending — to be
+- Name the decision and who owns it, not the person: "reviewer before sending, to be
   named by you, through your medical information process", not "user skipped review".
 - Never hint at the answer inside the gap ("probably no disclosure needed").
 - Never fill a reviewer, author contribution or disclosure statement as a gap example

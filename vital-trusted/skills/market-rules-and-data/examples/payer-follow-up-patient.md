@@ -27,14 +27,28 @@ the summary is anonymised so I can forward it to the brand team."
   (direct and indirect identifiers, with health details).
 - The point of the case for the email: whether hospital costs during treatment count in
   the budget model. The person is not needed for that.
-- A hospital stay while on treatment: a possible safety route, not judged here.
+- A hospital stay while on treatment: flagged first for the safety reporting procedure, not judged here.
 - The request to "confirm it's anonymised": a privacy determination this skill does not
   make.
-- Market wording: the email makes no product claims beyond the agreed actions, so no
-  required-statements list is built; the market is Switzerland, read from "canton".
+- Market wording: the email names Lumivra only to list the agreed attachments and makes
+  no product claims, so the market stop rule does not apply and no required-statements
+  list is built (`governance.md`); the market is Switzerland, read from "canton".
 
 ## Reply (as the person sees it)
 
+> **Before the draft: something to pass to your safety reporting procedure**
+>
+> Your meeting notes of 14 October 2026 mention:
+> - a patient on Lumivra admitted to hospital, as the payer described it: a hospital
+>   stay while on treatment
+>
+> Please pass this to your safety reporting procedure as soon as you can, in the time it
+> sets. Forward the original notes as received; your safety procedure decides what personal details it needs.
+>
+> I have not judged whether it is related to Lumivra, how serious it is, or whether it
+> needs reporting. Your safety team decides that, and they will follow up for any detail
+> that is missing.
+>
 > **Meeting summary, payer canton X, 14 October 2026**
 > The payer is still reviewing Lumivra. Their main concern is budget impact in year 2.
 > They asked whether hospital costs that arise during treatment are counted in our
@@ -44,10 +58,11 @@ the summary is anonymised so I can forward it to the brand team."
 >
 > **Follow-up email**
 > Dear [names of the two pharmacists],
-> Thank you for meeting us on 14 October 2026. As agreed, please find attached the
-> updated budget impact model and a one-page summary of the real-world data. You asked
+> Thank you for meeting us on 14 October 2026. As agreed, we will send the updated
+> budget impact model and a one-page summary of the real-world data [GAP: not supplied;
+> the updated model and the one-page summary; attach them when they are ready]. You asked
 > how hospital costs that arise during treatment are handled in the model; [GAP: not
-> supplied — how the model treats hospitalization costs — your health economics lead].
+> supplied; how the model treats hospitalization costs; your health economics lead].
 > We look forward to continuing the discussion in November.
 > Kind regards, [name]
 >
@@ -55,9 +70,6 @@ the summary is anonymised so I can forward it to the brand team."
 > place and dates and kept the payer's question. Other details could still point to
 > someone, so I can't confirm the summary is anonymous; your data privacy function
 > decides that before it goes to the brand team.
->
-> The notes also mention a hospital stay while on treatment. It may need to go through
-> your safety reporting procedure; I haven't judged whether it is related.
 >
 > The email and the attachments go through your usual review process for payer
 > material before they are sent.

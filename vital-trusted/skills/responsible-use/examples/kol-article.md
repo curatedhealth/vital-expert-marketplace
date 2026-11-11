@@ -1,6 +1,6 @@
 # Worked example: an article for a KOL to sign as her own
 
-Invented case for teaching. "Velunor" is a fictional product; Dr Keller, the journal and
+Invented case for teaching. "Velunor" is a fictional product; Dr. Keller, the journal and
 the company are made up.
 
 ## Request
@@ -31,7 +31,7 @@ attached disease-burden slides."
 >    piece needs her own view or clinical experience, I leave a marked space for her.
 > 2. She shapes and approves the content, so she can stand behind all of it.
 > 3. The writing support (your team's and the assistant's) and the company's funding
->    are acknowledged. Journals that follow the medical editors' recommendations also
+>    are acknowledged. AI tools are not listed as authors. Journals that follow the medical editors' recommendations also
 >    ask authors to say how AI was used, in the cover letter and the manuscript; check
 >    the Fictional Review of Dermatology's own instructions.
 > 4. It goes through your publications process before submission.
@@ -50,12 +50,12 @@ attached disease-burden slides."
 ## Check lines (to trusted-check only)
 
 ```
-Ethical · disclosure and authorship: AI use disclosure not present, expected by the venue's rules, 1 authorship questions (asked, not checked)
+Ethical · disclosure and authorship: AI use disclosure not present, expected by the venue's rules, 1 authorship question (not tool-checked)
   - article for an external expert to sign; writing support and funding not yet acknowledged
 ```
 
 ## Behind the reply (reference only, not shown to the person)
 
-Patterns avoided: A1, D1, T1 in `references/failure-modes.md` / `references/knowledge.md`. Rules that explain the
+Patterns avoided: A1, D1, T1 in `references/patterns.md`. Rules that explain the
 reasons: U1 to U4 (ICMJE), U5 (GPP 2022, `[CHECK]`). Funding disclosure itself is
 `honest-framing`.

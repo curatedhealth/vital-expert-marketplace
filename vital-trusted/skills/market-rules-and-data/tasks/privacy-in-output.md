@@ -7,7 +7,7 @@
 | Worker | Regulatory and promotional reviewer with a privacy background |
 | Workflow | Find details that could point to a person, keep them out of the output, remove, generalize or aggregate, say what was done without calling the result anonymous, point to the privacy function |
 | Skill | TR-2.2.3 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (P1 to P7), `references/knowledge.md` (D1 to D9) |
+| Knowledge | `references/rules.md` (P1 to P7), `references/patterns.md` (D1 to D9) |
 | Tool | `scripts/scan_output.py --data` where code can run. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/privacy-note.md`, `templates/check-line.md` |
@@ -35,6 +35,9 @@ details arrived in the material.
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Read the material for people before drafting.** Note each detail that could point
    to someone. Do not write them down in the reply.
 2. **Ask what the job needs.** Most work needs the point of the case, not the person: "the
@@ -47,10 +50,13 @@ details arrived in the material.
      of date.
    - **Aggregate**: counts across groups large enough that no one is singled out. Where a
      count is small, ask the person what minimum their privacy function sets
-     (`[GAP: needs a decision — minimum count to show — your data privacy function]`);
+     (`[GAP: needs a decision; minimum count to show; your data privacy function]`);
      never set the number yourself (P6).
-4. **Keep named professionals out** unless the person confirms they agreed to be named
-   for this use. Attribute views to a role ("a payer pharmacist") instead.
+4. **Keep named professionals out** of case stories and reported views unless the
+   person confirms they agreed to be named for this use. Attribute views to a role ("a
+   payer pharmacist") instead. This does not apply to a speaker invitation, a meeting
+   agenda or a letter addressed to the professional: the invitation names the speaker
+   the person gave. Patient details in that material still follow the routes above.
 5. **Never write the details back**, in the draft, the note, the check line or a gap.
 
 ## Repair (existing draft)
@@ -67,9 +73,11 @@ details arrived in the material.
    needed in it: they decide whether the result can be used and whether consent or
    another basis is needed.
 5. **If the material describes something that happened to a patient on a product**
-   (a hospital stay, a side effect), note in one line that it may need to go to the
-   safety reporting procedure. Do not judge whether it is related or reportable
-   (TR-H6); that is `patient-safety` and the safety function.
+   (a hospital stay, a side effect, a pregnancy, an overdose, a medication error, a
+   lack of effect, a quality problem), the flag from Guard step 0 stays first, before everything else in
+   the reply, in the wording of `../../patient-safety/templates/safety-flag.md`: unconditional, with the original
+   forwarded as received. Do not write "may need" and do not judge whether it is related or
+   reportable (TR-H6); that is `patient-safety` and the safety function.
 
 ## Check line
 

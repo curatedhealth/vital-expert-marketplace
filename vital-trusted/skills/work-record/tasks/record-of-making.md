@@ -10,8 +10,8 @@ AI did.
 | Worker | Quality and compliance lead, practical not bureaucratic |
 | Workflow | Inventory materials, assistant and connectors, and AI actions; label where each entry comes from; size the note to the stakes |
 | Skill | TR-7.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4), `references/knowledge.md` (P1–P6) |
-| Tool | None. Companion slot: VERIFY `build_record` through `citation-and-record`, only with a named clearer |
+| Knowledge | `references/rules.md` (R1, R2, R4), `references/patterns.md` (P1–P6) |
+| Tool | None. The formal record is `citation-and-record`, only with a named clearer |
 | Prompt | This guide |
 | Template | `templates/record-note.md`, `templates/check-line.md` |
 | Input | The deliverable, the conversation so far, what the person says about earlier steps |
@@ -26,7 +26,7 @@ words. This is what makes the record trustworthy to the person who reads it late
 |---|---|---|
 | Seen in this conversation | stated plainly | "Summarized from the advisory board notes you shared." |
 | As the person told you | "as you told me" or "per <name>" | "First version built in another assistant last week, as you told me." |
-| Not known | a gap | "[GAP: not supplied — version of the sales extract — name the file or its date]" |
+| Not known | a gap | "[GAP: not supplied; version of the sales extract; name the file or its date]" |
 
 Never move an entry up a level. "As you told me" never becomes a plain statement, and a
 gap never becomes a plausible guess.
@@ -44,10 +44,12 @@ gap never becomes a plausible guess.
    summarized, translated, restructured, shortened, compared figures with the supplied
    notes, suggested wording. Never "validated", "verified", "approved" or "reviewed"
    for something the assistant did.
-4. **What people did.** Only what the person states: "Figures from the finance team",
-   "Reviewed by Dr. A. Rossi on 14 October 2026, as you told me".
+4. **What people did.** Only what the person states. A relative date ("last Tuesday")
+   stays as the person gave it; never turn it into a calendar date. Examples: "Figures
+   from the finance team"; "Dr. A. Rossi, medical lead, reviewed it on 14 October 2026,
+   as you told me". This is the people's part, not the status line.
 5. **Checks that ran.** Only those that ran in fact: a number comparison against the
-   supplied notes, a TRUSTED check, a VERIFY check with its result. A check that did
+   supplied notes, a TRUSTED check, a by-hand comparison with its counts. A check that did
    not run is listed as not run, never implied.
 
 ## Guard (while drafting)

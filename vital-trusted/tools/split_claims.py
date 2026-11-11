@@ -1,11 +1,9 @@
-# TRUSTED offline tool: split_claims (also runnable as script)
-
 #!/usr/bin/env python3
 """Manual claim split for claim-assessment (VITAL TRUSTED, TR-8.1.1).
 
 Splits a text into sentences with start and end offsets that slice back to the exact
-input, and flags priority signals for ranking. It is a manual aid used when the VERIFY
-connector is not connected. It never decides support. Output is labeled
+input, and flags priority signals for ranking. It is a manual aid used by hand, with no
+lookup. It never decides support. Output is labeled
 "manual split, not tool-checked".
 
 Usage:
@@ -23,7 +21,7 @@ LABEL = "manual split, not tool-checked"
 ABBREVIATIONS = {
     "e.g", "i.e", "vs", "etc", "dr", "prof", "mr", "mrs", "ms", "no", "fig", "approx",
     "al", "ca", "cf", "inc", "ltd", "st", "jan", "feb", "mar", "apr", "jun", "jul",
-    "aug", "sep", "sept", "oct", "nov", "dec",
+    "aug", "sep", "sept", "oct", "nov", "dec", "u.s", "u.k",
 }
 
 FLAGS = {
@@ -32,6 +30,10 @@ FLAGS = {
         r"\b(more|less|fewer|greater|higher|lower|better|worse|superior|inferior|"
         r"first|only|largest|leading|best|than|versus|vs\.?|compared)\b", re.I),
     "quote": re.compile(r"[\"“”]"),
+    # A proportion without digits is still a figure ("nearly half", "most patients").
+    "proportion": re.compile(
+        r"\b(half|a third|a quarter|majority|minority|most|nearly all|almost all|"
+        r"in (?:ten|10)|out of)\b", re.I),
     "efficacy_or_safety": re.compile(
         r"\b(efficac\w*|effective\w*|improv\w*|reduc\w*|cuts?|response|remission|"
         r"surviv\w*|safe\w*|toleran?\w*|tolerated|side[- ]effects?|adverse|"
@@ -42,14 +44,14 @@ FLAGS = {
     "named_title": re.compile(r"\b(Dr|Prof|Professor|Mr|Mrs|Ms)\.?\s+[A-Z]"),
     "compliance_or_performance": re.compile(
         r"\b(approved|approval|recommended|guidelines?|certified|compliant|validated|"
-        r"standard of care|saves?|savings?)\b", re.I),
+        r"standard of care|saves?|savings?|data on file|attached|enclosed)\b", re.I),
     "unnamed_authority": re.compile(
         r"\b(experts? (agree|say|believe)|studies (show|suggest)|research shows|"
         r"it is (well )?known)\b", re.I),
     "recommendation": re.compile(r"\b(should|must|ought to|we recommend)\b", re.I),
 }
 
-PRIORITY_1 = {"number", "quote", "efficacy_or_safety", "named_title",
+PRIORITY_1 = {"number", "proportion", "quote", "efficacy_or_safety", "named_title",
               "compliance_or_performance"}
 PRIORITY_2 = {"comparison", "causal", "unnamed_authority"}
 
@@ -112,7 +114,15 @@ def flags_for(sentence):
     return [name for name, rx in FLAGS.items() if rx.search(sentence)]
 
 
+STRONG = {"quote", "efficacy_or_safety", "named_title", "compliance_or_performance"}
+
+
 def priority(flags):
+    # A recommendation ("Payers should ... over 65") stays a recommendation unless it
+    # also carries a quote, a named person, an efficacy or safety word, or a
+    # compliance or performance claim.
+    if "recommendation" in flags and not (STRONG & set(flags)):
+        return "recommendation"
     if PRIORITY_1 & set(flags):
         return 1
     if PRIORITY_2 & set(flags):
@@ -159,6 +169,9 @@ def self_test():
     assert r["claims"][0]["priority"] == 1
     assert r["claims"][3]["priority"] == "recommendation"
     assert "unnamed_authority" in r["claims"][4]["flags"]
+    p = analyze("Nearly half of patients stayed on treatment. Data on file is attached.")
+    assert "proportion" in p["claims"][0]["flags"] and p["claims"][0]["priority"] == 1
+    assert "compliance_or_performance" in p["claims"][1]["flags"]
     assert analyze("")["claims"] == []
     assert analyze("No terminator here")["claims"][0]["text"] == "No terminator here"
     print("self-test passed: 5 sentences, offsets round-trip, flags as expected")

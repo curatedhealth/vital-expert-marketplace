@@ -3,13 +3,13 @@
 Returned to `trusted-check` only, never shown at the end of a direct reply. One line per
 task that ran, in the shape set in `trusted-check/references/letter-lines.md`. Counts
 and routing only; no verdict words and no clinical, causality or reportability judgment
-(TR-H3, TR-H6, TR-H13). Build skills have no tool today, so every line ends "not
-tool-checked".
+(TR-H3, TR-H6, TR-H13). Build skills have no tool today, so every line for a check that
+ran ends "not tool-checked"; a "not checked" line carries no label.
 
 ```
 Safe · safety statements: <n> statements on dosing, warnings, interactions or special populations, <n> not as the label states them, label <supplied | not supplied> (not tool-checked)
 Safe · patient wording: <n> passages for patients with no route to a doctor, nurse or pharmacist (not tool-checked)
-Safe · possible side effects: <n> mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
+Safe · possible safety reports: <n> mentioned in the draft or the material, to pass to your safety reporting procedure (not tool-checked)
 ```
 
 Up to three plain notes per line, saying where and what:
@@ -23,21 +23,28 @@ Up to three plain notes per line, saying where and what:
 Rules for these lines:
 
 - **Patient wording** runs only for patient material. Advice, false reassurance and
-  alarming framing go in its notes; the count in the line stays the one in the contract.
-- **Possible side effects** counts every mention Part B flagged, of every kind: side
+  alarming framing go in its notes; the count in the line stays the one in
+  `../../trusted-check/references/letter-lines.md`.
+- **Possible safety reports** counts every mention Part B flagged, of every kind: side
   effects, pregnancy or breastfeeding, overdose, misuse, medication errors, lack of
   effect, off-label use as reported, product quality problems. The notes name the kind.
+  A quality problem or device failure also goes to your complaint procedure, as your
+  procedure sets; say so in its note.
   Never add "serious", "known" or "reportable".
-- This line also surfaces in `trusted-check` as an open item when the Safe letter is off.
+- The flag itself goes at the top of the reply at drafting time, whatever letters are
+  active (TR-H14). In a `trusted-check` summary the flag is the first lines and is not
+  repeated elsewhere. When Safe is on, this line's count appears in the Safe row with the
+  note "see the flag above"; when Safe is off, the row reads "off by choice" and this
+  line is not shown.
 
 When no label was supplied and the draft has safety content:
 
 ```
-Safe · safety statements: not checkable — no label supplied (<n> statements affected)
+Safe · safety statements: not checked, no label supplied (<n> statements affected)
 ```
 
 When the material holds nothing to flag:
 
 ```
-Safe · possible side effects: 0 mentioned in the draft or the material (not tool-checked)
+Safe · possible safety reports: 0 mentioned in the draft or the material (not tool-checked)
 ```

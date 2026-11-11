@@ -8,7 +8,7 @@ before the fixed text, not inside this note.
 ## Full note
 
 ```
-What I changed and why (draft, not yet reviewed)
+What I changed and why (Uncleared draft)
 
 Based on: <label title, market, date | patient leaflet, date | your draft | the inputs you gave>
 
@@ -22,10 +22,10 @@ Taken out
    their doctor can decide.">
 
 Left as gaps for you to fill
-1. <what is missing> — <where it would come from, e.g. section 4.2 of the approved label>
+1. <what is missing>: <where it would come from, e.g. section 4.2 of the approved label>
 
-Questions for you
-1. <a choice only you or your process can make, e.g. which contact route the reply gives>
+Question for you
+<a choice only you or your process can make, e.g. which contact route the reply gives; one combined question at most, covering at most two related points (TR-H7)>
 
 Next step: this goes through your <medical information procedure | patient material
 review and promotional review process | medical review> before it is used.
@@ -38,4 +38,12 @@ label is the current approved version.
 
 ```
 Changed: <one line>. Gap left: <one line, if any>.
+```
+
+## Nothing needed changing
+
+One sentence, no note, no counts, no list of optional additions, no verdict:
+
+```
+Nothing in the safety wording needed changing.
 ```

@@ -1,11 +1,15 @@
 # Evidence table
 
-Render as a Markdown table (also via `tools/render_report.py --template evidence-table`):
+Only when the person asks for the full board. Render as a plain table.
 
-| # | Claim | Status (plain) | Passage (quote) | Locator | Action |
+| # | Claim | Result | Passage (quote) | Where | Do |
 |---|---|---|---|---|---|
-| 1 | … | Found / Partly / Not found / Different / Cannot check / Out of scope / Not checked | "…" | … | Keep / Rewrite / Remove / Ask |
+| 1 | <claim> | Found in your passage / Partly found: <missing part> not in your passage / Not found in your passage / Your passage says something different / No passage to compare with / Opinion, recommendation or definition | "<quote>" | <locator> | Keep / Rewrite to match / Remove / Ask you / Leave to you and your review process |
 
-Footer line: `Label: tool-checked | not tool-checked` · `Faithfulness: …` (or none).
+Footer: "Not tool-checked: read by hand against the passages you supplied." No figure.
 
-Max practical rows on one board: **20**; split longer drafts (VERIFY finding cap practice: 60 — still split for humans).
+"No passage to compare with" is never "Remove": the sentence stays with a gap and a
+passage is asked for. "Not found in your passage" is removed or rewritten to what the
+passage states, and listed.
+
+Keep a board to about 20 rows. Split a longer draft into parts so a person can read each.

@@ -13,7 +13,7 @@ October 2026 showed raw markers in notes lists read as internal plumbing (TR-H13
 
 ## Format
 
-`[GAP: <class> — <what is missing> — <what would close it>]`
+`[GAP: <class>; <what is missing>; <what would close it>]`
 
 Keep it to one line. Put it where the missing content would have gone.
 
@@ -21,18 +21,18 @@ Keep it to one line. Put it where the missing content would have gone.
 
 | Class | Use it when | Example |
 |---|---|---|
-| `not supplied` | The material the person gave does not contain it | `[GAP: not supplied — 95% CI for the primary endpoint — supply the results table]` |
-| `not checkable here` | Only a companion tool could establish it, and none is connected | `[GAP: not checkable here — whether the claim matches the cited passage — connect VERIFY or check manually]` |
-| `conflicting` | Two supplied sources disagree and nothing says which governs | `[GAP: conflicting — abstract says 412 patients, full text says 408 — confirm which is final]` |
-| `needs a decision` | A person with authority has to decide (policy, scope, sign-off) | `[GAP: needs a decision — whether this tool is approved for unpublished data — ask your AI policy owner]` |
-| `out of date or unclear date` | A "current" or "latest" statement has no date, or the source may be superseded | `[GAP: out of date or unclear date — "latest guidance" has no title or date — name the document]` |
+| `not supplied` | The material the person gave does not contain it | `[GAP: not supplied; 95% CI for the primary endpoint; supply the results table]` |
+| `not checkable here` | Only something not supplied could establish it | `[GAP: not checkable here; whether the claim matches the cited passage; supply the passage so it can be compared by hand]` |
+| `conflicting` | Two supplied sources disagree and nothing says which governs | `[GAP: conflicting; abstract says 412 patients, full text says 408; confirm which is final]` |
+| `needs a decision` | A person with authority has to decide (policy, scope, sign-off) | `[GAP: needs a decision; whether this tool is approved for unpublished data; ask your AI policy owner]` |
+| `out of date or unclear date` | A "current" or "latest" statement has no date, or the source may be superseded | `[GAP: out of date or unclear date; "latest guidance" has no title or date; name the document]` |
 
 ## Wording rules
 
 - Name what is missing, not that "information is unavailable".
 - Never use a gap to hint at an answer ("probably around 400").
 - Never turn an absence into a claim. "The paper does not report harms" is a finding only
-  if the full paper was supplied and read. Otherwise it is `[GAP: not supplied]`.
+  if the full paper was supplied and read. Otherwise it is `[GAP: not supplied; the full paper's harms results; supply the full paper]`.
 - A gap is not a failure of the person. Do not apologize for it or blame anyone.
 
 ## The [CHECK] marker

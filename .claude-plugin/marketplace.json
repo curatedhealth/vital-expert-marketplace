@@ -9,7 +9,9 @@
     {
       "name": "vital-trusted",
       "source": "./vital-trusted",
-      "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). Offline-first; optional TRUSTED Prove live MCP via vvfy_ key (https://mcp.vital.expert/api/mcp/verify, server id trusted-prove). The vital-verify plugin is retired \u2014 install this pack only."
+      "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). 0.3.4 Pilot. Offline-first; Prove skills check by hand against supplied material (no VERIFY connector or key). The vital-verify plugin remains retired \u2014 install this pack only.",
+      "version": "0.3.4",
+      "release_state": "Pilot"
     },
     {
       "name": "vital-navigator-outcomes",

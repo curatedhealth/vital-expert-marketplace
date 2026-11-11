@@ -8,10 +8,11 @@ Open item <n>: <short name>
 Where: <section or sentence where it sits>
 What the text says: "<claim as written>"
 What the source says: "<quoted passage>" (<where in the source>) <or: no passage was available>
-Why it is open: <the passage says something different | two sources disagree | only partly supported | could not be checked | a policy question>
+Why it is open: <your passage says something different | two sources disagree | partly found | not found in your passage | no passage to compare with | a policy question>
 Question: <one question the decider can answer without rerunning anything>
 Goes to: <your medical review process | your promotional review process | your AI use policy owner | your safety reporting procedure | the document's owner>
 Decision: not yet made
 ```
 
 For two sources that disagree: one item, both passages quoted, both places given.
+For the review a whole deliverable goes to, use the table in `../references/escalation-packet.md`.

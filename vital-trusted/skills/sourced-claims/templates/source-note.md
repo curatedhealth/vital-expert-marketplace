@@ -7,7 +7,7 @@ full note.
 ## Full note
 
 ```
-Sources: what I changed and what is still needed (draft, not yet reviewed)
+Sources: what I changed and what is still needed (Uncleared draft)
 
 Sources you gave me: <one line per source, with its kind, e.g. "Example Health Wire
 article, 4 May 2026 (news)">
@@ -18,19 +18,19 @@ Changed
 2. ...
 
 Claims that still need a source
-1. "<claim>" — needs <kind of source, e.g. the trial publication> for <reader>.
+1. "<claim>": needs <kind of source, e.g. the trial publication> for <reader>.
    <Where it might come from, e.g. your medical information team.>
 
 Sources that cannot carry their claim for this reader
 1. "<claim>" rests on <kind of source>. <What that kind can support instead.>
 
-Questions for you
-1. <e.g. whether this data on file can be provided to the payer on request>
+Question for you
+<e.g. whether this data on file can be provided to the payer on request; one combined question at most, covering at most two related points (TR-H7)>
 
 <If the work leaves the company:> Next step: this goes through your <kind of internal
 process, e.g. promotional review> before it is used.
 
-I did not write any reference from memory. I did not check any source with a tool.
+I did not write any reference from memory. No source was tool-checked.
 ```
 
 ## Short note (internal, low stakes)

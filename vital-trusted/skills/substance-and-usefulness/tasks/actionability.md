@@ -7,7 +7,7 @@
 | Worker | Senior editor and engagement lead |
 | Workflow | Decide whether the work calls for a decision, recommendation, next step or owner; check each is present and specific; propose from the material or ask |
 | Skill | TR-1.1.4 |
-| Knowledge | `references/knowledge.md` (A1–A5) |
+| Knowledge | `references/patterns.md` (A1–A5) |
 | Tool | None. Companion slot: none yet |
 | Prompt | This guide |
 | Template | `templates/check-line.md`, `templates/repair-note.md` |
@@ -41,12 +41,12 @@ ask once.
 1. **Decide whether the work calls for an action** (table above).
 2. **Write the action from the material.** Meeting notes that say "agreed: we send the
    updated model" become "We will send the updated budget impact model [GAP: not
-   supplied — owner and date — who sends it, by when]".
+   supplied; owner and date; who sends it, by when]".
 3. **A recommendation may be proposed, labeled as a proposal**, when it follows from the
    material and the person asked for one: "Proposed for your decision: …". It is never
    presented as already agreed.
 4. **Never assign an owner or a date.** Not even an obvious one. Ask, or leave
-   `[GAP: needs a decision — owner — name the person or function]`.
+   `[GAP: needs a decision; owner; name the person or function]`.
 5. **Close on the ask** for leadership material: one line that says what the reader is
    asked to do.
 
@@ -57,7 +57,13 @@ ask once.
 2. **Check each action** for what, who and by when. Mark vague actions ("we will drive
    alignment") and actions with no owner.
 3. **Fix** from the material, or with a gap. Turn "next steps: align with stakeholders"
-   into the specific step the notes record, or into a question for the person.
+   into the specific step the notes record, or into a question for the person. A
+   missing owner or a missing decision shows in two places: as a gap in the draft
+   where it belongs (`[GAP: needs a decision; owner; name the person or function]`; a
+   missing decision always names the owner too: `[GAP: needs a decision; next step and
+   its owner; who decides and who does it]`)
+   and as a plain line in the note ("Still needed from you: who owns the access
+   plan."). A line in the note alone is not enough.
 4. **List each added or changed action** in the repair note; mark proposals as "for you
    to confirm".
 

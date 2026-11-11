@@ -1,6 +1,8 @@
 # Task TR-8.2.1 Qualify the source
 
-Absorbs the source-grading method of the earlier vital-verify plugin.
+Contents: Formula; Before you start; Steps; Not tool-checked; Check line; Boundaries.
+
+Absorbs the source-description method of the earlier Prove work, now done by hand.
 
 ## Formula
 
@@ -9,10 +11,10 @@ Absorbs the source-grading method of the earlier vital-verify plugin.
 | Worker | Evidence lead |
 | Workflow | Identify the source, name its kind, establish peer review, authors and funders, judge fit for the question and the reader, then hand over |
 | Skill | TR-8.2.1 |
-| Knowledge | `references/source-types.md`, `references/method-standards.md` / `references/knowledge.md` (R3, R4, R7, R8), `references/knowledge.md` (S1–S8, S13–S15) |
-| Tool | VERIFY `qualify_source`; `ingest_document` for a supplied PDF or internal document. `scripts/identify_source_id.py`, `scripts/print_source_score.py` where code runs |
+| Knowledge | `references/source-types.md`, `references/rules.md` (R3, R4, R7, R8), `references/patterns.md` (S1–S8, S13–S15) |
+| Tool | None. `scripts/identify_source_id.py` where code runs |
 | Prompt | This guide |
-| Template | `../../templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` |
+| Template | `templates/source-card.md`, `templates/check-line.md` |
 | Input | The source (identifier, link, file or pasted text), the question it should answer, who will read the work, the claim it supports if known |
 | Governance | TR-H1, TR-H3, TR-H4, TR-H7, TR-H11; stop rules in `governance.md` |
 
@@ -34,44 +36,39 @@ If the person names several sources, take them one at a time.
 ### 1. Identify
 
 Find the identifier. Where code runs, `python scripts/identify_source_id.py "<text>"`
-says whether it is a DOI, PMID, PMCID or URL and which VERIFY argument it goes in.
-Otherwise read it by eye: a DOI starts `10.`; a PMID is digits only; a PMCID starts
+says whether it is a DOI, PMID, PMCID or link. Otherwise read it by eye: a DOI starts `10.`; a PMID is digits only; a PMCID starts
 `PMC`.
 
 Never build an identifier from a title, and never complete a partial DOI from memory.
 
-### 2. Qualify with VERIFY (when connected)
+### 2. Read what was supplied
 
-- Call `qualify_source` with the identifier in its own argument and the person's
-  question in `question` (`references/tools.md`). Passing the question is what lets the
-  tool score relevance; without it, relevance has no value.
-- If the source is a PDF, pasted text or internal document with no public identifier,
-  it can only be qualified after `ingest_document`, and only if the person says they
-  may process it there. Ask: "Are you allowed to upload this document to VERIFY under
-  your company's rules?" Never set the attestation for them. If the document is
-  confidential or unpublished, point to the company's AI use policy before uploading.
-  Then call `qualify_source` with the returned document id.
-- If the tool returns inadmissible, say so with the reason it gives. Where the reason
-  is a failed fetch, say the fetch failed. Do not fill the missing title, publisher or
-  date yourself, and do not grade the source by hand as if the tool had passed it.
-- Print the tool block (`templates/verify-block.md`): the reference, the source score
-  total and only the axes that have numbers. Where code runs, `scripts/print_source_score.py`
-  does this from the tool's JSON.
+Read the document or page the person gave you. Take kind, authors, issuer, funder, date
+and identifier from it, and write "not stated" for what it does not show. If the person
+gave only a link you cannot open, say so and ask them to paste the text or attach the
+file. Do not fill the title, publisher or date yourself. If the person only describes
+the source, build the card from what they describe, attributed "as you describe it",
+write "not seen" for each field you could not read in the document itself, and ask for
+the document in one line at the end ("Can you paste or attach it, so I can read it
+rather than your description?"). If the document is confidential
+or unpublished, point to the company's AI use policy before it is pasted anywhere. Never
+write a tier, a score or "admissible".
 
 ### 3. Name the kind of source
 
 Use the list in `references/source-types.md`, from what the source shows: peer-reviewed
-article, preprint, conference abstract or poster, approved label, regulator or HTA
-document, clinical guideline, company data on file, market research, press release,
-news, blog or social post, internal document. Two checks that catch most mistakes:
+article, journal article with abstract only seen, preprint, conference abstract or
+poster, approved label, regulator or HTA document, clinical guideline, company data on
+file, company fact sheet or brochure, market research, press release, earnings call transcript or investor presentation, news, blog or
+social post, internal document. Two checks that catch most mistakes:
 
 - **Is this the original, or a report about it?** A news story, press release or slide
   that reports a study is not the study. Name it as what it is and ask for the primary
-  (`patterns.md` S1, S14).
+  (`references/patterns.md` S1, S14).
 - **Is this the version that was published?** A preprint, an abstract, a poster and the
   later journal article are different sources with different reach. If a published
   version exists and the person has it, the published version is the one to cite
-  (`rules.md` R3).
+  (`references/rules.md` R3).
 
 ### 4. Establish peer review
 
@@ -80,8 +77,8 @@ State one of three, and only from evidence:
 | Status | Evidence needed |
 |---|---|
 | Peer reviewed | Published in a journal as a research article, with the journal and date visible, or the source says it was peer reviewed |
-| Not peer reviewed | It is a preprint, press release, news item, blog, data on file, market research, internal document, or the source says so |
-| Peer review status not confirmed | Anything else, including conference abstracts unless the meeting's process is supplied |
+| Not peer reviewed | It is a preprint, press release, earnings call transcript or investor presentation, company fact sheet or brochure, news item, blog, data on file, market research, internal document, or the source says so |
+| Peer review status not confirmed | Anything else, including conference abstracts unless the meeting's process is supplied, and a journal article where only the abstract was seen and the article type does not show |
 
 Do not infer peer review from a DOI, a journal-like layout, a university logo or a
 reputable author. A label, regulator or HTA document is not "peer reviewed"; it carries
@@ -117,20 +114,22 @@ acceptability (TR-H11).
 
 ### 7. Build the card and hand over
 
-Fill `../../templates/source-card.md` from steps 3 to 6. Then:
+Fill `templates/source-card.md` from steps 3 to 6. Date it in full ("12 March 2026") and
+give the currency line as "checked by you on <date>" or "not checked", with the check the
+person can do. Then:
 
 - If the person wants to know how strong or current the evidence is, run
   `tasks/evidence-strength-and-currency.md`.
-- If the person wants to know whether a specific sentence is supported by the source,
-  hand the qualified source and a quoted passage to `claim-assessment`. This task does
-  not decide support.
+- If the person wants to know whether a specific sentence matches the source,
+  hand the source and a quoted passage to `claim-assessment`. This task does not compare
+  sentences.
 
-## Without VERIFY
+## Not tool-checked
 
-Run steps 1 and 3 to 7 by hand from the source as supplied. Label the card "not
-tool-checked". Where a field could only come from the tool (for example the publisher
-of a link you cannot open), write `[GAP: not checkable here — <field> — connect VERIFY
-or supply the document]`. Never print a tier or a score.
+Every card is labeled "not tool-checked". Where a field cannot be read from what was
+supplied (for example the publisher of a link you cannot open), write "not stated" in the
+card, or in a drafted deliverable `[GAP: not supplied; <field>; supply the document]`.
+Never print a tier or a score.
 
 ## Check line
 
@@ -143,5 +142,5 @@ See `templates/check-line.md`.
   is `sourced-claims`. This task assesses a source someone has named.
 - Do not judge whether the source is permitted in promotional material in a given
   market; flag it for the promotional or medical review process.
-- Do not search for a better source and present it as found unless a tool or the person
+- Do not search for a better source and present it as found unless the person
   supplied it. Suggest where one might be looked for, plainly, as a suggestion.

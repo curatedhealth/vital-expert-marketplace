@@ -1,5 +1,8 @@
 # Task TR-2.1.1 Label and intended-use boundary
 
+Contents: Formula; What the label sets; What to look for; Guard (while drafting); Repair
+(existing draft); "It's approved in the US, so it's fine here"; Check line; Boundaries.
+
 Keeps every product statement inside the approved indication, population, dose, line
 of therapy, setting and label wording of a medicine, or the intended purpose of a
 device or app, as the person supplied it for the market the work is for.
@@ -11,7 +14,7 @@ device or app, as the person supplied it for the market the work is for.
 | Worker | Regulatory and promotional reviewer who helps drafts through review |
 | Workflow | Get the label, list its boundary, compare each product statement, rewrite inside it or mark the gap |
 | Skill | TR-2.1.1 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (R1, R2, R4 to R8, R25 to R27), `references/knowledge.md` (L1–L8) |
+| Knowledge | `references/rules.md` (R1, R2, R4 to R8, R25 to R27), `references/patterns.md` (L1–L8) |
 | Tool | None. Companion slot: a future label-source companion (`references/tools.md`) |
 | Prompt | This guide |
 | Template | `templates/label-request.md`, `templates/claims-note.md`, `templates/check-line.md` |
@@ -56,17 +59,34 @@ longer draft. It finds words, not uses: read the draft against the label as well
 
 ## Guard (while drafting)
 
+0. **Safety first (TR-H14).** If any input mentions a possible side effect, pregnancy or breastfeeding exposure, overdose, misuse or off-label use reported for a person, medication error, lack of effect or product quality problem,
+   give the flag from `../../patient-safety/templates/safety-flag.md` first, in its
+   wording, before any question or draft, with the original forwarded. Then continue.
 1. **Write the boundary first**, from the label, in its own words.
 2. **Draft each product statement from the boundary.** Indication, population, dose and
-   setting keep the label's wording; plain language is fine around them.
+   setting keep the label's wording; plain language is fine around them. Refer to the
+   label as the person supplied it. Do not cite section numbers ("section 4.1") unless
+   they are in the supplied document; when the market is unknown, do not assume an EU
+   summary of product characteristics and its numbering.
 3. **When the request wants a use beyond the label** ("add a message for teenagers",
    "say it works for mild cases too"), do not write it. Say in one plain line that the
    label supplied does not cover it, and offer what can be said instead.
 4. **When the request reports practice** ("doctors are already using it for…"), treat
-   it as a field insight, not a message. Questions doctors raise go to the medical
-   information procedure; the brand message stays inside the label.
+   it as a field insight, not a message. A general trend with no individual gets one
+   plain line, not the safety flag: questions doctors raise go to the medical
+   information procedure, and anything about a specific patient to the safety reporting
+   procedure, as the company's process sets. A report about a specific patient or
+   patients (who received it, what happened) gets the safety flag first (Guard step 0).
+   A use a doctor asks about for a specific patient that has not happened yet ("can I give it to my 15-year-old patient?") is not a flag: it is a medical information question, so point to medical information. A use that already happened is a report and gets the flag.
+   The brand message stays inside the label.
 5. **For a device or app**, describe what it does in the terms of the intended purpose:
-   what it records, measures or shows, who interprets it, and when to see a clinician.
+   what it records, measures or shows, who interprets it, and when to see a clinician,
+   in the intended purpose's own words. In patient or public text, a line telling
+   readers who to ask is never written new: keep the source's line, or leave `[GAP:
+   needs a decision; a line telling readers who to ask; use your approved patient
+   wording]`. The person's own headline or brief is not a source for an instruction to
+   patients; an instruction it implies stays a gap until the label or approved patient
+   wording gives it.
 
 ## Repair (existing draft)
 
@@ -84,7 +104,7 @@ longer draft. It finds words, not uses: read the draft against the label as well
 
 Approvals differ by market and date. Ask which market the piece is for and work from
 that market's label. If two labels were supplied and they differ, mark the difference
-`[GAP: conflicting — …]` and use the stricter wording until the person decides.
+`[GAP: conflicting; …]` and use the stricter wording until the person decides.
 
 ## Check line
 
@@ -95,7 +115,7 @@ See `templates/check-line.md`.
 - This task compares the draft with the label the person supplied. It does not decide
   what the product is approved for, whether the supplied label is current, or whether a
   use is lawful (TR-H6). Those are `[GAP: not checkable here]` or questions for the
-  review process.
+  regulatory team and the review process.
 - Dosing, contraindications and warnings stated in the draft are checked for wording
   against the label here; whether they are stated safely and completely is
   `patient-safety`.

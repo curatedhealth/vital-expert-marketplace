@@ -1,4 +1,4 @@
-# Worked example: a preprint in a payer deck (without VERIFY)
+# Worked example: a preprint in a payer deck (by hand)
 
 Invented case for teaching. "Tavexa", "Kestrel-RW" and every figure are fictional. No
 real product, study, server or person.
@@ -20,8 +20,6 @@ condition X; admissions within 12 months 13.0% with Tavexa versus 20.0% with sta
 care; adjusted hazard ratio 0.65 (95% CI 0.55 to 0.77). No DOI on the PDF. The payer
 is in a third country.
 
-VERIFY is not connected in this assistant.
-
 ## Depth
 
 Payer material leaves the company: full card, both tasks, pointer to the review process
@@ -29,43 +27,46 @@ Payer material leaves the company: full card, both tasks, pointer to the review 
 
 ## What the person reads
 
-I can't tell you whether it is good enough; your medical and promotional review decides
-that. Here is what it can and cannot carry for a payer, so you can decide how to use it.
+I can't tell you whether it is good enough; your market access or promotional review and
+your medical review, as your process names it, decide that. Here is what it can and cannot carry for a payer, so you can decide how to use it.
 
 **Source:** Kestrel-RW, Lee J, Haas M and colleagues, posted 3 June 2026
 **Identifier:** none on the PDF
 
-**What it is:** a preprint of an observational study (a look back at insurance claims
+**Kind:** a preprint of an observational study (a look back at insurance claims
 data).
 **Peer review:** not peer reviewed. The PDF says so on its first page.
-**Who made it:** funded by Tavexa's manufacturer; two authors are employees, as the
+**Funders and interests:** funded by Tavexa's manufacturer; two authors are employees, as the
 paper discloses.
-**Fits your question:** partly. It is about hospital admissions with Tavexa compared
+**Fit to your question:** partly. It is about hospital admissions with Tavexa compared
 with standard care in adults with condition X, which matches. The data come from two
 other countries, not the payer's, and from routine practice, not a trial.
 
 **How strong:** one observational study. It shows that Tavexa use was linked with fewer
 admissions; it cannot show on its own that Tavexa caused the difference, because the
 patients were not randomly assigned.
-**Up to date:** posted 3 June 2026. Whether a peer-reviewed version has since been
-published, or the preprint revised: not checked.
+**Date:** posted 3 June 2026.
+**Currency:** not checked. Whether a peer-reviewed version has since been published, or
+the preprint revised, is yours to check: look at the preprint server's page and search
+the journal literature for the title.
 
-**What it can carry for a payer:** "In a manufacturer-funded observational study of
+**Can carry for a payer:** "In a manufacturer-funded observational study of
 4,200 adults, posted as a preprint and not yet peer reviewed, 13.0% of patients on
 Tavexa and 20.0% on standard care were admitted within 12 months (adjusted hazard ratio
 0.65)."
-**What it cannot carry:** "Tavexa cuts hospital admissions by 35%." That reads as a
+**Cannot carry:** "Tavexa cuts hospital admissions by 35%." That reads as a
 proven effect, gives only the relative figure, and drops that the data are unreviewed,
-observational, sponsor-funded and from other countries. A payer will ask about all
-four.
+observational, sponsor-funded and from other countries. A payer reader needs all four.
 
 **To use it:** check whether a journal version exists and cite that if so; give both
-admission rates; label it as a preprint; and expect the payer to ask for local data.
-**Next step:** the deck goes through your medical and promotional review process before
-it is used.
+admission rates; label it as a preprint; and add local data if you have them.
+**Next step:** the deck goes through your market access or promotional review and your
+medical review, as your process names it, before it is used.
 
-Not tool-checked. With VERIFY connected, the document could be qualified and its
-update status checked; without a DOI, the update check would come back "not checked".
+Not tool-checked: I read what you supplied. Currency and retraction checks are yours to
+make; with no DOI on the PDF, search by title and authors.
+
+This check flags issues. It is not medical, legal, regulatory or ethics review.
 
 ## Behind the answer (reference only, not shown to the person)
 
@@ -80,7 +81,7 @@ update status checked; without a DOI, the update check would come back "not chec
   identifier, so the card says "none on the PDF" and the currency line says "not
   checked".
 - Gap the reviewer would see in the TRUSTED summary:
-  `[GAP: out of date or unclear date — whether a peer-reviewed version exists — check the preprint page or ask the authors]`.
+  `[GAP: out of date or unclear date; whether a peer-reviewed version exists; check the preprint page or ask the authors]`.
 
 ## Check line returned to trusted-check
 

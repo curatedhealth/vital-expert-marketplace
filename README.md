@@ -6,7 +6,7 @@ If you previously added `curatedhealth/vital-expert-plugins`, remove that market
 
 ## Foundational (no library key)
 
-- **VITAL TRUSTED** (`vital-trusted`) — **Pilot only (9 November 2026).** Do not install for new work. Owner is rebuilding 0.3.3; this listing stays Pilot until that ships. The former `vital-verify` plugin remains retired.
+- **VITAL TRUSTED** (`vital-trusted`) — **0.3.4 Pilot** (branch `trusted-0.3.4`, not Released). Do not treat as Released until the owner publishes. The former `vital-verify` plugin remains retired.
 
 ## Digital Health (seven packs)
 

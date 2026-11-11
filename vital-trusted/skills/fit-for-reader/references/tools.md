@@ -2,8 +2,7 @@
 
 ## Companion slot
 
-No companion exists for this skill and none is planned (product concept §10.2:
-"Tangible: no candidate, stays method only"). Do not imitate one (TR-H4).
+No companion exists for this skill and none is planned (Tangible stays method only). Do not imitate one (TR-H4).
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
@@ -11,7 +10,7 @@ No companion exists for this skill and none is planned (product concept §10.2:
 | Deliverable fit | None planned. Nothing here needs a tool beyond counting | None | Method runs in full; "not tool-checked" |
 | Translation fidelity | None planned. A hypothetical companion could look up approved product information and approved local terms by product, language and date, so flagged terms become lookups | None | Approved wording comes only from the person; terms without it are flagged for a qualified translator; "not tool-checked" |
 
-VERIFY does not fill these slots. It checks sentences against supplied passages; it does
+No tool fills these slots, and a hand comparison of sentences with passages does
 not judge reader fit, format or translation.
 
 ## Scripts

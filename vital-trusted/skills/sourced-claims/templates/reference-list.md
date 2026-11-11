@@ -5,7 +5,7 @@ a gap, never filled from memory. Style (numbering, punctuation) follows the pers
 choice; the default below is plain and complete.
 
 ```
-References (built from the sources you supplied; not checked with a tool)
+References (built from the sources you supplied; not tool-checked)
 
 1. <Authors>. <Title>. <Journal or body>. <Year>;<volume>:<pages or article number>.
    <DOI or PMID>. Used for: <claim, short>, <table, figure or section>.
@@ -17,9 +17,9 @@ References (built from the sources you supplied; not checked with a tool)
    Used for: <what it can support, e.g. "the announcement">.
 
 Missing details
-- Reference <n>: [GAP: not supplied — <field, e.g. DOI and table number> — <from the
-  full document>]
+- Reference <n>: <fields, e.g. DOI and table number> are not in what you sent; from
+  <the full document>.
 
 Claims with no reference yet
-- "<claim>" — needs <kind of source>.
+- "<claim>": needs <kind of source>.
 ```

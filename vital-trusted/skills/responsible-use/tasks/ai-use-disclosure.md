@@ -7,7 +7,7 @@
 | Worker | Responsible AI lead who also knows the business |
 | Workflow | Find who could expect disclosure (policy, venue, law, audience), ask what applies, draft plain wording from what actually happened |
 | Skill | TR-6.2.2 |
-| Knowledge | `references/method-standards.md` / `references/knowledge.md` (U0, U2, U3, U6, U7, U8), `references/knowledge.md` (D1–D6) |
+| Knowledge | `references/rules.md` (U0, U2, U3, U6, U7, U8), `references/patterns.md` (D1–D6) |
 | Tool | None. Companion slot: future AI-policy companion (none yet) |
 | Prompt | This guide |
 | Template | `templates/use-note.md` (disclosure part), `templates/check-line.md` |
@@ -31,8 +31,9 @@ asks; it never decides what any of them says.
 1. **Set the stakes.** Internal and quick: say nothing about disclosure. Leadership:
    only if the person asks or the policy line on the card says something. Leaving the
    company: continue.
-2. **Name the places in play** from the table, usually one or two. A payer dossier: the
-   policy and the payer's or HTA body's rules. A journal manuscript: the policy, the
+2. **Name the places in play** from the table, usually one or two. A reply to a doctor
+   or patient, or any other external reader: the policy and the audience. A payer
+   dossier: the policy and the payer's or HTA body's rules. A journal manuscript: the policy, the
    journal, and authorship (`tasks/authorship-integrity.md`). A public campaign: the
    policy and possibly the EU rule.
 3. **Ask, once, in one short paragraph.** Name the question and who answers it.
@@ -54,6 +55,11 @@ summarized | translated | restructured> <which parts> from <the sources>. <Name,
 reviewed and edited the content and is responsible for it.
 ```
 
+- **The review sentence only after the review happened.** Write "<Name, role> reviewed
+  and edited the content and is responsible for it." only when the person has said, in
+  this conversation, that the review took place and who did it. Until then, end the line
+  after "from the sources." and add `[review not yet stated: add the reviewer's name and
+  role once the review has happened]`.
 - Never name a reviewer the person did not give; leave `[name, role]`.
 - Never describe the AI as having verified, validated or checked the evidence unless a
   tool check actually ran and the person wants it stated.

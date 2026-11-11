@@ -23,19 +23,20 @@ Each line may carry up to three short plain notes, for the summary:
   - <e.g. "'patients deserve better than Kelandro' talks down a competitor">
 ```
 
-If the label or intended purpose was not supplied (following the not-checkable form in
-the contract):
+If the label or intended purpose was not supplied (following the not-run form in
+`../../trusted-check/references/letter-lines.md`):
 
 ```
-Rule-compliant · label and intended use: not checkable — label not supplied (<n> product statements affected)
+Rule-compliant · label and intended use: not checked, label not supplied (<n> product statements affected)
 ```
 
 If the comparisons rest on studies not supplied:
 
 ```
-Rule-compliant · comparisons: not checkable — studies behind the comparisons not supplied (<n> comparative claims affected)
+Rule-compliant · comparisons: not checked, studies behind the comparisons not supplied (<n> comparative claims affected)
 ```
 
-"Not tool-checked" stays on every line until a companion for this skill exists. A
+"Not tool-checked" ends every line for a check that ran, because every result is read
+by hand; a "not checked" line carries no label. A
 comparison checked against its passage by `claim-assessment` reports that result in its
 own True line, not here.

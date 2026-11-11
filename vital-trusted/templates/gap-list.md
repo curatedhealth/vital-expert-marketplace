@@ -1,13 +1,16 @@
-# Gap list (open items only)
+# Open items
 
-Numbered list for leadership scan. Include only: partial, unsupported, contradicted, unverifiable.  
-Report **not_checked** in a separate "Not yet checked" block — do not call them gaps-of-substance.
+Open items only, numbered, for a quick read. Include the partly found, not found,
+different and no-passage results.
 
 ```text
 Open items
-1. <claim> — <why open> — next: <Ask | Supply source | Rewrite | Remove>
-2. …
+1. <claim>: <why it is open>. Next: <Ask you | Supply a passage (no passage to compare with: the sentence stays, with a gap) | Rewrite to match | Remove or rewrite to the passage (not found)>
+2. <claim>: <why it is open>. Next: <...>
 
-Not yet checked
-- <claim> — needs admitted source / live tool
+Left to the person
+- <opinion, recommendation or definition>
 ```
+
+Statements nobody has compared with a passage yet go in a separate block, "Not yet
+compared", so they are not mistaken for problems with the content.

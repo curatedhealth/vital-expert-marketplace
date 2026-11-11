@@ -6,14 +6,14 @@ No companion exists for this skill yet. Do not imitate one (TR-H4).
 
 | Task | What a companion would do | Tool | Without it |
 |---|---|---|---|
-| Input confidentiality | An AI-policy companion would read the company's AI use policy and approved-tool list and return, for this kind of material and this tool, the covering section, the approved alternative if any, and the policy owner | None yet | Ask the person the policy question; check line says "asked, not checked" |
-| Intellectual property | The same companion, extended with the company's license register, could say whether a subscription or license covers this use and this tool | None yet | Ask the person or point to the licensing process; "asked, not checked" |
+| Input confidentiality | An AI-policy companion would read the company's AI use policy and approved-tool list and return, for this kind of material and this tool, the covering section, the approved alternative if any, and the policy owner | None yet | Ask the person the policy question; check line says "not tool-checked" |
+| Intellectual property | The same companion, extended with the company's license register, could say whether a subscription or license covers this use and this tool | None yet | Ask the person or point to the licensing process; "not tool-checked" |
 
 When a person quotes their policy or approved-tool list in the conversation, use their
 words as supplied, with their date, and do not extend them. That is the person's input,
 not a companion result.
 
-VERIFY does not fill these slots. It checks sentences against supplied passages; it does
+No tool fills these slots, and a hand comparison of sentences with passages does
 not read policies or licenses.
 
 ## Script

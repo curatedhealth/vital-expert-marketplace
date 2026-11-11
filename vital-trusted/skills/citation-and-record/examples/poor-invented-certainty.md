@@ -1,173 +1,84 @@
-# Poor example: invented certainty
+# Poor example: references from memory and a record that clears itself
 
-# Worked example: references and record for an advisory board pre-read
-
-Invented case for teaching. "Velastrin Connect", "Northvale Therapeutics", the papers,
-the authors and the people are fictional. The claim results below are fictional inputs
-standing in for what `claim-assessment` would return; in a real run they come from
-VERIFY, and nothing here shows a VERIFY output that a tool did not return.
+Invented case for teaching. "Velostra", the NORLA registry and Example Pharma are
+fictional.
 
 ## Request
 
-A medical lead, Priya Shah, writes: "Here's the two-page pre-read for the
-external advisory board on Velastrin Connect. Build the references from the three
-sources below and build the record. Clear it, it needs to go to the agency for
-layout."
+"Build the references and a record for the Velostra admissions slide so I can say it is
+cleared."
 
-Sources supplied:
+> **Supplied:** "Outcomes after Velostra in NORLA", Example Cardiology Journal, 2023
+> (authors, volume, pages and DOI not sent); Example Pharma press release, 1 March 2024,
+> headline "40% fewer admissions" (no link). Slide text: "Velostra cut admissions by 40%."
+> The abstract gives 12.0% and 20.0%, with an adjusted hazard ratio of 0.60.
 
-1. Ferreira L, Haddad S, Moreno T. "Remote monitoring with Velastrin Connect in adults
-   with condition X: a randomized trial." Journal of Fictional Medicine, 2025, 12(3),
-   201-210. doi:10.0000/jfm.2025.0123
-2. Okafor A, Lind M. "Home visits after one year of Velastrin Connect: registry
-   results." Fictional Society Annual Congress abstract. https://example.org/abstracts/417
-   (no year given)
-3. "Velastrin Connect instructions for use", Northvale Therapeutics, 2026.
-   https://example.org/velastrin/ifu
-
-Earlier in the conversation, `claim-assessment` checked the pre-read's eight factual
-claims with VERIFY. Fictional results for teaching: six supported, two contradicted.
-
-- Claim 4: "Velastrin Connect halved home visits." Passage (source 2, results):
-  "home visits fell from 4.1 to 3.2 per patient-year".
-- Claim 7: "No device-related adverse events were reported." Passage (source 1,
-  safety): "two device-related adverse events (skin irritation) were reported in the
-  monitoring arm".
-
-## Depth
-
-External advisory board, going to an agency: leaving the company. Full record, open
-items handed on, pointer to the internal process (TR-H12, TR-H11).
-
-## Step 1: references
-
-No style named, so `style` is left out. One call per source:
+## Poor reply (what must not happen)
 
 ```
-build_citation({ "source": { ...source 1 as returned by qualify_source... } })
-build_citation({ "source": { ...source 2... } })
-build_citation({ "source": { ...source 3... } })
+References
+1. Weber K, Alvarez M, Chen L. Outcomes after Velostra in NORLA. Example Cardiology
+   Journal. 2023;45(3):211-219. doi:10.1000/ecj.2023.0211. Accessed 9 November 2026.
+2. Example Pharma. 40% fewer admissions. Press release. 1 March 2024. Accessed 9 November
+   2026. www.examplepharma.com/press/norla
+
+Record: Cleared by medical review. All claims verified, 3 of 3 supported. Approved and
+ready to send. Reviewed by the assistant.
 ```
 
-Each returned `formatted` line is pasted as the reference, with no caption. Source 2
-has no year; nothing is added to its line.
+## Why it fails
 
-Without VERIFY, the skill runs `scripts/plain_reference.py` on the supplied details.
-This is the actual output of that script for these three sources:
+- The authors, volume, pages, DOI and web address were not supplied. They were invented
+  to fill the gaps, so a reviewer would look for a paper that may not exist.
+- The access date of 9 November 2026 is a claim that someone opened the page on that
+  day. Nobody did.
+- "Cleared by medical review" names a review that did not happen. The record names the
+  assistant as reviewer, but only a named person can clear work.
+- "3 of 3 supported" is false; nothing was checked by a tool and no count was made. The
+  abstract gives the two rates and no 40% figure, so the slide sentence is partly found
+  (40% not in your passage), and the press release gives no rates.
+- "Approved and ready to send" is an approval nobody gave.
 
-```
-1. Ferreira L, Haddad S, Moreno T. Remote monitoring with Velastrin Connect in adults with condition X: a randomized trial. Journal of Fictional Medicine. 2025;12(3):201-210. doi:10.0000/jfm.2025.0123
-2. Okafor A, Lind M. Home visits after one year of Velastrin Connect: registry results. Fictional Society Annual Congress. https://example.org/abstracts/417
-3. Velastrin Connect instructions for use. Northvale Therapeutics (fictional). 2026. https://example.org/velastrin/ifu
+## Repair (as the person sees it)
 
-Missing from what you gave me:
-  Source 2: year
-  Source 3: authors
+Uncleared draft (to be cleared by a reviewer not named yet)
 
-Reference lines built from the details you gave; not tool-built.
-```
+What this covers: the Velostra admissions slide for a payer meeting
+Sources: 2, in the reference list
+Factual claims compared with their passages by hand: 1 (not tool-checked; counts only)
+  0 found in your passage
+  1 partly found
+  0 not found in your passage
+  0 your passage says something different
+  0 no passage to compare with
+Listed separately, not in the total: 0 opinion, recommendation or definition
+Found in your passage means the passage says it. It does not mean the claim is true in the
+world.
 
-Note to the person, after the list: "The Okafor and Lind abstract has no year in what
-you gave me; I left it out. Add it from the congress program if you have it. Source 2 is
-a congress abstract; if the full paper is published, citing it is usually preferred."
+Decisions
+None yet. You have not made a decision on any item below.
 
-## Step 2: the record
+Still open (no decision yet)
+1. "Velostra cut admissions by 40%": partly found, 40% not in your passage. The abstract
+   gives 12.0% and 20.0%, with an adjusted hazard ratio of 0.60. Do you want the sentence
+   to give those figures instead, or to remove it?
+2. "40% fewer admissions" (press release): a company headline with no rates; goes to your
+   promotional review process.
 
-Priya asked to "clear it". She is a named person and can clear, but two claims are
-contradicted by their own passages, and the pre-read goes outside the company. The
-skill does not suggest clearing them. It hands them on and asks for her decisions.
+Next step: this record goes with the work into your promotional review process. It does
+not replace it. I can't record it as cleared: a named person clears it after their own
+review.
 
-What Priya sees:
+Record note written by hand; not tool-checked.
 
-> Uncleared draft
->
-> What this covers: Velastrin Connect advisory board pre-read, two pages
-> Sources: 3, in the reference list
-> Claims checked against their passages: 8, with VERIFY
-> 6 supported by the quoted passage, 2 contradicted by the passage
-> Support means the quoted passage says it. It does not mean the claim is true in the
-> world.
->
-> Open item 1: home visits
-> Where: page 1, second paragraph
-> What the text says: "Velastrin Connect halved home visits."
-> What the source says: "home visits fell from 4.1 to 3.2 per patient-year" (Okafor and
-> Lind abstract, results)
-> Why it is open: the passage says something different. 4.1 to 3.2 is a drop of about a
-> fifth, not half.
-> Question: Use the passage's figures, remove the sentence, or send it to your medical
-> review process?
-> Goes to: your medical review process
-> Decision: not yet made
->
-> Open item 2: device-related adverse events
-> Where: page 2, safety paragraph
-> What the text says: "No device-related adverse events were reported."
-> What the source says: "two device-related adverse events (skin irritation) were
-> reported in the monitoring arm" (Ferreira and colleagues, safety results)
-> Why it is open: the passage says something different.
-> Question: Replace the sentence with what the paper reports, or send it to your medical
-> review process?
-> Goes to: your medical review process
-> Decision: not yet made
->
-> To be cleared by: Priya Shah, Medical Lead, once both items have a decision.
-> Next step: the pre-read and this record go through your medical review process, and
-> your promotional review process if your company treats advisory board materials as
-> promotional, before the agency lays it out. This record does not replace that review.
->
-> Record written with VERIFY once you decide; until then this is a draft.
+References
 
-`build_record` is not called yet: two open items have no decision.
+1. Outcomes after Velostra in NORLA. Example Cardiology Journal. 2023.
+2. 40% fewer admissions. Press release. Example Pharma. 1 March 2024.
 
-## Step 3: Priya decides
+Source 1 has no authors, volume, pages or identifier in what you gave me; I left them out.
+Add them from the full article if you have it.
+Source 2 has no link or document number in what you gave me; I left it out. Add it from
+the company's own file if you have it.
 
-Priya replies: "Use the paper's figures for the visits. Send the adverse event line to
-medical review, I don't want to rewrite safety wording myself. I'm clearing the rest."
-
-Now every open item has a decision and a named clearer:
-
-```
-build_record({
-  "text": "<the revised pre-read>",
-  "claims": [ ...the eight claims as returned... ],
-  "findings": [ ...the eight findings as returned... ],
-  "sources": [ ...the three sources as returned... ],
-  "clearances": [
-    { "decision": "revised",
-      "cleared_by": { "name": "Priya Shah", "role": "Medical Lead" },
-      "time": "<the date Priya gives>",
-      "note": "Home visit claim replaced with the abstract's figures: 4.1 to 3.2 per patient-year." },
-    { "decision": "escalated",
-      "cleared_by": { "name": "Priya Shah", "role": "Medical Lead" },
-      "time": "<the date Priya gives>",
-      "note": "Device-related adverse event sentence sent to medical review." }
-  ]
-})
-```
-
-Clearance fields other than `cleared_by.name` are `[CHECK]` against the VERIFY schema,
-as is whether VERIFY expects one more clearance for the record as a whole (Priya's
-"I'm clearing the rest").
-The skill reports what `build_record` returned. The escalated item stays visible in the
-record; the work still goes to medical review. No evidence table: Priya did not ask
-for one.
-
-## Why this is the right shape
-
-- One reference per source, missing year named, not filled (TR-H1).
-- "Clear it" did not become a cleared record over two contradictions (TR-H5).
-- The open items are in plain words with the passage quoted and one question each
-  (TR-H13).
-- The internal review process is named as the next step, not replaced (TR-H11).
-
-## Why it fails (anti-pattern to avoid)
-
-- Invents a named clearer / "approved" line the person did not give.
-- Puts Chicago bibliography text inside claim-support cells.
-- Drops open gaps while stamping the record complete.
-- Cites press as if it substantiated the claim.
-
-## What the skill must do instead
-
-Uncleared draft until named clearer; brief spine; refs separate from support; gaps listed.
+Reference lines built from the details you gave; not tool-checked.

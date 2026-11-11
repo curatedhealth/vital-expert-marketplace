@@ -1,52 +1,30 @@
-# Companions
+# Tools and companions
 
-A companion is an MCP connector that gives TRUSTED skills real tools. The plugin is free
-and complete without one. A companion turns a method flag into a checked result.
+No verification tool or connector is used in TRUSTED. Helper scripts may count or scan
+where code can run; they never decide a result. The pack is free and complete as it
+stands. Owner decision of
+9 November 2026: no live tools.
 
 ## The slot rule
 
-Every task in every TRUSTED skill has a companion slot:
+Every task in every TRUSTED skill runs by hand:
 
-1. What the companion would do for this task, in one line.
-2. The tool call when it is connected.
-3. Without it: the method runs fully, and tool-only checks are marked
-   `[GAP: not checkable here — …]`.
-4. Never simulate a companion (TR-H4).
+1. The method runs fully with what the person supplied.
+2. A check that needs something not supplied reads "not checked", with what would allow it.
+3. Every Prove result is labeled "not tool-checked".
+4. Never describe a result that no tool returned (TR-H4). None did.
 
-## Detecting a companion
+## What the Prove skills do by hand
 
-A companion is connected when its tools appear in the assistant's tool list (on Cowork
-and Claude, as connector tools; on other hosts, as the host shows MCP tools). Do not
-assume a connector exists because the person mentions it. If unsure, say which tool
-would be used and ask whether it is connected.
-
-## VERIFY (live)
-
-VERIFY checks sentences against passages the person or the tools supplied, qualifies
-sources, checks currency, builds citations and builds a record cleared by a named human.
-A support status is overlap with a supplied passage, not a verdict on truth in the world.
-
-Tool names as listed by the VERIFY connector. [CHECK: argument and return contracts to
-be confirmed against the connector schema before the Prove skills are finalized.]
-
-| Tool | Used by |
+| Skill | By hand |
 |---|---|
-| `extract_claims` | `claim-assessment` |
-| `check_claim` | `claim-assessment` |
-| `verify_text` | `claim-assessment` |
-| `ingest_document` | `source-assessment` |
-| `qualify_source` | `source-assessment` |
-| `check_currency` | `source-assessment` |
-| `build_citation` | `citation-and-record` |
-| `build_record` | `citation-and-record` |
-| `build_evidence_table` | `citation-and-record`, only when the person asks for a table |
+| `claim-assessment` | Splits the text into claims and pairs each with an exact quoted passage. Gives one of six plain results (`claim-assessment/references/statuses.md`) |
+| `source-assessment` | Writes a source card: kind, peer review (only from evidence), funders and interests, fit, can carry, cannot carry, date, currency. No tier, no score |
+| `confidence-scoring` | Counts by result, open items in order of risk, one recommendation, and the line "No confidence figure: these results were not tool-checked." |
+| `citation-and-record` | Plain reference lines from supplied details; a record note that names a reviewer only when the person did |
 
-How to connect VERIFY: this pack already declares the connector at
-`https://mcp.vital.expert/api/mcp/verify` (server id `vital-verify`). In Cowork, paste the
-`vvfy_` key from the VITAL purchase when the pack asks for it. Tools appear in the
-assistant tool list when the key is accepted. Do not add a second MCP entry for the same
-URL. The standalone `vital-verify` pack uses the same connector; installing both does not
-create a second product host.
+A result is how a supplied passage compares with a sentence. It is not a verdict on truth
+in the world.
 
 ## Future companions
 

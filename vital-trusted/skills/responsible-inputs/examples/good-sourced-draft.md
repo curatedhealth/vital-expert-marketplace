@@ -1,75 +1,65 @@
-# Rendered example: CSR excerpt before paste (sourced draft)
+# Worked example: a study report the person wants to paste
 
-Invented teaching case. Input note, finding cards for PHI risk, gap list, check-line
-stamp. No patient-level inventing; policy answer left to the company.
+Invented case for teaching. No real product, company or person.
+
+## Context card (from trusted-intake, already in the conversation)
+
+```
+TRUSTED context: payer email built from a study report
+
+Reader          a payer, through the person's email                 (stated)
+Use             promotional                                         (assumed)
+Material        an unpublished phase III clinical study report, about 400 pages,
+                with subject listings in the appendices (as you described it)
+Inputs          unpublished study data, possibly patient-level details
+AI use policy   not asked yet
+Stakes          leaving the company
+```
 
 ## Request
 
-"Summarize the efficacy section of this CSR for a payer email — can I paste it here?"
+"Summarize the efficacy section of this study report for a payer email. Can I paste it
+here? I'm using the free version of the chat tool."
 
-Material described: unpublished Phase III CSR PDF (~400 pages), includes subject IDs in
-appendices; person uses a consumer chat tool without naming company policy.
+## Input note (as the person sees it)
 
-## Input note (`templates/input-note.md`, full)
+Before this goes into the assistant
 
-Responsible inputs: before this goes into the tool
+What it looks like: an unpublished clinical study report. These usually include
+patient-level listings and case narratives in the appendices.
 
-What it looks like
-1. Unpublished clinical study report (Phase III), not public.
-2. Subject-level identifiers may appear in appendices (patient-level detail).
-3. Intended output may go to a payer (outside the company).
+The question for your company: does your AI use policy allow this tool for unpublished
+study data, and for patient-level details? I can't answer that; your policy, its owner,
+or your data protection team can.
 
-Questions for your company (not answered here)
-1. Does your AI use policy allow this tool for unpublished CSR text?
-2. Does your policy allow patient-level or identifiable trial data in this tool?
-3. Who owns those answers? (Typically privacy, legal, or the AI governance lead.)
+Safer ways to get what you need
+1. The minimum extract: only the efficacy summary tables, without the appendices.
+2. A company-approved tool for this material, if your policy names one.
+3. Biostatistics or clinical operations can prepare an aggregate summary with
+   identifiers removed. That reduces what is shared; it does not make it anonymous.
 
-Safer routes (pick one)
-1. Use a company-approved assistant on approved infrastructure, if policy allows.
-2. Paste only the blinded, aggregate efficacy tables the policy names — not appendices.
-3. Ask biostatistics or clinical for a redacted aggregate summary cleared for AI use.
+Tell me which route you want, and what the result is for.
 
-I did not decide whether this tool is approved or whether data is anonymous.
+I have not decided whether this tool may be used for this material, and I have not
+judged whether anything in the report is anonymous.
 
-## Finding cards (shared `../../templates/finding-card.md`)
+## Work offered only after a route is chosen
 
-### Finding 1
-- **Material:** Full CSR with appendices.
-- **Issue:** Unpublished study data; possible PII/PHI if subject IDs or small-n cells travel.
-- **Action:** Pause paste; route through policy and minimum redacted extract.
+If the person pastes only an aggregate efficacy table that their policy allows, the
+summary uses the figures in that table exactly as they appear and adds nothing from the
+appendices. Because the summary goes to a payer, it then goes through the person's
+review process for material sent to payers before it is sent.
 
-### Finding 2
-- **Material:** Payer-bound summary from CSR.
-- **Issue:** Output may leave the company before human medical review.
-- **Action:** Pair with `responsible-use` human oversight after any allowed extract.
+## Why it is written this way
 
-## Open items (`../../templates/gap-list.md`)
+- The decision about the tool and the data is put back to the person and their policy
+  owner, with the people who can answer named by kind.
+- No summary was written from material that has not been cleared to go in.
+- The note repeats no identifier and no detail from the report.
+- The routes are the ones that fit, three and not a generic list of five.
 
-```text
-Open items
-1. AI tool approval for CSR paste — company AI use policy — next: Named policy owner
-2. Redacted aggregate tables — not supplied — next: Clinical/biostats extract
+## Lines returned to trusted-check (not shown to the person)
 
-Not yet checked
-- Whether payer email is the final channel (affects both input and use skills)
 ```
-
-## Work offered only after route chosen
-
-If the person supplies a redacted, policy-cleared aggregate table only:
-
-> Efficacy (supplied redacted table only): primary endpoint met in population stated in
-> the table; figures copied verbatim from the extract — no subject-level rows invented.
-
-## Check-line stamp (`../../templates/check-line-stamp.md`)
-
-```text
-TRUSTED / responsible-inputs: not tool-checked (offline tools) · confidentiality: CSR+identifiers flagged; PHI: no paste until policy; IP: unpublished CSR
-```
-
-## Letter lines (`templates/check-line.md`, trusted-check only)
-
-```text
-Responsible-inputs · confidentiality: unpublished CSR with identifier risk, paste paused (not tool-checked)
-Responsible-inputs · intellectual property: full CSR not reproduced, aggregate route offered (not tool-checked)
+Ethical · what went in: 2 questions for your AI use policy (unpublished study data, patient-level details), 3 safer routes offered, 0 sensitive details kept out of the output (not tool-checked)
 ```

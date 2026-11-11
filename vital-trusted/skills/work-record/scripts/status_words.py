@@ -28,7 +28,10 @@ STATUS = [
     r"cleared",
     r"certified",
     r"compliant",
-    r"ready to (?:send|use|share|publish)",
+    r"ready to (?:send|use|share|publish|go)",
+    r"good to go",
+    r"all set",
+    r"fine to (?:send|use|share|go)",
     r"for distribution",
     r"MLR[- ]approved",
 ]
@@ -39,6 +42,7 @@ DRAFT = [
     r"for review",
     r"\[GAP[^\]]*\]",
     r"\[Approval[^\]]*\]",
+    r"\[Cleared by[^\]]*\]",
 ]
 
 STATUS_RE = re.compile(r"\b(?:" + "|".join(STATUS) + r")\b", re.IGNORECASE)
@@ -54,7 +58,7 @@ SENT_SPLIT = re.compile(r"(?<!\bDr\.)(?<!\bMr\.)(?<!\bMs\.)(?<!\bMrs\.)(?<!\bPro
 # Names that are tools or models, not people: a status "by" one of these has no human behind it.
 NOT_A_PERSON = re.compile(
     r"^by\s+(?:AI|the AI|the assistant|assistant|ChatGPT|Claude|Copilot|Gemini|GPT\S*|"
-    r"TRUSTED|VERIFY|the tool|tool|model)\b",
+    r"TRUSTED|the tool|tool|model)\b",
     re.IGNORECASE,
 )
 NEGATION = re.compile(r"\b(?:not|not yet|never|un)\s*$", re.IGNORECASE)
