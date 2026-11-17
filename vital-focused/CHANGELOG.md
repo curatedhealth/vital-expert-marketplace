@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.8 — 17 November 2026
+
+**Pilot tip.** `displayName` **Vital FOCUSED** (aligned with Vital TRUSTED Title Case).
+
 ## 0.5.7 — 17 November 2026
 
 **Pilot tip.** Product name stays **FOCUSED** (not Vital FOCUSED). Directory icon set to brand Veˣ squircle light tile (`icon.png`); dark sibling at `icon-dark.png`.
