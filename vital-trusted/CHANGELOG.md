@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.9 — 17 November 2026
+
+**Pilot.** `displayName` **Vital TRUSTED** (Title Case, not all-caps VITAL). Directory icon set to brand Veˣ squircle light tile (`icon.png`); dark sibling at `icon-dark.png`.
+
 ## 0.3.8 — 17 November 2026
 
 **Pilot.** `author.name` set to **Vital.Expert** (same as other marketplace packs and `.claude-plugin/marketplace.json` owner) so the Claude directory listing reads “by Vital.Expert” rather than the GitHub org slug.

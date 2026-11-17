@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.7 — 17 November 2026
+
+**Pilot tip.** Product name stays **FOCUSED** (not Vital FOCUSED). Directory icon set to brand Veˣ squircle light tile (`icon.png`); dark sibling at `icon-dark.png`.
+
 ## 0.5.6 — 17 November 2026 (directory submission)
 
 **Pilot tip for Anthropic directory.** Offline skills + `contract/stage_schemas.json` + `templates/offline-checks/` (score ±10, stamp, session shape). Removed tip `tools/*.py`, empty `.mcp.json`, nested `.claude-plugin/marketplace.json`, and `vital.extensions.json`. Author **Vital.Expert**; filled Veˣ icon; `privacyPolicyUrl`. Scrubbed connector key paste language and `templates/offline-checks/` invokes.

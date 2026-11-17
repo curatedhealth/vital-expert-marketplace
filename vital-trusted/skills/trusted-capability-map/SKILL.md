@@ -1,6 +1,6 @@
 ---
 name: trusted-capability-map
-description: "The map and rulebook of VITAL TRUSTED, foundational habits for anyone in pharma, biotech, medtech or digital health who uses an AI assistant for daily work: general management, brand, market access, medical and other teams. Use it whenever someone asks \"what can TRUSTED do\", \"which TRUSTED skill do I need\", \"set up TRUSTED\", \"turn off Ethical\", \"what does the U mean\", \"how do I connect VERIFY\", \"is this OK to send\", or starts everyday work on this assistant (an email, meeting notes, a brief, a board update, a slide deck, key messages, a payer or doctor reply) and the standard should apply. It explains the seven letters (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible), holds the hard rules every TRUSTED skill cites, lets the person choose active letters, routes to the right skill, and explains companions such as VERIFY. Not for running checks (use trusted-check or the letter skills). It supports internal SOPs and review processes and never replaces them.\n"
+description: "The map and rulebook of Vital TRUSTED, foundational habits for anyone in pharma, biotech, medtech or digital health who uses an AI assistant for daily work: general management, brand, market access, medical and other teams. Use it whenever someone asks \"what can TRUSTED do\", \"which TRUSTED skill do I need\", \"set up TRUSTED\", \"turn off Ethical\", \"what does the U mean\", \"how do I connect VERIFY\", \"is this OK to send\", or starts everyday work on this assistant (an email, meeting notes, a brief, a board update, a slide deck, key messages, a payer or doctor reply) and the standard should apply. It explains the seven letters (Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible), holds the hard rules every TRUSTED skill cites, lets the person choose active letters, routes to the right skill, and explains companions such as VERIFY. Not for running checks (use trusted-check or the letter skills). It supports internal SOPs and review processes and never replaces them.\n"
 license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
 compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. The VERIFY connector is optional; without it every method still runs and tool-only checks are marked [GAP].\n"
 metadata:
@@ -14,7 +14,7 @@ metadata:
   version: "0.2.0"
 ---
 
-# VITAL TRUSTED: capability map and rulebook
+# Vital TRUSTED: capability map and rulebook
 
 TRUSTED gives people across a life-sciences company good habits for working with an AI
 assistant every day: a general manager writing a board update, a brand manager drafting

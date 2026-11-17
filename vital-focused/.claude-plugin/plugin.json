@@ -1,7 +1,7 @@
 {
   "name": "vital-focused",
   "displayName": "FOCUSED",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Offline skills and schemas only: weighted score with \u00b110 robustness from the person's inputs, worksheets as Markdown cards, and a brief. The person decides at every step; skills never name a winner. No connector and no API keys in this directory tip. Human oversight required. Product of Vital.Expert (Crossroads Catalyst GmbH).",
   "author": {
     "name": "Vital.Expert",
