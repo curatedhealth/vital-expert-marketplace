@@ -65,7 +65,7 @@ Skill-specific:
 - At most one worksheet. Do not stack a matrix and a pre-mortem in the same turn.
 - When the person states a choice, call decision_run_stage with authored_by set to that person's name.
 - authored_by values ai, model, and assistant are refused when a choice field is present.
-- Default `.mcp.json` is empty. Use local tools; call Decision Companion only for special services when a Decision connector key (not used in this tip) is present.
+- This directory tip has no MCP servers. Use offline method, schemas, and `templates/offline-checks/`.
 - Without a Decision key key, coach from the six stage names and label the turn not tool-checked.
 
 Connector tools (optional, only with a key): `decision_run_stage`. Also named, and not copied: `decision_start`.

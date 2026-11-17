@@ -23,7 +23,7 @@ Offline by default:
 - All 21 coaching skills
 - Local session file `./focused-sessions/<session_id>.focused.json`
 - Pack tools for worksheets, weighted score with ±10 robustness, and brief
-- Empty `.mcp.json` (no MCP servers required)
+- No MCP servers in this directory tip
 
 Nothing is saved to Vital cloud without an optional key or a future OAuth connection.
 
