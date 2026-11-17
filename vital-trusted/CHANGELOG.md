@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.10 — 17 November 2026
+
+**Pilot.** Directory icon only: single 512×512 Veˣ light squircle at `icon.png`. Removed sibling icon files; version bump for directory CDN refresh.
+
 ## 0.3.9 — 17 November 2026
 
 **Pilot.** `displayName` **Vital TRUSTED** (Title Case, not all-caps VITAL). Directory icon set to brand Veˣ squircle light tile (`icon.png`); dark sibling at `icon-dark.png`.

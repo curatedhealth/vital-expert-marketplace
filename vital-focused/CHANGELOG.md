@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.9 — 17 November 2026
+
+**Pilot tip.** Directory icon only: single 512×512 Veˣ light squircle at `icon.png`. Removed `icon-light.png` / `icon-dark.png` siblings so Validate cannot latch an alternate tile. Version bump for directory CDN refresh.
+
 ## 0.5.8 — 17 November 2026
 
 **Pilot tip.** `displayName` **Vital FOCUSED** (aligned with Vital TRUSTED Title Case).
