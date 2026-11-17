@@ -1,0 +1,15 @@
+{
+  "schema": "vital-focused.check-rules.v1",
+  "id": "session-shape",
+  "purpose": "Keep the FOCUSED session coherent using contract/stage_schemas.json \u2014 no session file writer in this tip.",
+  "data": {
+    "schema_path": "contract/stage_schemas.json",
+    "artifact": "Maintain stage fields as Markdown cards / JSON blocks in the conversation or a canvas page the person owns."
+  },
+  "procedure": [
+    "Load required/optional fields for the active stage from contract/stage_schemas.json.",
+    "Ask only for missing required fields; leave optional gaps visible.",
+    "Do not invent ratings, options, or a chosen alternative.",
+    "When scoring is requested, apply templates/offline-checks/score-tradeoff.json to the person's grid."
+  ]
+}

@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The tool stored the hypotheses | Read them back |
 | field missing | Early signal or mitigation is absent | Leave it out and ask once |
 | covered but absent | The person has no failure in mind | Say the list is empty |
-| not covered | No vdec_ key | Write the list by hand and label not tool-checked |
+| not covered | No Decision key key | Write the list by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

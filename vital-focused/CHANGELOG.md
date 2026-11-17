@@ -1,3 +1,11 @@
+# Changelog
+
+## 0.5.6 — 17 November 2026 (directory submission)
+
+**Pilot tip for Anthropic directory.** Offline skills + `contract/stage_schemas.json` + `templates/offline-checks/` (score ±10, stamp, session shape). Removed tip `tools/*.py`, empty `.mcp.json`, nested `.claude-plugin/marketplace.json`, and `vital.extensions.json`. Author **Vital.Expert**; filled Veˣ icon; `privacyPolicyUrl`. Scrubbed connector key paste language and `templates/offline-checks/` invokes.
+
+**Python preserved at:** monorepo `mcps/decision_companion/` and marketplace branch `archive/vital-focused-python-helpers`.
+
 ## 0.5.5 — 9 November 2026 (Released)
 
 Hardening round run in a Claude session with `claude plugin eval` (46 new fictional cases plus 6 negatives; graded by an AI judge of the same model family; no human grader). Owner yes 9 November 2026: Released and marketplace sync. Support: hicham.naim@xroadscatalyst.com.
@@ -86,7 +94,7 @@ Breaking skill id renames (folder `name` must match; reinstall plugin after sync
 | `facilitator` | `decision-facilitator` |
 | `daii` | `assign-daii` |
 
-OAuth for live MCP remains platform work (Bearer `userConfig` keys still documented as interim for optional connectors). Stay Pilot.
+OAuth for live MCP remains platform work (no Bearer keys in this directory tip. Stay Pilot.
 
 ## 0.5.0 — 8 November 2026 (Pilot, Cowork feedback batch)
 
@@ -100,7 +108,7 @@ OAuth for live MCP remains platform work (Bearer `userConfig` keys still documen
 ## 0.5.0 — 8 November 2026 (Pilot)
 
 - P2 standalone: local session + offline tools replace Decision MCP for coaching/score/brief
-- Empty default .mcp.json; connectors.md for opt-in vdec_/vont_/vvfy_
+- Empty default .mcp.json; connectors.md for opt-in Decision key/Navigator key/Verify key
 - Shared templates/ + CF04 kit upgrade; no hooks/agents/commands
 - LICENSE Crossroads Catalyst GmbH; release_state Pilot
 

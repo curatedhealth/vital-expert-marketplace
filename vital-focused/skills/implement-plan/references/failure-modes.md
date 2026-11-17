@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | Implement stage stored | Confirm owner, milestone, review date and trigger |
 | field missing | Owner, milestone, review date, or trigger is empty | Ask for that field |
 | covered but absent | The person has no metric yet | Leave it out and say "not given yet" |
-| not covered | No vdec_ key | Write the plan by hand and label not tool-checked |
+| not covered | No Decision key key | Write the plan by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

@@ -8,4 +8,4 @@ No connector key is needed. This is how the skill normally runs.
 4. Never invent a Decision connector, Navigator or Verify result. Navigator sealed scores and Verify claim checks are only available with their keys; without them, say in plain words that this check is not connected and offer the local path.
 5. Do not label coaching replies (no "not tool-checked" or "FOCUSED-local" lines). The stamp goes on a saved record or brief only.
 
-With an optional key (`vdec_`, `vont_`, `vvfy_`) and the person's go-ahead, the connector tools named in SKILL.md replace the local scripts.
+With no connector in this tip, stay on local method and schemas.md replace the local scripts.

@@ -18,10 +18,9 @@
 
 | State | What to do |
 |---|---|
-| `vdec_` connected | Call `decision_handoff_navigator` with the arguments in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
+| Offline (this tip) | Follow the method by hand using schemas and cards; label **not tool-checked**. Do not invent tool fields. |
 
-Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
+This tip has no live Navigator or Verify connector; do not simulate tool results.
 
 ## Steps
 
@@ -30,7 +29,7 @@ This skill is optional. Use it only when the person asks for the score on Ontolo
 1. Call `decision_handoff_navigator` with the session id (skip if the packet is already in this conversation). If any cell has a null or role-only rater, stop and ask only: who gave those ratings? Do not raise anything else in that turn (missing cells and the scale come later). If `rater_issues[]` lists only `cell_missing`, name the missing cells and ask once whether to rate them or leave those alternatives out of that rater's call; never fill a value.
 2. Prefer `handoff.mcda_rank_args[]` when each entry has usable `alternatives[].scores`. Scale: ratings already 0–4 are used as is; a 1–5 scale maps to 0–4 by subtracting 1 (linear, order-preserving); say this in one clause and call now, one `methods_mcda_rank` call per rater (never average raters). Criteria the person marked lower-is-better go in `negative_criteria` only if their ratings are raw amounts; if the person already rated them so that higher is better, do not mark them negative. Ask about the scale only when it is neither 0–4 nor 1–5.
 3. **No scores on `mcda_rank_args` (or cells only):** if args omit `alternatives[].scores`, or only `handoff.cells` is present, build per-rater `methods_mcda_rank` argument objects from `handoff.cells` (see `references/tools.md`). **Never invent scores.** Apply the same scale rule as step 2 and state the mapping in one clause. Always read `scale_note`. Never rescale silently.
-4. Call the named tool on `vital-ontology-navigator` with a `vont_` key. If the key is absent, label the turn not tool-checked and stop.
+4. Call the named tool on `vital-ontology-navigator` with a a Navigator connector key (not used in this tip) key. If the key is absent, label the turn not tool-checked and stop.
 5. Read the result back as Navigator's output: each option's score and the gap between the top two. Say the ranking informs the choice and the named person decides; ask whether it matches their judgment and, if not, what the scores miss. This hand-off is optional: `decision_score` on the Decision Connector already adds up the same weights and ratings, with a robustness check, and needs no Navigator key.
 6. End every turn with exactly one question, the one that unblocks the next call. Keep other open points for later turns.
 

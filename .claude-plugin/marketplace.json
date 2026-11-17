@@ -9,12 +9,12 @@
     {
       "name": "vital-trusted",
       "source": "./vital-trusted",
-      "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). Offline only: no connector and no key; Prove results are labelled not tool-checked. The vital-verify plugin is retired \u2014 install this pack only."
+      "description": "Nineteen foundational skills for daily life-sciences work (Core / Build / Prove). Offline only: no connector and no key; Prove results are labelled not tool-checked. The vital-verify plugin is retired — install this pack only."
     },
     {
       "name": "vital-navigator-outcomes",
       "source": "./vital-navigator-outcomes",
-      "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement \u2014 from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools on vont_; optional Curator steward skills (pull/classify/process/decide/enrich) on vcur_. Marketplace v0.3.1-live-test."
+      "description": "Outcome Navigator (CF-01.06.01): investment decisions and measurement — from value-at-stake to value realized. GenAI is a vertical, not the brand. Tools on vont_; optional Curator steward skills (pull/classify/process/decide/enrich) on vcur_. Marketplace v0.3.1-live-test."
     },
     {
       "name": "navigator-ai-investment",
@@ -59,7 +59,7 @@
     {
       "name": "vital-ontology-curator",
       "source": "./plugins/vital-ontology-curator",
-      "description": "Ontology Curator enrichment \u2014 VP-anchored tips across ontology families (vcur_)."
+      "description": "Ontology Curator enrichment — VP-anchored tips across ontology families (vcur_)."
     },
     {
       "name": "vital-mlr-review",
@@ -71,7 +71,7 @@
     {
       "name": "vital-focused",
       "source": "./vital-focused",
-      "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Offline-first local session; person decides; skills never name a winner. Optional vdec_/vont_/vvfy_ for Decision / Navigator / Verify special services."
+      "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Directory tip: offline skills + schemas; person decides; never names a winner."
     }
   ]
 }

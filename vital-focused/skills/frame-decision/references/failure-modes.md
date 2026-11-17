@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The stage stored statement, goal, and rigor | Confirm the three fields |
 | field missing | Statement, goal, rigor, or decider is empty | Ask for that one field |
 | covered but absent | The person has no deadline yet | Leave it out and say "not given yet" |
-| not covered | No vdec_ key | Frame by hand and label not tool-checked |
+| not covered | No Decision key key | Frame by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

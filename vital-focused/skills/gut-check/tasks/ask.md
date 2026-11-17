@@ -18,10 +18,9 @@
 
 | State | What to do |
 |---|---|
-| `vdec_` connected | Call tools as in `references/tools.md`. |
-| `vdec_` absent | Follow the same steps with the plugin's local tools, or by hand when they cannot run. Do not label the reply. Do not invent a tool field. |
+| Offline (this tip) | Follow the method by hand using schemas and cards; label **not tool-checked**. Do not invent tool fields. |
 
-Navigator tools, when this skill names them, use `vont_` on `vital-ontology-navigator`. Verify tools use `vvfy_` on `vital-verify`. Those calls are not simulated here.
+This tip has no live Navigator or Verify connector; do not simulate tool results.
 
 ## Steps
 

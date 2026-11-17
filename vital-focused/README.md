@@ -50,7 +50,7 @@ Default install does not connect. Recipes live in `connectors.md`. When the pers
 | Ontology Navigator MCP | Sealed score / methods handoffs | Navigator results |
 | Verify MCP | Source qualify / claim check requests | Admission and claim statuses |
 
-Authentication today: optional Bearer keys in host `userConfig` (`vdec_`, `vont_`, `vvfy_`). OAuth is platform work; see `mcps/decision_companion/docs/SPEC_OAUTH_CONNECTORS.md`.
+Authentication: none in this directory tip (offline skills only).
 
 ## Data retention and privacy
 

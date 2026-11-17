@@ -12,7 +12,7 @@ Pack: vital-decision-companion. Method version: 0.4.0. Content pack: 2026-10-29.
 - **R2.** A cell with rater ai, model, assistant, or a product name is refused.
 - **R3.** Criteria and weights are named before ratings. If the person rates first, stop and ask for criteria.
 - **R4.** Adding up the person's own weights and ratings is `decision_score` on this connector. Navigator is only for a sealed or governed score the person asks for.
-- **R5.** If there is no `vdec_` key, do not add anything up by hand; the person weighs the grid.
+- **R5.** If there is no a Decision connector key (not used in this tip) key, do not add anything up by hand; the person weighs the grid.
 - **R6.** The matrix does not set chosen_option. That is make-decision.
 - **R7.** Every rating carries `value` and `rater` as a person's name. Never send `score` or cell-level `authored_by`.
 - **R8.** Criteria include `direction: higher_better | lower_better`. The scale is declared before rating. Send `scale` only when it is not 1–5; on hosts without `scale`, keep ratings on 1–5.

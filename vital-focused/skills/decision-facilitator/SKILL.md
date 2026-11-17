@@ -4,7 +4,7 @@ description: "Use this skill whenever a team wants help running a decision discu
 license: "LicenseRef-CrossroadsCatalyst-Proprietary. Product of Crossroads Catalyst GmbH (Vital Expert)."
 compatibility: >
   Runs on any assistant that loads Agent Skills. Default is local FOCUSED
-  session tools (no MCP). Optional vdec_/vont_/vvfy_ only for special services.
+  session tools (no MCP). This directory tip is offline method only; no connector keys.
 metadata:
   framework_code: "DC-0.2"
   register_code: "DC-0.2"
@@ -65,8 +65,8 @@ Skill-specific:
 - At most one worksheet. Do not stack a matrix and a pre-mortem in the same turn.
 - When the person states a choice, call decision_run_stage with authored_by set to that person's name.
 - authored_by values ai, model, and assistant are refused when a choice field is present.
-- Default `.mcp.json` is empty. Use local tools; call Decision Companion only for special services when `vdec_` is present.
-- Without a vdec_ key, coach from the six stage names and label the turn not tool-checked.
+- Default `.mcp.json` is empty. Use local tools; call Decision Companion only for special services when a Decision connector key (not used in this tip) is present.
+- Without a Decision key key, coach from the six stage names and label the turn not tool-checked.
 
 Connector tools (optional, only with a key): `decision_run_stage`. Also named, and not copied: `decision_start`.
 
@@ -94,4 +94,4 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 
 For a record, grid or brief the person asked for, use the card templates in the plugin root `templates/` folder (two folders above this skill's folder). Offline path: [`references/without-connector.md`](references/without-connector.md). Method: [`references/method.md`](references/method.md).
 
-Stamp a saved record or brief only, never a coaching reply: `python3 <plugin root>/tools/stamp_focused_line.py --mode local --skill decision-facilitator`
+Stamp a saved record or brief only, never a coaching reply: `templates/offline-checks/` (apply the matching JSON procedure; no program in this tip)

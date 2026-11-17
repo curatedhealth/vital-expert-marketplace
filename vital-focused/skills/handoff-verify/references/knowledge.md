@@ -11,7 +11,7 @@ Pack: vital-decision-companion. Method version: 0.4.0. Content pack: 2026-10-29.
 - **R1.** Call decision_handoff_verify with session_id and the claims the person listed. called_verify is false.
 - **R2.** next_tools are qualify_source and check_claim. Call them on vital-verify, in that order.
 - **R3.** check_claim needs the admitted source object and a quoted passage. A passage the coach wrote does not count.
-- **R4.** Without a vvfy_ key, say Verify is not connected. Do not invent a status.
+- **R4.** Without a live Verify connector, say claim checks are not tool-checked. Do not invent a status.
 - **R5.** Do not restate source grading, claim decomposition, currency, honesty, or the Verify record. Those skills live in vital-verify.
 - **R6.** An unverifiable sentence stays out of the brief. It is not replaced with a guess.
 
@@ -33,7 +33,7 @@ No passage. Do not call check_claim with a summary. Say the sentence is not cove
 
 ## Pattern 3
 
-No vvfy_ key. Stop after the packet. Label the check not tool-checked. Do not use Verify status words.
+No Verify key key. Stop after the packet. Label the check not tool-checked. Do not use Verify status words.
 
 ## FOCUSED constants
 

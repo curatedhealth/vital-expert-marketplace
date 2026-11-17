@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The tool returned risks | Read the countermeasure |
 | field missing | No decision type | Return the full card and say so |
 | covered but absent | The type matches no extra item beyond the card | Do not invent a fifth bias |
-| not covered | No vdec_ key | Read the four items from the rules and label not tool-checked |
+| not covered | No Decision key key | Read the four items from the rules and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

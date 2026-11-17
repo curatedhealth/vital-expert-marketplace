@@ -19,8 +19,7 @@ Say whether the model should **run** or **read** each CLI. Handle CLI errors wit
 
 ## Optional MCP (keys present + person asked)
 
-- Decision Companion special services: cloud sync / export / `my_usage` with `vdec_`
-- Navigator sealed tools with `vont_` after packet
-- Verify claim tools with `vvfy_` after packet
+- This directory tip has **no connectors** and asks for **no API keys**.
+- Use `templates/offline-checks/` and `contract/stage_schemas.json` for method-only work.
 
 Full tool names when calling MCP, e.g. `Decision Companion:decision_score` only on the opt-in path.

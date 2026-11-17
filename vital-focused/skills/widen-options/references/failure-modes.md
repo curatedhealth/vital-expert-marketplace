@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The tool stored the names and returned warnings | Ask about the first warning |
 | field missing | The list is empty | Ask for names |
 | covered but absent | A warning says an option is missing | Ask. Do not fill it |
-| not covered | No vdec_ key | Write the names they said and label not tool-checked |
+| not covered | No Decision key key | Write the names they said and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

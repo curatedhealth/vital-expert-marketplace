@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | Both fields were given | Store them |
 | field missing | Date or signal is absent | Leave the field out; say "not given yet" |
 | covered but absent | The person declined a metric | Leave the gap |
-| not covered | No vdec_ key | Write the two fields by hand and label not tool-checked |
+| not covered | No Decision key key | Write the two fields by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

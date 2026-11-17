@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | Item supported by a stored field | Mark met and name the field |
 | field missing | Stage not stored | Mark not known and name the stage |
 | covered but absent | Person says the item does not apply | Record not applicable with their reason |
-| not covered | No vdec_ key | Run the checklist from the conversation and label not tool-checked |
+| not covered | No Decision key key | Run the checklist from the conversation and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

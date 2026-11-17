@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The tool stored a note and reported the length | Confirm source |
 | field missing | Knowns or unknowns are empty | Ask for the missing list |
 | covered but absent | The person has no figure | Leave it out (list it as an unknown) |
-| not covered | No vdec_ key | Write the two lists by hand and label not tool-checked |
+| not covered | No Decision key key | Write the two lists by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

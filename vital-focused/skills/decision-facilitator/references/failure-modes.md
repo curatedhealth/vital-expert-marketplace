@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The person stated a choice and a name | Store both |
 | field missing | The choice has no human name | Ask who decides |
 | covered but absent | The tool refused an AI author | Say the choice was not stored |
-| not covered | No vdec_ key | Coach by hand and label not tool-checked |
+| not covered | No Decision key key | Coach by hand and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

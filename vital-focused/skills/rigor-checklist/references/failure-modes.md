@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The guide returned required and checklist | Read them |
 | field missing | No rigor has been confirmed | Return to classify |
 | covered but absent | The tool rejected an unknown level | Name the four ids |
-| not covered | No vdec_ key | Read the four levels from this skill's rules and label not tool-checked |
+| not covered | No Decision key key | Read the four levels from this skill's rules and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

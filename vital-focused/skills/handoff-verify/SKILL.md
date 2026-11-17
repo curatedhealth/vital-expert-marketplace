@@ -4,7 +4,7 @@ description: "Use this skill whenever someone asks to confirm, verify or check a
 license: "LicenseRef-CrossroadsCatalyst-Proprietary. Product of Crossroads Catalyst GmbH (Vital Expert)."
 compatibility: >
   Runs on any assistant that loads Agent Skills. Default is local FOCUSED
-  session tools (no MCP). Optional vdec_/vont_/vvfy_ only for special services.
+  session tools (no MCP). This directory tip is offline method only; no connector keys.
 metadata:
   framework_code: "DC-9.2"
   register_code: "DC-9.2"
@@ -31,7 +31,7 @@ List the claims and the next tools. Refuse to decide support. Verify's skills do
 | Task | Use it when | Guide |
 |---|---|---|
 | Build the packet | The person wants a claim checked. | `tasks/packet.md` |
-| Call Verify | The packet is ready and `vvfy_` is connected. | `tasks/call.md` |
+| Call Verify | The packet is ready and a Verify connector key (not used in this tip) is connected. | `tasks/call.md` |
 
 ## How deep to go
 
@@ -60,7 +60,7 @@ Skill-specific:
 - Call decision_handoff_verify with session_id and the claims the person listed. called_verify is false.
 - next_tools are qualify_source and check_claim. Call them on vital-verify, in that order.
 - check_claim needs the admitted source object and a quoted passage. A passage the coach wrote does not count.
-- Without a vvfy_ key, say Verify is not connected. Do not invent a status.
+- Without a live Verify connector, say claim checks are not tool-checked. Do not invent a status.
 - Do not restate source grading, claim decomposition, currency, honesty, or the Verify record. Those skills live in vital-verify.
 - An unverifiable sentence stays out of the brief. It is not replaced with a guess.
 
@@ -90,4 +90,4 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 
 For a record, grid or brief the person asked for, use the card templates in the plugin root `templates/` folder (two folders above this skill's folder). Offline path: [`references/without-connector.md`](references/without-connector.md). Method: [`references/method.md`](references/method.md).
 
-Stamp a saved record or brief only, never a coaching reply: `python3 <plugin root>/tools/stamp_focused_line.py --mode local --skill handoff-verify`
+Stamp a saved record or brief only, never a coaching reply: `templates/offline-checks/` (apply the matching JSON procedure; no program in this tip)

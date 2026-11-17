@@ -4,7 +4,7 @@ description: "Use this skill whenever someone asks for a Navigator, sealed or go
 license: "LicenseRef-CrossroadsCatalyst-Proprietary. Product of Crossroads Catalyst GmbH (Vital Expert)."
 compatibility: >
   Runs on any assistant that loads Agent Skills. Default is local FOCUSED
-  session tools (no MCP). Optional vdec_/vont_/vvfy_ only for special services.
+  session tools (no MCP). This directory tip is offline method only; no connector keys.
 metadata:
   framework_code: "DC-9.1"
   register_code: "DC-9.1"
@@ -31,7 +31,7 @@ Optional extra. Use this skill only when the person asks for the score on Ontolo
 | Task | Use it when | Guide |
 |---|---|---|
 | Build the packet | The person asked for the score on Ontology Navigator and the cells are already stored. | `tasks/packet.md` |
-| Call Navigator | The packet is ready and `vont_` is connected. | `tasks/call.md` |
+| Call Navigator | The packet is ready and a Navigator connector key (not used in this tip) is connected. | `tasks/call.md` |
 
 ## How deep to go
 
@@ -61,7 +61,7 @@ Skill-specific:
 - Speak Approach. suggested_stage_entry is options. compile_key is 4_options.
 - Then call the named tool on vital-ontology-navigator: decide_start or a methods_* tool.
 - methods_mcda_rank receives the same human cells, one call per rater.
-- Without a vont_ key, say the shared tool is not connected.
+- Without a Navigator key key, say the shared tool is not connected.
 - People supply scores. The coach does not.
 
 Connector tools (optional, only with a key): `decision_handoff_navigator`. Also named, and not copied: `decide_start`, `methods_odi_score`, `methods_opportunity_score`, `methods_mcda_rank`, `methods_nav_compute`, `methods_scenario`, `methods_risk_tornado`, `methods_capability_gap`.
@@ -90,4 +90,4 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 
 For a record, grid or brief the person asked for, use the card templates in the plugin root `templates/` folder (two folders above this skill's folder). Offline path: [`references/without-connector.md`](references/without-connector.md). Method: [`references/method.md`](references/method.md).
 
-Stamp a saved record or brief only, never a coaching reply: `python3 <plugin root>/tools/stamp_focused_line.py --mode local --skill handoff-navigator`
+Stamp a saved record or brief only, never a coaching reply: `templates/offline-checks/` (apply the matching JSON procedure; no program in this tip)

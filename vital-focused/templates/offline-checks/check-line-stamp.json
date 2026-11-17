@@ -1,0 +1,18 @@
+{
+  "schema": "vital-focused.check-rules.v1",
+  "id": "check-line-stamp",
+  "purpose": "Consistent FOCUSED check-line without running a program.",
+  "data": {
+    "modes": {
+      "local": "FOCUSED-local (offline method)",
+      "method": "not tool-checked (method only)",
+      "offline": "not tool-checked (offline method)",
+      "synced": "FOCUSED-synced (optional cloud special service \u2014 directory tip has no connector)"
+    }
+  },
+  "procedure": [
+    "Emit: FOCUSED / {skill}: {modes[mode]}",
+    "If extra text is present, append: \u00b7 {extra}",
+    "For the directory tip, prefer mode method or offline. Do not ask for API keys."
+  ]
+}

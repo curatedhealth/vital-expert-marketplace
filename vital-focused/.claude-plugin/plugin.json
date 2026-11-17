@@ -1,15 +1,17 @@
 {
   "name": "vital-focused",
   "displayName": "FOCUSED",
-  "version": "0.5.5",
-  "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Runs offline with a local session file and pack tools for worksheets, score with \u00b110 robustness, and brief. Person decides at every step; skills never name a winner. Optional vdec_ key enables Decision cloud sync or usage only. Optional vont_ / vvfy_ for Navigator sealed scores and Verify claim checks. Human oversight required. Product of Crossroads Catalyst GmbH (Vital Expert).",
+  "version": "0.5.6",
+  "description": "FOCUSED coaching (Frame, Options, Criteria, Unknowns, Score, Examine, Decide). Offline skills and schemas only: weighted score with \u00b110 robustness from the person's inputs, worksheets as Markdown cards, and a brief. The person decides at every step; skills never name a winner. No connector and no API keys in this directory tip. Human oversight required. Product of Vital.Expert (Crossroads Catalyst GmbH).",
   "author": {
-    "name": "Crossroads Catalyst GmbH - Vital Expert",
+    "name": "Vital.Expert",
     "url": "https://vital.expert"
   },
   "homepage": "https://vital.expert",
-  "repository": "https://github.com/curatedhealth/vital-expert-main",
+  "repository": "https://github.com/curatedhealth/vital-expert-marketplace",
   "license": "LicenseRef-CrossroadsCatalyst-Proprietary",
+  "icon": "./icon.png",
+  "privacyPolicyUrl": "https://www.vital.expert/privacy",
   "keywords": [
     "decision quality",
     "FOCUSED",
@@ -19,28 +21,5 @@
     "tradeoff",
     "offline-first"
   ],
-  "skills": "./skills",
-  "userConfig": {
-    "decision_key": {
-      "type": "string",
-      "title": "VITAL Decision Companion key (optional)",
-      "description": "Optional vdec_ key for cloud sync, export, or usage only. Not required for FOCUSED coaching, local score, or brief.",
-      "required": false,
-      "sensitive": true
-    },
-    "navigator_key": {
-      "type": "string",
-      "title": "VITAL Ontology Navigator key (optional)",
-      "description": "Optional vont_ key for sealed decide_* / methods_* handoffs. Not required for local score.",
-      "required": false,
-      "sensitive": true
-    },
-    "verify_key": {
-      "type": "string",
-      "title": "VITAL Verify key (optional)",
-      "description": "Optional vvfy_ key for qualify_source / check_claim handoffs.",
-      "required": false,
-      "sensitive": true
-    }
-  }
+  "skills": "./skills"
 }

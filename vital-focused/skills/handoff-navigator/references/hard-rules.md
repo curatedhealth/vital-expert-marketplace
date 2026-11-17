@@ -11,7 +11,7 @@ These apply on every Decision Companion skill. Plain words go to the person. Ids
 - **Only stored material counts (DC-H1).** Fields come from the person or from a tool result in this conversation.
 - **Teaching material is never input (DC-H2).** Names and figures in `examples/` and `references/knowledge.md` are invented for shape. Do not copy them into a live answer.
 - **A worksheet is not a decision (DC-H3).** A matrix, a bias card, a type draft, and a brief do not choose the option.
-- **Never simulate the connector (DC-H4).** Without `vdec_`, run the method by hand, label the turn **not tool-checked**, and do not invent a session id, a Verify status, or a score.
+- **Never simulate the connector (DC-H4).** This tip has no connector: run the method by hand, label the turn **not tool-checked**, and do not invent a session id, a Verify status, or a score.
 - **A named person decides (DC-H5).** `authored_by` is a human name. Values `ai`, `model`, and `assistant` are refused on choice fields.
 - **No clinical, legal, or regulatory advice (DC-H6).**
 - **Ask for what changes the answer (DC-H7).**

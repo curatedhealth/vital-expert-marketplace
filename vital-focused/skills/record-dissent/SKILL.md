@@ -4,7 +4,7 @@ description: "Use this skill whenever someone mentions that a person disagrees, 
 license: "LicenseRef-CrossroadsCatalyst-Proprietary. Product of Crossroads Catalyst GmbH (Vital Expert)."
 compatibility: >
   Runs on any assistant that loads Agent Skills. Default is local FOCUSED
-  session tools (no MCP). Optional vdec_/vont_/vvfy_ only for special services.
+  session tools (no MCP). This directory tip is offline method only; no connector keys.
 metadata:
   framework_code: "DC-4.5"
   register_code: "DC-4.5"
@@ -63,7 +63,7 @@ Skill-specific:
 - The holder's words are stored unchanged. Do not soften, summarize, or merge two people's objections.
 - A dissent stays until the holder withdraws it. The decider may proceed; disagree and commit is recorded, not erased.
 - No dissent is attested by a named person, not assumed from silence.
-- For a governed record, name Navigator decide_record_dissent (vont_). This skill does not call it.
+- For a governed record, name Navigator decide_record_dissent (Navigator key). This skill does not call it.
 
 Connector tools (optional, only with a key): `decision_attach_notes`. Also named, and not copied: `decide_record_dissent`.
 
@@ -91,4 +91,4 @@ Leave every other stage, score, and claim check to its own skill. The plugin REA
 
 For a record, grid or brief the person asked for, use the card templates in the plugin root `templates/` folder (two folders above this skill's folder). Offline path: [`references/without-connector.md`](references/without-connector.md). Method: [`references/method.md`](references/method.md).
 
-Stamp a saved record or brief only, never a coaching reply: `python3 <plugin root>/tools/stamp_focused_line.py --mode local --skill record-dissent`
+Stamp a saved record or brief only, never a coaching reply: `templates/offline-checks/` (apply the matching JSON procedure; no program in this tip)

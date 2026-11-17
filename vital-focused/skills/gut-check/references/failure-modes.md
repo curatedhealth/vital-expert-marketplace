@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | Reaction or lean given | Quote the person's words |
 | field missing | Grid incomplete | Ask for the missing weight or rating |
 | covered but absent | The person did not say how it sits with them | Say "not given yet" |
-| not covered | No vdec_ key | Ask the hand version and label not tool-checked |
+| not covered | No Decision key key | Ask the hand version and label not tool-checked |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

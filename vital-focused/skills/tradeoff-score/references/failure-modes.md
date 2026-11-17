@@ -13,7 +13,7 @@ Classify every miss before you write it. Never turn an absent field into a fact.
 | found | The tool stored ratings and returned winner null | Say so |
 | field missing | Criteria or ratings are missing | Ask |
 | covered but absent | No cell supports a rank | Leave winner null |
-| not covered | No `vdec_` key, so `decision_score` is unavailable | Say nothing has been added up; the person weighs the grid |
+| not covered | No a Decision connector key (not used in this tip) key, so `decision_score` is unavailable | Say nothing has been added up; the person weighs the grid |
 
 Do not write "false" from an empty field. The four class names are the pack standard, aligned with Verify on 19 October 2026 and used here for a coaching session.
 

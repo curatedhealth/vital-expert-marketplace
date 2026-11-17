@@ -1,0 +1,33 @@
+{
+  "schema": "vital-focused.check-rules.v1",
+  "id": "score-tradeoff",
+  "purpose": "Weighted sum of the person's ratings on a 0\u2013100 scale, with \u00b110-point weight robustness. Never names a winner.",
+  "data": {
+    "label": "Your own weights and ratings, added up. This does not choose for you.",
+    "default_scale": {
+      "min": 1.0,
+      "max": 5.0,
+      "name": "playbook_1_5"
+    },
+    "robustness_fraction": 0.1,
+    "tie_tolerance": 0.005,
+    "method_name": "weighted_sum_0_100",
+    "normalization": "weights / sum(|weights|); each rating maps to 0\u2013100 on the scale; lower_better criteria invert as (max+min\u2212value) before mapping",
+    "gap_codes": [
+      "weights_missing",
+      "invalid_weight",
+      "too_few_options",
+      "rater_missing",
+      "rating_missing"
+    ]
+  },
+  "procedure": [
+    "Require \u22652 options (id/name) and criteria each with a numeric weight \u22650 and at least one weight >0.",
+    "Require ratings cells with a named rater; every option\u00d7criterion must have a value for that rater or emit rating_missing and do not score that rater.",
+    "Map rating v on scale [lo,hi] to 0\u2013100: if direction is lower_better, v \u2190 hi+lo\u2212v; then ((v\u2212lo)/(hi\u2212lo))*100.",
+    "Option total = \u03a3 ( |w_i| / \u03a3|w| ) \u00d7 scaled_rating_i.",
+    "Rank options by total descending (then name). If top two totals differ by \u2264 tie_tolerance, note a tie \u2014 person decides. Never say a winner.",
+    "Robustness: total weight W; span = 0.10\u00d7W. For each criterion, shift its weight up/down by up to span (clamped), rescale other weights so sum stays W. If another option overtakes the baseline top, record smallest_shift_points. top_option_holds = no such changes.",
+    "Stamp the run as FOCUSED / tradeoff-score: not tool-checked (method only) unless the person already stamped otherwise."
+  ]
+}
