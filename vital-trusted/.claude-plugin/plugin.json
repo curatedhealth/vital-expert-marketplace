@@ -1,7 +1,7 @@
 {
   "name": "vital-trusted",
   "displayName": "VITAL TRUSTED",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Nineteen skills that help people across a life-sciences company use an AI assistant for daily work with peace of mind, against seven needs: Tangible, Rule-compliant, Unbiased, Safe, True, Ethical, Defensible. Supports, never replaces, the company's own SOPs and review. Offline only: Prove skills check claims, sources and references by hand against the material the person supplies, and label every such result not tool-checked. The vital-verify plugin is retired. Human oversight required for healthcare use. Product of Crossroads Catalyst GmbH (Vital Expert).",
   "author": {
     "name": "Crossroads Catalyst GmbH (Vital Expert)",

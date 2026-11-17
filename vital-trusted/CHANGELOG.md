@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.7 — 17 November 2026
+
+**Pilot.** Plugin `icon.png` replaced with design-system primary Veˣ filled mark (`vital-icon-filled-512.png`, `--violet-600` tile, white lockup) so the Claude directory listing matches brand canon instead of the dark outline tile that rendered poorly in review.
+
 ## 0.3.6 — 17 November 2026 (directory submission)
 
 **Pilot.** Deterministic offline checks as **data + instructions**: per-skill `references/check-rules.json` + rewritten `references/tools.md`, shared `templates/offline-checks/`. Omit remote MCP (`.mcp.json`), slim `plugin.json` to allowlisted fields + `privacyPolicyUrl`. Removed tip `tools/*.py`, `skills/*/scripts/*` (40 Python + 4 fixtures) for non-Verified directory Validate.
