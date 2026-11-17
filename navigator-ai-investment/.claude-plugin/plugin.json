@@ -23,5 +23,6 @@
       "required": true,
       "sensitive": true
     }
-  }
+  },
+  "icon": "./icon.png"
 }

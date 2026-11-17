@@ -43,5 +43,6 @@
       "required": false,
       "sensitive": true
     }
-  }
+  },
+  "icon": "./icon.png"
 }

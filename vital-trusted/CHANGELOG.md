@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.11 — 17 November 2026
+
+**Pilot.** Official Veˣ light squircle (512) as sole `icon.png` after full marketplace icon audit.
+
 ## 0.3.10 — 17 November 2026
 
 **Pilot.** Directory icon only: single 512×512 Veˣ light squircle at `icon.png`. Removed sibling icon files; version bump for directory CDN refresh.
