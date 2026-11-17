@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.8 — 17 November 2026
+
+**Pilot.** `author.name` set to **Vital.Expert** (same as other marketplace packs and `.claude-plugin/marketplace.json` owner) so the Claude directory listing reads “by Vital.Expert” rather than the GitHub org slug.
+
 ## 0.3.7 — 17 November 2026
 
 **Pilot.** Plugin `icon.png` replaced with design-system primary Veˣ filled mark (`vital-icon-filled-512.png`, `--violet-600` tile, white lockup) so the Claude directory listing matches brand canon instead of the dark outline tile that rendered poorly in review.
