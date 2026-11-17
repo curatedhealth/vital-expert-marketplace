@@ -2,7 +2,7 @@
 name: confidence-scoring
 description: "Turn VERIFY's claim checks into the confidence line and the short Verify card that a reviewer reads: the faithfulness percent (how much of the text is backed by the passages supplied), each source's score, counts by status, the open items and one recommendation, with plain words on what the number means and what it does not. For general management, brand, market access and medical teams checking a board update, value story, payer deck, reply to a doctor or paper summary after VERIFY has run. Use it when someone asks \"how confident can we be\", \"what's the faithfulness score\", \"give me the Verify card\", \"what does 80% mean\", \"is 85% good enough to send\", or \"score this draft\". Not for checking claims against passages (claim-assessment), grading a source (source-assessment), building citations or the record (citation-and-record), or drafting without inventing (grounded-statements).\n"
 license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
-compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no tool itself. The confidence figure needs statuses returned by the VERIFY connector through claim-assessment; without VERIFY it reports counts only and gives no figure. scripts/faithfulness.py runs where the host can execute Python 3.\n"
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. Calls no tool itself. The confidence figure needs statuses returned by the VERIFY connector through claim-assessment; without VERIFY it reports counts only and gives no figure. Deterministic checks use references/check-rules.json and references/tools.md.\n"
 metadata:
   framework_code: "TR-8.3"
   framework_path: "TRUSTED > Prove > True > Confidence scoring"
@@ -103,8 +103,8 @@ and say what VERIFY would add (`references/tools.md`).
 | `tasks/verify-card.md` | Steps for counts, open items and the one recommendation | That task runs |
 | `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | What VERIFY returns that this skill reads; the script | Before computing |
-| `scripts/faithfulness.py` | Percent and card counts from counts or a JSON list of statuses | Any computation |
-| `scripts/test_faithfulness.py` | Tests for the script | After changing the script |
+| `check-rules.json` / `faithfulness` | Percent and card counts from counts or a JSON list of statuses | Any computation |
+
 | `templates/confidence-line.md`, `templates/verify-card.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md` | A worked case on a payer value story | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones to decline or redirect | Testing |

@@ -111,7 +111,7 @@ this skill (TR-H4). Details in `references/tools.md`.
 | `tasks/intellectual-property.md` | Guard, repair and check for other people's work | That task runs |
 | `governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the pattern-scan script | Before scanning or handing off |
-| `scripts/scan_inputs.py` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
+| `check-rules.json` / `scan_inputs` | Pattern scan for identifier formats and confidentiality or copyright markers | Checking an extract before use |
 | `templates/input-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/csr-into-chatgpt.md`, `examples/article-for-newsletter.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must stay light | Testing |

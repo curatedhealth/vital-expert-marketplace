@@ -1,0 +1,65 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "identify_source_id": {
+      "id": "identify_source_id",
+      "purpose": "Say which identifier a string holds and which VERIFY argument it belongs in.",
+      "data": {
+        "patterns": [
+          {
+            "kind": "DOI",
+            "argument": "doi",
+            "regex": "\\b(10\\.\\d{4,9}/[^\\s\\\"<>]+)"
+          },
+          {
+            "kind": "PMCID",
+            "argument": "pmcid",
+            "regex": "\\b(PMC\\d{4,10})\\b"
+          },
+          {
+            "kind": "PMID",
+            "argument": "pmid",
+            "regex": "\\bPMID\\s*[:#]?\\s*(\\d{1,9})\\b"
+          },
+          {
+            "kind": "PMID",
+            "argument": "pmid",
+            "regex": "pubmed\\.ncbi\\.nlm\\.nih\\.gov/(\\d{1,9})"
+          },
+          {
+            "kind": "PMID",
+            "argument": "pmid",
+            "regex": "^\\s*(\\d{1,9})\\s*$",
+            "bare_digits": true
+          },
+          {
+            "kind": "URL",
+            "argument": "url",
+            "regex": "\\bhttps?://[^\\s\\\"<>]+"
+          }
+        ]
+      },
+      "procedure_key": "identify_source_id"
+    },
+    "print_source_score": {
+      "id": "print_source_score",
+      "purpose": "Print a VERIFY source score as the total plus the axes that have numbers.",
+      "data": {
+        "TOTAL_KEYS": [
+          "total",
+          "score",
+          "value"
+        ],
+        "PLAIN": {
+          "authority": "who published it",
+          "recency": "how recent it is",
+          "relevance": "how well it matches your question",
+          "provenance": "how completely it identifies itself",
+          "currency": "whether a retraction or update check cleared it"
+        }
+      }
+    }
+  }
+}

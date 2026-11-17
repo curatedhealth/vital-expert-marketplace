@@ -1,0 +1,22 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "check-line-stamp",
+  "purpose": "Stamp a consistent TRUSTED check-line for offline or live Prove runs.",
+  "data": {
+    "modes": {
+      "offline": "not tool-checked (offline tools)",
+      "local": "local support, not tool-checked",
+      "method": "method only, not tool-checked",
+      "verify": "tool-checked via Prove live MCP"
+    },
+    "letter_codes": [
+      "T",
+      "R",
+      "U",
+      "S",
+      "E",
+      "D"
+    ]
+  },
+  "procedure_key": "stamp_check_line"
+}

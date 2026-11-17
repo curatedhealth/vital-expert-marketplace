@@ -1,0 +1,48 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "extract_numbers": {
+      "id": "extract_numbers",
+      "purpose": "List every number in a text with its context, for matching against the source.",
+      "data": {
+        "number_regex": "(?<![\\d.,])(?P<num>[<>≤≥~]?\\s?\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?|[<>≤≥~]?\\s?\\d+(?:\\.\\d+)?)(?P<unit>\\s?(?:%|percent(?:age points?)?|pp|mg|g|kg|ml|mL|weeks?|months?|years?|days?|patients?))?",
+        "kinds": [
+          "percentage points",
+          "percent",
+          "count",
+          "quantity",
+          "ratio-like or decimal",
+          "number"
+        ]
+      },
+      "procedure": [
+        "For each line, find all number_regex matches.",
+        "Classify kind from unit (pp/percentage points; %/percent; patients→count; other unit→quantity; bare decimal <10→ratio-like or decimal; else number).",
+        "Emit line, number as written, kind, surrounding text.",
+        "Also list units that appear with more than one distinct value.",
+        "Do not judge correctness."
+      ]
+    },
+    "risk_metrics": {
+      "id": "risk_metrics",
+      "purpose": "Absolute and relative effects for a binary outcome, from supplied arm values.",
+      "data": {
+        "check_tolerances": {
+          "rr": 0.01,
+          "rrr": 0.5,
+          "arr": 0.05,
+          "nnt": 0.5
+        },
+        "check_keys": [
+          "rr",
+          "rrr",
+          "arr",
+          "nnt"
+        ]
+      },
+      "procedure_key": "risk_metrics"
+    }
+  }
+}

@@ -49,14 +49,16 @@ before treating as settled doctrine."
 | TR-8.4 | citation-and-record | Prove | True and Defensible |
 
 Build skills make the work good by design. Prove skills carry claim/source/confidence/
-citation method; offline tools label **not tool-checked**; optional live Prove MCP adds
-tool-checked results when a `vvfy_` key is present.
+citation method and label results **not tool-checked**.
+
+Deterministic offline checks ship as **data + instructions** (`references/check-rules.json`
+plus `references/tools.md`, and shared `templates/offline-checks/`), not as Python programs.
+This directory build has no remote MCP connector.
 
 ## Installing (Claude Cowork)
 
 1. Add marketplace: `curatedhealth/vital-expert-marketplace`
 2. Install: `/plugin install vital-trusted@vital-expert-marketplace`
-3. Optional: paste a `vvfy_` key when prompted (Prove live tools only)
 
 Do **not** install retired `vital-verify`. Ask "what can TRUSTED do?" or start an everyday
 task such as a board update.

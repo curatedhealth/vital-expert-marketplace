@@ -108,7 +108,7 @@ it (`citation-and-record`). Until then, say "source not graded with a tool" (TR-
 | `tasks/specific-citations.md` | What a findable citation contains; "add references" requests | That task runs |
 | `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before handing off or scanning |
-| `scripts/find_source_cues.py` | Lists vague attributions, superlatives, undated "current" and weak citations in a text | Repairing a longer draft |
+| `check-rules.json` / `find_source_cues` | Lists vague attributions, superlatives, undated "current" and weak citations in a text | Repairing a longer draft |
 | `templates/check-line.md`, `templates/source-note.md`, `templates/reference-list.md` | Output formats | Building the answer |
 | `examples/brand-deck.md`, `examples/add-references.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

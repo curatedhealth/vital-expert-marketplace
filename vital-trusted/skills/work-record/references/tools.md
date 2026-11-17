@@ -51,26 +51,30 @@ Read from the VERIFY connector schema in this session on 20 October 2026, tool
 - Whether the Digital Health Library connector's `verify_build_record` is the same tool
   with the same contract.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/status_words.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Lists every status or clearance word in a text (approved, final, validated, verified,
-reviewed, signed off, cleared, certified, compliant, ready to send, for distribution)
-and every draft marking, with line, context and whether a capitalized name or "by" phrase
-sits in the same sentence. It does not judge whether a status is true; it shows where to
-ask "who, which event, when".
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/status_words.py draft.txt
-python scripts/status_words.py draft.txt --json
-cat draft.txt | python scripts/status_words.py -
-```
 
-Pitfalls:
+## Checks in this skill
 
-- "Approved" about a product ("approved in the EU in 2025") is a product fact, not a
-  document status. The script lists it; the person reading the output decides.
-- A name found near a status word is a hint, not proof that the person cleared the
-  work.
-- Where code cannot run, read the draft for the same words by hand.
+### `status_words`
+
+List status and clearance words in a text, for the honest-status task.
+
+Data: `check-rules.json` → `checks.status_words.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

@@ -1,0 +1,97 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "balance_cues": {
+      "id": "balance_cues",
+      "purpose": "List balance cues in a draft, and what the source material holds that the draft does not.",
+      "data": {
+        "cue_groups": {
+          "benefit": [
+            "\\bimprov\\w*",
+            "\\breduc\\w*",
+            "\\befficac\\w*",
+            "\\beffective\\w*",
+            "\\bbenefit\\w*",
+            "\\brespon(?:se|ded|ders?)\\b",
+            "\\bremission\\b",
+            "\\bclear(?:ed|ance)?\\b",
+            "\\bsuperior\\w*",
+            "\\bbetter\\b",
+            "\\bfaster\\b",
+            "\\bprevent\\w*",
+            "\\bprotect\\w*",
+            "\\bcut\\b",
+            "\\bhalv\\w*",
+            "\\bachiev\\w*",
+            "\\bmet (?:its|the) primary\\b",
+            "\\bfewer\\b",
+            "\\bsaving\\w*",
+            "\\bvalue\\b",
+            "\\bconvenien\\w*"
+          ],
+          "risk_or_limitation": [
+            "\\badverse\\b",
+            "\\bside[- ]effects?\\b",
+            "\\bSAEs?\\b",
+            "\\bAEs?\\b",
+            "\\bserious\\b",
+            "\\bdiscontinu\\w*",
+            "\\bwithdr[ae]w\\w*",
+            "\\bstopped\\b",
+            "\\bdrop(?:ped)? ?out\\w*",
+            "\\bwarning\\w*",
+            "\\bcontraindicat\\w*",
+            "\\binfection\\w*",
+            "\\bdeaths?\\b",
+            "\\blimitation\\w*",
+            "\\bnot (?:statistically )?significant\\b",
+            "\\bdid not\\b",
+            "\\bnot met\\b",
+            "\\bfailed\\b",
+            "\\bmissed\\b",
+            "\\bopen[- ]label\\b",
+            "\\bshort follow[- ]up\\b",
+            "\\bpost hoc\\b",
+            "\\binterim\\b",
+            "\\buncertain\\w*",
+            "\\brisks?\\b",
+            "\\btoxic\\w*",
+            "\\breactions?\\b",
+            "\\bnausea\\b"
+          ],
+          "reassurance": [
+            "\\bsafe\\b",
+            "\\bwell[- ]tolerated\\b",
+            "\\bno side[- ]effects?\\b",
+            "\\bfree (?:of|from) side[- ]effects?\\b",
+            "\\b(?:favou?rable|proven|established|demonstrated|excellent|reassuring|clean|benign)\\s+safety\\b",
+            "\\bsafety profile\\b",
+            "\\bno (?:new )?safety (?:signals?|concerns?)\\b",
+            "\\bminimal side[- ]effects?\\b",
+            "\\bsimilar to placebo\\b",
+            "\\bgentle\\b"
+          ],
+          "selection": [
+            "\\bup to\\b",
+            "\\bas early as\\b",
+            "\\bpeak\\w*\\b",
+            "\\bin responders\\b",
+            "\\bcompleters?\\b",
+            "\\bpatients who completed\\b",
+            "\\bsubgroup\\w*\\b",
+            "\\bsubset\\b",
+            "\\bpost hoc\\b",
+            "\\bexploratory\\b",
+            "\\bbest\\b"
+          ]
+        },
+        "unpaired_window_lines": 3,
+        "timepoint_pattern": "\\b(?:week|wk|month|year|day)s?\\s*\\d+\\b|\\b\\d+\\s*(?:weeks?|months?|years?|days?)\\b",
+        "study_name_pattern": "\\b[A-Z][A-Z]{2,}(?:-[A-Z0-9]+)*-\\d+[A-Z]?\\b"
+      },
+      "procedure_key": "balance_cues"
+    }
+  }
+}

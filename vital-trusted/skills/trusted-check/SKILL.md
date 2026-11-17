@@ -105,7 +105,7 @@ draft inside the check.
 | `references/tools.md` | Companion slot per task, VERIFY chain, script | Hand-off, script use |
 | `templates/check-output-light.md`, `check-output-short.md`, `check-output-full.md` | The summary as the person sees it | Writing the summary |
 | `templates/check-line.md` | The line contract this skill accepts | Reading lines |
-| `scripts/scan_verdicts.py` | Finds verdict words in a summary before it is shown | Where code can run |
+| `check-rules.json` / `scan_verdicts` | Finds verdict words in a summary before it is shown | Where code can run |
 | `examples/*.md` | Worked cases: agency email, team email, board update | Shaping the answer |
 | `evals/evals.json` | Test requests, including one it must not approve | Testing |
 | `references/gap-rules.md` | Gap classes as they appear in a summary | Writing open items |

@@ -20,30 +20,30 @@ does not read policies, venue rules or language guides. When a disclosure statem
 evidence-gap sentence states a fact from a source ("the trial included 9% of people over
 75"), that sentence can go to `claim-assessment` like any other claim.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/scan_language.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Lists phrases that may stigmatize, blame or define people by a condition, with the line,
-context, a suggestion and the rule id the term comes from in `references/method-standards.md` / `references/knowledge.md`.
-Terms tagged CHECK are good practice not yet confirmed against a primary document.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/scan_language.py draft.txt
-python scripts/scan_language.py draft.txt --json
-cat draft.txt | python scripts/scan_language.py -
-```
 
-Tested with `scripts/test_scan_language.py` (seven cases: campaign copy, no double count
-for "substance abuser", "suffering from", quotes marked, clean text, identity-first form
-not flagged, "the disabled" flagged).
+## Checks in this skill
 
-Pitfalls:
+### `scan_language`
 
-- It finds wording, not meaning. Stereotyped images, a missing group, an assumption
-  about a population ("older patients struggle with apps") and an unstated evidence gap
-  are not found. A clean scan does not mean the text is free of stigma; say so.
-- It over-finds. Quotations, a community's own preferred terms, organization names and
-  clinical terms can match. Hits inside quotation marks are marked; keep quotes exact.
-- It is English only.
-- Hits are phrases to look at. Report what was changed, not the raw count.
+List phrases in a text that may stigmatize, blame or define people by a condition.
+
+Data: `check-rules.json` → `checks.scan_language.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

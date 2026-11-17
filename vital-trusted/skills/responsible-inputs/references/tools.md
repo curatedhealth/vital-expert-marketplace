@@ -16,39 +16,30 @@ not a companion result.
 VERIFY does not fill these slots. It checks sentences against supplied passages; it does
 not read policies or licenses.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/scan_inputs.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-A pattern scan of a text the person wants to use, run where the host can execute code.
-It looks for:
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-- identifier formats: email addresses, phone numbers, dates, ages over 89, URLs, IP
-  addresses, long ID-like numbers and subject codes, titles followed by a name;
-- confidentiality markers: "confidential", "unpublished", "draft", "internal use only",
-  "not for distribution", "embargo", "topline", "clinical study report";
-- copyright and license markers: copyright lines, "all rights reserved", "licensed to",
-  DOIs, "reprinted with permission".
 
-```
-python scripts/scan_inputs.py extract.txt
-python scripts/scan_inputs.py extract.txt --json
-cat extract.txt | python scripts/scan_inputs.py -
-```
+## Checks in this skill
 
-Output: counts by category and, for each hit, the line number and a masked snippet. The
-script never prints a full identifier.
+### `scan_inputs`
 
-Pitfalls:
+Pattern scan of a text before it is used with an AI assistant.
 
-- It finds formats, not meaning. Names without a title, rare diagnoses, a patient's
-  story or a small town are not found. A clean scan does not mean the text is anonymous
-  or safe to share; say so when reporting it.
-- Run it on the extract the person plans to use, ideally before it goes into a cloud
-  tool. Where it runs inside the assistant, the text is already in the conversation;
-  the scan then only helps keep identifiers out of the output.
-- It also over-finds: a press release date or a spaced number can show as a date or
-  phone number. A date is an identifier only when it is linked to a person. Read the
-  hits; do not report raw counts as findings.
-- Markers are signals for a question, not findings. "Draft" in a public document is not
-  a confidentiality finding.
+Data: `check-rules.json` → `checks.scan_inputs.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

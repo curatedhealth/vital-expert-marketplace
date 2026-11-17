@@ -137,37 +137,50 @@ Pitfalls:
   passage over for that step.
 - `build_citation`, `build_record`, `build_evidence_table`: `citation-and-record`.
 
-## Scripts
+# Offline check (deterministic, no program)
 
-Run where code can execute; otherwise do the step by eye.
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-### `scripts/identify_source_id.py`
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-Reads a string and says which identifier it holds and which VERIFY argument it belongs
-in. It does not resolve or check the identifier.
 
-```
-python scripts/identify_source_id.py "https://doi.org/10.1000/xyz123"
-python scripts/identify_source_id.py "PMID: 12345678" --json
-```
+## Checks in this skill
 
-### `scripts/print_source_score.py`
+### `identify_source_id`
 
-Reads the JSON a qualify_source call returned and prints the total and each axis that
-has a number, leaving out null axes, as VERIFY instructs. It does not compute or change
-a score. Because the return shape is `[CHECK]`, it accepts a `source_score` object with
-a `total` and either an `axes` object or axis keys at the same level, and stops with a
-plain message if it finds neither.
+Say which identifier a string holds and which VERIFY argument it belongs in.
 
-```
-python scripts/print_source_score.py qualify_result.json
-```
+Data: `check-rules.json` → `checks.identify_source_id.data`.
 
-## Future companion (candidate, not a commitment)
+## Procedure: identify source id (shape only)
 
-The Digital Health Library connector in this session lists tools named
-`literature_check_retraction` (none, retracted, expression_of_concern or corrected),
-`literature_classify_study` (rct, cohort, case_control, systematic_review,
-meta_analysis, preprint, other) and `literature_grade_evidence` (CEBM 2011 or GRADE,
-GRADE always draft). They could fill the evidence-strength slot. Not used by this
-skill; fit to be confirmed by a lane. [CHECK]
+Apply patterns in order; collect all candidates. Prefer DOI over bare URL when both appear (DOI inside doi.org is kind DOI; keep URL as second candidate).
+
+Patterns (see `patterns` in check-rules.json):
+1. DOI: `10.####.../suffix`
+2. PMCID: `PMC` + digits
+3. PMID: `PMID:` + digits, or pubmed.ncbi.nlm.nih.gov/digits, or bare digits-only string
+4. URL: `http(s)://...`
+
+Notes: no resolve/fetch; bare digits → confirm with person; URL-only → ask for DOI/PMID. use_first = first candidate.
+
+
+
+### `print_source_score`
+
+Print a VERIFY source score as the total plus the axes that have numbers.
+
+Data: `check-rules.json` → `checks.print_source_score.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

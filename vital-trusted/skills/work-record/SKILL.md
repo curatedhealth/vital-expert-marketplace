@@ -120,7 +120,7 @@ a named clearer, there is no formal record: the note says "uncleared draft". Det
 | `tasks/honest-status.md` | Draft, reviewed, cleared, final, and when each may be written | That task runs |
 | `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot per task and the status-word script | Before handing off or scanning |
-| `scripts/status_words.py` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
+| `check-rules.json` / `status_words` | Lists status and clearance words in a draft, and whether a name sits with them | Repairing status |
 | `templates/record-note.md`, `templates/status-line.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/hq-how-made.md`, `examples/final-and-approved.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one to redirect | Testing |

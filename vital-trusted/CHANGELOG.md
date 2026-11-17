@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.6 — 17 November 2026 (directory submission)
+
+**Pilot.** Deterministic offline checks as **data + instructions**: per-skill `references/check-rules.json` + rewritten `references/tools.md`, shared `templates/offline-checks/`. Omit remote MCP (`.mcp.json`), slim `plugin.json` to allowlisted fields + `privacyPolicyUrl`. Removed tip `tools/*.py`, `skills/*/scripts/*` (40 Python + 4 fixtures) for non-Verified directory Validate.
+
+**Python preserved at:** monorepo `mcps/trusted/plugin/vital-trusted/` (43 `.py`) and marketplace git branch `archive/vital-trusted-python-helpers` (@ `d07636e`, pre-strip tip).
+
+## 0.3.5 — 17 November 2026 (directory submission)
+
+**Pilot.** Omit remote MCP for Claude directory Validate (org not Verified for mods): delete `.mcp.json`, drop `userConfig.verify_key`, set `"icon": "./icon.png"`, describe Prove as offline / not tool-checked only. Skill content unchanged.
+
 ## 0.3.2 — 9 November 2026 (Pilot demotion)
 
 **Pilot** (owner Hicham). Marketplace `release_state` set to Pilot so new users do not install 0.3.2 while 0.3.3 rebuild is in progress. Version string stays 0.3.2. No skill content change in this tip.

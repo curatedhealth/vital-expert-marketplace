@@ -87,7 +87,7 @@ VERIFY builds the citation lines (`build_citation`), writes the record
 (`build_record`) and renders the evidence table on request (`build_evidence_table`).
 Exact arguments, returns and pitfalls are in `references/tools.md`. Read it before any
 call. Without VERIFY, both tasks still run: plain reference lines from the supplied
-details (`scripts/plain_reference.py` where code runs) and a plain record note, each
+details (via `check-rules.json` / `plain_reference` and `references/tools.md`) and a plain record note, each
 marked "not tool-built".
 
 ## What to return
@@ -110,7 +110,7 @@ marked "not tool-built".
 | `tasks/build-record.md` | Steps, tool call, clearer rules and handing on open items | That task runs |
 | `governance.md` | Boundaries, stop rules, internal processes, never claimed | Before anything leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; scripts | Before any call |
-| `scripts/plain_reference.py` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
+| `check-rules.json` / `plain_reference` | Plain reference lines from supplied details, missing fields listed | No VERIFY, code can run |
 | `templates/*.md` | Reference list, record note, open items, check line | Building the answer |
 | `examples/advisory-board-pre-read.md` | A worked case: three sources, one missing year, two contradicted claims | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

@@ -17,35 +17,30 @@ When the person supplies a template, element list or minimum count from their co
 use it as given, with its date, and do not extend it. That is the person's input, not a
 companion result.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/scan_output.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-A cue scan of a draft, run where the host can execute code.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/scan_output.py draft.txt --statements --market UK
-python scripts/scan_output.py draft.txt --data
-python scripts/scan_output.py draft.txt --statements --data --market CH --json
-cat draft.txt | python scripts/scan_output.py - --data --small-count 10
-```
 
-`--statements` lists, for the market given (UK, EU, CH, US or unknown), the elements
-usually expected from `references/method-standards.md` / `references/knowledge.md`, and for each the lines where a cue word was
-found or "no cue found". `--data` lists formats that can point to a person (a title
-followed by a name, dates, ages, record-like numbers, email addresses, phone numbers)
-and small counts next to words like "patients" or "cases", masked.
+## Checks in this skill
 
-`--small-count` sets the cutoff for listing counts (default 10). It is a listing
-cutoff for the person to read, not a privacy threshold; the privacy function sets that.
+### `scan_output`
 
-Pitfalls:
+Cue scan of a draft for market statements and personal details in the output.
 
-- It finds words, not meaning. "Prescribing information" in a sentence is not a PI. A
-  "no cue found" is a place to look, not a finding that the element is missing, and a
-  cue found is not a finding that the element is there or correct.
-- Names without a title, a bare age ("67,"), villages, jobs and patient stories are
-  not found. A clean data scan does not make a text anonymous; say so when reporting
-  it.
-- It never prints a full identifier. Read the masked hits in the draft itself.
-- Tests: `python scripts/test_scan_output.py`.
+Data: `check-rules.json` → `checks.scan_output.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

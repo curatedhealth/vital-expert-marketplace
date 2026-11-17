@@ -1,0 +1,95 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "find_claim_cues": {
+      "id": "find_claim_cues",
+      "purpose": "List wording that usually marks a label, promotion or comparison issue.",
+      "data": {
+        "cue_groups": {
+          "comparison": [
+            "\\bbetter\\b",
+            "\\bfaster\\b",
+            "\\bstronger\\b",
+            "\\bsafer\\b",
+            "\\bmore (?:effective|convenient|potent|tolerable)\\b",
+            "\\bbetter tolerated\\b",
+            "\\bsuperior(?:ity)?\\b",
+            "\\boutperform\\w*",
+            "\\bbeats?\\b",
+            "\\bversus\\b",
+            "\\bvs\\.?(?=\\s)",
+            "\\bcompared (?:with|to)\\b",
+            "\\bhead[- ]to[- ]head\\b"
+          ],
+          "absolute or superlative": [
+            "\\bfirst\\b(?![- ]line)",
+            "\\bonly\\b",
+            "\\bleading\\b",
+            "\\bbest\\b",
+            "\\bnumber one\\b",
+            "\\bno\\. ?1\\b",
+            "\\bunique\\b",
+            "\\bunmatched\\b",
+            "\\bunrivall?ed\\b",
+            "\\bgold standard\\b"
+          ],
+          "safety absolute": [
+            "\\bsafe(?:ly)?\\b",
+            "\\bno side[- ]effects?\\b",
+            "\\bside[- ]effect[- ]free\\b",
+            "\\bharmless\\b",
+            "\\brisk[- ]free\\b",
+            "\\bwell[- ]tolerated\\b"
+          ],
+          "device function": [
+            "\\bdiagnos\\w*",
+            "\\bdetects?\\b",
+            "\\bdetecting\\b",
+            "\\bpredicts?\\b",
+            "\\bprevents?\\b",
+            "\\bcures?\\b",
+            "\\brules? out\\b",
+            "\\bscreens? for\\b",
+            "\\breplaces? (?:a |your )?(?:visit|doctor|appointment)\\w*"
+          ],
+          "population or line of therapy": [
+            "\\bchildren\\b",
+            "\\badolescents?\\b",
+            "\\bteen(?:ager)?s?\\b",
+            "\\bp(?:a)?ediatric\\b",
+            "\\belderly\\b",
+            "\\bpregnan\\w*",
+            "\\bfirst[- ]line\\b",
+            "\\bsecond[- ]line\\b",
+            "\\bmonotherapy\\b",
+            "\\bin combination with\\b",
+            "\\bmild\\b",
+            "\\ball patients\\b"
+          ],
+          "unapproved status": [
+            "\\boff[- ]label\\b",
+            "\\bunlicen[cs]ed\\b",
+            "\\bunapproved\\b",
+            "\\bnot (?:yet )?approved\\b",
+            "\\binvestigational\\b",
+            "\\bcoming soon\\b"
+          ],
+          "promotional tone": [
+            "\\bgame[- ]chang\\w*",
+            "\\bbreakthrough\\b",
+            "\\brevolutionary\\b",
+            "\\bproven\\b",
+            "\\bguaranteed?\\b",
+            "\\bmiracle\\b",
+            "\\bswitch (?:to|your)\\b",
+            "\\bask your doctor about\\b",
+            "\\bdon'?t wait\\b",
+            "!"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "score-source-offline",
+  "purpose": "Offline source_score when provenance fields are supplied by hand (no network).",
+  "data": {},
+  "procedure": [
+    "Score each axis from supplied provenance fields using weights in data.",
+    "Sum axes that have numbers; omit null axes.",
+    "Print total and numeric axes only. No network."
+  ]
+}

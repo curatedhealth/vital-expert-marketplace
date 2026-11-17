@@ -1,0 +1,37 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "status_words": {
+      "id": "status_words",
+      "purpose": "List status and clearance words in a text, for the honest-status task.",
+      "data": {
+        "STATUS": [
+          "approv(?:ed|al|es)",
+          "final(?:i[sz]ed)?",
+          "validat(?:ed|ion)",
+          "verified",
+          "reviewed",
+          "review(?:ed)? complete",
+          "signed[- ]off",
+          "sign[- ]off",
+          "cleared",
+          "certified",
+          "compliant",
+          "ready to (?:send|use|share|publish)",
+          "for distribution",
+          "MLR[- ]approved"
+        ],
+        "DRAFT": [
+          "draft",
+          "uncleared",
+          "not yet reviewed",
+          "for review",
+          "\\[GAP[^\\]]*\\]",
+          "\\[Approval[^\\]]*\\]"
+        ]
+      }
+    }
+  }
+}

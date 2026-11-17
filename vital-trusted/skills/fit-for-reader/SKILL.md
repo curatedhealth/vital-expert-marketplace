@@ -133,9 +133,9 @@ in full on any host. Two scripts help where code can run. Details in
 | `references/readers.md` | The ten readers: what each decides, vocabulary, depth, watch-outs | Any audience work |
 | `governance.md` | Boundaries, stop rules, internal processes, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scripts | Before scanning or comparing |
-| `scripts/plain_language_scan.py` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
-| `scripts/compare_numbers.py` | Numbers and units in an original against its translation | Any translation with figures |
-| `scripts/test_scripts.py` | Tests for both scripts | After changing a script |
+| `check-rules.json` / `plain_language_scan` | Sentence length, long words, abbreviations, symbols, clinician and tone words | Patient or lay text |
+| `check-rules.json` / `compare_numbers` | Numbers and units in an original against its translation | Any translation with figures |
+
 | `templates/reader-card.md`, `templates/repair-note.md`, `templates/translation-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/patient-letter-clinician-language.md`, `examples/payer-and-internal-same-finding.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must redirect | Testing |

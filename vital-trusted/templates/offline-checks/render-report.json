@@ -1,0 +1,26 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "render-report",
+  "purpose": "Render Prove report shapes from findings JSON (offline; no network).",
+  "data": {
+    "TEMPLATES": [
+      "verify-brief",
+      "evidence-table",
+      "gap-list",
+      "source-register",
+      "finding-card"
+    ],
+    "OPEN": [
+      "partial",
+      "unsupported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "LABEL": "rendered offline, not tool-checked"
+  },
+  "procedure": [
+    "Choose template key from TEMPLATES.",
+    "Fill from findings JSON; open items from OPEN statuses.",
+    "Offline render only."
+  ]
+}

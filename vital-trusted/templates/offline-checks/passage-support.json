@@ -1,0 +1,13 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "passage-support",
+  "purpose": "Local claim-vs-passage support decision (offline check_claim lite).",
+  "data": {
+    "LABEL": "local support, not tool-checked"
+  },
+  "procedure": [
+    "Tokenize claim and passage into content words (length>2, not stop words).",
+    "Decide support label using overlap and negation cues per LABEL map in data.",
+    "Offline only — label result not tool-checked."
+  ]
+}

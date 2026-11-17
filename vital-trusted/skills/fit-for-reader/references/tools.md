@@ -14,53 +14,46 @@ No companion exists for this skill and none is planned (product concept §10.2:
 VERIFY does not fill these slots. It checks sentences against supplied passages; it does
 not judge reader fit, format or translation.
 
-## Scripts
+# Offline check (deterministic, no program)
 
-Run them where the host can execute code. Where it cannot, do the same steps by hand.
-Tests: `python scripts/test_scripts.py` (12 tests, standard library only).
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-### `scripts/plain_language_scan.py`
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-For patient or lay text. Lists sentence lengths (median, mean, longest, and sentences
-over a working threshold), long words, abbreviations and whether each is spelled out at
-first use, symbols such as < and >, words from a short list of clinician terms, and
-words to reread for tone (alarming or falsely reassuring).
 
-```
-python scripts/plain_language_scan.py leaflet.txt
-python scripts/plain_language_scan.py leaflet.txt --json
-python scripts/plain_language_scan.py leaflet.txt --max-words 15 --terms our_terms.txt
-cat leaflet.txt | python scripts/plain_language_scan.py -
-```
+## Checks in this skill
 
-Pitfalls:
+### `compare_numbers`
 
-- It finds features, not meaning. A short sentence can still be unclear; a listed term
-  can be right ("high blood pressure (hypertension)" lists "hypertension" on purpose).
-- The 20-word threshold is a working threshold chosen by this skill, not from a
-  guideline. The EU guideline says only that long sentences should not be used.
-- English only. It gives no readability score or grade level, by design (TR-H3).
-- The clinician and tone lists are short prompts, not a dictionary. Add the person's
-  own terms with `--terms`.
+Compare the numbers and units in an original text and its translation.
 
-### `scripts/compare_numbers.py`
+Data: `check-rules.json` → `checks.compare_numbers.data`.
 
-For a translation. Reads every number in the original and the translation, each with
-its own language's notation (English 1,000.5; German 1.000,5), and lists values missing,
-added or with a changed symbol unit.
+## Procedure
 
-```
-python scripts/compare_numbers.py original.txt translation.txt --source-locale en --target-locale de
-python scripts/compare_numbers.py original.txt translation.txt --json
-```
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
 
-Pitfalls:
 
-- Digits and symbol units only (mg, µg, mcg, g, kg, mL, L, mmol/L, mg/dL, IU, %). Word
-  units (weeks, Wochen) and numbers written as words (two, zwei) are not compared.
-- A clean result means the digits match, not that the meaning matches. Read the
-  sentences.
-- Supported notations: en, and de / fr / it / es read as decimal comma with dot, space
-  or apostrophe grouping (the apostrophe covers Swiss usage, 1'200).
-- Values that legitimately appear only once in one language (a footnote number, a
-  section number) show as differences; read them before reporting.
+
+### `plain_language_scan`
+
+Plain-language scan for patient-facing or lay text.
+
+Data: `check-rules.json` → `checks.plain_language_scan.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

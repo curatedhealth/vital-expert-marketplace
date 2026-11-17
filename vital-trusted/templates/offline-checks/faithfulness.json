@@ -1,0 +1,58 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "faithfulness",
+  "purpose": "Faithfulness percent and Verify card counts from claim-assessment statuses.",
+  "data": {
+    "counted_statuses": [
+      "supported",
+      "partial",
+      "unsupported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "all_statuses": [
+      "supported",
+      "partial",
+      "unsupported",
+      "contradicted",
+      "unverifiable",
+      "out_of_scope"
+    ],
+    "open_statuses": [
+      "partial",
+      "unsupported",
+      "contradicted",
+      "unverifiable"
+    ],
+    "plain_labels": {
+      "supported": "backed by the passage",
+      "partial": "partly backed",
+      "unsupported": "not backed by the passages checked",
+      "contradicted": "contradicted by a passage",
+      "unverifiable": "could not be checked",
+      "out_of_scope": "not a factual statement (not counted in the percent)"
+    },
+    "recommendations": [
+      {
+        "when_status": "contradicted",
+        "text": "Fix or remove the statement a passage contradicts before anything else."
+      },
+      {
+        "when_status": "unsupported",
+        "text": "Remove the statements the passages do not back, or supply a source that does and check again."
+      },
+      {
+        "when_status": "unverifiable",
+        "text": "Supply a usable source for the statements that could not be checked, or take them out."
+      },
+      {
+        "when_status": "partial",
+        "text": "Trim each partly backed statement to the part the passage states, or supply the missing detail."
+      }
+    ],
+    "no_open_items": "No open items. A named person still reviews the work through your usual process.",
+    "formula": "(supported + 0.5 * partial) / (supported + partial + unsupported + contradicted + unverifiable)",
+    "rounding": "half_up_to_int"
+  },
+  "procedure_key": "faithfulness"
+}

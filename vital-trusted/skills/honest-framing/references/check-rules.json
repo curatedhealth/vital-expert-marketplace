@@ -1,0 +1,107 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "chart_scale": {
+      "id": "chart_scale",
+      "purpose": "How much a chart's construction enlarges or shrinks a difference.",
+      "data": {
+        "defaults": {
+          "axis_min": 0
+        },
+        "icon_scaling": [
+          "height",
+          "both"
+        ]
+      },
+      "procedure": [
+        "Bars: lengths = value − axis_min (both must be >0). actual_ratio=b/a; displayed_ratio=lb/la; looks_larger_by = displayed_change/actual_change when actual_change≠0.",
+        "Optional axis_max: difference_share_of_plotted_range_pct = |b−a|/(axis_max−axis_min)×100.",
+        "Icons: height → scale with ratio; both → area scales with ratio².",
+        "Cumulative series: convert to per-period increments.",
+        "Derived from supplied values only; measures the drawing, not meaning."
+      ]
+    },
+    "find_framing_cues": {
+      "id": "find_framing_cues",
+      "purpose": "List framing words in a draft for a person to review.",
+      "data": {
+        "certainty": [
+          "prov(?:e|es|ed|en|ing)\\b",
+          "proof\\b",
+          "definitive(?:ly)?\\b",
+          "conclusive(?:ly)?\\b",
+          "dramatic(?:ally)?\\b",
+          "breakthrough\\b",
+          "remarkabl[ey]\\b",
+          "game[- ]chang\\w*",
+          "unprecedented\\b",
+          "revolutionar\\w*",
+          "clearly\\b",
+          "undeniabl[ey]\\b",
+          "unquestionabl[ey]\\b",
+          "established\\b",
+          "robust(?:ly)?\\b",
+          "striking(?:ly)?\\b",
+          "transformative\\b",
+          "highly significant\\b",
+          "(?<!statistically )significant(?:ly)?\\b(?! *\\(?p)",
+          "superior(?:ity)?\\b",
+          "long[- ]term\\b",
+          "durable\\b",
+          "life[- ]changing\\b"
+        ],
+        "hedges": [
+          "may\\b",
+          "might\\b",
+          "could\\b",
+          "possibl[ey]\\b",
+          "potential(?:ly)?\\b",
+          "appears? to\\b",
+          "seems? to\\b",
+          "suggest(?:s|ed|ing)?\\b",
+          "perhaps\\b",
+          "preliminary\\b",
+          "further research\\b",
+          "interpreted with caution\\b",
+          "cannot be ruled out\\b",
+          "to some extent\\b",
+          "in some patients\\b"
+        ],
+        "minimizing": [
+          "only\\s+(?:\\d[\\d.,]*\\s*%|\\d[\\d.,]*\\s+(?:in|of|out of)\\s+\\d)",
+          "just\\s+\\d[\\d.,]*",
+          "as (?:few|little|low) as\\b",
+          "merely\\b",
+          "negligible\\b",
+          "rare(?:ly)?\\b",
+          "minimal\\b",
+          "mild\\b"
+        ],
+        "interest": [
+          "independent(?:ly)?\\b",
+          "unbiased\\b",
+          "objective(?:ly)?\\b",
+          "neutral\\b",
+          "experts? agree\\b",
+          "physicians? prefer\\b",
+          "doctors? prefer\\b",
+          "real[- ]world (?:evidence|data|doctors)\\b",
+          "data on file\\b",
+          "internal analysis\\b",
+          "funded by\\b",
+          "sponsored by\\b",
+          "commissioned by\\b",
+          "on behalf of\\b",
+          "employee(?:s)? of\\b",
+          "honorari(?:a|um)\\b",
+          "consult(?:ant|ing|ancy)\\b",
+          "advisory board\\b",
+          "no conflicts?\\b",
+          "no role\\b"
+        ]
+      }
+    }
+  }
+}

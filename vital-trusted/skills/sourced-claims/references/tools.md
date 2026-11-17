@@ -21,32 +21,30 @@ references and data on file with their identifiers), which would let the specifi
 citations task match claims to approved references instead of asking. Candidate, not a
 commitment. `[CHECK: not in the concept's candidate list; for the owner to decide]`
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/find_source_cues.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Lists wording that usually marks a claim needing a source or a citation needing work.
-It finds wording, not claims: read the whole draft as well.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/find_source_cues.py draft.txt
-python scripts/find_source_cues.py draft.txt --json
-cat draft.txt | python scripts/find_source_cues.py -
-```
 
-Cue groups:
+## Checks in this skill
 
-| Group | Examples it finds |
-|---|---|
-| vague authority | studies show, research suggests, experts agree, data suggest, it is well known, guidelines recommend |
-| unnamed regulator or guidance | per FDA guidance, EMA guidelines, according to NICE (with no title or year nearby) |
-| superlative or first | leading, first, only, best, most prescribed, gold standard, number one |
-| undated current | current, latest, now, recently, new (with no year on the same line) |
-| weak source type | press release, blog, news, preprint, abstract, poster, data on file, internal |
-| incomplete citation | "Name et al." or "Name 2023" with no DOI or PMID on the line; bare "data on file" |
-| figure | a number with % or a ratio such as "1 in 20" with no bracketed source on the line |
+### `find_source_cues`
 
-Each row: line number, group, the matched words, and the line. It makes no judgment.
+List wording that usually marks a claim needing a source, or a citation needing work.
 
-Tested on 20 October 2026 against `scripts/test_input.txt` with
-`python3 scripts/test_find_source_cues.py` (expected groups per line asserted).
+Data: `check-rules.json` → `checks.find_source_cues.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

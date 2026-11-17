@@ -119,8 +119,8 @@ Currency without a tool: ask for the date and mark currency "not checked".
 | `governance.md` | Boundaries, stop rules, never-claimed, closing statement | Before output leaves |
 | `references/tools.md` | VERIFY calls: exact arguments, what comes back, pitfalls | Before any tool call |
 | `../../templates/source-card.md`, `templates/verify-block.md`, `templates/check-line.md` | Output formats | Building the answer |
-| `scripts/identify_source_id.py` | Says which VERIFY argument an identifier belongs in (doi, pmid, pmcid, url) | Before a VERIFY call |
-| `scripts/print_source_score.py` | Prints a VERIFY source score as the total plus numeric axes, nulls left out | After qualify_source |
+| `check-rules.json` / `identify_source_id` | Says which VERIFY argument an identifier belongs in (doi, pmid, pmcid, url) | Before a VERIFY call |
+| `check-rules.json` / `print_source_score` | Prints a VERIFY source score as the total plus numeric axes, nulls left out | After qualify_source |
 | `examples/*.md` | Worked cases: a preprint in a payer deck, a competitor press release | Shaping the answer |
 | `evals/evals.json` | Daily-user tests, including one the skill must decline | Testing |
 | `references/gap-rules.md` | Gap classes as used here | Writing any gap |

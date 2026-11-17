@@ -1,0 +1,24 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "scan_inputs": {
+      "id": "scan_inputs",
+      "purpose": "Pattern scan of a text before it is used with an AI assistant.",
+      "data": {
+        "IDENTIFIERS": {
+          "email address": null,
+          "URL": null,
+          "IP address": null,
+          "phone number": null,
+          "date": null,
+          "age over 89": null,
+          "ID-like number or subject code": null,
+          "title followed by a name": null
+        },
+        "NOTE": "Pattern scan only. It finds formats, not meaning: names without a title, rare conditions, a patient's story or a small place are not found. A clean scan does not make a text anonymous or cleared to share."
+      }
+    }
+  }
+}

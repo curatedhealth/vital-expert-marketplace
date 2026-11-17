@@ -103,8 +103,8 @@ tool-checked" (TR-H4).
 | `tasks/method-description.md` | Guard, repair and check for describing studies | That task runs |
 | `governance.md` | Boundaries and when to stop and ask | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and scripts | Before computing or handing off |
-| `scripts/risk_metrics.py` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
-| `scripts/extract_numbers.py` | Every number in a text with its context | Checking figures |
+| `check-rules.json` / `risk_metrics` | Before-and-after rates into absolute and relative change and NNT; checks stated figures | A comparison of two groups |
+| `check-rules.json` / `extract_numbers` | Every number in a text with its context | Checking figures |
 | `templates/check-line.md`, `templates/repair-note.md` | Output formats | Building the answer |
 | `examples/board-update.md`, `examples/repair-trial-summary.md` | Worked cases, one business, one scientific | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including ones the skill must decline | Testing |

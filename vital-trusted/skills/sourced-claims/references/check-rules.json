@@ -1,0 +1,35 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "find_source_cues": {
+      "id": "find_source_cues",
+      "purpose": "List wording that usually marks a claim needing a source, or a citation needing work.",
+      "data": {
+        "CUES": [
+          [
+            "vague authority",
+            null
+          ],
+          [
+            "unnamed regulator or guidance",
+            null
+          ],
+          [
+            "superlative or first",
+            null
+          ],
+          [
+            "undated current",
+            null
+          ],
+          [
+            "weak source type",
+            null
+          ]
+        ]
+      }
+    }
+  }
+}

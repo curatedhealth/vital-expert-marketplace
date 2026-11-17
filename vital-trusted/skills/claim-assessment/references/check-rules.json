@@ -1,0 +1,26 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "split_claims": {
+      "id": "split_claims",
+      "purpose": "Manual claim split for claim-assessment (VITAL TRUSTED, TR-8.1.1).",
+      "data": {
+        "LABEL": "manual split, not tool-checked",
+        "FLAGS": {
+          "number": null,
+          "comparison": null,
+          "quote": null,
+          "efficacy_or_safety": null,
+          "causal": null,
+          "named_title": null,
+          "compliance_or_performance": null,
+          "unnamed_authority": null,
+          "recommendation": null
+        }
+      },
+      "procedure_key": "split_claims"
+    }
+  }
+}

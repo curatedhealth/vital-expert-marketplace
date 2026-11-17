@@ -48,24 +48,30 @@ cross-check start from the same list. Anything beyond the schema is `[CHECK]`.
 - Object shapes for `claim`, `passage`, `source`, `clearances`, `findings`.
 - Whether `verify_text` requires sources already admitted by `qualify_source`.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/scan_verdicts.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Scans a summary for verdict words and phrases (`references/knowledge.md` P1, P2, P3) and
-for leaked codes (P8): rule ids, framework codes, skill names, raw gap syntax. Letter
-words such as "Safe" and "True" at the start of a row are allowed.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/scan_verdicts.py summary.txt
-python scripts/scan_verdicts.py summary.txt --json
-python scripts/test_scan_verdicts.py
-```
 
-Exit code 0 when nothing is found, 1 when there are hits. Each hit gives the line
-number, the words found and why. It also reports a missing or altered closing statement.
+## Checks in this skill
 
-Pitfalls:
+### `scan_verdicts`
 
-- It finds words, not meaning. A clean scan is not a clean summary; read it once.
-- It allows "Safe" and "True" only as row labels. "Safe to send" is a hit.
+Scan a TRUSTED summary for verdict words and leaked codes before it is shown.
+
+Data: `check-rules.json` → `checks.scan_verdicts.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

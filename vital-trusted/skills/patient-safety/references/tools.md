@@ -19,67 +19,46 @@ is the person's input, not a companion result.
 VERIFY may still check, through `claim-assessment`, that a quoted label sentence matches
 the supplied label passage. That is a support check on wording, not a safety check.
 
-## Scripts
+# Offline check (deterministic, no program)
 
-Run them where the host can execute Python 3. Where it cannot, do the same steps by hand.
-Both scripts read files the person supplied; neither sends anything anywhere.
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-### `scripts/scan_safety_mentions.py`
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-Lists words and phrases in a text that may signal a possible safety report, by kind
-(possible side effect, pregnancy or breastfeeding, overdose or misuse, medication error,
-lack of effect, product quality, interaction, hospital or death), with line numbers and
-the surrounding words.
 
-With `--patient`, it scans a patient-facing draft instead: phrases of reassurance, advice
-about treatment, alarming framing, and whether any route to a doctor, nurse or
-pharmacist appears.
+## Checks in this skill
 
-```
-python scripts/scan_safety_mentions.py notes.txt
-python scripts/scan_safety_mentions.py notes.txt --json
-python scripts/scan_safety_mentions.py --patient leaflet.txt
-cat transcript.txt | python scripts/scan_safety_mentions.py -
-```
+### `label_match`
 
-Pitfalls:
+Compare safety sentences in a draft with the supplied label text.
 
-- It finds words, not meaning. "No rash" and "rash" both show. Read each hit.
-- It misses paraphrases, other languages, misspellings and symptoms not in its list. A
-  clean scan does not mean there is nothing to flag; say so if reporting it.
-- It never decides anything. A hit is a reason to read, not a finding, and never a
-  grade.
-- Its snippets repeat the input, which may hold personal or health details. Keep scan
-  output out of any deliverable.
+Data: `check-rules.json` → `checks.label_match.data`.
 
-### `scripts/label_match.py`
+## Procedure
 
-Compares safety sentences in a draft with the supplied label text. For each draft
-sentence that mentions dose, contraindication, warning, interaction or a special
-population, it finds the closest label sentence and reports one of: word for word (after
-normalizing spaces, case and punctuation), close (similar wording, with any numbers or
-units that differ listed), or not found in the supplied label.
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
 
-```
-python scripts/label_match.py label.txt draft.txt
-python scripts/label_match.py label.txt draft.txt --json
-python scripts/label_match.py label.txt draft.txt --threshold 0.55
-```
 
-Pitfalls:
 
-- It compares text only. A word-for-word match does not mean the statement fits the
-  reader, the market or the question, and does not mean the label is current.
-- "Close" covers both harmless rewording and dangerous changes ("must not" to "should
-  not"); read every close match.
-- "Not found" means not found in the supplied text, not that the label lacks it, unless
-  the complete label was supplied.
-- It splits sentences simply; tables pasted as text may split oddly. Check table cells by
-  hand.
-- An exact part of a longer label sentence counts as word for word and is marked "part
-  of a longer label sentence". Check that the part quoted did not drop a condition.
+### `scan_safety_mentions`
 
-### `scripts/test_scripts.py`
+Find words that may signal a possible safety report, or patient-wording problems.
 
-Tests both scripts on invented fixtures (a doctor's email, a market research extract, two
-leaflets, a label and a draft). Run `python scripts/test_scripts.py` after any change.
+Data: `check-rules.json` → `checks.scan_safety_mentions.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

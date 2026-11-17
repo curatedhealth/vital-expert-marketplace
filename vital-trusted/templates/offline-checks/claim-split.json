@@ -1,0 +1,19 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "id": "claim-split",
+  "purpose": "Manual claim split for claim-assessment (VITAL TRUSTED, TR-8.1.1).",
+  "data": {
+    "LABEL": "manual split, not tool-checked",
+    "FLAGS": {
+      "number": null,
+      "comparison": null,
+      "quote": null,
+      "efficacy_or_safety": null,
+      "causal": null,
+      "named_title": null,
+      "compliance_or_performance": null,
+      "unnamed_authority": null,
+      "recommendation": null
+    }
+  }
+}

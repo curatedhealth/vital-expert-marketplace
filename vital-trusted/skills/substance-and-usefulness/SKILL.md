@@ -130,7 +130,7 @@ host. Details in `references/tools.md`.
 | `tasks/structure-integrity.md` | Guard, repair and check for frameworks and headings | That task runs |
 | `governance.md` | Boundaries, stop rules, what is never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and the scan script | Before scanning |
-| `scripts/scan_fluff.py` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
+| `check-rules.json` / `scan_fluff` | Filler, buzzword, opener, vague-word and repetition scan | Repairing a long draft |
 | `templates/repair-note.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/leadership-update-buzzwords.md`, `examples/make-it-concrete-no-data.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one that must not invent | Testing |

@@ -12,38 +12,56 @@ This skill never calls VERIFY directly. It hands finished text to `claim-assessm
 which owns the tool calls and their interpretation. That keeps the tool contract in one
 place. [CHECK: VERIFY argument and return contracts to be confirmed in claim-assessment.]
 
-## Scripts
+# Offline check (deterministic, no program)
 
-Run them where the host can execute code. Where it cannot, do the same steps by hand and
-show the arithmetic.
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-### `scripts/extract_numbers.py`
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-Lists every number in a text with its surrounding words, line number and any unit or
-percent sign, so each can be matched to the source.
 
-```
-python scripts/extract_numbers.py draft.txt
-python scripts/extract_numbers.py draft.txt --json
-```
+## Checks in this skill
 
-### `scripts/risk_metrics.py`
+### `extract_numbers`
 
-Computes absolute and relative effects for a binary outcome from arm rates or counts and,
-optionally, compares figures stated in the draft.
+List every number in a text with its context, for matching against the source.
 
-```
-python scripts/risk_metrics.py --treat-events 10 --treat-n 500 --ctrl-events 20 --ctrl-n 500
-python scripts/risk_metrics.py --treat-rate 0.02 --ctrl-rate 0.04 --check rrr=50 --check arr=2
-```
+Data: `check-rules.json` → `checks.extract_numbers.data`.
 
-Outputs: each arm's risk, risk difference in percentage points, relative risk, relative
-risk reduction, and NNT (or NNH) with direction. Every output is labeled "derived from
-supplied values".
+## Procedure
 
-Pitfalls:
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
 
-- Use the same analysis population and timepoint for both arms.
-- Do not compare a derived crude figure with an adjusted or model-based figure from the
-  source as if one corrects the other.
-- NNT is rounded up to a whole number by convention; the unrounded value is shown too.
+
+
+### `risk_metrics`
+
+Absolute and relative effects for a binary outcome, from supplied arm values.
+
+Data: `check-rules.json` → `checks.risk_metrics.data`.
+
+## Procedure: risk metrics (binary outcome)
+
+Inputs: treatment and control each as either (events, n) or a rate in 0..1 — not both forms for one arm.
+
+1. treatment_risk = events_t/n_t or rate_t; same for control.
+2. risk_difference = treatment_risk − control_risk (as proportion).
+3. If control_risk > 0: relative_risk = treatment/control; relative_change_pct = (rr − 1) × 100.
+4. If risk_difference ≠ 0: NNT/NNH = ceil(1 / |risk_difference|); direction = lower risk with treatment (NNT) if rd < 0 else higher (NNH).
+5. Optional draft checks (tolerances): rr ±0.01; rrr ±0.5 (stated rrr compared to **−**relative_change_pct); arr ±0.05 (stated arr compared to **−**risk_difference in percentage points); nnt ±0.5 vs rounded_up.
+6. Label every figure `derived from supplied values`. Nothing is looked up.
+
+### `extract_numbers` — procedure steps
+
+1. For each line, find all number_regex matches.
+2. Classify kind from unit (pp/percentage points; %/percent; patients→count; other unit→quantity; bare decimal <10→ratio-like or decimal; else number).
+3. Emit line, number as written, kind, surrounding text.
+4. Also list units that appear with more than one distinct value.
+5. Do not judge correctness.
+

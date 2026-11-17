@@ -17,33 +17,30 @@ for the support check, which owns the VERIFY contract. This skill did not read V
 argument or return contracts `[CHECK]` that the hand-off matches the final
 `claim-assessment` scope.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/find_claim_cues.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Lists wording that usually marks a statement this skill should look at. It finds words,
-not claims or uses, and makes no judgment: read the whole draft against the label as
-well.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/find_claim_cues.py draft.txt
-python scripts/find_claim_cues.py draft.txt --json
-cat draft.txt | python scripts/find_claim_cues.py -
-```
 
-Cue groups:
+## Checks in this skill
 
-| Group | Examples it finds | Task |
-|---|---|---|
-| comparison | better, faster, more effective, safer, superior, outperforms, versus, vs, compared with, head-to-head | Comparative claims |
-| absolute or superlative | first, only, leading, best, number one, unique, unmatched, gold standard (not "first-line") | Comparative claims |
-| safety absolute | safe, safely, no side effects, harmless, risk-free, well tolerated | Comparative claims; then `patient-safety` |
-| device function | diagnose, detect, predict, prevent, cure, rule out, screen for, replaces a visit | Label and intended use |
-| population or line of therapy | children, adolescents, teenagers, pediatric, elderly, pregnant, first-line, second-line, monotherapy, in combination with, mild, all patients | Label and intended use |
-| unapproved status | off-label, unlicensed, unapproved, not approved, investigational, coming soon | Label and intended use; Promotional boundary |
-| promotional tone | game-changing, breakthrough, revolutionary, proven, guaranteed, miracle, switch to, ask your doctor about, don't wait, exclamation mark | Promotional boundary |
+### `find_claim_cues`
 
-Each row: line number, group, the matched words, and the line.
+List wording that usually marks a label, promotion or comparison issue.
 
-Tested on 20 October 2026 against `scripts/test_input.txt` with
-`python3 scripts/test_find_claim_cues.py` (expected groups per line asserted).
+Data: `check-rules.json` → `checks.find_claim_cues.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

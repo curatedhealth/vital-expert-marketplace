@@ -1,0 +1,14 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "plain_reference": {
+      "id": "plain_reference",
+      "purpose": "Build plain reference lines from supplied source details, for use without VERIFY.",
+      "data": {
+        "LABEL": "Reference lines built from the details you gave; not tool-built."
+      }
+    }
+  }
+}

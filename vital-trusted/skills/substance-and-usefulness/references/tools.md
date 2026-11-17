@@ -18,39 +18,33 @@ VERIFY does not fill these slots. It checks sentences against supplied passages;
 new specific or "so what" is added and VERIFY is connected, it goes to
 `claim-assessment` like any other sentence, through `trusted-check`.
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/scan_fluff.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-A deterministic scan of a draft, run where the host can execute code. It lists, with
-line numbers:
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-- buzzword hits from a fixed list (`leverage`, `synergies`, `holistic`, `robust`,
-  `landscape`, `ecosystem`, `unlock`, `best practices`, `paradigm shift`, and others in
-  the script);
-- throat-clearing openings at the start of a sentence ("in today's…", "it is important
-  to note", "as we all know", "this document aims to");
-- vague words that often hide a missing who, how much or by when ("stakeholders",
-  "significant", "strong", "soon", "going forward", "various");
-- stacked hedges (two or more of "may", "might", "potentially", "possibly", "somewhat"
-  in one sentence);
-- near-duplicate sentence pairs (word overlap at or above a threshold, default 0.6).
 
-```
-python scripts/scan_fluff.py draft.txt
-python scripts/scan_fluff.py draft.txt --json
-python scripts/scan_fluff.py draft.txt --dup-threshold 0.5
-cat draft.txt | python scripts/scan_fluff.py -
-python scripts/test_scan_fluff.py
-```
+## Checks in this skill
 
-Pitfalls:
+### `scan_fluff`
 
-- It finds words, not meaning. "Robust" in a statistics sentence and "landscape" as a
-  slide title are hits that are not fluff. Read every hit; never report raw counts as
-  findings (TR-H9).
-- It does not find a missing "so what", a missing owner or an invented framework. Those
-  need reading.
-- The near-duplicate check compares word sets; it misses a point repeated in different
-  words and can pair two sentences that share many common words. Read each pair.
-- A clean scan does not mean the draft is useful.
+Scan a draft for filler, buzzwords, throat-clearing openings, vague words,
+stacked hedges and near-duplicate sentences.
+
+Data: `check-rules.json` → `checks.scan_fluff.data`.
+
+## Procedure: fluff scan
+
+1. Split into sentences (line breaks; also split on `.?!` followed by space and a capital/digit/quote).
+2. Buzzword / vague: match each term in `buzzwords` / `vague` as a whole phrase (case-insensitive; hyphen≈space).
+3. Openers: if a sentence starts with any `openers` regex (optional leading bullet), record a throat-clearing hit.
+4. Stacked hedges: if a sentence has **two or more** matches from `hedges`, record one stacked-hedges hit listing them.
+5. Near-duplicates: content words = tokens `[a-z0-9]+` length>2 not in `stop_words`. For each sentence pair with ≥4 content words each, overlap = |A∩B|/|A∪B|. If overlap ≥ `near_duplicate_threshold` (default 0.6), record the pair.
+6. Drop a hit whose character span sits inside a longer hit on the same sentence.
+7. Output counts + hits with line numbers. Note: hits are prompts to read, not findings.
+
+

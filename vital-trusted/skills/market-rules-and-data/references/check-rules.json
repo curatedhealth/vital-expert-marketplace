@@ -1,0 +1,76 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "scan_output": {
+      "id": "scan_output",
+      "purpose": "Cue scan of a draft for market statements and personal details in the output.",
+      "data": {
+        "statement_cues": {
+          "prescribing information or where to find it": null,
+          "date of preparation or last revision": null,
+          "side-effect reporting statement": null,
+          "audience statement": null,
+          "job code or reference": null,
+          "supply or dispensing classification": null,
+          "authorisation holder name and address": null,
+          "black triangle": null,
+          "non-proprietary name": null
+        },
+        "markets": {
+          "UK": [
+            "prescribing information or where to find it",
+            "non-proprietary name",
+            "date of preparation or last revision",
+            "side-effect reporting statement",
+            "black triangle",
+            "audience statement",
+            "job code or reference"
+          ],
+          "EU": [
+            "prescribing information or where to find it",
+            "date of preparation or last revision",
+            "supply or dispensing classification",
+            "audience statement",
+            "job code or reference"
+          ],
+          "CH": [
+            "prescribing information or where to find it",
+            "authorisation holder name and address",
+            "supply or dispensing classification",
+            "audience statement",
+            "job code or reference"
+          ],
+          "US": [
+            "prescribing information or where to find it",
+            "audience statement",
+            "job code or reference"
+          ],
+          "unknown": [
+            "job code or reference",
+            "date of preparation or last revision"
+          ]
+        },
+        "notes": {
+          "UK": "UK list from the ABPI Code 2024 as read; black triangle only when required.",
+          "EU": "EU list from Directive 2001/83/EC and the EFPIA Code as read; national codes add more.",
+          "CH": "Swiss list from the advertising ordinance (AWV) Article 6 as read; the full item list is in references/rules.md.",
+          "US": "US list is partial: advertisement rules as read; emails and brochures not read.",
+          "unknown": "Market not given: only company-system elements listed. Ask the market."
+        },
+        "data_patterns": {
+          "title followed by a name": null,
+          "email address": null,
+          "phone number": null,
+          "date": null,
+          "age": null,
+          "record-like number": null
+        },
+        "people_patterns": "(?:patients?|cases?|people|persons?|respondents?|participants?|women|men|children|subjects?)",
+        "data_note": "Format scan only. Names without a title, villages, jobs and patient stories are not found. A clean scan does not make a text anonymous; the data privacy function decides.",
+        "small_note": "Small-count cutoff {n} is a listing cutoff for reading, not a privacy threshold. Your data privacy function sets that."
+      }
+    }
+  }
+}

@@ -144,7 +144,7 @@ indication is approved there. A future label-source companion would fill those s
 | `tasks/comparative-claims.md` | Comparisons, superlatives, "first" and "only", disparagement | That task runs |
 | `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
-| `scripts/find_claim_cues.py` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
+| `check-rules.json` / `find_claim_cues` | Lists comparative, absolute, use, population and promotional wording in a text | Repairing a longer draft |
 | `templates/check-line.md`, `templates/claims-note.md`, `templates/label-request.md`, `templates/unsolicited-reply.md` | Output formats | Building the answer |
 | `examples/sales-key-messages.md`, `examples/app-store-copy.md` | Worked cases, one medicine, one digital health app | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |

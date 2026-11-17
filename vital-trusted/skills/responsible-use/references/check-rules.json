@@ -1,0 +1,123 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "scan_language": {
+      "id": "scan_language",
+      "purpose": "List phrases in a text that may stigmatize, blame or define people by a condition.",
+      "data": {
+        "TERMS": [
+          [
+            "\\baddicts?\\b",
+            "blame or stigma",
+            "person with a substance use disorder",
+            "U9"
+          ],
+          [
+            "\\bjunkies?\\b",
+            "blame or stigma",
+            "person with a substance use disorder",
+            "U9"
+          ],
+          [
+            "\\b(?:substance|drug)\\s+abusers?\\b",
+            "blame or stigma",
+            "person with a substance use disorder",
+            "U9"
+          ],
+          [
+            "\\babusers?\\b",
+            "blame or stigma",
+            "person with a substance use disorder (if about substance use)",
+            "U9"
+          ],
+          [
+            "\\bsuffer(?:s|ing|ed)?\\s+from\\b",
+            "suffering framing",
+            "has, lives with, people with",
+            "U13 CHECK"
+          ],
+          [
+            "\\bsufferers?\\b",
+            "suffering framing",
+            "people with <condition>",
+            "U13 CHECK"
+          ],
+          [
+            "\\bafflicted\\s+(?:with|by)\\b",
+            "suffering framing",
+            "has, lives with",
+            "U13 CHECK"
+          ],
+          [
+            "\\bvictims?\\s+of\\b",
+            "suffering framing",
+            "people who have, people living with",
+            "U13 CHECK"
+          ],
+          [
+            "\\b(?:wheelchair[- ]bound|confined\\s+to\\s+a\\s+wheelchair)\\b",
+            "suffering framing",
+            "uses a wheelchair",
+            "U13 CHECK"
+          ],
+          [
+            "\\bnon-?compliant\\b",
+            "blame or stigma",
+            "did not take the treatment as planned; stopped treatment",
+            "U13 CHECK"
+          ],
+          [
+            "\\bnon-?adherent\\s+patients?\\b",
+            "blame or stigma",
+            "people who stopped or changed treatment",
+            "U13 CHECK"
+          ],
+          [
+            "\\bcommitted\\s+suicide\\b",
+            "blame or stigma",
+            "died by suicide",
+            "U13 CHECK"
+          ],
+          [
+            "\\b(?:the\\s+)?(?:diabetics|epileptics|asthmatics|schizophrenics|hemophiliacs|haemophiliacs)\\b",
+            "condition as the person",
+            "people with <condition>, unless the community prefers otherwise",
+            "U10, U13 CHECK"
+          ],
+          [
+            "\\bthe\\s+mentally\\s+ill\\b",
+            "group label",
+            "people with mental illness",
+            "U10, U13 CHECK"
+          ],
+          [
+            "\\bthe\\s+disabled\\b",
+            "group label",
+            "disabled people or people with disabilities (follow the group's preference)",
+            "U10"
+          ],
+          [
+            "\\bhandicapped\\b",
+            "group label",
+            "disabled people or people with disabilities (follow the group's preference)",
+            "U10, U13 CHECK"
+          ],
+          [
+            "\\bthe\\s+elderly\\b",
+            "group label",
+            "older people, or adults aged <n> and over as the source defines them",
+            "U11, U13 CHECK"
+          ],
+          [
+            "\\bnormal\\s+(?:people|patients|subjects|controls|volunteers)\\b",
+            "group label",
+            "healthy volunteers; people without <condition>",
+            "U11 CHECK"
+          ]
+        ]
+      }
+    }
+  }
+}

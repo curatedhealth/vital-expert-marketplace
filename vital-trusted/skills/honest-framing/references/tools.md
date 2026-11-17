@@ -13,74 +13,53 @@ it does not judge certainty, framing or charts, and this skill does not hand off
 
 Never describe any of the above as having run (TR-H4).
 
-## Scripts
+# Offline check (deterministic, no program)
 
-Run them where the host can execute code. Where it cannot, do the same arithmetic by
-hand and show it. Every output is labeled "derived from supplied values"; nothing is
-looked up.
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-### `scripts/chart_scale.py`
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
+
+
+## Checks in this skill
+
+### `chart_scale`
 
 How much a chart's construction enlarges or shrinks a difference.
 
-```
-python scripts/chart_scale.py --axis-min 80 --value 84 --value 88
-python scripts/chart_scale.py --axis-min 80 --axis-max 90 --value 84 --value 88
-python scripts/chart_scale.py --value 10 --value 20 --icon-scaling both
-python scripts/chart_scale.py --cumulative 410,805,1193
-python scripts/chart_scale.py --axis-min 80 --value 84 --value 88 --json
-```
+Data: `check-rules.json` → `checks.chart_scale.data`.
 
-Outputs:
+## Procedure
 
-- actual ratio of the two values and the ratio of the drawn bar lengths with the given
-  axis start; how many times larger the difference looks (displayed ratio of change over
-  actual ratio of change); the share of the plotted range the difference fills when an
-  axis end is given;
-- for pictograms: the apparent size ratio when icons are scaled in height only (as
-  drawn) or in both height and width (area grows with the square);
-- for cumulative series: the per-period increments.
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
 
-Pitfalls:
 
-- It measures the drawing, not the meaning. A narrow axis on a line chart can be
-  reasonable if stated; say what the reader sees, do not call it wrong.
-- Values must be on the axis scale (percent axis, percent values).
-- For a value axis that does not start at zero on a bar chart, the result is the
-  distortion; for a line chart, report it and describe the stated range.
 
-### `scripts/find_framing_cues.py`
+### `find_framing_cues`
 
-Lists words to look at, by line, in four groups: certainty ("proves", "dramatic",
-"clearly"), hedging (with a count per sentence, so stacked hedges show), minimizing
-("only 2%", "just", "rare") and independence or sponsor words ("independent",
-"experts agree", "data on file", "funded by").
+List framing words in a draft for a person to review.
 
-```
-python scripts/find_framing_cues.py draft.txt
-python scripts/find_framing_cues.py draft.txt --json
-cat draft.txt | python scripts/find_framing_cues.py -
-```
+Data: `check-rules.json` → `checks.find_framing_cues.data`.
 
-It finds words, not meaning. "Clearly labeled" is not overclaiming; "funded by" may
-already be the disclosure. Read every hit against the material.
+## Procedure
 
-### Reused: `../grounded-statements/scripts/risk_metrics.py`
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
 
-For relative and absolute effects of a binary outcome from arm rates or counts, use the
-script in `grounded-statements` by its path. Do not copy it into this skill.
+### `chart_scale` — procedure steps
 
-```
-python ../grounded-statements/scripts/risk_metrics.py --treat-rate 0.01 --ctrl-rate 0.02
-```
+1. Bars: lengths = value − axis_min (both must be >0). actual_ratio=b/a; displayed_ratio=lb/la; looks_larger_by = displayed_change/actual_change when actual_change≠0.
+2. Optional axis_max: difference_share_of_plotted_range_pct = |b−a|/(axis_max−axis_min)×100.
+3. Icons: height → scale with ratio; both → area scales with ratio².
+4. Cumulative series: convert to per-period increments.
+5. Derived from supplied values only; measures the drawing, not meaning.
 
-Use it here to set benefit and harm in the same format (pattern NF1), not to correct a
-figure; correcting figures is `grounded-statements`.
-
-### Tests
-
-```
-python scripts/test_scripts.py
-```
-
-Runs both scripts on fixed inputs and checks the outputs.

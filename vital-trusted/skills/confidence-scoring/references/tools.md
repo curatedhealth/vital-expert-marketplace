@@ -28,38 +28,36 @@ Recorded from the VERIFY connector tool schemas. Anything beyond them is `[CHECK
 Known limit from the connector instruction: a status is word overlap with the passage,
 not truth (`references/method-standards.md` / `references/knowledge.md` C5).
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/faithfulness.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Computes the faithfulness percent and the card counts. Prints no grade, pass mark or
-label. `--source` is required, so every run states where the statuses came from.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/faithfulness.py --source verify --supported 6 --partial 2 --unsupported 1 --unverifiable 1 --out-of-scope 3
-python scripts/faithfulness.py --source verify --json-file findings.json
-echo '["supported","partial","out_of_scope"]' | python scripts/faithfulness.py --source verify --json-file -
-python scripts/faithfulness.py --source method --supported 4 --unsupported 1
-python scripts/faithfulness.py --source verify --supported 3 --unverifiable 1 --json
-```
 
-Input: status counts, or JSON that is a list of status strings, a list of objects with a
-`status` key, or an object with a `findings` list. Unknown statuses are rejected.
+## Checks in this skill
 
-Output: the confidence line with the arithmetic, the six counts in plain words, the
-number of open items and one default recommendation. With `--source method`, or when
-the denominator is zero, it prints "No confidence figure" and the reason.
+### `faithfulness`
 
-Rounding: half up (`references/method-standards.md` / `references/knowledge.md` C2, `[CHECK]`).
+Faithfulness percent and Verify card counts from claim-assessment statuses.
 
-Tests: `python3 scripts/test_faithfulness.py` (16 cases: out-of-scope exclusion,
-half-up rounding, zero denominator, method-only, JSON shapes, rejected input,
-recommendation order, no verdict words in output).
+Data: `check-rules.json` → `checks.faithfulness.data`.
 
-Pitfalls:
+## Procedure: faithfulness percent
 
-- Count each statement once. If `verify_text` and `check_claim` both ran on the same
-  statement, use the status `claim-assessment` settled on.
-- When a long text was split across several `verify_text` calls, add the counts; do not
-  average the percents.
-- Where the host cannot run code, do the arithmetic by hand and show it.
+Statuses in scope (counted in denominator): `supported`, `partial`, `unsupported`, `contradicted`, `unverifiable`.  
+`out_of_scope` is listed on the card but **excluded** from the denominator.
+
+1. Normalize each status to lowercase with underscores (`out of scope` → `out_of_scope`).
+2. Count each status (see `plain_labels` in check-rules.json for reader wording).
+3. If `source` is `method` (statuses decided by reading, not a tool): print counts only; **do not** compute a percent; reason = `not tool-checked`.
+4. If `source` is `verify` (or tool-checked) and denominator > 0:
+   - numerator = supported + 0.5 × partial
+   - percent = round half-up to whole number of (numerator × 100 / denominator)
+5. Pick recommendation from `recommendations` in order: first status with count > 0 wins; else `no_open_items`.
+6. Never print pass/fail/grade/threshold — only share and counts.
+
+

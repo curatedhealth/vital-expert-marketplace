@@ -128,17 +128,31 @@ confidence figure and the VERIFY card are `confidence-scoring`.
 the same service and contract as the VERIFY connector is not established. This skill
 names the VERIFY connector's tools only.
 
-## Script (manual split)
+# Offline check (deterministic, no program)
 
-`scripts/split_claims.py` splits a text into sentences with start and end offsets that
-slice back to the exact input, and flags priority signals (numbers, comparisons, quotes,
-efficacy or safety words, causal words, named titles, recommendation words). It is a
-manual aid, labeled "manual split, not tool-checked". It never gives a support result.
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-```
-python scripts/split_claims.py text.txt
-python scripts/split_claims.py text.txt --json
-```
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-Pitfalls: abbreviations such as "e.g." and "vs." are not sentence ends; decimals are not
-split; flags are signals for ranking, not a judgment.
+
+## Checks in this skill
+
+### `split_claims`
+
+Manual claim split for claim-assessment (VITAL TRUSTED, TR-8.1.1).
+
+Data: `check-rules.json` → `checks.split_claims.data`.
+
+## Procedure: claim split (TR-8.1.1)
+
+1. Walk the draft sentence by sentence (same sentence split as fluff scan).
+2. Flag sentences using `flags` / priority lists in check-rules.json (units, comparisons, causality, etc.).
+3. Prefer splitting at conjunctions and clause boundaries when a sentence carries multiple checkable facts (`priority_1` before `priority_2`).
+4. Emit one claim object per atomic checkable statement with a stable label from `label` rules.
+5. Expand known `abbreviations` only when disambiguating for the card — do not invent expansions.
+6. Mark non-factual sentences out of scope rather than forcing a claim.
+
+

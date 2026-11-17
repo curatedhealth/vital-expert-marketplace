@@ -1,0 +1,193 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "label_match": {
+      "id": "label_match",
+      "purpose": "Compare safety sentences in a draft with the supplied label text.",
+      "data": {
+        "KEY_TERMS": [
+          "must not",
+          "should not",
+          "do not",
+          "not recommended",
+          "contraindicated",
+          "caution",
+          "avoid",
+          "mild",
+          "moderate",
+          "severe",
+          "adults",
+          "children",
+          "elderly",
+          "only",
+          "maximum",
+          "once",
+          "twice",
+          "daily",
+          "weekly",
+          "with food",
+          "without food"
+        ],
+        "POPULATIONS": {
+          "kidney": null,
+          "liver": null,
+          "children": null,
+          "elderly": null,
+          "pregnancy or breastfeeding": null
+        }
+      }
+    },
+    "scan_safety_mentions": {
+      "id": "scan_safety_mentions",
+      "purpose": "Find words that may signal a possible safety report, or patient-wording problems.",
+      "data": {
+        "SAFETY_KINDS": {
+          "possible side effect": [
+            "side[- ]effects?",
+            "adverse (?:event|reaction|effect)s?",
+            "\\breactions?\\b",
+            "\\brash(?:es)?\\b",
+            "\\bitch(?:y|ing)?\\b",
+            "\\bhives\\b",
+            "\\bswell(?:ing|ed)\\b",
+            "\\bnause(?:a|ous)\\b",
+            "\\bvomit(?:ing|ed)?\\b",
+            "\\bdiarrh?oea\\b|\\bdiarrhea\\b",
+            "\\bdizz(?:y|iness)\\b",
+            "\\bheadaches?\\b",
+            "\\bfaint(?:ed|ing)?\\b",
+            "\\bseizures?\\b|\\bfits?\\b",
+            "\\bbleed(?:ing)?\\b|\\bbruis(?:e|ing|ed)\\b",
+            "\\bpalpitations?\\b",
+            "\\bshort(?:ness)? of breath\\b",
+            "\\bjaundice\\b",
+            "liver (?:tests?|enzymes?|function)",
+            "\\b(?:alt|ast)\\b (?:rose|raised|up|high)",
+            "kidney (?:tests?|function|problems?)",
+            "\\bfatigue\\b|\\bexhausted\\b",
+            "\\bfell ill\\b|\\bgot ill\\b|\\bfelt (?:ill|unwell|awful|sick)\\b",
+            "\\bsince (?:starting|taking|switching)\\b",
+            "\\bafter (?:starting|taking|the first dose)\\b",
+            "\\bdeveloped\\b",
+            "\\ballerg(?:y|ic)\\b",
+            "\\banaphyla"
+          ],
+          "hospital or death": [
+            "\\bhospitali[sz]ed\\b|\\bhospital\\b|\\badmitted\\b|\\bemergency (?:room|department)\\b|\\b(?:a&e|er)\\b",
+            "\\bintensive care\\b|\\bicu\\b",
+            "\\bdied\\b|\\bdeath\\b|\\bpassed away\\b|\\bfatal\\b",
+            "\\bdisabilit(?:y|ies)\\b",
+            "\\bbirth defect\\b|\\bcongenital\\b"
+          ],
+          "pregnancy or breastfeeding": [
+            "\\bpregnan(?:t|cy|cies)\\b",
+            "\\bexpecting a baby\\b",
+            "\\bbreast-?feed(?:ing)?\\b",
+            "\\bnursing\\b",
+            "\\blactat(?:ing|ion)\\b",
+            "\\bmiscarr(?:y|iage)\\b",
+            "\\bconceiv",
+            "\\bpartner (?:is|was|became) pregnant\\b"
+          ],
+          "overdose, misuse or abuse": [
+            "\\boverdos(?:e|ed|ing)\\b",
+            "\\btoo (?:much|many)\\b",
+            "\\bdouble(?:d)? (?:the )?dose\\b",
+            "\\btook (?:two|2|extra|more)\\b",
+            "\\bwhole (?:pack|box|bottle)\\b",
+            "\\bmisus(?:e|ed|ing)\\b",
+            "\\babus(?:e|ed|ing)\\b",
+            "\\bnot prescribed (?:to|for)\\b",
+            "\\bsomeone else'?s\\b",
+            "\\bcrush(?:ed|ing)\\b",
+            "\\bsnort",
+            "\\brecreational"
+          ],
+          "medication error": [
+            "\\bwrong (?:dose|drug|medicine|product|patient|strength|tablet|pen)\\b",
+            "\\bmix(?:ed)?[- ]up\\b",
+            "\\bgiven by mistake\\b",
+            "\\bdispens(?:ed|ing) (?:error|the wrong)\\b",
+            "\\bnear miss\\b",
+            "\\bmedication error\\b"
+          ],
+          "lack of effect": [
+            "\\bstopped working\\b",
+            "\\b(?:didn'?t|did not|doesn'?t|does not) (?:work|help)\\b",
+            "\\bno (?:effect|difference|improvement)\\b",
+            "\\black of (?:effect|efficacy)\\b",
+            "\\bnot working\\b",
+            "\\bwore off\\b",
+            "\\bineffective\\b"
+          ],
+          "off-label use as reported": [
+            "\\boff[- ]label\\b",
+            "\\bnot (?:approved|licensed) for\\b",
+            "\\bunlicensed\\b"
+          ],
+          "product quality": [
+            "\\bbroken\\b",
+            "\\bleak(?:ing|ed|s)?\\b",
+            "\\bdiscolou?r(?:ed|ation)\\b",
+            "\\bcrumbl(?:ed|ing)\\b",
+            "\\bparticles?\\b",
+            "\\bcloudy\\b",
+            "\\bdamaged\\b",
+            "\\bmissing (?:leaflet|label|tablets?|parts?)\\b",
+            "\\bcounterfeit\\b|\\bfake\\b|\\bfalsified\\b",
+            "\\btasted? (?:different|strange|odd)\\b",
+            "\\bsmell(?:ed|s)? (?:different|strange|odd)\\b",
+            "\\b(?:pen|device|inhaler|pump|injector) (?:failed|jammed|didn'?t work|did not work|broke)\\b",
+            "\\bfaulty\\b|\\bmalfunction"
+          ],
+          "interaction": [
+            "\\binteract(?:ion|ed|s)?\\b",
+            "\\btogether with\\b",
+            "\\bat the same time as\\b",
+            "\\bwith (?:alcohol|grapefruit)\\b"
+          ]
+        },
+        "PATIENT_KINDS": {
+          "reassurance not to state unless the leaflet does": [
+            "\\bcompletely safe\\b",
+            "\\b(?:totally|perfectly|100%) safe\\b",
+            "\\bis safe\\b",
+            "\\bno side[- ]effects?\\b",
+            "\\bnothing to worry\\b",
+            "\\bno need to worry\\b",
+            "\\bharmless\\b",
+            "\\bgentle\\b",
+            "\\bnatural\\b",
+            "\\beveryone tolerates\\b",
+            "\\bhardly notice\\b",
+            "\\brisk[- ]free\\b",
+            "\\bno risks?\\b"
+          ],
+          "advice about treatment": [
+            "\\byou can (?:stop|skip|reduce|increase|double|take)\\b",
+            "\\bstop taking\\b",
+            "\\btake (?:two|2|an extra|a double)\\b",
+            "\\bdouble (?:up|the dose)\\b",
+            "\\bno need to (?:see|call|ask|tell) (?:your|a) (?:doctor|gp|pharmacist|nurse)\\b",
+            "\\bfine (?:with|to drink) alcohol\\b",
+            "\\bsafe to (?:drive|drink|combine)\\b",
+            "\\binstead of your\\b",
+            "\\bswitch (?:to|from)\\b"
+          ],
+          "alarming framing": [
+            "\\bdeadly\\b",
+            "\\blethal\\b",
+            "\\bcould (?:kill|die)\\b",
+            "\\bdangerous\\b",
+            "\\bterrifying\\b",
+            "\\bdon'?t risk\\b",
+            "\\bbefore it'?s too late\\b",
+            "\\bwill (?:fail|die)\\b"
+          ]
+        }
+      }
+    }
+  }
+}

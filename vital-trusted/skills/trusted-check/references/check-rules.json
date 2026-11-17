@@ -1,0 +1,170 @@
+{
+  "schema": "vital-trusted.check-rules.v1",
+  "kind": "offline-deterministic-check",
+  "note": "Apply via references/tools.md procedure. Hits are prompts to read unless the skill method says otherwise.",
+  "checks": {
+    "scan_verdicts": {
+      "id": "scan_verdicts",
+      "purpose": "Scan a TRUSTED summary for verdict words and leaked codes before it is shown.",
+      "data": {
+        "CLOSING": "This check flags issues. It is not medical, legal, regulatory or ethics review.",
+        "LETTERS": "(?:Tangible|Rule-compliant|Unbiased|Safe|True|Ethical|Defensible)",
+        "SKILL_NAMES": [
+          "trusted-capability-map",
+          "trusted-intake",
+          "trusted-check",
+          "substance-and-usefulness",
+          "fit-for-reader",
+          "claims-and-label",
+          "market-rules-and-data",
+          "balanced-evidence",
+          "honest-framing",
+          "patient-safety",
+          "grounded-statements",
+          "sourced-claims",
+          "responsible-inputs",
+          "responsible-use",
+          "work-record",
+          "claim-assessment",
+          "source-assessment",
+          "confidence-scoring",
+          "citation-and-record"
+        ],
+        "VERDICTS": [
+          [
+            "\\bpass(?:es|ed|ing)?\\b(?!\\s+(?:it|them|this|these|that|to|on|along)\\b)",
+            null,
+            "reads as a pass/fail verdict",
+            false
+          ],
+          [
+            "(?<![Rr]ule-)\\bcompliant\\b",
+            null,
+            "reads as a compliance verdict",
+            false
+          ],
+          [
+            "\\bnon-compliant\\b",
+            null,
+            "reads as a compliance verdict",
+            false
+          ],
+          [
+            "\\bapprov(?:ed|able)\\b(?!\\s+(?:label|labeling|labelling|product information|indication|indications|use|uses)\\b)",
+            null,
+            "reads as approval",
+            false
+          ],
+          [
+            "\\bvalidated\\b",
+            null,
+            "reads as validation",
+            false
+          ],
+          [
+            "\\bsafe\\b(?!\\s+reporting)",
+            0,
+            "lowercase 'safe' reads as a safety verdict",
+            true
+          ],
+          [
+            "\\bSafe\\s+to\\b",
+            0,
+            "'Safe to ...' reads as a safety verdict",
+            false
+          ],
+          [
+            "\\b(?:is|are|looks|seems)\\s+(?:all\\s+)?(?:safe|accurate|correct|true|ethical|fine|good|clean|balanced)\\b",
+            null,
+            "states a verdict about the draft",
+            true
+          ],
+          [
+            "\\baccurate\\b",
+            null,
+            "reads as an accuracy verdict",
+            true
+          ],
+          [
+            "\\bethical\\b(?!\\s+review)",
+            0,
+            "lowercase 'ethical' reads as an ethics verdict",
+            true
+          ],
+          [
+            "\\b(?:good|ready|okay|ok|fine|safe|clear)\\s+to\\s+(?:go|send|use|publish|share|submit)\\b",
+            null,
+            "says the draft can go",
+            false
+          ],
+          [
+            "\\bready\\s+for\\s+(?:approval|sign-off|signoff|submission|review|release)\\b",
+            null,
+            "says the draft is ready",
+            false
+          ],
+          [
+            "\\b(?:all\\s+clear|no\\s+issues|looks\\s+good|green\\s+light|signed\\s+off|almost\\s+there|nearly\\s+there)\\b",
+            null,
+            "reads as a verdict",
+            false
+          ],
+          [
+            "\\b(?:TRUSTED|overall|quality|total)\\s+score\\b",
+            null,
+            "a score for the draft is a verdict",
+            false
+          ],
+          [
+            "\\b\\d{1,3}\\s*/\\s*100\\b",
+            0,
+            "a score for the draft is a verdict",
+            false
+          ],
+          [
+            "\\bgrade\\s+[A-F]\\b",
+            0,
+            "a grade for the draft is a verdict",
+            false
+          ],
+          [
+            "\\b(?:yes|no)[,.]?\\s+(?:it\\s+)?(?:can|is\\s+ok|is\\s+okay)\\s+(?:be\\s+)?sen[dt]\\b",
+            null,
+            "answers 'is it OK to send' with yes or no",
+            false
+          ]
+        ],
+        "CODES": [
+          [
+            "\\bTR-(?:H\\d+|\\d+(?:\\.\\d+){1,2})\\b",
+            "rule or framework code shown to the person"
+          ],
+          [
+            "\\[GAP:",
+            "raw gap syntax shown to the person"
+          ],
+          [
+            "\\[CHECK\\b",
+            "internal [CHECK] marker shown to the person"
+          ],
+          [
+            "\\bpattern\\s+[A-Z]\\d{1,2}\\b",
+            "pattern id shown to the person"
+          ],
+          [
+            null,
+            "letter code shown beside the letter word"
+          ],
+          [
+            null,
+            "raw check line shown to the person"
+          ],
+          [
+            null,
+            "skill name shown to the person"
+          ]
+        ]
+      }
+    }
+  }
+}

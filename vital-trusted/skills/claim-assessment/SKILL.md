@@ -111,7 +111,7 @@ passage — connect VERIFY]`.
 | `tasks/decide-support.md` | Part B: tool calls, each result in plain words, what to do with it | Deciding or explaining a result |
 | `governance.md` | Boundaries, stop rules, never-claimed list | Before output leaves the conversation |
 | `references/tools.md` | VERIFY arguments, returns, pitfalls; the manual script | Before calling a tool |
-| `scripts/split_claims.py` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
+| `check-rules.json` / `split_claims` | Manual sentence split with exact offsets and priority flags | VERIFY not connected, code can run |
 | `templates/claim-list.md`, `templates/support-result.md`, `templates/check-line.md` | Output formats | Building the answer |
 | `examples/value-story-registry.md` | Worked case: value story against a registry summary | Shaping the answer |
 | `evals/evals.json` | Daily-user test requests, including one the skill must decline | Testing |

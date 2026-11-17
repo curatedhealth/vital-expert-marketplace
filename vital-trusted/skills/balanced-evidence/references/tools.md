@@ -15,38 +15,31 @@ passage (through `claim-assessment`). It does not test whether a passage that sh
 in the draft was left out. A draft can score well on support and still omit every
 side effect. Do not present a VERIFY result as evidence of balance (TR-H4).
 
-## Script
+# Offline check (deterministic, no program)
 
-### `scripts/balance_cues.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Lists wording that usually marks a benefit, a risk or limitation, reassurance about
-safety, or a selected result, and compares study names and time points in the draft with
-those in the supplied material. It finds wording, not meaning: read the whole draft as
-well, and do not report its counts as the check line without reading.
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/balance_cues.py draft.txt
-python scripts/balance_cues.py draft.txt --source material.txt
-python scripts/balance_cues.py draft.txt --window 2 --json
-cat draft.txt | python scripts/balance_cues.py -
-```
 
-| Output | What it means |
-|---|---|
-| Cue lines | Each line with benefit, risk or limitation, reassurance or selection wording, and the words matched |
-| Counts | Lines with each kind of wording |
-| Benefit lines with no risk or limitation nearby | Benefit lines with no risk or limitation wording within `--window` lines (default 3). A pointer to where balance may be missing, not a finding |
-| In the material, not in the draft | Study names in capital-letter-and-number form (for example ZELORA-3) and time points (week 52, 12 months) present in the material but absent from the draft |
+## Checks in this skill
 
-Pitfalls:
+### `balance_cues`
 
-- Benefit words also appear in risk statements ("reduced dose because of nausea"); risk
-  words also appear in benefit statements ("reduced the risk of events"). Read the line.
-- Study names not in capital-letter-and-number form are not found.
-- A time point missing from the draft may be legitimately out of scope. State the scope
-  rather than restoring everything.
+List balance cues in a draft, and what the source material holds that the draft does not.
 
-Tested on 20 October 2026 with `python3 scripts/test_balance_cues.py` against
-`scripts/test_draft.txt` and `scripts/test_material.txt` (expected cue groups per line,
-counts, unpaired benefit lines at window 3 and 1, and the missing study and time points
-asserted). Result: OK.
+Data: `check-rules.json` → `checks.balance_cues.data`.
+
+## Procedure: balance cues
+
+1. Split the draft into lines (1-based). For each line, test every regex in each group in `cue_groups` (case-insensitive unless the pattern is the AE/SAE abbreviation forms).
+2. Record line, groups matched, and the matched substrings.
+3. Count benefit lines vs risk-or-limitation lines.
+4. Unpaired benefits: each benefit line with no risk/limitation cue on the **same** line and none within ±`unpaired_window_lines` (default 3) of a risk/limitation line.
+5. If source material is supplied: list study-name and time-point tokens in material that do not appear in the draft (`study_name_pattern`, `timepoint_pattern`).
+6. Report cues and gaps only — no judgment that the draft is balanced or unbalanced.
+
+

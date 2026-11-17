@@ -146,29 +146,30 @@ Pitfalls:
 - Do not build the same table by hand when VERIFY is connected.
 - It does not change any status.
 
-## Scripts
+# Offline check (deterministic, no program)
 
-### `scripts/plain_reference.py`
+This skill ships **data + instructions** instead of Python. Apply the rules in
+`check-rules.json` exactly as written below. Hits are prompts to read, not findings,
+unless the skill's method says otherwise.
 
-Builds plain reference lines from the details the person supplied, for use without
-VERIFY. It never fills a missing field: it leaves it out of the line and lists it.
-It follows no named style and labels every line "not tool-built".
+**Source of truth for lists/patterns/formulas:** `references/check-rules.json`  
+**Do not** invent extra cue words. **Do not** run shell or package managers.
 
-```
-python scripts/plain_reference.py sources.json
-python scripts/plain_reference.py sources.json --json
-cat sources.json | python scripts/plain_reference.py -
-```
 
-Input: a JSON list of sources. Recognized fields: `authors` (list or string), `title`,
-`container` (journal, book, website or congress), `publisher`, `year`, `volume`,
-`issue`, `pages`, `doi`, `pmid`, `url`, `type`. Unknown fields are ignored and listed.
+## Checks in this skill
 
-Output: one line per source, then a list of missing details per source (year, title,
-authors, and container are expected for every source; volume and pages for journal
-articles; a DOI, PMID or URL for every source), then the line "Reference lines built from
-the details you gave; not tool-built."
+### `plain_reference`
 
-Tested on 20 October 2026 on the fictional sources in
-`examples/advisory-board-pre-read.md`, including a source with no year, a source with
-no authors and an empty input.
+Build plain reference lines from supplied source details, for use without VERIFY.
+
+Data: `check-rules.json` → `checks.plain_reference.data`.
+
+## Procedure
+
+1. Load the lists/patterns for this check from check-rules.json.
+2. Scan the draft (and source material if the check requires it) line by line or sentence by sentence.
+3. Record every match with location (line or sentence).
+4. Apply any pairing/window/threshold fields in the data object exactly.
+5. Report matches as prompts to read; do not invent extra categories.
+
+

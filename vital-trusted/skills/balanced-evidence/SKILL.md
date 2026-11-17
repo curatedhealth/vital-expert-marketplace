@@ -2,7 +2,7 @@
 name: balanced-evidence
 description: "Make sure daily life-sciences work shows the evidence in proportion: risks, side effects, discontinuations and limitations shown with the benefits, with comparable weight and in the same piece, and studies, endpoints, subgroups and time points chosen fairly. For brand, market access, medical and general management teams writing slide decks, key messages, value stories, payer slides, literature summaries, replies to doctors or board updates on a trial readout. Use it when someone says \"keep it positive\", \"leave the safety for the PI\", \"just the highlights\", \"only use the good trial\", \"is this balanced\", \"add the safety\", \"fair balance\", \"we only need the week 12 result\", or \"get this ready for review\". It finds what was left out, puts it back or states the scope, and never hides a risk on request. Not for checking each statement against its source (grounded-statements), how numbers, uncertainty and charts are framed (honest-framing), or whether a claim is allowed by the label (claims-and-label).\n"
 license: "Proprietary — Crossroads Catalyst GmbH (Vital Expert). See plugin LICENSE."
-compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet for this skill. scripts/balance_cues.py runs where the host can execute Python 3; otherwise the same steps are done by hand.\n"
+compatibility: "Runs on any assistant that loads Agent Skills, or as pasted instructions. No connector needed and none exists yet for this skill. Deterministic checks use references/check-rules.json and references/tools.md (no Python in this directory build).\n"
 metadata:
   framework_code: "TR-3.1"
   framework_path: "TRUSTED > Build > Unbiased > Balanced evidence"
@@ -116,7 +116,7 @@ studies exist is asked, never assumed (TR-H4). See `references/tools.md`.
 | `tasks/selective-reporting.md` | Fair choice of studies, endpoints, subgroups and time points | That task runs |
 | `governance.md` | Boundaries, stop rules, never claimed | Before output leaves the conversation |
 | `references/tools.md` | Companion slot and script | Before scanning or handing off |
-| `scripts/balance_cues.py` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
+| `check-rules.json` / `balance_cues` | Lists benefit, risk and reassurance wording, benefit lines with no risk nearby, and studies or time points in the material missing from the draft | Repairing a longer draft |
 | `templates/check-line.md`, `templates/balance-note.md`, `templates/evidence-inventory.md` | Output formats | Building the answer |
 | `examples/payer-value-story.md`, `examples/two-trial-summary.md` | Worked cases | Shaping the answer |
 | `evals/evals.json` | Test requests from daily users, including one the skill must decline | Testing |
